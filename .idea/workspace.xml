@@ -2,245 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c61d644e-8ced-4d3a-a062-842d24b6a169" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/logo-250x250.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/logo-250x250.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/matt.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/placeholder.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/.babelrc.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/public/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-double-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-double-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-double-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-double-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-angle-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-bookmark-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-bookmark.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-calendar-check-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-calendar-minus-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-calendar-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-calendar-plus-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-calendar-times-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-calendar.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-camera.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-caret-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-caret-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-caret-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-caret-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-chain.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-check-circle-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-check-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-check-square-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-check-square.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-check.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-chevron-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-chevron-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-chevron-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-chevron-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-code.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-cog.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-comment-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-comment.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-compress.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-dedent.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-envelope-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-envelope.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-exchange.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-exclamation-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-exclamation-triangle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-exclamation.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-expand.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-eye-slash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-eye.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-archive-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-audio-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-code-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-excel-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-image-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-movie-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-pdf-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-powerpoint-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-text-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-text.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file-word-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-file.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-floppy-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-folder-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-folder-open-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-folder-open.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-heart-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-heart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-image.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-indent.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-list-ol.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-list-ul.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-location-arrow.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-lock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-long-arrow-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-long-arrow-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-long-arrow-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-long-arrow-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-map-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-map.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-play-circle-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-play-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-play.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-print.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-question-circle-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-question-circle.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-question.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-alpha-asc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-alpha-desc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-amount-asc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-amount-desc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-asc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-desc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-numeric-asc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort-numeric-desc.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-sort.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-tag.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-tags.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-th-large.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-th-list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-th.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-trash-o.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-unlock-alt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-unlock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/fa-youtube-play.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-android-close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-android-done.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-android-more-horizontal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-android-more-vertical.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-close-round.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/io-gear-b.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-cross.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-magnifier.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-user.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/li-users.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-elevator.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-grid-four-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-grid-three-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-grid-two-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-magnifying-glass.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-map-marker.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-x.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-zoom-in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/oi-zoom-out.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-double-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-double-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-double-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-double-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-angle-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-arrow-down.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-arrow-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-arrow-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-arrow-up.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-arrows-horizontal.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-arrows-vertical.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-close.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-download.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-email.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-exchange-vertical.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-export.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-folder.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-fullscreen.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-heart.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-import.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-info-alt.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-link.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-list.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-location-pin.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-lock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-minus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-plus.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-reload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-search.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-shift-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-shift-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-star.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-trash.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-unlock.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-upload.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-zoom-in.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/icon/ti-zoom-out.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/img/svg/tmz-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/styles/_variables-custom.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/styles/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/assets/styles/main.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/src/index.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/angle-right.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-nav/ti-angle-left.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/mobile-nav/menu.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/mobile-nav/tmz-logo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/user.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/UiScreen.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/PageHeaderDropdown.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/UiComponentContainer.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/UiSideNavContainer.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/index.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-alert/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-badge/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-breadcrumbs/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-button-drop-down/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-button-group/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-buttons/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-card/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-dropdown/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-form/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-headers/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-icons/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-input-group/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-jumbotron/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-layout/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-layout/styles.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-list-group/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-media/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-modal/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-nav/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-navbar/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-pagination/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-popover/PopoverItem.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-popover/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-progress/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-table/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-tabs/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-toggle/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-tool-tip/TooltipItem.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/components/ui-tool-tip/index.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/config.module.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/index-backup.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/postcss.config.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/demo/routes.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.babelrc.js" afterPath="$PROJECT_DIR$/.babelrc.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/package.json" afterPath="$PROJECT_DIR$/demo/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/webpack.config.js" afterPath="$PROJECT_DIR$/demo/webpack.config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/app/_buttons.scss" afterPath="$PROJECT_DIR$/src/components/app/_buttons.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/main-nav/styles.scss" afterPath="$PROJECT_DIR$/src/components/main-nav/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/mobile-nav/styles.scss" afterPath="$PROJECT_DIR$/src/components/mobile-nav/styles.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/user-nav/styles.scss" afterPath="$PROJECT_DIR$/src/components/user-nav/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/package-lock.json" afterPath="$PROJECT_DIR$/demo/package-lock.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -257,35 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UiSideNavContainer.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/demo/src/components/UiSideNavContainer.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="244">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/card-block/index.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/components/ui-input-group/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -296,9 +35,11 @@
       <file leaf-file-name="index.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/src/index.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-              <folding />
+            <state relative-caret-position="252">
+              <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -306,8 +47,8 @@
       <file leaf-file-name="DemoScreen.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/demo/src/DemoScreen.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+            <state relative-caret-position="180">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -318,10 +59,10 @@
       <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/package-lock.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
               <folding>
-                <marker date="1508192157756" expanded="true" signature="329474:329486" ph="{&quot;string-width&quot;: &quot;1.0.2&quot;...}" />
+                <marker date="1508196813418" expanded="true" signature="329116:329128" ph="{&quot;string-width&quot;: &quot;1.0.2&quot;...}" />
               </folding>
             </state>
           </provider>
@@ -330,8 +71,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="36">
+              <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -351,20 +92,8 @@
         <entry file="file://$PROJECT_DIR$/demo/src/assets/styles/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="159">
-              <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+              <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index-reactstrap.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/card-block/index-reactstrap.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-388">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -510,8 +239,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="133" />
-    <option name="y" value="23" />
+    <option name="x" value="221" />
+    <option name="y" value="44" />
     <option name="width" value="1543" />
     <option name="height" value="928" />
   </component>
@@ -544,6 +273,12 @@
               <item name="admin-ui-plugin-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="admin-ui-plugin-js" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="demo" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="admin-ui-plugin-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="admin-ui-plugin-js" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="demo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -608,15 +343,15 @@
       <workItem from="1507928132036" duration="6048000" />
       <workItem from="1507934552246" duration="1661000" />
       <workItem from="1507936461461" duration="4436000" />
-      <workItem from="1508173098285" duration="15646000" />
+      <workItem from="1508173098285" duration="16115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27791000" />
+    <option name="totallyTimeSpent" value="28260000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="133" y="23" width="1543" height="928" extended-state="0" />
+    <frame x="221" y="44" width="1543" height="928" extended-state="0" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22294232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -667,14 +402,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/postcss.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/demo/config.module.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -786,14 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/.babelrc.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="50" column="12" lean-forward="false" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -913,14 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="23" column="24" lean-forward="false" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demo/src/assets/styles/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-571">
-          <caret line="7" column="9" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1050,7 +761,7 @@
     <entry file="file://$PROJECT_DIR$/demo/src/components/ui-input-group/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -1068,41 +779,67 @@
     <entry file="file://$PROJECT_DIR$/demo/src/assets/styles/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="159">
-          <caret line="288" column="0" lean-forward="true" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+          <caret line="288" column="0" lean-forward="false" selection-start-line="288" selection-start-column="0" selection-end-line="288" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/.babelrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/src/assets/styles/main.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="4" column="19" lean-forward="true" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
           <folding>
-            <marker date="1508192157756" expanded="true" signature="329474:329486" ph="{&quot;string-width&quot;: &quot;1.0.2&quot;...}" />
+            <marker date="1508196813418" expanded="true" signature="329116:329128" ph="{&quot;string-width&quot;: &quot;1.0.2&quot;...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="17" column="6" lean-forward="true" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="36">
+          <caret line="1" column="17" lean-forward="true" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/index.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="252">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/src/DemoScreen.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        <state relative-caret-position="180">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
