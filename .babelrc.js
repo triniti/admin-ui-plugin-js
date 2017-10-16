@@ -44,7 +44,6 @@ switch (env) {
     ]);
 
     plugins.push('lodash');
-    plugins.push('./build/use-lodash-es');
     plugins.push('react-hot-loader/babel');
     break;
 

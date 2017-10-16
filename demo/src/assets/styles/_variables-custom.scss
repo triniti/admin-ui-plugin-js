@@ -1,0 +1,75 @@
+// Custom Variables for use with Triniti Components
+//
+// Variables not used in _variables.scss in case the two are separated
+
+
+// Path to assets folder for svg icons in css
+// $assets-folder:                 '../../assets/';
+
+
+/* referenced in _type but in _variables - $font-size-h1 is the variable */
+$h1-font-size: 1.75rem !default;
+$h2-font-size: 1.5rem !default;
+$h3-font-size: 1.25rem !default;
+$h4-font-size: 1.1rem !default;
+$h5-font-size: 1rem !default;
+$h6-font-size: .825rem !default;
+
+
+// Calculations for Header and Offcanvas
+$header-height:                 45px !default;
+
+
+// Offcanvas
+$offcanvas-desktop-margin:      262px !default;
+$offcanvas-width:               300px !default;
+
+
+// Transition to be used with any parameter, use instead of -base, -fade, -collapse
+$transition:                    250ms ease-in-out !default;
+
+
+// Common Transparent Grays
+$gray-rgba-100:     rgba(#292929, .04) !default;
+$gray-rgba-200:     rgba(#000, .0625) !default;
+$gray-rgba-300:     rgba(#000, .1) !default;
+$gray-rgba-400:     rgba(#000, .125) !default;
+$gray-rgba-500:     rgba(#000, .15) !default;
+$gray-rgba-600:     rgba(#000, .2) !default;
+$gray-rgba-700:     rgba(#000, .5) !default;
+$gray-rgba-800:     rgba(#000, .625) !default;
+$gray-rgba-900:     rgba(#000, .8) !default;
+
+
+// Common Transparent Whites
+$white-rgba-100:     rgba(#fff, .0625) !default;
+$white-rgba-200:     rgba(#fff, .1) !default;
+$white-rgba-300:     rgba(#fff, .125) !default;
+$white-rgba-400:     rgba(#fff, .25) !default;
+$white-rgba-500:     rgba(#fff, .5) !default;
+$white-rgba-600:     rgba(#fff, .625) !default;
+$white-rgba-700:     rgba(#fff, .75) !default;
+$white-rgba-800:     rgba(#fff, .8) !default;
+$white-rgba-900:     rgba(#fff, .9) !default;
+
+
+// Icon Fills
+$icon-fill-light:                #fff !default;
+$icon-fill-dark:                 #000 !default;
+$icon-theme-light:               str-slice(quote($icon-fill-dark), 2) !default;
+$icon-theme-dark:                str-slice(quote($icon-fill-light), 2) !default;
+
+
+// Common side padding
+$width-desktop-lg:        2.5rem !default;
+$width-desktop:             2rem !default;
+$width-tablet:            1.5rem !default;
+$width-mobile:              1rem !default;
+
+
+// Common Text Shadow
+$text-shadow:                   0 1px 3px rgba(0, 0, 0, 0.1);
+
+
+// Custom Rounded for border-radius when 50% isn't working
+$round:            10rem;

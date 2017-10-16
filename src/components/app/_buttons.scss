@@ -269,7 +269,7 @@ a:not([href]):not([tabindex]),
   content: '';
   transition: transform $transition;
   opacity: .5;
-  background: transparent url('#{$assets-folder}img/svg/icons/angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+  background: transparent url('angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
 }
 
 .btn-toggler.active::before {
