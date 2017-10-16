@@ -1,0 +1,61 @@
+// Main Content
+//
+// Scrollable content area inside main-container
+
+.main-content {
+  padding: 0 1rem;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
+}
+
+.main-content:after {
+  display: block;
+  position: relative;
+  content: '';
+  height: 5rem; // works like bottom padding
+}
+
+@media (max-width: 767px) {
+  .main-content {
+    padding: .125rem .5rem;
+    width: 100vw;
+  }
+  .main-content:after {
+    height: 4rem;
+  }
+}
+
+
+// MaxWidth
+//
+// Add to cards along with mx-auto to constrain width and center align
+
+.max-width {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.max-width-xs {
+  max-width: 640px;
+}
+
+@media (min-width: 768px) {
+  .max-width-sm {
+    max-width: 720px;
+  }
+  .max-width-md {
+    max-width: 1024px;
+  }
+  .max-width-lg {
+    max-width: 1200px;
+  }
+  .max-width-xl {
+    max-width: 1600px;
+  }
+}

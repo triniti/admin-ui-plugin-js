@@ -1,0 +1,1176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c61d644e-8ced-4d3a-a062-842d24b6a169" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.babelrc.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.codeclimate.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.eslintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/admin-ui-plugin-js.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.nvmrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/UiScreen.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/PageHeaderDropdown.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/UiComponentContainer.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/UiSideNavContainer.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-alert/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-badge/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-breadcrumbs/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-button-drop-down/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-button-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-buttons/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-card/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-dropdown/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-form/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-headers/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-icons/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-input-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-jumbotron/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-layout/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-layout/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-list-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-media/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-modal/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-nav/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-navbar/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-pagination/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-popover/PopoverItem.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-popover/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-progress/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-table/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-tabs/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-toggle/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-tool-tip/TooltipItem.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/components/ui-tool-tip/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/config.module.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/postcss.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/routes.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/webpack.config.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/changeAsideActiveTab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/clickDropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/hideNotification.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/receiveFlashMessage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/requestLogout.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/requestNewTheme.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/showNotification.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/toggleDropdown.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/toggleMainNav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/toggleNotification.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/actions/toggleUserNav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/PopperTargetHelper.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/alert/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app-content/createRoutes.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app-content/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_alerts.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_asides.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_borders.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_breadcrumbs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_buttons.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_card.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_components.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_forms.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_list-group.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_loading.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_master.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_media.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_modals.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_nav.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_tables.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_tabs.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/_tooltips.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/app/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/backdrop/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/backdrop/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/badge/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/badge/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/breadcrumb-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/breadcrumb/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button-dropdown/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button-toolbar/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/button/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-block/index-reactstrap.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-block/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-block/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-body/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-body/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-columns/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-deck/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-footer/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-header/index-reactstrap.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-header/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-header/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-img-overlay/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-img/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-link/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-subtitle/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-text/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-title/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card-title/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/card/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/cards-container/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/cards-container/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/carousel-caption/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/carousel-control/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/carousel-indicators/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/carousel-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/carousel/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/col/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/collapse/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/container/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/content-container/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/content-container/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/divider/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/divider/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/dropdown-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/dropdown-menu/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/dropdown-menu/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/dropdown-toggle/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/dropdown/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/fade/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/flash-message/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/footer-nav/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/form-feedback/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/form-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/form-text/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/form/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/header-display/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/header-display/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input-group-addon/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input-group-button/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/input/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/jumbotron/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/jumbotron/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/label/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list-group-item-heading/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list-group-item-text/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list-group-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/list-group/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/loading/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/loading/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-container/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-container/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-content/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-content/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-nav/DropdownUnit.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-nav/NavItemUnit.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-nav/createNavUnits.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-nav/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/main-nav/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/media/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/mobile-nav/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/mobile-nav/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/modal-body/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/modal-footer/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/modal-header/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/modal/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav-dropdown/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav-link/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/nav/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar-brand/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar-tabs-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar-tabs-item/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar-tabs/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar-tabs/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar-toggler/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/navbar/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page-header/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/page-header/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pagination-item/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pagination-link/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/pagination/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover-body/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover-content/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover-header/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover-title/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popover/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/popper-content/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/progress/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/router-link/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/row/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/scrollable-container/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/scrollable-container/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/sidenav-container/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/sidenav-container/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/sidenav-header/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/sidenav-header/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/spinner/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/spinner/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/status-message/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/tab-content/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/tab-pane/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/table/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/tooltip/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/uncontrolled/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/UserNavBackdrop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/UserNavCloser.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/UserNavContent.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/UserNavMiscTabPane.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/UserNavOpener.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/UserSettingsTabPane.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/close.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/index.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/user-nav/styles.scss" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/constants.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/FlashMessageContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/MainNavBackdrop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/MainNavContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/MobileNavContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/NavBarContainer.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/UserNavBackdrop.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/containers/UserNavContainer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/flashMessage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/mainNav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/theme.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/reducers/userNav.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getActiveMainSections.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getActiveUserNavTab.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getAppTheme.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getCurrentMainSection.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getMainNavClasses.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getNotificationMessage.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getShowNotification.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/getUserNavPosition.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/selectors/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/.eslintrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Dropdown.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/DropdownMenu.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/DropdownToggle.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Fade.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Form.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/FormFeedback.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/FormGroup.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/FormText.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Input.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/InputGroup.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/InputGroupAddon.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/InputGroupButton.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Jumbotron.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Label.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ListGroup.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ListGroupItem.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ListGroupItemHeading.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ListGroupItemText.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Media.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Modal.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ModalBody.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ModalFooter.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/ModalHeader.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Nav.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/NavBrand.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/NavDropdown.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/NavItem.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/NavLink.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Navbar.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/NavbarToggler.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Pagination.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PaginationItem.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PaginationLink.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Popover.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PopoverBody.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PopoverContent.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PopoverHeader.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PopoverTitle.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/PopperContent.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Progress.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Row.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Table.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Tabs.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Tooltip.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/Uncontrolled.spec.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/alert/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/badge/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/breadcrumb-list/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/breadcrumb/breadcrumb.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/button-group/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/button-toolbar/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/button/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-block/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-columns/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-deck/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-footer/inddx.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-group/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-header/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-img-overlay/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-img/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-link/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-subtitle/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-text/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card-title/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/card/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/carousel/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/col/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/collapse/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/container/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/dropdown-item/index.test.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/components/utils.spec.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileColors">
+    <fileColor scope="Non-Project Files (Material Default)" color="2E3C43" />
+    <fileColor scope="Non-Project Files (Material Darker)" color="323232" />
+    <fileColor scope="Non-Project Files (Material Lighter)" color="eae8e8" />
+    <fileColor scope="Non-Project Files (Material Palenight)" color="2f2e43" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.config.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/webpack.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3312">
+              <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="postcss.config.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/demo/postcss.config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".eslintrc" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.eslintrc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".eslintignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.eslintignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".editorconfig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.editorconfig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".babelrc.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.babelrc.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+                <element signature="e#60#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="utils.spec.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/components/utils.spec.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>bottle</find>
+      <find>matt</find>
+      <find>lodash</find>
+      <find>extend-t`</find>
+      <find>../../../node_modul</find>
+      <find>../../../</find>
+      <find>content-con</find>
+      <find>use-lodash-e</find>
+      <find>src</find>
+      <find>../../node_modules/</find>
+      <find>@triniti/admin-ui/</find>
+      <find>@triniti/admin-ui/src</find>
+      <find>svg</find>
+      <find>../constants</find>
+      <find>@triniti/admin-ui/components</find>
+      <find>'@triniti/admin-ui/components'</find>
+      <find>react-router</find>
+      <find>../..//</find>
+      <find>../../components</find>
+      <find>../../../components</find>
+      <find>tmz</find>
+      <find>sessionStorage</find>
+      <find>redirect_location</find>
+      <find>assets</find>
+      <find>../../src//</find>
+      <find>../../src/</find>
+      <find>@triniti/admin-ui</find>
+      <find>assets/im</find>
+      <find>sweet</find>
+      <find>postcss</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>../../components</replace>
+      <replace>../../../node_modules/</replace>
+      <replace>../../../src/components</replace>
+      <replace>../</replace>
+      <replace>../../</replace>
+      <replace>../../../components</replace>
+      <replace>../../../admin-ui/components</replace>
+      <replace>../../src/</replace>
+      <replace>../../../src/</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/demo</dir>
+      <dir>$PROJECT_DIR$/demo/assets</dir>
+      <dir>$PROJECT_DIR$/demo/src</dir>
+      <dir>$PROJECT_DIR$/demo/components</dir>
+      <dir>$PROJECT_DIR$/tests/components</dir>
+      <dir>$PROJECT_DIR$/src/components</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/constants.js" />
+        <option value="$PROJECT_DIR$/demo/.babelrc.js" />
+        <option value="$PROJECT_DIR$/demo/src/index.jsx" />
+        <option value="$PROJECT_DIR$/demo/node_modules/babel-plugin-module-resolver/README.md" />
+        <option value="$PROJECT_DIR$/demo/src/PageHeaderDropdown.jsx" />
+        <option value="$PROJECT_DIR$/demo/src/UiComponentContainer.jsx" />
+        <option value="$PROJECT_DIR$/demo/webpack.config.js" />
+        <option value="$PROJECT_DIR$/.babelrc.js" />
+        <option value="$PROJECT_DIR$/demo/assets/styles/_variables.scss" />
+        <option value="$PROJECT_DIR$/demo/assets/styles/_variables-custom.scss" />
+        <option value="$PROJECT_DIR$/demo/assets/styles/main.scss" />
+        <option value="$PROJECT_DIR$/demo/src/DemoScreen.jsx" />
+        <option value="$PROJECT_DIR$/demo/src/ui-alert/index.jsx" />
+        <option value="$PROJECT_DIR$/demo/index.jsx" />
+        <option value="$PROJECT_DIR$/demo/src/ui-icons/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/index.js" />
+        <option value="$PROJECT_DIR$/demo/src/ui-form/index.jsx" />
+        <option value="$PROJECT_DIR$/demo/src/ui-buttons/index.jsx" />
+        <option value="$PROJECT_DIR$/demo/src/UiSideNavContainer.jsx" />
+        <option value="$PROJECT_DIR$/demo/components/ui-alert/index.jsx" />
+        <option value="$PROJECT_DIR$/demo/components/PageHeaderDropdown.jsx" />
+        <option value="$PROJECT_DIR$/demo/components/UiComponentContainer.jsx" />
+        <option value="$PROJECT_DIR$/demo/components/UiSideNavContainer.jsx" />
+        <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/src/constants.js" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/demo/UiScreen.jsx" />
+        <option value="$PROJECT_DIR$/demo/package.json" />
+        <option value="$PROJECT_DIR$/tests/bootstrap.js" />
+        <option value="$PROJECT_DIR$/tests/components/Fade.spec.jsx" />
+        <option value="$PROJECT_DIR$/src/components/flash-message/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/main-nav/DropdownUnit.jsx" />
+        <option value="$PROJECT_DIR$/src/components/footer-nav/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/mobile-nav/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/main-nav/NavItemUnit.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-nav/UserNavBackdrop.js" />
+        <option value="$PROJECT_DIR$/src/components/user-nav/UserNavContent.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-nav/UserNavMiscTabPane.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-nav/UserNavOpener.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-nav/UserSettingsTabPane.jsx" />
+        <option value="$PROJECT_DIR$/src/components/status-message/index.jsx" />
+        <option value="$PROJECT_DIR$/src/components/user-nav/UserNavCloser.jsx" />
+        <option value="$PROJECT_DIR$/webpack.config.js" />
+        <option value="$PROJECT_DIR$/src/containers/FlashMessageContainer.js" />
+        <option value="$PROJECT_DIR$/src/containers/MainNavBackdrop.js" />
+        <option value="$PROJECT_DIR$/src/containers/MobileNavContainer.js" />
+        <option value="$PROJECT_DIR$/src/containers/NavBarContainer.jsx" />
+        <option value="$PROJECT_DIR$/src/containers/UserNavBackdrop.js" />
+        <option value="$PROJECT_DIR$/tests/components/utils.spec.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/demo/package.json" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="220" />
+    <option name="y" value="29" />
+    <option name="width" value="1543" />
+    <option name="height" value="928" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="admin-ui-plugin-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="admin-ui-plugin-js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="JavaScriptPreferStrict" value="false" />
+    <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="ignore_missing_gitignore" value="true" />
+    <property name="add_unversioned_files" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/user-nav" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/demo" />
+      <recent name="$PROJECT_DIR$/demo/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/demo" />
+      <recent name="$PROJECT_DIR$/tests" />
+      <recent name="$PROJECT_DIR$/admin-ui" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c61d644e-8ced-4d3a-a062-842d24b6a169" name="Default" comment="" />
+      <created>1507928129986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507928129986</updated>
+      <workItem from="1507928132036" duration="6048000" />
+      <workItem from="1507934552246" duration="1661000" />
+      <workItem from="1507936461461" duration="4436000" />
+      <workItem from="1508173098285" duration="6104000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="18249000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="220" y="29" width="1543" height="928" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22294232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32857144" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/selectors/getActiveUserNavTab.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selectors/getMainNavClasses.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/constants.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="24" lean-forward="false" selection-start-line="5" selection-start-column="24" selection-end-line="5" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#60#101#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/components/UiComponentContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/config.module.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/selectors/getActiveMainSections.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/components/UiSideNavContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/components/ui-toggle/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/components/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/UiScreen.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="47" column="1" lean-forward="false" selection-start-line="47" selection-start-column="1" selection-end-line="47" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/components/Dropdown.spec.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/components/Fade.spec.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="17" lean-forward="true" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/components/alert/index.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="25" lean-forward="false" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/components/badge/index.test.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="48" lean-forward="false" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/flash-message/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/footer-nav/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-nav/DropdownUnit.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/main-nav/NavItemUnit.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-nav/UserNavBackdrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-nav/UserNavContent.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="9" column="80" lean-forward="false" selection-start-line="9" selection-start-column="80" selection-end-line="9" selection-end-column="80" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-nav/UserNavMiscTabPane.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="83" lean-forward="false" selection-start-line="2" selection-start-column="83" selection-end-line="2" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-nav/UserNavOpener.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="31">
+          <caret line="2" column="31" lean-forward="false" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-nav/UserSettingsTabPane.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="7" column="25" lean-forward="false" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/status-message/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="8" column="49" lean-forward="false" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
+          <folding>
+            <element signature="e#9#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/img/svg/icons/close.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="238" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/user-nav/UserNavCloser.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/mobile-nav/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.nvmrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.travis.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/FlashMessageContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="1" column="28" lean-forward="false" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainNavBackdrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MainNavContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/MobileNavContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/NavBarContainer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="4" column="39" lean-forward="false" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/UserNavBackdrop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/containers/UserNavContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/reducers/flashMessage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="7" lean-forward="false" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#61#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/components/utils.spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#60#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3312">
+          <caret line="92" column="30" lean-forward="false" selection-start-line="92" selection-start-column="30" selection-end-line="92" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.eslintignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.editorconfig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="5" column="2" lean-forward="false" selection-start-line="5" selection-start-column="2" selection-end-line="5" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="6" column="12" lean-forward="true" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/postcss.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

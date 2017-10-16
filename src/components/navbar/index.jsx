@@ -1,0 +1,72 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { mapToCssModules } from '../utils';
+
+const propTypes = {
+  light: PropTypes.bool,
+  inverse: PropTypes.bool,
+  full: PropTypes.bool,
+  fixed: PropTypes.string,
+  sticky: PropTypes.string,
+  color: PropTypes.string,
+  role: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string,
+  cssModule: PropTypes.object,
+  toggleable: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+};
+
+const defaultProps = {
+  tag: 'nav',
+  toggleable: false,
+};
+
+const getToggleableClass = (toggleable) => {
+  if (toggleable === false) {
+    return false;
+  } else if (toggleable === true || toggleable === 'xs') {
+    return 'navbar-toggleable';
+  }
+
+  return `navbar-toggleable-${toggleable}`;
+};
+
+const Navbar = (props) => {
+  const {
+    toggleable,
+    className,
+    cssModule,
+    light,
+    dark,
+    full,
+    fixed,
+    sticky,
+    color,
+    tag: Tag,
+    ...attributes
+  } = props;
+
+  const classes = mapToCssModules(classNames(
+    className,
+    'navbar',
+    getToggleableClass(toggleable),
+    {
+      'navbar-light': light,
+      'navbar-dark': dark,
+      [`bg-${color}`]: color,
+      'navbar-full': full,
+      [`fixed-${fixed}`]: fixed,
+      [`sticky-${sticky}`]: sticky,
+    }
+  ), cssModule);
+
+  return (
+    <Tag {...attributes} className={classes} />
+  );
+};
+
+Navbar.propTypes = propTypes;
+Navbar.defaultProps = defaultProps;
+
+export default Navbar;

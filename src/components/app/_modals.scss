@@ -1,0 +1,12 @@
+// Modals
+
+@media (min-width: 576px) {
+  .modal-xs {
+    max-width: 240px;
+  }
+}
+
+.modal-wrapper {
+  padding-top: $width-tablet;
+  padding-bottom: $grid-gutter-width-base;
+}

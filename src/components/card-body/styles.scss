@@ -1,0 +1,16 @@
+// tri-card-block
+//
+// Custom Sizing Variables
+// $width-desktop-lg:        2.5rem;
+// $width-desktop:             2rem;
+// $width-tablet:            1.5rem;
+// $width-mobile:              1rem;
+
+.card-body {
+  position: relative;
+  padding: 1.25rem;
+
+  @media(max-width: 1023px) {
+    padding: 1rem;
+  }
+}

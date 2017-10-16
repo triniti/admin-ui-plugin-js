@@ -1,0 +1,59 @@
+// Media
+
+.media-body {
+  margin-bottom: 0;
+}
+
+.media {
+  margin-top: 1rem;
+}
+
+.media-list {
+  padding: 0;
+}
+
+.media-left {
+  margin-right: .75rem;
+}
+
+.media-right {
+  margin-left: .75rem;
+}
+
+.media-left img {
+  border-radius: .1rem;
+}
+
+.col > .media:first-child,
+.media-list > .media:first-child {
+  margin-top: 0;
+}
+
+// Hover Class
+//
+// Same styles as card-hover
+
+.media-hover {
+  position: relative;
+  transition: transform $transition;
+}
+
+.media-hover::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  content: '';
+  transition: opacity $transition;
+  opacity: 0;
+  box-shadow: 0 .5rem 1.5rem -.25rem rgba($black, .2);
+}
+
+.media-hover:hover {
+  transform: translate(0, -4px);
+}
+
+.media-hover:hover::after {
+  opacity: 1;
+}

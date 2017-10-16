@@ -1,0 +1,58 @@
+// Spinner
+//
+
+$color: rgba(0, 0, 0, 0.25);
+$offset: 178;
+$duration: 1.5s;
+
+.spinner-container {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  margin: 1rem;
+  overflow: hidden;
+}
+
+.spinner-animation {
+  height: 2.25em;
+  width: 2.25em;
+  padding: 0 0.125rem;
+  animation: rotator $duration linear infinite;
+}
+
+.spinner-children {
+  margin-left: .75rem;
+  font-weight: 600;
+}
+
+@keyframes rotator {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(270deg); }
+}
+
+.path {
+  stroke-dasharray: $offset;
+  stroke-dashoffset: 0;
+  transform-origin: center;
+  animation:
+    dash $duration ease-in-out infinite,
+    colors ($duration*4) ease-in-out infinite;
+}
+
+@keyframes colors {
+	0% { stroke: $color; }
+   100% { stroke: $color; }
+}
+
+@keyframes dash {
+ 0% { stroke-dashoffset: $offset; }
+ 50% {
+   stroke-dashoffset: $offset/4;
+   transform:rotate(135deg);
+ }
+ 100% {
+   stroke-dashoffset: $offset;
+   transform:rotate(450deg);
+ }
+}

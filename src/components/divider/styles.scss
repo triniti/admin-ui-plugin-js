@@ -1,0 +1,59 @@
+// Divider
+
+.divider {
+  margin: 1rem 0;
+}
+
+.divider-sm {
+  height: 0;
+  min-height: 0;
+  padding: 0;
+  border-bottom: 1px solid $gray-rgba-200;
+  overflow: visible;
+  box-sizing: content-box;
+}
+
+.divider-md {
+  min-height: 1em;
+  padding: .3rem $width-mobile;
+  border-bottom: 1px solid $gray-rgba-200;
+  background-color: $gray-100;
+  box-shadow: 0 -1px 0 0 $gray-rgba-200;
+  box-sizing: border-box;
+}
+
+.divider-lg {
+  min-height: 1em;
+  padding: $width-mobile;
+  border-bottom: 1px solid $gray-rgba-200;
+  background-color: $gray-100;
+  box-shadow: 0 -1px 0 0 $gray-rgba-200;
+}
+
+.card-block > .divider {
+  margin: 1.5rem (-$width-mobile);
+
+  @media (min-width: 768px) {
+    margin: 1.5rem (-$width-tablet);
+  }
+  @media (min-width: 1025px) {
+    margin: 1.5rem (-$width-desktop);
+  }
+  @media (min-width: 1600px) {
+    margin: 1.5rem (-$width-desktop-lg);
+  }
+}
+
+.card-block > .divider-sm {
+  margin: 1rem (-$card-spacer-x);
+}
+
+.card-body > .divider-sm {
+  margin-left: -1.25rem;
+  margin-right: -1.25rem;
+
+  @media(max-width: 1023px) {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}

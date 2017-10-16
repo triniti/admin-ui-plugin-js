@@ -1,0 +1,55 @@
+// Badge
+//
+// Overrides for reactstrap colors and additional colors
+
+.badge {
+  display: inline-flex;
+}
+
+.badge-default {
+  background-color: #a0a0a0;
+}
+
+.badge-secondary {
+  color: $gray-900;
+  background-color: $gray-rgba-500;
+}
+
+.badge-warning {
+  color: $white;
+  text-shadow: $text-shadow;
+}
+
+.badge-inverse {
+  background-color: theme-color("dark");
+}
+
+.nav-link .badge {
+  font-size: .625rem;
+  padding-top: .2em;
+  padding-bottom: .2em;
+}
+
+.btn .badge-alert,
+.alert-wrapper .badge-alert,
+.rounded-circle .badge-alert,
+.round .badge-alert,
+.nav-link .badge-alert {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  border-radius: $round;
+}
+
+@media (max-width: 1024px) {
+  .btn-nav .badge-alert {
+    top: -2px;
+    right: -7px;
+  }
+}
+
+.nav-link .badge-alert {
+  font-size: .625rem;
+  top: 1px;
+  right: 1px;
+}

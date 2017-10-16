@@ -1,0 +1,48 @@
+{
+  "name": "@triniti/admin-ui",
+  "version": "0.1.0",
+  "description": "The demo for admin-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/triniti/admin-ui-plugin-js"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "src/index.jsx",
+  "scripts": {
+    "analyze": "BABEL_ENV=browser webpack -p --json | webpack-bundle-size-analyzer",
+    "build": "BABEL_ENV=browser webpack -p --env.NODE_ENV=production --progress --profile --colors",
+    "lint": "BABEL_ENV=cjs eslint src tests",
+    "start": "BABEL_ENV=browser webpack-dev-server --env.NODE_ENV=development --debug --progress --profile --colors --history-api-fallback",
+  },
+  "devDependencies": {
+    "@gdbots/common": "^0.1.0",
+    "babel-polyfill": "^6.26.0",
+    "bootstrap": "^4.0.0-beta",
+    "bottlejs": "^1.6.1",
+    "classnames": "^2.2.5",
+    "core-js": "^2.5.1",
+    "lodash": "^4.17.4",
+    "lodash-es": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-hot-loader": "^3.0.0",
+    "react-popper": "^0.7.3",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-transition-group": "^2.2.1",
+    "redux": "^3.7.2",
+    "redux-form": "^7.1.1",
+    "redux-logger": "^3.0.6",
+    "svg-fill-loader": "^0.0.8",
+    "sweetalert2": "^6.10.2"
+  },
+  "babel": {
+    "presets": "../.babelrc.js"
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

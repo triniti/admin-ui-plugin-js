@@ -1,0 +1,11 @@
+exclude_paths:
+  - '/node_modules/*'
+
+engines:
+  eslint:
+    enabled: true
+
+ratings:
+  paths:
+    - 'src/**.js*'
+    - 'tests/**.js*'

@@ -1,0 +1,91 @@
+// Borders
+//
+// A solid border set to the left of an element such as a form element or alert message
+
+.has-border {
+  position: relative;
+}
+
+.has-border::before {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  left: -1rem;
+  display: block;
+  width: 4px;
+  content: '';
+  border-radius: 4px;
+  background-color: $gray-700;
+}
+
+.col.has-border::before {
+  left: 0;
+}
+
+@media (min-width: 1025px) {
+  .has-border::before {
+    margin-left: -4px;
+  }
+}
+
+@media (max-width: 767px) {
+  .has-border::before {
+    width: 3px;
+    border-radius: 0;
+  }
+}
+
+.border-indent {
+  margin-left: 0;
+  padding-left: 1.25rem;
+}
+
+.row.border-indent {
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.border-indent::before {
+  left: 0;
+  margin-left: 0;
+}
+
+.row.border-indent::before {
+  margin-left: -4px;
+}
+
+.border-primary::before {
+  background-color: theme-color("primary");
+}
+
+.border-success::before {
+  background-color: theme-color("success");
+}
+
+.border-info::before {
+  background-color: theme-color("info");
+}
+
+.border-warning::before {
+  background-color: theme-color("warning");
+}
+
+.border-danger::before {
+  background-color: theme-color("danger");
+}
+
+.border-inverse::before {
+  background-color: theme-color("dark");
+}
+
+.border-default::before {
+  background-color: $gray-700;
+}
+
+.border-purple::before {
+  background-color: $purple;
+}
+
+.border-pink::before {
+  background-color: $pink;
+}

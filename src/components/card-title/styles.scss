@@ -1,0 +1,35 @@
+// Card Title
+//
+// Any title in a card, use tag="h1,h2,h3,h4,h5,h6"
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+h1.card-title {
+  margin-bottom: 1.5rem;
+  min-height: 2.125rem;
+}
+
+h2.card-title {
+  margin-bottom: 1.25rem;
+  min-height: 2.125rem;
+}
+
+h3.card-title {
+  margin-bottom: 1rem;
+}
+
+h4.card-title {
+  margin-top: 2rem;
+}
+
+.card-title-sm {
+  margin-right: auto;
+  margin-left: .5rem;
+  font-size: $small-font-size;
+  color: $text-muted;
+}

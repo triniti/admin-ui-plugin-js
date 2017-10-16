@@ -1,0 +1,31 @@
+// Cards Container
+//
+// Used to set a specific appearance for a large collection of cards
+// Currently sets a padding equal to a standard col but functions like a row
+// also setting a tighter padding on inner col items
+
+.cards-container {
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding-top: .25rem;
+
+  @media (min-width: 768px) {
+    padding-top: .5rem;
+  }
+}
+
+.cards-container [class*=' col-'] {
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.cards-container > .row {
+  margin-right: -.5rem;
+  margin-left: -.5rem;
+
+  @media (max-width: 767px) {
+    margin-right: -.25rem;
+    margin-left: -.25rem;
+  }
+}

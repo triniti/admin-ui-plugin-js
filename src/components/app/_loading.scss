@@ -1,0 +1,98 @@
+// Loading
+//
+// Variables
+// $gray #505053
+// $white #fff
+// theme-color("primary") #00c1b3
+
+//  component not used, only shown using inline css in ui-icons example page, saved for possible future use
+/*
+
+<div className={`loading-container ${(styleName || '')}`}>
+  <ul className="loading-animation">
+    <li className="loading-dot" />
+    <li className="loading-dot" />
+    <li className="loading-dot" />
+  </ul>
+  <span className="loading-children">{ children }</span>
+</div>
+
+*/
+
+$color: rgba(0, 0, 0, 0.25);
+
+.loading-animation {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.2em;
+  list-style: none;
+  margin: 0 0 0 1.5em;
+  padding: 0;
+  position: relative;
+  &.reversed {
+    .loading-dot {
+        animation: LOADINGREV 1s infinite;
+        &:nth-child(1n) {
+          animation-delay: 0s;
+        }
+        &:nth-child(2n) {
+          animation-delay: 0.2s;
+        }
+        &:nth-child(3n) {
+          animation-delay: 0.4s;
+        }
+      }
+  }
+  .loading-dot {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin: 0;
+    height: .5em;
+    width: .5em;
+    border-radius: .5em;
+    transform: transformZ(0);
+    animation: LOADING 1.6s infinite;
+    &:nth-child(1n) {
+      left: -1em;
+      animation-delay: 0s;
+    }
+    &:nth-child(2n) {
+      left: 0;
+      animation-delay: 0.2s;
+    }
+    &:nth-child(3n) {
+      left: 1em;
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes  LOADING {
+  0%   {
+    background: $color;
+  }
+  50%   {
+    background: $body-bg;
+  }
+  100% {
+    background: $color;
+  }
+}
+
+@keyframes  LOADINGREV {
+  0%   {
+    background: $body-bg;
+  }
+  50%   {
+    background: $color;
+  }
+  100% {
+    background: $body-bg;
+  }
+}
+
+.loading-children {
+  margin-left: .75rem;
+  font-weight: 600;
+}

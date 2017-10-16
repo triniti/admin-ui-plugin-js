@@ -1,0 +1,26 @@
+// Jumbotron
+//
+// Custom background colors
+
+.jumbotron-dark {
+  background-color: theme-color("dark");
+  color: $white;
+}
+
+.jumbotron-light {
+  background-color: $gray-200;
+}
+
+.jumbotron-primary {
+  background-color: theme-color("primary");
+  color: $white;
+}
+
+.jumbotron-gray-700 {
+  background-color: $gray-700;
+}
+
+.jumbotron-dark p,
+.jumbotron-primary p {
+  color: $white-rgba-500;
+}

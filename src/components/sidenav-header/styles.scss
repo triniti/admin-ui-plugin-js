@@ -1,0 +1,51 @@
+// SideNav Header
+//
+// Unique header for sidenav container with arrow to close
+//
+// 300px wide side containers
+//
+// Variables from assets/styles/_variables.scss
+//
+// $header-height:             45px;
+// $transition:                250ms ease-in-out;
+// $width-desktop-lg:        2.5rem;
+// $width-desktop:             2rem;
+// $width-tablet:            1.5rem;
+// $width-mobile:              1rem;
+
+.sidenav-header {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+
+  font-size: 1em;
+  display: flex;
+  width: 100%;
+  min-height: $header-height + 4;
+  margin: 0;
+  padding-left: $width-mobile;
+  transition: width $transition;
+  letter-spacing: -.015rem;
+  border-bottom: 1px solid $gray-500;
+  background-color: $white;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: space-between;
+}
+
+.sidenav-header-title {
+  font-size: 1em;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .offcanvas-left .sidenav-header {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    margin-right: -1px;
+    width: calc(299px + 2.125rem);
+    border-right: 1px solid $gray-500;
+    border-bottom: 1px solid $gray-500;
+  }
+}

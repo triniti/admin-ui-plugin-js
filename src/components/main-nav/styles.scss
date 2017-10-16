@@ -1,0 +1,323 @@
+// Main Nav
+//
+// Custom styles for main nav for desktop dropdown menu and mobile aside nav.
+
+// variables
+$theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
+
+.main-nav {
+  margin-right: auto;
+}
+
+.main-nav .nav-link {
+  font-weight: 500;
+  position: relative;
+  transition: none;
+  white-space: nowrap;
+  letter-spacing: .008em;
+}
+
+.navbar-dark .main-nav .dropdown-item {
+  color: $navbar-dark-color;
+}
+
+.navbar-dark .main-nav .dropdown-item:hover,
+.navbar-dark .main-nav .dropdown-item:focus {
+  color: $navbar-dark-hover-color;
+  background-color: $gray-rgba-500;
+}
+
+.navbar-dark .main-nav .dropdown-item.active:hover,
+.navbar-dark .main-nav .dropdown-item.active:focus,
+.navbar-dark .main-nav .dropdown-item.active,
+.navbar-dark .main-nav .dropdown-item:active {
+  color: $navbar-dark-active-color;
+  background-color: $gray-rgba-500;
+  box-shadow: inset 3px 0 0 0 theme-color("primary");
+}
+
+.main-nav .nav-item:not(.is-current) .nav-link.active,
+.main-nav .nav-item:not(.is-current) .nav-link:active {
+  color: $navbar-light-color;
+}
+
+.navbar-dark .main-nav .nav-item:not(.is-current) .nav-link.active,
+.navbar-dark .main-nav .nav-item:not(.is-current) .nav-link:active {
+  color: $navbar-dark-color;
+}
+
+@media (max-width: 1024px) {
+  .main-nav {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: auto;
+    left: -290px;
+    display: block !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 290px;
+    height: calc(100vh - 2.5rem);
+    margin: 2.5rem 0 0 0;
+    padding: .5rem 0 3rem 0;
+    border-top: 1px solid $gray-700;
+    background-color: $body-bg !important;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    transition: left $transition;
+  }
+  .navbar-dark .main-nav {
+    background-color: $theme-dark-nav-dropdown !important;
+  }
+  .main-nav .show .dropdown-divider {
+    display: block;
+    height: 1px;
+  }
+  .main-nav.is-active {
+    left: 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+  }
+  .navbar-dark .main-nav {
+    border-top: none;
+  }
+  .main-nav .nav-link {
+    font-weight: 600;
+    position: relative;
+    padding: .75em 1em .75em 1.5em;
+    border-radius: 0;
+  }
+  .main-nav .nav-link::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    margin: .5rem 0 .5rem -4px;
+    content: '';
+    transition: margin $transition;
+  }
+  .main-nav .show > .nav-link::before {
+    margin: .5rem 0;
+    background-color: $gray-rgba-600;
+  }
+  .navbar-dark .show > .nav-link::before {
+    background-color: $white-rgba-500;
+  }
+  .main-nav .is-current > .nav-link::before {
+    margin: .5rem 0;
+    background-color: theme-color("primary");
+  }
+  .main-nav .nav-link[aria-haspopup='true']::after {
+    line-height: 1;
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+    display: inline-block;
+    width: 1rem;
+    min-width: 1em;
+    height: 1rem;
+    content: '';
+    transition: transform $transition;
+    transform: rotate(0deg);
+    text-align: center;
+    vertical-align: middle;
+    background: transparent url('#{$assets-folder}img/svg/icon/ti-angle-left.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+  }
+  .navbar-dark .main-nav .nav-link[aria-haspopup='true']::after {
+    background: transparent url('#{$assets-folder}img/svg/icon/ti-angle-left.svg?fill=%23#{$icon-theme-dark}') center center / auto 14px no-repeat;
+  }
+  .main-nav .show > .nav-link::after {
+    transform: rotate(-90deg);
+  }
+  .main-nav .nav-dropdown-menu {
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    overflow: hidden;
+    box-shadow: none;
+  }
+  .main-nav .show .nav-dropdown-menu {
+    position: relative !important;
+    padding: .125rem .75rem .125rem 0;
+    transform: none !important;
+  }
+  .main-nav .nav-dropdown-menu {
+    background-color: $gray-rgba-100;
+  }
+  .navbar-dark .main-nav .nav-dropdown-menu {
+    background-color: $gray-rgba-300;
+  }
+  .main-nav .nav-item .dropdown-item {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  .main-nav .show .dropdown-item {
+    height: 2.25rem;
+    margin: 5px 0;
+    padding: .5rem 1rem .5rem 1.5rem;
+    opacity: 1;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar-main-mobile .navbar-toggler {
+    display: none;
+  }
+  .main-nav .navbar-nav {
+    flex-direction: row;
+  }
+  .main-nav .navbar-nav .nav-link {
+    font-size: .8rem;
+    padding: 1.4em .7em;
+  }
+  .navbar-main-wrapper .nav-item > .dropdown-menu {
+    display: none;
+  }
+  .navbar-main-wrapper .is-current .nav-link::after,
+  .navbar-main-wrapper .is-current .nav-link-icon.nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: .625rem;
+    left: 0;
+    display: block;
+    height: 3px;
+    margin: 0 .6rem;
+    content: '';
+    background-color: theme-color("primary");
+  }
+  .navbar-main-wrapper .navbar-nav .nav-item:hover .nav-link {
+    position: relative;
+    z-index: 1001;
+    transition: none;
+  }
+  .navbar-main-wrapper .dropdown:hover .nav-link:before {
+    position: absolute;
+    bottom: -1px;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: 2px;
+    content: '';
+    background-color: $white;
+  }
+  .navbar-main-wrapper .navbar-nav .nav-item:hover .nav-link,
+  .navbar-main-wrapper .navbar-nav .nav-link:hover {
+    position: relative;
+    background-color: $white;
+    box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600;
+  }
+  .navbar-dark .dropdown:hover .nav-link:before {
+    background-color: $theme-dark-nav-dropdown;
+  }
+  .navbar-dark .navbar-nav .nav-item:hover .nav-link,
+  .navbar-dark .navbar-nav .navbar-nav .nav-link:hover {
+    background-color: $theme-dark-nav-dropdown;
+    box-shadow: none;
+  }
+  .navbar-nav .nav-dropdown-menu {
+    position: absolute;
+    z-index: $zindex-sticky;
+    top: 100% !important;
+    left: 0;
+    float: left;
+    min-width: 13rem;
+    margin: -4px 0 0 0;
+    padding: .3rem 0;
+    list-style: none;
+    text-align: left;
+    color: $body-color;
+    border-top-color: transparent;
+    border-radius: $border-radius-lg;
+    background-color: $body-bg;
+    background-clip: padding-box;
+    box-shadow: 0 1px 14px -2px $gray-rgba-600, 0 0 0 1px rgba($black, .05);
+    transform: none !important;
+  }
+  .navbar-main-wrapper .navbar-nav .nav-dropdown-menu {
+    margin: 0;
+    border-radius: 0 0 $border-radius-lg $border-radius-lg;
+    box-shadow: 0 10px 14px -7px $gray-rgba-600;
+  }
+  .navbar-dark .navbar-nav .nav-dropdown-menu {
+    border-top: 1px solid darken(theme-color("dark"), 3%);
+    background-color: darken(theme-color("dark"), 3%);
+  }
+  .nav-item:hover > .dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown-menu.dropdown-menu-right {
+    right: 0;
+    left: auto;
+  }
+  .nav-dropdown-menu.dropdown-menu-right::before,
+  .nav-dropdown-menu.dropdown-menu-right::after {
+    right: .7rem;
+    left: auto;
+  }
+  .nav-dropdown-menu .dropdown-item {
+    position: relative;
+    width: 100%;
+    margin: .25rem 0;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 0;
+  }
+  .navbar-dark .dropdown-item:focus,
+  .navbar-dark .dropdown-item:hover,
+  .navbar-dark .dropdown-item.active,
+  .navbar-dark .dropdown-item:active {
+    background-color: $gray-rgba-600;
+  }
+  .navbar-dark .dropdown-divider {
+    background-color: $gray-rgba-600;
+  }
+  .main-nav .dropdown-item.active::before {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 100%;
+    margin-left: 0;
+    content: '';
+    background-color: theme-color("primary");
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav .navbar-nav .nav-link {
+    font-size: inherit;
+    padding: 1.25rem .75rem;
+  }
+  .main-nav .is-current .nav-link::after {
+    margin: 0 .7rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .btn-nav {
+    margin-top: -.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-nav .navbar-nav .nav-link {
+    padding: 1.5rem 1.1rem 1.5rem 1.1rem;
+  }
+  .main-nav .is-current .nav-link::after,
+  .main-nav .is-current .nav-link-icon.nav-link::after {
+    bottom: .9rem;
+    margin: 0 1rem;
+  }
+}

@@ -1,0 +1,19 @@
+// Tooltips
+
+.tooltip-sidepanel {
+  box-shadow: 0 .25rem 1rem 0 $gray-rgba-500;
+}
+
+.tooltip .tooltip-inner {
+  border-radius: 0;
+}
+
+.tooltip .tooltip-inner::before {
+  content: 'hello';
+}
+
+@media (max-width: 1199px) {
+  .tooltip-sidepanel {
+    display: none !important;
+  }
+}

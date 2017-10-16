@@ -1,0 +1,49 @@
+{
+  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "globals": {
+    "document": true,
+    "window": true,
+    "APP_VENDOR": false,
+    "APP_NAME": false,
+    "APP_VERSION": false,
+    "APP_BUILD": false,
+    "APP_DEPLOYMENT_ID": false,
+    "APP_DEV_BRANCH": false,
+    "AUTH0_API_IDENTIFIER": false,
+    "AUTH0_CLIENT_ID": false,
+    "AUTH0_DOMAIN": false,
+    "API_ENDPOINT": false,
+    "PBJX_ENDPOINT": false
+  },
+  "env": {
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true
+    }
+  },
+  "rules": {
+    "camelcase": "warn",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "react/forbid-prop-types": "off",
+    "react/require-default-props": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}

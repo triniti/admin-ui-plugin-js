@@ -1,0 +1,136 @@
+// Alerts
+//
+// Styles for bootstrap alerts
+
+// Variables
+
+.alert {
+  position: relative;
+  border: none;
+}
+
+.alert-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+
+  display: flex;
+  min-height: $header-height;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  box-shadow: inset 0 -1px 0 $gray-rgba-300;
+}
+
+.alert.alert-inverse {
+  font-weight: 700;
+  color: $white;
+  border: none;
+  text-shadow: 0 1px 0 $gray-rgba-600;
+}
+
+.table .alert {
+  border-radius: 0;
+}
+
+.alert td,
+.alert td:hover .alert th,
+.alert th:hover {
+  border-radius: 0;
+  background-color: inherit;
+}
+
+.alert-success.alert-inverse {
+  background-color: theme-color("success");
+}
+
+.alert-info.alert-inverse {
+  background-color: theme-color("info");
+}
+
+.alert-warning.alert-inverse {
+  background-color: theme-color("warning");
+}
+
+.alert-danger.alert-inverse {
+  background-color: theme-color("danger");
+}
+
+.alert-brand.alert-inverse {
+  background-color: theme-color("primary");
+}
+
+.alert.alert-full-width {
+  border-width: 1px 0 1px 0;
+  border-radius: 0;
+}
+
+.alert-inverse.alert-full-width {
+  border: none;
+}
+
+.alert p:last-of-type {
+  margin-bottom: 0;
+}
+
+.alert .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: .9;
+}
+
+.alert-inverse .close {
+  color: $white;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+  opacity: .7;
+}
+
+.alert-inverse .close:hover {
+  color: $white;
+  opacity: 1;
+}
+
+// full-width alerts
+//
+// Custom Sizing
+// $width-desktop-lg:        2.5rem;
+// $width-desktop:             2rem;
+// $width-tablet:            1.5rem;
+// $width-mobile:              1rem;
+
+.alert-full-width {
+  margin: 0;
+  padding-top: .75rem;
+  padding-right: $width-mobile;
+  padding-bottom: .75rem;
+  padding-left: $width-mobile;
+
+  @media (min-width: 768px) {
+    padding-right: $width-tablet;
+    padding-left: $width-tablet;
+  }
+  @media (min-width: 1025px) {
+    padding-right: $width-desktop;
+    padding-left: $width-desktop;
+  }
+  @media (min-width: 1600px) {
+    padding-right: $width-desktop-lg;
+    padding-left: $width-desktop-lg;
+  }
+}
+
+.card-block .alert-full-width {
+  margin: 0 (-$width-mobile);
+
+  @media (min-width: 768px) {
+    margin: 0 (-$width-tablet);
+  }
+  @media (min-width: 1025px) {
+    margin: 0 (-$width-desktop);
+  }
+  @media (min-width: 1600px) {
+    margin: 0 (-$width-desktop-lg);
+  }
+}

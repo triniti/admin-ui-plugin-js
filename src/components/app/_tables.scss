@@ -1,0 +1,109 @@
+// Tables
+//
+
+.table {
+  margin-bottom: $width-desktop;
+}
+
+.sticky-top th {
+  border-top: none;
+}
+
+.table td {
+  font-size: .8rem;
+}
+
+.table:not(.table-inverse) {
+  background-color: $body-bg;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: transparent;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+  background-color: $gray-100;
+}
+
+.table-hover.table-striped tr:hover,
+.table-hover.table-striped tr:nth-of-type(odd):hover,
+.table-hover.table-striped tr:nth-of-type(even):hover {
+  background-color: $gray-300;
+}
+
+.table.fixed {
+  table-layout: fixed;
+}
+
+table.sticky-top + table,
+.card-block table.sticky-top {
+  margin-top: -1px !important;
+}
+
+.table th,
+.table td,
+.table-sm.sticky-top th {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+}
+
+@media (min-width: 1600px) {
+  .table th,
+  .table td,
+  .table-sm.sticky-top th {
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+  }
+}
+
+// Sticky-top tables
+
+.table.sticky-top {
+  box-shadow: 0 -1px 0 0 $gray-500;
+}
+
+.table.sticky-top th {
+  height: $header-height;
+}
+
+.table thead th {
+  border-bottom: 1px solid $gray-500;
+  border-top: none;
+  white-space: nowrap;
+}
+
+.table-stretch tr td:last-child {
+  white-space: nowrap;
+  width: 1px;
+  text-align: right;
+}
+
+.table-borderless th,
+.table-borderless td {
+  border-color: transparent;
+}
+
+@media (min-width: 768px) {
+  .table-responsive {
+    overflow: visible;
+  }
+}
+
+tr > th:first-child,
+tr > td:first-child {
+  padding-left: $width-mobile;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $width-tablet;
+  }
+}
+
+@media (min-width: 1025px) {
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $width-desktop + .3rem;
+  }
+}

@@ -1,0 +1,70 @@
+// Mobile Nav
+//
+// Custom styles for mobile navbar, navbar toggler button, and navbar brand.
+
+@media (max-width: 1024px) {
+  .navbar-main-mobile {
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    background-color: theme-color("light");
+  }
+  .navbar-dark .navbar-main-mobile {
+    background-color: theme-color("dark");
+  }
+}
+
+.navbar-main-brand {
+  display: inline-flex;
+  width: calc(100% - 7rem);
+  height: 2.5rem;
+  padding: 0;
+  text-align: center;
+  background: transparent url('#{$assets-folder}img/svg/tmz-logo.svg?fill=%23#{$icon-theme-light}') center center / auto 1.3rem no-repeat;
+
+  @media (min-width: 1025px) {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 .5rem 0 1.25rem;
+    transition: all $transition;
+    background-size: 80% auto;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  @media (min-width: 1200px) {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
+.navbar-dark .navbar-main-brand {
+  background: transparent url('#{$assets-folder}img/svg/tmz-logo.svg?fill=%23#{$icon-theme-dark}') center center / auto 1.3rem no-repeat;
+
+  @media (min-width: 1025px) {
+    background-size: 80% auto;
+  }
+}
+
+.navbar-main-spacer {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+    width: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .navbar-main-mobile .navbar-toggler-icon {
+    background: transparent url('#{$assets-folder}img/svg/icons/menu.svg?fill=%23#{$icon-theme-light}') center center / auto 20px no-repeat;
+    filter: opacity(.6);
+  }
+
+  .navbar-dark .navbar-main-mobile .navbar-toggler-icon {
+    background: transparent url('#{$assets-folder}img/svg/icons/menu.svg?fill=%23#{$icon-theme-dark}') center center / auto 20px no-repeat;
+  }
+}

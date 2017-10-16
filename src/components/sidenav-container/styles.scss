@@ -1,0 +1,18 @@
+// SideNav Container
+//
+// Scrollable content area inside main-container
+
+.sidenav-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 300px;
+  flex-wrap: nowrap;
+  height: 100%;
+  border-right: 1px solid $gray-500;
+  transition: margin $transition;
+}
+
+.offcanvas-left .sidenav-container {
+  margin-right: 2.5rem;
+}
