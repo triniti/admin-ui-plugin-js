@@ -7,13 +7,13 @@ module.exports = () => {
     entry: (() => {
       return [
         'react-hot-loader/patch',
-        'webpack-dev-server/client?https://localhost:3000',
+        'webpack-dev-server/client?https://localhost:8080',
         './index.jsx',
       ];
     })(),
     devtool: 'cheap-module-eval-source-map',
     devServer: {
-      port: 3000,
+      port: 8080,
       https: true,
       hot: true,
       contentBase: resolve(__dirname, 'public'),
