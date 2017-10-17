@@ -9,7 +9,7 @@ ReactDOM.render(
   <BrowserRouter>
     <div id="wrapper" data-slidedirection="">
       <Route exact path="/:componentId" component={DemoScreen} />
-      <Route exact path="/" render={() => <Redirect to="/alert" />} />
+      <Route exact path="/" render={() => <Redirect to="/alerts" />} />
     </div>
   </BrowserRouter>,
   document.getElementById('root'),
