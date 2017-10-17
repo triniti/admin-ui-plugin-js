@@ -10,7 +10,6 @@
   "private": true,
   "main": "src/index.jsx",
   "scripts": {
-    "analyze": "BABEL_ENV=browser webpack -p --json | webpack-bundle-size-analyzer",
     "build": "BABEL_ENV=browser webpack -p --env.NODE_ENV=production --progress --profile --colors",
     "lint": "BABEL_ENV=cjs eslint src tests",
     "test": "BABEL_ENV=cjs tape -r ./tests/bootstrap.js './tests/**/*.test.js*' | faucet"
@@ -18,7 +17,6 @@
   "dependencies": {
     "@gdbots/common": "^0.1.0",
     "bootstrap": "^4.0.0-beta",
-    "bottlejs": "^1.6.1",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
@@ -32,8 +30,6 @@
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.1",
     "redux": "^3.7.2",
-    "redux-form": "^7.1.1",
-    "redux-logger": "^3.0.6",
     "svg-fill-loader": "^0.0.8",
     "sweetalert2": "^6.10.2"
   },

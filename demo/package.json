@@ -10,7 +10,7 @@
   "scripts": {
     "start": "BABEL_ENV=browser webpack-dev-server --env.NODE_ENV=development --debug --progress --profile --colors --history-api-fallback"
   },
-  "dependencies": {
+  "devDependencies": {
     "bootstrap": "^4.0.0-beta",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
@@ -22,10 +22,7 @@
     "react-popper": "^0.7.3",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "svg-fill-loader": "^0.0.8"
-  },
-  "devDependencies": {
-    "autoprefixer": "^7.1.5",
+    "svg-fill-loader": "^0.0.8",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
