@@ -22,7 +22,7 @@
   "dependencies": {},
   "peerDependencies": {
     "@gdbots/common": "^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^1.0.0",
-    "@triniti/app": "^0.1.0",
+    "@triniti/app": "^0.1.0 || ^0.2.0 || ^0.3.0 || ^0.4.0 || ^1.0.0",
     "bootstrap": "^4.0.0-beta",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",

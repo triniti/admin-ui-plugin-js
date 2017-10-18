@@ -3,7 +3,7 @@ require('ignore-styles').default(['.sass', '.scss']);
 
 // babel-register
 require('babel-register')({
-  ignore: /node_modules\/(?!@gdbots|lodash-es)/,
+  ignore: /node_modules\/(?!@gdbots|@triniti|lodash-es)/,
 });
 
 // handle svg
