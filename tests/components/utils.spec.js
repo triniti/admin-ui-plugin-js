@@ -1,4 +1,4 @@
-import * as Utils from '../utils';
+import * as Utils from '../../src/components/utils';
 
 describe('Utils', () => {
   describe('mapToCssModules', () => {
@@ -46,7 +46,7 @@ describe('Utils', () => {
       const input = {
         hello: 'world',
         speed: 'fast',
-        size: 'small'
+        size: 'small',
       };
       expect(Utils.omit(input, ['hello'])).toEqual({ speed: 'fast', size: 'small' });
     });
@@ -55,13 +55,13 @@ describe('Utils', () => {
       const input = {
         hello: 'world',
         speed: 'fast',
-        size: 'small'
+        size: 'small',
       };
       expect(Utils.omit(input, ['hello'])).toEqual({ speed: 'fast', size: 'small' });
       expect(input).toEqual({
         hello: 'world',
         speed: 'fast',
-        size: 'small'
+        size: 'small',
       });
     });
 
@@ -69,14 +69,14 @@ describe('Utils', () => {
       const input = {
         hello: 'world',
         speed: 'fast',
-        size: 'small'
+        size: 'small',
       };
       expect(Utils.omit(input, ['non-existing', 'hello'])).toEqual({ speed: 'fast', size: 'small' });
     });
 
     it('should return a new object', () => {
       const input = {
-        hello: 'world'
+        hello: 'world',
       };
       // toBe tests equality using `===` and so will test if it's not the same object.
       expect(Utils.omit(input, [])).not.toBe(input);
@@ -101,10 +101,8 @@ describe('Utils', () => {
       const propName = 'dom';
       const componentName = 'ComponentName';
 
-      expect(Utils.DOMElement(props, propName, componentName)).toEqual(new Error(
-        'Invalid prop `' + propName + '` supplied to `' + componentName +
-        '`. Expected prop to be an instance of Element. Validation failed.'
-      ));
+      expect(Utils.DOMElement(props, propName, componentName)).toEqual(new Error(`Invalid prop \`${propName}\` supplied to \`${componentName
+      }\`. Expected prop to be an instance of Element. Validation failed.`));
     });
   });
 
