@@ -40,7 +40,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
 
     const tooltips = document.getElementsByClassName('tooltip');
@@ -57,7 +57,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
 
     const tooltips = document.getElementsByClassName('tooltip');
@@ -74,7 +74,7 @@ describe('Tooltip', () => {
       <Tooltip target={document.getElementById('target')} isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
 
     const tooltips = document.getElementsByClassName('tooltip');
@@ -90,7 +90,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
 
     expect(document.getElementsByClassName('tooltip').length).toBe(0);
@@ -106,14 +106,14 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
     expect(isOpen).toBe(false);
-    instance.handleDocumentClick({ target });
+    instance.handleDocumentClick({ target: target });
     expect(isOpen).toBe(true);
-    instance.handleDocumentClick({ target });
+    instance.handleDocumentClick({ target: target });
     expect(isOpen).toBe(false);
 
     wrapper.detach();
@@ -124,7 +124,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -139,7 +139,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -155,26 +155,28 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen} toggle={toggle} delay={200}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
     instance.onMouseLeaveTooltip();
     expect(isOpen).toBe(false);
-    instance.handleDocumentClick({ target });
+    instance.handleDocumentClick({ target: target });
     jest.runTimersToTime(200);
     expect(isOpen).toBe(true);
-    wrapper.setProps({ isOpen });
-    instance.handleDocumentClick({ target });
+    wrapper.setProps({ isOpen: isOpen });
+    instance.handleDocumentClick({ target: target });
     expect(isOpen).toBe(true);
 
     wrapper.detach();
   });
 
   it('should allow custom classes to be added to the tooltip-inner', () => {
-    const wrapper = mount(<Tooltip isOpen target="target" innerClassName="tooltip-special">
+    const wrapper = mount(
+      <Tooltip isOpen target="target" innerClassName="tooltip-special">
         Tooltip Content
-                          </Tooltip>);
+      </Tooltip>
+    );
 
     expect(document.getElementsByClassName('tooltip-inner')[0].className.indexOf('tooltip-special') > -1).toBe(true);
 
@@ -182,9 +184,11 @@ describe('Tooltip', () => {
   });
 
   it('should allow custom classes to be added to the tooltip', () => {
-    const wrapper = mount(<Tooltip isOpen target="target" className="tooltip-special">
+    const wrapper = mount(
+      <Tooltip isOpen target="target" className="tooltip-special">
         Tooltip Content
-                          </Tooltip>);
+      </Tooltip>
+    );
 
     expect(document.getElementsByClassName('tooltip')[0].className.indexOf('tooltip-special') > -1).toBe(true);
 
@@ -199,7 +203,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" disabled isOpen={isOpen} toggle={props.toggle}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -218,7 +222,7 @@ describe('Tooltip', () => {
       <Tooltip target="target" isOpen={isOpen}>
         Tooltip Content
       </Tooltip>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -234,7 +238,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={toggle} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -250,7 +254,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={toggle} delay={{ show: 200, hide: 200 }}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -266,7 +270,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={toggle} delay={{ show: 0 }}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -285,7 +289,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -304,7 +308,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -325,7 +329,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -345,7 +349,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -366,7 +370,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -390,7 +394,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy} delay={0}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -412,7 +416,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -436,7 +440,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" isOpen={isOpen} toggle={spy} delay={0}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -458,7 +462,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" autohide={false} isOpen={isOpen} toggle={spy} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -481,7 +485,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" autohide={false} isOpen={isOpen} toggle={spy} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -500,7 +504,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" autohide={false} isOpen={isOpen} toggle={spy} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -522,7 +526,7 @@ describe('Tooltip', () => {
         <Tooltip target="target" autohide isOpen={isOpen} toggle={spy} delay={200}>
           Tooltip Content
         </Tooltip>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
       expect(isOpen).toBe(true);

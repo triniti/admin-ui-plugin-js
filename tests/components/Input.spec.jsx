@@ -21,31 +21,31 @@ describe('Input', () => {
     expect(wrapper.type()).toBe('textarea');
   });
 
-  it('should render with "p" tag when static prop is truthy', () => {
-    const wrapper = shallow(<Input type="select" static />);
+  it('should render with "p" tag when plaintext prop is truthy', () => {
+    const wrapper = shallow(<Input type="select" plaintext />);
 
     expect(wrapper.type()).toBe('p');
   });
 
-  it('should render with "form-control-static" class when static prop is truthy', () => {
-    const wrapper = shallow(<Input type="select" static />);
+  it('should render with "form-control-plaintext" class when plaintext prop is truthy', () => {
+    const wrapper = shallow(<Input type="select" plaintext />);
 
-    expect(wrapper.hasClass('form-control-static')).toBe(true);
+    expect(wrapper.hasClass('form-control-plaintext')).toBe(true);
   });
 
-  it('should not render with "form-control" class when static prop is truthy', () => {
-    const wrapper = shallow(<Input type="select" static />);
+  it('should not render with "form-control" class when plaintext prop is truthy', () => {
+    const wrapper = shallow(<Input type="select" plaintext />);
 
     expect(wrapper.hasClass('form-control')).toBe(false);
   });
 
-  it('should render with custom tag when static prop is truthy and tag is provided', () => {
-    const wrapper = shallow(<Input type="select" static tag="div" />);
+  it('should render with custom tag when plaintext prop is truthy and tag is provided', () => {
+    const wrapper = shallow(<Input type="select" plaintext tag="div" />);
 
     expect(wrapper.type()).toBe('div');
   });
 
-  it('should not render with custom tag when static prop is not truthy and tag is provided', () => {
+  it('should not render with custom tag when plaintext prop is not truthy and tag is provided', () => {
     const wrapper = shallow(<Input type="select" tag="div" />);
 
     expect(wrapper.type()).toBe('select');
@@ -63,10 +63,35 @@ describe('Input', () => {
     expect(wrapper.text()).toBe('Yo!');
   });
 
-  it('should render with "form-control-${state}" class when state is provided', () => {
+  it('should render with "is-invalid" class when state is "danger" [DEPRECATED]', () => {
     const wrapper = shallow(<Input state="danger" />);
 
-    expect(wrapper.hasClass('form-control-danger')).toBe(true);
+    expect(wrapper.hasClass('is-invalid')).toBe(true);
+  });
+
+  it('should render with "is-valid" class when state is "success" [DEPRECATED]', () => {
+    const wrapper = shallow(<Input state="success" />);
+
+    expect(wrapper.hasClass('is-valid')).toBe(true);
+  });
+
+  it('should not render with "is-valid" nor "is-invalid" class when state is "warning" [DEPRECATED]', () => {
+    const wrapper = shallow(<Input state="warning" />);
+
+    expect(wrapper.hasClass('is-valid')).toBe(false);
+    expect(wrapper.hasClass('is-invalid')).toBe(false);
+  });
+
+  it('should render with "is-invalid" class when valid is false', () => {
+    const wrapper = shallow(<Input valid={false} />);
+
+    expect(wrapper.hasClass('is-invalid')).toBe(true);
+  });
+
+  it('should render with "is-valid" class when valid is true', () => {
+    const wrapper = shallow(<Input valid />);
+
+    expect(wrapper.hasClass('is-valid')).toBe(true);
   });
 
   it('should render with "form-control-${size}" class when size is provided', () => {
@@ -81,23 +106,31 @@ describe('Input', () => {
     expect(wrapper.hasClass('form-control')).toBe(true);
   });
 
-  it('should not render with "form-control-file" nor "form-control-static" nor "form-check-input" class by default', () => {
+  it('should not render with "form-control-file" nor "form-control-plaintext" nor "form-check-input" class by default', () => {
     const wrapper = shallow(<Input />);
 
     expect(wrapper.hasClass('form-control-file')).toBe(false);
-    expect(wrapper.hasClass('form-control-static')).toBe(false);
+    expect(wrapper.hasClass('form-control-plaintext')).toBe(false);
     expect(wrapper.hasClass('form-check-input')).toBe(false);
   });
 
-  it('should not render with "form-control" nor "form-control-static" nor "form-check-input" class when type is file', () => {
+  it('should not render with "form-control" nor "form-control-plaintext" nor "form-check-input" class when type is file', () => {
     const wrapper = shallow(<Input type="file" />);
 
     expect(wrapper.hasClass('form-control')).toBe(false);
-    expect(wrapper.hasClass('form-control-static')).toBe(false);
+    expect(wrapper.hasClass('form-control-plaintext')).toBe(false);
     expect(wrapper.hasClass('form-check-input')).toBe(false);
   });
 
-  it('should not render with "form-control-file" nor "form-control" nor "form-check-input" class when static prop is truthy', () => {
+  it('should not render with "form-control-file" nor "form-control" nor "form-check-input" class when plaintext prop is truthy', () => {
+    const wrapper = shallow(<Input type="file" plaintext />);
+
+    expect(wrapper.hasClass('form-control-file')).toBe(false);
+    expect(wrapper.hasClass('form-control')).toBe(false);
+    expect(wrapper.hasClass('form-check-input')).toBe(false);
+  });
+
+  it('should not render with "form-control-file" nor "form-control" nor "form-check-input" class when static prop is truthy [DEPRECATED]', () => {
     const wrapper = shallow(<Input type="file" static />);
 
     expect(wrapper.hasClass('form-control-file')).toBe(false);
@@ -105,19 +138,19 @@ describe('Input', () => {
     expect(wrapper.hasClass('form-check-input')).toBe(false);
   });
 
-  it('should not render with "form-control-file" nor "form-control-static" nor "form-control" class when type is radio', () => {
+  it('should not render with "form-control-file" nor "form-control-plaintext" nor "form-control" class when type is radio', () => {
     const wrapper = shallow(<Input type="radio" />);
 
     expect(wrapper.hasClass('form-control-file')).toBe(false);
-    expect(wrapper.hasClass('form-control-static')).toBe(false);
+    expect(wrapper.hasClass('form-control-plaintext')).toBe(false);
     expect(wrapper.hasClass('form-control')).toBe(false);
   });
 
-  it('should not render with "form-control-file" nor "form-control-static" nor "form-control" class when type is checkbox', () => {
+  it('should not render with "form-control-file" nor "form-control-plaintext" nor "form-control" class when type is checkbox', () => {
     const wrapper = shallow(<Input type="checkbox" />);
 
     expect(wrapper.hasClass('form-control-file')).toBe(false);
-    expect(wrapper.hasClass('form-control-static')).toBe(false);
+    expect(wrapper.hasClass('form-control-plaintext')).toBe(false);
     expect(wrapper.hasClass('form-control')).toBe(false);
   });
 

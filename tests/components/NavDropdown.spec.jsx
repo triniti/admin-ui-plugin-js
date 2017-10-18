@@ -21,12 +21,14 @@ describe('NavDropdown', () => {
 
   it('should render multiple children when isOpen', () => {
     isOpen = true;
-    const wrapper = mount(<NavDropdown isOpen={isOpen} toggle={toggle}>
-      <DropdownToggle>Toggle</DropdownToggle>
-      <DropdownMenu>
-        <DropdownItem>Test</DropdownItem>
-      </DropdownMenu>
-                          </NavDropdown>);
+    const wrapper = mount(
+      <NavDropdown isOpen={isOpen} toggle={toggle}>
+        <DropdownToggle>Toggle</DropdownToggle>
+        <DropdownMenu>
+          <DropdownItem>Test</DropdownItem>
+        </DropdownMenu>
+      </NavDropdown>
+    );
 
     expect(wrapper.find('.btn').text()).toBe('Toggle');
     expect(wrapper.find('.nav-item').length).toBe(1);

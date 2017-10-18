@@ -42,38 +42,45 @@ describe('NavLink', () => {
 
   it('handles onClick prop', () => {
     const onClick = jest.fn();
-    const preventDefault = jest.fn(() => {});
-    const wrapper = shallow(<NavLink onClick={onClick} />);
+    const e = createSpyObj('e', ['preventDefault']);
+    const wrapper = shallow(
+      <NavLink onClick={onClick} />
+    );
 
-    wrapper.find('a').simulate('click', { preventDefault });
-
+    wrapper.find('a').simulate('click', e);
     expect(onClick).toHaveBeenCalled();
-    expect(preventDefault).not.toHaveBeenCalled();
+    expect(e.preventDefault).not.toHaveBeenCalled();
   });
 
   it('handles onClick events', () => {
-    const preventDefault = jest.fn(() => {});
-    const wrapper = shallow(<NavLink />);
+    const e = createSpyObj('e', ['preventDefault']);
+    const wrapper = shallow(
+      <NavLink />
+    );
 
-    wrapper.find('a').simulate('click', { preventDefault });
-    expect(preventDefault).not.toHaveBeenCalled();
+    wrapper.find('a').simulate('click', e);
+    expect(e.preventDefault).not.toHaveBeenCalled();
   });
 
   it('prevents link clicks via onClick for dropdown nav-items', () => {
-    const preventDefault = jest.fn(() => {});
-    const wrapper = shallow(<NavLink href="#" />);
+    const e = createSpyObj('e', ['preventDefault']);
+    const wrapper = shallow(
+      <NavLink href="#" />
+    );
 
-    wrapper.find('a').simulate('click', { preventDefault });
-    expect(preventDefault).toHaveBeenCalled();
+    wrapper.find('a').simulate('click', e);
+    expect(e.preventDefault).toHaveBeenCalled();
   });
 
   it('is not called when disabled', () => {
     const onClick = jest.fn();
-    const preventDefault = jest.fn(() => {});
-    const wrapper = shallow(<NavLink disabled onClick={onClick} />);
+    const e = createSpyObj('e', ['preventDefault']);
+    const wrapper = shallow(
+      <NavLink disabled onClick={onClick} />
+    );
 
-    wrapper.find('a').simulate('click', { preventDefault });
-    expect(preventDefault).toHaveBeenCalled();
+    wrapper.find('a').simulate('click', e);
+    expect(e.preventDefault).toHaveBeenCalled();
     expect(onClick).not.toHaveBeenCalled();
   });
 });

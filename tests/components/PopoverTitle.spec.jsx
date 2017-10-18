@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { PopoverTitle, PopoverHeader } from '../';
+import { PopoverTitle, PopoverHeader } from '../../../src/components';
 
 describe('PopoverTitle', () => {
   it('should render children', () => {
