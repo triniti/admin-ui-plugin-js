@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Card, CardBody, CardTitle, CardText, Col, Row, TabPane } from '../';
+import { Button, Card, CardBody, CardTitle, CardText, TabPane } from '../';
 
 const Misc = ({ tabId }) => (
   <TabPane tabId={tabId} className="px-3">

@@ -18,7 +18,6 @@ const NavBarContainer = ({ navConfig, theme }) => {
       <MainNavContainer navConfig={navConfig} />
       <MainNavBackdrop />
       <UserNavContainer />
-
     </Navbar>
   );
 };

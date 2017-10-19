@@ -4,13 +4,13 @@ import { NavLink } from 'react-router-dom';
 import { DropdownToggle, DropdownMenu, NavDropdown } from '../';
 
 const DropdownUnit = ({
-   dropdownOpen,
-   handleToggleClick,
-   handleDropdownClick,
-   classes,
-   title,
-   links,
-  }) => {
+  dropdownOpen,
+  handleToggleClick,
+  handleDropdownClick,
+  classes,
+  title,
+  links,
+}) => {
   const navLinks = links.map((dpLink) => {
     const { to, linkTitle } = dpLink;
     return (
@@ -31,7 +31,7 @@ const DropdownUnit = ({
       <DropdownToggle onClick={handleToggleClick} nav>
         {title}
       </DropdownToggle>
-      <DropdownMenu className={'nav-dropdown-menu'}>
+      <DropdownMenu className="nav-dropdown-menu">
         {navLinks}
       </DropdownMenu>
     </NavDropdown>

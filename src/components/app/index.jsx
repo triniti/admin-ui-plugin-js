@@ -22,7 +22,6 @@ const App = ({ location, navConfig, routes, authHoc }) => (
   </div>
 );
 
-
 App.propTypes = {
   location: PropTypes.object,
   routes: PropTypes.object,

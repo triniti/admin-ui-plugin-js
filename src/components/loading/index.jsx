@@ -3,7 +3,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-
 const Loading = ({ styleName, children }) => (
   <div className={`loading-container ${(styleName || '')}`}>
     <ul className="loading-animation">
@@ -16,6 +15,7 @@ const Loading = ({ styleName, children }) => (
 );
 
 Loading.propTypes = {
+  styleName: PropTypes.string,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

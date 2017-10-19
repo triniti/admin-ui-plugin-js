@@ -8,7 +8,7 @@ import UserNavCloser from './UserNavCloser';
 
 
 /* fixme:: create notification component, get unread numbers from redux stroe */
-const UnreadMsgBadge = () => <Badge color="warning" className={'round'}>3</Badge>;
+const UnreadMsgBadge = () => <Badge color="warning" className="round">3</Badge>;
 
 class UserNavContent extends React.Component {
   static propTypes = {
@@ -48,7 +48,15 @@ class UserNavContent extends React.Component {
   }
 
   render() {
-    const { activeTab, handleBtnClick, handleTabClick, currentTheme, position, toggleTheme, toggleUserNav } = this.props;
+    const {
+      activeTab,
+      handleBtnClick,
+      handleTabClick,
+      currentTheme,
+      position,
+      toggleTheme,
+      toggleUserNav,
+    } = this.props;
 
     return (
       <div id="usernav-container" className={`usernav-container ${position}`}>
