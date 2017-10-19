@@ -8,7 +8,7 @@
 //  component not used, only shown using inline css in ui-icons example page, saved for possible future use
 /*
 
-<div className={`loading-container ${(styleName || '')}`}>
+<div className={classnames('loading-container', className)}>
   <ul className="loading-animation">
     <li className="loading-dot" />
     <li className="loading-dot" />

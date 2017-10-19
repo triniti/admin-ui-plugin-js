@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import UserNavOpener from './UserNavOpener';
 import UserNavContent from './UserNavContent';
-import UserNavBackdrop from './UserNavBackdrop';
+import UserNavBackdrop from '../../containers/user-nav-backdrop';
 import './styles.scss';
 
 

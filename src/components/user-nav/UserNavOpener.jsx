@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Badge } from '../badge';
 
 const UserNavOpener = ({ handleClick }) => (
   <button className="btn-usernav" onClick={handleClick}>

@@ -1,29 +1,25 @@
-import clickDropdown from './clickDropdown';
 import changeAsideActiveTab from './changeAsideActiveTab';
+import clickDropdown from './clickDropdown';
+import hideNotification from './hideNotification';
+import receiveFlashMessage from './receiveFlashMessage';
+import requestLogout from './requestLogout';
+import requestNewTheme from './requestNewTheme';
+import showNotification from './showNotification';
 import toggleDropdown from './toggleDropdown';
 import toggleMainNav from './toggleMainNav';
-import toggleUserNav from './toggleUserNav';
-import requestLogout from './requestLogout';
-
-import receiveFlashMessage from './receiveFlashMessage';
-import showNotification from './showNotification';
-import hideNotification from './hideNotification';
 import toggleNotification from './toggleNotification';
-
-import requestNewTheme from './requestNewTheme';
+import toggleUserNav from './toggleUserNav';
 
 export default {
-  clickDropdown,
   changeAsideActiveTab,
-  toggleUserNav,
-  toggleMainNav,
-  toggleDropdown,
-  requestLogout,
-
-  receiveFlashMessage,
-  showNotification,
+  clickDropdown,
   hideNotification,
-  toggleNotification,
-
+  receiveFlashMessage,
+  requestLogout,
   requestNewTheme,
+  showNotification,
+  toggleDropdown,
+  toggleMainNav,
+  toggleNotification,
+  toggleUserNav,
 };

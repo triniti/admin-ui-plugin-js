@@ -1,5 +1,6 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, ButtonGroup, Card, CardBlock, CardTitle, iconClose } from '../../../../src/components';
+import { Breadcrumb, BreadcrumbItem, Button, ButtonGroup, Card, CardBlock, CardTitle } from '../../../../src/components';
+import iconClose from '../../assets/img/svg/icons/close.svg';
 
 const UiBreadcrumb = () => (
   <Card>

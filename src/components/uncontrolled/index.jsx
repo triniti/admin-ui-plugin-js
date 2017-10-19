@@ -1,9 +1,9 @@
 import React from 'react';
-import Alert from '../alert/index';
-import ButtonDropdown from '../button-dropdown/index';
-import Dropdown from '../dropdown/index';
-import NavDropdown from '../nav-dropdown/index';
-import Tooltip from '../tooltip/index';
+import Alert from '../alert';
+import ButtonDropdown from '../button-dropdown';
+import Dropdown from '../dropdown';
+import NavDropdown from '../nav-dropdown';
+import Tooltip from '../tooltip';
 
 const { Component } = React;
 const components = {

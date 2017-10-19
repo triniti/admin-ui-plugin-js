@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import { Popover, PopoverHeader, PopoverBody } from '../';
+import { Popover, PopoverHeader, PopoverBody } from '../../../src/components';
 
 describe('Popover', () => {
   let element;
@@ -35,10 +35,12 @@ describe('Popover', () => {
 
   it('should render inner popper when isOpen', () => {
     isOpen = true;
-    const wrapper = mount(<Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-    </Popover>);
+    const wrapper = mount(
+      <Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
 
     expect(document.getElementsByClassName('popover').length).toBe(1);
     expect(document.getElementsByClassName('popover-inner').length).toBe(1);
@@ -48,10 +50,12 @@ describe('Popover', () => {
   });
 
   it('should not render inner popper when not isOpen', () => {
-    const wrapper = mount(<Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-                          </Popover>);
+    const wrapper = mount(
+      <Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
 
     expect(document.getElementsByClassName('popover').length).toBe(0);
     expect(document.getElementsByClassName('popover-inner').length).toBe(0);
@@ -61,10 +65,12 @@ describe('Popover', () => {
   });
 
   it('should be able to show the popover', () => {
-    const wrapper = mount(<Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-                          </Popover>);
+    const wrapper = mount(
+      <Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
 
     expect(isOpen).toBe(false);
 
@@ -76,7 +82,7 @@ describe('Popover', () => {
 
     toggle();
     wrapper.setProps({
-      isOpen,
+      isOpen: isOpen
     });
 
     expect(isOpen).toBe(true);
@@ -91,10 +97,12 @@ describe('Popover', () => {
 
   it('should be able to hide the popover', () => {
     isOpen = true;
-    const wrapper = mount(<Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-    </Popover>);
+    const wrapper = mount(
+      <Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
 
     expect(isOpen).toBe(true);
     expect(document.getElementsByClassName('popover').length).toBe(1);
@@ -104,7 +112,7 @@ describe('Popover', () => {
 
     toggle();
     wrapper.setProps({
-      isOpen,
+      isOpen: isOpen
     });
 
     expect(isOpen).toBe(false);
@@ -117,10 +125,12 @@ describe('Popover', () => {
   });
 
   it('default toggle prop does nothing', () => {
-    const wrapper = mount(<Popover isOpen={isOpen} placement={placement} target="innerTarget">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-                          </Popover>);
+    const wrapper = mount(
+      <Popover isOpen={isOpen} placement={placement} target="innerTarget">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
     const instance = wrapper.instance();
 
     expect(isOpen).toBe(false);
@@ -131,10 +141,12 @@ describe('Popover', () => {
   });
 
   it('should allow custom classes to be added to the popover-inner', () => {
-    const wrapper = mount(<Popover isOpen placement={placement} target="innerTarget" innerClassName="popover-special">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-    </Popover>);
+    const wrapper = mount(
+      <Popover isOpen placement={placement} target="innerTarget" innerClassName="popover-special">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
 
     expect(document.getElementsByClassName('popover-inner')[0].className.indexOf('popover-special') > -1).toBe(true);
 
@@ -142,10 +154,12 @@ describe('Popover', () => {
   });
 
   it('should allow custom classes to be added to the popover', () => {
-    const wrapper = mount(<Popover isOpen placement={placement} target="innerTarget" className="popover-special">
-      <PopoverHeader>Title</PopoverHeader>
-      <PopoverBody>Content</PopoverBody>
-                          </Popover>);
+    const wrapper = mount(
+      <Popover isOpen placement={placement} target="innerTarget" className="popover-special">
+        <PopoverHeader>Title</PopoverHeader>
+        <PopoverBody>Content</PopoverBody>
+      </Popover>
+    );
 
     expect(document.getElementsByClassName('popover')[0].className.indexOf('popover-special') > -1).toBe(true);
 
@@ -157,7 +171,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -175,7 +189,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -193,7 +207,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -212,7 +226,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -230,7 +244,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -248,7 +262,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -265,7 +279,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen} toggle={toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -284,7 +298,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" disabled isOpen={isOpen} toggle={props.toggle}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -303,7 +317,7 @@ describe('Popover', () => {
       <Popover target="innerTarget" isOpen={isOpen}>
         Popover Content
       </Popover>,
-      { attachTo: container },
+      { attachTo: container }
     );
     const instance = wrapper.instance();
 
@@ -319,7 +333,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={toggle} delay={200}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -336,7 +350,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={toggle} delay={{ show: 200, hide: 200 }}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -353,7 +367,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={toggle} delay={{ hide: 250 }}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -373,7 +387,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -393,7 +407,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -415,7 +429,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 
@@ -436,7 +450,7 @@ describe('Popover', () => {
         <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
           Popover Content
         </Popover>,
-        { attachTo: container },
+        { attachTo: container }
       );
       const instance = wrapper.instance();
 

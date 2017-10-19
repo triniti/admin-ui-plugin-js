@@ -106,20 +106,24 @@ describe('Media', () => {
   });
 
   it('should render list', () => {
-    const wrapper = shallow(<Media list>
-      <Media tag="li" />
-      <Media tag="li" />
-      <Media tag="li" />
-                            </Media>);
+    const wrapper = shallow(
+      <Media list>
+        <Media tag="li" />
+        <Media tag="li" />
+        <Media tag="li" />
+      </Media>
+    );
 
     expect(wrapper.hasClass('media-list')).toBe(true);
     expect(wrapper.find({ tag: 'li' }).length).toBe(3);
   });
 
   it('should render children', () => {
-    const wrapper = shallow(<Media>
-      <Media body />
-                            </Media>);
+    const wrapper = shallow(
+      <Media>
+        <Media body />
+      </Media>
+    );
 
     expect(wrapper.find({ body: true }).length).toBe(1);
   });

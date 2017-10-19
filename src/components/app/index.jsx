@@ -5,8 +5,8 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import './styles.scss';
 // fixme: components ideally are not requesting containers
 // they should given them via props or children
-import NavBarContainer from '../../containers/NavBarContainer';
-import FlashMessageContainer from '../../containers/FlashMessageContainer';
+import NavBarContainer from '../../containers/nav-bar';
+import FlashMessageContainer from '../../containers/flash-message';
 import AppContent from '../app-content';
 
 
@@ -21,7 +21,6 @@ const App = ({ location, navConfig, routes, authHoc }) => (
     <AppContent routes={routes} authHoc={authHoc} />
   </div>
 );
-
 
 App.propTypes = {
   location: PropTypes.object,

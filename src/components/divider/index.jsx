@@ -3,16 +3,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-
 const Divider = ({ size, children }) => (
-  <div className={`divider divider-${(size || 'md')}`} >{children}</div>
+  <div className={`divider divider-${size}`}>{children}</div>
 );
 
 Divider.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  size: PropTypes.string,
+  children: PropTypes.node,
+};
+
+Divider.defaultProps = {
+  size: 'md',
 };
 
 export default Divider;

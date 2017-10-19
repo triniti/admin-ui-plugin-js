@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars, class-methods-use-this */
 import Plugin from '@triniti/app/Plugin';
-import reducer from './src/reducers';
+import reducer from './reducers';
 
 export default class AdminUiPlugin extends Plugin {
   constructor() {

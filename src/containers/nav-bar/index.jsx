@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
-import { Navbar } from '../components';
-import MainNavContainer from './MainNavContainer';
-import MainNavBackdrop from './MainNavBackdrop';
-import UserNavContainer from './UserNavContainer';
-import MobileNavContainer from './MobileNavContainer';
-import selectors from '../selectors';
+import { Navbar } from '../../components';
+import MainNavContainer from '../main-nav';
+import MainNavBackdrop from '../main-nav-backdrop';
+import UserNavContainer from '../user-nav';
+import MobileNavContainer from '../mobile-nav';
+import selectors from '../../selectors';
 
 const NavBarContainer = ({ navConfig, theme }) => {
   const navbarClass = theme === 'light' ? 'navbar' : 'navbar-dark';
@@ -18,7 +18,6 @@ const NavBarContainer = ({ navConfig, theme }) => {
       <MainNavContainer navConfig={navConfig} />
       <MainNavBackdrop />
       <UserNavContainer />
-
     </Navbar>
   );
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '../button';
+import Button from '../button';
 
 export default () => (
   <footer className="main-content-footer">

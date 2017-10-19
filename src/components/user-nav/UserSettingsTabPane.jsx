@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { Button, CardBlock, DropdownItem, Media, ScrollableContainer, TabPane } from '../';
 
-const UserSettingsTabPane = ({ tabId, handleLogout, btnClick, currentTheme, toggleTheme }) => (
+const UserSettingsTabPane = ({
+  tabId,
+  handleLogout,
+  btnClick,
+  currentTheme,
+  toggleTheme,
+}) => (
   <TabPane tabId={tabId}>
     <ScrollableContainer>
       <CardBlock>
@@ -12,7 +18,7 @@ const UserSettingsTabPane = ({ tabId, handleLogout, btnClick, currentTheme, togg
             object
             src="https://placeholdit.imgix.net/~text?txtsize=16&txt=200%C3%97200&w=200&h=200"
             alt="Generic placeholder image"
-            className={'rounded-circle'}
+            className="rounded-circle"
           />
         </Media>
 

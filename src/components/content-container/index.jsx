@@ -1,17 +1,16 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import './styles.scss';
 
-const ContentContainer = ({ children }) => (
-  <div className="content-container">{children}</div>
+const ContentContainer = ({ children, className }) => (
+  <div className={classnames('content-container', className)}>{children}</div>
 );
 
 ContentContainer.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  className: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default ContentContainer;

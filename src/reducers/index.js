@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
-import theme from './theme';
 import flashMessage from './flashMessage';
 import mainNav from './mainNav';
+import theme from './theme';
 import userNav from './userNav';
 
 export default combineReducers({
-  theme,
   flashMessage,
   mainNav,
+  theme,
   userNav,
 });

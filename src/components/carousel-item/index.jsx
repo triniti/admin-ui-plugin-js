@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
-import CarouselCaption from '../carousel-caption/index';
+import CarouselCaption from '../carousel-caption';
 
 class CarouselItem extends React.Component {
 

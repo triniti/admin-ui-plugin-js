@@ -1,6 +1,7 @@
+const key = 'iam.auth.redirectTo';
+
 export default ({ adminUi }) => {
   const { currentSection } = adminUi.mainNav;
-  // fixme: generalize sessionStorage (no tmz names)
-  const referralAfterLogin = sessionStorage.getItem('tmz:user:redirect_location') || 'dashboard';
+  const referralAfterLogin = localStorage.getItem(key) || 'dashboard';
   return currentSection === 'login' ? referralAfterLogin : currentSection;
 };

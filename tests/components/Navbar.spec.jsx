@@ -9,16 +9,34 @@ describe('Navbar', () => {
     expect(wrapper.html()).toBe('<nav class="navbar"></nav>');
   });
 
-  it('should render default .navbar-toggleable class', () => {
-    const wrapper = shallow(<Navbar toggleable />);
+  it('should render default .navbar-expand class', () => {
+    const wrapper = shallow(<Navbar expand />);
 
-    expect(wrapper.html()).toBe('<nav class="navbar navbar-toggleable"></nav>');
+    expect(wrapper.html()).toBe('<nav class="navbar navbar-expand"></nav>');
   });
 
-  it('should render size based .navbar-toggleable-* classes', () => {
+  it('should render size based .navbar-expand-* classes', () => {
+    const wrapper = shallow(<Navbar expand="md" />);
+
+    expect(wrapper.html()).toBe('<nav class="navbar navbar-expand-md"></nav>');
+  });
+
+  it('should render default .navbar-expand class for toggleable false [DEPRECATED]', () => {
+    const wrapper = shallow(<Navbar toggleable={false} />);
+
+    expect(wrapper.html()).toBe('<nav class="navbar navbar-expand"></nav>');
+  });
+
+  it('should render default .navbar-expand class for toggleable true [DEPRECATED]', () => {
+    const wrapper = shallow(<Navbar toggleable />);
+
+    expect(wrapper.html()).toBe('<nav class="navbar navbar-expand-sm"></nav>');
+  });
+
+  it('should render size based .navbar-expand-* classes for toggleable (bumping breakpoint) [DEPRECATED]', () => {
     const wrapper = shallow(<Navbar toggleable="md" />);
 
-    expect(wrapper.html()).toBe('<nav class="navbar navbar-toggleable-md"></nav>');
+    expect(wrapper.html()).toBe('<nav class="navbar navbar-expand-lg"></nav>');
   });
 
   it('should render custom tag', () => {
@@ -47,13 +65,13 @@ describe('Navbar', () => {
   });
 
   it('should render prop based classes', () => {
-    const wrapper = shallow(<Navbar light inverse toggleable="sm" color="success" full sticky="top" fixed="top" />);
+    const wrapper = shallow(<Navbar light dark expand="sm" color="success" full sticky="top" fixed="top" />);
 
     expect(wrapper.hasClass('bg-success')).toBe(true);
     expect(wrapper.hasClass('navbar')).toBe(true);
-    expect(wrapper.hasClass('navbar-toggleable-sm')).toBe(true);
+    expect(wrapper.hasClass('navbar-expand-sm')).toBe(true);
     expect(wrapper.hasClass('navbar-light')).toBe(true);
-    expect(wrapper.hasClass('navbar-inverse')).toBe(true);
+    expect(wrapper.hasClass('navbar-dark')).toBe(true);
     expect(wrapper.hasClass('fixed-top')).toBe(true);
     expect(wrapper.hasClass('sticky-top')).toBe(true);
   });
