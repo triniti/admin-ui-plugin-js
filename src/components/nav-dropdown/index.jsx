@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
-import Dropdown from '../dropdown/index';
+import Dropdown from '../dropdown';
 
 const propTypes = {
   children: PropTypes.node,

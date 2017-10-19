@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
-import UserNav from '../components/user-nav';
-import actions from '../actions';
-import selectors from '../selectors';
+import UserNav from '../../components/user-nav';
+import actions from '../../actions';
+import selectors from '../../selectors';
 
 const mapStateToProps = state => ({
   position: selectors.getUserNavPosition(state),
