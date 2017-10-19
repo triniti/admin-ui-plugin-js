@@ -7,6 +7,12 @@ const presets = [
 
 const plugins = [
   [
+    'module-resolver',
+    {
+      root: ['./src']
+    }
+  ],
+  [
     'transform-builtin-extend',
     {
       globals: ['Error']
