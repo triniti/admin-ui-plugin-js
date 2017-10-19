@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import DemoScreen from './DemoScreen';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
+import App from '../../src/components/app';
 import './assets/styles/main.scss';
 import '../../src/components/app/styles.scss';
+import routes from './config/routes';
+import nav from './config/main-nav.json';
+import store from './config/store';
 
 ReactDOM.render(
-  <BrowserRouter>
-    <div id="wrapper" data-slidedirection="">
-      <Route exact path="/:componentId" component={DemoScreen} />
-      <Route exact path="/" render={() => <Redirect to="/alerts" />} />
-    </div>
-  </BrowserRouter>,
+  <Provider store={store}>
+    <BrowserRouter>
+      <App routes={routes} navConfig={nav} />
+    </BrowserRouter>
+  </Provider>,
   document.getElementById('root'),
 );

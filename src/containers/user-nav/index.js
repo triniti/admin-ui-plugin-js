@@ -12,7 +12,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = {
   handleLogout: actions.requestLogout,
-  handleBtnClick: actions.clickDropdown,
   handleTabClick: actions.changeAsideActiveTab,
   toggleUserNav: actions.toggleUserNav,
   toggleTheme: actions.requestNewTheme,
