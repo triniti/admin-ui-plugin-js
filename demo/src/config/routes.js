@@ -10,9 +10,9 @@ const routes = {
   [r('indexRedirect')]: {
     path: '/',
     redirect: {
-      to: '/alert',
+      to: '/alerts',
     },
   },
-}
+};
 
 export default routes;

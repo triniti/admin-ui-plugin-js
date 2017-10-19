@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle, } from '../../../src/components';
+import { Badge, ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '../../../src/components';
 
 /* todo: enable dropdown menu functionality based on loaded screen */
 
@@ -21,10 +21,10 @@ class PageHeaderDropdown extends React.Component {
 
   render() {
     return (
-      <ButtonDropdown className={'mr-2'}>
+      <ButtonDropdown className="mr-2">
         <DropdownToggle caret size="sm" color="default" className="alert-wrapper">
           Active Edits
-          <Badge color="warning" className={'badge-alert'}>1</Badge>
+          <Badge color="warning" className="badge-alert">1</Badge>
         </DropdownToggle>
         <DropdownMenu>
           <DropdownItem header>Header</DropdownItem>
