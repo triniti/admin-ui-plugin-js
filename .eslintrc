@@ -9,12 +9,7 @@
     "APP_VERSION": false,
     "APP_BUILD": false,
     "APP_DEPLOYMENT_ID": false,
-    "APP_DEV_BRANCH": false,
-    "AUTH0_API_IDENTIFIER": false,
-    "AUTH0_CLIENT_ID": false,
-    "AUTH0_DOMAIN": false,
-    "API_ENDPOINT": false,
-    "PBJX_ENDPOINT": false
+    "APP_DEV_BRANCH": false
   },
   "env": {
     "browser": true

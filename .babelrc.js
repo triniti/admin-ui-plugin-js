@@ -7,12 +7,6 @@ const presets = [
 
 const plugins = [
   [
-    'module-resolver',
-    {
-      root: ['./src']
-    }
-  ],
-  [
     'transform-builtin-extend',
     {
       globals: ['Error']
@@ -22,31 +16,12 @@ const plugins = [
   'transform-async-to-generator',
   'transform-class-properties',
   'transform-decorators-legacy',
-  'transform-es2015-modules-commonjs',
   'transform-object-rest-spread',
   'transform-regenerator',
   'transform-runtime'
 ];
 
 switch (env) {
-  case 'browser':
-    presets.push([
-      'env',
-      {
-        targets: {
-          browsers: [
-            'last 2 versions',
-          ],
-        },
-        modules: false,
-        useBuiltIns: true,
-      },
-    ]);
-
-    plugins.push('lodash');
-    plugins.push('react-hot-loader/babel');
-    break;
-
   case 'cjs':
     presets.push([
       'env',
@@ -60,6 +35,26 @@ switch (env) {
         useBuiltIns: true,
       },
     ]);
+
+    plugins.push('transform-es2015-modules-commonjs');
+    break;
+
+  case 'es6':
+    presets.push([
+      'env',
+      {
+        targets: {
+          node: [
+            'v8',
+          ],
+        },
+        modules: false,
+        useBuiltIns: true,
+      },
+    ]);
+
+    plugins.push('lodash');
+    plugins.push('./build/use-lodash-es');
     break;
 
   default:

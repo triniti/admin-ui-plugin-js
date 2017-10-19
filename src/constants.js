@@ -1,9 +1,8 @@
 export const PLUGIN_PREFIX = '@triniti/admin-ui/';
-export const ACTION_PREFIX = PLUGIN_PREFIX;
-const t = id => `${ACTION_PREFIX}${id}`;
+const t = id => `${PLUGIN_PREFIX}${id}`;
 
 export const actionTypes = {
-  PREFIX: ACTION_PREFIX,
+  PREFIX: PLUGIN_PREFIX,
 
   // app theme
   NEW_THEME_REQUESTED: t('NEW_THEME_REQUESTED'),
