@@ -1,17 +1,16 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import './styles.scss';
 
-const NavbarTabs = ({ styleName, children }) => (
-  <ul className={`navbar-tabs ${(styleName || '')}`}>{children}</ul>
+const NavbarTabs = ({ className, children }) => (
+  <ul className={classnames('navbar-tabs', className)}>{children}</ul>
 );
 
 NavbarTabs.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  className: PropTypes.string,
+  children: PropTypes.node,
 };
 
 export default NavbarTabs;

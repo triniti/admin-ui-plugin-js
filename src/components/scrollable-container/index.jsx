@@ -9,10 +9,7 @@ const ScrollableContainer = ({ children }) => (
 );
 
 ScrollableContainer.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.node,
 };
 
 export default ScrollableContainer;

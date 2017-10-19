@@ -4,17 +4,19 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 
-const SideNavHeader = ({ title = null, children }) => (
+const SideNavHeader = ({ title, children }) => (
   <div className="sidenav-header" >
     <h3 className="sidenav-header-title">{title}</h3>{children}
   </div>
 );
 
 SideNavHeader.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  title: PropTypes.string,
+  children: PropTypes.node,
+};
+
+SideNavHeader.defaultProps = {
+  title: '',
 };
 
 export default SideNavHeader;

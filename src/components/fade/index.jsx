@@ -6,10 +6,7 @@ import { mapToCssModules, omit, pick, TransitionPropTypeKeys, TransitionTimeouts
 
 const propTypes = {
   ...Transition.propTypes,
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.node,
   tag: PropTypes.oneOfType([PropTypes.string, PropTypes.func]),
   baseClass: PropTypes.string,
   baseClassActive: PropTypes.string,

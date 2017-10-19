@@ -4,17 +4,23 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 
 
-const HeaderDisplay = ({ title = null, styleName, children }) => (
+const HeaderDisplay = ({ title, className, children }) => (
   <div className="header-display">
-    <h1 className="header-display-title">{title}</h1>{children}
+    <h1 className={className('header-display-title', className)}>
+      {title}
+    </h1>
+    {children}
   </div>
 );
 
 HeaderDisplay.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  title: PropTypes.string,
+  className: PropTypes.string,
+  children: PropTypes.node,
+};
+
+HeaderDisplay.defaultProps = {
+  title: '',
 };
 
 export default HeaderDisplay;

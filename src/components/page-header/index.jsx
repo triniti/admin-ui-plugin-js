@@ -3,21 +3,20 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
 
-
-const PageHeader = ({ title = null, children }) => (
+const PageHeader = ({ title, children }) => (
   <div className="page-header">
-    {title != null &&
-    <h1 className="page-header-title">{title}</h1>
-    }
+    {title && <h1 className="page-header-title">{title}</h1>}
     {children}
   </div>
 );
 
 PageHeader.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  title: PropTypes.string,
+  children: PropTypes.node,
+};
+
+PageHeader.defaultProps = {
+  title: '',
 };
 
 export default PageHeader;
