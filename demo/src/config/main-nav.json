@@ -2,7 +2,7 @@
   {
     "navType": "item",
     "navId": "Dashboard",
-    "to": "/dashboard"
+    "to": "#"
   },
   {
     "navType": "dropdown",
@@ -86,10 +86,10 @@
     "navType": "dropdown",
     "navId": "Iam",
     "dpLinks": [
-      { "to": "/iam/users", "linkTitle": "Search Users"  },
-      { "to": "/iam/users/create", "linkTitle": "Create User" },
-      { "to": "/iam/roles", "linkTitle": "List Roles" },
-      { "to": "/iam/roles/create", "linkTitle": "Create Role" }
+      { "to": "#", "linkTitle": "Search Users"  },
+      { "to": "#", "linkTitle": "Create User" },
+      { "to": "#", "linkTitle": "List Roles" },
+      { "to": "#", "linkTitle": "Create Role" }
     ]
   },
   {
