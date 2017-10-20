@@ -194,13 +194,18 @@
   table-layout: fixed;
 }
 
-table.sticky-top + table,
-.card-block table.sticky-top {
-  margin-top: -1px !important;
+.table-borderless th,
+.table-borderless td {
+  border-color: transparent;
 }
 
 
 // Sticky-top tables
+
+table.sticky-top + table,
+.card-block table.sticky-top {
+  margin-top: -1px !important;
+}
 
 .table.sticky-top {
   box-shadow: 0 -1px 0 0 $gray-500;
@@ -220,11 +225,6 @@ table.sticky-top + table,
   white-space: nowrap;
   width: 1px;
   text-align: right;
-}
-
-.table-borderless th,
-.table-borderless td {
-  border-color: transparent;
 }
 
 
