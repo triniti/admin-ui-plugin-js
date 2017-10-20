@@ -47,7 +47,7 @@ function Alert(props) {
     className,
     'alert',
     `alert-${color}`,
-    { 'alert-dismissible': toggle }
+    { 'alert-dismissible': toggle },
   ), cssModule);
 
   const closeClasses = mapToCssModules(classNames('close', closeClassName), cssModule);

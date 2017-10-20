@@ -23,7 +23,7 @@ const CardBody = (props) => {
   } = props;
   const classes = mapToCssModules(classNames(
     className,
-    'card-body'
+    'card-body',
   ), cssModule);
 
   return (

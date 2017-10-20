@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, ButtonGroup, Card, CardBlock, CardTitle } from '../../../../src/components';
+import { Breadcrumb, BreadcrumbItem, Button, ButtonGroup, Card, CardBlock, CardHeader, CardTitle } from '../../../../src/components';
 import iconClose from '../../assets/img/svg/icons/close.svg';
 
 const UiBreadcrumb = () => (
@@ -11,26 +11,18 @@ const UiBreadcrumb = () => (
         <BreadcrumbItem active>Data</BreadcrumbItem>
       </Breadcrumb>
       <br/>
-      <Card>
-        <div className="breadcrumbs">
-          <Breadcrumb>
-            <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
-            <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
-            <BreadcrumbItem active>Data</BreadcrumbItem>
-          </Breadcrumb>
-          <Button outline color="link" className={'rounded-circle mr-2'}>
-            <img src={iconClose} alt="x" />
-          </Button>
-        </div>
-      </Card>
+      <CardHeader>
+        <Breadcrumb>
+          <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+          <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+          <BreadcrumbItem active>Data</BreadcrumbItem>
+        </Breadcrumb>
+        <Button outline color="link" className={'rounded-circle mr-2'}>
+          <img src={iconClose} alt="x" />
+        </Button>
+      </CardHeader>
 
-      <CardTitle tag="h4"><span>No List Markup</span>
-        <ButtonGroup size="sm">
-          <Button outline color="default">5</Button>
-          <Button outline color="default">6</Button>
-          <Button outline color="default">7</Button>
-        </ButtonGroup>
-      </CardTitle>
+      <CardTitle tag="h4">No List Markup</CardTitle>
       <div className="breadcrumbs pl-0">
         <Breadcrumb tag="nav">
           <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>

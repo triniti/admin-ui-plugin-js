@@ -7,7 +7,9 @@ import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
 
-const RouterLink = ({ navTab, breadcrumbItem, to, className, ...attributes }) => (
+const RouterLink = ({
+  navTab, breadcrumbItem, to, className, ...attributes
+}) => (
   <NavLink
     className={classNames({
       'navbar-tabs-link': navTab,

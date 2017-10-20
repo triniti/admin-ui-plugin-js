@@ -28,7 +28,7 @@ const Form = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    inline ? 'form-inline' : false
+    inline ? 'form-inline' : false,
   ), cssModule);
 
   return (

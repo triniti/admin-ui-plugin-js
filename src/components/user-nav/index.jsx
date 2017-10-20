@@ -13,7 +13,6 @@ const UserNav = ({
   activeTab,
   position,
   handleLogout,
-  handleBtnClick,
   handleTabClick,
   toggleUserNav,
   currentTheme,
@@ -23,7 +22,6 @@ const UserNav = ({
     <UserNavOpener handleClick={toggleUserNav} />
     <UserNavContent
       activeTab={activeTab}
-      handleBtnClick={handleBtnClick}
       handleTabClick={handleTabClick}
       currentTheme={currentTheme}
       position={position}
@@ -38,7 +36,6 @@ const UserNav = ({
 UserNav.propTypes = {
   position: PropTypes.string,
   activeTab: PropTypes.string,
-  handleBtnClick: PropTypes.func,
   handleTabClick: PropTypes.func,
   currentTheme: PropTypes.string,
   toggleTheme: PropTypes.func,

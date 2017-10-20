@@ -13,7 +13,6 @@ const UnreadMsgBadge = () => <Badge color="warning" className="round">3</Badge>;
 class UserNavContent extends React.Component {
   static propTypes = {
     activeTab: PropTypes.string,
-    handleBtnClick: PropTypes.func,
     currentTheme: PropTypes.string,
     toggleTheme: PropTypes.func,
     toggleUserNav: PropTypes.func,
@@ -50,7 +49,6 @@ class UserNavContent extends React.Component {
   render() {
     const {
       activeTab,
-      handleBtnClick,
       handleTabClick,
       currentTheme,
       position,
@@ -81,7 +79,6 @@ class UserNavContent extends React.Component {
             <UserSettingsTabPane
               tabId="1"
               handleLogout={this.handleLogoutClick}
-              btnClick={handleBtnClick}
               currentTheme={currentTheme}
               toggleTheme={toggleTheme}
             />

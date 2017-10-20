@@ -58,7 +58,7 @@ const Navbar = (props) => {
       'navbar-full': full,
       [`fixed-${fixed}`]: fixed,
       [`sticky-${sticky}`]: sticky,
-    }
+    },
   ), cssModule);
 
   return (

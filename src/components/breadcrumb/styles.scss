@@ -1,0 +1,15 @@
+// Breadcrumb
+
+.breadcrumb {
+  margin-top: 0;
+  margin-bottom: $breadcrumb-margin-bottom;
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  font-size: 1rem;
+  font-weight: 500;
+  list-style: none;
+  text-transform: capitalize;
+  transition: margin $transition;
+  background-color: $breadcrumb-bg;
+  @include border-radius($border-radius);
+  @include clearfix;
+}

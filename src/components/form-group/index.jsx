@@ -35,7 +35,7 @@ const FormGroup = (props) => {
     row ? 'row' : false,
     check ? 'form-check' : 'form-group',
     check && inline ? 'form-check-inline' : false,
-    check && disabled ? 'disabled' : false
+    check && disabled ? 'disabled' : false,
   ), cssModule);
 
   return (

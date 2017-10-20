@@ -1,12 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import { Button, CardBlock, DropdownItem, Media, ScrollableContainer, TabPane } from '../';
 
 const UserSettingsTabPane = ({
   tabId,
   handleLogout,
-  btnClick,
   currentTheme,
   toggleTheme,
 }) => (
@@ -23,13 +21,6 @@ const UserSettingsTabPane = ({
         </Media>
 
         <Button block color="info" onClick={toggleTheme} className="round">switch theme: {currentTheme}</Button>
-        <NavLink
-          to="/ui"
-          onClick={() => btnClick('ui')}
-          className="round btn btn-outline-default btn-block"
-        >
-          Ui Examples
-        </NavLink>
         <DropdownItem divider />
         <Button block color="danger" onClick={handleLogout} className="round">Logout</Button>
 
@@ -41,7 +32,6 @@ const UserSettingsTabPane = ({
 UserSettingsTabPane.propTypes = {
   tabId: PropTypes.string,
   handleLogout: PropTypes.func,
-  btnClick: PropTypes.func,
   currentTheme: PropTypes.string,
   toggleTheme: PropTypes.func,
 };

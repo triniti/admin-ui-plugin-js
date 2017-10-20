@@ -1,0 +1,172 @@
+[
+  {
+    "navType": "item",
+    "navId": "Dashboard",
+    "to": "#"
+  },
+  {
+    "navType": "dropdown",
+    "navId": "News",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List News" },
+      { "to": "#", "linkTitle": "About TMZ NEWS" },
+      { "to": "#", "linkTitle": "About TMZ News (Hidden)" },
+      { "to": "#", "linkTitle": "Help" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Editorials",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Sagas" },
+      { "to": "#", "linkTitle": "Add TMZ Saga" },
+      { "to": "#", "linkTitle": "List Weeks In Review" },
+      { "to": "#", "linkTitle": "Add TMZ Week in Review" },
+      { "to": "#", "linkTitle": "List Polls" },
+      { "to": "#", "linkTitle": "Add TMZ Poll" },
+      { "to": "#", "linkTitle": "List Legacy Polls" },
+      { "to": "#", "linkTitle": "Add Legacy Poll" },
+      { "to": "#", "linkTitle": "List Heroes and Villains" },
+      { "to": "#", "linkTitle": "Add TMZ Hero and Villain"  }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Profiles",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Profiles" },
+      { "to": "#", "linkTitle": "Add Profiles" },
+      { "to": "#", "linkTitle": "List Channels" },
+      { "to": "#", "linkTitle": "Add Channel" },
+      { "to": "#", "linkTitle": "List Static Blocks" },
+      { "to": "#", "linkTitle": "Add Static Blocks" },
+      { "to": "#", "linkTitle": "List Static Pages" },
+      { "to": "#", "linkTitle": "Add Static Pages" },
+      { "to": "#", "linkTitle": "List Hashtags" },
+      { "to": "#", "linkTitle": "Add Hashtags" },
+      { "to": "#", "linkTitle": "List Internal Hashtags" },
+      { "to": "#", "linkTitle": "Add Internal Hashtags"  }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Galleries",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Galleries" },
+      { "to": "#", "linkTitle": "Add TMZ Gallery" },
+      { "to": "#", "linkTitle": "List Collections" },
+      { "to": "#", "linkTitle": "Add TMZ Gallery Collection" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Links",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "Partners" },
+      { "to": "#", "linkTitle": "Add Partner" },
+      { "to": "#", "linkTitle": "Syndication Partners" },
+      { "to": "#", "linkTitle": "Add Syndication Partner" },
+      { "to": "#", "linkTitle": "Partner Headlines" },
+      { "to": "#", "linkTitle": "List Links"  },
+      { "to": "#", "linkTitle": "Add Link" },
+      { "to": "#", "linkTitle": "List Livestreams" },
+      { "to": "#", "linkTitle": "Add Livestream" },
+      { "to": "#", "linkTitle": "Video Feed Categories" },
+      { "to": "#", "linkTitle": "Video Feed Items" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Feedback",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Feedback"  }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Iam",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "Search Users"  },
+      { "to": "#", "linkTitle": "Create User" },
+      { "to": "#", "linkTitle": "List Roles" },
+      { "to": "#", "linkTitle": "Create Role" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Emails",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Distribution Lists"  },
+      { "to": "#", "linkTitle": "Add Distribution Email Lists" },
+      { "to": "#", "linkTitle": "List Contacts" },
+      { "to": "#", "linkTitle": "Add Distribution Email Contact" },
+      { "to": "#", "linkTitle": "List Templates" },
+      { "to": "#", "linkTitle": "Add Distribution Email Templates" },
+      { "to": "#", "linkTitle": "List Bounces" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Media",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Media"  },
+      { "to": "#", "linkTitle": "List Files" },
+      { "to": "#", "linkTitle": "List Gallery Images" },
+      { "to": "#", "linkTitle": "List List Banner Images" },
+      { "to": "#", "linkTitle": "List Replacement Categories" },
+      { "to": "#", "linkTitle": "Add Replacement Image Category" },
+      { "to": "#", "linkTitle": "List Photo Credits" },
+      { "to": "#", "linkTitle": "Add Photo Credit" },
+      { "to": "#", "linkTitle": "List Avatars" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Promotions",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Promotions"  },
+      { "to": "#", "linkTitle": "Add Promotion" },
+      { "to": "#", "linkTitle": "List Promotion Slots" },
+      { "to": "#", "linkTitle": "Add Promotion Slot" },
+      { "to": "#", "linkTitle": "Promotions Schedule" },
+      { "to": "#", "linkTitle": "List Sponsors" },
+      { "to": "#", "linkTitle": "Add Sponsor" },
+      { "to": "#", "linkTitle": "List Teasers" },
+      { "to": "#", "linkTitle": "Add Teaser" },
+      { "to": "#", "linkTitle": "List List Teaser Lists" },
+      { "to": "#", "linkTitle": "Add List Teaser List" },
+      { "to": "#", "linkTitle": "List List Denormalized Teasers" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Devices",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "List Delivery Platforms"  },
+      { "to": "#", "linkTitle": "Add Delivery Platform" },
+      { "to": "#", "linkTitle": "List Devices" },
+      { "to": "#", "linkTitle": "List Device Platforms" },
+      { "to": "#", "linkTitle": "Add Device Platform" },
+      { "to": "#", "linkTitle": "List Locale Bundles" },
+      { "to": "#", "linkTitle": "Add Locale Bundle" },
+      { "to": "#", "linkTitle": "List Locales" }
+    ]
+  },
+  {
+    "navType": "dropdown",
+    "navId": "Settings",
+    "dpLinks": [
+      { "to": "#", "linkTitle": "Sites"  },
+      { "to": "#", "linkTitle": "Plugins" },
+      { "to": "#", "linkTitle": "CDN" },
+      { "to": "#", "linkTitle": "List Redirects" },
+      { "to": "#", "linkTitle": "Add Redirect" },
+      { "to": "#", "linkTitle": "Right Scale" },
+      { "to": "#", "linkTitle": "Spike Insurance" },
+      { "to": "#", "linkTitle": "List List Flags" },
+      { "to": "#", "linkTitle": "Add List Flags" },
+      { "to": "#", "linkTitle": "Gearman Status" },
+      { "to": "#", "linkTitle": "Active Edits" }
+    ]
+  }
+]

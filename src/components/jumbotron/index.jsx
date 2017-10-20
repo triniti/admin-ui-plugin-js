@@ -8,11 +8,12 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   fluid: PropTypes.bool,
   className: PropTypes.string,
+  theme: PropTypes.string,
   cssModule: PropTypes.object,
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'div',
 };
 
 const Jumbotron = (props) => {
@@ -21,13 +22,15 @@ const Jumbotron = (props) => {
     cssModule,
     tag: Tag,
     fluid,
+    theme,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
     'jumbotron',
-    fluid ? 'jumbotron-fluid' : false
+    fluid ? 'jumbotron-fluid' : false,
+    theme ? `jumbotron-${theme}` : false,
   ), cssModule);
 
   return (

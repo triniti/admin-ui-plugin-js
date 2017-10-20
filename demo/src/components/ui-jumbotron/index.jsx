@@ -4,7 +4,7 @@ import { Button, Card, CardBlock, CardHeader, CardTitle, Col, Container, Jumbotr
 const UiJumbotron = () => (
   <Card>
     <CardHeader>Jumbotron Theme Dark</CardHeader>
-    <Jumbotron className={'mb-0'} theme="dark">
+    <Jumbotron theme="dark">
       <Container fluid>
         <CardTitle display="1">Fluid Jumbotron</CardTitle>
         <p className="lead">This is a modified jumbotron that occupies the entire

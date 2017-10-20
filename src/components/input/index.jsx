@@ -77,7 +77,7 @@ class Input extends React.Component {
       valid === false && 'is-invalid',
       valid && 'is-valid',
       size ? `form-control-${size}` : false,
-      formControlClass
+      formControlClass,
     ), cssModule);
 
     if (Tag === 'input') {
