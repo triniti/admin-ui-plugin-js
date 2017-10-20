@@ -1,9 +1,6 @@
 // react
 import React from 'react';
 import PropTypes from 'prop-types';
-/* @fixme: re-enable after triniti app
-// external components
-import { Alert } from '../alert';
 
 // utilities
 import Exception from '@gdbots/common/Exception';
@@ -11,6 +8,8 @@ import Exception from '@gdbots/common/Exception';
 // redux
 import { STATUS_NONE, STATUS_PENDING, STATUS_REJECTED } from '@triniti/app/constants';
 
+// external components
+import Alert from '../alert';
 
 const StatusMessage = ({ status = STATUS_NONE, exception = null }) => {
   switch (status) {
@@ -32,4 +31,4 @@ StatusMessage.propTypes = {
 };
 
 export default StatusMessage;
-*/
+
