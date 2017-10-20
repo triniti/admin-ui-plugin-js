@@ -221,7 +221,7 @@ table.sticky-top + table,
 }
 
 .table.sticky-top th {
-  height: $header-height;
+  height: $header-height + 2;
   border-top: none;
 }
 
