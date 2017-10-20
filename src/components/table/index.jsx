@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   className: PropTypes.string,
@@ -13,6 +14,9 @@ const propTypes = {
   hover: PropTypes.bool,
   reflow: PropTypes.bool,
   responsive: PropTypes.bool,
+  fixed: PropTypes.bool,
+  borderless: PropTypes.bool,
+  stickyTop: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   responsiveTag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
@@ -32,6 +36,9 @@ const Table = (props) => {
     inverse,
     hover,
     reflow,
+    fixed,
+    borderless,
+    stickyTop,
     responsive,
     tag: Tag,
     responsiveTag: ResponsiveTag,
@@ -46,6 +53,9 @@ const Table = (props) => {
     striped ? 'table-striped' : false,
     inverse ? 'table-inverse' : false,
     hover ? 'table-hover' : false,
+    fixed ? 'fixed' : false,
+    borderless ? 'table-borderless' : false,
+    stickyTop ? 'sticky-top' : false,
     reflow ? 'table-reflow' : false,
   ), cssModule);
 
