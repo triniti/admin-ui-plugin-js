@@ -1,0 +1,91 @@
+// Media
+
+.media {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.media-body {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.media-list {
+  padding: 0;
+}
+
+.media-left {
+  margin-right: $table-cell-padding;
+}
+
+.media-right {
+  margin-left: $table-cell-padding;
+}
+
+.media-object {
+  border-radius: $border-radius;
+
+  &.rounded-circle {
+    border-radius: 50%;
+  }
+}
+
+.col > .media:first-child,
+.media-list > .media:first-child {
+  margin-top: 0;
+}
+
+// Hover Class
+
+.media-hover {
+  position: relative;
+  display: inline-flex;
+  transition: transform $transition;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: opacity $transition;
+    opacity: 0;
+    box-shadow: 0 .5rem 1.5rem -.25rem rgba($black, .2);
+  }
+
+  &:hover {
+    transform: translate(0, -4px);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// Media Hover Outline
+
+.media-hover-outline {
+  position: relative;
+  display: inline-flex;
+
+  &::after {
+    position: absolute;
+    z-index: 1031;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    content: '';
+    pointer-events: none;
+    border: 4px solid $black;
+    opacity: 0;
+    transition: opacity $transition;
+  }
+
+  &:hover::after {
+    opacity: .0625;
+  }
+}
