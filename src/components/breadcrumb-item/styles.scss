@@ -19,10 +19,10 @@
   //
   // To trick IE into suppressing the underline, we give the pseudo-element an
   // underline and then immediately remove it.
-  + .breadcrumb-item:hover::before {
+  &:hover::before {
     text-decoration: underline;
   }
-  + .breadcrumb-item:hover::before {
+  &:hover::before {
     text-decoration: none;
   }
 
