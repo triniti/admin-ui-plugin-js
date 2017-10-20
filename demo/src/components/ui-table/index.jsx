@@ -4,7 +4,7 @@ import { Card, CardBlock, CardHeader, Row, Col, Table } from '../../../../src/co
 const UiTable = () => (
     <Card>
       <div>
-      <Table size="sm" className={'mb-0 sticky-top table-gradient fixed'}>
+      <Table size="sm" stickyTop fixed>
         <thead>
         <tr>
           <th>#</th>
@@ -14,7 +14,7 @@ const UiTable = () => (
         </tr>
         </thead>
       </Table>
-      <Table hover size="sm" className={'mt-0 fixed table-borderless'}>
+      <Table hover size="sm" borderless fixed>
         <tbody>
         <tr>
           <th scope="row">1</th>
@@ -75,7 +75,7 @@ const UiTable = () => (
       </div>
 
       <div>
-      <Table className={'mb-0 sticky-top table-gradient fixed'}>
+      <Table stickyTop fixed>
         <thead>
         <tr>
           <th>#</th>
@@ -85,7 +85,7 @@ const UiTable = () => (
         </tr>
         </thead>
       </Table>
-      <Table hover className={'mt-0 fixed'}>
+      <Table hover fixed>
         <tbody>
         <tr>
           <th scope="row">1</th>
@@ -148,7 +148,7 @@ const UiTable = () => (
       <div className={'pb-4'}>
       <CardHeader>Striped Table + Sticky</CardHeader>
       <CardBlock>
-        <Table striped className={'mb-0 sticky-top fixed'}>
+        <Table striped className={'sticky-top fixed'}>
           <thead>
           <tr>
             <th>#</th>
@@ -287,7 +287,7 @@ const UiTable = () => (
 
       <div>
       <CardHeader>Borderless Table</CardHeader>
-      <Table className={'table-borderless'} hover>
+      <Table hover borderless>
         <thead>
         <tr>
           <th>#</th>

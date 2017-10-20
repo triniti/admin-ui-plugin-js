@@ -314,8 +314,8 @@ $mark-bg: #fcf8e3 !default;
 $table-cell-padding:            .75rem !default;
 $table-cell-padding-sm:         .3rem !default;
 
-$table-bg:                      transparent !default;
-$table-accent-bg:               $gray-400 !default;
+$table-bg:                      $body-bg !default;
+$table-accent-bg:               $gray-100 !default;
 $table-hover-bg:                $gray-100 !default;
 $table-active-bg:               $table-hover-bg !default;
 
