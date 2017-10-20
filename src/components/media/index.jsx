@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   body: PropTypes.bool,
@@ -15,6 +16,8 @@ const propTypes = {
   middle: PropTypes.bool,
   object: PropTypes.bool,
   right: PropTypes.bool,
+  hover: PropTypes.bool,
+  hoverOutline: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   top: PropTypes.bool,
 };
@@ -31,6 +34,8 @@ const Media = (props) => {
     middle,
     object,
     right,
+    hover,
+    hoverOutline,
     tag,
     top,
     ...attributes
@@ -38,7 +43,7 @@ const Media = (props) => {
 
   let defaultTag;
   if (heading) {
-    defaultTag = 'h4';
+    defaultTag = 'h5';
   } else if (left || right) {
     defaultTag = 'a';
   } else if (object) {
@@ -62,7 +67,9 @@ const Media = (props) => {
       'media-middle': middle,
       'media-object': object,
       'media-list': list,
-      media: !body && !heading && !left && !right && !top && !bottom && !middle && !object && !list,
+      'media-hover': hover,
+      'media-hover-outline': hoverOutline,
+      media: !body && !heading && !left && !right && !top && !bottom && !middle && !object && !list && !hover && !hoverOutline,
     },
   ), cssModule);
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBlock, CardHeader, Col, Media, Row } from '../../../../src/components';
+import { Card, CardBlock, CardHeader, CardTitle, Col, Media, Row } from '../../../../src/components';
 
 const UiMedia = () => {
   return (
@@ -96,7 +96,7 @@ const UiMedia = () => {
           <Col>
             <Media list>
               <Media tag="li">
-                <Media left href="#" className="hover-outline">
+                <Media left hoverOutline href="#">
                   <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
                 </Media>
                 <Media body>
@@ -148,6 +148,70 @@ const UiMedia = () => {
                 </Media>
                 <Media right href="#">
                   <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=80%C3%9780&w=80&h=80" alt="Generic placeholder image" className={'rounded-circle'} />
+                </Media>
+              </Media>
+            </Media>
+          </Col>
+        </Row>
+      </CardBlock>
+
+
+
+      <CardHeader>Media Hover</CardHeader>
+      <CardBlock>
+        <Media left hover href="#">
+          <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+        </Media>
+        <Media left hover href="#">
+          <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+        </Media>
+        <Media left hover href="#">
+          <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+        </Media>
+        <Row>
+          <Col>
+            <Media heading>Media Hover inside MediaList</Media>
+            <Media list>
+              <Media tag="li">
+                <Media left hover href="#">
+                  <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                </Media>
+                <Media left hover href="#">
+                  <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                </Media>
+                <Media left hover href="#">
+                  <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                </Media>
+              </Media>
+            </Media>
+          </Col>
+        </Row>
+      </CardBlock>
+
+      <CardHeader>Media HoverOutline</CardHeader>
+      <CardBlock>
+        <Media left hoverOutline href="#">
+          <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+        </Media>
+        <Media left hoverOutline href="#">
+          <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+        </Media>
+        <Media left hoverOutline href="#">
+          <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+        </Media>
+        <Row>
+          <Col>
+            <Media heading>Media HoverOutline inside MediaList</Media>
+            <Media list>
+              <Media tag="li">
+                <Media left hoverOutline href="#">
+                  <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                </Media>
+                <Media left hoverOutline href="#">
+                  <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                </Media>
+                <Media left hoverOutline href="#">
+                  <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
                 </Media>
               </Media>
             </Media>
