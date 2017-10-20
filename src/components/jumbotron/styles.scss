@@ -1,6 +1,23 @@
 // Jumbotron
-//
-// Custom background colors
+
+.jumbotron {
+  padding: $jumbotron-padding ($jumbotron-padding / 2);
+  margin-bottom: 0;
+  background-color: $jumbotron-bg;
+  @include border-radius(0);
+
+  @include media-breakpoint-up(sm) {
+    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+  }
+}
+
+.jumbotron-fluid {
+  padding-right: 0;
+  padding-left: 0;
+  @include border-radius(0);
+}
+
+// Example theme options
 
 .jumbotron-dark {
   background-color: theme-color("dark");
