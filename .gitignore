@@ -11,7 +11,7 @@ composer.phar
 phpunit.xml
 .buildpath
 *.iml
-.idea/
+# .idea/
 .project
 .settings
 
