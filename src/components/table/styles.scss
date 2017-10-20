@@ -55,6 +55,10 @@
     padding-bottom: .75rem;
     padding-left: $table-cell-padding-sm;
   }
+  th[scope="row"] {
+    padding-top: $table-cell-padding-sm;
+    padding-bottom: $table-cell-padding-sm;
+  }
 }
 
 
