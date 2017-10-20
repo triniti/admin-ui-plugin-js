@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { NavItem } from '../';
 
-const NavItemUnit = ({ to, navId, classes, handleDropdownClick }) => (
+const NavItemUnit = ({
+  to, navId, classes, handleDropdownClick,
+}) => (
   <NavItem className={classes}>
     <NavLink to={to} exact onClick={handleDropdownClick} className="nav-link">{navId}</NavLink>
   </NavItem>

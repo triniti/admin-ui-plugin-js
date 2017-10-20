@@ -14,11 +14,11 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'div',
 };
 
 const InputGroupButton = (props) => {
-  let {
+  const {
     className,
     cssModule,
     tag: Tag,
@@ -31,7 +31,7 @@ const InputGroupButton = (props) => {
   if (typeof children === 'string') {
     const groupClasses = mapToCssModules(classNames(
       groupClassName,
-      'input-group-btn'
+      'input-group-btn',
     ), cssModule);
 
     return (
@@ -43,7 +43,7 @@ const InputGroupButton = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'input-group-btn'
+    'input-group-btn',
   ), cssModule);
 
   return (

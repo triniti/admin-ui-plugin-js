@@ -24,11 +24,11 @@ const CardHeader = (props) => {
   } = props;
   const classes = mapToCssModules(classNames(
     className,
-    'card-header'
+    'card-header',
   ), cssModule);
 
   return (
-    <Tag  {...attributes} className={classes} />
+    <Tag {...attributes} className={classes} />
   );
 };
 

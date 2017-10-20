@@ -10,7 +10,9 @@ export default (
   activeSections,
 ) =>
   navConfig.map((dropdownUnit) => {
-    const { navType, navId, dpLinks, to } = dropdownUnit;
+    const {
+      navType, navId, dpLinks, to,
+    } = dropdownUnit;
     const classes = currentSection.toLowerCase() === navId.toLowerCase() ? 'is-current' : '';
     const dropdownOpen = !!activeSections.includes(navId);
 

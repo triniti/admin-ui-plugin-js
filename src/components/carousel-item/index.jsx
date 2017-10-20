@@ -5,7 +5,6 @@ import { mapToCssModules } from '../utils';
 import CarouselCaption from '../carousel-caption';
 
 class CarouselItem extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = { animation: [] };
@@ -66,10 +65,12 @@ class CarouselItem extends React.Component {
 
 
   render() {
-    const { src, altText, children, cssModule } = this.props;
+    const {
+      src, altText, children, cssModule,
+    } = this.props;
     const classes = mapToCssModules(classNames(
-        'd-block',
-        'img-fluid',
+      'd-block',
+      'img-fluid',
     ), cssModule);
 
     const itemClasses = mapToCssModules(classNames('carousel-item', ...this.state.animation), cssModule);

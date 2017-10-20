@@ -67,7 +67,7 @@ const Label = (props) => {
   const colClasses = [];
 
   widths.forEach((colWidth, i) => {
-    let columnProp = props[colWidth];
+    const columnProp = props[colWidth];
 
     delete attributes[colWidth];
 
@@ -86,7 +86,7 @@ const Label = (props) => {
         [colClass]: columnProp.size || columnProp.size === '',
         [`push${colSizeInterfix}${columnProp.push}`]: columnProp.push || columnProp.push === 0,
         [`pull${colSizeInterfix}${columnProp.pull}`]: columnProp.pull || columnProp.pull === 0,
-        [`offset${colSizeInterfix}${columnProp.offset}`]: columnProp.offset || columnProp.offset === 0
+        [`offset${colSizeInterfix}${columnProp.offset}`]: columnProp.offset || columnProp.offset === 0,
       })), cssModule);
     } else {
       colClass = getColumnSizeClass(isXs, colWidth, columnProp);
@@ -101,7 +101,7 @@ const Label = (props) => {
     size ? `col-form-label-${size}` : false,
     colClasses,
     colClasses.length ? 'col-form-label' : false,
-    !check && !colClasses.length ? 'form-control-label' : false
+    !check && !colClasses.length ? 'form-control-label' : false,
   ), cssModule);
 
   return (

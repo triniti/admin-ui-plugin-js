@@ -43,7 +43,7 @@ const Nav = (props) => {
       'nav-pills': pills,
       'nav-justified': justified,
       'flex-column': vertical,
-    }
+    },
   ), cssModule);
 
   return (
