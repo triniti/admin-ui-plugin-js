@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { Button, CardBlock, DropdownItem, Media, ScrollableContainer, TabPane } from '../';
+import { Button, CardBody, DropdownItem, Media, ScrollableContainer, TabPane } from '../';
 
 const UserSettingsTabPane = ({
   tabId,
@@ -12,7 +12,7 @@ const UserSettingsTabPane = ({
 }) => (
   <TabPane tabId={tabId}>
     <ScrollableContainer>
-      <CardBlock>
+      <CardBody>
         <Media href="#" className="justify-content-center mt-0 pb-3">
           <Media
             object
@@ -33,7 +33,7 @@ const UserSettingsTabPane = ({
         <DropdownItem divider />
         <Button block color="danger" onClick={handleLogout} className="round">Logout</Button>
 
-      </CardBlock>
+      </CardBody>
     </ScrollableContainer>
   </TabPane>
 );

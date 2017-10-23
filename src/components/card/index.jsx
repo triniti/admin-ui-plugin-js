@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -9,6 +10,7 @@ const propTypes = {
   color: PropTypes.string,
   block: PropTypes.bool,
   outline: PropTypes.bool,
+  hover: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
 };
@@ -23,6 +25,7 @@ const Card = (props) => {
     cssModule,
     color,
     block,
+    hover,
     inverse,
     outline,
     tag: Tag,
@@ -32,7 +35,8 @@ const Card = (props) => {
     className,
     'card',
     inverse ? 'card-inverse' : false,
-    block ? 'card-block' : false,
+    block ? 'card-body' : false,
+    hover ? 'card-hover' : false,
     color ? `card${outline ? '-outline' : ''}-${color}` : false,
   ), cssModule);
 

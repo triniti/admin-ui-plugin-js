@@ -8,7 +8,6 @@ import ButtonDropdown from './button-dropdown';
 import ButtonGroup from './button-group';
 import ButtonToolbar from './button-toolbar';
 import Card from './card';
-import CardBlock from './card-block';
 import CardBody from './card-body';
 import CardColumns from './card-columns';
 import CardDeck from './card-deck';
@@ -113,7 +112,6 @@ export {
   ButtonGroup,
   ButtonToolbar,
   Card,
-  CardBlock,
   CardBody,
   CardColumns,
   CardDeck,

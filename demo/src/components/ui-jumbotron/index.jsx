@@ -1,8 +1,8 @@
 import React from 'react';
-import { Button, Card, CardBlock, CardHeader, CardTitle, Col, Container, Jumbotron, HeaderDisplay, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Container, Jumbotron, HeaderDisplay, Row } from '../../../../src/components';
 
 const UiJumbotron = () => (
-  <Card>
+  <Card spacing="lg">
     <CardHeader>Jumbotron Theme Dark</CardHeader>
     <Jumbotron theme="dark">
       <Container fluid>
@@ -14,17 +14,17 @@ const UiJumbotron = () => (
 
     <CardHeader>Jumbotron Theme Light</CardHeader>
     <Jumbotron theme="light">
-      <CardBlock>
-        <CardTitle display="1">CardBlock Jumbotron</CardTitle>
+      <CardBody>
+        <CardTitle display="1">CardBody Jumbotron</CardTitle>
         <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
             parent.</p>
-      </CardBlock>
+      </CardBody>
     </Jumbotron>
 
-    <CardHeader>Jumbotron Default inside CardBlock</CardHeader>
-    <CardBlock>
+    <CardHeader>Jumbotron Default inside CardBody</CardHeader>
+    <CardBody>
       <Jumbotron>
-        <CardBlock>
+        <CardBody>
         <CardTitle display="3">Hello, world!</CardTitle>
         <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra
             attention to featured content or information.</p>
@@ -34,12 +34,12 @@ const UiJumbotron = () => (
         <p className="lead">
           <Button color="primary">Learn More</Button>
         </p>
-        </CardBlock>
+        </CardBody>
       </Jumbotron>
-    </CardBlock>
+    </CardBody>
 
-    <CardHeader>Jumbotron inside CardBlock</CardHeader>
-    <CardBlock>
+    <CardHeader>Jumbotron inside CardBody</CardHeader>
+    <CardBody>
       <Jumbotron>
         <Container fluid>
         <CardTitle display="2">Fluid Jumbotron</CardTitle>
@@ -47,7 +47,7 @@ const UiJumbotron = () => (
             parent.</p>
         </Container>
       </Jumbotron>
-    </CardBlock>
+    </CardBody>
   </Card>
   );
 

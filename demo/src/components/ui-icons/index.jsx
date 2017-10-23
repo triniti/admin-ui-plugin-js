@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBlock, Col, Row, Loading, Spinner } from '../../../../src/components';
+import { Button, Card, CardBody, Col, Row, Loading, Spinner } from '../../../../src/components';
 
 import iconEye from 'assets/img/svg/icons/eye.svg';
 import iconCog from 'assets/img/svg/icons/cog.svg';
@@ -12,7 +12,7 @@ import iconMenu from 'assets/img/svg/icons/menu.svg';
 
 export default () => (
   <Card>
-    <CardBlock>
+    <CardBody spacing="lg">
       <Row>
         <Col>
           <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconCog} alt="edit" /></Button>
@@ -54,6 +54,6 @@ export default () => (
           </div>
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
   </Card>
 );

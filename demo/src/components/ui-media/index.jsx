@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, CardBlock, CardHeader, CardTitle, Col, Media, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row } from '../../../../src/components';
 
 const UiMedia = () => {
   return (
     <Card>
-      <CardHeader>Media Left</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Media Left</CardHeader>
+      <CardBody spacing="lg">
         <Row>
           <Col>
             <Media>
@@ -44,11 +44,11 @@ const UiMedia = () => {
             </Media>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
 
 
-      <CardHeader>Vertical Alignment</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Vertical Alignment</CardHeader>
+      <CardBody spacing="lg">
         <Row>
           <Col>
             <Media>
@@ -88,10 +88,10 @@ const UiMedia = () => {
             </Media>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
 
-      <CardHeader>Media List</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Media List</CardHeader>
+      <CardBody spacing="lg">
         <Row>
           <Col>
             <Media list>
@@ -153,12 +153,12 @@ const UiMedia = () => {
             </Media>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
 
 
 
-      <CardHeader>Media Hover</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Media Hover</CardHeader>
+      <CardBody spacing="lg">
         <Media left hover href="#">
           <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
         </Media>
@@ -186,10 +186,10 @@ const UiMedia = () => {
             </Media>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
 
-      <CardHeader>Media HoverOutline</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Media HoverOutline</CardHeader>
+      <CardBody spacing="lg">
         <Media left hoverOutline href="#">
           <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
         </Media>
@@ -217,7 +217,7 @@ const UiMedia = () => {
             </Media>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
     </Card>
   );
 };

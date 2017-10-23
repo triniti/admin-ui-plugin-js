@@ -98,12 +98,6 @@ h3 {
   justify-content: space-between;
 }
 
-// HR Inverse
-
-.card-inverse > hr {
-  border-top: 1px solid $white-rgba-200;
-}
-
 // Todo Need to fix these Row styles
 
 .tab-pane .row {
@@ -192,13 +186,36 @@ h3 {
   border-left: 1px solid $gray-700;
 }
 
-// Rows
-//
-// Custom row styles
 
-.row-card-collection {
-  padding-bottom: 3rem;
+// Universal Padding
+
+.padding-xl {
+  padding: $padding-xl;
 }
+
+.padding-lg {
+  padding: $padding-lg;
+}
+
+.padding-md {
+  padding: $padding-md;
+}
+
+.padding-sm {
+  padding: $padding-sm;
+}
+
+.padding-xs {
+  padding: $padding-xs;
+}
+
+
+// HR Inverse
+
+.card-inverse > hr {
+  border-top: 1px solid $white-rgba-200;
+}
+
 
 // Hover that adds a transitioned background color on any element
 

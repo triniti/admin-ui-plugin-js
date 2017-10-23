@@ -4,8 +4,8 @@
   z-index: 2;
   display: flex;
   min-height: $header-height + 4;
-  padding-right: $width-mobile;
-  padding-left: $width-mobile;
+  padding-right: $padding-xs;
+  padding-left: $padding-xs;
   border-bottom: 1px solid $gray-500;
   border-radius: 0 !important;
   background-color: $white;
@@ -17,8 +17,8 @@
     transition: margin $transition;
   }
   @media (min-width: 768px) {
-    padding-right: $width-tablet;
-    padding-left: $width-tablet;
+    padding-right: $padding-md;
+    padding-left: $padding-md;
   }
 }
 

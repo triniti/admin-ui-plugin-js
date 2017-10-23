@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBlock, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row } from '../../../../src/components';
+import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class UiNavbar extends React.Component {
   render() {
     return (
       <Card>
-        <CardBlock>
+        <CardBody spacing="lg">
           <h4>Full Width Inverse Toggleable</h4>
           <Navbar dark>
             <NavbarToggler onClick={this.toggleNavbar} right />
@@ -41,9 +41,9 @@ class UiNavbar extends React.Component {
               </Nav>
             </Collapse>
           </Navbar>
-        </CardBlock>
+        </CardBody>
 
-        <CardBlock>
+        <CardBody spacing="lg">
           <Navbar light toggleable className="mb-3">
             <NavbarToggler right onClick={this.toggle} />
             <NavbarBrand href="/">reactstrap</NavbarBrand>
@@ -58,7 +58,7 @@ class UiNavbar extends React.Component {
               </Nav>
             </Collapse>
           </Navbar>
-        </CardBlock>
+        </CardBody>
       </Card>
     );
   }

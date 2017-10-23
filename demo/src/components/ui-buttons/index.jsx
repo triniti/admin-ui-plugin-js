@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, CardBlock, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Row } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Row } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 
@@ -31,8 +31,8 @@ class UiButtons extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader>Solid<span><Button outline color="hover-bg" className={'mr-1'}>clear</Button><Button outline color="default">save</Button></span></CardHeader>
-          <CardBlock>
+          <CardHeader spacing="lg">Solid<span><Button outline color="hover-bg" className={'mr-1'}>clear</Button><Button outline color="default">save</Button></span></CardHeader>
+          <CardBody spacing="lg">
             <Button color="default" className={'mr-1 mb-2'}>default</Button>
             <Button color="primary" className={'mr-1 mb-2'}>primary</Button>
             <Button color="secondary" className={'mr-1 mb-2'}>secondary</Button>
@@ -47,14 +47,14 @@ class UiButtons extends React.Component {
             <Button color="link-bg" className={'mr-1 mb-2'}>link-bg</Button>
             <Button color="hover" className={'mr-1 mb-2'}>hover</Button>
             <Button color="hover-bg" className={'mr-1 mb-2'}>hover-bg</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Outline
+          <CardHeader spacing="lg">Outline
             <Button color="hover" className={'round mr-2'}>hover</Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button outline color="default" className={'mr-1 mb-2'}>default</Button>
             <Button outline color="primary" className={'mr-1 mb-2'}>primary</Button>
             <Button outline color="secondary" className={'mr-1 mb-2'}>secondary</Button>
@@ -68,14 +68,14 @@ class UiButtons extends React.Component {
             <Button outline color="link" className={'mr-1 mb-2'}>link</Button>
             <Button outline color="hover" className={'mr-1 mb-2'}>hover</Button>
             <Button outline color="hover-bg" className={'mr-1 mb-2'}>hover-bg</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Border
+          <CardHeader spacing="lg">Border
             <Button color="hover" className={'round mr-2'}>hover</Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button color="default" className={'mr-1 mb-2 round btn-border-default'}>default</Button>
             <Button color="primary" className={'mr-1 mb-2 round btn-border-primary'}>primary</Button>
             <Button color="secondary" className={'mr-1 mb-2 round btn-border-secondary'}>secondary</Button>
@@ -86,14 +86,14 @@ class UiButtons extends React.Component {
             <Button color="danger" className={'mr-1 mb-2 rounded-0 btn-border-danger'}>danger</Button>
             <Button color="purple" className={'mr-1 mb-2 rounded-0 btn-border-purple'}>purple</Button>
             <Button color="pink" className={'mr-1 mb-2 rounded-0 btn-border-pink'}>pink</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader><span>Solid - .round</span>
+          <CardHeader spacing="lg"><span>Solid - .round</span>
            <Button outline color="link" className={'round mr-2'}>outline link</Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button color="default" className={'round mr-1 mb-2'}>default</Button>
             <Button color="primary" className={'round mr-1 mb-2'}>primary</Button>
             <Button color="secondary" className={'round mr-1 mb-2'}>secondary</Button>
@@ -105,14 +105,14 @@ class UiButtons extends React.Component {
             <Button color="link" className={'round mr-1 mb-2'}>link</Button>
             <Button color="link-bg" className={'round mr-1 mb-2'}>link-bg</Button>
             <Button color="hover-bg" className={'round mr-1 mb-2'}>hover-bg</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader><span>Outline - .round</span>
+          <CardHeader spacing="lg"><span>Outline - .round</span>
             <Button outline color="default" className={'round mr-2'}>outline default round</Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button outline color="default" className={'round mr-2 mb-2'}>default</Button>
             <Button outline color="primary" className={'round mr-2 mb-2'}>primary</Button>
             <Button outline color="secondary" className={'round mr-2 mb-2'}>secondary</Button>
@@ -122,14 +122,14 @@ class UiButtons extends React.Component {
             <Button outline color="warning" className={'round mr-2 mb-2'}>warning</Button>
             <Button outline color="danger" className={'round mr-2 mb-2'}>danger</Button>
             <Button outline color="link" className={'round mr-1 mb-2'}>link</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader><span>Outline - .rounded-0</span>
+          <CardHeader spacing="lg"><span>Outline - .rounded-0</span>
             <Button size="sm" outline color="link" className={'rounded-0 mr-2'}>outline default round-0</Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button outline color="default" className={'rounded-0 mr-2 mb-2'}>default</Button>
             <Button outline color="primary" className={'rounded-0 mr-2 mb-2'}>primary</Button>
             <Button outline color="secondary" className={'rounded-0 mr-2 mb-2'}>secondary</Button>
@@ -139,14 +139,14 @@ class UiButtons extends React.Component {
             <Button outline color="warning" className={'rounded-0 mr-2 mb-2'}>warning</Button>
             <Button outline color="danger" className={'rounded-0 mr-2 mb-2'}>danger</Button>
             <Button outline color="link" className={'rounded-0 mr-1 mb-2'}>link</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader><span>Solid - .round .btn-emphasis</span>
+          <CardHeader spacing="lg"><span>Solid - .round .btn-emphasis</span>
             <Button outline size="sm" color="default" className={'rounded mr-2'}>outline sm default</Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button color="primary" className={'btn-emphasis round mr-1 mb-2'}>primary</Button>{' '}
             <Button color="secondary" className={'btn-emphasis round mr-1 mb-2'}>secondary</Button>{' '}
             <Button color="inverse" className={'btn-emphasis round mr-1 mb-2'}>inverse</Button>{' '}
@@ -155,12 +155,12 @@ class UiButtons extends React.Component {
             <Button color="warning" className={'btn-emphasis round mr-1 mb-2'}>warning</Button>{' '}
             <Button color="danger" className={'btn-emphasis round mr-1 mb-2'}>danger</Button>{' '}
             <Button color="link">link</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Sizes</CardHeader>
-          <CardBlock>
+          <CardHeader spacing="lg">Sizes</CardHeader>
+          <CardBody spacing="lg">
             <Button color="primary" size="lg">Large Button</Button>{' '}
             <Button outline color="default" size="lg">Large Button</Button>{' '}
             <Button color="primary" size="lg" className={'round depth ml-3'}>LG (.round .depth)</Button>
@@ -170,56 +170,56 @@ class UiButtons extends React.Component {
             <hr />
             <Button color="primary" size="xl">XL Button</Button>{' '}
             <Button outline color="default" size="xl">XL Button</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Block Level</CardHeader>
-          <CardBlock>
+          <CardHeader spacing="lg">Block Level</CardHeader>
+          <CardBody spacing="lg">
             <Button color="primary" size="lg" block>Block level button</Button>
             <Button color="default" size="lg" block>Block level button</Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Active State</CardHeader>
-          <CardBlock>
+          <CardHeader spacing="lg">Active State</CardHeader>
+          <CardBody spacing="lg">
             <Row>
               <Col sm="6">
                 <Button color="primary" size="lg" active>Primary link</Button>{' '}
                 <Button color="default" size="lg" active>Link</Button>
               </Col>
             </Row>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader><span>Disabled State</span>
+          <CardHeader spacing="lg"><span>Disabled State</span>
             <ButtonGroup className={'mr-3'}>
               <Button outline color="default" className={'btn-transparent'}>5</Button>
               <Button outline color="default" className={'btn-transparent'}>6</Button>
               <Button outline color="default" className={'btn-transparent'}>7</Button>
             </ButtonGroup>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Row>
               <Col>
                 <Button color="primary" size="lg" disabled>Primary button</Button>{' '}
                 <Button color="default" size="lg" disabled>Button</Button>
               </Col>
             </Row>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Checkbox and Radio Buttons (Stateful Buttons)
+          <CardHeader spacing="lg">Checkbox and Radio Buttons (Stateful Buttons)
             <ButtonGroup size="sm" className={'mr-3'}>
               <Button outline color="default">5</Button>
               <Button outline color="default">6</Button>
               <Button outline color="default">7</Button>
             </ButtonGroup>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Row>
               <Col xs="12" sm="6">
                 <CardTitle tag="h4">Radio Buttons color="primary"</CardTitle>
@@ -324,11 +324,11 @@ class UiButtons extends React.Component {
                 >{JSON.stringify(this.state.cSelected)}</span></p>
               </Col>
             </Row>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Checkbox & Radio .btn-toggle style
+          <CardHeader spacing="lg">Checkbox & Radio .btn-toggle style
             <span>
               <Button size="sm" outline color="default" className={'round mr-2'} onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
               <Button size="sm" outline color="default" className={'round mr-2'} onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
@@ -340,7 +340,7 @@ class UiButtons extends React.Component {
               </Form>
             </span>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Form>
               <FormGroup>
                 <Label for="toggler1">size="xs"</Label>
@@ -365,11 +365,11 @@ class UiButtons extends React.Component {
 
               </FormGroup>
             </Form>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Checkbox & Radio .btn-radio style
+          <CardHeader spacing="lg">Checkbox & Radio .btn-radio style
             <Form>
               <FormGroup>
                 <Input size="sm" type="checkbox" name="toggler11" id="toggler11" className={'btn-radio'} onClick={() => this.onRadioBtnClick(11)} />
@@ -386,7 +386,7 @@ class UiButtons extends React.Component {
               </FormGroup>
             </Form>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Form>
               <FormGroup>
 
@@ -412,11 +412,11 @@ class UiButtons extends React.Component {
 
               </FormGroup>
             </Form>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Checkbox & Radio .btn-check style
+          <CardHeader spacing="lg">Checkbox & Radio .btn-check style
             <Form>
               <FormGroup>
                 <Input size="sm" type="checkbox" name="toggler14" id="toggler14" className={'btn-check'} onClick={() => this.onRadioBtnClick(14)} />
@@ -425,7 +425,7 @@ class UiButtons extends React.Component {
               </FormGroup>
             </Form>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Form>
               <FormGroup>
                 <Input size="xs" type="checkbox" name="toggler15" id="toggler15" className={'btn-check'} />
@@ -450,16 +450,16 @@ class UiButtons extends React.Component {
 
               </FormGroup>
             </Form>
-          </CardBlock>
+          </CardBody>
         </div>
 
         <div>
-          <CardHeader>Icons - .round
+          <CardHeader spacing="lg">Icons - .round
             <Button outline color="link" className={'rounded-circle mr-2'}>
               <img src={iconClose} alt="x" />
             </Button>
           </CardHeader>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button outline color="link" className={'rounded-circle mr-2'}>×</Button>
             <Button outline color="link" className={'rounded-circle mr-2'}>
               <img src={iconClose} alt="x" />
@@ -482,7 +482,7 @@ class UiButtons extends React.Component {
             <Button color="inverse" size="sm" className={'round mr-2'}>
               × <span>Close Me Please</span>
             </Button>
-          </CardBlock>
+          </CardBody>
         </div>
 
       </Card>

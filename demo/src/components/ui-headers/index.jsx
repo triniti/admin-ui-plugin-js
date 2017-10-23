@@ -1,9 +1,9 @@
 import React from 'react';
-import { Col, Card, CardBlock, CardHeader, CardTitle, Divider } from '../../../../src/components';
+import { Col, Card, CardBody, CardHeader, CardTitle, Divider } from '../../../../src/components';
 
 const UiHeaders = () => (
   <Card>
-    <CardBlock>
+    <CardBody spacing="lg">
       <h1>H1 Heading .h1</h1>
       <h2>H2 Heading .h2</h2>
       <h3>H3 Heading .h3</h3>
@@ -12,10 +12,10 @@ const UiHeaders = () => (
       <h6>h6 Heading .h6</h6>
       <Divider />
       <h1>H1 Heading .h1</h1>
-    </CardBlock>
-    <CardHeader>Card Header</CardHeader>
+    </CardBody>
+    <CardHeader spacing="lg">Card Header</CardHeader>
 
-    <CardBlock>
+    <CardBody spacing="lg">
       <CardTitle tag="h1">Card Title h1</CardTitle>
       <CardTitle tag="h2">Card Title h2</CardTitle>
       <CardTitle tag="h3">Card Title h3</CardTitle>
@@ -27,38 +27,45 @@ const UiHeaders = () => (
       <hr />
       <p>Below is the <strong>Divider</strong> component with size prop</p>
 
-      <h5>Divider size="sm"</h5>
+      <CardTitle tag="h5">Divider size="sm"</CardTitle>
       <Divider size="sm" />
 
 
-      <h5>Divider, defaults to size="md"</h5>
+      <CardTitle tag="h5">Divider, defaults to size="md"</CardTitle>
       <Divider />
 
-      <h5>Divider size="lg"</h5>
+      <CardTitle tag="h5">Divider size="lg"</CardTitle>
       <Divider size="lg" />
 
-      <h5>Card Header with no title, must be outside CardBlock to be full width</h5>
-    </CardBlock>
+      <h5>Card Header with no title, must be outside CardBody to be full width</h5>
+    </CardBody>
 
 
     <CardHeader />
     <br/>
-    <CardHeader>Dividers directly inside Card but outside CardBlock</CardHeader>
+    <CardHeader spacing="lg">Dividers directly inside Card but outside CardBody</CardHeader>
     <hr />
 
-    <h5 className="p-4">Divider size="sm"</h5>
+    <CardBody spacing="lg">
+      <CardTitle tag="h5">Divider size="sm"</CardTitle>
+    </CardBody>
     <Divider size="sm" />
 
-    <h5 className="p-4">Divider, defaults to size="md"</h5>
+    <CardBody spacing="lg">
+      <CardTitle tag="h5">Divider, defaults to size="md"</CardTitle>
+    </CardBody>
     <Divider />
 
-    <h5 className="p-4">Divider size="lg"</h5>
+    <CardBody spacing="lg">
+      <CardTitle tag="h5">Divider size="lg"</CardTitle>
+    </CardBody>
     <Divider size="lg" />
 
-    <CardBlock>
-    <h5 className="p-4">Dividing Line between stacked CardBlocks</h5>
-    </CardBlock>
-    <CardBlock/>
+    <CardBody spacing="lg">
+    <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>
+    </CardBody>
+
+    <CardBody spacing="lg"></CardBody>
 
   </Card>
 );

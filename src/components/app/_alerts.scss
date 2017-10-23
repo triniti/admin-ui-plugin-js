@@ -95,42 +95,42 @@
 // full-width alerts
 //
 // Custom Sizing
-// $width-desktop-lg:        2.5rem;
-// $width-desktop:             2rem;
-// $width-tablet:            1.5rem;
-// $width-mobile:              1rem;
+// $padding-xl:        2.5rem;
+// $padding-lg:             2rem;
+// $padding-md:            1.5rem;
+// $padding-xs:              1rem;
 
 .alert-full-width {
   margin: 0;
   padding-top: .75rem;
-  padding-right: $width-mobile;
+  padding-right: $padding-xs;
   padding-bottom: .75rem;
-  padding-left: $width-mobile;
+  padding-left: $padding-xs;
 
   @media (min-width: 768px) {
-    padding-right: $width-tablet;
-    padding-left: $width-tablet;
+    padding-right: $padding-md;
+    padding-left: $padding-md;
   }
   @media (min-width: 1025px) {
-    padding-right: $width-desktop;
-    padding-left: $width-desktop;
+    padding-right: $padding-lg;
+    padding-left: $padding-lg;
   }
   @media (min-width: 1600px) {
-    padding-right: $width-desktop-lg;
-    padding-left: $width-desktop-lg;
+    padding-right: $padding-xl;
+    padding-left: $padding-xl;
   }
 }
 
-.card-block .alert-full-width {
-  margin: 0 (-$width-mobile);
+.card-body .alert-full-width {
+  margin: 0 (-$padding-xs);
 
   @media (min-width: 768px) {
-    margin: 0 (-$width-tablet);
+    margin: 0 (-$padding-md);
   }
   @media (min-width: 1025px) {
-    margin: 0 (-$width-desktop);
+    margin: 0 (-$padding-lg);
   }
   @media (min-width: 1600px) {
-    margin: 0 (-$width-desktop-lg);
+    margin: 0 (-$padding-xl);
   }
 }

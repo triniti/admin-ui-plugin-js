@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button, Card, CardBlock, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, Row } from '../../../../src/components';
 
 const UiCard = () => (
     <div>
       <CardsContainer>
         <Row className="mb-3">
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card className={'card-hover'}>
+            <Card hover>
               <CardImg
                 top width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
@@ -23,7 +23,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card className={'card-hover'}>
+            <Card hover>
               <CardBody>
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
@@ -42,14 +42,14 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card block className="text-center hover-outline">
+            <Card block hover className="text-center">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button>Go somewhere</Button>
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card>
+            <Card hover>
               <CardHeader tag="h3">Featured</CardHeader>
               <CardBody>
                 <CardTitle>Special Title Treatment</CardTitle>
@@ -60,7 +60,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card className={'card-hover'}>
+            <Card hover>
               <CardImg
                 top width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
@@ -78,7 +78,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card className={'card-hover'}>
+            <Card hover>
               <CardBody>
                 <CardTitle>Card Title</CardTitle>
                 <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -95,7 +95,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card inverse>
+            <Card inverse hover>
               <CardImg
                 width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97270&w=318&h=270&bg=333333&txtclr=666666"
@@ -112,7 +112,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card block inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+            <Card block inverse hover color="dark">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <hr/>
@@ -120,7 +120,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card block outline color="primary">
+            <Card block outline hover color="primary">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button color="second">Button</Button>
@@ -256,15 +256,13 @@ const UiCard = () => (
                   alt="Card image cap"
                 />
               </Card>
-              <Card>
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Button</Button>
-                </CardBody>
+              <Card block inverse color="secondary">
+                <CardTitle>Card title</CardTitle>
+                <CardSubtitle>Card subtitle</CardSubtitle>
+                <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
+                <Button>Button</Button>
               </Card>
-              <Card block inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
+              <Card block inverse color="dark">
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 <Button>Button</Button>

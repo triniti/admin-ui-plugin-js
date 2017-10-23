@@ -1,9 +1,9 @@
 import React from 'react';
-import { Badge, Button, ButtonGroup, Card, CardBlock, CardTitle, Col, Row } from '../../../../src/components';
+import { Badge, Button, ButtonGroup, Card, CardBody, CardTitle, Col, Row } from '../../../../src/components';
 
 const UiBadge = () => (
   <Card>
-    <CardBlock>
+    <CardBody spacing="lg">
       <h1>H1 Heading .h1 <Badge>New</Badge></h1>
       <h2>H2 Heading .h2 <Badge color="primary">New</Badge></h2>
       <h3>H3 Heading .h3 <Badge color="success" pill>New</Badge></h3>
@@ -36,7 +36,7 @@ const UiBadge = () => (
       <Button color="info" className={'round mr-2 mb-2 alert-wrapper'}>info <Badge color="warning" className={'badge-alert'}>0</Badge></Button>
       <Button color="default" className={'mr-2 mb-2 alert-wrapper'}>warning <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
       <Button outline color="link" className={'round mr-1 mb-2 alert-wrapper'}>link <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
-    </CardBlock>
+    </CardBody>
   </Card>
 );
 
