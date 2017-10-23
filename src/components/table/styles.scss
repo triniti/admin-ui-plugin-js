@@ -7,7 +7,7 @@
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: $width-desktop;
+  margin-bottom: $padding-lg;
   background-color: $table-bg; // Reset for nesting within parents with `background-color`.
 
   th,
@@ -207,7 +207,7 @@
 // Sticky-top tables
 
 table.sticky-top + table,
-.card-block table.sticky-top {
+.card-body table.sticky-top {
   margin-top: -1px !important;
 }
 
@@ -236,20 +236,20 @@ table.sticky-top + table,
 
 tr > th:first-child,
 tr > td:first-child {
-  padding-left: $width-mobile;
+  padding-left: $padding-xs;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
   tr > th:first-child,
   tr > td:first-child {
-    padding-left: $width-tablet;
+    padding-left: $padding-md;
   }
 }
 
 @media (min-width: 1025px) {
   tr > th:first-child,
   tr > td:first-child {
-    padding-left: $width-desktop + .3rem;
+    padding-left: $padding-lg + .3rem;
   }
 }
 

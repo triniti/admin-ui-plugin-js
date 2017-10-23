@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBlock, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row } from '../../../../src/components';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row } from '../../../../src/components';
 
 class UiInputGroup extends React.Component {
   constructor(props) {
@@ -21,8 +21,8 @@ class UiInputGroup extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader>Standard Form</CardHeader>
-          <CardBlock>
+          <CardHeader spacing="lg">Standard Form</CardHeader>
+          <CardBody spacing="lg">
             <Row>
               <Col sm="6">
                 <InputGroup>
@@ -102,11 +102,11 @@ class UiInputGroup extends React.Component {
                 </InputGroup>
               </Col>
             </Row>
-          </CardBlock>
+          </CardBody>
         </div>
 
-        <CardHeader>White Form on BG Color</CardHeader>
-        <CardBlock className={'bg-light form-white'}>
+        <CardHeader spacing="lg">White Form on BG Color</CardHeader>
+        <CardBody className={'bg-light form-white'} spacing="lg">
           <Row>
             <Col sm="6">
               <InputGroup>
@@ -186,7 +186,7 @@ class UiInputGroup extends React.Component {
               </InputGroup>
             </Col>
           </Row>
-        </CardBlock>
+        </CardBody>
       </Card>
     );
   }

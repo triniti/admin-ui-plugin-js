@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, CardTitle, CardBlock, Col, Pagination, PaginationItem, PaginationLink, Row } from '../../../../src/components';
+import { Card, CardTitle, CardBody, Col, Pagination, PaginationItem, PaginationLink, Row } from '../../../../src/components';
 
 const UiPagination = () => (
   <Card>
-    <CardBlock>
+    <CardBody spacing="lg">
       <Pagination>
         <PaginationItem>
           <PaginationLink previous href="#" />
@@ -87,7 +87,7 @@ const UiPagination = () => (
           <PaginationLink next href="#" />
         </PaginationItem>
       </Pagination>
-    </CardBlock>
+    </CardBody>
   </Card>
 );
 

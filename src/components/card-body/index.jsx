@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
-import './styles.scss';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  spacing: PropTypes.string,
 };
 
 const defaultProps = {
@@ -18,12 +18,14 @@ const CardBody = (props) => {
   const {
     className,
     cssModule,
+    spacing,
     tag: Tag,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'card-body',
+    spacing ? `card-body-spacing-${spacing}` : false,
   ), cssModule);
 
   return (

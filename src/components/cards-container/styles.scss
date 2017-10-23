@@ -13,19 +13,19 @@
   @media (min-width: 768px) {
     padding-top: .5rem;
   }
-}
 
-.cards-container [class*=' col-'] {
-  padding-right: .5rem;
-  padding-left: .5rem;
-}
+  & [class*=' col-'] {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
 
-.cards-container > .row {
-  margin-right: -.5rem;
-  margin-left: -.5rem;
+  & > .row {
+    margin-right: -.5rem;
+    margin-left: -.5rem;
 
-  @media (max-width: 767px) {
-    margin-right: -.25rem;
-    margin-left: -.25rem;
+    @media (max-width: 767px) {
+      margin-right: -.25rem;
+      margin-left: -.25rem;
+    }
   }
 }

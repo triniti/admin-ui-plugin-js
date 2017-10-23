@@ -1,0 +1,447 @@
+// Card
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: $card-bg;
+  background-clip: border-box;
+  border: $card-border-width solid $card-border-color;
+  @include border-radius($card-border-radius);
+
+  @media (max-width: 767px) {
+    margin: .5rem 0;
+  }
+}
+
+.tab-pane > .card {
+  border: none;
+}
+
+// Card inside cards-container
+
+.cards-container {
+  .card {
+    margin: .5rem 0;
+  }
+}
+
+.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+  flex: 1 1 auto;
+  padding: $card-spacer-x;
+  box-shadow: none;
+}
+
+.card-body + .card-body {
+  box-shadow: inset 0 1px 0 0 $gray-rgba-300;
+}
+
+.card-body + .card-body:last-child,
+.card-body + .card-body:last-of-type {
+  box-shadow: none;
+}
+
+// CardBody increased padding when card spacing="lg"
+
+.card-body-spacing-lg {
+  position: relative;
+  padding: ($padding-xs - .125rem) $padding-xs ($padding-xs + .5rem) $padding-xs;
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding: ($padding-md - .25rem) $padding-md ($padding-md + .5rem) $padding-md;
+  }
+
+  @media (min-width: 1025px) and (max-width: 1599px) {
+    padding: ($padding-lg - .5rem) $padding-lg ($padding-lg + .5rem) $padding-lg;
+  }
+
+  @media (min-width: 1600px) {
+    padding: ($padding-xl - .5rem) $padding-xl ($padding-xl + .5rem) $padding-xl;
+  }
+}
+
+.card-body > .row:first-child {
+  padding-top: 0;
+}
+
+.jumbotron > .card-body {
+  background-color: inherit;
+}
+
+.card-body > .row {
+  padding-top: ($padding-xs - .125rem);
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    padding-top: ($padding-md - .25rem);
+  }
+
+  @media (min-width: 1025px) and (max-width: 1599px) {
+    padding-top: ($padding-lg - .5rem);
+  }
+
+  @media (min-width: 1600px) {
+    padding-top: ($padding-xl - .5rem);
+  }
+}
+
+
+.card-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 1 auto;
+  margin-bottom: $card-spacer-y;
+}
+
+h1.card-title {
+  margin-bottom: 1.5rem;
+  min-height: 2.125rem;
+}
+
+h2.card-title {
+  margin-bottom: 1.25rem;
+  min-height: 2.125rem;
+}
+
+h3.card-title {
+  margin-bottom: 1rem;
+}
+
+h4.card-title {
+  margin-top: 2rem;
+}
+
+
+.card-title-sm {
+  margin-right: auto;
+  margin-left: .5rem;
+  font-size: $small-font-size;
+  color: $text-muted;
+}
+
+
+.card-subtitle {
+  margin-top: -($card-spacer-y / 2);
+  margin-bottom: 0;
+}
+
+.card-text:last-child {
+  margin-bottom: 0;
+}
+
+.card-link {
+  @include hover {
+    text-decoration: none;
+  }
+
+  + .card-link {
+    margin-left: $card-spacer-x;
+  }
+}
+
+.card {
+  > .list-group:first-child {
+    .list-group-item:first-child {
+      @include border-top-radius($card-border-radius);
+    }
+  }
+
+  > .list-group:last-child {
+    .list-group-item:last-child {
+      @include border-bottom-radius($card-border-radius);
+    }
+  }
+}
+
+
+//
+// Optional textual caps
+//
+
+
+// Card Header
+
+.card-header {
+  position: sticky;
+  top: -1px;
+  z-index: $zindex-sticky;
+  display: flex;
+  flex: 0 0 auto;
+  margin-bottom: 0;
+  padding: 0 $card-spacer-x;
+  font-size: 1rem;
+  font-weight: 500;
+  align-items: center;
+  justify-content: space-between;
+  min-height: $header-height + 1;
+
+  background-color: $card-cap-bg;
+  box-shadow: 0 (-$card-border-width) 0 0 $card-border-color;
+  border-bottom: $card-border-width solid $card-border-color;
+}
+
+// CardHeader increased padding when card spacing="lg"
+
+.card-header-spacing-lg {
+  padding: 0 $padding-xs;
+
+  @media (min-width: 768px) {
+    padding: 0 $padding-md;
+  }
+  @media (min-width: 1025px) {
+    padding: 0 $padding-lg;
+  }
+  @media (min-width: 1600px) {
+    padding: 0 $padding-xl;
+  }
+}
+
+// Adjustment for btn-icons in card-header todo: find a better way
+
+.card-header > .rounded-circle {
+  margin: -.75rem;
+}
+
+
+.card-footer {
+  padding: $card-spacer-y $card-spacer-x;
+  background-color: $card-cap-bg;
+  border-top: $card-border-width solid $card-border-color;
+}
+
+.card-spacing-lg .card-footer {
+  padding-left: $padding-xs;
+  padding-left: $padding-xs;
+
+  @media (min-width: 768px) {
+    padding-left: $padding-md;
+    padding-left: $padding-md;
+  }
+  @media (min-width: 1025px) {
+    padding-left: $padding-lg;
+    padding-left: $padding-lg;
+  }
+  @media (min-width: 1600px) {
+    padding-left: $padding-xl;
+    padding-left: $padding-xl;
+  }
+}
+
+
+//
+// Header navs
+//
+
+.card-header-tabs {
+  margin-right: -($card-spacer-x / 2);
+  margin-bottom: -$card-spacer-y;
+  margin-left: -($card-spacer-x / 2);
+  border-bottom: 0;
+}
+
+.card-header-pills {
+  margin-right: -($card-spacer-x / 2);
+  margin-left: -($card-spacer-x / 2);
+}
+
+// Card image
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: $card-img-overlay-padding;
+}
+
+.card-img {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include border-radius($card-inner-border-radius);
+}
+
+// Card image caps
+.card-img-top {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include border-top-radius($card-inner-border-radius);
+}
+
+.card-img-bottom {
+  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
+  @include border-bottom-radius($card-inner-border-radius);
+}
+
+
+// Card deck
+
+@include media-breakpoint-up(sm) {
+  .card-deck {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -$card-deck-margin;
+    margin-left: -$card-deck-margin;
+
+    .card {
+      display: flex;
+      flex: 1 0 0%;
+      flex-direction: column;
+      margin-right: $card-deck-margin;
+      margin-left: $card-deck-margin;
+    }
+  }
+}
+
+
+//
+// Card groups
+//
+
+@include media-breakpoint-up(sm) {
+  .card-group {
+    display: flex;
+    flex-flow: row wrap;
+
+    .card {
+      flex: 1 0 0%;
+
+      + .card {
+        margin-left: 0;
+        border-left: 0;
+      }
+
+      // Handle rounded corners
+      @if $enable-rounded {
+        &:first-child {
+          @include border-right-radius(0);
+
+          .card-img-top {
+            border-top-right-radius: 0;
+          }
+          .card-img-bottom {
+            border-bottom-right-radius: 0;
+          }
+        }
+        &:last-child {
+          @include border-left-radius(0);
+
+          .card-img-top {
+            border-top-left-radius: 0;
+          }
+          .card-img-bottom {
+            border-bottom-left-radius: 0;
+          }
+        }
+
+        &:not(:first-child):not(:last-child) {
+          border-radius: 0;
+
+          .card-img-top,
+          .card-img-bottom {
+            border-radius: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//
+// Columns
+//
+
+.card-columns {
+  .card {
+    margin-bottom: $card-columns-margin;
+  }
+
+  @include media-breakpoint-up(sm) {
+    column-count: $card-columns-count;
+    column-gap: $card-columns-gap;
+
+    .card {
+      display: inline-block; // Don't let them vertically span multiple columns
+      width: 100%; // Don't let their width change
+    }
+  }
+}
+
+
+// Card Hover Class
+
+.card-hover {
+  position: relative;
+  transition: transform $transition;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: opacity $transition;
+    opacity: 0;
+    box-shadow: 0 .5rem 1.5rem -.25rem rgba($black, .2);
+  }
+
+  &:hover {
+    transform: translate(0, -4px);
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+
+// Card Inverse Text Colors
+
+.card-inverse {
+  .card-title,
+  .card-subtitle,
+  .card-footer {
+    color: $white;
+  }
+  .card-text {
+    color: $white-rgba-800;
+  }
+}
+
+
+// Card Colors
+// todo: see if this can be automated to enable all theme-colors and variants
+
+.card-primary {
+  background-color: theme-color("primary");
+  border-color: theme-color("primary");
+}
+
+.card-outline-primary {
+  border-color: theme-color("primary");
+}
+
+.card-secondary {
+  background-color: theme-color("secondary");
+  border-color: theme-color("secondary");
+}
+
+.card-outline-secondary {
+  border-color: theme-color("secondary");
+}
+
+.card-dark {
+  background-color: theme-color("dark");
+  border-color: theme-color("dark");
+}
+
+.card-outline-dark {
+  border-color: theme-color("dark");
+}
+

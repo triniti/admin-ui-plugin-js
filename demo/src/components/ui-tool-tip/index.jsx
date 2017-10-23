@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBlock, Col, Row } from '../../../../src/components';
+import { Card, CardBody, Col, Row } from '../../../../src/components';
 import TooltipItem from './TooltipItem';
 
 class UiTooltip extends React.Component {
@@ -31,11 +31,11 @@ class UiTooltip extends React.Component {
   render() {
     return (
       <Card>
-        <CardBlock>
+        <CardBody spacing="lg">
           { this.state.tooltips.map((tooltip, i) =>
             <TooltipItem key={tooltip.placement} item={tooltip} id={i} />
           )}
-        </CardBlock>
+        </CardBody>
       </Card>
     );
   }

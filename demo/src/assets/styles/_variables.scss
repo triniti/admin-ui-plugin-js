@@ -112,7 +112,7 @@ $theme-colors: (
   warning: $orange,
   danger: $red,
   light: $white,
-  dark: #2f3347
+  dark: $gray-800
 ) !default;
 
 // Set a specific jump point for requesting color jumps
@@ -628,10 +628,10 @@ $jumbotron-bg:                   transparent !default;
 $card-spacer-y:            .75rem !default;
 $card-spacer-x:            1.25rem !default;
 $card-border-width:        1px !default;
-$card-border-radius:       $border-radius !default;
+$card-border-radius:       0 !default;
 $card-border-color:        $gray-500 !default;
 $card-inner-border-radius: calc(#{$card-border-radius} - #{$card-border-width}) !default;
-$card-cap-bg:              $gray-100 !default;
+$card-cap-bg:              $body-bg !default;
 $card-bg:                  $white !default;
 
 $card-img-overlay-padding: 1.25rem !default;

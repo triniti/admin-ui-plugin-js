@@ -244,28 +244,25 @@ a:not([href]):not([tabindex]),
 }
 
 .btn-toggler {
-  font-family: inherit;
-  position: relative;
-  margin-left: -1.25rem;
-  padding-left: $width-desktop;
-  letter-spacing: 0;
-  border-color: transparent;
+  margin-left: -.625rem;
+  padding-left: 1.75rem;
   background-color: transparent;
+  border-color: transparent;
 }
 
-@media (max-width: 767px) {
-  .btn-toggler {
-    margin-left: -.25rem;
-  }
+.card-header .btn-toggler {
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
 }
 
 .btn-toggler::before {
   position: absolute;
-  top: 10.33%;
+  top: 15%;
   left: 0;
   display: block;
-  width: 1.6rem;
-  height: 1.6rem;
+  width: 1.5rem;
+  height: 1.5rem;
   content: '';
   transition: transform $transition;
   opacity: .5;

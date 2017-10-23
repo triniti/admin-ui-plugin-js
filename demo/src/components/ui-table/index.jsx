@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBlock, CardHeader, Row, Col, Table } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Row, Col, Table } from '../../../../src/components';
 
 const UiTable = () => (
     <Card>
@@ -147,7 +147,7 @@ const UiTable = () => (
 
       <div className={'pb-4'}>
       <CardHeader>Striped Table + Sticky</CardHeader>
-      <CardBlock>
+      <CardBody>
         <Table striped className={'sticky-top fixed'}>
           <thead>
           <tr>
@@ -180,7 +180,7 @@ const UiTable = () => (
           </tr>
           </tbody>
         </Table>
-      </CardBlock>
+      </CardBody>
       </div>
 
       <div>

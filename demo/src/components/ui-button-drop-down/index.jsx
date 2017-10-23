@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonDropdown, Card, CardBlock, Col, DropdownItem, DropdownMenu, DropdownToggle, Row } from '../../../../src/components';
+import { ButtonDropdown, Card, CardBody, Col, DropdownItem, DropdownMenu, DropdownToggle, Row } from '../../../../src/components';
 
 class UiButtonDropdown extends React.Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class UiButtonDropdown extends React.Component {
   render() {
     return (
       <Card>
-        <CardBlock>
+        <CardBody spacing="lg">
           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
             <DropdownToggle caret color="inverse">
             Button Dropdown
@@ -33,7 +33,7 @@ class UiButtonDropdown extends React.Component {
               <DropdownItem>Another Action</DropdownItem>
             </DropdownMenu>
           </ButtonDropdown>
-        </CardBlock>
+        </CardBody>
       </Card>
     );
   }
