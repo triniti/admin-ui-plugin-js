@@ -38,12 +38,7 @@
 }
 
 .card-body + .card-body {
-  box-shadow: inset 0 1px 0 0 $gray-rgba-300;
-}
-
-.card-body + .card-body:last-child,
-.card-body + .card-body:last-of-type {
-  box-shadow: none;
+  box-shadow: inset 0 1px 0 0 $gray-300;
 }
 
 // CardBody increased padding when card spacing="lg"

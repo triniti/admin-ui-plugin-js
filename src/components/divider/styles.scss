@@ -8,7 +8,7 @@
   height: 0;
   min-height: 0;
   padding: 0;
-  border-bottom: 1px solid $gray-rgba-200;
+  border-bottom: 1px solid $gray-300;
   overflow: visible;
   box-sizing: content-box;
 }
@@ -16,21 +16,24 @@
 .divider-md {
   min-height: 1em;
   padding: .3rem $padding-xs;
-  border-bottom: 1px solid $gray-rgba-200;
+  border-bottom: 1px solid $gray-300;
   background-color: $gray-100;
-  box-shadow: 0 -1px 0 0 $gray-rgba-200;
-  box-sizing: border-box;
+  box-shadow: 0 -1px 0 0 $gray-300;
 }
 
 .divider-lg {
   min-height: 1em;
   padding: $padding-xs;
-  border-bottom: 1px solid $gray-rgba-200;
+  border-bottom: 1px solid $gray-300;
   background-color: $gray-100;
-  box-shadow: 0 -1px 0 0 $gray-rgba-200;
+  box-shadow: 0 -1px 0 0 $gray-300;
 }
 
 .card-body > .divider {
+  margin: 1rem (-$card-spacer-x);
+}
+
+.card-body-spacing-lg > .divider {
   margin: 1.5rem (-$padding-xs);
 
   @media (min-width: 768px) {
@@ -41,19 +44,5 @@
   }
   @media (min-width: 1600px) {
     margin: 1.5rem (-$padding-xl);
-  }
-}
-
-.card-body > .divider-sm {
-  margin: 1rem (-$card-spacer-x);
-}
-
-.padding-sm > .divider-sm {
-  margin-left: -$padding-sm;
-  margin-right: -$padding-sm;
-
-  @media(max-width: 1023px) {
-    margin-left: -$padding-xs;
-    margin-right: -$padding-xs;
   }
 }
