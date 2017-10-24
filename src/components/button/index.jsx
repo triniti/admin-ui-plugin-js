@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   active: PropTypes.bool,
@@ -13,6 +14,9 @@ const propTypes = {
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   onClick: PropTypes.func,
   size: PropTypes.string,
+  round: PropTypes.string,
+  square: PropTypes.string,
+  emphasis: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -50,6 +54,9 @@ class Button extends React.Component {
       color,
       outline,
       size,
+      round,
+      square,
+      emphasis,
       tag: Tag,
       innerRef,
       ...attributes
@@ -60,6 +67,9 @@ class Button extends React.Component {
       'btn',
       `btn${outline ? '-outline' : ''}-${color}`,
       size ? `btn-${size}` : false,
+      round ? `btn-round` : false,
+      square ? `btn-square` : false,
+      emphasis ? `btn-emphasis` : false,
       block ? 'btn-block' : false,
       { active, disabled: this.props.disabled },
     ), cssModule);

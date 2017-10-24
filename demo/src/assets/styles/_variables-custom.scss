@@ -6,8 +6,8 @@
 // Path to assets folder for svg icons in css
 // $assets-folder:                 '../../assets/';
 
-$assets-folder:                 '~/src/assets/img/svg/icons';
-$logo-folder:                 '~/src/assets/img/svg';
+$icons-folder:                 '~/src/assets/img/svg/icons/';
+$logo-folder:                 '~/src/assets/img/svg/';
 
 // referenced in _type but in _variables - $font-size-h1 is the variable
 $h1-font-size: 1.75rem !default;
