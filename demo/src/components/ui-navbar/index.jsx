@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink } from '../../../../src/components';
+import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -26,12 +26,12 @@ class UiNavbar extends React.Component {
     return (
       <Card>
         <CardBody spacing="lg">
-          <h4>Full Width Inverse Expanded</h4>
-          <Navbar color="faded" dark expand="md">
-            <NavbarBrand href="/">reactstrap</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+          <h4>Full Width Inverse Toggleable</h4>
+          <Navbar dark>
+            <NavbarToggler onClick={this.toggleNavbar} right />
+            <Collapse className="navbar-toggleable-md" isOpen={!this.state.collapsed}>
+              <NavbarBrand href="/">reactstrap</NavbarBrand>
+              <Nav navbar>
                 <NavItem>
                   <NavLink href="/components/">Components</NavLink>
                 </NavItem>
@@ -44,12 +44,11 @@ class UiNavbar extends React.Component {
         </CardBody>
 
         <CardBody spacing="lg">
-          <h4>Full Width Light Collapse</h4>
-          <Navbar color="faded" light>
-            <NavbarBrand href="#" className="mr-auto">reactstrap</NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse isOpen={!this.state.collapsed} navbar>
-              <Nav navbar>
+          <Navbar light toggleable className="mb-3">
+            <NavbarToggler right onClick={this.toggle} />
+            <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav className="ml-auto" navbar>
                 <NavItem>
                   <NavLink href="/components/">Components</NavLink>
                 </NavItem>
