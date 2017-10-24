@@ -31,144 +31,118 @@ class UiButtons extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader spacing="lg">Solid<span><Button outline color="hover-bg" className={'mr-1'}>clear</Button><Button outline color="default">save</Button></span></CardHeader>
+          <CardHeader spacing="lg">Solid<span><Button outline color="hover-bg">clear</Button><Button outline color="default">save</Button></span></CardHeader>
           <CardBody spacing="lg">
-            <Button color="default" className={'mr-1 mb-2'}>default</Button>
-            <Button color="primary" className={'mr-1 mb-2'}>primary</Button>
-            <Button color="secondary" className={'mr-1 mb-2'}>secondary</Button>
-            <Button color="inverse" className={'mr-1 mb-2'}>inverse</Button>
-            <Button color="success" className={'mr-1 mb-2'}>success</Button>
-            <Button color="info" className={'mr-1 mb-2'}>info</Button>
-            <Button color="warning" className={'mr-1 mb-2'}>warning</Button>
-            <Button color="danger" className={'mr-1 mb-2'}>danger</Button>
-            <Button color="purple" className={'mr-1 mb-2'}>purple</Button>
-            <Button color="pink" className={'mr-1 mb-2'}>pink</Button>
-            <Button color="link" className={'mr-1 mb-2'}>link</Button>
-            <Button color="link-bg" className={'mr-1 mb-2'}>link-bg</Button>
-            <Button color="hover" className={'mr-1 mb-2'}>hover</Button>
-            <Button color="hover-bg" className={'mr-1 mb-2'}>hover-bg</Button>
+            <Button color="default">default</Button>
+            <Button color="primary">primary</Button>
+            <Button color="secondary">secondary</Button>
+            <Button color="success">success</Button>
+            <Button color="info">info</Button>
+            <Button color="warning">warning</Button>
+            <Button color="danger">danger</Button>
+            <Button color="link">link</Button>
+            <Button color="link-bg">link-bg</Button>
+            <Button color="hover">hover</Button>
+            <Button color="hover-bg">hover-bg</Button>
+          </CardBody>
+        </div>
+
+        <div>
+          <CardHeader spacing="lg"><span>Solid Round</span>
+           <Button outline round color="link">outline link</Button>
+          </CardHeader>
+          <CardBody spacing="lg">
+            <Button color="default" round>default</Button>
+            <Button color="primary" round>primary</Button>
+            <Button color="secondary" round>secondary</Button>
+            <Button color="success" round>success</Button>
+            <Button color="info" round>info</Button>
+            <Button color="warning" round>warning</Button>
+            <Button color="danger" round>danger</Button>
+            <Button color="link" round>link</Button>
+            <Button color="link-bg" round>link-bg</Button>
+            <Button color="hover-bg" round>hover-bg</Button>
+          </CardBody>
+        </div>
+
+        <div>
+          <CardHeader spacing="lg"><span>Solid Square</span>
+           <Button outline round color="link">outline link</Button>
+          </CardHeader>
+          <CardBody spacing="lg">
+            <Button color="default" square>default</Button>
+            <Button color="primary" square>primary</Button>
+            <Button color="secondary" square>secondary</Button>
+            <Button color="success" square>success</Button>
+            <Button color="info" square>info</Button>
+            <Button color="warning" square>warning</Button>
+            <Button color="danger" square>danger</Button>
+            <Button color="link" square>link</Button>
+            <Button color="link-bg" square>link-bg</Button>
+            <Button color="hover-bg" square>hover-bg</Button>
           </CardBody>
         </div>
 
         <div>
           <CardHeader spacing="lg">Outline
-            <Button color="hover" className={'round mr-2'}>hover</Button>
+            <Button color="hover" round>hover</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline color="default" className={'mr-1 mb-2'}>default</Button>
-            <Button outline color="primary" className={'mr-1 mb-2'}>primary</Button>
-            <Button outline color="secondary" className={'mr-1 mb-2'}>secondary</Button>
-            <Button outline color="inverse" className={'mr-1 mb-2'}>inverse</Button>
-            <Button outline color="success" className={'mr-1 mb-2'}>success</Button>
-            <Button outline color="info" className={'mr-1 mb-2'}>info</Button>
-            <Button outline color="warning" className={'mr-1 mb-2'}>warning</Button>
-            <Button outline color="danger" className={'mr-1 mb-2'}>danger</Button>
-            <Button outline color="purple" className={'mr-1 mb-2'}>purple</Button>
-            <Button outline color="pink" className={'mr-1 mb-2'}>pink</Button>
-            <Button outline color="link" className={'mr-1 mb-2'}>link</Button>
-            <Button outline color="hover" className={'mr-1 mb-2'}>hover</Button>
-            <Button outline color="hover-bg" className={'mr-1 mb-2'}>hover-bg</Button>
+            <Button outline color="default">default</Button>
+            <Button outline color="primary">primary</Button>
+            <Button outline color="secondary">secondary</Button>
+            <Button outline color="success">success</Button>
+            <Button outline color="info">info</Button>
+            <Button outline color="warning">warning</Button>
+            <Button outline color="danger">danger</Button>
+            <Button outline color="link">link</Button>
+            <Button outline color="hover">hover</Button>
+            <Button outline color="hover-bg">hover-bg</Button>
           </CardBody>
         </div>
 
         <div>
-          <CardHeader spacing="lg">Border
-            <Button color="hover" className={'round mr-2'}>hover</Button>
+          <CardHeader spacing="lg"><span>Outline Round</span>
+            <Button outline round color="default">outline default round</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button color="default" className={'mr-1 mb-2 round btn-border-default'}>default</Button>
-            <Button color="primary" className={'mr-1 mb-2 round btn-border-primary'}>primary</Button>
-            <Button color="secondary" className={'mr-1 mb-2 round btn-border-secondary'}>secondary</Button>
-            <Button color="inverse" className={'mr-1 mb-2 round btn-border-inverse'}>inverse</Button>
-            <Button color="success" className={'mr-1 mb-2 rounded-0 btn-border-success'}>success</Button>
-            <Button color="info" className={'mr-1 mb-2 rounded-0 btn-border-info'}>info</Button>
-            <Button color="warning" className={'mr-1 mb-2 rounded-0 btn-border-warning'}>warning</Button>
-            <Button color="danger" className={'mr-1 mb-2 rounded-0 btn-border-danger'}>danger</Button>
-            <Button color="purple" className={'mr-1 mb-2 rounded-0 btn-border-purple'}>purple</Button>
-            <Button color="pink" className={'mr-1 mb-2 rounded-0 btn-border-pink'}>pink</Button>
+            <Button outline round color="default">default</Button>
+            <Button outline round color="primary">primary</Button>
+            <Button outline round color="secondary">secondary</Button>
+            <Button outline round color="success">success</Button>
+            <Button outline round color="info">info</Button>
+            <Button outline round color="warning">warning</Button>
+            <Button outline round color="danger">danger</Button>
+            <Button outline round color="link">link</Button>
           </CardBody>
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Solid - .round</span>
-           <Button outline color="link" className={'round mr-2'}>outline link</Button>
+          <CardHeader spacing="lg"><span>Outline Square</span>
+            <Button size="sm" outline square color="link">outline default round-0</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button color="default" className={'round mr-1 mb-2'}>default</Button>
-            <Button color="primary" className={'round mr-1 mb-2'}>primary</Button>
-            <Button color="secondary" className={'round mr-1 mb-2'}>secondary</Button>
-            <Button color="inverse" className={'round mr-1 mb-2'}>inverse</Button>
-            <Button color="success" className={'round mr-1 mb-2'}>success</Button>
-            <Button color="info" className={'round mr-1 mb-2'}>info</Button>
-            <Button color="warning" className={'round mr-1 mb-2'}>warning</Button>
-            <Button color="danger" className={'round mr-1 mb-2'}>danger</Button>
-            <Button color="link" className={'round mr-1 mb-2'}>link</Button>
-            <Button color="link-bg" className={'round mr-1 mb-2'}>link-bg</Button>
-            <Button color="hover-bg" className={'round mr-1 mb-2'}>hover-bg</Button>
-          </CardBody>
-        </div>
-
-        <div>
-          <CardHeader spacing="lg"><span>Outline - .round</span>
-            <Button outline color="default" className={'round mr-2'}>outline default round</Button>
-          </CardHeader>
-          <CardBody spacing="lg">
-            <Button outline color="default" className={'round mr-2 mb-2'}>default</Button>
-            <Button outline color="primary" className={'round mr-2 mb-2'}>primary</Button>
-            <Button outline color="secondary" className={'round mr-2 mb-2'}>secondary</Button>
-            <Button outline color="inverse" className={'round mr-2 mb-2'}>inverse</Button>
-            <Button outline color="success" className={'round mr-2 mb-2'}>success</Button>
-            <Button outline color="info" className={'round mr-2 mb-2'}>info</Button>
-            <Button outline color="warning" className={'round mr-2 mb-2'}>warning</Button>
-            <Button outline color="danger" className={'round mr-2 mb-2'}>danger</Button>
-            <Button outline color="link" className={'round mr-1 mb-2'}>link</Button>
-          </CardBody>
-        </div>
-
-        <div>
-          <CardHeader spacing="lg"><span>Outline - .rounded-0</span>
-            <Button size="sm" outline color="link" className={'rounded-0 mr-2'}>outline default round-0</Button>
-          </CardHeader>
-          <CardBody spacing="lg">
-            <Button outline color="default" className={'rounded-0 mr-2 mb-2'}>default</Button>
-            <Button outline color="primary" className={'rounded-0 mr-2 mb-2'}>primary</Button>
-            <Button outline color="secondary" className={'rounded-0 mr-2 mb-2'}>secondary</Button>
-            <Button outline color="inverse" className={'rounded-0 mr-2 mb-2'}>inverse</Button>
-            <Button outline color="success" className={'rounded-0 mr-2 mb-2'}>success</Button>
-            <Button outline color="info" className={'rounded-0 mr-2 mb-2'}>info</Button>
-            <Button outline color="warning" className={'rounded-0 mr-2 mb-2'}>warning</Button>
-            <Button outline color="danger" className={'rounded-0 mr-2 mb-2'}>danger</Button>
-            <Button outline color="link" className={'rounded-0 mr-1 mb-2'}>link</Button>
-          </CardBody>
-        </div>
-
-        <div>
-          <CardHeader spacing="lg"><span>Solid - .round .btn-emphasis</span>
-            <Button outline size="sm" color="default" className={'rounded mr-2'}>outline sm default</Button>
-          </CardHeader>
-          <CardBody spacing="lg">
-            <Button color="primary" className={'btn-emphasis round mr-1 mb-2'}>primary</Button>{' '}
-            <Button color="secondary" className={'btn-emphasis round mr-1 mb-2'}>secondary</Button>{' '}
-            <Button color="inverse" className={'btn-emphasis round mr-1 mb-2'}>inverse</Button>{' '}
-            <Button color="success" className={'btn-emphasis round mr-1 mb-2'}>success</Button>{' '}
-            <Button color="info" className={'btn-emphasis round mr-1 mb-2'}>info</Button>{' '}
-            <Button color="warning" className={'btn-emphasis round mr-1 mb-2'}>warning</Button>{' '}
-            <Button color="danger" className={'btn-emphasis round mr-1 mb-2'}>danger</Button>{' '}
-            <Button color="link">link</Button>
+            <Button outline square color="default">default</Button>
+            <Button outline square color="primary">primary</Button>
+            <Button outline square color="secondary">secondary</Button>
+            <Button outline square color="success">success</Button>
+            <Button outline square color="info">info</Button>
+            <Button outline square color="warning">warning</Button>
+            <Button outline square color="danger">danger</Button>
+            <Button outline square color="link">link</Button>
           </CardBody>
         </div>
 
         <div>
           <CardHeader spacing="lg">Sizes</CardHeader>
           <CardBody spacing="lg">
-            <Button color="primary" size="lg">Large Button</Button>{' '}
-            <Button outline color="default" size="lg">Large Button</Button>{' '}
-            <Button color="primary" size="lg" className={'round depth ml-3'}>LG (.round .depth)</Button>
+            <Button color="primary" size="lg">Large Button</Button>
+            <Button outline color="default" size="lg">Large Button</Button>
             <hr />
-            <Button color="primary" size="sm">Small Button</Button>{' '}
+            <Button color="primary" size="sm">Small Button</Button>
             <Button color="default" size="sm">Small Button</Button>
             <hr />
-            <Button color="primary" size="xl">XL Button</Button>{' '}
+            <Button color="primary" size="xl">XL Button</Button>
             <Button outline color="default" size="xl">XL Button</Button>
           </CardBody>
         </div>
@@ -186,7 +160,7 @@ class UiButtons extends React.Component {
           <CardBody spacing="lg">
             <Row>
               <Col sm="6">
-                <Button color="primary" size="lg" active>Primary link</Button>{' '}
+                <Button color="primary" size="lg" active className={'mr-1'}>Primary link</Button>
                 <Button color="default" size="lg" active>Link</Button>
               </Col>
             </Row>
@@ -195,16 +169,16 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg"><span>Disabled State</span>
-            <ButtonGroup className={'mr-3'}>
-              <Button outline color="default" className={'btn-transparent'}>5</Button>
-              <Button outline color="default" className={'btn-transparent'}>6</Button>
-              <Button outline color="default" className={'btn-transparent'}>7</Button>
+            <ButtonGroup>
+              <Button outline color="default">5</Button>
+              <Button outline color="default">6</Button>
+              <Button outline color="default">7</Button>
             </ButtonGroup>
           </CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col>
-                <Button color="primary" size="lg" disabled>Primary button</Button>{' '}
+                <Button color="primary" size="lg" disabled>Primary button</Button>
                 <Button color="default" size="lg" disabled>Button</Button>
               </Col>
             </Row>
@@ -213,7 +187,7 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg">Checkbox and Radio Buttons (Stateful Buttons)
-            <ButtonGroup size="sm" className={'mr-3'}>
+            <ButtonGroup size="sm">
               <Button outline color="default">5</Button>
               <Button outline color="default">6</Button>
               <Button outline color="default">7</Button>
@@ -330,8 +304,8 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Checkbox & Radio .btn-toggle style
             <span>
-              <Button size="sm" outline color="default" className={'round mr-2'} onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
-              <Button size="sm" outline color="default" className={'round mr-2'} onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
+              <Button size="sm" outline round color="default" className={'mr-2'} onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
+              <Button size="sm" outline round color="default" className={'mr-2'} onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
               <Form>
                 <FormGroup>
                   <Input type="checkbox" name="toggler0" id="toggler0" className={'btn-toggle'} />
@@ -374,15 +348,15 @@ class UiButtons extends React.Component {
               <FormGroup>
                 <Input size="sm" type="checkbox" name="toggler11" id="toggler11" className={'btn-radio'} onClick={() => this.onRadioBtnClick(11)} />
                 <Label for="toggler11" />
-                <Label for="toggler11" className={'mr-3'}>Yes</Label>
+                <Label for="toggler11" className={'mr-3 mb-0'}>Yes</Label>
 
                 <Input size="sm" type="checkbox" name="toggler12" id="toggler12" className={'btn-radio'} onClick={() => this.onRadioBtnClick(12)} />
                 <Label for="toggler12" />
-                <Label for="toggler12" className={'mr-3'}>No</Label>
+                <Label for="toggler12" className={'mr-3 mb-0'}>No</Label>
 
                 <Input size="sm" type="checkbox" name="toggler13" id="toggler13" className={'btn-radio'} onClick={() => this.onRadioBtnClick(13)} />
                 <Label for="toggler13" />
-                <Label for="toggler13" className={'mr-3'}>Maybe</Label>
+                <Label for="toggler13" className={'mr-3 mb-0'}>Maybe</Label>
               </FormGroup>
             </Form>
           </CardHeader>
@@ -421,7 +395,7 @@ class UiButtons extends React.Component {
               <FormGroup>
                 <Input size="sm" type="checkbox" name="toggler14" id="toggler14" className={'btn-check'} onClick={() => this.onRadioBtnClick(14)} />
                 <Label for="toggler14" />
-                <Label for="toggler14" className={'mr-3'}>Maybe</Label>
+                <Label for="toggler14" className={'mr-3 mb-0'}>Maybe</Label>
               </FormGroup>
             </Form>
           </CardHeader>
@@ -455,31 +429,31 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg">Icons - .round
-            <Button outline color="link" className={'rounded-circle mr-2'}>
+            <Button outline color="link" className={'rounded-circle'}>
               <img src={iconClose} alt="x" />
             </Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline color="link" className={'rounded-circle mr-2'}>×</Button>
-            <Button outline color="link" className={'rounded-circle mr-2'}>
+            <Button outline color="link" className={'rounded-circle'}>×</Button>
+            <Button outline color="link" className={'rounded-circle'}>
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default" size="sm" className={'rounded mr-2'}>
+            <Button outline color="default" size="sm">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default" className={'rounded mr-2'}>
+            <Button outline color="default">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default" size="lg" className={'rounded mr-2'}>
+            <Button outline color="default" size="lg">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default" className={'round mr-2'}>
+            <Button square outline color="default">
               <img src={iconClose} alt="x" /> <span>Close Me Please</span>
             </Button>
-            <Button outline color="default" size="sm" className={'round mr-2'}>
+            <Button outline round color="default" size="sm">
               × <span>Close Me Please</span>
             </Button>
-            <Button color="inverse" size="sm" className={'round mr-2'}>
+            <Button round color="inverse" size="sm">
               × <span>Close Me Please</span>
             </Button>
           </CardBody>
