@@ -55,7 +55,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent url('user.svg?fill=%23#{$icon-theme-light}') center center / auto 17px no-repeat;
+  background: transparent url('#{$assets-folder}/user.svg?fill=%23#{$icon-theme-light}') center center / auto 17px no-repeat;
   opacity: .8;
 
   &:hover,
@@ -79,7 +79,7 @@
 }
 
 .navbar-dark .btn-usernav {
-  background: transparent url('user.svg?fill=%23#{$icon-theme-dark}') center center / auto 17px no-repeat;
+  background: transparent url('#{$assets-folder}/user.svg?fill=%23#{$icon-theme-dark}') center center / auto 17px no-repeat;
 
   &:hover,
   &:active {
