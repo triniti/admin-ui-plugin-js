@@ -1,7 +1,8 @@
 # CHANGELOG
 
+
 ## v0.1.3
-* Correctly importing scss from node_modules
+* Correctly importing scss from node_modules.
 
 
 ## v0.1.2
