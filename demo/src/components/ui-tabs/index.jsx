@@ -56,7 +56,7 @@ class UiTabs extends React.Component {
             <Card>
               <CardBody spacing="lg">
                 <h3>Full Width Simple Tabs, Sticky Top - .tabs-simple</h3>
-                <Card block className="col col-12 col-sm-6">
+                <Card body className="col col-12 col-sm-6">
                   <CardTitle>Special Title Treatment</CardTitle>
                   <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                   <Button>Go somewhere</Button>
@@ -69,14 +69,14 @@ class UiTabs extends React.Component {
               <CardBody spacing="lg">
                 <Row>
                   <Col sm="6">
-                    <Card block>
+                    <Card body>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                       <Button>Go somewhere</Button>
                     </Card>
                   </Col>
                   <Col sm="6">
-                    <Card block>
+                    <Card body>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                       <Button>Go somewhere</Button>
@@ -122,14 +122,14 @@ class UiTabs extends React.Component {
                 <CardBody spacing="lg">
                   <Row>
                     <Col sm="6">
-                      <Card block>
+                      <Card body>
                         <CardTitle>Special Title Treatment</CardTitle>
                         <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                         <Button>Go somewhere</Button>
                       </Card>
                     </Col>
                     <Col sm="6">
-                      <Card block>
+                      <Card body>
                         <CardTitle>Special Title Treatment</CardTitle>
                         <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                         <Button>Go somewhere</Button>
