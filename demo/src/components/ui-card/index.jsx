@@ -42,7 +42,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card block hover className="text-center">
+            <Card body hover className="text-center">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button>Go somewhere</Button>
@@ -112,7 +112,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card block inverse hover color="dark">
+            <Card body inverse hover color="dark">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <hr/>
@@ -120,7 +120,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card block outline hover color="primary">
+            <Card body outline hover color="primary">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button color="second">Button</Button>
@@ -256,13 +256,13 @@ const UiCard = () => (
                   alt="Card image cap"
                 />
               </Card>
-              <Card block inverse color="secondary">
+              <Card body inverse color="secondary">
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
                 <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
                 <Button>Button</Button>
               </Card>
-              <Card block inverse color="dark">
+              <Card body inverse color="dark">
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 <Button>Button</Button>
@@ -281,7 +281,7 @@ const UiCard = () => (
                   <Button>Button</Button>
                 </CardBody>
               </Card>
-              <Card block inverse color="primary">
+              <Card body inverse color="primary">
                 <CardTitle>Special Title Treatment</CardTitle>
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 <Button color="secondary">Button</Button>
