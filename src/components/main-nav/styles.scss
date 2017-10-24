@@ -123,10 +123,10 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     transform: rotate(0deg);
     text-align: center;
     vertical-align: middle;
-    background: transparent url('#{$assets-folder}/ti-angle-left.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+    background: transparent url('#{$assets-folder}/angle-left.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
   }
   .navbar-dark .main-nav .nav-link[aria-haspopup='true']::after {
-    background: transparent url('#{$assets-folder}/ti-angle-left.svg?fill=%23#{$icon-theme-dark}') center center / auto 14px no-repeat;
+    background: transparent url('#{$assets-folder}/angle-left.svg?fill=%23#{$icon-theme-dark}') center center / auto 14px no-repeat;
   }
   .main-nav .show > .nav-link::after {
     transform: rotate(-90deg);
