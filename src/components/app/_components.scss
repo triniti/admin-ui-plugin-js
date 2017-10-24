@@ -1,34 +1,5 @@
 // Components not used
 
-// HR Divider
-
-.hr-divider {
-  margin: 1.5rem (-$padding-xs);
-}
-
-@media (min-width: 768px) {
-  .hr-divider {
-    margin: 1.5rem (-$padding-md);
-  }
-}
-
-@media (min-width: 1025px) {
-  .hr-divider {
-    margin: 1.5rem (-$padding-lg);
-  }
-}
-
-@media (min-width: 1600px) {
-  .hr-divider {
-    margin: 1.5rem (-$padding-xl);
-  }
-}
-
-.card-body > .hr-divider {
-  margin: 1rem -1.25rem;
-}
-
-
 // Aside Header
 //
 // 300px wide side containers
