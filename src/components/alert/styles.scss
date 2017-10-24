@@ -1,5 +1,7 @@
 // Alert
 
+@import "../../../node_modules/bootstrap/scss/mixins";
+
 //
 // Base styles
 //
@@ -48,6 +50,12 @@
   .alert-#{$color} {
     @include alert-variant(theme-color-level($color, -10), theme-color-level($color, -9), theme-color-level($color, 6));
   }
+  .alert-#{$color}.alert-inverse {
+    background-color: theme-color($color);
+    font-weight: 700;
+    color: $white;
+    text-shadow: 0 1px 0 $gray-rgba-600;
+  }
 }
 
 
@@ -89,15 +97,6 @@
 }
 
 
-// Inverse Alert
-
-.alert-inverse {
-  font-weight: 700;
-  color: $white;
-  text-shadow: 0 1px 0 $gray-rgba-600;
-}
-
-
 // Alerts in tables
 
 .table .alert {
@@ -114,7 +113,6 @@
 .alert p:last-of-type {
   margin-bottom: 0;
 }
-
 
 
 // full-width alerts
@@ -157,27 +155,4 @@
   @media (min-width: 1600px) {
     margin: 0 (-$padding-xl);
   }
-}
-
-// Colors
-// Todo: see if there is a mixin that can be used for this
-
-.alert-success.alert-inverse {
-  background-color: theme-color("success");
-}
-
-.alert-info.alert-inverse {
-  background-color: theme-color("info");
-}
-
-.alert-warning.alert-inverse {
-  background-color: theme-color("warning");
-}
-
-.alert-danger.alert-inverse {
-  background-color: theme-color("danger");
-}
-
-.alert-primary.alert-inverse {
-  background-color: theme-color("primary");
 }

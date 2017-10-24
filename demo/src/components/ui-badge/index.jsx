@@ -22,7 +22,7 @@ const UiBadge = () => (
       <Badge color="inverse">inverse</Badge>{' '}
 
       <CardTitle tag="h4">Pills</CardTitle>
-      <Badge color="default" pill>default</Badge>{' '}
+      <Badge pill>default</Badge>{' '}
       <Badge color="primary" pill>primary</Badge>{' '}
       <Badge color="secondary" pill>seondary</Badge>{' '}
       <Badge color="success" pill>success</Badge>{' '}
