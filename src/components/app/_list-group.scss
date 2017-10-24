@@ -15,17 +15,17 @@
   margin: 0;
   min-height: $header-height;
   padding-right: .5rem;
-  padding-left: $width-mobile;
+  padding-left: $padding-xs;
   border-bottom: 1px solid $gray-200;
 
   @media (min-width: 768px) {
-    padding-left: $width-tablet;
+    padding-left: $padding-md;
   }
   @media (min-width: 1025px) {
-    padding-left: $width-desktop;
+    padding-left: $padding-lg;
   }
   @media (min-width: 1600px) {
-    padding-left: $width-desktop-lg;
+    padding-left: $padding-xl;
   }
 }
 
@@ -76,10 +76,4 @@
 
 .list-group-item.active .list-group-item-text {
   opacity: .8;
-}
-
-.list-group-item .badge {
-  position: relative;
-  left: .25rem;
-  top: -.5rem;
 }

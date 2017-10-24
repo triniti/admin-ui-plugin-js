@@ -1,12 +1,12 @@
 import React from 'react';
-import { Card, CardBlock, CardHeader, Col, Container, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, Container, Row } from '../../../../src/components';
 import './styles.scss';
 
 const UiLayout = () => {
   return (
     <Card>
-      <CardHeader>Full Width Columns</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Full Width Columns</CardHeader>
+      <CardBody spacing="lg">
         <Row>
           <Col>
             <div className="ui-cols">
@@ -41,11 +41,11 @@ const UiLayout = () => {
             </div>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
 
 
-      <CardHeader>Surrounded by a Container</CardHeader>
-      <CardBlock className={'bg-gray'}>
+      <CardHeader spacing="lg">Surrounded by a Container</CardHeader>
+      <CardBody className={'bg-gray'} spacing="lg">
         <Row>
           <Col>
             <Container className="ui-cols">
@@ -80,7 +80,7 @@ const UiLayout = () => {
             </Container>
           </Col>
         </Row>
-      </CardBlock>
+      </CardBody>
     </Card>
   );
 };

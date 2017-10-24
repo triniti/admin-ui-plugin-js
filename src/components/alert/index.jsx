@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
 import Fade from '../fade';
+import './styles.scss';
 
 const propTypes = {
   children: PropTypes.node,
@@ -12,6 +13,9 @@ const propTypes = {
   cssModule: PropTypes.object,
   color: PropTypes.string,
   isOpen: PropTypes.bool,
+  inverse: PropTypes.bool,
+  fullWidth: PropTypes.bool,
+  sticky: PropTypes.bool,
   toggle: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   transition: PropTypes.shape(Fade.propTypes),
@@ -40,6 +44,9 @@ function Alert(props) {
     toggle,
     children,
     transition,
+    inverse,
+    fullWidth,
+    sticky,
     ...attributes
   } = props;
 
@@ -47,6 +54,9 @@ function Alert(props) {
     className,
     'alert',
     `alert-${color}`,
+    inverse ? 'alert-inverse' : false,
+    fullWidth ? 'alert-full-width' : false,
+    sticky ? 'alert-sticky' : false,
     { 'alert-dismissible': toggle },
   ), cssModule);
 

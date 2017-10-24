@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBlock, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row } from '../../../../src/components';
 
 class UiNav extends React.Component {
   constructor(props) {
@@ -28,8 +28,8 @@ class UiNav extends React.Component {
   render() {
     return (
       <Card>
-        <CardHeader>List Based</CardHeader>
-        <CardBlock>
+        <CardHeader spacing="lg">List Based</CardHeader>
+        <CardBody spacing="lg">
           <Nav>
             <NavItem>
               <NavLink href="#">Link</NavLink>
@@ -44,18 +44,18 @@ class UiNav extends React.Component {
               <NavLink disabled href="#">Disabled Link</NavLink>
             </NavItem>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader>Link Based</CardHeader>
-        <CardBlock>
+        <CardHeader spacing="lg">Link Based</CardHeader>
+        <CardBody spacing="lg">
           <Nav>
             <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another
             Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader>List Based - Vertical</CardHeader>
-        <CardBlock>
+        <CardHeader spacing="lg">List Based - Vertical</CardHeader>
+        <CardBody spacing="lg">
           <Nav vertical>
             <NavItem>
               <NavLink href="#">Link</NavLink>
@@ -70,18 +70,18 @@ class UiNav extends React.Component {
               <NavLink disabled href="#">Disabled Link</NavLink>
             </NavItem>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader>Link based - Vertical</CardHeader>
-        <CardBlock>
+        <CardHeader spacing="lg">Link based - Vertical</CardHeader>
+        <CardBody spacing="lg">
           <Nav vertical>
             <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another
             Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader>Tabs</CardHeader>
-        <CardBlock>
+        <CardHeader spacing="lg">Tabs</CardHeader>
+        <CardBody spacing="lg">
           <Nav tabs>
             <NavItem>
               <NavLink href="#" active>Link</NavLink>
@@ -108,10 +108,10 @@ class UiNav extends React.Component {
               <NavLink disabled href="#">Disabled Link</NavLink>
             </NavItem>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader>Tabs Simple</CardHeader>
-        <CardBlock>
+        <CardHeader spacing="lg">Tabs Simple</CardHeader>
+        <CardBody spacing="lg">
           <Nav tabs className='tabs-simple tabs-simple-sm'>
             <NavItem>
               <NavLink href="#" active>Link</NavLink>
@@ -138,10 +138,10 @@ class UiNav extends React.Component {
               <NavLink disabled href="#">Disabled Link</NavLink>
             </NavItem>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader className="sticky-off">Pills</CardHeader>
-        <CardBlock className={'pb-5'}>
+        <CardHeader className="sticky-off" spacing="lg">Pills</CardHeader>
+        <CardBody className={'pb-5'} spacing="lg">
           <Nav pills>
             <NavItem>
               <NavLink href="#" active>Link</NavLink>
@@ -168,10 +168,10 @@ class UiNav extends React.Component {
               <NavLink disabled href="#">Disabled Link</NavLink>
             </NavItem>
           </Nav>
-        </CardBlock>
+        </CardBody>
 
-        <CardHeader className="sticky-off">Pills Small</CardHeader>
-        <CardBlock className={'pb-5 mb-5'}>
+        <CardHeader className="sticky-off" spacing="lg">Pills Small</CardHeader>
+        <CardBody className={'pb-5 mb-5'} spacing="lg">
           <Row>
             <Col>
               <Nav pills className="nav-pills-sm">
@@ -206,7 +206,7 @@ class UiNav extends React.Component {
               <br />
             </Col>
           </Row>
-        </CardBlock>
+        </CardBody>
       </Card>
     );
   }

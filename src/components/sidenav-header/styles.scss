@@ -8,10 +8,10 @@
 //
 // $header-height:             45px;
 // $transition:                250ms ease-in-out;
-// $width-desktop-lg:        2.5rem;
-// $width-desktop:             2rem;
-// $width-tablet:            1.5rem;
-// $width-mobile:              1rem;
+// $padding-xl:        2.5rem;
+// $padding-lg:             2rem;
+// $padding-md:            1.5rem;
+// $padding-xs:              1rem;
 
 .sidenav-header {
   position: sticky;
@@ -23,7 +23,7 @@
   width: 100%;
   min-height: $header-height + 4;
   margin: 0;
-  padding-left: $width-mobile;
+  padding-left: $padding-xs;
   transition: width $transition;
   letter-spacing: -.015rem;
   border-bottom: 1px solid $gray-500;

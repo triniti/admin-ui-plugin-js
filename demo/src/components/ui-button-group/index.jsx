@@ -1,9 +1,9 @@
 import React from 'react';
-import { Card, CardBlock, Button, ButtonGroup, ButtonToolbar } from '../../../../src/components';
+import { Card, CardBody, Button, ButtonGroup, ButtonToolbar } from '../../../../src/components';
 
 const UiButtonGroup = () => (
   <Card>
-    <CardBlock>
+    <CardBody spacing="lg">
       <ButtonToolbar>
         <ButtonGroup className={'mr-3'}>
           <Button outline color="default">1</Button>
@@ -20,7 +20,7 @@ const UiButtonGroup = () => (
           <Button color="default">8</Button>
         </ButtonGroup>
       </ButtonToolbar>
-    </CardBlock>
+    </CardBody>
   </Card>
 );
 

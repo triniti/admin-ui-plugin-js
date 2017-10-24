@@ -1,11 +1,11 @@
 import React from 'react';
-import { Alert, Card, CardBlock, CardHeader, Col, Row, Table, UncontrolledAlert } from '../../../../src/components';
+import { Alert, Card, CardBody, CardHeader, Col, Row, Table, UncontrolledAlert } from '../../../../src/components';
 
 const UiAlert = () => (
   <Card>
     <div>
-      <CardHeader>Inline Content Alerts</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Inline Content Alerts</CardHeader>
+      <CardBody spacing="lg">
         <Alert color="success">
           <strong>Well done!</strong> You successfully read this important alert message.
         </Alert>
@@ -21,78 +21,78 @@ const UiAlert = () => (
         <UncontrolledAlert color="info">
           I am an alert and I can be dismissed!
         </UncontrolledAlert>
-      </CardBlock>
+      </CardBody>
     </div>
 
     <div>
-      <CardHeader>Full Width Content Alerts</CardHeader>
-      <CardBlock>
-        <Alert color="success" className={'alert-full-width mb-3'}>
+      <CardHeader spacing="lg">Full Width Content Alerts</CardHeader>
+      <CardBody spacing="lg">
+        <Alert color="success" fullWidth className={'mb-3'}>
           <strong>Well done!</strong> You successfully read this important alert message.
         </Alert>
-        <Alert color="info" className={'alert-full-width mb-3'}>
+        <Alert color="info" fullWidth className={'mb-3'}>
           <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
         </Alert>
-        <Alert color="warning" className={'alert-full-width mb-3'}>
+        <Alert color="warning" fullWidth className={'mb-3'}>
           <strong>Warning!</strong> Better check yourself, you're not looking too good.
         </Alert>
-        <Alert color="danger" className={'alert-full-width mb-3'}>
+        <Alert color="danger" fullWidth className={'mb-3'}>
           <strong>Oh snap!</strong> Change a few things up and try submitting again.
         </Alert>
-        <UncontrolledAlert color="info" className={'alert-full-width mb-3'}>
+        <UncontrolledAlert color="info" fullWidth className={'mb-3'}>
           I am an alert and I can be dismissed!
         </UncontrolledAlert>
-      </CardBlock>
+      </CardBody>
     </div>
 
     <div>
-      <CardHeader>Inline Content Alerts (alert-inverse)</CardHeader>
-      <CardBlock>
-        <Alert color="success" className={'alert-inverse'}>
+      <CardHeader spacing="lg">Inline Content Alerts (alert-inverse)</CardHeader>
+      <CardBody spacing="lg">
+        <Alert color="success" inverse>
           <strong>Well done!</strong> You successfully read this important alert message.
         </Alert>
-        <Alert color="info" className={'alert-inverse'}>
+        <Alert color="info" inverse>
           <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
         </Alert>
-        <Alert color="warning" className={'alert-inverse'}>
+        <Alert color="warning" inverse>
           <strong>Warning!</strong> Better check yourself, you're not looking too good.
         </Alert>
-        <Alert color="danger" className={'alert-inverse'}>
+        <Alert color="danger" inverse>
           <strong>Oh snap!</strong> Change a few things up and try submitting again.
         </Alert>
-        <UncontrolledAlert className={'alert-brand alert-inverse'}>
+        <UncontrolledAlert inverse color="primary">
           I am an alert and I can be dismissed!  Brand Color!
         </UncontrolledAlert>
-      </CardBlock>
+      </CardBody>
     </div>
 
-    <CardHeader>Full Width Content Alerts (alert-inverse)</CardHeader>
+    <CardHeader spacing="lg">Full Width Content Alerts (alert-inverse)</CardHeader>
     <div>
-      <UncontrolledAlert color="info" className={'alert-inverse alert-full-width alert-sticky'}>
+      <UncontrolledAlert color="info" inverse fullWidth sticky>
         <span><strong>Full Width</strong> Alert outside of Card Container and Sticky</span>
       </UncontrolledAlert>
-      <CardBlock>
-        <Alert color="success" className={'alert-inverse alert-full-width mb-3'}>
+      <CardBody spacing="lg">
+        <Alert color="success" inverse fullWidth className={'mb-3'}>
           <strong>Well done!</strong> Full Width inside Section Container
         </Alert>
-        <Alert color="info" className={'alert-inverse alert-full-width mb-3'}>
+        <Alert color="info" inverse fullWidth className={'mb-3'}>
           <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
         </Alert>
-        <Alert color="warning" className={'alert-inverse alert-full-width mb-3'}>
+        <Alert color="warning" inverse fullWidth className={'mb-3'}>
           <strong>Warning!</strong> Better check yourself, you're not looking too good.
         </Alert>
-        <Alert color="danger" className={'alert-inverse alert-full-width mb-3'}>
+        <Alert color="danger" inverse fullWidth className={'mb-3'}>
           <strong>Oh snap!</strong> Change a few things up and try submitting again.
         </Alert>
-        <UncontrolledAlert color="info" className={'alert-inverse alert-full-width mb-3'}>
+        <UncontrolledAlert color="info" inverse fullWidth className={'mb-3'}>
           I am an alert and I can be dismissed!
         </UncontrolledAlert>
-      </CardBlock>
+      </CardBody>
     </div>
 
     <div>
-      <CardHeader>Border Alerts (has-border)</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Border Alerts (has-border)</CardHeader>
+      <CardBody spacing="lg">
         <div className={'has-border border-primary mb-4'}>
           <strong>Well done!</strong> Example Border Alert - Primary
         </div>
@@ -117,12 +117,12 @@ const UiAlert = () => (
         <div className={'has-border mb-4'}>
           <strong>Well done!</strong> Example Border Alert - Default
         </div>
-      </CardBlock>
+      </CardBody>
     </div>
 
     <div>
-      <CardHeader>Border Alerts (has-border, border-indent)</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Border Alerts (has-border, border-indent)</CardHeader>
+      <CardBody spacing="lg">
         <div className={'has-border border-indent border-primary mb-4'}>
           <strong>Well done!</strong> Example Border Alert - Primary
         </div>
@@ -147,12 +147,12 @@ const UiAlert = () => (
         <div className={'has-border border-indent mb-4'}>
           <strong>Well done!</strong> Example Border Alert - Default
         </div>
-      </CardBlock>
+      </CardBody>
     </div>
 
     <div>
-      <CardHeader>Striped Table</CardHeader>
-      <CardBlock>
+      <CardHeader spacing="lg">Striped Table</CardHeader>
+      <CardBody spacing="lg">
         <Table>
           <thead>
             <tr>
@@ -189,7 +189,7 @@ const UiAlert = () => (
           <strong>The complete list of common words:</strong><br />
           a, an, and, are, as, at, be, but, by, for, if, in, into, is, it, no, not, of, on, or, such, that, the, their, then, there, these, they, this, to, was, will, with
         </Alert>
-      </CardBlock>
+      </CardBody>
     </div>
   </Card>
 );

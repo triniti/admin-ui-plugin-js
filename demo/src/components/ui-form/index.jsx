@@ -1,11 +1,11 @@
 import React from 'react';
-import { Button, Card, CardBlock, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Row } from '../../../../src/components';
 import iconClose from 'assets/img/svg/icons/close.svg';
 
 const UiForm = () => (
   <Card>
-    <CardHeader>Standard Form</CardHeader>
-    <CardBlock>
+    <CardHeader spacing="lg">Standard Form</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col sm="8" md="6">
           <CardTitle tag="h2">Card Title H2 with Button
@@ -86,10 +86,10 @@ const UiForm = () => (
           </Form>
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
 
-    <CardHeader>Form Feedback</CardHeader>
-    <CardBlock>
+    <CardHeader spacing="lg">Form Feedback</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col sm="6" md="4">
           <CardTitle tag="h3">Card Title H3</CardTitle>
@@ -115,10 +115,10 @@ const UiForm = () => (
           </Form>
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
 
-    <CardHeader>Inline Form</CardHeader>
-    <CardBlock>
+    <CardHeader spacing="lg">Inline Form</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col sm="12">
           <Form inline className={'mt-3'}>
@@ -155,10 +155,10 @@ const UiForm = () => (
 
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
 
-    <CardHeader>Input Types</CardHeader>
-    <CardBlock>
+    <CardHeader spacing="lg">Input Types</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col sm="9" md="6">
           <Form>
@@ -258,10 +258,10 @@ const UiForm = () => (
           </Form>
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
 
-    <CardHeader>Input Sizing</CardHeader>
-    <CardBlock>
+    <CardHeader spacing="lg">Input Sizing</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col sm="10" md="8" lg="6" xl="4" className={'has-border'}>
           <Form>
@@ -280,10 +280,10 @@ const UiForm = () => (
           </Form>
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
 
-    <CardHeader>Form Grid</CardHeader>
-    <CardBlock>
+    <CardHeader spacing="lg">Form Grid</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col>
           <Form>
@@ -375,7 +375,7 @@ const UiForm = () => (
           </Form>
         </Col>
       </Row>
-    </CardBlock>
+    </CardBody>
   </Card>
 );
 

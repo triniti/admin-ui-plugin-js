@@ -1,34 +1,5 @@
 // Components not used
 
-// HR Divider
-
-.hr-divider {
-  margin: 1.5rem (-$width-mobile);
-}
-
-@media (min-width: 768px) {
-  .hr-divider {
-    margin: 1.5rem (-$width-tablet);
-  }
-}
-
-@media (min-width: 1025px) {
-  .hr-divider {
-    margin: 1.5rem (-$width-desktop);
-  }
-}
-
-@media (min-width: 1600px) {
-  .hr-divider {
-    margin: 1.5rem (-$width-desktop-lg);
-  }
-}
-
-.card-block > .hr-divider {
-  margin: 1rem -1.25rem;
-}
-
-
 // Aside Header
 //
 // 300px wide side containers
@@ -37,10 +8,10 @@
 //
 // $header-height:             45px;
 // $transition:                250ms ease-in-out;
-// $width-desktop-lg:        2.5rem;
-// $width-desktop:             2rem;
-// $width-tablet:            1.5rem;
-// $width-mobile:              1rem;
+// $padding-xl:        2.5rem;
+// $padding-lg:             2rem;
+// $padding-md:            1.5rem;
+// $padding-xs:              1rem;
 
 .aside-header {
   position: sticky;
@@ -52,7 +23,7 @@
   width: 100%;
   min-height: $header-height + 4;
   margin: 0;
-  padding: 0 $width-mobile;
+  padding: 0 $padding-xs;
   transition: width $transition;
   letter-spacing: -.015rem;
   border-bottom: 1px solid $gray-500;

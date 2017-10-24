@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBlock, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {
@@ -29,10 +29,10 @@ class UiToggle extends Component {
           <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Button outline color="inverse" onClick={this.toggleInner} className={'rounded-0'}>Toggle Content</Button>
             <Row>
-              <Col xs="12" sm="6" md="4">
+              <Col xs="12" md="9" lg="6">
                 <Collapse isOpen={this.state.collapseInner}>
                   <Card>
                     <CardBody>
@@ -44,16 +44,16 @@ class UiToggle extends Component {
                 </Collapse>
               </Col>
             </Row>
-          </CardBlock>
+          </CardBody>
         </Collapse>
 
         <CardHeader>
           <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBlock>
+          <CardBody spacing="lg">
             <Row>
-              <Col xs="12" sm="6" md="4">
+              <Col xs="12" md="9" lg="6">
                 <Collapse isOpen={this.state.collapseInner}>
                   <Card>
                     <CardBody>
@@ -65,7 +65,7 @@ class UiToggle extends Component {
                 </Collapse>
               </Col>
             </Row>
-          </CardBlock>
+          </CardBody>
         </Collapse>
       </Card>
     );

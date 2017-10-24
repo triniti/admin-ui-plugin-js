@@ -1,0 +1,263 @@
+// Table
+
+//
+// Basic Bootstrap table
+//
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: $padding-lg;
+  background-color: $table-bg; // Reset for nesting within parents with `background-color`.
+
+  th,
+  td {
+    padding-top: .75rem;
+    padding-right: $table-cell-padding;
+    padding-bottom: .75rem;
+    padding-left: $table-cell-padding;
+    vertical-align: top;
+    border-top: $table-border-width solid $table-border-color;
+  }
+
+  td {
+    font-size: .8rem;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid $gray-500;
+    border-top: none;
+    white-space: nowrap;
+  }
+
+  tbody + tbody {
+    border-top: (2 * $table-border-width) solid $table-border-color;
+  }
+
+  .table {
+    background-color: $body-bg;
+  }
+}
+
+
+//
+// Condensed table w/ half padding
+//
+
+.table-sm {
+  td {
+    padding: $table-cell-padding-sm;
+  }
+  th {
+    padding-top: .75rem;
+    padding-right: $table-cell-padding-sm;
+    padding-bottom: .75rem;
+    padding-left: $table-cell-padding-sm;
+  }
+  th[scope="row"] {
+    padding-top: $table-cell-padding-sm;
+    padding-bottom: $table-cell-padding-sm;
+  }
+}
+
+
+// Bordered version
+//
+// Add borders all around the table and between all the columns.
+
+.table-bordered {
+  border: $table-border-width solid $table-border-color;
+
+  th,
+  td {
+    border: $table-border-width solid $table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: (2 * $table-border-width);
+    }
+  }
+}
+
+
+// Zebra-striping
+//
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: $gray-100;
+  }
+}
+
+
+// Hover effect
+//
+// Placed here since it has to come after the potential zebra striping
+
+.table-hover {
+  tbody tr {
+    @include hover {
+      background-color: $table-hover-bg;
+    }
+  }
+}
+
+
+// Table backgrounds
+//
+// Exact selectors below required to override `.table-striped` and prevent
+// inheritance to nested tables.
+
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -9));
+}
+
+@include table-row-variant(active, $table-active-bg);
+
+
+// Inverse styles
+//
+// Same table markup, but inverted color scheme: dark background and light text.
+
+.thead-inverse {
+  th {
+    color: $table-inverse-color;
+    background-color: $table-inverse-bg;
+  }
+}
+
+.thead-default {
+  th {
+    color: $table-head-color;
+    background-color: $table-head-bg;
+  }
+}
+
+.table-inverse {
+  color: $table-inverse-color;
+  background-color: $table-inverse-bg;
+
+  th,
+  td,
+  thead th {
+    border-color: $table-inverse-border-color;
+  }
+
+  &.table-bordered {
+    border: 0;
+  }
+
+  &.table-striped {
+    tbody tr:nth-of-type(odd) {
+      background-color: $table-inverse-accent-bg;
+    }
+  }
+
+  &.table-hover {
+    tbody tr {
+      @include hover {
+        background-color: $table-inverse-hover-bg;
+      }
+    }
+  }
+}
+
+
+// Responsive tables
+//
+// Add `.table-responsive` to `.table`s and we'll make them mobile friendly by
+// enabling horizontal scrolling. Only applies <768px. Everything above that
+// will display normally.
+
+.table-responsive {
+  @include media-breakpoint-down(md) {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar; // See https://github.com/twbs/bootstrap/pull/10057
+
+    // Prevent double border on horizontal scroll due to use of `display: block;`
+    &.table-bordered {
+      border: 0;
+    }
+  }
+}
+
+
+// Custom overrides
+
+.table-hover.table-striped tr:hover {
+  background-color: $gray-200;
+}
+
+.table.fixed {
+  table-layout: fixed;
+}
+
+.table-borderless th,
+.table-borderless td {
+  border-color: transparent;
+}
+
+
+// Sticky-top tables
+
+table.sticky-top + table,
+.card-body table.sticky-top {
+  margin-top: -1px !important;
+}
+
+.table.sticky-top {
+  box-shadow: 0 -1px 0 0 $gray-500;
+  margin-bottom: 0;
+}
+
+.table.sticky-top + .table {
+  margin-top: 0;
+}
+
+.table.sticky-top th {
+  height: $header-height + 2;
+  border-top: none;
+}
+
+.table-stretch tr td:last-child {
+  white-space: nowrap;
+  width: 1px;
+  text-align: right;
+}
+
+
+// Responsive left padding
+
+tr > th:first-child,
+tr > td:first-child {
+  padding-left: $padding-xs;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $padding-md;
+  }
+}
+
+@media (min-width: 1025px) {
+  tr > th:first-child,
+  tr > td:first-child {
+    padding-left: $padding-lg + .3rem;
+  }
+}
+
+
+// Responsive Overflow
+
+@media (min-width: 768px) {
+  .table-responsive {
+    overflow: visible;
+  }
+}
