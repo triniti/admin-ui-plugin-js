@@ -16,14 +16,14 @@ const propTypes = {
   size: PropTypes.string,
   round: PropTypes.string,
   square: PropTypes.string,
-  emphasis: PropTypes.string,
+  circle: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
 };
 
 const defaultProps = {
-  color: 'primary',
+  color: 'light',
   tag: 'button',
 };
 
@@ -56,7 +56,7 @@ class Button extends React.Component {
       size,
       round,
       square,
-      emphasis,
+      circle,
       tag: Tag,
       innerRef,
       ...attributes
@@ -69,7 +69,7 @@ class Button extends React.Component {
       size ? `btn-${size}` : false,
       round ? `btn-round` : false,
       square ? `btn-square` : false,
-      emphasis ? `btn-emphasis` : false,
+      circle ? `btn-circle` : false,
       block ? 'btn-block' : false,
       { active, disabled: this.props.disabled },
     ), cssModule);

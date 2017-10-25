@@ -13,7 +13,9 @@
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
-  border: $input-btn-border-width solid transparent;
+  color: $body-color;
+  background-color: $gray-400;
+  border: $input-btn-border-width solid $gray-400;
   @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -163,6 +165,18 @@ input[type="button"] {
   margin-bottom: 0;
 }
 
+.btn:hover,
+a:not([href]):not([tabindex]),
+.nav-link:hover {
+  cursor: pointer;
+}
+
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:focus {
+  color: #fff;
+}
+
 .btn.disabled,
 .btn.disabled:hover {
   border-color: $gray-400;
@@ -171,13 +185,26 @@ input[type="button"] {
   cursor: not-allowed;
 }
 
+// Border versions: round, square, circle
+
 .btn-round {
-  margin-right: 0.25rem;
+  margin-right: 0.35rem;
   border-radius: $round;
 }
 
 .btn-square {
   border-radius: 0;
+}
+
+.btn-circle {
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0;
+  letter-spacing: 0;
+  border-radius: $round;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-round span:not(.badge-alert) {
@@ -195,16 +222,6 @@ input[type="button"] {
   }
 }
 
-.btn-group > .dropdown-toggle.btn-default {
-  border-color: $gray-400 !important;
-}
-
-.btn-group > .dropdown-toggle.btn-default:hover,
-.btn-group > .dropdown-toggle.btn-default:active,
-.btn-group > .dropdown-toggle.btn-default:focus {
-  border-color: $gray-700 !important;
-}
-
 .btn-close {
   position: absolute;
   top: .25rem;
@@ -217,6 +234,8 @@ input[type="button"] {
   padding-left: $table-cell-padding;
 }
 
+// Icon Buttons
+
 .btn-icon {
   -webkit-appearance: none;
 }
@@ -227,17 +246,6 @@ input[type="button"] {
   margin-top: -.25rem;
   margin-bottom: -.25rem;
   border-radius: $border-radius-sm;
-}
-
-.btn.rounded-circle {
-  width: 2.125rem;
-  height: 2.125rem;
-  padding: 0;
-  letter-spacing: 0;
-  border-radius: $round;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .btn.btn-icon:hover {
@@ -259,53 +267,8 @@ input[type="button"] {
   display: block;
 }
 
-// adds arrow to the top of a dropdown
 
-.btn-dropdown-arrow + .dropdown-menu:after {
-  content: '';
-  position: absolute;
-  left: 8px;
-  bottom: 100%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 6px 6px 6px;
-  border-color: transparent transparent $body-bg transparent;
-  pointer-events: none;
-}
-
-.btn-dropdown-arrow + .dropdown-menu-right:after {
-  right: 8px;
-  left: auto;
-}
-
-.btn-dropdown-arrow + .dropdown-menu:before {
-  content: '';
-  position: absolute;
-  left: 6px;
-  bottom: 100%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 8px 8px 8px;
-  border-color: transparent transparent $gray-rgba-300 transparent;
-  pointer-events: none;
-}
-
-.btn-dropdown-arrow + .dropdown-menu-right:before {
-  right: 6px;
-  left: auto;
-}
-
-.btn-border-thicker {
-  border-width: 2px;
-}
-
-.btn:hover,
-a:not([href]):not([tabindex]),
-.nav-link:hover {
-  cursor: pointer;
-}
+// XL Size Button
 
 .btn-xl,
 .btn-group-xl > .btn {
@@ -315,69 +278,8 @@ a:not([href]):not([tabindex]),
   border-radius: $border-radius-lg;
 }
 
-.btn-group > .btn:not([class*=' btn-']) {
-  border: 1px solid $gray-500;
-  background-color: transparent;
-}
-
-.btn-default {
-  border-color: $gray-400;
-  background-color: $gray-400;
-}
-
-.input-group-btn .btn-default {
-  border-color: $gray-rgba-300;
-}
-
-.show > .btn-default.dropdown-toggle,
-.btn-default:focus,
-.btn-default:active:focus,
-.btn-default:active,
-.btn-default:hover {
-  border-color: $gray-700;
-  background-color: $gray-700;
-}
-
-.btn-border-default {
-  color: $gray-900;
-  border-color: $gray-700;
-  background-color: $body-bg;
-}
-
-.btn-border-default:hover {
-  color: $gray-900;
-  border-color: $gray-700;
-  background-color: $body-bg;
-  box-shadow: inset 0 0 0 1px $gray-700;
-}
-
-.input-group-btn .btn-default:hover {
-  border-color: $gray-rgba-500;
-  background-color: $gray-rgba-300;
-}
-
-.btn-outline-default {
-  border-color: $gray-700;
-  background-color: $body-bg;
-}
-
-.btn-outline-default:hover {
-  border-color: $gray-rgba-500;
-  background-color: $gray-700;
-}
-
-.btn-outline-default[type='button']:not(.active):hover {
-  border-color: $gray-rgba-600;
-  background-color: $gray-rgba-200;
-}
-
-.btn-default:not(.dropdown-toggle).active,
-.btn-outline-default:not(.dropdown-toggle).active {
-  color: $white;
-  border-color: theme-color("primary");
-  background-color: theme-color("primary");
-  text-shadow: 0 1px 0 $gray-rgba-600;
-}
+// Hover Button Class
+// Button background hidden until hover
 
 .btn-hover {
   border-color: transparent;
@@ -390,6 +292,8 @@ a:not([href]):not([tabindex]),
   border-color: transparent;
   background-color: transparent;
 }
+
+// Toggler Button
 
 .btn-toggler {
   margin-left: -.625rem;
@@ -434,6 +338,8 @@ a:not([href]):not([tabindex]),
   text-shadow: none;
 }
 
+// Link Button
+
 .btn-link-bg {
   color: $link-color;
   border-color: transparent;
@@ -446,6 +352,155 @@ a:not([href]):not([tabindex]),
   border-color: transparent;
   background-color: $gray-rgba-200;
 }
+
+.btn.btn-nav {
+  border: none;
+}
+
+.btn-light-border:hover {
+  box-shadow: 0 0 0 1px rgba($icon-fill-dark, .25);
+}
+
+.btn-dark-border:hover {
+  box-shadow: 0 0 0 1px rgba($icon-fill-light, .25);
+}
+
+.btn-round-border:hover {
+  opacity: 1;
+  background-color: transparent;
+  box-shadow: 0 0 0 2px rgba($icon-fill-light, .25);
+}
+
+.navbar-dark .btn-round-border:hover {
+  background-color: transparent;
+  box-shadow: 0 0 0 2px rgba($icon-fill-dark, .25);
+}
+
+// btn colors
+
+.btn-outline-light {
+  color: $body-color;
+  background-color: #fff;
+  border: $input-btn-border-width solid $gray-rgba-300;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: $body-color;
+  background-color: $gray-rgba-300;
+  border: $input-btn-border-width solid $gray-rgba-300;
+}
+
+.btn-transparent,
+.btn-outline-link {
+  background-color: transparent;
+}
+
+.btn-outline-link:hover {
+  border-color: $gray-rgba-600;
+}
+
+.btn-icon.btn-outline-link:hover {
+  background-color: transparent;
+}
+
+
+.btn-hover-bg.active {
+  color: $white;
+  border-color: theme-color("primary");
+  background-color: theme-color("primary");
+}
+
+.btn-sm img {
+  width: 1em;
+}
+
+.btn-lg img,
+.btn-group-lg > .btn img {
+  width: 1.25rem;
+}
+
+// remove border on btn when in input group
+
+.input-group-btn > .btn-primary {
+  border-color: theme-color("primary");
+}
+
+.input-group-btn > .btn-secondary {
+  border-color: theme-color("secondary");
+}
+
+.input-group-btn > .btn-success {
+  border-color: theme-color("success");
+}
+
+.input-group-btn > .btn-info {
+  border-color: theme-color("info");
+}
+
+.input-group-btn > .btn-warning {
+  border-color: theme-color("warning");
+}
+
+.input-group-btn > .btn-danger {
+  border-color: theme-color("danger");
+}
+
+
+// offcanvas buttons
+
+.btn-header-close-sidenav {
+  transition: transform $transition;
+}
+
+.offcanvas-left .btn-header-close-sidenav {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+
+// Dropdown Buttons
+
+// Adds arrow to the top of a dropdown
+
+.btn-dropdown-arrow + .dropdown-menu:after {
+  content: '';
+  position: absolute;
+  left: 8px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 6px 6px 6px;
+  border-color: transparent transparent $body-bg transparent;
+  pointer-events: none;
+}
+
+.btn-dropdown-arrow + .dropdown-menu-right:after {
+  right: 8px;
+  left: auto;
+}
+
+.btn-dropdown-arrow + .dropdown-menu:before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  bottom: 100%;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent $gray-rgba-300 transparent;
+  pointer-events: none;
+}
+
+.btn-dropdown-arrow + .dropdown-menu-right:before {
+  right: 6px;
+  left: auto;
+}
+
+
+// Hover BG Button
 
 .btn-hover-bg {
   border-color: transparent;
@@ -480,188 +535,3 @@ a:not([href]):not([tabindex]),
   border-color: transparent;
   background-color: transparent;
 }
-
-.btn.btn-nav {
-  border: none;
-}
-
-.btn-light-border:hover {
-  box-shadow: 0 0 0 1px rgba($icon-fill-dark, .25);
-}
-
-.btn-dark-border:hover {
-  box-shadow: 0 0 0 1px rgba($icon-fill-light, .25);
-}
-
-.btn-round-border:hover {
-  opacity: 1;
-  background-color: transparent;
-  box-shadow: 0 0 0 2px rgba($icon-fill-light, .25);
-}
-
-.navbar-dark .btn-round-border:hover {
-  background-color: transparent;
-  box-shadow: 0 0 0 2px rgba($icon-fill-dark, .25);
-}
-
-// btn colors
-
-.btn-transparent,
-.btn-outline-link {
-  background-color: transparent;
-}
-
-.btn-outline-link:hover {
-  border-color: $gray-rgba-600;
-}
-
-.btn-icon.btn-outline-link:hover {
-  background-color: transparent;
-}
-
-.btn-emphasis {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("dark"), .25);
-}
-
-.btn-emphasis:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("dark"), .4);
-}
-
-.btn-emphasis.btn-primary {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("primary"), .375);
-}
-
-.btn-emphasis.btn-primary:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("primary"), .5);
-}
-
-.btn-emphasis.btn-secondary {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("secondary"), .375);
-}
-
-.btn-emphasis.btn-secondary:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("primary"), .5);
-}
-
-.btn-emphasis.btn-success {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("success"), .375);
-}
-
-.btn-emphasis.btn-success:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("success"), .5);
-}
-
-.btn-emphasis.btn-info {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("info"), .375);
-}
-
-.btn-emphasis.btn-info:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("info"), .5);
-}
-
-.btn-emphasis.btn-warning {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("warning"), .375);
-}
-
-.btn-emphasis.btn-warning:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("warning"), .5);
-}
-
-.btn-emphasis.btn-danger {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("danger"), .375);
-}
-
-.btn-emphasis.btn-danger:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("danger"), .5);
-}
-
-.btn-emphasis.btn-inverse {
-  box-shadow: 0 8px 18px -2px rgba(theme-color("dark"), .375);
-}
-
-.btn-emphasis.btn-inverse:hover {
-  box-shadow: 0 6px 16px 0 rgba(theme-color("dark"), .5);
-}
-
-.btn-inverse,
-.bnt-secondary {
-  color: $white;
-  border-color: theme-color("dark");
-  background-color: theme-color("dark");
-}
-
-.show > .btn-inverse.dropdown-toggle,
-.btn-inverse:hover,
-.btn-inverse:focus,
-.btn-inverse:active:focus,
-.btn-inverse:active {
-  border-color: lighten(theme-color("dark"), 15%);
-  background-color: lighten(theme-color("dark"), 15%);
-}
-
-.btn-hover-bg.active,
-.btn-inverse.active,
-.btn-outline-inverse.active {
-  color: $white;
-  border-color: theme-color("primary");
-  background-color: theme-color("primary");
-}
-
-.btn-border-inverse {
-  color: theme-color("dark");
-  border-color: theme-color("dark");
-  background-color: $body-bg;
-}
-
-.btn-border-inverse:hover {
-  color: theme-color("dark");
-  border-color: theme-color("dark");
-  background-color: $body-bg;
-  box-shadow: inset 0 0 0 1px theme-color("dark");
-}
-
-.btn-sm img {
-  width: 1em;
-}
-
-.btn-lg img,
-.btn-group-lg > .btn img {
-  width: 1.25rem;
-}
-
-.depth {
-  border: none;
-  box-shadow: 0 2px 4px $gray-rgba-300, inset 0 -2px 0 $gray-rgba-300;
-}
-
-.btn-lg.depth {
-  border: none;
-  box-shadow: 0 3px 5px $gray-rgba-300, inset 0 -3px 0 $gray-rgba-300;
-}
-
-// remove border on btn when in input group
-
-.input-group-btn > .btn-primary {
-  border-color: theme-color("primary");
-}
-
-.input-group-btn > .btn-secondary {
-  border-color: theme-color("secondary");
-}
-
-.input-group-btn > .btn-success {
-  border-color: theme-color("success");
-}
-
-.input-group-btn > .btn-info {
-  border-color: theme-color("info");
-}
-
-.input-group-btn > .btn-warning {
-  border-color: theme-color("warning");
-}
-
-.input-group-btn > .btn-danger {
-  border-color: theme-color("danger");
-}
-

@@ -31,9 +31,9 @@ class UiButtons extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader spacing="lg">Solid<span><Button outline color="hover-bg">clear</Button><Button outline color="default">save</Button></span></CardHeader>
+          <CardHeader spacing="lg">Solid<span><Button outline color="hover-bg">clear</Button><Button>save</Button></span></CardHeader>
           <CardBody spacing="lg">
-            <Button color="default">default</Button>
+            <Button>default</Button>
             <Button color="primary">primary</Button>
             <Button color="secondary">secondary</Button>
             <Button color="success">success</Button>
@@ -52,7 +52,7 @@ class UiButtons extends React.Component {
            <Button outline round color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button color="default" round>default</Button>
+            <Button round>default</Button>
             <Button color="primary" round>primary</Button>
             <Button color="secondary" round>secondary</Button>
             <Button color="success" round>success</Button>
@@ -70,7 +70,7 @@ class UiButtons extends React.Component {
            <Button outline round color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button color="default" square>default</Button>
+            <Button square>default</Button>
             <Button color="primary" square>primary</Button>
             <Button color="secondary" square>secondary</Button>
             <Button color="success" square>success</Button>
@@ -88,7 +88,7 @@ class UiButtons extends React.Component {
             <Button color="hover" round>hover</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline color="default">default</Button>
+            <Button outline>default</Button>
             <Button outline color="primary">primary</Button>
             <Button outline color="secondary">secondary</Button>
             <Button outline color="success">success</Button>
@@ -103,10 +103,10 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg"><span>Outline Round</span>
-            <Button outline round color="default">outline default round</Button>
+            <Button outline round>outline default round</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline round color="default">default</Button>
+            <Button outline round>default</Button>
             <Button outline round color="primary">primary</Button>
             <Button outline round color="secondary">secondary</Button>
             <Button outline round color="success">success</Button>
@@ -122,7 +122,7 @@ class UiButtons extends React.Component {
             <Button size="sm" outline square color="link">outline default round-0</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline square color="default">default</Button>
+            <Button outline square>default</Button>
             <Button outline square color="primary">primary</Button>
             <Button outline square color="secondary">secondary</Button>
             <Button outline square color="success">success</Button>
@@ -137,13 +137,13 @@ class UiButtons extends React.Component {
           <CardHeader spacing="lg">Sizes</CardHeader>
           <CardBody spacing="lg">
             <Button color="primary" size="lg">Large Button</Button>
-            <Button outline color="default" size="lg">Large Button</Button>
+            <Button outline size="lg">Large Button</Button>
             <hr />
             <Button color="primary" size="sm">Small Button</Button>
-            <Button color="default" size="sm">Small Button</Button>
+            <Button size="sm">Small Button</Button>
             <hr />
             <Button color="primary" size="xl">XL Button</Button>
-            <Button outline color="default" size="xl">XL Button</Button>
+            <Button outline size="xl">XL Button</Button>
           </CardBody>
         </div>
 
@@ -151,7 +151,7 @@ class UiButtons extends React.Component {
           <CardHeader spacing="lg">Block Level</CardHeader>
           <CardBody spacing="lg">
             <Button color="primary" size="lg" block>Block level button</Button>
-            <Button color="default" size="lg" block>Block level button</Button>
+            <Button size="lg" block>Block level button</Button>
           </CardBody>
         </div>
 
@@ -161,7 +161,7 @@ class UiButtons extends React.Component {
             <Row>
               <Col sm="6">
                 <Button color="primary" size="lg" active className={'mr-1'}>Primary link</Button>
-                <Button color="default" size="lg" active>Link</Button>
+                <Button size="lg" active>Link</Button>
               </Col>
             </Row>
           </CardBody>
@@ -170,16 +170,16 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg"><span>Disabled State</span>
             <ButtonGroup>
-              <Button outline color="default">5</Button>
-              <Button outline color="default">6</Button>
-              <Button outline color="default">7</Button>
+              <Button outline>5</Button>
+              <Button outline>6</Button>
+              <Button outline>7</Button>
             </ButtonGroup>
           </CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col>
                 <Button color="primary" size="lg" disabled>Primary button</Button>
-                <Button color="default" size="lg" disabled>Button</Button>
+                <Button size="lg" disabled>Button</Button>
               </Col>
             </Row>
           </CardBody>
@@ -188,9 +188,9 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Checkbox and Radio Buttons (Stateful Buttons)
             <ButtonGroup size="sm">
-              <Button outline color="default">5</Button>
-              <Button outline color="default">6</Button>
-              <Button outline color="default">7</Button>
+              <Button outline>5</Button>
+              <Button outline>6</Button>
+              <Button outline>7</Button>
             </ButtonGroup>
           </CardHeader>
           <CardBody spacing="lg">
@@ -212,50 +212,34 @@ class UiButtons extends React.Component {
                   >Three</Button>
                 </ButtonGroup>
 
-                <CardTitle tag="h4">Radio Buttons color="hover-bg"</CardTitle>
+                <CardTitle tag="h4">Radio Buttons</CardTitle>
                 <ButtonGroup className={'mb-2'}>
                   <Button
-                    color="hover-bg" onClick={() => this.onRadioBtnClick(1)}
+                    onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
                   >One</Button>
                   <Button
-                    color="hover-bg" onClick={() => this.onRadioBtnClick(2)}
+                    onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
                   >Two</Button>
                   <Button
-                    color="hover-bg" onClick={() => this.onRadioBtnClick(3)}
+                    onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
                   >Three</Button>
                 </ButtonGroup>
 
-                <CardTitle tag="h4">Radio Buttons color="inverse"</CardTitle>
+                <CardTitle tag="h4">Radio Buttons outline</CardTitle>
                 <ButtonGroup className={'mb-2'}>
                   <Button
-                    color="inverse" onClick={() => this.onRadioBtnClick(1)}
+                    outline onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
                   >One</Button>
                   <Button
-                    color="inverse" onClick={() => this.onRadioBtnClick(2)}
+                    outline onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
                   >Two</Button>
                   <Button
-                    color="inverse" onClick={() => this.onRadioBtnClick(3)}
-                    active={this.state.rSelected === 3}
-                  >Three</Button>
-                </ButtonGroup>
-
-                <CardTitle tag="h4">Radio Buttons color="inverse" outline</CardTitle>
-                <ButtonGroup className={'mb-2'}>
-                  <Button
-                    outline color="inverse" onClick={() => this.onRadioBtnClick(1)}
-                    active={this.state.rSelected === 1}
-                  >One</Button>
-                  <Button
-                    outline color="inverse" onClick={() => this.onRadioBtnClick(2)}
-                    active={this.state.rSelected === 2}
-                  >Two</Button>
-                  <Button
-                    outline color="inverse" onClick={() => this.onRadioBtnClick(3)}
+                    outline onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
                   >Three</Button>
                 </ButtonGroup>
@@ -265,31 +249,31 @@ class UiButtons extends React.Component {
                 <CardTitle tag="h4">Checkbox Buttons "outline"</CardTitle>
                 <ButtonGroup className={'mb-2'}>
                   <Button
-                    outline color="default" onClick={() => this.onCheckboxBtnClick(1)}
+                    outline onClick={() => this.onCheckboxBtnClick(1)}
                     active={this.state.cSelected.includes(1)}
                   >One</Button>
                   <Button
-                    outline color="default" onClick={() => this.onCheckboxBtnClick(2)}
+                    outline onClick={() => this.onCheckboxBtnClick(2)}
                     active={this.state.cSelected.includes(2)}
                   >Two</Button>
                   <Button
-                    outline color="default" onClick={() => this.onCheckboxBtnClick(3)}
+                    outline onClick={() => this.onCheckboxBtnClick(3)}
                     active={this.state.cSelected.includes(3)}
                   >Three</Button>
                 </ButtonGroup>
 
-                <CardTitle tag="h4">Checkbox Buttons default</CardTitle>
+                <CardTitle tag="h4">Checkbox Buttons</CardTitle>
                 <ButtonGroup className={'mb-2'}>
                   <Button
-                    color="default" onClick={() => this.onCheckboxBtnClick(1)}
+                    onClick={() => this.onCheckboxBtnClick(1)}
                     active={this.state.cSelected.includes(1)}
                   >One</Button>
                   <Button
-                    color="default" onClick={() => this.onCheckboxBtnClick(2)}
+                    onClick={() => this.onCheckboxBtnClick(2)}
                     active={this.state.cSelected.includes(2)}
                   >Two</Button>
                   <Button
-                    color="default" onClick={() => this.onCheckboxBtnClick(3)}
+                    onClick={() => this.onCheckboxBtnClick(3)}
                     active={this.state.cSelected.includes(3)}
                   >Three</Button>
                 </ButtonGroup>
@@ -304,8 +288,8 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Checkbox & Radio .btn-toggle style
             <span>
-              <Button size="sm" outline round color="default" className={'mr-2'} onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
-              <Button size="sm" outline round color="default" className={'mr-2'} onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
+              <Button size="sm" outline round onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
+              <Button size="sm" outline round onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
               <Form>
                 <FormGroup>
                   <Input type="checkbox" name="toggler0" id="toggler0" className={'btn-toggle'} />
@@ -429,31 +413,31 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg">Icons - .round
-            <Button outline color="link" className={'rounded-circle'}>
+            <Button outline circle color="link" className={'rounded-circle'}>
               <img src={iconClose} alt="x" />
             </Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline color="link" className={'rounded-circle'}>×</Button>
-            <Button outline color="link" className={'rounded-circle'}>
+            <Button outline circle color="link" className={'rounded-circle'}>×</Button>
+            <Button outline circle color="link" className={'rounded-circle'}>
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default" size="sm">
+            <Button outline circle size="sm">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default">
+            <Button outline circle>
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline color="default" size="lg">
+            <Button outline square size="lg">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button square outline color="default">
+            <Button round outline>
               <img src={iconClose} alt="x" /> <span>Close Me Please</span>
             </Button>
-            <Button outline round color="default" size="sm">
+            <Button outline round size="sm">
               × <span>Close Me Please</span>
             </Button>
-            <Button round color="inverse" size="sm">
+            <Button round size="sm">
               × <span>Close Me Please</span>
             </Button>
           </CardBody>
