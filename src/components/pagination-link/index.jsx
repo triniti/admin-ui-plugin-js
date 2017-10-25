@@ -47,8 +47,8 @@ const PaginationLink = (props) => {
     defaultCaret = '\u00bb';
   }
 
-  let children = props.children;
-  if (children && !children.length) {
+  let { children } = props;
+  if (children && Array.isArray(children) && children.length === 0) {
     children = null;
   }
 
