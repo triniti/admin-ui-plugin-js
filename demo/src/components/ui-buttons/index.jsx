@@ -119,7 +119,6 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg"><span>Outline Square</span>
-            <Button size="sm" outline square color="link">outline default round-0</Button>
           </CardHeader>
           <CardBody spacing="lg">
             <Button outline square>default</Button>
@@ -141,9 +140,6 @@ class UiButtons extends React.Component {
             <hr />
             <Button color="primary" size="sm">Small Button</Button>
             <Button size="sm">Small Button</Button>
-            <hr />
-            <Button color="primary" size="xl">XL Button</Button>
-            <Button outline size="xl">XL Button</Button>
           </CardBody>
         </div>
 
@@ -413,7 +409,7 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg">Icons - .round
-            <Button outline circle color="link" className={'rounded-circle'}>
+            <Button circle color="link" className={'rounded-circle'}>
               <img src={iconClose} alt="x" />
             </Button>
           </CardHeader>

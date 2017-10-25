@@ -117,6 +117,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-sm {
+  font-weight: 400;
   @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
 
@@ -212,16 +213,6 @@ a:not([href]):not([tabindex]),
   vertical-align: middle;
 }
 
-.btn-sm {
-  font-size: .92em;
-  font-weight: 400;
-  padding: .25rem .75rem;
-
-  &.btn-round {
-    padding: .25rem .75rem;
-  }
-}
-
 .btn-close {
   position: absolute;
   top: .25rem;
@@ -267,16 +258,6 @@ a:not([href]):not([tabindex]),
   display: block;
 }
 
-
-// XL Size Button
-
-.btn-xl,
-.btn-group-xl > .btn {
-  font-size: 1.25rem;
-  padding: 1.5rem 2rem;
-  border-width: 2px;
-  border-radius: $border-radius-lg;
-}
 
 // Hover Button Class
 // Button background hidden until hover
@@ -388,16 +369,16 @@ a:not([href]):not([tabindex]),
 .btn-outline-light:focus {
   color: $body-color;
   background-color: $gray-rgba-300;
-  border: $input-btn-border-width solid $gray-rgba-300;
+  border: $input-btn-border-width solid $gray-600;
 }
 
-.btn-transparent,
 .btn-outline-link {
   background-color: transparent;
+  border-color: transparent;
 }
 
 .btn-outline-link:hover {
-  border-color: $gray-rgba-600;
+  border-color: $gray-600;
 }
 
 .btn-icon.btn-outline-link:hover {
