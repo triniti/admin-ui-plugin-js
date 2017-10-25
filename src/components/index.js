@@ -80,6 +80,7 @@ import Popover from './popover';
 import PopoverContent from './popover-content';
 import PopoverBody from './popover-body';
 import PopoverTitle from './popover-title';
+import PopoverHeader from './popover-header';
 import Progress from './progress';
 import RouterLink from './router-link';
 import Row from './row';
@@ -183,6 +184,7 @@ export {
   Popover,
   PopoverBody,
   PopoverContent,
+  PopoverHeader,
   PopoverTitle,
   Progress,
   RouterLink,
