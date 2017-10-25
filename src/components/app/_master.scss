@@ -267,3 +267,36 @@ h3 {
 .table-responsive .dropdown-menu {
   margin-bottom: .75rem;
 }
+
+// move to input-group
+
+// remove border on btn when in input group
+
+.input-group-btn > .btn {
+  margin-bottom: 0;
+}
+
+.input-group-btn > .btn-primary {
+  border-color: theme-color("primary");
+}
+
+.input-group-btn > .btn-secondary {
+  border-color: theme-color("secondary");
+}
+
+.input-group-btn > .btn-success {
+  border-color: theme-color("success");
+}
+
+.input-group-btn > .btn-info {
+  border-color: theme-color("info");
+}
+
+.input-group-btn > .btn-warning {
+  border-color: theme-color("warning");
+}
+
+.input-group-btn > .btn-danger {
+  border-color: theme-color("danger");
+}
+

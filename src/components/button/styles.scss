@@ -73,7 +73,6 @@ fieldset[disabled] a.btn {
 
 // Make a button look and behave like a link
 .btn-link {
-  font-weight: $font-weight-normal;
   color: $link-color;
   border-radius: 0;
 
@@ -112,15 +111,22 @@ fieldset[disabled] a.btn {
 // Button Sizes
 //
 
-.btn-lg {
-  @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
-}
-
 .btn-sm {
   font-weight: 400;
   @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
 
+.btn-lg {
+  @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-xl,
+.btn-group-xl > .btn {
+  font-size: 1.25rem;
+  padding: 1.5rem 2rem;
+  border-width: 2px;
+  border-radius: $border-radius-lg;
+}
 
 //
 // Block button
@@ -258,22 +264,6 @@ a:not([href]):not([tabindex]),
   display: block;
 }
 
-
-// Hover Button Class
-// Button background hidden until hover
-
-.btn-hover {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-hover:hover,
-.btn-hover.active {
-  color: $link-color;
-  border-color: transparent;
-  background-color: transparent;
-}
-
 // Toggler Button
 
 .btn-toggler {
@@ -319,7 +309,43 @@ a:not([href]):not([tabindex]),
   text-shadow: none;
 }
 
-// Link Button
+.btn.btn-nav {
+  border: none;
+}
+
+.btn-icon.btn-outline-link:hover {
+  background-color: transparent;
+}
+
+// btn colors
+
+.btn-outline-light {
+  color: $body-color;
+  background-color: #fff;
+  border: $input-btn-border-width solid $gray-rgba-300;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: $body-color;
+  background-color: $gray-rgba-300;
+  border: $input-btn-border-width solid $gray-600;
+}
+
+
+// img sizes in buttons, usually for svg icons
+
+.btn-sm img {
+  width: 1em;
+}
+
+.btn-lg img,
+.btn-group-lg > .btn img {
+  width: 1.25rem;
+}
+
+
+// link-bg, outline-link, outline-link-bg, hover, outline-hover, hover-bg, outline-hover-bg Button
 
 .btn-link-bg {
   color: $link-color;
@@ -334,9 +360,60 @@ a:not([href]):not([tabindex]),
   background-color: $gray-rgba-200;
 }
 
-.btn.btn-nav {
-  border: none;
+.btn-outline-link {
+  background-color: transparent;
+  border-color: transparent;
 }
+
+.btn-outline-link:hover,
+.btn-outline-link.active {
+  border-color: $gray-600;
+}
+
+.btn-hover,
+.btn-outline-hover {
+  opacity: .6;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-hover:hover,
+.btn-hover.active,
+.btn-outline-hover:hover,
+.btn-outline-hover.active {
+  opacity: 1;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-hover-bg {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-hover-bg:hover {
+  border-color: transparent;
+  background-color: $gray-rgba-200;
+}
+
+.btn-hover-bg.active {
+  color: $white;
+  border-color: theme-color("primary");
+  background-color: theme-color("primary");
+}
+
+.btn-outline-hover-bg {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-outline-hover-bg:hover,
+.btn-outline-hover-bg.active {
+  border-color: $gray-rgba-200;
+  background-color: $gray-rgba-200;
+}
+
+// Border hovers
 
 .btn-light-border:hover {
   box-shadow: 0 0 0 1px rgba($icon-fill-dark, .25);
@@ -355,88 +432,6 @@ a:not([href]):not([tabindex]),
 .navbar-dark .btn-round-border:hover {
   background-color: transparent;
   box-shadow: 0 0 0 2px rgba($icon-fill-dark, .25);
-}
-
-// btn colors
-
-.btn-outline-light {
-  color: $body-color;
-  background-color: #fff;
-  border: $input-btn-border-width solid $gray-rgba-300;
-}
-
-.btn-outline-light:hover,
-.btn-outline-light:focus {
-  color: $body-color;
-  background-color: $gray-rgba-300;
-  border: $input-btn-border-width solid $gray-600;
-}
-
-.btn-outline-link {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.btn-outline-link:hover {
-  border-color: $gray-600;
-}
-
-.btn-icon.btn-outline-link:hover {
-  background-color: transparent;
-}
-
-
-.btn-hover-bg.active {
-  color: $white;
-  border-color: theme-color("primary");
-  background-color: theme-color("primary");
-}
-
-.btn-sm img {
-  width: 1em;
-}
-
-.btn-lg img,
-.btn-group-lg > .btn img {
-  width: 1.25rem;
-}
-
-// remove border on btn when in input group
-
-.input-group-btn > .btn-primary {
-  border-color: theme-color("primary");
-}
-
-.input-group-btn > .btn-secondary {
-  border-color: theme-color("secondary");
-}
-
-.input-group-btn > .btn-success {
-  border-color: theme-color("success");
-}
-
-.input-group-btn > .btn-info {
-  border-color: theme-color("info");
-}
-
-.input-group-btn > .btn-warning {
-  border-color: theme-color("warning");
-}
-
-.input-group-btn > .btn-danger {
-  border-color: theme-color("danger");
-}
-
-
-// offcanvas buttons
-
-.btn-header-close-sidenav {
-  transition: transform $transition;
-}
-
-.offcanvas-left .btn-header-close-sidenav {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
 }
 
 
@@ -478,41 +473,4 @@ a:not([href]):not([tabindex]),
 .btn-dropdown-arrow + .dropdown-menu-right:before {
   right: 6px;
   left: auto;
-}
-
-
-// Hover BG Button
-
-.btn-hover-bg {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-hover-bg:hover {
-  border-color: transparent;
-  background-color: $gray-rgba-200;
-}
-
-.btn-outline-hover-bg {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-outline-hover-bg:hover,
-.btn-outline-hover-bg.active {
-  border-color: $gray-rgba-200;
-  background-color: $gray-rgba-200;
-}
-
-.btn-outline-hover {
-  opacity: .6;
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-outline-hover:hover,
-.btn-outline-hover.active {
-  opacity: 1;
-  border-color: transparent;
-  background-color: transparent;
 }

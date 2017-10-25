@@ -59,9 +59,6 @@ class UiButtons extends React.Component {
             <Button color="info" round>info</Button>
             <Button color="warning" round>warning</Button>
             <Button color="danger" round>danger</Button>
-            <Button color="link" round>link</Button>
-            <Button color="link-bg" round>link-bg</Button>
-            <Button color="hover-bg" round>hover-bg</Button>
           </CardBody>
         </div>
 
@@ -77,9 +74,6 @@ class UiButtons extends React.Component {
             <Button color="info" square>info</Button>
             <Button color="warning" square>warning</Button>
             <Button color="danger" square>danger</Button>
-            <Button color="link" square>link</Button>
-            <Button color="link-bg" square>link-bg</Button>
-            <Button color="hover-bg" square>hover-bg</Button>
           </CardBody>
         </div>
 
@@ -96,8 +90,6 @@ class UiButtons extends React.Component {
             <Button outline color="warning">warning</Button>
             <Button outline color="danger">danger</Button>
             <Button outline color="link">link</Button>
-            <Button outline color="hover">hover</Button>
-            <Button outline color="hover-bg">hover-bg</Button>
           </CardBody>
         </div>
 
@@ -113,7 +105,6 @@ class UiButtons extends React.Component {
             <Button outline round color="info">info</Button>
             <Button outline round color="warning">warning</Button>
             <Button outline round color="danger">danger</Button>
-            <Button outline round color="link">link</Button>
           </CardBody>
         </div>
 
@@ -128,18 +119,29 @@ class UiButtons extends React.Component {
             <Button outline square color="info">info</Button>
             <Button outline square color="warning">warning</Button>
             <Button outline square color="danger">danger</Button>
-            <Button outline square color="link">link</Button>
           </CardBody>
         </div>
 
         <div>
           <CardHeader spacing="lg">Sizes</CardHeader>
           <CardBody spacing="lg">
-            <Button color="primary" size="lg">Large Button</Button>
-            <Button outline size="lg">Large Button</Button>
-            <hr />
-            <Button color="primary" size="sm">Small Button</Button>
-            <Button size="sm">Small Button</Button>
+            <div>
+              <Button color="primary" size="sm">Size sm</Button>
+              <Button size="sm">Size sm</Button>
+            </div>
+            <div>
+              <Button color="primary">Button</Button>
+              <Button>Button</Button>
+            </div>
+            <div>
+              <Button color="primary" size="lg">Size lg</Button>
+              <Button outline size="lg">Size lg</Button>
+            </div>
+            <div>
+              <Button color="primary" size="xl">Size xl</Button>
+              <Button outline size="xl">Size xl</Button>
+              <p className="small">* Most often used in modals</p>
+            </div>
           </CardBody>
         </div>
 
@@ -156,7 +158,7 @@ class UiButtons extends React.Component {
           <CardBody spacing="lg">
             <Row>
               <Col sm="6">
-                <Button color="primary" size="lg" active className={'mr-1'}>Primary link</Button>
+                <Button color="primary" size="lg" active>Primary link</Button>
                 <Button size="lg" active>Link</Button>
               </Col>
             </Row>
@@ -415,13 +417,13 @@ class UiButtons extends React.Component {
           </CardHeader>
           <CardBody spacing="lg">
             <Button outline circle color="link" className={'rounded-circle'}>×</Button>
-            <Button outline circle color="link" className={'rounded-circle'}>
+            <Button circle color="link-bg" className={'rounded-circle'}>
               <img src={iconClose} alt="x" />
             </Button>
             <Button outline circle size="sm">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline circle>
+            <Button circle>
               <img src={iconClose} alt="x" />
             </Button>
             <Button outline square size="lg">

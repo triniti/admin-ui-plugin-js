@@ -98,7 +98,7 @@ class UiInputGroup extends React.Component {
                 <InputGroup>
                   <InputGroupButton></InputGroupButton>
                   <Input placeholder="and..."/>
-                  <InputGroupButton><Button color="default">I'm a button</Button></InputGroupButton>
+                  <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
                 </InputGroup>
               </Col>
             </Row>
@@ -165,7 +165,7 @@ class UiInputGroup extends React.Component {
                 <Input />
                 <InputGroupButton>
                   <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                    <DropdownToggle caret outline color="default">
+                    <DropdownToggle caret>
                       Button Dropdown
                     </DropdownToggle>
                     <DropdownMenu>
@@ -182,7 +182,7 @@ class UiInputGroup extends React.Component {
               <InputGroup>
                 <InputGroupButton></InputGroupButton>
                 <Input placeholder="and..."/>
-                <InputGroupButton><Button color="default">I'm a button</Button></InputGroupButton>
+                <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
               </InputGroup>
             </Col>
           </Row>
