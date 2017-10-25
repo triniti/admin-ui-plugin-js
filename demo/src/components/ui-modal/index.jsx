@@ -51,7 +51,7 @@ class UiModal extends React.Component {
     return (
       <Card>
         <CardBody spacing="lg">
-          <Button color="secondary" size="lg" onClick={this.toggle} className="round">Click Me</Button>
+          <Button color="secondary" size="lg" onClick={this.toggle} radius="round">Click Me</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle}>
             <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
             <ModalBody className="pb-5">
@@ -72,7 +72,7 @@ class UiModal extends React.Component {
             </ModalFooter>
           </Modal>
 
-          <Button outline color="secondary" size="lg" onClick={this.toggleSmall} className="round ml-4">Small Modal</Button>
+          <Button outline color="secondary" size="lg" radius="round" onClick={this.toggleSmall}>Small Modal</Button>
           <Modal isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
             <ModalBody className="text-center modal-wrapper"><h4>Small Modal Action</h4>Do you want to clear everything?</ModalBody>
             <ModalFooter className="footer-buttons">
@@ -81,7 +81,7 @@ class UiModal extends React.Component {
             </ModalFooter>
           </Modal>
 
-          <Button outline size="lg" onClick={this.toggleSingle} className="round ml-4 btn-border-secondary">Single XL Footer Button</Button>
+          <Button outline size="lg" radius="round" onClick={this.toggleSingle}>Single XL Footer Button</Button>
           <Modal isOpen={this.state.singleModal} toggle={this.toggleSingle} size="sm">
             <ModalBody className="text-center modal-wrapper"><h4>Single Modal Button</h4>Do you want to clear everything?</ModalBody>
             <ModalFooter className="footer-buttons">

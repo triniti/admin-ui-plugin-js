@@ -31,7 +31,12 @@ class UiButtons extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader spacing="lg">Solid<span><Button outline color="hover-bg">clear</Button><Button>save</Button></span></CardHeader>
+          <CardHeader spacing="lg">Solid
+            <span>
+              <Button color="hover-bg">hover-bg</Button>
+              <Button>default</Button>
+            </span>
+          </CardHeader>
           <CardBody spacing="lg">
             <Button>default</Button>
             <Button color="primary">primary</Button>
@@ -48,38 +53,38 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Solid Round</span>
-           <Button outline round color="link">outline link</Button>
+          <CardHeader spacing="lg"><span>Solid radius="round"</span>
+           <Button outline radius="round" color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button round>default</Button>
-            <Button color="primary" round>primary</Button>
-            <Button color="secondary" round>secondary</Button>
-            <Button color="success" round>success</Button>
-            <Button color="info" round>info</Button>
-            <Button color="warning" round>warning</Button>
-            <Button color="danger" round>danger</Button>
+            <Button radius="round">default</Button>
+            <Button color="primary" radius="round">primary</Button>
+            <Button color="secondary" radius="round">secondary</Button>
+            <Button color="success" radius="round">success</Button>
+            <Button color="info" radius="round">info</Button>
+            <Button color="warning" radius="round">warning</Button>
+            <Button color="danger" radius="round">danger</Button>
           </CardBody>
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Solid Square</span>
-           <Button outline round color="link">outline link</Button>
+          <CardHeader spacing="lg"><span>Solid radius="none"</span>
+           <Button outline radius="none" color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button square>default</Button>
-            <Button color="primary" square>primary</Button>
-            <Button color="secondary" square>secondary</Button>
-            <Button color="success" square>success</Button>
-            <Button color="info" square>info</Button>
-            <Button color="warning" square>warning</Button>
-            <Button color="danger" square>danger</Button>
+            <Button radius="none">default</Button>
+            <Button color="primary" radius="none">primary</Button>
+            <Button color="secondary" radius="none">secondary</Button>
+            <Button color="success" radius="none">success</Button>
+            <Button color="info" radius="none">info</Button>
+            <Button color="warning" radius="none">warning</Button>
+            <Button color="danger" radius="none">danger</Button>
           </CardBody>
         </div>
 
         <div>
           <CardHeader spacing="lg">Outline
-            <Button color="hover" round>hover</Button>
+            <Button color="hover" radius="round">hover</Button>
           </CardHeader>
           <CardBody spacing="lg">
             <Button outline>default</Button>
@@ -94,31 +99,30 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Outline Round</span>
-            <Button outline round>outline default round</Button>
+          <CardHeader spacing="lg"><span>Outline radius="round"</span>
+            <Button outline radius="round" size="sm">outline round sm</Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline round>default</Button>
-            <Button outline round color="primary">primary</Button>
-            <Button outline round color="secondary">secondary</Button>
-            <Button outline round color="success">success</Button>
-            <Button outline round color="info">info</Button>
-            <Button outline round color="warning">warning</Button>
-            <Button outline round color="danger">danger</Button>
+            <Button outline radius="round">default</Button>
+            <Button outline radius="round" color="primary">primary</Button>
+            <Button outline radius="round" color="secondary">secondary</Button>
+            <Button outline radius="round" color="success">success</Button>
+            <Button outline radius="round" color="info">info</Button>
+            <Button outline radius="round" color="warning">warning</Button>
+            <Button outline radius="round" color="danger">danger</Button>
           </CardBody>
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Outline Square</span>
-          </CardHeader>
+          <CardHeader spacing="lg">Outline radius="none"</CardHeader>
           <CardBody spacing="lg">
-            <Button outline square>default</Button>
-            <Button outline square color="primary">primary</Button>
-            <Button outline square color="secondary">secondary</Button>
-            <Button outline square color="success">success</Button>
-            <Button outline square color="info">info</Button>
-            <Button outline square color="warning">warning</Button>
-            <Button outline square color="danger">danger</Button>
+            <Button outline radius="none">default</Button>
+            <Button outline radius="none" color="primary">primary</Button>
+            <Button outline radius="none" color="secondary">secondary</Button>
+            <Button outline radius="none" color="success">success</Button>
+            <Button outline radius="none" color="info">info</Button>
+            <Button outline radius="none" color="warning">warning</Button>
+            <Button outline radius="none" color="danger">danger</Button>
           </CardBody>
         </div>
 
@@ -130,8 +134,8 @@ class UiButtons extends React.Component {
               <Button size="sm">Size sm</Button>
             </div>
             <div>
-              <Button color="primary">Button</Button>
-              <Button>Button</Button>
+              <Button color="primary">Default</Button>
+              <Button>Default</Button>
             </div>
             <div>
               <Button color="primary" size="lg">Size lg</Button>
@@ -166,13 +170,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Disabled State</span>
-            <ButtonGroup>
-              <Button outline>5</Button>
-              <Button outline>6</Button>
-              <Button outline>7</Button>
-            </ButtonGroup>
-          </CardHeader>
+          <CardHeader spacing="lg">Disabled State</CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col>
@@ -244,6 +242,22 @@ class UiButtons extends React.Component {
                 <p className={'text-muted'}>Selected: <span className={'text-danger'}>{this.state.rSelected}</span></p>
               </Col>
               <Col xs="12" sm="6">
+                <CardTitle tag="h4">Checkbox Buttons</CardTitle>
+                <ButtonGroup className={'mb-2'}>
+                  <Button
+                    onClick={() => this.onCheckboxBtnClick(1)}
+                    active={this.state.cSelected.includes(1)}
+                  >One</Button>
+                  <Button
+                    onClick={() => this.onCheckboxBtnClick(2)}
+                    active={this.state.cSelected.includes(2)}
+                  >Two</Button>
+                  <Button
+                    onClick={() => this.onCheckboxBtnClick(3)}
+                    active={this.state.cSelected.includes(3)}
+                  >Three</Button>
+                </ButtonGroup>
+
                 <CardTitle tag="h4">Checkbox Buttons "outline"</CardTitle>
                 <ButtonGroup className={'mb-2'}>
                   <Button
@@ -260,21 +274,6 @@ class UiButtons extends React.Component {
                   >Three</Button>
                 </ButtonGroup>
 
-                <CardTitle tag="h4">Checkbox Buttons</CardTitle>
-                <ButtonGroup className={'mb-2'}>
-                  <Button
-                    onClick={() => this.onCheckboxBtnClick(1)}
-                    active={this.state.cSelected.includes(1)}
-                  >One</Button>
-                  <Button
-                    onClick={() => this.onCheckboxBtnClick(2)}
-                    active={this.state.cSelected.includes(2)}
-                  >Two</Button>
-                  <Button
-                    onClick={() => this.onCheckboxBtnClick(3)}
-                    active={this.state.cSelected.includes(3)}
-                  >Three</Button>
-                </ButtonGroup>
                 <p className={'text-muted'}>Selected: <span
                   className={'text-success'}
                 >{JSON.stringify(this.state.cSelected)}</span></p>
@@ -286,8 +285,8 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Checkbox & Radio .btn-toggle style
             <span>
-              <Button size="sm" outline round onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
-              <Button size="sm" outline round onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
+              <Button size="sm" outline radius="round" onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
+              <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
               <Form>
                 <FormGroup>
                   <Input type="checkbox" name="toggler0" id="toggler0" className={'btn-toggle'} />
@@ -410,32 +409,33 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Icons - .round
-            <Button circle color="link" className={'rounded-circle'}>
+          <CardHeader spacing="lg">Icons radius="circle"
+            <Button outline color="link" radius="circle">
               <img src={iconClose} alt="x" />
             </Button>
           </CardHeader>
           <CardBody spacing="lg">
-            <Button outline circle color="link" className={'rounded-circle'}>×</Button>
-            <Button circle color="link-bg" className={'rounded-circle'}>
+            <Button color="hover" radius="circle">×</Button>
+            <Button outline color="link" radius="circle">×</Button>
+            <Button radius="circle" color="link-bg">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline circle size="sm">
+            <Button outline radius="circle" size="sm">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button circle>
+            <Button radius="circle">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button outline square size="lg">
+            <Button outline radius="none" size="lg">
               <img src={iconClose} alt="x" />
             </Button>
-            <Button round outline>
+            <Button radius="round" outline>
               <img src={iconClose} alt="x" /> <span>Close Me Please</span>
             </Button>
-            <Button outline round size="sm">
+            <Button outline radius="round" size="sm">
               × <span>Close Me Please</span>
             </Button>
-            <Button round size="sm">
+            <Button radius="round" size="sm">
               × <span>Close Me Please</span>
             </Button>
           </CardBody>

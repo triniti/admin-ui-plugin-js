@@ -194,16 +194,20 @@ a:not([href]):not([tabindex]),
 
 // Border versions: round, square, circle
 
-.btn-round {
-  margin-right: 0.35rem;
+.btn-radius-round {
+  margin-right: .35rem;
   border-radius: $round;
 }
 
-.btn-square {
+.btn-lg {
+  margin-right: .75rem;
+}
+
+.btn-radius-none {
   border-radius: 0;
 }
 
-.btn-circle {
+.btn-radius-circle {
   width: 2.125rem;
   height: 2.125rem;
   padding: 0;
@@ -214,7 +218,7 @@ a:not([href]):not([tabindex]),
   justify-content: center;
 }
 
-.btn-round span:not(.badge-alert) {
+.btn-radius-round span:not(.badge-alert) {
   margin: 0 .25rem;
   vertical-align: middle;
 }
@@ -264,22 +268,50 @@ a:not([href]):not([tabindex]),
   display: block;
 }
 
-// Toggler Button
+// custom additional btn colors
 
-.btn-toggler {
+.btn-outline-light {
+  color: $body-color;
+  background-color: #fff;
+  border: $input-btn-border-width solid $gray-600;
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus {
+  color: $body-color;
+  background-color: $gray-600;
+  border: $input-btn-border-width solid $gray-600;
+}
+
+.btn-outline-light:active,
+.btn-outline-light.active,
+.show > .btn-outline-light.dropdown-toggle {
+  color: $body-color;
+  border-color: $gray-700;
+}
+
+// btn-group btn-light overrides
+
+.btn-group > .btn-light {
+  border-color: $gray-500;
+}
+
+// Toggle Button style
+
+.btn-toggle {
   margin-left: -.625rem;
   padding-left: 1.75rem;
   background-color: transparent;
   border-color: transparent;
 }
 
-.card-header .btn-toggler {
+.card-header .btn-toggle {
   font-size: 1rem;
   font-weight: 500;
   color: inherit;
 }
 
-.btn-toggler::before {
+.btn-toggle::before {
   position: absolute;
   top: 15%;
   left: 0;
@@ -292,44 +324,21 @@ a:not([href]):not([tabindex]),
   background: transparent url('#{$icons-folder}angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
 }
 
-.btn-toggler.active::before {
+.btn-toggle.active::before {
   transform: rotate(90deg);
 }
 
-.btn-toggler:hover::after,
-.btn-toggler:hover::before {
+.btn-toggle:hover::after,
+.btn-toggle:hover::before {
   opacity: 1;
 }
 
-.btn-toggler:hover,
-.btn-toggler.active {
+.btn-toggle:hover,
+.btn-toggle.active {
   color: $body-color;
   border-color: transparent;
   background-color: transparent;
   text-shadow: none;
-}
-
-.btn.btn-nav {
-  border: none;
-}
-
-.btn-icon.btn-outline-link:hover {
-  background-color: transparent;
-}
-
-// btn colors
-
-.btn-outline-light {
-  color: $body-color;
-  background-color: #fff;
-  border: $input-btn-border-width solid $gray-rgba-300;
-}
-
-.btn-outline-light:hover,
-.btn-outline-light:focus {
-  color: $body-color;
-  background-color: $gray-rgba-300;
-  border: $input-btn-border-width solid $gray-600;
 }
 
 
@@ -357,7 +366,7 @@ a:not([href]):not([tabindex]),
 .btn-link-bg.active {
   color: $link-color;
   border-color: transparent;
-  background-color: $gray-rgba-200;
+  background-color: $gray-400;
 }
 
 .btn-outline-link {
@@ -393,7 +402,7 @@ a:not([href]):not([tabindex]),
 
 .btn-hover-bg:hover {
   border-color: transparent;
-  background-color: $gray-rgba-200;
+  background-color: $gray-400;
 }
 
 .btn-hover-bg.active {
@@ -409,8 +418,8 @@ a:not([href]):not([tabindex]),
 
 .btn-outline-hover-bg:hover,
 .btn-outline-hover-bg.active {
-  border-color: $gray-rgba-200;
-  background-color: $gray-rgba-200;
+  border-color: $gray-400;
+  background-color: $gray-400;
 }
 
 // Border hovers
@@ -473,4 +482,53 @@ a:not([href]):not([tabindex]),
 .btn-dropdown-arrow + .dropdown-menu-right:before {
   right: 6px;
   left: auto;
+}
+
+// Footer Buttons
+//
+// Most often useed with small modals and asides so that the buttons touch the edges
+
+.footer-buttons {
+  padding: 0;
+  justify-content: space-between;
+}
+
+.footer-buttons .btn {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: inset -1px 0 0 0 $gray-500;
+  flex: 1;
+}
+
+.footer-buttons .btn:last-child {
+  box-shadow: none;
+}
+
+.footer-button.border-0 {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.modal-dialog:not(.modal-sm) .footer-buttons .btn {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.footer-buttons .btn:first-child {
+  margin-left: 0;
+  border-bottom-left-radius: .2rem;
+}
+
+.footer-buttons .btn:last-child {
+  border-bottom-right-radius: .2rem;
+}
+
+//modal-footer fixes
+.modal-footer.footer-buttons {
+  padding: 0;
+}
+
+.modal-footer.footer-buttons .btn {
+  margin: 0;
 }

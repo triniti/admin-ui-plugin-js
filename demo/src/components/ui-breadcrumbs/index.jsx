@@ -17,7 +17,7 @@ const UiBreadcrumb = () => (
           <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
           <BreadcrumbItem active>Data</BreadcrumbItem>
         </Breadcrumb>
-        <Button outline color="link" className={'rounded-circle mr-2'}>
+        <Button outline color="link" radius="circle">
           <img src={iconClose} alt="x" />
         </Button>
       </CardHeader>

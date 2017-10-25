@@ -129,43 +129,6 @@ h3 {
 }
 
 
-// Footer Buttons
-//
-// Most often useed with small modals and asides so that the buttons touch the edges
-
-.footer-buttons {
-  padding: 0;
-  justify-content: space-between;
-}
-
-.footer-buttons .btn {
-  margin: 0 0 0 1px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 1px 0 0 0 rgba(0, 0, 0, .125);
-  flex: 1;
-}
-
-.footer-button.border-0 {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.modal-dialog:not(.modal-sm) .footer-buttons .btn {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.footer-buttons .btn:first-child {
-  margin-left: 0;
-  border-bottom-left-radius: .2rem;
-}
-
-.footer-buttons .btn:last-child {
-  border-bottom-right-radius: .2rem;
-}
-
-
 // Borders
 //
 // Usually added to divide content or to an aside
