@@ -11,10 +11,11 @@ const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  inline: PropTypes.bool,
+  alert: PropTypes.bool,
 };
 
 const defaultProps = {
-  color: 'default',
   pill: false,
   tag: 'span',
 };
@@ -25,6 +26,8 @@ const Badge = (props) => {
     cssModule,
     color,
     pill,
+    inline,
+    alert,
     tag: Tag,
     ...attributes
   } = props;
@@ -34,6 +37,8 @@ const Badge = (props) => {
     'badge',
     `badge-${color}`,
     pill ? 'badge-pill' : false,
+    inline ? 'badge-inline' : false,
+    alert ? 'badge-alert' : false,
   ), cssModule);
 
   return (

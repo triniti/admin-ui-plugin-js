@@ -19,7 +19,8 @@ const UiBadge = () => (
       <Badge color="info">info</Badge>{' '}
       <Badge color="warning">warning</Badge>{' '}
       <Badge color="danger">danger</Badge>{' '}
-      <Badge color="inverse">inverse</Badge>{' '}
+      <Badge color="dark">dark</Badge>{' '}
+      <Badge color="light">light</Badge>{' '}
 
       <CardTitle tag="h4">Pills</CardTitle>
       <Badge pill>default</Badge>{' '}
@@ -29,13 +30,15 @@ const UiBadge = () => (
       <Badge color="info" pill>info</Badge>{' '}
       <Badge color="warning" pill>warning</Badge>{' '}
       <Badge color="danger" pill>danger</Badge>{' '}
-      <Badge color="inverse" pill>inverse</Badge>{' '}
+      <Badge color="dark" pill>dark</Badge>{' '}
+      <Badge color="light" pill>light</Badge>{' '}
 
       <CardTitle tag="h4">Badge Alert</CardTitle>
-      <Button outline radius="round" className={'mr-3'}>inverse <Badge color="primary" className={'badge-alert'}>3</Badge></Button>
-      <Button color="info" radius="round" className={'mr-3'}>info <Badge color="warning" className={'badge-alert'}>0</Badge></Button>
-      <Button className={'mr-3'}>warning <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
-      <Button outline color="link" radius="round" className={'mr-3'}>link <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
+      <Button outline radius="round" className={'mr-3'}>outline <Badge color="primary" alert>3</Badge></Button>
+      <Button color="info" radius="round" className={'mr-3'}>info <Badge color="warning" alert>0</Badge></Button>
+      <Button className={'mr-3'}>inline<Badge color="danger" inline>24</Badge></Button>
+      <Button className={'mr-3'}>inline pill<Badge color="danger" inline pill>24</Badge></Button>
+      <Button outline color="link" radius="round" className={'mr-3'}>link <Badge color="danger" alert>24</Badge></Button>
     </CardBody>
   </Card>
 );

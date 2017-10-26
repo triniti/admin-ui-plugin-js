@@ -60,7 +60,7 @@ class UiModal extends React.Component {
               <Button outline color="default" className="round" onClick={this.toggleNested}>Show Nested Modal</Button>
               <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} size="sm">
                 <ModalBody className="text-center modal-wrapper"><h4>Nested Modal title</h4>Do you want to clear everything?</ModalBody>
-                <ModalFooter className="footer-buttons">
+                <ModalFooter buttons>
                   <Button outline color="primary" size="lg" onClick={this.toggleAll}>Clear</Button>
                   <Button outline color="primary" size="lg" onClick={this.toggleNested}>Cancel</Button>
                 </ModalFooter>
@@ -75,7 +75,7 @@ class UiModal extends React.Component {
           <Button outline color="secondary" size="lg" radius="round" onClick={this.toggleSmall}>Small Modal</Button>
           <Modal isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
             <ModalBody className="text-center modal-wrapper"><h4>Small Modal Action</h4>Do you want to clear everything?</ModalBody>
-            <ModalFooter className="footer-buttons">
+            <ModalFooter buttons>
               <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Clear</Button>
               <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Cancel</Button>
             </ModalFooter>
@@ -84,7 +84,7 @@ class UiModal extends React.Component {
           <Button outline size="lg" radius="round" onClick={this.toggleSingle}>Single XL Footer Button</Button>
           <Modal isOpen={this.state.singleModal} toggle={this.toggleSingle} size="sm">
             <ModalBody className="text-center modal-wrapper"><h4>Single Modal Button</h4>Do you want to clear everything?</ModalBody>
-            <ModalFooter className="footer-buttons">
+            <ModalFooter buttons>
               <Button color="secondary" size="xl" onClick={this.toggleSingle}>Login</Button>
             </ModalFooter>
           </Modal>

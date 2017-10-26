@@ -139,6 +139,20 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
+          <CardHeader spacing="lg">OutlineText
+          </CardHeader>
+          <CardBody spacing="lg">
+            <Button outlineText>default</Button>
+            <Button outlineText color="primary">primary</Button>
+            <Button outlineText color="secondary">secondary</Button>
+            <Button outlineText color="success">success</Button>
+            <Button outlineText color="info">info</Button>
+            <Button outlineText color="warning">warning</Button>
+            <Button outlineText color="danger">danger</Button>
+          </CardBody>
+        </div>
+
+        <div>
           <CardHeader spacing="lg">Sizes</CardHeader>
           <CardBody spacing="lg">
             <div>

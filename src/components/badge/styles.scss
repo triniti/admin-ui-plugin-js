@@ -6,8 +6,6 @@
 // Requires one of the contextual, color modifier classes for `color` and
 // `background-color`.
 
-
-
 .badge {
   display: inline-flex;
   padding: $badge-padding-y $badge-padding-x;
@@ -26,12 +24,6 @@
   &:empty {
     display: none;
   }
-}
-
-// Quick fix for badges in buttons
-.btn .badge {
-  position: relative;
-  top: -1px;
 }
 
 // Pill badges
@@ -58,15 +50,15 @@
   color: $white;
 }
 
-.badge-inverse {
-  background-color: theme-color("dark");
+// Quick fix for badges in buttons, or location specific badges
+
+.badge-inline {
+  position: relative;
+  top: -1px;
+  margin-left: .5rem;
 }
 
-.btn .badge-alert,
-.alert-wrapper .badge-alert,
-.rounded-circle .badge-alert,
-.round .badge-alert,
-.nav-link .badge-alert {
+.badge-alert {
   position: absolute;
   top: -5px;
   right: -6px;

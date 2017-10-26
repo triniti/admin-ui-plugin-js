@@ -86,7 +86,7 @@ fieldset[disabled] a.btn {
   &.active {
   color: $body-color;
   border-color: $gray-700;
-}
+  }
 }
 
 .show > .btn-outline-light.dropdown-toggle {
@@ -100,6 +100,63 @@ fieldset[disabled] a.btn {
     border-color: $gray-400;
   }
 }
+
+
+// Outline-Text Buttons
+
+@mixin button-outline-text-variant($color, $color-hover: #fff) {
+  color: $color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $gray-700;
+
+  @include hover {
+    color: $color;
+    background-color: $gray-400;
+    border-color: $gray-700;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color-hover;
+    background-color: $gray-700;
+    border-color: $gray-700;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-text-#{$color} {
+    @include button-outline-text-variant($value, #fff);
+  }
+}
+
+// btn-outline-text-light overrides since color and border are too light
+
+.btn-outline-text-light {
+  color: $body-color;
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+  }
+  &:active,
+  &.active {
+    color: $body-color;
+  }
+}
+
 
 //
 // Link buttons
@@ -407,12 +464,12 @@ a:not([href]):not([tabindex]),
 //
 // Most often useed with small modals and asides so that the buttons touch the edges
 
-.footer-buttons {
+.modal-footer-buttons {
   padding: 0;
   justify-content: space-between;
 }
 
-.footer-buttons .btn {
+.modal-footer-buttons .btn {
   margin: 0;
   border: none;
   border-radius: 0;
@@ -420,7 +477,7 @@ a:not([href]):not([tabindex]),
   flex: 1;
 }
 
-.footer-buttons .btn:last-child {
+.modal-footer-buttons .btn:last-child {
   box-shadow: none;
 }
 
@@ -429,26 +486,26 @@ a:not([href]):not([tabindex]),
   box-shadow: none;
 }
 
-.modal-dialog:not(.modal-sm) .footer-buttons .btn {
+.modal-dialog:not(.modal-sm) .modal-footer-buttons .btn {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
 
-.footer-buttons .btn:first-child {
+.modal-footer-buttons .btn:first-child {
   margin-left: 0;
   border-bottom-left-radius: .2rem;
 }
 
-.footer-buttons .btn:last-child {
+.modal-footer-buttons .btn:last-child {
   border-bottom-right-radius: .2rem;
 }
 
 // modal-footer fixes
-.modal-footer.footer-buttons {
+.modal-footer.modal-footer-buttons {
   padding: 0;
 }
 
-.modal-footer.footer-buttons .btn {
+.modal-footer.modal-footer-buttons .btn {
   margin: 0;
 }
 
