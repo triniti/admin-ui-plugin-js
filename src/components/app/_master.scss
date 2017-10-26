@@ -228,7 +228,7 @@ h3 {
 // Dropdown Buttons
 // Adds arrow to the top of a dropdown
 
-.btn + .dropdown-menu:after {
+.btn-dropdown-arrow + .dropdown-menu:after {
   content: '';
   position: absolute;
   left: 8px;
@@ -241,12 +241,12 @@ h3 {
   pointer-events: none;
 }
 
-.btn + .dropdown-menu-right:after {
+.btn-dropdown-arrow + .dropdown-menu-right:after {
   right: 8px;
   left: auto;
 }
 
-.btn + .dropdown-menu:before {
+.btn-dropdown-arrow + .dropdown-menu:before {
   content: '';
   position: absolute;
   left: 6px;
@@ -259,7 +259,7 @@ h3 {
   pointer-events: none;
 }
 
-.btn + .dropdown-menu-right:before {
+.btn-dropdown-arrow + .dropdown-menu-right:before {
   right: 6px;
   left: auto;
 }

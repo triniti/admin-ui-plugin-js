@@ -45,6 +45,8 @@ class UiButtons extends React.Component {
             <Button color="info">info</Button>
             <Button color="warning">warning</Button>
             <Button color="danger">danger</Button>
+            <Button color="light">light</Button>
+            <Button color="dark">dark</Button>
             <Button color="link">link</Button>
             <Button color="link-bg">link-bg</Button>
             <Button color="hover">hover</Button>
@@ -64,6 +66,8 @@ class UiButtons extends React.Component {
             <Button color="info" radius="round">info</Button>
             <Button color="warning" radius="round">warning</Button>
             <Button color="danger" radius="round">danger</Button>
+            <Button color="light" radius="round">light</Button>
+            <Button color="dark" radius="round">dark</Button>
           </CardBody>
         </div>
 
@@ -79,6 +83,8 @@ class UiButtons extends React.Component {
             <Button color="info" radius="none">info</Button>
             <Button color="warning" radius="none">warning</Button>
             <Button color="danger" radius="none">danger</Button>
+            <Button color="light" radius="none">light</Button>
+            <Button color="dark" radius="none">dark</Button>
           </CardBody>
         </div>
 
@@ -94,6 +100,8 @@ class UiButtons extends React.Component {
             <Button outline color="info">info</Button>
             <Button outline color="warning">warning</Button>
             <Button outline color="danger">danger</Button>
+            <Button outline color="light">light</Button>
+            <Button outline color="dark">dark</Button>
             <Button outline color="link">link</Button>
           </CardBody>
         </div>
@@ -110,6 +118,8 @@ class UiButtons extends React.Component {
             <Button outline radius="round" color="info">info</Button>
             <Button outline radius="round" color="warning">warning</Button>
             <Button outline radius="round" color="danger">danger</Button>
+            <Button outline radius="round" color="light">light</Button>
+            <Button outline radius="round" color="dark">dark</Button>
           </CardBody>
         </div>
 
@@ -123,6 +133,8 @@ class UiButtons extends React.Component {
             <Button outline radius="none" color="info">info</Button>
             <Button outline radius="none" color="warning">warning</Button>
             <Button outline radius="none" color="danger">danger</Button>
+            <Button outline radius="none" color="light">light</Button>
+            <Button outline radius="none" color="dark">dark</Button>
           </CardBody>
         </div>
 

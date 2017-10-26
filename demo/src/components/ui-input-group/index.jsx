@@ -81,7 +81,7 @@ class UiInputGroup extends React.Component {
                   <Input />
                   <InputGroupButton>
                     <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                      <DropdownToggle caret outline color="inverse">
+                      <DropdownToggle caret color="dark">
                         Button Dropdown
                       </DropdownToggle>
                       <DropdownMenu>

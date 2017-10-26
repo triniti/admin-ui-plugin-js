@@ -16,6 +16,7 @@ const propTypes = {
   size: PropTypes.string,
   radius: PropTypes.string,
   toggle: PropTypes.bool,
+  dropdownArrow: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -55,6 +56,7 @@ class Button extends React.Component {
       size,
       radius,
       toggle,
+      dropdownArrow,
       tag: Tag,
       innerRef,
       ...attributes
@@ -68,6 +70,7 @@ class Button extends React.Component {
       radius ? `btn-radius-${radius}` : false,
       block ? 'btn-block' : false,
       toggle ? 'btn-toggle' : false,
+      dropdownArrow ? 'btn-dropdown-arrow' : false,
       { active, disabled: this.props.disabled },
     ), cssModule);
 
