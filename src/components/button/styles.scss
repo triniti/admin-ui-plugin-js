@@ -44,7 +44,22 @@
     background-image: none;
     @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
   }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
+
+.card-header .btn,
+.page-header .btn,
+.sidenav-header .btn {
+  margin-bottom: 0;
+}
+
 
 // Future-proof disabling of clicks on `<a>` elements
 a.btn.disabled,
@@ -63,138 +78,24 @@ fieldset[disabled] a.btn {
   }
 }
 
-@each $color, $value in $theme-colors {
-  .btn-outline-#{$color} {
-    @include button-outline-variant($value, #fff);
-  }
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:focus {
+  color: #fff;
 }
 
-// btn-outline-light overrides since color and border are too light
-
-.btn-outline-light {
-  color: $body-color;
-  background-color: #fff;
-  border: $input-btn-border-width solid $gray-700;
-
-  &:hover,
-  &:focus {
-    color: $body-color;
-    background-color: $gray-600;
-    border: $input-btn-border-width solid $gray-700;
-  }
-  &:active,
-  &.active {
-  color: $body-color;
-  border-color: $gray-700;
-  }
-}
-
-.show > .btn-outline-light.dropdown-toggle {
-  color: $body-color;
-  background-color: $gray-400;
+.btn.disabled,
+.btn.disabled:hover {
   border-color: $gray-400;
-
-  &:hover,
-  &:focus {
-    background-color: $gray-400;
-    border-color: $gray-400;
-  }
+  background-color: $gray-400;
+  color: $text-muted;
+  cursor: not-allowed;
 }
 
+// btn-group btn-light overrides
 
-// Outline-Text Buttons
-
-@mixin button-outline-text-variant($color, $color-hover: #fff) {
-  color: $color;
-  background-color: transparent;
-  background-image: none;
+.btn-group > .btn-light {
   border-color: $gray-700;
-
-  @include hover {
-    color: $color;
-    background-color: $gray-400;
-    border-color: $gray-700;
-  }
-
-  &:focus,
-  &.focus {
-    box-shadow: 0 0 0 3px rgba($color, .5);
-  }
-
-  &.disabled,
-  &:disabled {
-    color: $color;
-    background-color: transparent;
-  }
-
-  &:active,
-  &.active,
-  .show > &.dropdown-toggle {
-    color: $color-hover;
-    background-color: $gray-700;
-    border-color: $gray-700;
-  }
-}
-
-@each $color, $value in $theme-colors {
-  .btn-outline-text-#{$color} {
-    @include button-outline-text-variant($value, #fff);
-  }
-}
-
-// btn-outline-text-light overrides since color and border are too light
-
-.btn-outline-text-light {
-  color: $body-color;
-
-  &:hover,
-  &:focus {
-    color: $body-color;
-  }
-  &:active,
-  &.active {
-    color: $body-color;
-  }
-}
-
-
-//
-// Link buttons
-//
-
-// Make a button look and behave like a link
-.btn-link {
-  color: $link-color;
-  border-radius: 0;
-
-  &,
-  &:active,
-  &.active,
-  &:disabled {
-    background-color: transparent;
-    @include box-shadow(none);
-  }
-  &,
-  &:focus,
-  &:active {
-    border-color: transparent;
-    box-shadow: none;
-  }
-  @include hover {
-    border-color: transparent;
-  }
-  @include hover-focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
-    background-color: transparent;
-  }
-  &:disabled {
-    color: $btn-link-disabled-color;
-
-    @include hover-focus {
-      text-decoration: none;
-    }
-  }
 }
 
 
@@ -216,6 +117,7 @@ fieldset[disabled] a.btn {
   padding: 1.5rem 2rem;
   border-width: 2px;
 }
+
 
 //
 // Block button
@@ -241,41 +143,9 @@ input[type="button"] {
 }
 
 
-// Custom Styles
 //
-
-.btn:last-child {
-  margin-right: 0;
-}
-
-.card-header .btn,
-.page-header .btn,
-.sidenav-header .btn {
-  margin-bottom: 0;
-}
-
-.btn:hover,
-a:not([href]):not([tabindex]),
-.nav-link:hover {
-  cursor: pointer;
-}
-
-.btn-warning,
-.btn-warning:hover,
-.btn-warning:focus {
-  color: #fff;
-}
-
-.btn.disabled,
-.btn.disabled:hover {
-  border-color: $gray-400;
-  background-color: $gray-400;
-  color: $text-muted;
-  cursor: not-allowed;
-}
-
-
-// Border versions: round, square, circle
+// radius parameter: round, square, circle
+//
 
 .btn-radius-round {
   margin-right: .35rem;
@@ -302,7 +172,6 @@ a:not([href]):not([tabindex]),
   justify-content: center;
 }
 
-
 // Show dropdown-menu on hover
 
 .btn-radius-circle + .dropdown-menu:hover {
@@ -314,53 +183,9 @@ a:not([href]):not([tabindex]),
 }
 
 
-// Toggle Button style
-
-.btn-toggle {
-  margin-left: -.625rem;
-  padding-left: 1.75rem;
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.card-header .btn-toggle {
-  font-size: 1rem;
-  font-weight: 500;
-  color: inherit;
-}
-
-.btn-toggle::before {
-  position: absolute;
-  top: 15%;
-  left: 0;
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  content: '';
-  transition: transform $transition;
-  opacity: .5;
-  background: transparent url('#{$icons-folder}angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
-}
-
-.btn-toggle.active::before {
-  transform: rotate(90deg);
-}
-
-.btn-toggle:hover::after,
-.btn-toggle:hover::before {
-  opacity: 1;
-}
-
-.btn-toggle:hover,
-.btn-toggle.active {
-  color: $body-color;
-  border-color: transparent;
-  background-color: transparent;
-  text-shadow: none;
-}
-
-
+//
 // img sizes in buttons, usually for svg icons
+//
 
 .btn img {
   width: 1.25rem;
@@ -384,81 +209,21 @@ a:not([href]):not([tabindex]),
   vertical-align: text-top;
 }
 
-// btn-group btn-light overrides
 
-.btn-group > .btn-light {
-  border-color: $gray-700;
-}
+//
+// Import Button Styles
+//
+
+@import "_btn-outline";
+@import "_btn-outline-text";
+@import "_btn-link";
+@import "_btn-link-bg";
+@import "_btn-hover";
+@import "_btn-hover-bg";
+@import "_btn-toggler";
 
 
-// link-bg, outline-link, outline-link-bg, hover, outline-hover, hover-bg, outline-hover-bg Button
-
-.btn-link-bg {
-  color: $link-color;
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-link-bg:hover,
-.btn-link-bg.active {
-  color: $link-color;
-  border-color: transparent;
-  background-color: $gray-400;
-}
-
-.btn-outline-link {
-  background-color: transparent;
-  border-color: transparent;
-}
-
-.btn-outline-link:hover,
-.btn-outline-link.active {
-  border-color: $gray-600;
-}
-
-.btn-hover,
-.btn-outline-hover {
-  opacity: .6;
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-hover:hover,
-.btn-hover.active,
-.btn-outline-hover:hover,
-.btn-outline-hover.active {
-  opacity: 1;
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-hover-bg {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-hover-bg:hover {
-  border-color: transparent;
-  background-color: $gray-400;
-}
-
-.btn-hover-bg.active {
-  color: $white;
-  border-color: theme-color("primary");
-  background-color: theme-color("primary");
-}
-
-.btn-outline-hover-bg {
-  border-color: transparent;
-  background-color: transparent;
-}
-
-.btn-outline-hover-bg:hover,
-.btn-outline-hover-bg.active {
-  border-color: $gray-400;
-  background-color: $gray-400;
-}
-
+// todo: need to move to modal footer and check items
 
 // Footer Buttons
 //
@@ -508,9 +273,6 @@ a:not([href]):not([tabindex]),
 .modal-footer.modal-footer-buttons .btn {
   margin: 0;
 }
-
-
-// todo: need to check these
 
 .btn-close {
   position: absolute;

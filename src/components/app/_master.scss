@@ -73,6 +73,11 @@ h3 {
   letter-spacing: .008em;
 }
 
+a:not([href]):not([tabindex]),
+.nav-link:hover {
+  cursor: pointer;
+}
+
 // Layout
 
 #wrapper {

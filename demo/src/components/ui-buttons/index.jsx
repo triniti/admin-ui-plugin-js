@@ -104,12 +104,6 @@ class UiButtons extends React.Component {
             <Button outline color="dark">dark</Button>
             <Button outline color="link">link</Button>
           </CardBody>
-        </div>
-
-        <div>
-          <CardHeader spacing="lg"><span>Outline radius="round"</span>
-            <Button outline radius="round" size="sm">outline round sm</Button>
-          </CardHeader>
           <CardBody spacing="lg">
             <Button outline radius="round">default</Button>
             <Button outline radius="round" color="primary">primary</Button>
@@ -121,10 +115,6 @@ class UiButtons extends React.Component {
             <Button outline radius="round" color="light">light</Button>
             <Button outline radius="round" color="dark">dark</Button>
           </CardBody>
-        </div>
-
-        <div>
-          <CardHeader spacing="lg">Outline radius="none"</CardHeader>
           <CardBody spacing="lg">
             <Button outline radius="none">default</Button>
             <Button outline radius="none" color="primary">primary</Button>
@@ -142,6 +132,18 @@ class UiButtons extends React.Component {
           <CardHeader spacing="lg">OutlineText
           </CardHeader>
           <CardBody spacing="lg">
+            <ButtonGroup>
+              <Button outlineText size="lg">default</Button>
+              <Button outlineText color="primary" size="lg">primary</Button>
+              <Button outlineText color="secondary" size="lg">secondary</Button>
+              <Button outlineText color="success" size="lg">success</Button>
+              <Button outlineText color="info" size="lg">info</Button>
+              <Button outlineText color="warning" size="lg">warning</Button>
+              <Button outlineText color="danger" size="lg">danger</Button>
+              <Button outlineText color="dark" size="lg">dark</Button>
+            </ButtonGroup>
+          </CardBody>
+          <CardBody spacing="lg">
             <Button outlineText>default</Button>
             <Button outlineText color="primary">primary</Button>
             <Button outlineText color="secondary">secondary</Button>
@@ -149,6 +151,17 @@ class UiButtons extends React.Component {
             <Button outlineText color="info">info</Button>
             <Button outlineText color="warning">warning</Button>
             <Button outlineText color="danger">danger</Button>
+            <Button outlineText color="dark">dark</Button>
+          </CardBody>
+          <CardBody spacing="lg">
+            <Button outlineText size="sm" radius="round">default</Button>
+            <Button outlineText color="primary" size="sm" radius="round">primary</Button>
+            <Button outlineText color="secondary" size="sm" radius="round">secondary</Button>
+            <Button outlineText color="success" size="sm" radius="round">success</Button>
+            <Button outlineText color="info" size="sm" radius="round">info</Button>
+            <Button outlineText color="warning" size="sm" radius="round">warning</Button>
+            <Button outlineText color="danger" size="sm" radius="round">danger</Button>
+            <Button outlineText color="dark" size="sm" radius="round">dark</Button>
           </CardBody>
         </div>
 
@@ -265,7 +278,28 @@ class UiButtons extends React.Component {
                     active={this.state.rSelected === 3}
                   >Three</Button>
                 </ButtonGroup>
+
+                <CardTitle tag="h4">Radio Buttons outlineText</CardTitle>
+                <ButtonGroup className={'mb-2'}>
+                  <Button
+                    outlineText onClick={() => this.onRadioBtnClick(1)}
+                    active={this.state.rSelected === 1}
+                    color="success"
+                  >Save</Button>
+                  <Button
+                    outlineText onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                    color="primary"
+                  >Save and Close</Button>
+                  <Button
+                    outlineText onClick={() => this.onRadioBtnClick(3)}
+                    active={this.state.rSelected === 3}
+                    color="danger"
+                  >Delete</Button>
+                </ButtonGroup>
+
                 <p className={'text-muted'}>Selected: <span className={'text-danger'}>{this.state.rSelected}</span></p>
+
               </Col>
               <Col xs="12" sm="6">
                 <CardTitle tag="h4">Checkbox Buttons</CardTitle>
