@@ -9,7 +9,7 @@ const UiForm = () => (
       <Row>
         <Col sm="8" md="6">
           <CardTitle tag="h2">Card Title H2 with Button
-            <Button outline color="link" className={'rounded-circle'}>
+            <Button outline color="link" radius="circle">
               <img src={iconClose} alt="x" />
             </Button>
           </CardTitle>

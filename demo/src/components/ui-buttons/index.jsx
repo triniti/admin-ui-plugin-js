@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Row } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Navbar, Row } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 
@@ -183,10 +183,10 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg">Checkbox and Radio Buttons (Stateful Buttons)
-            <ButtonGroup size="sm">
-              <Button outline>5</Button>
-              <Button outline>6</Button>
-              <Button outline>7</Button>
+            <ButtonGroup>
+              <Button outline size="sm">5</Button>
+              <Button outline size="sm">6</Button>
+              <Button outline size="sm">7</Button>
             </ButtonGroup>
           </CardHeader>
           <CardBody spacing="lg">

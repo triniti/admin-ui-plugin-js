@@ -15,14 +15,14 @@ export default () => (
     <CardBody spacing="lg">
       <Row>
         <Col>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconCog} alt="edit" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconEye} alt="details" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconMore} alt="more" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconClose} alt="close" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconSearch} alt="search" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconUser} alt="user" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconArrowLeft} alt="arrow" /></Button>
-          <Button className={'btn-icon rounded-circle mr-2'} color="outline-link"><img src={iconMenu} alt="menu" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconCog} alt="edit" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconEye} alt="details" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconMore} alt="more" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconClose} alt="close" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconSearch} alt="search" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconUser} alt="user" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconArrowLeft} alt="arrow" /></Button>
+          <Button outline radius="circle" color="link"><img src={iconMenu} alt="menu" /></Button>
         </Col>
       </Row>
       <Row>

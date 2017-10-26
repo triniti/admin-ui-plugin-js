@@ -32,10 +32,10 @@ const UiBadge = () => (
       <Badge color="inverse" pill>inverse</Badge>{' '}
 
       <CardTitle tag="h4">Badge Alert</CardTitle>
-      <Button outline color="inverse" className={'round mr-2 mb-2 alert-wrapper'}>inverse <Badge color="primary" className={'badge-alert'}>3</Badge></Button>
-      <Button color="info" className={'round mr-2 mb-2 alert-wrapper'}>info <Badge color="warning" className={'badge-alert'}>0</Badge></Button>
-      <Button color="default" className={'mr-2 mb-2 alert-wrapper'}>warning <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
-      <Button outline color="link" className={'round mr-1 mb-2 alert-wrapper'}>link <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
+      <Button outline radius="round" className={'mr-3'}>inverse <Badge color="primary" className={'badge-alert'}>3</Badge></Button>
+      <Button color="info" radius="round" className={'mr-3'}>info <Badge color="warning" className={'badge-alert'}>0</Badge></Button>
+      <Button className={'mr-3'}>warning <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
+      <Button outline color="link" radius="round" className={'mr-3'}>link <Badge color="danger" className={'badge-alert'}>24</Badge></Button>
     </CardBody>
   </Card>
 );

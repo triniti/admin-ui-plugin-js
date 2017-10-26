@@ -7,7 +7,10 @@
 //
 
 .btn {
+  position: relative;
   display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   font-weight: $btn-font-weight;
   text-align: center;
   white-space: nowrap;
@@ -66,6 +69,37 @@ fieldset[disabled] a.btn {
   }
 }
 
+// btn-outline-light overrides since color and border are too light
+
+.btn-outline-light {
+  color: $body-color;
+  background-color: #fff;
+  border: $input-btn-border-width solid $gray-700;
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+    background-color: $gray-600;
+    border: $input-btn-border-width solid $gray-700;
+  }
+  &:active,
+  &.active {
+  color: $body-color;
+  border-color: $gray-700;
+}
+}
+
+.show > .btn-outline-light.dropdown-toggle {
+  color: $body-color;
+  background-color: $gray-400;
+  border-color: $gray-400;
+
+  &:hover,
+  &:focus {
+    background-color: $gray-400;
+    border-color: $gray-400;
+  }
+}
 
 //
 // Link buttons
@@ -120,12 +154,10 @@ fieldset[disabled] a.btn {
   @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
 }
 
-.btn-xl,
-.btn-group-xl > .btn {
+.btn-xl {
   font-size: 1.25rem;
   padding: 1.5rem 2rem;
   border-width: 2px;
-  border-radius: $border-radius-lg;
 }
 
 //
@@ -154,13 +186,6 @@ input[type="button"] {
 
 // Custom Styles
 //
-
-
-.btn {
-  position: relative;
-  margin-right: 0.5rem;
-  margin-bottom: 0.5rem;
-}
 
 .btn:last-child {
   margin-right: 0;
@@ -192,6 +217,7 @@ a:not([href]):not([tabindex]),
   cursor: not-allowed;
 }
 
+
 // Border versions: round, square, circle
 
 .btn-radius-round {
@@ -199,8 +225,9 @@ a:not([href]):not([tabindex]),
   border-radius: $round;
 }
 
-.btn-lg {
-  margin-right: .75rem;
+.btn-radius-round span:not(.badge-alert) {
+  margin: 0 .25rem;
+  vertical-align: middle;
 }
 
 .btn-radius-none {
@@ -218,83 +245,17 @@ a:not([href]):not([tabindex]),
   justify-content: center;
 }
 
-.btn-radius-round span:not(.badge-alert) {
-  margin: 0 .25rem;
-  vertical-align: middle;
-}
 
-.btn-close {
-  position: absolute;
-  top: .25rem;
-  right: .25rem;
-}
+// Show dropdown-menu on hover
 
-.btn-tab,
-.btn-table {
-  padding-right: $table-cell-padding;
-  padding-left: $table-cell-padding;
-}
-
-// Icon Buttons
-
-.btn-icon {
-  -webkit-appearance: none;
-}
-
-.btn.btn-icon {
-  padding: .25rem;
-  opacity: .5;
-  margin-top: -.25rem;
-  margin-bottom: -.25rem;
-  border-radius: $border-radius-sm;
-}
-
-.btn.btn-icon:hover {
-  opacity: .8;
-  background-color: $gray-rgba-200;
-}
-
-.btn-icon img {
-  height: 1.25rem;
-  width: 1.25rem;
-  padding: 0 0.125rem;
-}
-
-.btn-icon + .dropdown-menu:hover {
+.btn-radius-circle + .dropdown-menu:hover {
   display: block;
 }
 
-.btn-icon:hover + .dropdown-menu {
+.btn-radius-circle:hover + .dropdown-menu {
   display: block;
 }
 
-// custom additional btn colors
-
-.btn-outline-light {
-  color: $body-color;
-  background-color: #fff;
-  border: $input-btn-border-width solid $gray-600;
-}
-
-.btn-outline-light:hover,
-.btn-outline-light:focus {
-  color: $body-color;
-  background-color: $gray-600;
-  border: $input-btn-border-width solid $gray-600;
-}
-
-.btn-outline-light:active,
-.btn-outline-light.active,
-.show > .btn-outline-light.dropdown-toggle {
-  color: $body-color;
-  border-color: $gray-700;
-}
-
-// btn-group btn-light overrides
-
-.btn-group > .btn-light {
-  border-color: $gray-500;
-}
 
 // Toggle Button style
 
@@ -344,13 +305,32 @@ a:not([href]):not([tabindex]),
 
 // img sizes in buttons, usually for svg icons
 
-.btn-sm img {
-  width: 1em;
+.btn img {
+  width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.125rem;
 }
 
-.btn-lg img,
-.btn-group-lg > .btn img {
-  width: 1.25rem;
+.btn-sm img {
+  width: 1rem;
+}
+
+.btn-lg img {
+  width: 1.375rem;
+  height: 1.375rem;
+  vertical-align: text-top;
+}
+
+.btn-xl img {
+  width: 1.5rem;
+  height: 1.5rem;
+  vertical-align: text-top;
+}
+
+// btn-group btn-light overrides
+
+.btn-group > .btn-light {
+  border-color: $gray-700;
 }
 
 
@@ -422,67 +402,6 @@ a:not([href]):not([tabindex]),
   background-color: $gray-400;
 }
 
-// Border hovers
-
-.btn-light-border:hover {
-  box-shadow: 0 0 0 1px rgba($icon-fill-dark, .25);
-}
-
-.btn-dark-border:hover {
-  box-shadow: 0 0 0 1px rgba($icon-fill-light, .25);
-}
-
-.btn-round-border:hover {
-  opacity: 1;
-  background-color: transparent;
-  box-shadow: 0 0 0 2px rgba($icon-fill-light, .25);
-}
-
-.navbar-dark .btn-round-border:hover {
-  background-color: transparent;
-  box-shadow: 0 0 0 2px rgba($icon-fill-dark, .25);
-}
-
-
-// Dropdown Buttons
-
-// Adds arrow to the top of a dropdown
-
-.btn-dropdown-arrow + .dropdown-menu:after {
-  content: '';
-  position: absolute;
-  left: 8px;
-  bottom: 100%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 6px 6px 6px;
-  border-color: transparent transparent $body-bg transparent;
-  pointer-events: none;
-}
-
-.btn-dropdown-arrow + .dropdown-menu-right:after {
-  right: 8px;
-  left: auto;
-}
-
-.btn-dropdown-arrow + .dropdown-menu:before {
-  content: '';
-  position: absolute;
-  left: 6px;
-  bottom: 100%;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 8px 8px 8px;
-  border-color: transparent transparent $gray-rgba-300 transparent;
-  pointer-events: none;
-}
-
-.btn-dropdown-arrow + .dropdown-menu-right:before {
-  right: 6px;
-  left: auto;
-}
 
 // Footer Buttons
 //
@@ -524,11 +443,26 @@ a:not([href]):not([tabindex]),
   border-bottom-right-radius: .2rem;
 }
 
-//modal-footer fixes
+// modal-footer fixes
 .modal-footer.footer-buttons {
   padding: 0;
 }
 
 .modal-footer.footer-buttons .btn {
   margin: 0;
+}
+
+
+// todo: need to check these
+
+.btn-close {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+}
+
+.btn-tab,
+.btn-table {
+  padding-right: $table-cell-padding;
+  padding-left: $table-cell-padding;
 }
