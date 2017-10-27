@@ -57,7 +57,7 @@ function Alert(props) {
     inverse ? 'alert-inverse' : false,
     fullWidth ? 'alert-full-width' : false,
     sticky ? 'alert-sticky' : false,
-    { 'alert-dismissible': toggle }
+    { 'alert-dismissible': toggle },
   ), cssModule);
 
   const closeClasses = mapToCssModules(classNames('btn-alert-close', closeClassName), cssModule);

@@ -5,12 +5,14 @@ import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
-  boxed: PropTypes.bool,
   tabs: PropTypes.bool,
   pills: PropTypes.bool,
-  vertical: PropTypes.bool,
+  vertical: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  horizontal: PropTypes.string,
   justified: PropTypes.bool,
+  fill: PropTypes.bool,
   navbar: PropTypes.bool,
+  card: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -18,18 +20,31 @@ const propTypes = {
 
 const defaultProps = {
   tag: 'ul',
+  vertical: false,
+};
+
+const getVerticalClass = (vertical) => {
+  if (vertical === false) {
+    return false;
+  } else if (vertical === true || vertical === 'xs') {
+    return 'flex-column';
+  }
+
+  return `flex-${vertical}-column`;
 };
 
 const Nav = (props) => {
   const {
     className,
     cssModule,
-    boxed,
     tabs,
     pills,
     vertical,
+    horizontal,
     justified,
+    fill,
     navbar,
+    card,
     tag: Tag,
     ...attributes
   } = props;
@@ -37,13 +52,16 @@ const Nav = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     navbar ? 'navbar-nav' : 'nav',
+    horizontal ? `justify-content-${horizontal}` : false,
+    getVerticalClass(vertical),
     {
-      'nav-boxed': boxed,
       'nav-tabs': tabs,
+      'card-header-tabs': card && tabs,
       'nav-pills': pills,
+      'card-header-pills': card && pills,
       'nav-justified': justified,
-      'flex-column': vertical,
-    }
+      'nav-fill': fill,
+    },
   ), cssModule);
 
   return (

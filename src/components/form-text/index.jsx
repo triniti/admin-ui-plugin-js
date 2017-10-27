@@ -30,7 +30,7 @@ const FormText = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     !inline ? 'form-text' : false,
-    color ? `text-${color}` : false
+    color ? `text-${color}` : false,
   ), cssModule);
 
   return (

@@ -13,7 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'div',
 };
 
 const Jumbotron = (props) => {

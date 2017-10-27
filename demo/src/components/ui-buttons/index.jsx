@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Navbar, Row } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Row } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 

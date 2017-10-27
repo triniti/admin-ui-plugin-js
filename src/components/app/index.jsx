@@ -10,7 +10,9 @@ import FlashMessageContainer from '../../containers/flash-message';
 import AppContent from '../app-content';
 
 
-const App = ({ location, navConfig, routes, authHoc }) => (
+const App = ({
+  location, navConfig, routes, authHoc,
+}) => (
   <div id="wrapper" data-slidedirection="">
     <FlashMessageContainer />
     {

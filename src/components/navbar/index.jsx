@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { mapToCssModules, deprecated } from '../utils';
 
 const propTypes = {
   light: PropTypes.bool,
-  inverse: PropTypes.bool,
+  dark: PropTypes.bool,
+  inverse: deprecated(PropTypes.bool, 'Please use the prop "dark"'),
   full: PropTypes.bool,
   fixed: PropTypes.string,
   sticky: PropTypes.string,
@@ -14,32 +15,54 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  toggleable: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  toggleable: deprecated(PropTypes.oneOfType([PropTypes.bool, PropTypes.string]), 'Please use the prop "expand"'),
+  expand: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
 };
 
 const defaultProps = {
   tag: 'nav',
-  toggleable: false,
+  expand: false,
+};
+
+const getExpandClass = (expand) => {
+  if (expand === false) {
+    return false;
+  } else if (expand === true || expand === 'xs') {
+    return 'navbar-expand';
+  }
+
+  return `navbar-expand-${expand}`;
+};
+
+// To better maintain backwards compatibility while toggleable is deprecated.
+// We must map breakpoints to the next breakpoint
+// so that toggleable and expand do the same things at the same breakpoint.
+const toggleableToExpand = {
+  xs: 'sm',
+  sm: 'md',
+  md: 'lg',
+  lg: 'xl',
 };
 
 const getToggleableClass = (toggleable) => {
-  if (toggleable === false) {
+  if (toggleable === undefined || toggleable === 'xl') {
     return false;
-  } else if (toggleable === true || toggleable === 'xs') {
-    return 'navbar-toggleable';
+  } else if (toggleable === false) {
+    return 'navbar-expand';
   }
 
-  return `navbar-toggleable-${toggleable}`;
+  return `navbar-expand-${toggleable === true ? 'sm' : (toggleableToExpand[toggleable] || toggleable)}`;
 };
 
 const Navbar = (props) => {
   const {
     toggleable,
+    expand,
     className,
     cssModule,
     light,
     dark,
-    full,
+    inverse,
     fixed,
     sticky,
     color,
@@ -50,15 +73,14 @@ const Navbar = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     'navbar',
-    getToggleableClass(toggleable),
+    getExpandClass(expand) || getToggleableClass(toggleable),
     {
       'navbar-light': light,
-      'navbar-dark': dark,
+      'navbar-dark': inverse || dark,
       [`bg-${color}`]: color,
-      'navbar-full': full,
       [`fixed-${fixed}`]: fixed,
       [`sticky-${sticky}`]: sticky,
-    }
+    },
   ), cssModule);
 
   return (

@@ -11,7 +11,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'div',
 };
 
 const InputGroup = (props) => {
@@ -25,7 +25,7 @@ const InputGroup = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     'input-group',
-    size ? `input-group-${size}` : null
+    size ? `input-group-${size}` : null,
   ), cssModule);
 
   return (

@@ -29,7 +29,7 @@ const CardHeader = (props) => {
   ), cssModule);
 
   return (
-    <Tag  {...attributes} className={classes} />
+    <Tag {...attributes} className={classes} />
   );
 };
 

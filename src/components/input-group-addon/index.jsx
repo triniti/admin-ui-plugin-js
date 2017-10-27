@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'div',
 };
 
 const InputGroupAddon = (props) => {
@@ -22,7 +22,7 @@ const InputGroupAddon = (props) => {
   } = props;
   const classes = mapToCssModules(classNames(
     className,
-    'input-group-addon'
+    'input-group-addon',
   ), cssModule);
 
   return (

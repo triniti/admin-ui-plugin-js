@@ -1,5 +1,5 @@
 import React from 'react';
-import { Badge, Button, ButtonGroup, Card, CardBody, CardTitle, Col, Row } from '../../../../src/components';
+import { Badge, Button, Card, CardBody, CardTitle } from '../../../../src/components';
 
 const UiBadge = () => (
   <Card>

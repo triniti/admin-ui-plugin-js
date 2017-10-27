@@ -67,12 +67,12 @@ class UiSideNavContainer extends React.Component {
             <img src={iconArrowLeft} alt="<" />
           </Button>
         </SidenavHeader>
-        <Tooltip placement="right" isOpen={this.state.tooltipOpen} target={'tooltip-sidenav-btn-header'} toggle={this.toggle} className={'tooltip-sidepanel'}>
+        <Tooltip placement="right" isOpen={this.state.tooltipOpen} target="tooltip-sidenav-btn-header" toggle={this.toggle} className="tooltip-sidepanel">
           Toggle Side Panel
         </Tooltip>
 
         <ScrollableContainer>
-          <ListGroup className={'list-group-border list-group-nav bg-lightest'}>
+          <ListGroup className="list-group-border list-group-nav bg-lightest">
             { uiElementsList }
           </ListGroup>
         </ScrollableContainer>
