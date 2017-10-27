@@ -30,7 +30,7 @@ class UiToggle extends Component {
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
           <CardBody spacing="lg">
-            <Button outline color="inverse" onClick={this.toggleInner} radius="none">Toggle Content</Button>
+            <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Collapse isOpen={this.state.collapseInner}>
@@ -38,7 +38,7 @@ class UiToggle extends Component {
                     <CardBody>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" className={'border-0 rounded-0'}> Button</Button>
+                      <Button outline size="lg" radius="none"> Button</Button>
                     </CardBody>
                   </Card>
                 </Collapse>
@@ -59,7 +59,7 @@ class UiToggle extends Component {
                     <CardBody>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" className={'border-0 rounded-0'}> Button</Button>
+                      <Button outline size="lg" radius="none"> Button</Button>
                     </CardBody>
                   </Card>
                 </Collapse>

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
-import angleRight from './angle-right.svg';
 import './styles.scss';
 
 const propTypes = {

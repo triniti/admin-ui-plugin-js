@@ -64,10 +64,6 @@
   }
 }
 
-.card-body > .row:first-child {
-  padding-top: 0;
-}
-
 .jumbotron > .card-body {
   background-color: inherit;
 }
@@ -88,6 +84,9 @@
   }
 }
 
+.card-body > .row:first-of-type {
+  padding-top: 0;
+}
 
 .card-title {
   display: flex;
