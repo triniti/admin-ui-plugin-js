@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import angleRight from './angle-right.svg';
 import './styles.scss';
 
 const propTypes = {
@@ -9,7 +10,6 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   toggler: PropTypes.bool,
-  svg: PropTypes.string,
 };
 
 const defaultProps = {
@@ -22,7 +22,6 @@ const Icon = (props) => {
     cssModule,
     tag: Tag,
     toggler,
-    svg,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -32,7 +31,7 @@ const Icon = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes} src={svg} />
+    <Tag {...attributes} className={classes} src={angleRight} />
   );
 };
 
