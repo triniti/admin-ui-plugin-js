@@ -1,6 +1,8 @@
 // dropdown
 
-// possibly remove if using reactstrap js to position (*)
+@import "~bootstrap/scss/mixins";
+
+// possibly remove if using reactstrap js to position (denoted with *)
 
 // The dropdown wrapper (`<div>`)
 .dropup,

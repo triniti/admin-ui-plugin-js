@@ -54,6 +54,12 @@ button:focus,
   outline: 0;
   outline: 0 auto -webkit-focus-ring-color;
   outline-offset: 0;
+}
+
+a:focus,
+button:focus,
+.btn:focus,
+.btn:active:focus {
   box-shadow: none;
 }
 
