@@ -14,7 +14,6 @@
 
 .icon-toggler {
   position: absolute;
-  top: 15%;
   left: 0;
   display: block;
   width: 1.5rem;
@@ -22,4 +21,8 @@
   content: '';
   transition: transform 250ms ease-in-out;
   opacity: .5;
+}
+
+.active > .icon-toggler {
+  transform: rotate(90deg);
 }

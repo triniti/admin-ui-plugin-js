@@ -10,6 +10,7 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   toggler: PropTypes.bool,
+  svg: PropTypes.string,
 };
 
 const defaultProps = {
@@ -31,7 +32,7 @@ const Icon = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes} src={angleRight} />
+    <Tag {...attributes} className={classes} src={require('./angle-right.svg')} />
   );
 };
 
