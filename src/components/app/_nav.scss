@@ -8,23 +8,6 @@
   background-color: theme-color("dark");
 }
 
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-  background-color: $gray-rgba-100;
-}
-
-.navbar .dropdown-item.active:hover,
-.navbar .dropdown-item.active:focus,
-.navbar .dropdown-item.active,
-.navbar .dropdown-item:active {
-  color: $navbar-light-active-color;
-  box-shadow: inset 3px 0 0 0 theme-color("primary");
-
-  @media (max-width: 1024px) {
-    background-color: inherit;
-  }
-}
-
 .nav-link {
   position: relative;
   color: $gray-800;
@@ -46,10 +29,6 @@
 
 .navbar-toggler:hover .navbar-toggler-icon {
   filter: opacity(.9);
-}
-
-.nav-item .dropdown-item {
-  padding: .6em 1rem;
 }
 
 .nav-pills .nav-link {
@@ -95,15 +74,3 @@
   flex: 0 0 auto;
 }
 
-// Drop Down item
-
-.dropdown-item.active {
-  font-weight: 600;
-}
-
-.dropdown-item:focus,
-.dropdown-item:hover,
-.dropdown-item.active,
-.dropdown-item:active {
-  cursor: pointer;
-}
