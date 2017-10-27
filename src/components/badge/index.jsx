@@ -16,6 +16,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  color: 'default',
   pill: false,
   tag: 'span',
 };
