@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {
@@ -48,7 +48,7 @@ class UiToggle extends Component {
         </Collapse>
 
         <CardHeader>
-          <Button toggler onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+          <Button toggler onClick={this.toggleOuter2} active={this.state.collapseOuter2}><Icon toggler svg="angle-right.svg"/>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
           <CardBody spacing="lg">
