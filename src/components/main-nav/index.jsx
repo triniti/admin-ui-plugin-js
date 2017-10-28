@@ -12,7 +12,7 @@ const MainNav = ({
   handleToggleClick,
   handleDropdownClick,
 }) => (
-  <div className={`navbar-toggleable-md navbar-mobile-offcanvas main-nav ${classesMain}`} >
+  <div className={`navbar-toggleable-md main-nav ${classesMain}`} >
     <Nav navbar>
       {createNavUnits(navConfig, handleToggleClick, handleDropdownClick, currentSection, activeSections)}
     </Nav>

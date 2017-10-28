@@ -25,15 +25,3 @@
     margin-left: -$offcanvas-desktop-margin;
   }
 }
-
-// offcanvas buttons associated with sidenav
-
-.btn-header-close-sidenav {
-  padding: .5rem;
-  transition: transform $transition;
-}
-
-.offcanvas-left .btn-header-close-sidenav {
-  -webkit-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
