@@ -25,7 +25,7 @@
   content: '';
   transition: transform $transition;
   opacity: .5;
-  background: transparent url('#{$icons-folder}angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+  background: transparent url('./angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
 }
 
 .btn-toggler.active::before {

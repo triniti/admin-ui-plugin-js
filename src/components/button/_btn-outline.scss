@@ -20,6 +20,7 @@
     color: $body-color;
     background-color: $gray-600;
     border: $input-btn-border-width solid $gray-700;
+    box-shadow: none;
   }
   &:active,
   &.active {
@@ -37,5 +38,6 @@
   &:focus {
     background-color: $gray-400;
     border-color: $gray-400;
+    box-shadow: none;
   }
 }
