@@ -1,27 +1,275 @@
-// Navbar Tabs
+// nav
+
 //
+// Kickstart any navigation component with a set of style resets. Works with
+// `<nav>`s or `<ul>`s.
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: $nav-link-padding-y $nav-link-padding-x;
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  // Disabled state lightens text
+  &.disabled {
+    color: $nav-link-disabled-color;
+  }
+}
+
+//
+// Tabs
 //
 
 .nav-tabs {
-  display: flex;
-  padding-left: 0;
-  margin: 0;
-  list-style: none;
-  background-color: $white;
-  border-bottom: 1px solid $gray-500;
-  border-top: none;
-  flex: 0 0 auto;
-}
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
 
-.nav-boxed {
-  display: flex;
-  margin: 1rem 0;
-  border: 1px solid $gray-500;
-  border-top: none;
-  box-shadow: 0 -1px 0 0 $gray-500;
-  flex: 0 0 auto;
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
 
-  @media (max-width: 767px) {
-    margin: .5rem 0;
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    @include border-top-radius($nav-tabs-border-radius);
+
+    @include hover-focus {
+      border-color: $nav-tabs-link-hover-border-color $nav-tabs-link-hover-border-color $nav-tabs-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color $nav-tabs-link-active-border-color $nav-tabs-link-active-bg;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    @include border-top-radius(0);
   }
 }
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    @include border-radius($nav-pills-border-radius);
+
+    &.active,
+    .show > & {
+      color: $nav-pills-link-active-color;
+      background-color: $nav-pills-link-active-bg;
+    }
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
+
+//
+
+.nav-underline {
+  flex: 0 0 auto;
+  box-shadow: inset 0 -1px 0 0 $nav-tabs-border-color;
+  flex-wrap: nowrap;
+
+  @media(max-width: 767px) {
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
+  }
+
+  & li {
+    text-align: center;
+  }
+
+  &.divider {
+    top: -1px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  & .nav-link {
+    border: none;
+    white-space: nowrap;
+  }
+
+  & .nav-link::before {
+    content: none !important;
+  }
+
+  & > .nav-item > .nav-link {
+    font-size: .8rem;
+    font-weight: 700;
+    height: 100%;
+    padding: .9375rem 1.25rem;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  & > .nav-item > .nav-link.active,
+  & > .nav-item > .nav-link.active:hover {
+    box-shadow: inset 0 -3px 0 0 theme-color("primary");
+    border: none;
+  }
+
+  & .nav-link.active,
+  & .nav-item.show .nav-link {
+    background-color: transparent;
+  }
+
+}
+
+// nav
+
+.nav-link {
+  position: relative;
+  color: $gray-800;
+}
+
+.nav-pills .nav-link {
+  margin: 0 .25rem 0 0;
+  background-color: $gray-400;
+}
+
+.nav-pills-sm .nav-link {
+  font-size: .92em;
+  padding: .25rem .75rem;
+  border-radius: $border-radius;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: $body-color;
+}
+
+.navbar-nav .nav-link-icon {
+  padding: 1.25em .5em;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .navbar-toggler-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .navbar-nav .nav-link-icon {
+    font-size: 1em;
+    padding: 1.1em .5em;
+  }
+}
+
+.navbar-main-wrapper {
+  z-index: $zindex-fixed + 3;
+  display: flex;
+  flex-direction: row;
+  padding: 0 !important;
+  box-shadow: 0 0 1px $gray-rgba-600, 0 1px 1px $gray-rgba-300;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  flex: 0 0 auto;
+}
+
+// Dropdown menu specific styles
+
+.nav .dropdown-toggle + .dropdown-menu {
+  border-top-color: $nav-tabs-border-color;
+}
+
+.nav-underline .dropdown-toggle + .dropdown-menu {
+  margin-top: 0;
+  border-top: none;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+// navbar specific styles - need to add as a parameter
+
+.nav-item .dropdown-item {
+  padding: .6em 1rem;
+}
+
+
+
+// size specific padding
+
+.nav-sm > .nav-item > .nav-link {
+  padding: .8rem 1.25rem;
+}
+
+.nav-lg > .nav-item > .nav-link {
+  padding: 1.125rem 1.25rem;
+}
+
+
+// location specific styles
+
+.sticky-top > .nav-underline {
+  background-color: $gray-100;
+}
+
+.aside-content .nav-underline .nav-item {
+  flex: 1 1 auto;
+}
+
+.main-container .nav-underline.sticky-top {
+  min-height: $header-height;
+  background-color: $gray-100;
+}
+

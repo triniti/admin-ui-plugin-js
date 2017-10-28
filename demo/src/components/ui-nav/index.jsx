@@ -110,9 +110,9 @@ class UiNav extends React.Component {
           </Nav>
         </CardBody>
 
-        <CardHeader spacing="lg">Tabs Simple</CardHeader>
+        <CardHeader spacing="lg">Underline</CardHeader>
         <CardBody spacing="lg">
-          <Nav tabs className='tabs-simple tabs-simple-sm'>
+          <Nav size="sm" underline>
             <NavItem>
               <NavLink href="#" active>Link</NavLink>
             </NavItem>

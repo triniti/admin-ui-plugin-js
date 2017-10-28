@@ -67,7 +67,7 @@
   background-clip: padding-box;
   border: $dropdown-border-width solid $dropdown-border-color;
   @include border-radius($border-radius);
-  @include box-shadow($dropdown-box-shadow);
+  box-shadow: $dropdown-box-shadow;
 
   transform: none !important; // *
   top: 100% !important; // *
@@ -214,29 +214,6 @@
 .dropdown-item.active,
 .dropdown-item:active {
   cursor: pointer;
-}
-
-// navbar specific styles - need to add as a parameter
-
-.nav-item .dropdown-item {
-  padding: .6em 1rem;
-}
-
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-  background-color: $gray-rgba-100;
-}
-
-.navbar .dropdown-item.active:hover,
-.navbar .dropdown-item.active:focus,
-.navbar .dropdown-item.active,
-.navbar .dropdown-item:active {
-  color: $navbar-light-active-color;
-  box-shadow: inset 3px 0 0 0 theme-color("primary");
-
-  @media (max-width: 1024px) {
-    background-color: inherit;
-  }
 }
 
 // adds bottom margin when dropdown is within a responsive table

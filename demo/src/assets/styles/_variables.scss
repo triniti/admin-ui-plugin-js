@@ -573,7 +573,7 @@ $navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 
 $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-padding-x:           .75rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
-$navbar-toggler-border-radius:       $btn-border-radius !default;
+$navbar-toggler-border-radius:       0 !default; // $btn-border-radius
 
 $navbar-dark-color:                 rgba($white,.75) !default;
 $navbar-dark-hover-color:           rgba($white,.825) !default;
@@ -852,3 +852,15 @@ $kbd-bg:                      $gray-900 !default;
 
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
+
+//
+// Additional Custom Variables
+//
+
+// Navbar Theme Colors
+
+$navbar-theme-light:    theme-color("light") !default;
+$navbar-theme-dark:     darken(theme-color("dark"), 10%) !default;
+
+$navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%) !default;
+$navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%) !default;
