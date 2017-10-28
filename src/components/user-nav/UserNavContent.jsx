@@ -8,7 +8,7 @@ import UserNavCloser from './UserNavCloser';
 
 
 /* fixme:: create notification component, get unread numbers from redux stroe */
-const UnreadMsgBadge = () => <Badge color="warning" className="round">3</Badge>;
+const UnreadMsgBadge = () => <Badge color="warning" inline pill className="ml-0">3</Badge>;
 
 class UserNavContent extends React.Component {
   static propTypes = {
@@ -68,8 +68,7 @@ class UserNavContent extends React.Component {
             title="Alerts"
             handleClick={() => handleTabClick('2')}
             classes={this.getTabItemClass('2')}
-          >
-            <UnreadMsgBadge />
+          > <UnreadMsgBadge />
           </NavbarTabsItem>
           <UserNavCloser handleClick={toggleUserNav} />
         </NavbarTabs>

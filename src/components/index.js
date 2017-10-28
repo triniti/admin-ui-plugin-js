@@ -42,7 +42,6 @@ import Form from './form';
 import FormFeedback from './form-feedback';
 import FormGroup from './form-group';
 import FormText from './form-text';
-import HeaderDisplay from './header-display';
 import Icon from './icon';
 import Input from './input';
 import InputGroup from './input-group';
@@ -147,7 +146,6 @@ export {
   FormFeedback,
   FormGroup,
   FormText,
-  HeaderDisplay,
   Icon,
   Input,
   InputGroup,

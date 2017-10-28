@@ -4,7 +4,10 @@
 
 .main-nav {
   margin-right: auto;
-  background-color: $navbar-theme-light;
+
+  @media (max-width: 1024px) {
+    background-color: $navbar-theme-light;
+  }
 }
 
 .navbar-dark .main-nav {

@@ -19,15 +19,11 @@
 }
 
 .card-borderless {
-  border: $card-border-width solid $card-border-color;
-}
-
-.card-borderless {
   border: none;
 }
 
-.tab-pane > .card {
-  border: none;
+.tab-pane > .card-borderless {
+  margin-top: 0;
 }
 
 // Card inside cards-container
