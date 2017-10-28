@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import PopperContent from '../popper-content';
 import { getTarget, DOMElement, mapToCssModules, omit, PopperPlacements } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   placement: PropTypes.oneOf(PopperPlacements),

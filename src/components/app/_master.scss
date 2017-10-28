@@ -108,15 +108,6 @@ a:not([href]):not([tabindex]),
   justify-content: space-between;
 }
 
-// Pagination
-//
-// Fixes missing right border on hover
-
-.page-link:focus,
-.page-link:hover {
-  z-index: 1;
-}
-
 
 // Borders
 //

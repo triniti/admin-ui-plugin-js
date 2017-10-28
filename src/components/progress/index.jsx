@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import toNumber from 'lodash/toNumber';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   children: PropTypes.node,

@@ -666,7 +666,7 @@ $popover-bg:                          $white !default;
 $popover-max-width:                   276px !default;
 $popover-border-width:                $border-width !default;
 $popover-border-color:                rgba(#000, .2) !default;
-$popover-box-shadow:                  0 5px 10px rgba(#000, .2) !default;
+$popover-box-shadow:                  0 10px 8px -6px $gray-rgba-300 !default;
 
 $popover-header-bg:                    $body-bg !default;
 $popover-header-color:                 $headings-color !default;
