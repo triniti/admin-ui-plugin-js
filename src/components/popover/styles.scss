@@ -19,7 +19,7 @@
   background-clip: padding-box;
   border: $popover-border-width solid $popover-border-color;
   @include border-radius($border-radius-lg);
-  @include box-shadow($popover-box-shadow);
+  box-shadow: $popover-box-shadow;
 
   // Arrows
   //
