@@ -1,5 +1,7 @@
 // list-group
 
+@import "~bootstrap/scss/mixins";
+
 // Base class
 //
 // Easily usable on <ul>, <ol>, or <div>.
@@ -115,18 +117,79 @@
   @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
 }
 
+
+
+
 // Custom Classes
-
-// List Group Standard Styles
-
-.list-group-item-heading + .list-group-item-text {
-  width: 100%;
-}
 
 .list-group-item {
   justify-content: space-between;
   flex: 0 0 auto;
 }
+
+.list-group-item-text {
+  opacity: .8;
+}
+
+.list-group-item-heading + .list-group-item-text {
+  width: 100%;
+}
+
+
+// list-group-nav styles
+
+.list-group-nav .list-group-item {
+  border: none;
+  cursor: pointer;
+}
+
+.list-group-nav .list-group-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: calc(100% - 1.25rem);
+  margin-left: 1.25rem;
+  content: '';
+  border-top: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.list-group-nav .list-group-item.active {
+  color: $body-color;
+  background-color: $gray-300;
+}
+
+.list-group-nav .list-group-item.active::before {
+  z-index: 1;
+  width: 3px;
+  height: 100%;
+  margin-left: 0;
+  background-color: theme-color("primary");
+}
+.scrollable-container .list-group-nav {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $gray-500;
+}
+
+
+// Borderless
+//
+// Remove top and bottom borders and border-radius to keep list group items edge-to-edge.
+
+.list-group-borderless {
+  .list-group-item {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .list-group-item::before {
+    border: none;
+  }
+}
+
+
+// For Roles Page, TODO: move to be associated with Roles component
 
 .list-group-item-roles {
   display: flex;
@@ -151,49 +214,3 @@
 .list-group-item-roles:last-child {
   border-bottom: none;
 }
-
-// list-group-nav styles
-
-.scrollable-container .list-group-nav {
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-  background-color: $body-bg;
-  border-bottom: 1px solid $gray-500;
-}
-
-.list-group-nav .list-group-item {
-  border: none;
-  cursor: pointer;
-}
-
-.list-group-nav .list-group-item::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: calc(100% - 1.25rem);
-  margin-left: 1.25rem;
-  content: '';
-}
-
-.list-group-border .list-group-item::before {
-  border-top: 1px solid rgba(0, 0, 0, .0625);
-}
-
-.list-group-nav .list-group-item.active {
-  color: $body-color;
-  background-color: $gray-300;
-}
-
-.list-group-nav .list-group-item.active::before {
-  z-index: 1;
-  width: 3px;
-  height: 100%;
-  margin-left: 0;
-  background-color: theme-color("primary");
-}
-
-.list-group-item.active .list-group-item-text {
-  opacity: .8;
-}
-
