@@ -27,8 +27,8 @@ class UiNavbar extends React.Component {
       <Card>
         <CardBody spacing="lg">
           <h4>Full Width Inverse Toggleable</h4>
-          <Navbar dark>
-            <NavbarToggler onClick={this.toggleNavbar} right />
+          <Navbar color="dark">
+            <NavbarToggler onClick={this.toggleNavbar} />
             <Collapse className="navbar-toggleable-md" isOpen={!this.state.collapsed}>
               <NavbarBrand href="/">reactstrap</NavbarBrand>
               <Nav navbar>
@@ -44,8 +44,8 @@ class UiNavbar extends React.Component {
         </CardBody>
 
         <CardBody spacing="lg">
-          <Navbar light toggleable className="mb-3">
-            <NavbarToggler right onClick={this.toggle} />
+          <Navbar color="light" toggleable className="mb-3">
+            <NavbarToggler onClick={this.toggle} />
             <NavbarBrand href="/">reactstrap</NavbarBrand>
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto">
