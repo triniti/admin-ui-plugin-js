@@ -134,6 +134,22 @@
     -ms-overflow-style: none;
   }
 
+  @media(min-width: 768px) {
+    padding-left: .5rem;
+  }
+
+  @media(min-width: 1025px) {
+    padding-left: .75rem;
+  }
+
+  @media(min-width: 1200px) {
+    padding-left: $padding-xs;
+  }
+
+  @media(min-width: 1600px) {
+    padding-left: $padding-sm;
+  }
+
   & li {
     text-align: center;
   }
@@ -245,7 +261,16 @@
   padding: .6em 1rem;
 }
 
+// sticky nav
 
+.nav-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+  background-color: $body-bg;
+  min-height: $header-height + 1;
+}
 
 // size specific padding
 

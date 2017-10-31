@@ -1,8 +1,6 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, CardsContainer, Col, Nav, NavItem, Row, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, CardsContainer, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
-
-import NavbarTabs from '../../../../src/components/navbar-tabs';
 
 
 class UiTabs extends React.Component {
@@ -36,20 +34,14 @@ class UiTabs extends React.Component {
   render() {
     return (
       <Card>
-        <NavbarTabs>
-          <div
-            className={classnames('navbar-tabs-link', { active: this.state.activeTab1 === '1' })}
-            onClick={() => { this.toggle1('1'); }}
-          >
-            Tab1
-          </div>
-          <div
-            className={classnames('navbar-tabs-link', { active: this.state.activeTab1 === '2' })}
-            onClick={() => { this.toggle1('2'); }}
-          >
-            More Tabs
-          </div>
-        </NavbarTabs>
+        <Nav underline sticky>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+          </NavItem>
+        </Nav>
 
         <TabContent activeTab={this.state.activeTab1}>
           <TabPane tabId="1">
@@ -88,7 +80,7 @@ class UiTabs extends React.Component {
           </TabPane>
         </TabContent>
 
-        <CardHeader className={'sticky-off'} spacing="lg">Classic Standard Version</CardHeader>
+        <CardHeader spacing="lg">Classic Standard Version</CardHeader>
         <CardBody spacing="lg">
           <Nav tabs>
             <NavItem>
