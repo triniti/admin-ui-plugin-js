@@ -69,8 +69,6 @@ import NavItem from './nav-item';
 import NavLink from './nav-link';
 import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
-import NavbarTabs from './navbar-tabs';
-import NavbarTabsItem from './navbar-tabs-item';
 import NavbarToggler from './navbar-toggler';
 import PageHeader from './page-header';
 import Pagination from './pagination';
@@ -173,8 +171,6 @@ export {
   NavLink,
   Navbar,
   NavbarBrand,
-  NavbarTabs,
-  NavbarTabsItem,
   NavbarToggler,
   PageHeader,
   Pagination,
