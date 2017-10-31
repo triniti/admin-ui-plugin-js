@@ -10,41 +10,6 @@ test('Navbar:: should render .navbar markup', (t) => {
   t.end();
 });
 
-test('Navbar:: should render default .navbar-expand class', (t) => {
-  const wrapper = shallow(<Navbar expand />);
-
-  t.equal(wrapper.html(), '<nav class="navbar navbar-expand"></nav>');
-  t.end();
-});
-
-test('Navbar:: should render size based .navbar-expand-* classes', (t) => {
-  const wrapper = shallow(<Navbar expand="md" />);
-
-  t.equal(wrapper.html(), '<nav class="navbar navbar-expand-md"></nav>');
-  t.end();
-});
-
-test('Navbar:: should render default .navbar-expand class for toggleable false [DEPRECATED]', (t) => {
-  const wrapper = shallow(<Navbar toggleable={false} />);
-
-  t.equal(wrapper.html(), '<nav class="navbar navbar-expand"></nav>');
-  t.end();
-});
-
-test('Navbar:: should render default .navbar-expand class for toggleable true [DEPRECATED]', (t) => {
-  const wrapper = shallow(<Navbar toggleable />);
-
-  t.equal(wrapper.html(), '<nav class="navbar navbar-expand-sm"></nav>');
-  t.end();
-});
-
-test('Navbar:: should render size based .navbar-expand-* classes for toggleable (bumping breakpoint) [DEPRECATED]', (t) => {
-  const wrapper = shallow(<Navbar toggleable="md" />);
-
-  t.equal(wrapper.html(), '<nav class="navbar navbar-expand-lg"></nav>');
-  t.end();
-});
-
 test('Navbar:: should render custom tag', (t) => {
   const wrapper = shallow(<Navbar tag="div" />);
 
@@ -74,14 +39,25 @@ test('Navbar:: should pass additional classNames', (t) => {
   t.end();
 });
 
-test('Navbar:: should render prop based classes', (t) => {
-  const wrapper = shallow(<Navbar light dark expand="sm" color="success" full sticky="top" fixed="top" />);
-
-  t.true(wrapper.hasClass('bg-success'));
-  t.true(wrapper.hasClass('navbar'));
-  t.true(wrapper.hasClass('navbar-expand-sm'));
-  t.true(wrapper.hasClass('navbar-light'));
+test('Navbar:: should render dark color classes', (t) => {
+  const wrapper = shallow(<Navbar color="dark" />);
   t.true(wrapper.hasClass('navbar-dark'));
+
+  t.end();
+});
+
+test('Navbar:: should render light color classes', (t) => {
+  const wrapper = shallow(<Navbar color="light" />);
+  t.true(wrapper.hasClass('navbar-light'));
+
+  t.end();
+});
+
+test('Navbar:: should render prop based classes', (t) => {
+  const wrapper = shallow(<Navbar color="success" full sticky="top" fixed="top" />);
+
+  t.true(wrapper.hasClass('navbar-success'));
+  t.true(wrapper.hasClass('navbar'));
   t.true(wrapper.hasClass('fixed-top'));
   t.true(wrapper.hasClass('sticky-top'));
   t.end();
