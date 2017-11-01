@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Form, FormGroup, Input, Label, Row } from '../../../../src/components';
+import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Row, SaveButton } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 
@@ -30,6 +30,17 @@ class UiButtons extends React.Component {
   render() {
     return (
       <Card>
+        <div>
+          <CardHeader spacing="lg">Page Actions
+            <PageActions />
+          </CardHeader>
+          <CardBody spacing="lg">
+            <BackButton />
+            <DeleteButton />
+            <SaveButton />
+          </CardBody>
+        </div>
+
         <div>
           <CardHeader spacing="lg">Solid
             <span>

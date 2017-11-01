@@ -144,7 +144,7 @@ class UiNav extends React.Component {
         <CardBody className={'pb-5'} spacing="lg">
           <Nav pills>
             <NavItem>
-              <NavLink href="#" active>Link</NavLink>
+              <NavLink href="#" active>Active</NavLink>
             </NavItem>
             <NavDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
               <DropdownToggle nav caret>
@@ -176,7 +176,7 @@ class UiNav extends React.Component {
             <Col>
               <Nav pills className="nav-pills-sm">
                 <NavItem>
-                  <NavLink href="#" active>Link</NavLink>
+                  <NavLink href="#" active>Active</NavLink>
                 </NavItem>
                 <NavDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
                   <DropdownToggle nav caret>

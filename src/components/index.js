@@ -1,4 +1,5 @@
 import Alert from './alert';
+import BackButton from './back-button';
 import Backdrop from './backdrop';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
@@ -30,6 +31,7 @@ import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
 import ContentContainer from './content-container';
+import DeleteButton from './delete-button';
 import Divider from './divider';
 import Dropdown from './dropdown';
 import DropdownItem from './dropdown-item';
@@ -70,6 +72,7 @@ import NavLink from './nav-link';
 import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
 import NavbarToggler from './navbar-toggler';
+import PageActions from './page-actions';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import PaginationItem from './pagination-item';
@@ -81,6 +84,7 @@ import PopoverTitle from './popover-title';
 import Progress from './progress';
 import RouterLink from './router-link';
 import Row from './row';
+import SaveButton from './save-button';
 import ScrollableContainer from './scrollable-container';
 import SidenavContainer from './sidenav-container';
 import SidenavHeader from './sidenav-header';
@@ -101,6 +105,7 @@ import {
 
 export {
   Alert,
+  BackButton,
   Backdrop,
   Badge,
   Breadcrumb,
@@ -132,6 +137,7 @@ export {
   Collapse,
   Container,
   ContentContainer,
+  DeleteButton,
   Divider,
   Dropdown,
   DropdownItem,
@@ -172,6 +178,7 @@ export {
   Navbar,
   NavbarBrand,
   NavbarToggler,
+  PageActions,
   PageHeader,
   Pagination,
   PaginationItem,
@@ -183,6 +190,7 @@ export {
   Progress,
   RouterLink,
   Row,
+  SaveButton,
   ScrollableContainer,
   SidenavContainer,
   SidenavHeader,
