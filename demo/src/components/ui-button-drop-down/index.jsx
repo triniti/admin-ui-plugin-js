@@ -22,7 +22,7 @@ class UiButtonDropdown extends React.Component {
       <Card>
         <CardBody spacing="lg">
           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
-            <DropdownToggle caret color="inverse">
+            <DropdownToggle caret outline color="light">
             Button Dropdown
           </DropdownToggle>
             <DropdownMenu>

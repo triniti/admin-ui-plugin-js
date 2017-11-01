@@ -1,0 +1,18 @@
+//
+// btn-link-bg
+//
+
+// Make a button look and behave like a link but have a solid hover
+
+.btn-link-bg {
+  color: $link-color;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-link-bg:hover,
+.btn-link-bg.active {
+  color: $link-color;
+  border-color: transparent;
+  background-color: $gray-400;
+}

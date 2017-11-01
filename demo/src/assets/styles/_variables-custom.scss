@@ -4,8 +4,9 @@
 
 
 // Path to assets folder for svg icons in css
-// $assets-folder:                 '../../assets/';
 
+$icons-folder:                 '~/src/components/icon/';
+$logo-folder:                 '~/src/assets/img/svg/';
 
 // referenced in _type but in _variables - $font-size-h1 is the variable
 $h1-font-size: 1.75rem !default;
@@ -74,3 +75,6 @@ $text-shadow:        0 1px 3px rgba(0, 0, 0, 0.1);
 
 // Custom Rounded for border-radius when 50% isn't working
 $round:              10rem;
+
+//
+$font-size-xl:   1rem !default;

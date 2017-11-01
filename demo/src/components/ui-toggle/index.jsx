@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {
@@ -26,11 +26,11 @@ class UiToggle extends Component {
     return (
       <Card>
         <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header</Button>
+          <Button toggler onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
           <CardBody spacing="lg">
-            <Button outline color="inverse" onClick={this.toggleInner} className={'rounded-0'}>Toggle Content</Button>
+            <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Collapse isOpen={this.state.collapseInner}>
@@ -38,7 +38,7 @@ class UiToggle extends Component {
                     <CardBody>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" className={'border-0 rounded-0'}> Button</Button>
+                      <Button outline size="lg" radius="none"> Button</Button>
                     </CardBody>
                   </Card>
                 </Collapse>
@@ -48,7 +48,7 @@ class UiToggle extends Component {
         </Collapse>
 
         <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+          <Button toggler onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
           <CardBody spacing="lg">
@@ -59,7 +59,7 @@ class UiToggle extends Component {
                     <CardBody>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" className={'border-0 rounded-0'}> Button</Button>
+                      <Button outline size="lg" radius="none"> Button</Button>
                     </CardBody>
                   </Card>
                 </Collapse>

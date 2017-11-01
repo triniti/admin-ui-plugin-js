@@ -1,0 +1,46 @@
+//
+// btn-toggler
+//
+
+.btn-toggler {
+  margin-left: -.625rem;
+  padding-left: 1.75rem;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.card-header .btn-toggler {
+  font-size: 1rem;
+  font-weight: 500;
+  color: inherit;
+}
+
+.btn-toggler::before {
+  position: absolute;
+  top: 15%;
+  left: 0;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: '';
+  transition: transform $transition;
+  opacity: .5;
+  background: transparent url('./angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+}
+
+.btn-toggler.active::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggler:hover::after,
+.btn-toggler:hover::before {
+  opacity: 1;
+}
+
+.btn-toggler:hover,
+.btn-toggler.active {
+  color: $body-color;
+  border-color: transparent;
+  background-color: transparent;
+  text-shadow: none;
+}

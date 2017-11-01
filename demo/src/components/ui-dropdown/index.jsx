@@ -25,7 +25,7 @@ class UiDropdown extends React.Component {
             <DropdownToggle caret color="default" outline>
             Dropdown
           </DropdownToggle>
-            <DropdownMenu>
+            <DropdownMenu arrow="right" right>
               <DropdownItem header>Header</DropdownItem>
               <DropdownItem disabled>Action</DropdownItem>
               <DropdownItem>Another Action</DropdownItem>

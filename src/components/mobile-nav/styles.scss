@@ -9,10 +9,10 @@
     height: 2.5rem;
     flex: 1 0 auto;
     justify-content: space-between;
-    background-color: theme-color("light");
+    background-color: $navbar-theme-light;
   }
   .navbar-dark .navbar-main-mobile {
-    background-color: theme-color("dark");
+    background-color: $navbar-theme-dark;
   }
 }
 
@@ -22,7 +22,7 @@
   height: 2.5rem;
   padding: 0;
   text-align: center;
-  background: transparent url('tmz-logo.svg?fill=%23#{$icon-theme-light}') center center / auto 1.3rem no-repeat;
+  background: transparent url('./tmz-logo.svg?fill=%23#{$icon-theme-light}') center center / auto 1.3rem no-repeat;
 
   @media (min-width: 1025px) {
     width: 2.5rem;
@@ -42,7 +42,7 @@
 }
 
 .navbar-dark .navbar-main-brand {
-  background: transparent url('tmz-logo.svg?fill=%23#{$icon-theme-dark}') center center / auto 1.3rem no-repeat;
+  background: transparent url('./tmz-logo.svg?fill=%23#{$icon-theme-dark}') center center / auto 1.3rem no-repeat;
 
   @media (min-width: 1025px) {
     background-size: 80% auto;
@@ -60,11 +60,11 @@
 
 @media (max-width: 1024px) {
   .navbar-main-mobile .navbar-toggler-icon {
-    background: transparent url('menu.svg?fill=%23#{$icon-theme-light}') center center / auto 20px no-repeat;
+    background: transparent url('./menu.svg?fill=%23#{$icon-theme-light}') center center / auto 20px no-repeat;
     filter: opacity(.6);
   }
 
   .navbar-dark .navbar-main-mobile .navbar-toggler-icon {
-    background: transparent url('menu.svg?fill=%23#{$icon-theme-dark}') center center / auto 20px no-repeat;
+    background: transparent url('./menu.svg?fill=%23#{$icon-theme-dark}') center center / auto 20px no-repeat;
   }
 }

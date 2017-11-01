@@ -1,0 +1,43 @@
+//
+// btn-outline
+//
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    @include button-outline-variant($value, #fff);
+  }
+}
+
+// btn-outline-light overrides since color and border are too light
+
+.btn-outline-light {
+  color: $body-color;
+  background-color: #fff;
+  border: $input-btn-border-width solid $gray-700;
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+    background-color: $gray-600;
+    border: $input-btn-border-width solid $gray-700;
+    box-shadow: none;
+  }
+  &:active,
+  &.active {
+  color: $body-color;
+  border-color: $gray-700;
+  }
+}
+
+.show > .btn-outline-light.dropdown-toggle {
+  color: $body-color;
+  background-color: $gray-400;
+  border-color: $gray-400;
+
+  &:hover,
+  &:focus {
+    background-color: $gray-400;
+    border-color: $gray-400;
+    box-shadow: none;
+  }
+}

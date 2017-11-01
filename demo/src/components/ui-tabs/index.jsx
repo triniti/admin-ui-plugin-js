@@ -1,8 +1,6 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, Row, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, CardsContainer, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
-
-import NavbarTabs from '../../../../src/components/navbar-tabs';
 
 
 class UiTabs extends React.Component {
@@ -36,59 +34,53 @@ class UiTabs extends React.Component {
   render() {
     return (
       <Card>
-        <NavbarTabs>
-          <div
-            className={classnames('navbar-tabs-link', { active: this.state.activeTab1 === '1' })}
-            onClick={() => { this.toggle1('1'); }}
-          >
-            Tab1
-          </div>
-          <div
-            className={classnames('navbar-tabs-link', { active: this.state.activeTab1 === '2' })}
-            onClick={() => { this.toggle1('2'); }}
-          >
-            More Tabs
-          </div>
-        </NavbarTabs>
+        <Nav underline sticky>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+          </NavItem>
+        </Nav>
 
         <TabContent activeTab={this.state.activeTab1}>
           <TabPane tabId="1">
-            <Card>
-              <CardBody spacing="lg">
-                <h3>Full Width Simple Tabs, Sticky Top - .tabs-simple</h3>
-                <Card body className="col col-12 col-sm-6">
-                  <CardTitle>Special Title Treatment</CardTitle>
-                  <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Go somewhere</Button>
-                </Card>
-              </CardBody>
-            </Card>
+            <CardBody spacing="lg">
+              <Row>
+                <Col>
+                  <h3>Full Width Simple Tabs, Sticky Top - .tabs-simple</h3>
+                  <Card body className="col col-12 col-sm-6">
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button>Go somewhere</Button>
+                  </Card>
+                </Col>
+              </Row>
+            </CardBody>
           </TabPane>
           <TabPane tabId="2">
-            <Card>
-              <CardBody spacing="lg">
-                <Row>
-                  <Col sm="6">
-                    <Card body>
-                      <CardTitle>Special Title Treatment</CardTitle>
-                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button>Go somewhere</Button>
-                    </Card>
-                  </Col>
-                  <Col sm="6">
-                    <Card body>
-                      <CardTitle>Special Title Treatment</CardTitle>
-                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button>Go somewhere</Button>
-                    </Card>
-                  </Col>
-                </Row>
-              </CardBody>
-            </Card>
+            <CardBody spacing="lg">
+              <Row>
+                <Col sm="6">
+                  <Card body className="mt-0">
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button>Go somewhere</Button>
+                  </Card>
+                </Col>
+                <Col sm="6">
+                  <Card body className="mt-0">
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button>Go somewhere</Button>
+                  </Card>
+                </Col>
+              </Row>
+            </CardBody>
           </TabPane>
         </TabContent>
 
-        <CardHeader className={'sticky-off'} spacing="lg">Classic Standard Version</CardHeader>
+        <CardHeader spacing="lg">Classic Standard Version</CardHeader>
         <CardBody spacing="lg">
           <Nav tabs>
             <NavItem>
@@ -111,33 +103,31 @@ class UiTabs extends React.Component {
 
           <TabContent activeTab={this.state.activeTab2}>
             <TabPane tabId="3">
-              <Card>
+              <Card borderless className="mt-0">
                 <CardBody spacing="lg">
-                  <h4>Classic Tab Syle - .tabs-classic</h4>
+                  <h4>Classic Tab Syle</h4>
                 </CardBody>
               </Card>
             </TabPane>
             <TabPane tabId="4">
-              <Card>
-                <CardBody spacing="lg">
-                  <Row>
-                    <Col sm="6">
-                      <Card body>
-                        <CardTitle>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                        <Button>Go somewhere</Button>
-                      </Card>
-                    </Col>
-                    <Col sm="6">
-                      <Card body>
-                        <CardTitle>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                        <Button>Go somewhere</Button>
-                      </Card>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </Card>
+              <CardsContainer>
+                <Row>
+                  <Col sm="6">
+                    <Card body>
+                      <CardTitle>CardsContainer</CardTitle>
+                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                      <Button>Go somewhere</Button>
+                    </Card>
+                  </Col>
+                  <Col sm="6">
+                    <Card body>
+                      <CardTitle>Special Title Treatment</CardTitle>
+                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                      <Button>Go somewhere</Button>
+                    </Card>
+                  </Col>
+                </Row>
+              </CardsContainer>
             </TabPane>
           </TabContent>
         </CardBody>

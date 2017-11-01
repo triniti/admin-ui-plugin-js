@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Container, Jumbotron, HeaderDisplay, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Container, Jumbotron, Row } from '../../../../src/components';
 
 const UiJumbotron = () => (
   <Card spacing="lg">

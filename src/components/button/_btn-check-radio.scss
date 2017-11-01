@@ -1,146 +1,8 @@
-// forms
-
-.form-group {
-  line-height: 1;
-  margin-bottom: $padding-md;
-}
-
-.card-header .form-group {
-  margin-bottom: 0;
-}
-
-.card-header form {
-  display: inline-block;
-}
-
-.form-control + .form-control,
-.input-group + .input-group {
-  margin-top: 1.5rem;
-}
-
-.form-white .form-control,
-.form-white.form-control {
-  background-color: $body-bg;
-}
-
-.form-control-static {
-  display: block;
-  width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.825rem;
-  line-height: 1.25;
-}
-
-.form-control-lg.form-control-static {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-}
-
-.form-control-static{
-  background-color: transparent;
-  border-color: transparent;
-}
-
-input[type='text']:hover,
-.form-control:hover,
-.form-control.form-control-success:hover,
-.form-control.form-control-warning:hover,
-.form-control.form-control-danger:hover,
-.form-control.form-control-info:hover {
-  box-shadow: 0 1px 3px 0px $gray-rgba-200;
-}
-
-select:focus option:checked {
-  background-color: theme-color("primary");
-}
-
-input[type='text']:focus,
-.form-control:focus {
-  background-color: $body-bg;
-  box-shadow: 0 1px 3px 0px $gray-rgba-400;
-}
-
-.form-inline {
-  margin: 0 -.25rem;
-}
-
-.form-inline .form-group {
-  margin: 0 .125rem;
-}
-
-label:not(.form-check-label),
-legend {
-  font-size: .9em;
-  font-weight: 600;
-  margin-bottom: .75rem;
-  text-transform: uppercase;
-  color: $body-color;
-}
-
-legend {
-  margin-bottom: 1.25rem;
-}
-
-.form-inline label,
-.form-inline input,
-.form-inline select,
-.form-inline button {
-  margin: 0 .125rem .5rem .125rem;
-}
-
-.form-group > label {
-  margin-right: .375rem;
-}
-
-.form-inline > label,
-.form-inline > input,
-.form-inline > select,
-.form-inline > button {
-  margin: 0 .25rem .5rem .25rem;
-}
-
-.form-check-label {
-  position: relative;
-}
-
-.form-control:not(.form-control-sm).round {
-  padding-left: 1rem;
-}
-
-.form-check-input {
-  margin-top: 0;
-  margin-right: .5rem;
-}
-
-.col-form-legend {
-  margin-bottom: .75rem;
-}
-
-label.col-form-label {
-  margin-right: 0;
-  margin-bottom: .25rem;
-}
-
-.form-check {
-  margin-bottom: .75rem;
-}
-
-.form-control-feedback {
-  line-height: 1.25rem;
-  margin-top: .5rem;
-}
-
-.form-text {
-  line-height: 1.25rem;
-}
-
-input::-moz-focus-inner {
-  border: 0;
-}
+//
+// btn-checkbox
+//
 
 // Custom Checkboxes and Radio Buttons
-
-// btn-checkbox buttons
 
 input.btn-check {
   position: absolute;
@@ -156,7 +18,7 @@ input.btn-check + label {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: $border-radius-lg;
-  box-shadow: inset 0 0 0 2px $gray-700;
+  box-shadow: inset 0 0 0 2px $gray-600;
 }
 
 input.btn-check + label:before {
@@ -223,7 +85,7 @@ input.form-control-sm.btn-check + label:before {
 input.form-control-md.btn-check + label {
   width: 2rem;
   height: 2rem;
-  box-shadow: inset 0 0 0 3px $gray-700;
+  box-shadow: inset 0 0 0 3px $gray-600;
 }
 
 input.form-control-md.btn-check + label:before {
@@ -243,7 +105,7 @@ input.form-control-md.btn-check:checked + label {
 input.form-control-lg.btn-check + label {
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: inset 0 0 0 3px $gray-700;
+  box-shadow: inset 0 0 0 3px $gray-600;
 }
 
 input.form-control-lg.btn-check + label:before {
@@ -258,7 +120,10 @@ input.form-control-lg.btn-check:checked + label {
   box-shadow: inset 0 0 0 3px theme-color("primary");
 }
 
-// btn-radio buttons
+
+//
+// btn-radio
+//
 
 input.btn-radio {
   position: absolute;
@@ -274,7 +139,7 @@ input.btn-radio + label {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: $round;
-  box-shadow: inset 0 0 0 2px $gray-700;
+  box-shadow: inset 0 0 0 2px $gray-600;
 }
 
 input.btn-radio + label:before {
@@ -336,7 +201,7 @@ input.form-control-sm.btn-radio + label:before {
 input.form-control-md.btn-radio + label {
   width: 2rem;
   height: 2rem;
-  box-shadow: inset 0 0 0 3px $gray-700;
+  box-shadow: inset 0 0 0 3px $gray-600;
 }
 
 input.form-control-md.btn-radio + label:before {
@@ -355,7 +220,7 @@ input.form-control-md.btn-radio:checked + label {
 input.form-control-lg.btn-radio + label {
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: inset 0 0 0 3px $gray-700;
+  box-shadow: inset 0 0 0 3px $gray-600;
 }
 
 input.form-control-lg.btn-radio + label:before {
@@ -369,7 +234,10 @@ input.form-control-lg.btn-radio:checked + label {
   box-shadow: inset 0 0 0 3px theme-color("primary");
 }
 
-// btn-toggle button
+
+//
+// btn-toggle
+//
 
 input.btn-toggle {
   position: absolute;
@@ -386,7 +254,7 @@ input.btn-toggle + label {
   height: 1.5rem;
   border-radius: $round;
   background-color: $body-bg;
-  box-shadow: inset 0 0 0 1px $gray-700;
+  box-shadow: inset 0 0 0 1px $gray-600;
 }
 
 input.btn-toggle + label:before,
@@ -470,7 +338,7 @@ input.btn-toggle.form-control-sm:checked + label:after {
 input.btn-toggle.form-control-md + label {
   width: 3.5rem;
   height: 2rem;
-  box-shadow: inset 0 0 0 2px $gray-700;
+  box-shadow: inset 0 0 0 2px $gray-600;
 }
 
 input.btn-toggle.form-control-md + label:before,
@@ -497,7 +365,7 @@ input.btn-toggle.form-control-md:checked + label:after {
 input.btn-toggle.form-control-lg + label {
   width: 4.375rem;
   height: 2.5rem;
-  box-shadow: inset 0 0 0 2px $gray-700;
+  box-shadow: inset 0 0 0 2px $gray-600;
 }
 
 input.btn-toggle.form-control-lg + label:before,
@@ -518,6 +386,7 @@ input.btn-toggle.form-control-lg:checked + label:after {
   left: 2rem;
   box-shadow: inset 0 0 0 2px theme-color("primary"), 0 3px 6px $gray-rgba-600;
 }
+
 
 // btn-check, btn-radio, btn-toggle adjustments
 
@@ -575,25 +444,4 @@ input.btn-radio.form-control-sm + label,
 input.btn-toggle.form-control-xs + label,
 input.btn-toggle.form-control-sm + label {
   vertical-align: text-bottom;
-}
-
-// forms in page-header or card-header
-
-.page-header form,
-.card-header form {
-  display: inline-block;
-}
-
-.page-header .form-group,
-.card-header .form-group {
-  margin-bottom: 0;
-}
-
-/*
-  @fixme: temporarily fix a bootstarp input group bug
-    when feedback immediately after a input group
-    the invalid-feedback should show
- */
-.input-group ~ .invalid-feedback {
-  display: block;
 }

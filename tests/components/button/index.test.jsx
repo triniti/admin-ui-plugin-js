@@ -39,13 +39,13 @@ test('Button', (t) => {
   t.equal('Home', wrapper.text());
 
   wrapper = shallow(<Button>Default Button</Button>);
-  t.true(wrapper.hasClass('btn-primary'), 'should render buttons with default color');
+  t.true(wrapper.hasClass('btn-light'), 'should render buttons with default color');
 
   wrapper = shallow(<Button color="danger">Default Button</Button>);
   t.true(wrapper.hasClass('btn-danger'), 'should render buttons with other colors');
 
   wrapper = shallow(<Button outline>Default Button</Button>);
-  t.true(wrapper.hasClass('btn-outline-primary'), 'should render buttons with outline variant');
+  t.true(wrapper.hasClass('btn-outline-light'), 'should render buttons with outline variant');
 
   wrapper = shallow(<Button outline color="info">Default Button</Button>);
   t.true(wrapper.hasClass('btn-outline-info'), 'should render buttons with outline variant with different colors');

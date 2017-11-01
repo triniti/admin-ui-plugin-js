@@ -1,5 +1,5 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle } from '../../../../src/components';
+import { Breadcrumb, BreadcrumbItem, Button, Card, CardBody, CardHeader, CardTitle } from '../../../../src/components';
 import iconClose from '../../assets/img/svg/icons/close.svg';
 
 const UiBreadcrumb = () => (
@@ -17,7 +17,7 @@ const UiBreadcrumb = () => (
           <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
           <BreadcrumbItem active>Data</BreadcrumbItem>
         </Breadcrumb>
-        <Button outline color="link" className={'rounded-circle mr-2'}>
+        <Button outline color="link" radius="circle">
           <img src={iconClose} alt="x" />
         </Button>
       </CardHeader>

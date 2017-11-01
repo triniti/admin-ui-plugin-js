@@ -9,12 +9,12 @@ const UiForm = () => (
       <Row>
         <Col sm="8" md="6">
           <CardTitle tag="h2">Card Title H2 with Button
-            <Button outline color="link" className={'rounded-circle'}>
+            <Button outline color="link" radius="circle">
               <img src={iconClose} alt="x" />
             </Button>
           </CardTitle>
           <Form>
-            <FormGroup className={'has-border'}>
+            <FormGroup>
               <Label for="exampleEmail1">Email</Label>
               <Input type="email" name="email" id="exampleEmail1" placeholder="with a placeholder" />
             </FormGroup>
@@ -124,18 +124,18 @@ const UiForm = () => (
           <Form inline className={'mt-3'}>
             <FormGroup>
               <Label for="exampleEmail4" hidden>Email</Label>
-              <Input type="email" name="email" id="exampleEmail4" placeholder="Email" className={'round'} />
+              <Input type="email" name="email" id="exampleEmail4" placeholder="Email" radius="round" />
             </FormGroup>
 
             <FormGroup>
               <Label for="examplePassword4" hidden>Password</Label>
               <Input
                 type="password" name="password" id="examplePassword4" placeholder="Password"
-                className={'round'}
+                radius="round"
               />
             </FormGroup>
 
-            <Button outline color="default" className={'round'}>Submit</Button>
+            <Button outline color="default"  radius="round">Submit</Button>
           </Form>
           <CardTitle tag="h4">Card Title H4</CardTitle>
           <Form inline className={'mb-3'}>

@@ -1,0 +1,28 @@
+// Icon
+
+@import "~bootstrap/scss/mixins";
+
+//
+// Base styles
+//
+
+.icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.icon-toggler {
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: '';
+  transition: transform 250ms ease-in-out;
+  opacity: .5;
+}
+
+.active > .icon-toggler {
+  transform: rotate(90deg);
+}

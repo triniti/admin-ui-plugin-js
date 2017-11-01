@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Popper } from 'react-popper';
 import { mapToCssModules } from '../utils';
-import './styles.scss';
 
 const propTypes = {
   tag: PropTypes.string,
@@ -12,6 +11,7 @@ const propTypes = {
   flip: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  arrow: PropTypes.string,
 };
 
 const defaultProps = {
@@ -28,11 +28,12 @@ const noFlipModifier = { flip: { enabled: false } };
 
 const DropdownMenu = (props, context) => {
   const {
-    className, cssModule, right, tag, flip, ...attrs
+    className, cssModule, right, tag, flip, arrow, ...attrs
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'dropdown-menu',
+    arrow ? `dropdown-menu-arrow-${arrow}` : false,
     {
       'dropdown-menu-right': right,
       show: context.isOpen,

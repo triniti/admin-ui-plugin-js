@@ -1,0 +1,40 @@
+//
+// btn-hover-bg
+//
+
+// Make a button look and behave like a link but show a bg on hover
+// Active state used for selecting list items or form items
+
+.btn-hover-bg {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-hover-bg:hover {
+  border-color: transparent;
+  background-color: $gray-400;
+}
+
+.btn-hover-bg.active {
+  color: $white;
+  border-color: theme-color("primary");
+  background-color: theme-color("primary");
+}
+
+
+//
+// btn-outline-hover-bg
+//
+
+// Make a button look and behave like an outline button but show a bg on hover
+
+.btn-outline-hover-bg {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-outline-hover-bg:hover,
+.btn-outline-hover-bg.active {
+  border-color: $gray-400;
+  background-color: $gray-400;
+}

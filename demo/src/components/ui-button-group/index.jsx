@@ -6,10 +6,10 @@ const UiButtonGroup = () => (
     <CardBody spacing="lg">
       <ButtonToolbar>
         <ButtonGroup className={'mr-3'}>
-          <Button outline color="default">1</Button>
-          <Button outline color="default">2</Button>
-          <Button outline color="default">3</Button>
-          <Button outline color="default">4</Button>
+          <Button outline>1</Button>
+          <Button outline>2</Button>
+          <Button outline>3</Button>
+          <Button outline>4</Button>
         </ButtonGroup>
         <ButtonGroup className={'mr-3'}>
           <Button>5</Button>
@@ -17,7 +17,9 @@ const UiButtonGroup = () => (
           <Button>7</Button>
         </ButtonGroup>
         <ButtonGroup>
-          <Button color="default">8</Button>
+          <Button color="primary">8</Button>
+          <Button color="primary">9</Button>
+          <Button color="primary">10</Button>
         </ButtonGroup>
       </ButtonToolbar>
     </CardBody>

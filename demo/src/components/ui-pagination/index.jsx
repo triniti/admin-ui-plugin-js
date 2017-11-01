@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardTitle, CardBody, Col, Pagination, PaginationItem, PaginationLink, Row } from '../../../../src/components';
+import { Card, CardTitle, CardBody, Pagination, PaginationItem, PaginationLink } from '../../../../src/components';
 
 const UiPagination = () => (
   <Card>

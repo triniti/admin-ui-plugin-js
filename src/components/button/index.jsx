@@ -2,24 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 const propTypes = {
   active: PropTypes.bool,
+  action: PropTypes.string,
   block: PropTypes.bool,
-  color: PropTypes.string,
-  disabled: PropTypes.bool,
-  outline: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  onClick: PropTypes.func,
-  size: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
+  color: PropTypes.string,
   cssModule: PropTypes.object,
+  disabled: PropTypes.bool,
+  dropdownArrow: PropTypes.bool,
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  onClick: PropTypes.func,
+  outline: PropTypes.bool,
+  outlineText: PropTypes.bool,
+  radius: PropTypes.string,
+  size: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  toggler: PropTypes.bool,
 };
 
 const defaultProps = {
-  color: 'primary',
+  color: 'light',
   tag: 'button',
 };
 
@@ -44,12 +50,17 @@ class Button extends React.Component {
   render() {
     let {
       active,
+      action,
       block,
       className,
       cssModule,
       color,
       outline,
+      outlineText,
+      radius,
       size,
+      toggler,
+      dropdownArrow,
       tag: Tag,
       innerRef,
       ...attributes
@@ -58,9 +69,13 @@ class Button extends React.Component {
     const classes = mapToCssModules(classNames(
       className,
       'btn',
-      `btn${outline ? '-outline' : ''}-${color}`,
-      size ? `btn-${size}` : false,
+      `btn${outline ? '-outline' : ''}${outlineText ? '-outline-text' : ''}-${color}`,
+      action ? `btn-action btn-${action}` : false,
+      radius ? `btn-radius-${radius}` : false,
       block ? 'btn-block' : false,
+      toggler ? 'btn-toggler' : false,
+      size ? `btn-${size}` : false,
+      dropdownArrow ? 'btn-dropdown-arrow' : false,
       { active, disabled: this.props.disabled },
     ), cssModule);
 

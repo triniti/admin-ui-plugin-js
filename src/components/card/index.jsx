@@ -6,10 +6,12 @@ import './styles.scss';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  inverse: PropTypes.bool,
+  borderless: PropTypes.bool,
   color: PropTypes.string,
   body: PropTypes.bool,
+  inverse: PropTypes.bool,
   outline: PropTypes.bool,
+  dark: PropTypes.bool,
   hover: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -26,8 +28,9 @@ const Card = (props) => {
     color,
     body,
     hover,
-    inverse,
     outline,
+    borderless,
+    inverse,
     tag: Tag,
     ...attributes
   } = props;
@@ -35,6 +38,7 @@ const Card = (props) => {
     className,
     'card',
     inverse ? 'card-inverse' : false,
+    borderless ? 'card-borderless' : false,
     body ? 'card-body' : false,
     hover ? 'card-hover' : false,
     color ? `card${outline ? '-outline' : ''}-${color}` : false,

@@ -10,7 +10,7 @@ const Misc = ({ tabId }) => (
         <CardText>
           With supporting text below as a natural lead-in to additional content.
         </CardText>
-        <Button outline color="inverse">Go somewhere</Button>
+        <Button>Go somewhere</Button>
       </CardBody>
     </Card>
     <Card>

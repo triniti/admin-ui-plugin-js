@@ -5,62 +5,53 @@ import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
+  boxed: PropTypes.bool,
   tabs: PropTypes.bool,
   pills: PropTypes.bool,
-  vertical: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  horizontal: PropTypes.string,
+  underline: PropTypes.bool,
+  vertical: PropTypes.bool,
   justified: PropTypes.bool,
-  fill: PropTypes.bool,
   navbar: PropTypes.bool,
-  card: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
+  size: PropTypes.string,
+  sticky: PropTypes.bool,
   cssModule: PropTypes.object,
 };
 
 const defaultProps = {
   tag: 'ul',
-  vertical: false,
-};
-
-const getVerticalClass = (vertical) => {
-  if (vertical === false) {
-    return false;
-  } else if (vertical === true || vertical === 'xs') {
-    return 'flex-column';
-  }
-
-  return `flex-${vertical}-column`;
 };
 
 const Nav = (props) => {
   const {
     className,
     cssModule,
+    boxed,
     tabs,
     pills,
+    underline,
     vertical,
-    horizontal,
     justified,
-    fill,
     navbar,
-    card,
+    size,
+    sticky,
     tag: Tag,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
+    size ? `nav-${size}` : false,
+    sticky ? 'nav-sticky' : false,
     navbar ? 'navbar-nav' : 'nav',
-    horizontal ? `justify-content-${horizontal}` : false,
-    getVerticalClass(vertical),
     {
+      'nav-boxed': boxed,
       'nav-tabs': tabs,
-      'card-header-tabs': card && tabs,
       'nav-pills': pills,
-      'card-header-pills': card && pills,
+      'nav-underline': underline,
       'nav-justified': justified,
-      'nav-fill': fill,
+      'flex-column': vertical,
     },
   ), cssModule);
 

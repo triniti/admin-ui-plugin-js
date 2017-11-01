@@ -1,0 +1,216 @@
+// list-group
+
+@import "~bootstrap/scss/mixins";
+
+// Base class
+//
+// Easily usable on <ul>, <ol>, or <div>.
+
+.list-group {
+  display: flex;
+  flex-direction: column;
+
+  // No need to set list-style: none; since .list-group-item is block level
+  padding-left: 0; // reset padding because ul and ol
+  margin-bottom: 0;
+}
+
+
+// Interactive list items
+//
+// Use anchor or button elements instead of `li`s or `div`s to create interactive
+// list items. Includes an extra `.active` modifier class for selected items.
+
+.list-group-item-action {
+  width: 100%; // For `<button>`s (anchors become 100% by default though)
+  color: $list-group-action-color;
+  text-align: inherit; // For `<button>`s (anchors inherit)
+
+  // Hover state
+  @include hover-focus {
+    color: $list-group-action-hover-color;
+    text-decoration: none;
+    background-color: $list-group-hover-bg;
+  }
+
+  &:active {
+    color: $list-group-action-active-color;
+    background-color: $list-group-action-active-bg;
+  }
+}
+
+
+// Individual list items
+//
+// Use on `li`s or `div`s within the `.list-group` parent.
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: $list-group-item-padding-y $list-group-item-padding-x;
+  // Place the border on the list items and negative margin up for better styling
+  margin-bottom: -$list-group-border-width;
+  background-color: $list-group-bg;
+  border: $list-group-border-width solid $list-group-border-color;
+
+  &:first-child {
+    @include border-top-radius($list-group-border-radius);
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+    @include border-bottom-radius($list-group-border-radius);
+  }
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $list-group-disabled-color;
+    background-color: $list-group-disabled-bg;
+  }
+
+  // Include both here for `<a>`s and `<button>`s
+  &.active {
+    z-index: 2; // Place active items above their siblings for proper border styling
+    color: $list-group-active-color;
+    background-color: $list-group-active-bg;
+    border-color: $list-group-active-border-color;
+  }
+}
+
+
+// Flush list items
+//
+// Remove borders and border-radius to keep list group items edge-to-edge. Most
+// useful within other components (e.g., cards).
+
+.list-group-flush {
+  .list-group-item {
+    border-right: 0;
+    border-left: 0;
+    border-radius: 0;
+  }
+
+  &:first-child {
+    .list-group-item:first-child {
+      border-top: 0;
+    }
+  }
+
+  &:last-child {
+    .list-group-item:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+
+// Contextual variants
+//
+// Add modifier classes to change text and background color on individual items.
+// Organizationally, this must come after the `:hover` states.
+
+@each $color, $value in $theme-colors {
+  @include list-group-item-variant($color, theme-color-level($color, -9), theme-color-level($color, 6));
+}
+
+
+
+
+// Custom Classes
+
+.list-group-item {
+  justify-content: space-between;
+  flex: 0 0 auto;
+}
+
+.list-group-item-text {
+  opacity: .8;
+}
+
+.list-group-item-heading + .list-group-item-text {
+  width: 100%;
+}
+
+
+// list-group-nav styles
+
+.list-group-nav .list-group-item {
+  border: none;
+  cursor: pointer;
+}
+
+.list-group-nav .list-group-item::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: calc(100% - 1.25rem);
+  margin-left: 1.25rem;
+  content: '';
+  border-top: 1px solid rgba(0, 0, 0, .0625);
+}
+
+.list-group-nav .list-group-item.active {
+  color: $body-color;
+  background-color: $gray-300;
+}
+
+.list-group-nav .list-group-item.active::before {
+  z-index: 1;
+  width: 3px;
+  height: 100%;
+  margin-left: 0;
+  background-color: theme-color("primary");
+}
+.scrollable-container .list-group-nav {
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid $gray-500;
+}
+
+
+// Borderless
+//
+// Remove top and bottom borders and border-radius to keep list group items edge-to-edge.
+
+.list-group-borderless {
+  .list-group-item {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .list-group-item::before {
+    border: none;
+  }
+}
+
+
+// For Roles Page, TODO: move to be associated with Roles component
+
+.list-group-item-roles {
+  display: flex;
+  border: none;
+  margin: 0;
+  min-height: $header-height;
+  padding-right: .5rem;
+  padding-left: $padding-xs;
+  border-bottom: 1px solid $gray-200;
+
+  @media (min-width: 768px) {
+    padding-left: $padding-md;
+  }
+  @media (min-width: 1025px) {
+    padding-left: $padding-lg;
+  }
+  @media (min-width: 1600px) {
+    padding-left: $padding-xl;
+  }
+}
+
+.list-group-item-roles:last-child {
+  border-bottom: none;
+}

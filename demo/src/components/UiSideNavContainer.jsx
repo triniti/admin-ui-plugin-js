@@ -61,18 +61,15 @@ class UiSideNavContainer extends React.Component {
     const componentIds = Object.keys(UiComponents);
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
-      <div className="sidenav-container" id="sidenav">
+      <div className="sidenav-container bg-white" id="sidenav">
         <SidenavHeader title="Filter Results">
-          <Button outline color="hover" className="rounded-circle btn-header-close-sidenav" onClick={this.toggleSideWrapper} id="tooltip-sidenav-btn-header">
+          <Button outline color="hover" className={'btn-sidenav-close'} onClick={this.toggleSideWrapper} id={'btn-sidenav-close'}>
             <img src={iconArrowLeft} alt="<" />
           </Button>
         </SidenavHeader>
-        <Tooltip placement="right" isOpen={this.state.tooltipOpen} target="tooltip-sidenav-btn-header" toggle={this.toggle} className="tooltip-sidepanel">
-          Toggle Side Panel
-        </Tooltip>
 
         <ScrollableContainer>
-          <ListGroup className="list-group-border list-group-nav bg-lightest">
+          <ListGroup nav>
             { uiElementsList }
           </ListGroup>
         </ScrollableContainer>

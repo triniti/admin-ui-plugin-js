@@ -34,6 +34,34 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
+      <CardHeader spacing="lg">Buttons Flush</CardHeader>
+      <CardBody spacing="lg">
+        <Row>
+          <Col>
+            <ListGroup flush>
+              <ListGroupItem tag="a" href="#" action>Link</ListGroupItem>
+              <ListGroupItem active tag="button" action>Active Button</ListGroupItem>
+              <ListGroupItem tag="button" action>Button</ListGroupItem>
+              <ListGroupItem disabled tag="button" action>Disabled Button</ListGroupItem>
+            </ListGroup>
+          </Col>
+        </Row>
+      </CardBody>
+
+      <CardHeader spacing="lg">Buttons Borderless</CardHeader>
+      <CardBody spacing="lg">
+        <Row>
+          <Col>
+            <ListGroup borderless>
+              <ListGroupItem tag="a" href="#" action>Link</ListGroupItem>
+              <ListGroupItem active tag="button" action>Active Button</ListGroupItem>
+              <ListGroupItem tag="button" action>Button</ListGroupItem>
+              <ListGroupItem disabled tag="button" action>Disabled Button</ListGroupItem>
+            </ListGroup>
+          </Col>
+        </Row>
+      </CardBody>
+
       <CardHeader spacing="lg">Contextual Color Alert</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -76,11 +104,11 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">List Group .list-group-nav</CardHeader>
+      <CardHeader spacing="lg">List Group Nav</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
-            <ListGroup className={'list-group-nav'}>
+            <ListGroup nav>
               <ListGroupItem active>
                 <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
                 <ListGroupItemText className={'mb-0'}>
@@ -104,11 +132,11 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">List Group w/ Underlines .list-group-nav.sidebar-nav</CardHeader>
+      <CardHeader spacing="lg">List Group Nav Borderless</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
-            <ListGroup className={'list-group-nav list-group-border'}>
+            <ListGroup borderless nav>
               <ListGroupItem active>
                 <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
                 <ListGroupItemText className={'mb-0'}>
