@@ -32,13 +32,12 @@ class UiButtons extends React.Component {
       <Card>
         <div>
           <CardHeader spacing="lg">Page Actions
-            <PageActions />
+            <PageActions>
+              <BackButton />
+              <DeleteButton />
+              <SaveButton />
+            </PageActions>
           </CardHeader>
-          <CardBody spacing="lg">
-            <BackButton />
-            <DeleteButton />
-            <SaveButton />
-          </CardBody>
         </div>
 
         <div>
@@ -84,7 +83,7 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg"><span>Solid radius="none"</span>
-           <Button outline radius="none" color="link">outline link</Button>
+            <Button outline radius="none" color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
             <Button radius="none">default</Button>

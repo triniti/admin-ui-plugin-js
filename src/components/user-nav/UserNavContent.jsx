@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert2';
-import { TabContent, Badge, Nav, NavItem, NavLink, ScrollableContainer } from '../';
 import classnames from 'classnames';
+import { TabContent, Badge, Nav, NavItem, NavLink, ScrollableContainer } from '../';
 import UserSettingsTabPane from './UserSettingsTabPane';
 import MiscTabPane from './UserNavMiscTabPane';
 import UserNavCloser from './UserNavCloser';
