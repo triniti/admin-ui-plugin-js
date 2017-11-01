@@ -11,7 +11,7 @@
   display: inline-block;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  font-weight: $btn-font-weight;
+  font-weight: 600;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -61,7 +61,8 @@
 .card-header .btn,
 .page-header .btn,
 .sidenav-header .btn,
-.form-inline .btn {
+.form-inline .btn,
+.input-group-btn > .btn {
   margin-bottom: 0;
 }
 
@@ -279,16 +280,18 @@ input[type="button"] {
 //
 
 .btn-sm {
-  font-weight: 500;
+  font-weight: 400;
   @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
 }
 
 .btn-lg {
+  font-weight: $btn-font-weight;
   @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
 }
 
 .btn-xl {
   font-size: 1.25rem;
+  font-weight: $btn-font-weight;
   padding: 1.5rem 2rem;
   border-width: 2px;
 
