@@ -4,8 +4,9 @@
 ## v0.1.4
 * Add PageActions, upgrade other components.
 * Color correction.
-* Move sass file into local components.
+* Move sass files into local components.
 * More style clean up.
+
 
 ## v0.1.3
 * Correctly importing scss from node_modules.
