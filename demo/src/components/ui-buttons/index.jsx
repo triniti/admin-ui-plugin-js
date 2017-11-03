@@ -246,30 +246,76 @@ class UiButtons extends React.Component {
                   <Button
                     color="primary" onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
+                    radius="round"
                   >One</Button>
                   <Button
                     color="primary" onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
+                    radius="round"
                   >Two</Button>
                   <Button
                     color="primary" onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
+                    radius="round"
                   >Three</Button>
                 </ButtonGroup>
 
-                <CardTitle tag="h4">Radio Buttons</CardTitle>
+                <CardTitle tag="h4">Radio Buttons color="multistate"</CardTitle>
+                <ButtonGroup className={'mb-2'}>
+                  <Button
+                    color="multistate" onClick={() => this.onRadioBtnClick(1)}
+                    active={this.state.rSelected === 1}
+                  >One</Button>
+                  <Button
+                    color="multistate" onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                  >Two</Button>
+                  <Button
+                    color="multistate" onClick={() => this.onRadioBtnClick(3)}
+                    active={this.state.rSelected === 3}
+                  >Three</Button>
+                </ButtonGroup>
+                <br/>
+                <ButtonGroup className={'mb-2'}>
+                  <Button
+                    color="multistate" onClick={() => this.onRadioBtnClick(1)}
+                    active={this.state.rSelected === 1}
+                    size="sm"
+                  >One</Button>
+                  <Button
+                    color="multistate" onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                    size="sm"
+                  >Two</Button>
+                  <Button
+                    color="multistate" onClick={() => this.onRadioBtnClick(3)}
+                    active={this.state.rSelected === 3}
+                    size="sm"
+                  >Three</Button>
+                </ButtonGroup>
+
+                <CardTitle tag="h4">Radio Buttons outline</CardTitle>
                 <ButtonGroup className={'mb-2'}>
                   <Button
                     onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
+                    size="sm"
+                    radius="round"
+                    outline
                   >One</Button>
                   <Button
                     onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
+                    size="sm"
+                    radius="round"
+                    outline
                   >Two</Button>
                   <Button
                     onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
+                    size="sm"
+                    radius="round"
+                    outline
                   >Three</Button>
                 </ButtonGroup>
 
@@ -294,17 +340,19 @@ class UiButtons extends React.Component {
                   <Button
                     outlineText onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
-                    color="success"
+                    color="primary"
+                    size="sm"
                   >Save</Button>
                   <Button
                     outlineText onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
-                    color="primary"
-                  >Save and Close</Button>
+                    size="sm"
+                  >N/A</Button>
                   <Button
                     outlineText onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
                     color="danger"
+                    size="sm"
                   >Delete</Button>
                 </ButtonGroup>
 

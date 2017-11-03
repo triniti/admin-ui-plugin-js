@@ -8,17 +8,16 @@
 .btn-hover-bg {
   border-color: transparent;
   background-color: transparent;
-}
 
-.btn-hover-bg:hover {
-  border-color: transparent;
-  background-color: $gray-400;
-}
-
-.btn-hover-bg.active {
-  color: $white;
-  border-color: theme-color("primary");
-  background-color: theme-color("primary");
+  &:hover {
+    border-color: transparent;
+    background-color: $gray-400;
+  }
+  &.active {
+    color: $white;
+    border-color: theme-color("primary");
+    background-color: theme-color("primary");
+  }
 }
 
 

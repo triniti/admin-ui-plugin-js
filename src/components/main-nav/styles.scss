@@ -255,6 +255,7 @@
     box-shadow: 0 10px 14px -7px $gray-rgba-600;
   }
   .navbar-dark .navbar-nav .nav-dropdown-menu {
+    border: none;
     border-top: 1px solid $navbar-theme-dark-dropdown;
     background-color: $navbar-theme-dark-dropdown;
   }

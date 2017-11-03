@@ -130,46 +130,6 @@ input[type="button"] {
 
 
 //
-// radius parameter: round, square, circle
-//
-
-.btn-radius-round {
-  margin-right: .35rem;
-  border-radius: $round;
-}
-
-.btn-radius-round span:not(.badge-alert) {
-  margin: 0 .25rem;
-  vertical-align: middle;
-}
-
-.btn-radius-none {
-  border-radius: 0;
-}
-
-.btn-radius-circle {
-  width: 2.125rem;
-  height: 2.125rem;
-  padding: 0;
-  letter-spacing: 0;
-  border-radius: $round;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-// Show dropdown-menu on hover
-
-.btn-radius-circle + .dropdown-menu:hover {
-  display: block;
-}
-
-.btn-radius-circle:hover + .dropdown-menu {
-  display: block;
-}
-
-
-//
 // img sizes in buttons, usually for svg icons
 //
 
@@ -207,6 +167,7 @@ input[type="button"] {
 @import "_btn-hover-bg";
 @import "_btn-toggler";
 @import "_btn-check-radio";
+@import "_btn-multistate";
 
 
 // todo: need to move to modal footer and check items
@@ -298,6 +259,46 @@ input[type="button"] {
   &:hover {
     border-width: 2px;
   }
+}
+
+
+//
+// radius parameter: round, square, circle
+//
+
+.btn-radius-round {
+  margin-right: .35rem;
+  border-radius: $round;
+}
+
+.btn-radius-round span:not(.badge-alert) {
+  margin: 0 .25rem;
+  vertical-align: middle;
+}
+
+.btn-radius-none {
+  border-radius: 0;
+}
+
+.btn-radius-circle {
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0;
+  letter-spacing: 0;
+  border-radius: $round;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Show dropdown-menu on hover
+
+.btn-radius-circle + .dropdown-menu:hover {
+  display: block;
+}
+
+.btn-radius-circle:hover + .dropdown-menu {
+  display: block;
 }
 
 

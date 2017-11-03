@@ -172,6 +172,14 @@ a:not([href]):not([tabindex]),
 }
 
 
+// Borderless - remove border and box-shadow
+
+.borderless {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
 // HR Inverse
 
 .card-inverse > hr {
