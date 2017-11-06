@@ -4,9 +4,15 @@ import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
 import './styles.scss';
 
+const UNKNOWN = 0;
+const TRUE_VAL = 1;
+const FALSE_VAL = 2;
+
 const propTypes = {
-  children: PropTypes.node,
+  value: PropTypes.oneOf([0, 1, 2, '0', '1', '2']).isRequired,
+  onChange: PropTypes.func.isRequired,
   className: PropTypes.string,
+  cssModule: PropTypes.object,
   unsetText: PropTypes.string,
   trueText: PropTypes.string,
   falseText: PropTypes.string,
@@ -25,6 +31,8 @@ const defaultProps = {
 
 const TrinaryControl = (props) => {
   const {
+    value,
+    onChange,
     className,
     cssModule,
     unsetText,
@@ -47,10 +55,10 @@ const TrinaryControl = (props) => {
 
   return (
     <div className={classes}>
-      <select {...attributes}>
-        <option value="0">{unsetText}</option>
-        <option value="1">{trueText}</option>
-        <option value="2">{falseText}</option>
+      <select value={parseInt(value, 10)} onChange={onChange} {...attributes}>
+        <option value={UNKNOWN}>{unsetText}</option>
+        <option value={TRUE_VAL}>{trueText}</option>
+        <option value={FALSE_VAL}>{falseText}</option>
       </select>
     </div>
   );

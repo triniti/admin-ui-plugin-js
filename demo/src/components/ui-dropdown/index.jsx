@@ -1,13 +1,17 @@
 import React from 'react';
 import { Card, CardBody, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, TrinaryControl } from '../../../../src/components';
+import CardHeader from '../../../../src/components/card-header/index';
 
 class UiDropdown extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.state = {
       dropdownOpen: false,
+      trinaryDefault: 0,
+      trinaryCustom: 1,
     };
   }
 
@@ -17,33 +21,69 @@ class UiDropdown extends React.Component {
     });
   }
 
+  handleChange(e) {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: parseInt(value, 10),
+    });
+  }
+
   render() {
     return (
-      <Card>
-        <CardBody spacing="lg">
-          <Row>
-            <Col xs="6">
-              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
-                <DropdownToggle caret color="default" outline>
-                Dropdown
-              </DropdownToggle>
-                <DropdownMenu arrow="right" right>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem disabled>Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </Col>
-            <Col xs="6">
-              <Col xs="12" sm="8" md="6">
-                <TrinaryControl unsetText="Any User" trueText="Is Staff" falseText="Non Staff" />
+      <div>
+        <Card>
+          <CardHeader>Dropdown</CardHeader>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="6">
+                <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
+                  <DropdownToggle caret color="default" outline>
+                    Dropdown
+                  </DropdownToggle>
+                  <DropdownMenu arrow="right" right>
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem disabled>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Another Action</DropdownItem>
+                  </DropdownMenu>
+                </Dropdown>
               </Col>
-            </Col>
-          </Row>
-        </CardBody>
-      </Card>
+            </Row>
+          </CardBody>
+        </Card>
+
+        <Card>
+          <CardHeader>Trinary Control - Default</CardHeader>
+          <CardBody>
+            <Row>
+              <Col xs="6">
+                <Col xs="8" sm="4" md="3">
+                  <TrinaryControl name="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                </Col>
+              </Col>
+              <Col xs="6">
+                <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
+              </Col>
+            </Row>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardHeader>Trinary Control - Custom</CardHeader>
+          <CardBody>
+            <Row>
+              <Col xs="6">
+                <Col xs="12" sm="8" md="6">
+                  <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" value={this.state.trinaryCustom} onChange={this.handleChange} />
+                </Col>
+              </Col>
+              <Col xs="6">
+                <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
+              </Col>
+            </Row>
+          </CardBody>
+        </Card>
+      </div>
     );
   }
 }
