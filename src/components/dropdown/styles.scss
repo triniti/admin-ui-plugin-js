@@ -221,3 +221,14 @@
 .table-responsive .dropdown-menu {
   margin-bottom: .75rem;
 }
+
+// increases bottom area to fix hover for dropdown
+
+.dropdown .btn:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: -.25rem;
+}
