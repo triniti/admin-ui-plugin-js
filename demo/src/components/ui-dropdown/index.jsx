@@ -37,7 +37,9 @@ class UiDropdown extends React.Component {
               </Dropdown>
             </Col>
             <Col xs="6">
-              <TrinaryControl unsetText="Any User" trueText="Is Staff" falseText="Non Staff" />
+              <Col xs="12" sm="8" md="6">
+                <TrinaryControl unsetText="Any User" trueText="Is Staff" falseText="Non Staff" />
+              </Col>
             </Col>
           </Row>
         </CardBody>

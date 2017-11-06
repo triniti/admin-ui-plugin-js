@@ -1,6 +1,63 @@
 // Trinary-Control
 
 .trinary-control {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.trinary-control:before {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 1.5rem;
+  height: 100%;
+  background-color: #fff;
+  border-left: 1px solid #ddd;
+  content: "";
+  pointer-events: none;
+}
+
+.trinary-control:after {
+  position: absolute;
+  z-index: 2;
+  top: 45%;
+  right: .5rem;
+  display: block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-left: 0.3em solid transparent;
+  pointer-events: none;
+}
+
+.trinary-control select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.trinary-control select:focus {
+    outline: none;
+}
+
+.trinary-control {
 
 }
 
