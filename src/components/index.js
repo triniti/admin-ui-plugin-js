@@ -94,6 +94,7 @@ import TabContent from './tab-content';
 import TabPane from './tab-pane';
 import Table from './table';
 import Tooltip from './tooltip';
+import TrinaryControl from './trinary-control';
 import UserNav from './user-nav';
 import {
   UncontrolledAlert,
@@ -200,6 +201,7 @@ export {
   TabPane,
   Table,
   Tooltip,
+  TrinaryControl,
   UserNav,
   UncontrolledAlert,
   UncontrolledButtonDropdown,
