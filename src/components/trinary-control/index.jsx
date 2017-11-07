@@ -50,7 +50,7 @@ const TrinaryControl = (props) => {
     'trinary-control',
     size ? `trinary-control-${size}` : false,
     `trinary-control${outline ? '-outline' : ''}-${color}`,
-    radius ? `trinary-control-${radius}` : false,
+    radius ? `trinary-control-radius-${radius}` : false,
   ), cssModule);
 
   return (

@@ -55,12 +55,12 @@ class UiDropdown extends React.Component {
 
         <Card>
           <CardHeader>Trinary Control - Default</CardHeader>
-          <CardBody>
+          <CardBody spacing="lg">
             <Row>
-              <Col xs="6">
-                <Col xs="8" sm="4" md="3">
+              <Col xs="3" xs="4">
+                <div style={{width: '4rem'}}>
                   <TrinaryControl name="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
-                </Col>
+                </div>
               </Col>
               <Col xs="6">
                 <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -70,12 +70,12 @@ class UiDropdown extends React.Component {
         </Card>
         <Card>
           <CardHeader>Trinary Control - Custom</CardHeader>
-          <CardBody>
+          <CardBody spacing="lg">
             <Row>
-              <Col xs="6">
-                <Col xs="12" sm="8" md="6">
-                  <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" value={this.state.trinaryCustom} onChange={this.handleChange} />
-                </Col>
+              <Col xs="3" xs="4">
+                <div style={{width: '105px'}}>
+                  <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" value={this.state.trinaryCustom} onChange={this.handleChange} />
+                </div>
               </Col>
               <Col xs="6">
                 <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
