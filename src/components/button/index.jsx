@@ -21,7 +21,6 @@ const propTypes = {
   radius: PropTypes.string,
   size: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  toggler: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -59,7 +58,6 @@ class Button extends React.Component {
       outlineText,
       radius,
       size,
-      toggler,
       dropdownArrow,
       tag: Tag,
       innerRef,
@@ -73,7 +71,6 @@ class Button extends React.Component {
       action ? `btn-action btn-${action}` : false,
       radius ? `btn-radius-${radius}` : false,
       block ? 'btn-block' : false,
-      toggler ? 'btn-toggler' : false,
       size ? `btn-${size}` : false,
       dropdownArrow ? 'btn-dropdown-arrow' : false,
       { active, disabled: this.props.disabled },
