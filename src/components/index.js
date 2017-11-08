@@ -90,6 +90,7 @@ import SidenavContainer from './sidenav-container';
 import SidenavHeader from './sidenav-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
+import Switch from './switch';
 import TabContent from './tab-content';
 import TabPane from './tab-pane';
 import Table from './table';
@@ -197,6 +198,7 @@ export {
   SidenavHeader,
   Spinner,
   StatusMessage,
+  Switch,
   TabContent,
   TabPane,
   Table,

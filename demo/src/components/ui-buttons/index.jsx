@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Row, SaveButton } from '../../../../src/components';
+import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Row, SaveButton, Switch } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 
@@ -417,24 +417,19 @@ class UiButtons extends React.Component {
             <Form>
               <FormGroup>
                 <Label for="toggler1">size="xs"</Label>
-                <Input size="xs" type="checkbox" name="toggler1" id="toggler1" className={'btn-toggle'} />
-                <Label for="toggler1" />
+                <Switch id="toggler1" size="xs" value="on"/>
 
                 <Label for="toggler2" className={'ml-4'}>size="sm"</Label>
-                <Input size="sm" type="checkbox" name="toggler2" id="toggler2" className={'btn-toggle'} />
-                <Label for="toggler2" />
+                <Switch id="toggler2" size="sm"/>
 
                 <Label for="toggler3" className={'ml-4'}>default</Label>
-                <Input type="checkbox" name="toggler3" id="toggler3" className={'btn-toggle'} />
-                <Label for="toggler3" />
+                <Switch id="toggler3" />
 
                 <Label for="toggler4" className={'ml-4'}>size="md"</Label>
-                <Input size="md" type="checkbox" name="toggler4" id="toggler4" className={'btn-toggle'} />
-                <Label for="toggler4" />
+                <Switch id="toggler4" size="md"/>
 
-                <Label for="toggler4" className={'ml-4'}>size="lg"</Label>
-                <Input size="lg" type="checkbox" name="toggler5" id="toggler5" className={'btn-toggle'} />
-                <Label for="toggler5" />
+                <Label for="toggler5" className={'ml-4'}>size="lg"</Label>
+                <Switch id="toggler5" size="lg"/>
 
               </FormGroup>
             </Form>

@@ -235,193 +235,34 @@ input.form-control-lg.btn-radio:checked + label {
 }
 
 
-//
-// btn-toggle
-//
-
-input.btn-toggle {
-  position: absolute;
-  visibility: hidden;
-  max-width: 0;
-  max-height: 0;
-  padding: 0;
-  opacity: 0;
-  -webkit-appearance: none;
-}
-
-input.btn-toggle + label {
-  width: 2.625rem;
-  height: 1.5rem;
-  border-radius: $round;
-  background-color: $body-bg;
-  box-shadow: inset 0 0 0 1px $gray-600;
-}
-
-input.btn-toggle + label:before,
-input.btn-toggle + label:after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 1.5rem;
-  height: 1.5rem;
-  content: '';
-  transition: $transition;
-  border-radius: $round;
-  background: transparent;
-}
-
-input.btn-toggle + label:after {
-  background: white;
-  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
-}
-
-input.btn-toggle:checked + label:before {
-  width: 2.625rem;
-  background: theme-color("primary");
-}
-
-input.btn-toggle:checked + label:after {
-  left: 1.125rem;
-  box-shadow: inset 0 0 0 1px theme-color("primary"), 0 2px 4px $gray-rgba-600;
-}
-
-// btn-toggle xs
-
-input.btn-toggle.form-control-xs + label {
-  width: 21px;
-  height: 13px;
-}
-
-input.btn-toggle.form-control-xs + label:before,
-input.btn-toggle.form-control-xs + label:after {
-  width: 13px;
-  height: 13px;
-}
-
-input.btn-toggle + label:after {
-  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 1px 3px $gray-rgba-600;
-}
-
-input.btn-toggle.form-control-xs:checked + label:before {
-  width: 21px;
-}
-
-input.btn-toggle.form-control-xs:checked + label:after {
-  left: 8px;
-  box-shadow: inset 0 0 0 1px theme-color("primary"), 0 1px 3px $gray-rgba-600;
-}
-
-// btn-toggle sm
-
-input.btn-toggle.form-control-sm + label {
-  width: 1.75rem;
-  height: 1rem;
-}
-
-input.btn-toggle.form-control-sm + label:before,
-input.btn-toggle.form-control-sm + label:after {
-  width: 1rem;
-  height: 1rem;
-}
-
-input.btn-toggle.form-control-sm:checked + label:before {
-  width: 1.75rem;
-}
-
-input.btn-toggle.form-control-sm:checked + label:after {
-  left: .75rem;
-}
-
-// btn-toggle md
-
-input.btn-toggle.form-control-md + label {
-  width: 3.5rem;
-  height: 2rem;
-  box-shadow: inset 0 0 0 2px $gray-600;
-}
-
-input.btn-toggle.form-control-md + label:before,
-input.btn-toggle.form-control-md + label:after {
-  width: 2rem;
-  height: 2rem;
-}
-
-input.btn-toggle.form-control-md + label:after {
-  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
-}
-
-input.btn-toggle.form-control-md:checked + label:before {
-  width: 3.5rem;
-}
-
-input.btn-toggle.form-control-md:checked + label:after {
-  left: 1.5rem;
-  box-shadow: inset 0 0 0 2px theme-color("primary"), 0 2px 4px $gray-rgba-600;
-}
-
-// btn-toggle lg
-
-input.btn-toggle.form-control-lg + label {
-  width: 4.375rem;
-  height: 2.5rem;
-  box-shadow: inset 0 0 0 2px $gray-600;
-}
-
-input.btn-toggle.form-control-lg + label:before,
-input.btn-toggle.form-control-lg + label:after {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-input.btn-toggle.form-control-lg + label:after {
-  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 3px 6px $gray-rgba-600;
-}
-
-input.btn-toggle.form-control-lg:checked + label:before {
-  width: 4.375rem;
-}
-
-input.btn-toggle.form-control-lg:checked + label:after {
-  left: 2rem;
-  box-shadow: inset 0 0 0 2px theme-color("primary"), 0 3px 6px $gray-rgba-600;
-}
-
-
 // btn-check, btn-radio, btn-toggle adjustments
 
 .form-check-label > .btn-check + label,
-.form-check-label > .btn-radio + label,
-.form-check-label > .btn-toggle + label {
+.form-check-label > .btn-radio + label {
   margin-left: -1.25rem;
 }
 
 .form-check-label > .btn-check + label,
-.form-check-label > .btn-radio + label,
-.form-check-label > .btn-toggle + label {
+.form-check-label > .btn-radio + label {
   margin-right: .5rem;
 }
 
 .form-check-label > .btn-check.form-control-xs + label,
 .form-check-label > .btn-check.form-control-sm + label,
 .form-check-label > .btn-radio.form-control-xs + label,
-.form-check-label > .btn-radio.form-control-sm + label,
-.form-check-label > .btn-toggle.form-control-xs + label,
-.form-check-label > .btn-toggle.form-control-sm + label {
+.form-check-label > .btn-radio.form-control-sm + label {
   margin-right: .25rem;
 }
 
 .form-check-label > .btn-check.form-control-md + label,
 .form-check-label > .btn-check.form-control-lg + label,
 .form-check-label > .btn-radio.form-control-md + label,
-.form-check-label > .btn-radio.form-control-lg + label,
-.form-check-label > .btn-toggle.form-control-md + label .form-check-label > .btn-toggle.form-control-lg + label {
+.form-check-label > .btn-radio.form-control-lg + label {
   margin-right: .75rem;
 }
 
 input.btn-check + label,
-input.btn-radio + label,
-input.btn-toggle + label {
+input.btn-radio + label {
   position: relative;
   display: inline-block;
   margin-bottom: 0;
@@ -432,16 +273,13 @@ input.btn-toggle + label {
 }
 
 input.btn-check[disabled] + label,
-input.btn-radio[disabled] + label,
-input.btn-toggle[disabled] + label {
+input.btn-radio[disabled] + label {
   pointer-events: none;
 }
 
 input.btn-check.form-control-xs + label,
 input.btn-check.form-control-sm + label,
 input.btn-radio.form-control-xs + label,
-input.btn-radio.form-control-sm + label,
-input.btn-toggle.form-control-xs + label,
-input.btn-toggle.form-control-sm + label {
+input.btn-radio.form-control-sm + label {
   vertical-align: text-bottom;
 }
