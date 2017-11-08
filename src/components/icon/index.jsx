@@ -20,7 +20,7 @@ const propTypes = {
 
 const defaultProps = {
   tag: 'img',
-  imgSrc: 'close',
+  imgSrc: 'circle',
 };
 
 const Icon = (props) => {
