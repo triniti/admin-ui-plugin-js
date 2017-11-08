@@ -60,3 +60,7 @@
 .active > .icon-toggler {
   transform: rotate(90deg);
 }
+
+.icon-inverse {
+  filter: invert(1);
+}

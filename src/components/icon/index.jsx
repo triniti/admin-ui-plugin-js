@@ -12,9 +12,10 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  toggler: PropTypes.bool,
   imgSrc: PropTypes.string,
   size: PropTypes.string,
+  inverse: PropTypes.bool,
+  toggler: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -27,16 +28,18 @@ const Icon = (props) => {
     className,
     cssModule,
     tag: Tag,
-    toggler,
     imgSrc,
     size,
+    inverse,
+    toggler,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
-    toggler ? 'icon-toggler' : false,
     'icon',
     size ? `icon-${size}` : false,
+    inverse ? 'icon-inverse' : false,
+    toggler ? 'icon-toggler' : false,
   ), cssModule);
 
   return (

@@ -31,14 +31,14 @@ export default () => (
             <UncontrolledTooltip placement="top" target="eye">eye</UncontrolledTooltip>
             <Icon imgSrc="menu" id="menu"/>
             <UncontrolledTooltip placement="top" target="menu">menu</UncontrolledTooltip>
-            <Icon imgSrc="more-vertical" id="more-vertical"/>
+            <Icon imgSrc="more-vertical" id="more-vertical" size="lg"/>
             <UncontrolledTooltip placement="top" target="more-vertical">more-vertical</UncontrolledTooltip>
             <Icon imgSrc="save" id="save"/>
             <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
             <Icon imgSrc="search" id="search"/>
             <UncontrolledTooltip placement="top" target="search">search</UncontrolledTooltip>
-            <Icon imgSrc="trinary-control" id="trinary-control"/>
-            <UncontrolledTooltip placement="top" target="trinary-control">trinary-control</UncontrolledTooltip>
+            <Icon imgSrc="sort" id="sort"/>
+            <UncontrolledTooltip placement="top" target="sort">sort</UncontrolledTooltip>
             <Icon imgSrc="user" id="user"/>
             <UncontrolledTooltip placement="top" target="user">user</UncontrolledTooltip>
           </Col>
@@ -56,7 +56,7 @@ export default () => (
           <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
           <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
           <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
-          <Button outline radius="circle" color="link"><Icon imgSrc="menu" alt="menu" /></Button>
+          <Button radius="circle" color="dark"><Icon imgSrc="menu" alt="menu" inverse /></Button>
         </Col>
       </Row>
       </CardBody>
