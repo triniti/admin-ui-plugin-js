@@ -232,15 +232,10 @@ select.form-control-lg {
   }
 }
 
-.form-check-label {
-  // padding-left: $form-check-input-gutter;
-  margin-bottom: 0; // Override default `<label>` bottom margin
-}
-
 .form-check-input {
   display: inline-block;
-  margin-top: $form-check-input-margin-y;
   margin-right: .5rem;
+  align-self: flex-start;
 }
 
 // Radios and checkboxes on same line
@@ -469,6 +464,18 @@ legend {
 .form-check-label {
   position: relative;
   display: inline-flex;
+  margin-bottom: 0;
+  align-items: center;
+  line-height: 1;
+  vertical-align: middle;
+  
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.card-header .form-check-label {
+  font-size: .825rem;
 }
 
 input[type="radio"],
@@ -562,30 +569,35 @@ input::-moz-focus-inner {
   box-shadow: none !important;
 }
 
+.form-check.disabled,
+.form-check.disabled .form-check-label {
+  cursor: not-allowed;
+}
 
-// btn-check, btn-radio, btn-toggle adjustments
+
+// btn-check, radio-input, btn-toggle adjustments
 
 .form-check-label > .btn-check + label,
-.form-check-label > .btn-radio + label {
-  margin-right: .5rem;
+.form-check-label > .radio-input + label {
+  margin-right: .375rem;
 }
 
 .form-check-label > .btn-check.form-control-xs + label,
 .form-check-label > .btn-check.form-control-sm + label,
-.form-check-label > .btn-radio.form-control-xs + label,
-.form-check-label > .btn-radio.form-control-sm + label {
-  margin-right: .4rem;
+.form-check-label > .radio-input.form-control-xs + label,
+.form-check-label > .radio-input.form-control-sm + label {
+  margin-right: .375rem;
 }
 
 .form-check-label > .btn-check.form-control-md + label,
 .form-check-label > .btn-check.form-control-lg + label,
-.form-check-label > .btn-radio.form-control-md + label,
-.form-check-label > .btn-radio.form-control-lg + label {
-  margin-right: .75rem;
+.form-check-label > .radio-input.form-control-md + label,
+.form-check-label > .radio-input.form-control-lg + label {
+  margin-right: .5rem;
 }
 
 input.btn-check + label,
-input.btn-radio + label {
+input.radio-input + label {
   position: relative;
   display: inline-block;
   margin-bottom: 0;
@@ -595,14 +607,9 @@ input.btn-radio + label {
   text-indent: -5000px;
 }
 
-input.btn-check[disabled] + label,
-input.btn-radio[disabled] + label {
-  pointer-events: none;
-}
-
 input.btn-check.form-control-xs + label,
 input.btn-check.form-control-sm + label,
-input.btn-radio.form-control-xs + label,
-input.btn-radio.form-control-sm + label {
+input.radio-input.form-control-xs + label,
+input.radio-input.form-control-sm + label {
   vertical-align: text-bottom;
 }

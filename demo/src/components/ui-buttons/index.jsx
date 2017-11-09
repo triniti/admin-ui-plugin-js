@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Row, SaveButton, Switch } from '../../../../src/components';
+import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Radio, Row, SaveButton, Switch } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 
@@ -440,17 +440,17 @@ class UiButtons extends React.Component {
           <CardHeader spacing="lg">Checkbox & Radio .btn-radio style
             <Form>
               <FormGroup>
-                <Input size="sm" type="checkbox" name="toggler11" id="toggler11" className={'btn-radio'} onClick={() => this.onRadioBtnClick(11)} />
-                <Label for="toggler11" />
-                <Label for="toggler11" className={'mr-3 mb-0'}>Yes</Label>
+                <Label check className="mr-3">
+                <Radio size="sm" type="radio" name="toggler11" id="toggler11" onClick={() => this.onRadioBtnClick(11)} />
+                Yes</Label>
 
-                <Input size="sm" type="checkbox" name="toggler12" id="toggler12" className={'btn-radio'} onClick={() => this.onRadioBtnClick(12)} />
-                <Label for="toggler12" />
-                <Label for="toggler12" className={'mr-3 mb-0'}>No</Label>
+                <Label check className="mr-3">
+                <Radio size="sm" type="radio" name="toggler11" id="toggler12" onClick={() => this.onRadioBtnClick(12)} />
+                No</Label>
 
-                <Input size="sm" type="checkbox" name="toggler13" id="toggler13" className={'btn-radio'} onClick={() => this.onRadioBtnClick(13)} />
-                <Label for="toggler13" />
-                <Label for="toggler13" className={'mr-3 mb-0'}>Maybe</Label>
+                <Label check className="mr-3">
+                <Radio size="sm" type="radio" name="toggler11" id="toggler13" onClick={() => this.onRadioBtnClick(13)} />
+                Maybe</Label>
               </FormGroup>
             </Form>
           </CardHeader>
@@ -458,25 +458,25 @@ class UiButtons extends React.Component {
             <Form>
               <FormGroup>
 
-                <Input size="xs" type="checkbox" name="toggler6" id="toggler6" className={'btn-radio'} />
-                <Label for="toggler6" />
-                <Label for="toggler6" className={'mr-4'}>size="xs"</Label>
+                <Label check className={'mr-4'}>
+                <Radio  size="xs" type="checkbox" name="toggler6" id="toggler6" />
+                size="xs"</Label>
 
-                <Input size="sm" type="checkbox" name="toggler7" id="toggler7" className={'btn-radio'} />
-                <Label for="toggler7" />
-                <Label for="toggler7" className={'mr-4'}>size="sm"</Label>
+                <Label check className={'mr-4'}>
+                <Radio size="sm" type="checkbox" name="toggler7" id="toggler7" />
+                size="sm"</Label>
 
-                <Input type="checkbox" name="toggler8" id="toggler8" className={'btn-radio'} />
-                <Label for="toggler8" />
-                <Label for="toggler8" className={'mr-4'}>default</Label>
+                <Label check className={'mr-4'}>
+                <Radio type="checkbox" name="toggler8" id="toggler8" />
+                default</Label>
 
-                <Input size="md" type="checkbox" name="toggler9" id="toggler9" className={'btn-radio'} />
-                <Label for="toggler9" />
-                <Label for="toggler9" className={'mr-4'}>size="md"</Label>
+                <Label check className={'mr-4'}>
+                <Radio size="md" type="checkbox" name="toggler9" id="toggler9" />
+                size="md"</Label>
 
-                <Input size="lg" type="checkbox" name="toggler10" id="toggler10" className={'btn-radio'} />
-                <Label for="toggler10" />
-                <Label for="toggler10" className={'mr-4'}>size="lg"</Label>
+                <Label check className={'mr-4'}>
+                <Radio size="lg" type="checkbox" name="toggler10" id="toggler10" />
+                size="lg"</Label>
 
               </FormGroup>
             </Form>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Row, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
 import iconClose from 'assets/img/svg/icons/close.svg';
 
 class UiForm extends React.Component {
@@ -255,8 +255,7 @@ class UiForm extends React.Component {
                 </FormGroup>
                 <FormGroup check className={'mb-3'}>
                   <Label check>
-                    <Input type="checkbox" name="radio1" id="radio1" className={'btn-radio'} />
-                    <Label for="radio1" />
+                    <Radio type="checkbox" name="radio1" id="radio1" />
                         Option one is this and that—be sure to include why it's great
                       </Label>
                 </FormGroup>
@@ -426,22 +425,19 @@ class UiForm extends React.Component {
                   <Col sm={10}>
                     <FormGroup check>
                       <Label check>
-                        <Input size="sm" type="radio" name="radio2" id="radio2a" className={'btn-radio'} />
-                        <Label for="radio2a" />
+                        <Radio size="sm" name="radio2" id="radio2a" />
                             Option one is this and that—be sure to include why it's great
-                          </Label>
+                      </Label>
                     </FormGroup>
                     <FormGroup check>
                       <Label check>
-                        <Input size="sm" type="radio" name="radio2" id="radio2b" className={'btn-radio'} />
-                        <Label for="radio2b" />
+                        <Radio size="sm" name="radio2" id="radio2b" />
                             Option two can be something else and selecting it will deselect option one
                           </Label>
                     </FormGroup>
                     <FormGroup check disabled>
                       <Label check>
-                        <Input size="sm" type="radio" name="radio2" id="radio2c" className={'btn-radio'} disabled />
-                        <Label for="radio2c" />
+                        <Radio size="sm" name="radio2" id="radio2c" disabled />
                             Option three is disabled
                           </Label>
                     </FormGroup>
