@@ -233,14 +233,14 @@ select.form-control-lg {
 }
 
 .form-check-label {
-  padding-left: $form-check-input-gutter;
+  // padding-left: $form-check-input-gutter;
   margin-bottom: 0; // Override default `<label>` bottom margin
 }
 
 .form-check-input {
-  position: absolute;
+  display: inline-block;
   margin-top: $form-check-input-margin-y;
-  margin-left: -$form-check-input-gutter;
+  margin-right: .5rem;
 }
 
 // Radios and checkboxes on same line
@@ -444,11 +444,6 @@ legend {
   color: $body-color;
 }
 
-.form-group > .form-check-label,
-.form-check > .form-check-label {
-  padding-left: 0;
-}
-
 .trinary-control + .form-check-label,
 .trinary-control + .form-control-label {
   padding-left: .5rem;
@@ -473,15 +468,16 @@ legend {
 
 .form-check-label {
   position: relative;
+  display: inline-flex;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  flex: 0 0 auto;
 }
 
 .form-control:not(.form-control-sm).round {
   padding-left: 1rem;
-}
-
-.form-check-input {
-  margin-top: 0;
-  margin-right: .5rem;
 }
 
 .col-form-legend {
@@ -578,7 +574,7 @@ input::-moz-focus-inner {
 .form-check-label > .btn-check.form-control-sm + label,
 .form-check-label > .btn-radio.form-control-xs + label,
 .form-check-label > .btn-radio.form-control-sm + label {
-  margin-right: .25rem;
+  margin-right: .4rem;
 }
 
 .form-check-label > .btn-check.form-control-md + label,

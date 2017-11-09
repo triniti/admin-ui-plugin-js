@@ -353,7 +353,7 @@ class UiForm extends React.Component {
           </Row>
           <Row>
             <Col xs="3" xs="4">
-              <FormGroup check disabled>
+              <FormGroup disabled>
                 <Label check>Disabled</Label>
                 <TrinaryControl disabled name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="none" width="120px" value={this.state.trinaryCustom} onChange={this.handleChange} />
               </FormGroup>
