@@ -401,7 +401,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox & Radio .btn-toggle style
+          <CardHeader spacing="lg">Switch Component
             <span>
               <Button size="sm" outline radius="round" onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
               <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
@@ -417,18 +417,18 @@ class UiButtons extends React.Component {
             <Form>
               <FormGroup>
                 <Label for="toggler1">size="xs"</Label>
-                <Switch id="toggler1" size="xs" value="on"/>
+                <Switch id="toggler1" size="xs" value="on" />
 
-                <Label for="toggler2" className={'ml-4'}>size="sm"</Label>
+                <Label for="toggler2" className="ml-4">size="sm"</Label>
                 <Switch id="toggler2" size="sm"/>
 
-                <Label for="toggler3" className={'ml-4'}>default</Label>
+                <Label for="toggler3" strong className="ml-4">default</Label>
                 <Switch id="toggler3" />
 
-                <Label for="toggler4" className={'ml-4'}>size="md"</Label>
+                <Label for="toggler4" className="ml-4">size="md"</Label>
                 <Switch id="toggler4" size="md"/>
 
-                <Label for="toggler5" className={'ml-4'}>size="lg"</Label>
+                <Label for="toggler5" className="ml-4">size="lg"</Label>
                 <Switch id="toggler5" size="lg"/>
 
               </FormGroup>
@@ -437,18 +437,18 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox & Radio .btn-radio style
+          <CardHeader spacing="lg">Radio Component
             <Form>
               <FormGroup>
-                <Label check className="mr-3">
+                <Label check className="mr-3" strong>
                 <Radio size="sm" type="radio" name="toggler11" id="toggler11" onClick={() => this.onRadioBtnClick(11)} />
                 Yes</Label>
 
-                <Label check className="mr-3">
+                <Label check className="mr-3" strong>
                 <Radio size="sm" type="radio" name="toggler11" id="toggler12" onClick={() => this.onRadioBtnClick(12)} />
                 No</Label>
 
-                <Label check className="mr-3">
+                <Label check className="mr-3" strong>
                 <Radio size="sm" type="radio" name="toggler11" id="toggler13" onClick={() => this.onRadioBtnClick(13)} />
                 Maybe</Label>
               </FormGroup>
@@ -466,7 +466,7 @@ class UiButtons extends React.Component {
                 <Radio size="sm" type="checkbox" name="toggler7" id="toggler7" />
                 size="sm"</Label>
 
-                <Label check className={'mr-4'}>
+                <Label check className={'mr-4'} strong>
                 <Radio type="checkbox" name="toggler8" id="toggler8" />
                 default</Label>
 
@@ -484,7 +484,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox & Radio .btn-check style
+          <CardHeader spacing="lg">Checkbox Component
             <Form>
               <FormGroup>
                 <Input size="sm" type="checkbox" name="toggler14" id="toggler14" className={'btn-check'} onClick={() => this.onRadioBtnClick(14)} />

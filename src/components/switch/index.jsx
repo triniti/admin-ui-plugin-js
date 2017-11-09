@@ -33,7 +33,7 @@ const Switch = (props) => {
 
   return ([
     <Input {...attributes} type={type} name={id} id={id} className={classes} />,
-    <Label for={id} />,
+    <Label for={id} className='switch-input-label' />,
   ])
 };
 

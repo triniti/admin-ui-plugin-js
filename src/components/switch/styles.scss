@@ -188,3 +188,13 @@ input.switch-input.form-control-xs + label,
 input.switch-input.form-control-sm + label {
   vertical-align: text-bottom;
 }
+
+// switch label
+
+.form-group .switch-input-label {
+  margin-right: .4rem;
+}
+
+.form-group > input + .switch-input-label {
+  margin-right: .5rem;
+}

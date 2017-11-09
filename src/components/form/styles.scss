@@ -189,6 +189,8 @@ select.form-control-lg {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
+  display: flex;
+  align-items: center;
   margin-bottom: $form-group-margin-bottom;
 }
 
@@ -431,12 +433,20 @@ input[type='text']:focus,
   box-shadow: 0 1px 3px 0px $gray-rgba-400 !important;
 }
 
-.form-control-label,
 legend {
   font-size: .9em;
   font-weight: 600;
   text-transform: uppercase;
   color: $body-color;
+  margin-bottom: 1.25rem;
+}
+
+.form-label-strong {
+  font-size: .9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $body-color;
+  margin-top: 2px;
 }
 
 .trinary-control + .form-check-label,
@@ -444,8 +454,8 @@ legend {
   padding-left: .5rem;
 }
 
-legend {
-  margin-bottom: 1.25rem;
+.form-group .form-control-label {
+  cursor: pointer;
 }
 
 .form-inline > label,
@@ -468,14 +478,19 @@ legend {
   align-items: center;
   line-height: 1;
   vertical-align: middle;
-  
+
   &:hover {
     cursor: pointer;
   }
 }
 
-.card-header .form-check-label {
+.card-header .form-check-label,
+.card-header .form-control-label {
   font-size: .825rem;
+}
+
+.card-header .form-label-strong {
+  font-size: .75rem;
 }
 
 input[type="radio"],
