@@ -467,7 +467,7 @@ legend {
 
 .form-group > label,
 .form-check > label {
-  margin-right: .5rem;
+  margin-right: .4rem;
   margin-bottom: 0;
 }
 
@@ -591,25 +591,6 @@ input::-moz-focus-inner {
 
 
 // btn-check, radio-input, btn-toggle adjustments
-
-.form-check-label > .btn-check + label,
-.form-check-label > .radio-input + label {
-  margin-right: .375rem;
-}
-
-.form-check-label > .btn-check.form-control-xs + label,
-.form-check-label > .btn-check.form-control-sm + label,
-.form-check-label > .radio-input.form-control-xs + label,
-.form-check-label > .radio-input.form-control-sm + label {
-  margin-right: .375rem;
-}
-
-.form-check-label > .btn-check.form-control-md + label,
-.form-check-label > .btn-check.form-control-lg + label,
-.form-check-label > .radio-input.form-control-md + label,
-.form-check-label > .radio-input.form-control-lg + label {
-  margin-right: .5rem;
-}
 
 input.btn-check + label,
 input.radio-input + label {

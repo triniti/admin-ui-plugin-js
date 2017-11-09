@@ -133,3 +133,10 @@ input.form-control-lg.radio-input:checked + label {
 .radio-input:disabled + .radio-input-label:before {
   display: none;
 }
+
+// radio label
+
+.form-group .radio-input-label,
+.form-check .radio-input-label {
+  margin-right: .4rem;
+}
