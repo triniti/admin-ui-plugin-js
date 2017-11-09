@@ -436,13 +436,22 @@ input[type='text']:focus,
   box-shadow: 0 1px 3px 0px $gray-rgba-400 !important;
 }
 
-label:not(.form-check-label),
+.form-control-label,
 legend {
   font-size: .9em;
   font-weight: 600;
-  margin-bottom: .75rem;
   text-transform: uppercase;
   color: $body-color;
+}
+
+.form-group > .form-check-label,
+.form-check > .form-check-label {
+  padding-left: 0;
+}
+
+.trinary-control + .form-check-label,
+.trinary-control + .form-control-label {
+  padding-left: .5rem;
 }
 
 legend {
@@ -456,8 +465,10 @@ legend {
   margin: 0 .25rem .5rem .25rem;
 }
 
-.form-group > label {
-  margin-right: .375rem;
+.form-group > label,
+.form-check > label {
+  margin-right: .5rem;
+  margin-bottom: 0;
 }
 
 .form-check-label {
@@ -544,4 +555,58 @@ input::-moz-focus-inner {
  */
 .input-group ~ .invalid-feedback {
   display: block;  // use .d-block
+}
+
+
+// disabled form-control
+
+.form-control:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}
+
+
+// btn-check, btn-radio, btn-toggle adjustments
+
+.form-check-label > .btn-check + label,
+.form-check-label > .btn-radio + label {
+  margin-right: .5rem;
+}
+
+.form-check-label > .btn-check.form-control-xs + label,
+.form-check-label > .btn-check.form-control-sm + label,
+.form-check-label > .btn-radio.form-control-xs + label,
+.form-check-label > .btn-radio.form-control-sm + label {
+  margin-right: .25rem;
+}
+
+.form-check-label > .btn-check.form-control-md + label,
+.form-check-label > .btn-check.form-control-lg + label,
+.form-check-label > .btn-radio.form-control-md + label,
+.form-check-label > .btn-radio.form-control-lg + label {
+  margin-right: .75rem;
+}
+
+input.btn-check + label,
+input.btn-radio + label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: $transition;
+  vertical-align: middle;
+  text-indent: -5000px;
+}
+
+input.btn-check[disabled] + label,
+input.btn-radio[disabled] + label {
+  pointer-events: none;
+}
+
+input.btn-check.form-control-xs + label,
+input.btn-check.form-control-sm + label,
+input.btn-radio.form-control-xs + label,
+input.btn-radio.form-control-sm + label {
+  vertical-align: text-bottom;
 }

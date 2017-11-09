@@ -2,17 +2,19 @@
 
 .trinary-control {
   position: relative;
+  display: inline-block;
   padding: 0;
   margin: 0;
   min-width: 4.25rem;
-  border: 1px solid $gray-rgba-400;
+  border: 1px solid $input-border-color;
   border-radius: $input-border-radius;
   overflow: hidden;
-  background-color: $gray-100;
+  background-color: $input-bg;
+  vertical-align: middle;
 
   &:hover,
   &:focus {
-    border: 1px solid $gray-700;
+    border: 1px solid $input-focus-border-color;
     background-color: $white;
   }
 
@@ -24,8 +26,8 @@
     display: block;
     width: 1.5rem;
     height: 100%;
-    background-color: $gray-100;
-    border-left: 1px solid $gray-rgba-400;
+    background-color: $input-bg;
+    border-left: 1px solid $input-border-color;
     border-top-right-radius: .25rem;
     border-bottom-right-radius: .25rem;
     content: "";
@@ -117,4 +119,15 @@
 
 .trinary-control-radius-none {
   border-radius: 0;
+}
+
+.form-check-label .trinary-control,
+.form-control-label .trinary-control {
+  margin-right: .5rem;
+}
+
+// disabled trinary-control
+
+.trinary-control-disabled {
+  opacity: .5;
 }

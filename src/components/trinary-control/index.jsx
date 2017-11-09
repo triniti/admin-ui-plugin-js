@@ -16,17 +16,16 @@ const propTypes = {
   unsetText: PropTypes.string,
   trueText: PropTypes.string,
   falseText: PropTypes.string,
-  outline: PropTypes.bool,
   radius: PropTypes.string,
   size: PropTypes.string,
-  color: PropTypes.string,
+  width: PropTypes.string,
+  disabled: PropTypes.bool,
 };
 
 const defaultProps = {
   unsetText: 'Any',
   trueText: 'Yes',
   falseText: 'No',
-  color: 'light',
 };
 
 const TrinaryControl = (props) => {
@@ -38,10 +37,10 @@ const TrinaryControl = (props) => {
     unsetText,
     trueText,
     falseText,
-    outline,
     radius,
     size,
-    color,
+    width,
+    disabled,
     ...attributes
   } = props;
 
@@ -49,13 +48,13 @@ const TrinaryControl = (props) => {
     className,
     'trinary-control',
     size ? `trinary-control-${size}` : false,
-    `trinary-control${outline ? '-outline' : ''}-${color}`,
     radius ? `trinary-control-radius-${radius}` : false,
+    disabled ? 'trinary-control-disabled' : false,
   ), cssModule);
 
   return (
-    <div className={classes}>
-      <select value={parseInt(value, 10)} onChange={onChange} {...attributes}>
+    <div className={classes} style={{width: `${width}`}}>
+      <select value={parseInt(value, 10)} onChange={onChange} {...attributes} disabled={disabled}>
         <option value={UNKNOWN}>{unsetText}</option>
         <option value={TRUE_VAL}>{trueText}</option>
         <option value={FALSE_VAL}>{falseText}</option>

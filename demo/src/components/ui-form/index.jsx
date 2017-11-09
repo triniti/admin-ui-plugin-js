@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Row, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Row, Switch, TrinaryControl } from '../../../../src/components';
 import iconClose from 'assets/img/svg/icons/close.svg';
 
 class UiForm extends React.Component {
@@ -265,14 +265,13 @@ class UiForm extends React.Component {
                     <Input type="checkbox" name="checkbox1" id="checkbox1" className={'btn-check'} />
                     <Label for="checkbox1" />
                         Check me out
-                      </Label>
+                  </Label>
                 </FormGroup>
                 <FormGroup check>
                   <Label check>
-                    <Input type="checkbox" name="checkbox2" id="checkbox2" className={'btn-toggle'} />
-                    <Label for="checkbox2" />
-                        Try me for a Toggle
-                      </Label>
+                    <Switch id="checkbox2" />
+                    Try me for a Toggle
+                  </Label>
                 </FormGroup>
               </Form>
             </Col>
@@ -305,12 +304,36 @@ class UiForm extends React.Component {
         <CardBody spacing="lg">
           <Row>
             <Col xs="3" xs="4">
-            <FormGroup>
-              <div style={{width: '4rem'}}>
-                <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
-              </div>
-              <Label for="trinaryDefault">Staff</Label>
+              <FormGroup>
+                <Label check>
+                  <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                  Staff
+                </Label>
               </FormGroup>
+            </Col>
+            <Col xs="6">
+              <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs="3" xs="4">
+              <FormGroup>
+                <Label>
+                  <TrinaryControl name="trinaryDefault" id="trinaryDefault" width="6rem" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                  Staff
+                </Label>
+              </FormGroup>
+            </Col>
+            <Col xs="6">
+              <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs="3" xs="4">
+            <FormGroup>
+              <Label>Staff</Label>
+              <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
+            </FormGroup>
             </Col>
             <Col xs="6">
               <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -322,9 +345,18 @@ class UiForm extends React.Component {
         <CardBody spacing="lg">
           <Row>
             <Col xs="3" xs="4">
-              <div style={{width: '105px'}}>
-                <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" value={this.state.trinaryCustom} onChange={this.handleChange} />
-              </div>
+              <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" width="105px" value={this.state.trinaryCustom} onChange={this.handleChange} />
+            </Col>
+            <Col xs="6">
+              <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs="3" xs="4">
+              <FormGroup check disabled>
+                <Label check>Disabled</Label>
+                <TrinaryControl disabled name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="none" width="120px" value={this.state.trinaryCustom} onChange={this.handleChange} />
+              </FormGroup>
             </Col>
             <Col xs="6">
               <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
@@ -358,7 +390,19 @@ class UiForm extends React.Component {
                 <FormGroup row>
                   <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
                   <Col sm={10}>
-                    <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple />
+                    <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </Input>
+                  </Col>
+                </FormGroup>
+                <FormGroup row>
+                  <Label for="exampleSelectMulti" sm={2}>Disabled</Label>
+                  <Col sm={10}>
+                    <Input disabled type="textarea" name="text" id="disabledText" />
                   </Col>
                 </FormGroup>
                 <FormGroup row>
