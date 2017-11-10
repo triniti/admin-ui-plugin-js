@@ -24,17 +24,16 @@
   }
   &:active,
   &.active {
-    color: $body-color !important;
+    color: $body-color;
     background-color: $gray-500;
     border: $input-btn-border-width solid $gray-700;
   }
 }
 
 .btn-outline-light:not([disabled]):not(.disabled):active,
-.btn-outline-light:not([disabled]):not(.disabled).active,
-.show > .btn-outline-light.dropdown-toggle {
-  background-color: $gray-500;
-  border: $input-btn-border-width solid $gray-700;
+.btn-outline-light:not([disabled]):not(.disabled).active {
+  background-color: theme-color("primary");
+  border: $input-btn-border-width solid theme-color("primary");
 }
 
 .show > .btn-outline-light.dropdown-toggle {

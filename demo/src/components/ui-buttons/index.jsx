@@ -406,7 +406,7 @@ class UiButtons extends React.Component {
               <Button size="sm" outline radius="round" onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
               <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
               <Form>
-                <FormGroup>
+                <FormGroup inline>
                   <Switch id="toggler0" />
                 </FormGroup>
               </Form>
@@ -414,7 +414,7 @@ class UiButtons extends React.Component {
           </CardHeader>
           <CardBody spacing="lg">
             <Form>
-              <FormGroup>
+              <FormGroup inline>
                 <Label for="toggler1">size="xs"</Label>
                 <Switch id="toggler1" size="xs" value="on" />
 
@@ -487,7 +487,7 @@ class UiButtons extends React.Component {
             <Form>
               <FormGroup check inline>
                 <Label className={'mr-3'}>
-                <Checkbox size="sm" name="toggler14" id="toggler14" onClick={() => this.onRadioBtnClick(14)} />
+                <Checkbox size="sm" name="toggler14" id="toggler14" onClick={() => this.onCheckboxBtnClick(14)} />
                 Maybe</Label>
               </FormGroup>
             </Form>

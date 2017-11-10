@@ -224,11 +224,26 @@
 
 // increases bottom area to fix hover for dropdown
 
-.dropdown .btn:before {
+.dropdown .btn:before,
+.dropdown:before {
   position: absolute;
   content: '';
   top: 0;
   right: 0;
   left: 0;
   bottom: -.25rem;
+}
+
+.nav-underline .dropdown:before,
+.navbar-nav .dropdown:before,
+.nav-tabs > .dropdown:before {
+  display: none;
+}
+
+// show dropdown on hover above 1025px
+
+@media (min-width: 1025px) {
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
 }
