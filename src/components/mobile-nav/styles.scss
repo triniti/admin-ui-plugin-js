@@ -57,14 +57,3 @@
     width: 48px;
   }
 }
-
-@media (max-width: 1024px) {
-  .navbar-main-mobile .navbar-toggler-icon {
-    background: transparent url('./menu.svg?fill=%23#{$icon-theme-light}') center center / auto 20px no-repeat;
-    filter: opacity(.6);
-  }
-
-  .navbar-dark .navbar-main-mobile .navbar-toggler-icon {
-    background: transparent url('./menu.svg?fill=%23#{$icon-theme-dark}') center center / auto 20px no-repeat;
-  }
-}
