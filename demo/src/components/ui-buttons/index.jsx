@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Radio, Row, SaveButton, Switch } from '../../../../src/components';
+import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Radio, Row, SaveButton, Switch } from '../../../../src/components';
 
 import iconClose from 'assets/img/svg/icons/close.svg';
 
@@ -407,8 +407,7 @@ class UiButtons extends React.Component {
               <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
               <Form>
                 <FormGroup>
-                  <Input type="checkbox" name="toggler0" id="toggler0" className={'btn-toggle'} />
-                  <Label for="toggler0" />
+                  <Switch id="toggler0" />
                 </FormGroup>
               </Form>
             </span>
@@ -439,7 +438,7 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Radio Component
             <Form>
-              <FormGroup>
+              <FormGroup inline>
                 <Label check className="mr-3" strong>
                 <Radio size="sm" type="radio" name="toggler11" id="toggler11" onClick={() => this.onRadioBtnClick(11)} />
                 Yes</Label>
@@ -456,7 +455,7 @@ class UiButtons extends React.Component {
           </CardHeader>
           <CardBody spacing="lg">
             <Form>
-              <FormGroup>
+              <FormGroup inline>
 
                 <Label check className={'mr-4'}>
                 <Radio  size="xs" type="checkbox" name="toggler6" id="toggler6" />
@@ -486,36 +485,35 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Checkbox Component
             <Form>
-              <FormGroup>
-                <Input size="sm" type="checkbox" name="toggler14" id="toggler14" className={'btn-check'} onClick={() => this.onRadioBtnClick(14)} />
-                <Label for="toggler14" />
-                <Label for="toggler14" className={'mr-3 mb-0'}>Maybe</Label>
+              <FormGroup check inline>
+                <Label className={'mr-3'}>
+                <Checkbox size="sm" name="toggler14" id="toggler14" onClick={() => this.onRadioBtnClick(14)} />
+                Maybe</Label>
               </FormGroup>
             </Form>
           </CardHeader>
           <CardBody spacing="lg">
             <Form>
-              <FormGroup>
-                <Input size="xs" type="checkbox" name="toggler15" id="toggler15" className={'btn-check'} />
-                <Label for="toggler15" />
-                <Label for="toggler15" className={'mr-4'}>size="xs"</Label>
+              <FormGroup inline>
+                <Label className={'mr-4'}>
+                <Checkbox size="xs" name="toggler15" id="toggler15" />
+                size="xs"</Label>
 
-                <Input size="sm" type="checkbox" name="toggler16" id="toggler16" className={'btn-check'} />
-                <Label for="toggler16" />
-                <Label for="toggler16" className={'mr-4'}>size="sm"</Label>
+                <Label className={'mr-4'}>
+                <Checkbox size="sm" name="toggler16" id="toggler16" />
+                size="sm"</Label>
 
-                <Input type="checkbox" name="toggler17" id="toggler17" className={'btn-check'} />
-                <Label for="toggler17" />
-                <Label for="toggler17" className={'mr-4'}>default</Label>
+                <Label className={'mr-4'} strong>
+                <Checkbox name="toggler17" id="toggler17" />
+                default</Label>
 
-                <Input size="md" type="checkbox" name="toggler18" id="toggler18" className={'btn-check'} />
-                <Label for="toggler18" />
-                <Label for="toggler18" className={'mr-4'}>size="md"</Label>
+                <Label className={'mr-4'} strong>
+                <Checkbox size="md" name="toggler18" id="toggler18" />
+                size="md"</Label>
 
-                <Input size="lg" type="checkbox" name="toggler19" id="toggler19" className={'btn-check'} />
-                <Label for="toggler19" />
-                <Label for="toggler19" className={'mr-4'}>size="lg"</Label>
-
+                <Label className={'mr-4'} strong>
+                <Checkbox size="lg" name="toggler19" id="toggler19" />
+                size="lg"</Label>
               </FormGroup>
             </Form>
           </CardBody>

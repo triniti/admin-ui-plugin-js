@@ -27,6 +27,7 @@ import CarouselCaption from './carousel-caption';
 import CarouselControl from './carousel-control';
 import CarouselIndicators from './carousel-indicators';
 import CarouselItem from './carousel-item';
+import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
@@ -136,6 +137,7 @@ export {
   CarouselControl,
   CarouselIndicators,
   CarouselItem,
+  Checkbox,
   Col,
   Collapse,
   Container,

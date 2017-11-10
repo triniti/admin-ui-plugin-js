@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
 import iconClose from 'assets/img/svg/icons/close.svg';
 
 class UiForm extends React.Component {
@@ -75,30 +75,30 @@ class UiForm extends React.Component {
                 </FormGroup>
                 <FormGroup tag="fieldset">
                   <legend>Radio Buttons</legend>
-                  <FormGroup check>
+                  <FormGroup check inline>
                     <Label check>
                       <Input type="radio" name="radio1" />
                           Option one is this and that—be sure to include why it's great
                         </Label>
                   </FormGroup>
-                  <FormGroup check>
+                  <FormGroup check inline>
                     <Label check>
                       <Input type="radio" name="radio1" />
                           Option two can be something else and selecting it will deselect option one
                         </Label>
                   </FormGroup>
-                  <FormGroup check disabled>
+                  <FormGroup check disabled inline>
                     <Label check>
                       <Input type="radio" name="radio1" disabled />
                           Option three is disabled
                         </Label>
                   </FormGroup>
                 </FormGroup>
-                <FormGroup check>
+                <FormGroup check inline>
                   <Label check>
-                    <Input type="checkbox" />
-                        Check me out
-                      </Label>
+                    <Checkbox />
+                    Check me out
+                  </Label>
                 </FormGroup>
 
                 <Button size="lg" color="primary" className={'mt-3'}>Submit</Button>
@@ -170,8 +170,6 @@ class UiForm extends React.Component {
                 {' '}
                 <Button color="info" size="sm">Submit</Button>
               </Form>
-
-
             </Col>
           </Row>
         </CardBody>
@@ -253,20 +251,19 @@ class UiForm extends React.Component {
                         It's a bit lighter and easily wraps to a new line.
                       </FormText>
                 </FormGroup>
-                <FormGroup check className={'mb-3'}>
+                <FormGroup check inline className={'mb-3'}>
                   <Label check>
                     <Radio type="checkbox" name="radio1" id="radio1" />
                         Option one is this and that—be sure to include why it's great
                       </Label>
                 </FormGroup>
-                <FormGroup check>
+                <FormGroup check inline>
                   <Label check>
-                    <Input type="checkbox" name="checkbox1" id="checkbox1" className={'btn-check'} />
-                    <Label for="checkbox1" />
+                    <Checkbox name="checkbox1" id="checkbox1" />
                         Check me out
                   </Label>
                 </FormGroup>
-                <FormGroup check>
+                <FormGroup check inline>
                   <Label check>
                     <Switch id="checkbox2" />
                     Try me for a Toggle
@@ -352,7 +349,7 @@ class UiForm extends React.Component {
           </Row>
           <Row>
             <Col xs="3" xs="4">
-              <FormGroup disabled>
+              <FormGroup disabled inline>
                 <Label check>Disabled</Label>
                 <TrinaryControl disabled name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="none" width="120px" value={this.state.trinaryCustom} onChange={this.handleChange} />
               </FormGroup>
@@ -423,19 +420,19 @@ class UiForm extends React.Component {
                 <FormGroup tag="fieldset" row>
                   <legend className="col-form-legend col-sm-2">Radio Buttons</legend>
                   <Col sm={10}>
-                    <FormGroup check>
+                    <FormGroup check inline>
                       <Label check>
                         <Radio size="sm" name="radio2" id="radio2a" />
                             Option one is this and that—be sure to include why it's great
                       </Label>
                     </FormGroup>
-                    <FormGroup check>
+                    <FormGroup check inline>
                       <Label check>
                         <Radio size="sm" name="radio2" id="radio2b" />
                             Option two can be something else and selecting it will deselect option one
                           </Label>
                     </FormGroup>
-                    <FormGroup check disabled>
+                    <FormGroup check disabled inline>
                       <Label check>
                         <Radio size="sm" name="radio2" id="radio2c" disabled />
                             Option three is disabled
@@ -447,10 +444,9 @@ class UiForm extends React.Component {
                   <Col sm={{ size: 10 }}>
                     <div className={'has-border border-indent'}>
                       <Label for="checkbox3">Border Indented Checkbox</Label>
-                      <FormGroup check>
+                      <FormGroup check inline>
                         <Label check>
-                          <Input size="sm" type="checkbox" name="checkbox3" id="checkbox3" className={'btn-check'} />
-                          <Label for="checkbox3" />
+                          <Checkbox size="sm" name="checkbox1" id="checkbox1" />
                               Check me out
                             </Label>
                       </FormGroup>

@@ -189,9 +189,12 @@ select.form-control-lg {
 // horizontal forms, use the predefined grid classes.
 
 .form-group {
-  display: flex;
-  align-items: center;
   margin-bottom: $form-group-margin-bottom;
+
+  &.form-inline {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .form-text {
@@ -247,10 +250,6 @@ select.form-control-lg {
   .form-check-label {
     vertical-align: middle;
   }
-
-  + .form-check-inline {
-    margin-left: $form-check-inline-margin-x;
-  }
 }
 
 
@@ -299,7 +298,6 @@ select.form-control-lg {
   display: flex;
   flex-flow: row wrap;
   align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
-  margin: 0 -.25rem;
 
   // Because we use flex, the initial sizing of checkboxes is collapsed and
   // doesn't occupy the full-width (which is what we want for xs grid tier),
@@ -324,7 +322,7 @@ select.form-control-lg {
       flex-flow: row wrap;
       align-items: center;
       line-height: 1;
-      margin: 0 .125rem;
+      margin: 0 .5rem 0 0;
     }
 
     // Allow folks to *not* use `.form-group`
@@ -458,30 +456,27 @@ legend {
   cursor: pointer;
 }
 
-.form-inline > label,
-.form-inline > input,
-.form-inline > select,
-.form-inline > button {
-  margin: 0 .25rem .5rem .25rem;
-}
-
 .form-group > label,
 .form-check > label {
   margin-right: .4rem;
-  margin-bottom: 0;
 }
 
-.form-check-label {
+.form-inline .form-check-label,
+.form-inline .form-control-label {
   position: relative;
   display: inline-flex;
   margin-bottom: 0;
   align-items: center;
-  line-height: 1;
+  line-height: 1.3;
   vertical-align: middle;
 
   &:hover {
     cursor: pointer;
   }
+}
+
+.form-inline .sr-only {
+  position: absolute;
 }
 
 .card-header .form-check-label,
@@ -550,6 +545,7 @@ input::-moz-focus-inner {
 .page-header form,
 .card-header form {
   display: inline-block;  // use .d-inline-block
+  vertical-align: middle;
 }
 
 .page-header .form-group,
