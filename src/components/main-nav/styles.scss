@@ -225,8 +225,8 @@
   .navbar-dark .dropdown:hover .nav-link:before {
     background-color: $navbar-theme-dark-dropdown;
   }
-  .navbar-dark .navbar-nav .nav-item:hover .nav-link,
-  .navbar-dark .navbar-nav .navbar-nav .nav-link:hover {
+  .navbar-main-wrapper.navbar-dark .nav-item:hover .nav-link,
+  .navbar-main-wrapper.navbar-dark .navbar-nav .nav-link:hover {
     background-color: $navbar-theme-dark-dropdown;
     box-shadow: none;
   }

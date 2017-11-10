@@ -6,7 +6,7 @@ import './styles.scss';
 
 const MobileNav = ({ handleToggle, title }) => (
   <div className="navbar-main-mobile">
-    <NavbarToggler className="navbar-toggler hidden-lg-up" onClick={handleToggle} />
+    <NavbarToggler className="hidden-lg-up" onClick={handleToggle} />
     <NavbarBrand href="/" className="navbar-main-brand"><span className="sr-only">{title}</span></NavbarBrand>
     <span className="navbar-main-spacer" />
   </div>

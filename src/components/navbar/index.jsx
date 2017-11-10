@@ -5,7 +5,6 @@ import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
-  full: PropTypes.bool,
   fixed: PropTypes.string,
   sticky: PropTypes.string,
   theme: PropTypes.string,
@@ -37,7 +36,6 @@ const Navbar = (props) => {
     toggleable,
     className,
     cssModule,
-    full,
     fixed,
     sticky,
     theme,
@@ -53,7 +51,6 @@ const Navbar = (props) => {
     {
       [`navbar-theme-${theme}`]: theme,
       [`navbar-${color}`]: color,
-      'navbar-full': full,
       [`fixed-${fixed}`]: fixed,
       [`sticky-${sticky}`]: sticky,
     }
