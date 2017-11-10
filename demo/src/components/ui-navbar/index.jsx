@@ -31,7 +31,7 @@ class UiNavbar extends React.Component {
             <NavbarToggler onClick={this.toggleNavbar} />
             <NavbarBrand href="/">reactstrap</NavbarBrand>
             <Collapse isOpen={!this.state.collapsed} navbar>
-              <Nav navbar>
+              <Nav vertical>
                 <NavItem>
                   <NavLink href="/alerts">Components</NavLink>
                 </NavItem>
