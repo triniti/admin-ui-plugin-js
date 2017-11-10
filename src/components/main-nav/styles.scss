@@ -327,3 +327,16 @@
     margin: 0 1rem;
   }
 }
+
+.navbar-main-wrapper {
+  z-index: $zindex-fixed + 3;
+  display: flex;
+  flex-direction: row;
+  padding: 0 !important;
+  background-color: $white;
+  box-shadow: 0 0 1px $gray-rgba-600, 0 1px 1px $gray-rgba-300;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  flex: 0 0 auto;
+}

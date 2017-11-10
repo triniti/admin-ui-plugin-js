@@ -191,6 +191,8 @@
 
 // Dark links against a light background
 .navbar {
+  background-color: $white;
+
   .navbar-brand {
     color: $navbar-light-active-color;
 
@@ -236,6 +238,8 @@
 
 // Dark links against a light background
 .navbar-light {
+  background-color: $gray-100;
+
   .navbar-brand {
     color: $navbar-light-active-color;
 
@@ -282,6 +286,7 @@
 // White links against a dark background
 .navbar-dark {
   background-color: $navbar-theme-dark;
+
   .navbar-brand {
     color: $navbar-dark-active-color;
 
@@ -360,5 +365,20 @@
 
   @media (max-width: 1024px) {
     background-color: inherit;
+  }
+}
+
+.navbar-nav .nav-link-icon {
+  padding: 1.25em .5em;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .navbar-toggler-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .navbar-nav .nav-link-icon {
+    font-size: 1em;
+    padding: 1.1em .5em;
   }
 }
