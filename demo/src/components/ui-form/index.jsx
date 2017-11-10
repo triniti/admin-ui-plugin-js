@@ -43,7 +43,7 @@ class UiForm extends React.Component {
                 </FormGroup>
                 <FormGroup>
                   <Label for="exampleSelect1">Select</Label>
-                  <Input type="select" name="select" id="exampleSelect1">
+                  <Input type="select" name="select1" id="exampleSelect1">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -53,7 +53,7 @@ class UiForm extends React.Component {
                 </FormGroup>
                 <FormGroup>
                   <Label for="exampleSelectMulti1">Select Multiple</Label>
-                  <Input type="select" name="selectMulti" id="exampleSelectMulti1" multiple>
+                  <Input type="select" name="selectMulti1" id="exampleSelectMulti1" multiple>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -220,8 +220,8 @@ class UiForm extends React.Component {
                   <Input type="search" name="search" id="exampleSearch" placeholder="search placeholder" />
                 </FormGroup>
                 <FormGroup>
-                  <Label for="exampleSelect">Select</Label>
-                  <Input type="select" name="select" id="exampleSelect">
+                  <Label for="exampleSelect2">Select</Label>
+                  <Input type="select" name="select2" id="exampleSelect2">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -230,8 +230,8 @@ class UiForm extends React.Component {
                   </Input>
                 </FormGroup>
                 <FormGroup>
-                  <Label for="exampleSelectMulti">Select Multiple</Label>
-                  <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+                  <Label for="exampleSelectMulti2">Select Multiple</Label>
+                  <Input type="select" name="selectMulti2" id="exampleSelectMulti2" multiple>
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -378,15 +378,21 @@ class UiForm extends React.Component {
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="exampleSelect" sm={2}>Select</Label>
+                  <Label for="exampleSelect3" sm={2}>Select</Label>
                   <Col sm={10}>
-                    <Input type="select" name="select" id="exampleSelect" />
+                    <Input type="select" name="select3" id="exampleSelect3">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>5</option>
+                    </Input>
                   </Col>
                 </FormGroup>
                 <FormGroup row>
-                  <Label for="exampleSelectMulti" sm={2}>Select Multiple</Label>
+                  <Label for="exampleSelectMulti3" sm={2}>Select Multiple</Label>
                   <Col sm={10}>
-                    <Input type="select" name="selectMulti" id="exampleSelectMulti" multiple>
+                    <Input type="select" name="selectMulti3" id="exampleSelectMulti3" multiple>
                       <option>1</option>
                       <option>2</option>
                       <option>3</option>
