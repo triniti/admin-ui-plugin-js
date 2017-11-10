@@ -34,6 +34,10 @@ input.switch-input + label:after {
   background: transparent;
 }
 
+input.switch-input + label:before {
+  border: $input-btn-border-width solid transparent;
+}
+
 input.switch-input + label:after {
   background: white;
   box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
@@ -42,6 +46,7 @@ input.switch-input + label:after {
 input.switch-input:checked + label:before {
   width: 2.625rem;
   background: theme-color("primary");
+  border: $input-btn-border-width solid darken(theme-color("primary"), 3%);
 }
 
 input.switch-input:checked + label:after {
