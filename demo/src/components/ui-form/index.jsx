@@ -446,7 +446,7 @@ class UiForm extends React.Component {
                       <Label for="checkbox3">Border Indented Checkbox</Label>
                       <FormGroup check inline>
                         <Label check>
-                          <Checkbox size="sm" name="checkbox1" id="checkbox1" />
+                          <Checkbox size="sm" name="checkbox3" id="checkbox3" />
                               Check me out
                             </Label>
                       </FormGroup>
