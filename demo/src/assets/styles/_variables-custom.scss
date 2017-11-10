@@ -2,12 +2,6 @@
 //
 // Variables not used in _variables.scss in case the two are separated
 
-
-// Path to assets folder for svg icons in css
-
-$icons-folder:                 '~/src/components/icon/';
-$logo-folder:                 '~/src/assets/img/svg/';
-
 // referenced in _type but in _variables - $font-size-h1 is the variable
 $h1-font-size: 1.75rem !default;
 $h2-font-size: 1.5rem !default;
@@ -76,8 +70,10 @@ $text-shadow:        0 1px 3px rgba(0, 0, 0, 0.1);
 // Custom Rounded for border-radius when 50% isn't working
 $round:              10rem;
 
+
 //
 $font-size-xl:   1rem !default;
+
 
 // Navbar Brand Logo
 $navbar-logo-dark-color:     rgba(#fff, .9) !default;
