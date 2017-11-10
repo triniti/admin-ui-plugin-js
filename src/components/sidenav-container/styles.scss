@@ -48,3 +48,7 @@
     margin-left: -$offcanvas-desktop-margin;
   }
 }
+
+.sidenav-container.offcanvas-left .scrollable-container {
+    margin-top: $header-height + 4;
+}

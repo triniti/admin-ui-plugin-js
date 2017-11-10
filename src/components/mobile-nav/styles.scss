@@ -9,6 +9,9 @@
     height: 2.5rem;
     flex: 1 0 auto;
     justify-content: space-between;
+    background-color: $white;
+  }
+  .navbar-light .navbar-main-mobile {
     background-color: $navbar-theme-light;
   }
   .navbar-dark .navbar-main-mobile {
