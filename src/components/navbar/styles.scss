@@ -47,6 +47,7 @@
   font-size: $navbar-brand-font-size;
   line-height: inherit;
   white-space: nowrap;
+  vertical-align: middle;
 
   @include hover-focus {
     text-decoration: none;
