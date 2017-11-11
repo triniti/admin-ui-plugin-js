@@ -53,7 +53,7 @@ const TrinaryControl = (props) => {
   ), cssModule);
 
   return (
-    <div className={classes} style={{width: `${width}`}}>
+    <div className={classes} style={{ width }}>
       <select value={parseInt(value, 10)} onChange={onChange} {...attributes} disabled={disabled}>
         <option value={UNKNOWN}>{unsetText}</option>
         <option value={TRUE_VAL}>{trueText}</option>

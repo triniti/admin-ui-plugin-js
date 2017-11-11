@@ -1,6 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Label, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
-import iconClose from 'assets/img/svg/icons/close.svg';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -29,7 +28,7 @@ class UiForm extends React.Component {
             <Col sm="8" md="6">
               <CardTitle tag="h2">Card Title H2 with Button
                 <Button outline color="link" radius="circle">
-                  <img src={iconClose} alt="x" />
+                  <Icon imgSrc="close" alt="x" />
                 </Button>
               </CardTitle>
               <Form>
@@ -84,14 +83,14 @@ class UiForm extends React.Component {
                   <FormGroup check inline>
                     <Label check>
                       <Input type="radio" name="radio1" />
-                          Option two can be something else and selecting it will deselect option one
-                        </Label>
+                        Option two can be something else and selecting it will deselect option one
+                      </Label>
                   </FormGroup>
                   <FormGroup check disabled inline>
                     <Label check>
                       <Input type="radio" name="radio1" disabled />
-                          Option three is disabled
-                        </Label>
+                        Option three is disabled
+                    </Label>
                   </FormGroup>
                 </FormGroup>
                 <FormGroup check inline>
@@ -154,10 +153,10 @@ class UiForm extends React.Component {
                   />
                 </FormGroup>
 
-                <Button outline color="default"  radius="round">Submit</Button>
+                <Button outline color="default" radius="round">Submit</Button>
               </Form>
               <CardTitle tag="h4">Card Title H4</CardTitle>
-              <Form inline className={'mb-3'}>
+              <Form inline className="mb-3">
                 <FormGroup>
                   <Label for="exampleEmail">Email</Label>{' '}
                   <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" size="sm" />
