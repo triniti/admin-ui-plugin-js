@@ -11,11 +11,13 @@ const propTypes = {
   cssModule: PropTypes.object,
   type: PropTypes.string,
   id: PropTypes.string,
+  name: PropTypes.string,
 };
 
 const defaultProps = {
   type: 'checkbox',
   id: 'switch',
+  name: 'switch',
 };
 
 const Switch = (props) => {
@@ -24,6 +26,7 @@ const Switch = (props) => {
     cssModule,
     type,
     id,
+    name,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -31,10 +34,10 @@ const Switch = (props) => {
     'switch-input',
   ), cssModule);
 
-  return ([
-    <Input {...attributes} type={type} name={id} id={id} className={classes} />,
-    <Label for={id} className='switch-input-label' />,
-  ])
+  return [
+    <Input type={type} id={id} className={classes} key={`${name}-switch-input`} />,
+    <Label for={id} className='switch-input-label' key={`${name}-switch-label`} />,
+  ];
 };
 
 Switch.propTypes = propTypes;

@@ -11,11 +11,13 @@ const propTypes = {
   cssModule: PropTypes.object,
   type: PropTypes.string,
   id: PropTypes.string,
+  name: PropTypes.string,
 };
 
 const defaultProps = {
   type: 'checkbox',
   id: 'checkbox',
+  name: 'checkbox',
 };
 
 const Checkbox = (props) => {
@@ -24,6 +26,7 @@ const Checkbox = (props) => {
     cssModule,
     type,
     id,
+    name,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -31,10 +34,10 @@ const Checkbox = (props) => {
     'checkbox-input',
   ), cssModule);
 
-  return ([
-    <Input {...attributes} type={type} id={id} className={classes} />,
-    <Label for={id} className='checkbox-input-label' />,
-  ])
+  return [
+    <Input type={type} id={id} className={classes} key={`${name}-checkbox-input`} {...attributes} />,
+    <Label for={id} className='checkbox-input-label' key={`${name}-checkbox-label`} />,
+  ];
 };
 
 Checkbox.propTypes = propTypes;

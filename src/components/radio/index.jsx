@@ -11,11 +11,13 @@ const propTypes = {
   cssModule: PropTypes.object,
   type: PropTypes.string,
   id: PropTypes.string,
+  name: PropTypes.string,
 };
 
 const defaultProps = {
   type: 'radio',
   id: 'radio',
+  name: 'radio',
 };
 
 const Radio = (props) => {
@@ -24,6 +26,7 @@ const Radio = (props) => {
     cssModule,
     type,
     id,
+    name,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -31,10 +34,10 @@ const Radio = (props) => {
     'radio-input',
   ), cssModule);
 
-  return ([
-    <Input {...attributes} type={type} id={id} className={classes} />,
-    <Label for={id} className='radio-input-label' />,
-  ])
+  return [
+    <Input {...attributes} type={type} id={id} className={classes} key={`${name}-radio-input`} />,
+    <Label for={id} className='radio-input-label' key={`${name}-radio-label`} />,
+  ];
 };
 
 Radio.propTypes = propTypes;
