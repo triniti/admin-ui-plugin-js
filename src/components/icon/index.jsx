@@ -2,17 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import mapNameToIcon from './mapNameToIcon';
 import './styles.scss';
-
-// additional icon location
-// import iconEye from 'assets/img/svg/icons/eye.svg';
-
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
   imgSrc: PropTypes.string,
+  src: PropTypes.string,
   size: PropTypes.string,
   inverse: PropTypes.bool,
   toggler: PropTypes.bool,
@@ -29,6 +27,7 @@ const Icon = (props) => {
     cssModule,
     tag: Tag,
     imgSrc,
+    src,
     size,
     inverse,
     toggler,
@@ -42,8 +41,9 @@ const Icon = (props) => {
     toggler ? 'icon-toggler' : false,
   ), cssModule);
 
+  const img = src || mapNameToIcon(imgSrc);
   return (
-    <Tag {...attributes} className={classes} src={require('./' + imgSrc + '.svg')} />
+    <Tag {...attributes} className={classes} src={img} />
   );
 };
 
