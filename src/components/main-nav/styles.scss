@@ -147,7 +147,7 @@
     background-color: transparent;
     overflow: hidden;
     box-shadow: none;
-    transition: all $transition;
+    transition: opacity $transition;
   }
   .main-nav .show .nav-dropdown-menu {
     padding: .125rem .75rem .125rem 0;
