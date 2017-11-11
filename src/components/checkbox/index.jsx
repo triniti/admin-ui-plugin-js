@@ -36,7 +36,7 @@ const Checkbox = (props) => {
 
   return [
     <Input type={type} id={id} className={classes} key={`${name}-checkbox-input`} {...attributes} />,
-    <Label for={id} className='checkbox-input-label' key={`${name}-checkbox-label`} />,
+    <Label for={id} className="checkbox-input-label" key={`${name}-checkbox-label`} />,
   ];
 };
 

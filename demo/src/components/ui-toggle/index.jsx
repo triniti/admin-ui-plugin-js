@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {

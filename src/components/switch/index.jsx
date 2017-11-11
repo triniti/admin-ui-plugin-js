@@ -35,8 +35,8 @@ const Switch = (props) => {
   ), cssModule);
 
   return [
-    <Input type={type} id={id} className={classes} key={`${name}-switch-input`} />,
-    <Label for={id} className='switch-input-label' key={`${name}-switch-label`} />,
+    <Input type={type} id={id} className={classes} key={`${name}-switch-input`} {...attributes} />,
+    <Label for={id} className="switch-input-label" key={`${name}-switch-label`} />,
   ];
 };
 

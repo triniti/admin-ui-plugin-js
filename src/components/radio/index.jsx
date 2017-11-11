@@ -36,7 +36,7 @@ const Radio = (props) => {
 
   return [
     <Input {...attributes} type={type} id={id} className={classes} key={`${name}-radio-input`} />,
-    <Label for={id} className='radio-input-label' key={`${name}-radio-label`} />,
+    <Label for={id} className="radio-input-label" key={`${name}-radio-label`} />,
   ];
 };
 
