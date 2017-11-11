@@ -94,6 +94,7 @@ import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Switch from './switch';
 import TabContent from './tab-content';
+import TabNav from './tab-nav';
 import TabPane from './tab-pane';
 import Table from './table';
 import Tooltip from './tooltip';
@@ -204,6 +205,7 @@ export {
   StatusMessage,
   Switch,
   TabContent,
+  TabNav,
   TabPane,
   Table,
   Tooltip,
