@@ -112,6 +112,7 @@ import {
 export {
   Alert,
   Backdrop,
+  BackButton,
   Badge,
   Breadcrumb,
   BreadcrumbItem,
@@ -143,6 +144,7 @@ export {
   Collapse,
   Container,
   ContentContainer,
+  DeleteButton,
   Divider,
   Dropdown,
   DropdownItem,
@@ -197,6 +199,7 @@ export {
   Radio,
   RouterLink,
   Row,
+  SaveButton,
   ScrollableContainer,
   SidenavContainer,
   SidenavHeader,
