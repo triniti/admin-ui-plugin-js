@@ -74,6 +74,7 @@ import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
 import NavbarToggler from './navbar-toggler';
 import PageActions from './page-actions';
+import PageActionButton from './page-action-button';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import PaginationItem from './pagination-item';
@@ -110,7 +111,6 @@ import {
 
 export {
   Alert,
-  BackButton,
   Backdrop,
   Badge,
   Breadcrumb,
@@ -143,7 +143,6 @@ export {
   Collapse,
   Container,
   ContentContainer,
-  DeleteButton,
   Divider,
   Dropdown,
   DropdownItem,
@@ -185,6 +184,7 @@ export {
   NavbarBrand,
   NavbarToggler,
   PageActions,
+  PageActionButton,
   PageHeader,
   Pagination,
   PaginationItem,
@@ -197,7 +197,6 @@ export {
   Radio,
   RouterLink,
   Row,
-  SaveButton,
   ScrollableContainer,
   SidenavContainer,
   SidenavHeader,

@@ -5,6 +5,6 @@ import './styles.scss';
 
 export default props => (
   <Button size="sm" className="mb-0" action="delete" {...props}>
-    <Icon imgSrc="delete" alt="delete"/>Delete
+    <Icon imgSrc="delete" alt="delete" />Delete
   </Button>
 );

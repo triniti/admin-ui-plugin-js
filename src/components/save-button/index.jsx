@@ -4,6 +4,6 @@ import Icon from '../icon';
 
 export default props => (
   <Button size="sm" className="mb-0" action="save" {...props}>
-    <Icon imgSrc="save" alt="save"/>Save
+    <Icon imgSrc="save" alt="save" />Save
   </Button>
 );
