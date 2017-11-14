@@ -1,6 +1,6 @@
 {
   "name": "@triniti/admin-ui-plugin",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "The admin-ui is a javaScript plugin for Triniti apps.",
   "repository": {
     "type": "git",

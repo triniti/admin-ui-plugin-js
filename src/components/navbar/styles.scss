@@ -47,6 +47,7 @@
   font-size: $navbar-brand-font-size;
   line-height: inherit;
   white-space: nowrap;
+  vertical-align: middle;
 
   @include hover-focus {
     text-decoration: none;
@@ -64,11 +65,6 @@
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
-
-  .nav-link {
-    padding-right: 0;
-    padding-left: 0;
-  }
 
   .dropdown-menu {
     position: absolute;
@@ -127,7 +123,7 @@
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
-  background-size: 100% 100%;
+  background-size: auto 20px;
 }
 
 // Generate series of `.navbar-expand-*` responsive classes for configuring
@@ -195,7 +191,56 @@
 // Styles for switching between navbars with light or dark background.
 
 // Dark links against a light background
+.navbar {
+  background-color: $white;
+
+  .navbar-brand {
+    color: $navbar-light-active-color;
+
+    @include hover-focus {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-nav {
+    .nav-link {
+      color: $navbar-light-color;
+
+      @include hover-focus {
+        color: $navbar-light-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-light-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-light-active-color;
+    }
+  }
+
+  .navbar-toggler {
+    color: $navbar-light-color;
+    border-color: $navbar-light-toggler-border-color;
+  }
+
+  .navbar-toggler-icon {
+    background-image: $navbar-light-toggler-icon-bg;
+  }
+
+  .navbar-text {
+    color: $navbar-light-color;
+  }
+}
+
+// Dark links against a light background
 .navbar-light {
+  background-color: $gray-100;
+
   .navbar-brand {
     color: $navbar-light-active-color;
 
@@ -242,6 +287,7 @@
 // White links against a dark background
 .navbar-dark {
   background-color: $navbar-theme-dark;
+
   .navbar-brand {
     color: $navbar-dark-active-color;
 
@@ -251,6 +297,27 @@
   }
 
   .navbar-nav {
+    .nav-link {
+      color: $navbar-dark-color;
+
+      @include hover-focus {
+        color: $navbar-dark-hover-color;
+      }
+
+      &.disabled {
+        color: $navbar-dark-disabled-color;
+      }
+    }
+
+    .show > .nav-link,
+    .active > .nav-link,
+    .nav-link.show,
+    .nav-link.active {
+      color: $navbar-dark-active-color;
+    }
+  }
+
+  .nav:not(.nav-underline) {
     .nav-link {
       color: $navbar-dark-color;
 
@@ -299,5 +366,20 @@
 
   @media (max-width: 1024px) {
     background-color: inherit;
+  }
+}
+
+.navbar-nav .nav-link-icon {
+  padding: 1.25em .5em;
+}
+
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .navbar-toggler-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .navbar-nav .nav-link-icon {
+    font-size: 1em;
+    padding: 1.1em .5em;
   }
 }

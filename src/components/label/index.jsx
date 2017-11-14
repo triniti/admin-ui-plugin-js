@@ -34,6 +34,7 @@ const propTypes = {
   lg: columnProps,
   xl: columnProps,
   widths: PropTypes.array,
+  strong: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -60,6 +61,7 @@ const Label = (props) => {
     tag: Tag,
     check,
     size,
+    strong,
     for: htmlFor,
     ...attributes
   } = props;
@@ -99,6 +101,7 @@ const Label = (props) => {
     hidden ? 'sr-only' : false,
     check ? 'form-check-label' : false,
     size ? `col-form-label-${size}` : false,
+    strong ? `form-label-strong` : false,
     colClasses,
     colClasses.length ? 'col-form-label' : false,
     !check && !colClasses.length ? 'form-control-label' : false,

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { Breadcrumb, BreadcrumbItem, BackButton, Button, DeleteButton, MainContainer, MainContent, PageActions, PageHeader, SaveButton } from '../../../src/components';
+import { Breadcrumb, BreadcrumbItem, BackButton, DeleteButton, MainContainer, MainContent, PageActions, PageHeader, SaveButton } from '../../../src/components';
 import UiComponents from '../config.module';
 
 const UiComponentContainer = ({ match }) => {
@@ -18,7 +18,6 @@ const UiComponentContainer = ({ match }) => {
           <BackButton />
           <DeleteButton />
           <SaveButton />
-          <Button color="primary" size="sm" className="mb-0" action="primary">save & close</Button>
         </PageActions>
       </PageHeader>
       <MainContent>

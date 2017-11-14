@@ -1,30 +1,66 @@
 import React from 'react';
-import { Button, Card, CardBody, Col, Row, Loading, Spinner } from '../../../../src/components';
-
-import iconEye from 'assets/img/svg/icons/eye.svg';
-import iconCog from 'assets/img/svg/icons/cog.svg';
-import iconMore from 'assets/img/svg/icons/more-vertical.svg';
-import iconClose from 'assets/img/svg/icons/close.svg';
-import iconSearch from 'assets/img/svg/icons/search.svg';
-import iconUser from 'assets/img/svg/icons/user.svg';
-import iconArrowLeft from 'assets/img/svg/icons/angle-left.svg';
-import iconMenu from 'assets/img/svg/icons/menu.svg';
+import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Spinner, UncontrolledTooltip } from '../../../../src/components';
 
 export default () => (
   <Card>
+    <CardHeader>Icons</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>
-          <Button outline radius="circle" color="link"><img src={iconCog} alt="edit" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconEye} alt="details" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconMore} alt="more" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconClose} alt="close" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconSearch} alt="search" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconUser} alt="user" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconArrowLeft} alt="arrow" /></Button>
-          <Button outline radius="circle" color="link"><img src={iconMenu} alt="menu" /></Button>
+          <Icon imgSrc="angle-double-left" id="angle-double-left" />
+          <UncontrolledTooltip placement="top" target="angle-double-left">angle-double-left</UncontrolledTooltip>
+          <Icon imgSrc="angle-double-right" id="angle-double-right" />
+          <UncontrolledTooltip placement="top" target="angle-double-right">angle-double-right</UncontrolledTooltip>
+          <Icon imgSrc="angle-left" id="angle-left" />
+          <UncontrolledTooltip placement="top" target="angle-left">angle-left</UncontrolledTooltip>
+          <Icon imgSrc="angle-right" id="angle-right" />
+          <UncontrolledTooltip placement="top" target="angle-right">angle-right</UncontrolledTooltip>
+          <Icon imgSrc="arrow-left" id="arrow-left" />
+          <UncontrolledTooltip placement="top" target="arrow-left">arrow-left</UncontrolledTooltip>
+          <Icon imgSrc="back" id="back" />
+          <UncontrolledTooltip placement="top" target="back">back</UncontrolledTooltip>
+          <Icon imgSrc="close" id="close" />
+          <UncontrolledTooltip placement="top" target="close">close</UncontrolledTooltip>
+          <Icon imgSrc="cog" id="cog" />
+          <UncontrolledTooltip placement="top" target="cog">cog</UncontrolledTooltip>
+          <Icon imgSrc="delete" id="delete" />
+          <UncontrolledTooltip placement="top" target="delete">delete</UncontrolledTooltip>
+          <Icon imgSrc="eye" id="eye" />
+          <UncontrolledTooltip placement="top" target="eye">eye</UncontrolledTooltip>
+          <Icon imgSrc="menu" id="menu" />
+          <UncontrolledTooltip placement="top" target="menu">menu</UncontrolledTooltip>
+          <Icon imgSrc="more-vertical" id="more-vertical" size="lg" />
+          <UncontrolledTooltip placement="top" target="more-vertical">more-vertical</UncontrolledTooltip>
+          <Icon imgSrc="save" id="save" />
+          <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
+          <Icon imgSrc="search" id="search" />
+          <UncontrolledTooltip placement="top" target="search">search</UncontrolledTooltip>
+          <Icon imgSrc="sort" id="sort" />
+          <UncontrolledTooltip placement="top" target="sort">sort</UncontrolledTooltip>
+          <Icon imgSrc="user" id="user" />
+          <UncontrolledTooltip placement="top" target="user">user</UncontrolledTooltip>
         </Col>
       </Row>
+    </CardBody>
+
+    <CardHeader>Button Icons</CardHeader>
+    <CardBody spacing="lg">
+      <Row>
+        <Col>
+          <Button outline radius="circle" color="link"><Icon imgSrc="cog" alt="edit" /></Button>
+          <Button outline radius="circle" color="link"><Icon imgSrc="eye" alt="details" /></Button>
+          <Button outline radius="circle" color="link"><Icon imgSrc="more-vertical" alt="more" size="md" /></Button>
+          <Button outline radius="circle" color="link"><Icon imgSrc="close" alt="close" /></Button>
+          <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
+          <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
+          <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
+          <Button radius="circle" color="dark"><Icon imgSrc="menu" alt="menu" inverse /></Button>
+        </Col>
+      </Row>
+    </CardBody>
+
+    <CardHeader>Spinner</CardHeader>
+    <CardBody spacing="lg">
       <Row>
         <Col>
           <Spinner />

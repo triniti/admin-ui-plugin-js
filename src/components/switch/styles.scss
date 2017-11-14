@@ -1,0 +1,203 @@
+//
+// switch-input
+//
+
+input.switch-input {
+  position: absolute;
+  visibility: hidden;
+  max-width: 0;
+  max-height: 0;
+  padding: 0;
+  opacity: 0;
+  -webkit-appearance: none;
+}
+
+input.switch-input + label {
+  width: 2.625rem;
+  height: 1.5rem;
+  border-radius: $round;
+  background-color: $body-bg;
+  box-shadow: inset 0 0 0 1px $gray-600;
+  cursor: pointer;
+}
+
+input.switch-input + label:before,
+input.switch-input + label:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1.5rem;
+  height: 1.5rem;
+  content: '';
+  transition: $transition;
+  border-radius: $round;
+  background: transparent;
+}
+
+input.switch-input + label:before {
+  border: $input-btn-border-width solid transparent;
+}
+
+input.switch-input + label:after {
+  background: white;
+  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
+}
+
+input.switch-input:checked + label:before {
+  width: 2.625rem;
+  background: theme-color("primary");
+  border: $input-btn-border-width solid darken(theme-color("primary"), 3%);
+}
+
+input.switch-input:checked + label:after {
+  left: 1.125rem;
+  box-shadow: inset 0 0 0 1px theme-color("primary"), 0 2px 4px $gray-rgba-600;
+}
+
+// switch-input xs
+
+input.switch-input.form-control-xs + label {
+  width: 21px;
+  height: 13px;
+}
+
+input.switch-input.form-control-xs + label:before,
+input.switch-input.form-control-xs + label:after {
+  width: 13px;
+  height: 13px;
+}
+
+input.switch-input + label:after {
+  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 1px 3px $gray-rgba-600;
+}
+
+input.switch-input.form-control-xs:checked + label:before {
+  width: 21px;
+}
+
+input.switch-input.form-control-xs:checked + label:after {
+  left: 8px;
+  box-shadow: inset 0 0 0 1px theme-color("primary"), 0 1px 3px $gray-rgba-600;
+}
+
+// switch-input sm
+
+input.switch-input.form-control-sm + label {
+  width: 1.75rem;
+  height: 1rem;
+}
+
+input.switch-input.form-control-sm + label:before,
+input.switch-input.form-control-sm + label:after {
+  width: 1rem;
+  height: 1rem;
+}
+
+input.switch-input.form-control-sm:checked + label:before {
+  width: 1.75rem;
+}
+
+input.switch-input.form-control-sm:checked + label:after {
+  left: .75rem;
+}
+
+// switch-input md
+
+input.switch-input.form-control-md + label {
+  width: 3.5rem;
+  height: 2rem;
+  box-shadow: inset 0 0 0 2px $gray-600;
+}
+
+input.switch-input.form-control-md + label:before,
+input.switch-input.form-control-md + label:after {
+  width: 2rem;
+  height: 2rem;
+}
+
+input.switch-input.form-control-md + label:after {
+  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
+}
+
+input.switch-input.form-control-md:checked + label:before {
+  width: 3.5rem;
+}
+
+input.switch-input.form-control-md:checked + label:after {
+  left: 1.5rem;
+  box-shadow: inset 0 0 0 2px theme-color("primary"), 0 2px 4px $gray-rgba-600;
+}
+
+// switch-input lg
+
+input.switch-input.form-control-lg + label {
+  width: 4.375rem;
+  height: 2.5rem;
+  box-shadow: inset 0 0 0 2px $gray-600;
+}
+
+input.switch-input.form-control-lg + label:before,
+input.switch-input.form-control-lg + label:after {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+input.switch-input.form-control-lg + label:after {
+  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 3px 6px $gray-rgba-600;
+}
+
+input.switch-input.form-control-lg:checked + label:before {
+  width: 4.375rem;
+}
+
+input.switch-input.form-control-lg:checked + label:after {
+  left: 2rem;
+  box-shadow: inset 0 0 0 2px theme-color("primary"), 0 3px 6px $gray-rgba-600;
+}
+
+// switch-input adjustments
+
+.form-check-label > .switch-input + label {
+  margin-left: 0;
+}
+
+.form-check-label > .switch-input + label {
+  margin-right: .5rem;
+}
+
+.form-check-label > .switch-input.form-control-xs + label,
+.form-check-label > .switch-input.form-control-sm + label {
+  margin-right: .25rem;
+}
+
+.form-check-label > .switch-input.form-control-md + label,
+.form-check-label > .switch-input.form-control-lg + label {
+  margin-right: .75rem;
+}
+
+input.switch-input + label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: $transition;
+  vertical-align: middle;
+  text-indent: -5000px;
+}
+
+input.switch-input[disabled] + label {
+  pointer-events: none;
+}
+
+input.switch-input.form-control-xs + label,
+input.switch-input.form-control-sm + label {
+  vertical-align: text-bottom;
+}
+
+// switch label
+
+.form-group .switch-input-label,
+.form-check .switch-input-label {
+  margin-right: .4rem;
+}

@@ -1,7 +1,5 @@
 import React from 'react';
-import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, DeleteButton, Form, FormGroup, Input, Label, PageActions, Row, SaveButton } from '../../../../src/components';
-
-import iconClose from 'assets/img/svg/icons/close.svg';
+import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, DeleteButton, Form, FormGroup, Icon, Label, PageActions, Radio, Row, SaveButton, Switch } from '../../../../src/components';
 
 class UiButtons extends React.Component {
   constructor(props) {
@@ -36,6 +34,7 @@ class UiButtons extends React.Component {
               <BackButton />
               <DeleteButton />
               <SaveButton />
+              <Button color="primary" size="sm" className="mb-0" action="primary">save & close</Button>
             </PageActions>
           </CardHeader>
         </div>
@@ -66,7 +65,7 @@ class UiButtons extends React.Component {
 
         <div>
           <CardHeader spacing="lg"><span>Solid radius="round"</span>
-           <Button outline radius="round" color="link">outline link</Button>
+            <Button outline radius="round" color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
             <Button radius="round">default</Button>
@@ -242,151 +241,238 @@ class UiButtons extends React.Component {
             <Row>
               <Col xs="12" sm="6">
                 <CardTitle tag="h4">Radio Buttons color="primary"</CardTitle>
-                <ButtonGroup className={'mb-2'}>
+                <ButtonGroup className="mb-2">
                   <Button
-                    color="primary" onClick={() => this.onRadioBtnClick(1)}
-                    active={this.state.rSelected === 1}
-                  >One</Button>
-                  <Button
-                    color="primary" onClick={() => this.onRadioBtnClick(2)}
-                    active={this.state.rSelected === 2}
-                  >Two</Button>
-                  <Button
-                    color="primary" onClick={() => this.onRadioBtnClick(3)}
-                    active={this.state.rSelected === 3}
-                  >Three</Button>
-                </ButtonGroup>
-
-                <CardTitle tag="h4">Radio Buttons</CardTitle>
-                <ButtonGroup className={'mb-2'}>
-                  <Button
+                    color="primary"
                     onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
-                  >One</Button>
+                    radius="round"
+                  >One
+                  </Button>
                   <Button
+                    color="primary"
                     onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
-                  >Two</Button>
+                    radius="round"
+                  >Two
+                  </Button>
                   <Button
+                    color="primary"
                     onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
-                  >Three</Button>
+                    radius="round"
+                  >Three
+                  </Button>
+                </ButtonGroup>
+
+                <CardTitle tag="h4">Radio Buttons color="multistate"</CardTitle>
+                <ButtonGroup className="mb-2">
+                  <Button
+                    color="multistate"
+                    onClick={() => this.onRadioBtnClick(1)}
+                    active={this.state.rSelected === 1}
+                  >One
+                  </Button>
+                  <Button
+                    color="multistate"
+                    onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                  >Two
+                  </Button>
+                  <Button
+                    color="multistate"
+                    onClick={() => this.onRadioBtnClick(3)}
+                    active={this.state.rSelected === 3}
+                  >Three
+                  </Button>
+                </ButtonGroup>
+                <br />
+                <ButtonGroup className="mb-2">
+                  <Button
+                    color="multistate"
+                    onClick={() => this.onRadioBtnClick(1)}
+                    active={this.state.rSelected === 1}
+                    size="sm"
+                  >One
+                  </Button>
+                  <Button
+                    color="multistate"
+                    onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                    size="sm"
+                  >Two
+                  </Button>
+                  <Button
+                    color="multistate"
+                    onClick={() => this.onRadioBtnClick(3)}
+                    active={this.state.rSelected === 3}
+                    size="sm"
+                  >Three
+                  </Button>
                 </ButtonGroup>
 
                 <CardTitle tag="h4">Radio Buttons outline</CardTitle>
-                <ButtonGroup className={'mb-2'}>
+                <ButtonGroup className="mb-2">
                   <Button
-                    outline onClick={() => this.onRadioBtnClick(1)}
+                    onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
-                  >One</Button>
+                    size="sm"
+                    radius="round"
+                    outline
+                  >One
+                  </Button>
                   <Button
-                    outline onClick={() => this.onRadioBtnClick(2)}
+                    onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
-                  >Two</Button>
+                    size="sm"
+                    radius="round"
+                    outline
+                  >Two
+                  </Button>
                   <Button
-                    outline onClick={() => this.onRadioBtnClick(3)}
+                    onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
-                  >Three</Button>
+                    size="sm"
+                    radius="round"
+                    outline
+                  >Three
+                  </Button>
+                </ButtonGroup>
+
+                <CardTitle tag="h4">Radio Buttons outline</CardTitle>
+                <ButtonGroup className="mb-2">
+                  <Button
+                    outline
+                    onClick={() => this.onRadioBtnClick(1)}
+                    active={this.state.rSelected === 1}
+                  >One
+                  </Button>
+                  <Button
+                    outline
+                    onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                  >Two
+                  </Button>
+                  <Button
+                    outline
+                    onClick={() => this.onRadioBtnClick(3)}
+                    active={this.state.rSelected === 3}
+                  >Three
+                  </Button>
                 </ButtonGroup>
 
                 <CardTitle tag="h4">Radio Buttons outlineText</CardTitle>
-                <ButtonGroup className={'mb-2'}>
+                <ButtonGroup className="mb-2">
                   <Button
-                    outlineText onClick={() => this.onRadioBtnClick(1)}
+                    outlineText
+                    onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
-                    color="success"
-                  >Save</Button>
-                  <Button
-                    outlineText onClick={() => this.onRadioBtnClick(2)}
-                    active={this.state.rSelected === 2}
                     color="primary"
-                  >Save and Close</Button>
+                    size="sm"
+                  >Save
+                  </Button>
                   <Button
-                    outlineText onClick={() => this.onRadioBtnClick(3)}
+                    outlineText
+                    onClick={() => this.onRadioBtnClick(2)}
+                    active={this.state.rSelected === 2}
+                    size="sm"
+                  >N/A
+                  </Button>
+                  <Button
+                    outlineText
+                    onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
                     color="danger"
-                  >Delete</Button>
+                    size="sm"
+                  >Delete
+                  </Button>
                 </ButtonGroup>
 
-                <p className={'text-muted'}>Selected: <span className={'text-danger'}>{this.state.rSelected}</span></p>
+                <p className="text-muted">Selected: <span className="text-danger">{this.state.rSelected}</span></p>
 
               </Col>
               <Col xs="12" sm="6">
                 <CardTitle tag="h4">Checkbox Buttons</CardTitle>
-                <ButtonGroup className={'mb-2'}>
+                <ButtonGroup className="mb-2">
                   <Button
                     onClick={() => this.onCheckboxBtnClick(1)}
                     active={this.state.cSelected.includes(1)}
-                  >One</Button>
+                  >One
+                  </Button>
                   <Button
                     onClick={() => this.onCheckboxBtnClick(2)}
                     active={this.state.cSelected.includes(2)}
-                  >Two</Button>
+                  >Two
+                  </Button>
                   <Button
                     onClick={() => this.onCheckboxBtnClick(3)}
                     active={this.state.cSelected.includes(3)}
-                  >Three</Button>
+                  >Three
+                  </Button>
                 </ButtonGroup>
 
                 <CardTitle tag="h4">Checkbox Buttons "outline"</CardTitle>
-                <ButtonGroup className={'mb-2'}>
+                <ButtonGroup className="mb-2">
                   <Button
-                    outline onClick={() => this.onCheckboxBtnClick(1)}
+                    outline
+                    onClick={() => this.onCheckboxBtnClick(1)}
                     active={this.state.cSelected.includes(1)}
-                  >One</Button>
+                  >One
+                  </Button>
                   <Button
-                    outline onClick={() => this.onCheckboxBtnClick(2)}
+                    outline
+                    onClick={() => this.onCheckboxBtnClick(2)}
                     active={this.state.cSelected.includes(2)}
-                  >Two</Button>
+                  >Two
+                  </Button>
                   <Button
-                    outline onClick={() => this.onCheckboxBtnClick(3)}
+                    outline
+                    onClick={() => this.onCheckboxBtnClick(3)}
                     active={this.state.cSelected.includes(3)}
-                  >Three</Button>
+                  >Three
+                  </Button>
                 </ButtonGroup>
 
-                <p className={'text-muted'}>Selected: <span
-                  className={'text-success'}
-                >{JSON.stringify(this.state.cSelected)}</span></p>
+                <p className="text-muted">
+                  Selected:
+                  <span className="text-success">
+                    {JSON.stringify(this.state.cSelected)}
+                  </span>
+                </p>
               </Col>
             </Row>
           </CardBody>
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox & Radio .btn-toggle style
+          <CardHeader spacing="lg">Switch Component
             <span>
               <Button size="sm" outline radius="round" onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
               <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
               <Form>
-                <FormGroup>
-                  <Input type="checkbox" name="toggler0" id="toggler0" className={'btn-toggle'} />
-                  <Label for="toggler0" />
+                <FormGroup inline>
+                  <Switch id="toggler0" />
                 </FormGroup>
               </Form>
             </span>
           </CardHeader>
           <CardBody spacing="lg">
             <Form>
-              <FormGroup>
+              <FormGroup inline>
                 <Label for="toggler1">size="xs"</Label>
-                <Input size="xs" type="checkbox" name="toggler1" id="toggler1" className={'btn-toggle'} />
-                <Label for="toggler1" />
+                <Switch id="toggler1" size="xs" value="on" />
 
-                <Label for="toggler2" className={'ml-4'}>size="sm"</Label>
-                <Input size="sm" type="checkbox" name="toggler2" id="toggler2" className={'btn-toggle'} />
-                <Label for="toggler2" />
+                <Label for="toggler2" className="ml-4">size="sm"</Label>
+                <Switch id="toggler2" size="sm" />
 
-                <Label for="toggler3" className={'ml-4'}>default</Label>
-                <Input type="checkbox" name="toggler3" id="toggler3" className={'btn-toggle'} />
-                <Label for="toggler3" />
+                <Label for="toggler3" strong className="ml-4">default</Label>
+                <Switch id="toggler3" />
 
-                <Label for="toggler4" className={'ml-4'}>size="md"</Label>
-                <Input size="md" type="checkbox" name="toggler4" id="toggler4" className={'btn-toggle'} />
-                <Label for="toggler4" />
+                <Label for="toggler4" className="ml-4">size="md"</Label>
+                <Switch id="toggler4" size="md" />
 
-                <Label for="toggler4" className={'ml-4'}>size="lg"</Label>
-                <Input size="lg" type="checkbox" name="toggler5" id="toggler5" className={'btn-toggle'} />
-                <Label for="toggler5" />
+                <Label for="toggler5" className="ml-4">size="lg"</Label>
+                <Switch id="toggler5" size="lg" />
 
               </FormGroup>
             </Form>
@@ -394,46 +480,54 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox & Radio .btn-radio style
+          <CardHeader spacing="lg">Radio Component
             <Form>
-              <FormGroup>
-                <Input size="sm" type="checkbox" name="toggler11" id="toggler11" className={'btn-radio'} onClick={() => this.onRadioBtnClick(11)} />
-                <Label for="toggler11" />
-                <Label for="toggler11" className={'mr-3 mb-0'}>Yes</Label>
+              <FormGroup inline>
+                <Label check className="mr-3" strong>
+                  <Radio size="sm" type="radio" name="toggler11" id="toggler11" onClick={() => this.onRadioBtnClick(11)} />
+                  Yes
+                </Label>
 
-                <Input size="sm" type="checkbox" name="toggler12" id="toggler12" className={'btn-radio'} onClick={() => this.onRadioBtnClick(12)} />
-                <Label for="toggler12" />
-                <Label for="toggler12" className={'mr-3 mb-0'}>No</Label>
+                <Label check className="mr-3" strong>
+                  <Radio size="sm" type="radio" name="toggler11" id="toggler12" onClick={() => this.onRadioBtnClick(12)} />
+                  No
+                </Label>
 
-                <Input size="sm" type="checkbox" name="toggler13" id="toggler13" className={'btn-radio'} onClick={() => this.onRadioBtnClick(13)} />
-                <Label for="toggler13" />
-                <Label for="toggler13" className={'mr-3 mb-0'}>Maybe</Label>
+                <Label check className="mr-3" strong>
+                  <Radio size="sm" type="radio" name="toggler11" id="toggler13" onClick={() => this.onRadioBtnClick(13)} />
+                  Maybe
+                </Label>
               </FormGroup>
             </Form>
           </CardHeader>
           <CardBody spacing="lg">
             <Form>
-              <FormGroup>
+              <FormGroup inline>
 
-                <Input size="xs" type="checkbox" name="toggler6" id="toggler6" className={'btn-radio'} />
-                <Label for="toggler6" />
-                <Label for="toggler6" className={'mr-4'}>size="xs"</Label>
+                <Label check className="mr-4">
+                  <Radio size="xs" type="checkbox" name="toggler6" id="toggler6" />
+                  size="xs"
+                </Label>
 
-                <Input size="sm" type="checkbox" name="toggler7" id="toggler7" className={'btn-radio'} />
-                <Label for="toggler7" />
-                <Label for="toggler7" className={'mr-4'}>size="sm"</Label>
+                <Label check className="mr-4">
+                  <Radio size="sm" type="checkbox" name="toggler7" id="toggler7" />
+                  size="sm"
+                </Label>
 
-                <Input type="checkbox" name="toggler8" id="toggler8" className={'btn-radio'} />
-                <Label for="toggler8" />
-                <Label for="toggler8" className={'mr-4'}>default</Label>
+                <Label check className="mr-4" strong>
+                  <Radio type="checkbox" name="toggler8" id="toggler8" />
+                default
+                </Label>
 
-                <Input size="md" type="checkbox" name="toggler9" id="toggler9" className={'btn-radio'} />
-                <Label for="toggler9" />
-                <Label for="toggler9" className={'mr-4'}>size="md"</Label>
+                <Label check className="mr-4">
+                  <Radio size="md" type="checkbox" name="toggler9" id="toggler9" />
+                  size="md"
+                </Label>
 
-                <Input size="lg" type="checkbox" name="toggler10" id="toggler10" className={'btn-radio'} />
-                <Label for="toggler10" />
-                <Label for="toggler10" className={'mr-4'}>size="lg"</Label>
+                <Label check className="mr-4">
+                  <Radio size="lg" type="checkbox" name="toggler10" id="toggler10" />
+                  size="lg"
+                </Label>
 
               </FormGroup>
             </Form>
@@ -441,38 +535,43 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox & Radio .btn-check style
+          <CardHeader spacing="lg">Checkbox Component
             <Form>
-              <FormGroup>
-                <Input size="sm" type="checkbox" name="toggler14" id="toggler14" className={'btn-check'} onClick={() => this.onRadioBtnClick(14)} />
-                <Label for="toggler14" />
-                <Label for="toggler14" className={'mr-3 mb-0'}>Maybe</Label>
+              <FormGroup check inline>
+                <Label className="mr-3">
+                  <Checkbox size="sm" name="toggler14" id="toggler14" onClick={() => this.onCheckboxBtnClick(14)} />
+                Maybe
+                </Label>
               </FormGroup>
             </Form>
           </CardHeader>
           <CardBody spacing="lg">
             <Form>
-              <FormGroup>
-                <Input size="xs" type="checkbox" name="toggler15" id="toggler15" className={'btn-check'} />
-                <Label for="toggler15" />
-                <Label for="toggler15" className={'mr-4'}>size="xs"</Label>
+              <FormGroup inline>
+                <Label className="mr-4">
+                  <Checkbox size="xs" name="toggler15" id="toggler15" />
+                size="xs"
+                </Label>
 
-                <Input size="sm" type="checkbox" name="toggler16" id="toggler16" className={'btn-check'} />
-                <Label for="toggler16" />
-                <Label for="toggler16" className={'mr-4'}>size="sm"</Label>
+                <Label className="mr-4">
+                  <Checkbox size="sm" name="toggler16" id="toggler16" />
+                size="sm"
+                </Label>
 
-                <Input type="checkbox" name="toggler17" id="toggler17" className={'btn-check'} />
-                <Label for="toggler17" />
-                <Label for="toggler17" className={'mr-4'}>default</Label>
+                <Label className="mr-4" strong>
+                  <Checkbox name="toggler17" id="toggler17" />
+                default
+                </Label>
 
-                <Input size="md" type="checkbox" name="toggler18" id="toggler18" className={'btn-check'} />
-                <Label for="toggler18" />
-                <Label for="toggler18" className={'mr-4'}>size="md"</Label>
+                <Label className="mr-4" strong>
+                  <Checkbox size="md" name="toggler18" id="toggler18" />
+                size="md"
+                </Label>
 
-                <Input size="lg" type="checkbox" name="toggler19" id="toggler19" className={'btn-check'} />
-                <Label for="toggler19" />
-                <Label for="toggler19" className={'mr-4'}>size="lg"</Label>
-
+                <Label className="mr-4" strong>
+                  <Checkbox size="lg" name="toggler19" id="toggler19" />
+                size="lg"
+                </Label>
               </FormGroup>
             </Form>
           </CardBody>
@@ -481,26 +580,26 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Icons radius="circle"
             <Button outline color="link" radius="circle">
-              <img src={iconClose} alt="x" />
+              <Icon imgSrc="close" />
             </Button>
           </CardHeader>
           <CardBody spacing="lg">
             <Button color="hover" radius="circle">×</Button>
             <Button outline color="link" radius="circle">×</Button>
             <Button radius="circle" color="link-bg">
-              <img src={iconClose} alt="x" />
+              <Icon imgSrc="close" alt="x" />
             </Button>
             <Button outline radius="circle" size="sm">
-              <img src={iconClose} alt="x" />
+              <Icon imgSrc="close" alt="x" />
             </Button>
             <Button radius="circle">
-              <img src={iconClose} alt="x" />
+              <Icon imgSrc="close" alt="x" />
             </Button>
             <Button outline radius="none" size="lg">
-              <img src={iconClose} alt="x" />
+              <Icon imgSrc="close" alt="x" />
             </Button>
             <Button radius="round" outline>
-              <img src={iconClose} alt="x" /> <span>Close Me Please</span>
+              <Icon imgSrc="close" alt="x" /> <span>Close Me Please</span>
             </Button>
             <Button outline radius="round" size="sm">
               × <span>Close Me Please</span>

@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../button';
-import iconBack from './back.svg';
+import Icon from '../icon';
 
 export default props => (
   <Button size="sm" className="mb-0" action="back" {...props}>
-    <img src={iconBack} alt="back" />Back
+    <Icon imgSrc="back" alt="back" size="xs" />Back
   </Button>
 );

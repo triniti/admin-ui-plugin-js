@@ -27,6 +27,7 @@ import CarouselCaption from './carousel-caption';
 import CarouselControl from './carousel-control';
 import CarouselIndicators from './carousel-indicators';
 import CarouselItem from './carousel-item';
+import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
@@ -82,6 +83,7 @@ import PopoverContent from './popover-content';
 import PopoverBody from './popover-body';
 import PopoverTitle from './popover-title';
 import Progress from './progress';
+import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
 import SaveButton from './save-button';
@@ -90,10 +92,13 @@ import SidenavContainer from './sidenav-container';
 import SidenavHeader from './sidenav-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
+import Switch from './switch';
 import TabContent from './tab-content';
+import TabNav from './tab-nav';
 import TabPane from './tab-pane';
 import Table from './table';
 import Tooltip from './tooltip';
+import TrinaryControl from './trinary-control';
 import UserNav from './user-nav';
 import {
   UncontrolledAlert,
@@ -105,8 +110,8 @@ import {
 
 export {
   Alert,
-  BackButton,
   Backdrop,
+  BackButton,
   Badge,
   Breadcrumb,
   BreadcrumbItem,
@@ -133,6 +138,7 @@ export {
   CarouselControl,
   CarouselIndicators,
   CarouselItem,
+  Checkbox,
   Col,
   Collapse,
   Container,
@@ -188,6 +194,7 @@ export {
   PopoverContent,
   PopoverTitle,
   Progress,
+  Radio,
   RouterLink,
   Row,
   SaveButton,
@@ -196,10 +203,13 @@ export {
   SidenavHeader,
   Spinner,
   StatusMessage,
+  Switch,
   TabContent,
+  TabNav,
   TabPane,
   Table,
   Tooltip,
+  TrinaryControl,
   UserNav,
   UncontrolledAlert,
   UncontrolledButtonDropdown,

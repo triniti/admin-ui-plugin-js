@@ -190,6 +190,11 @@ select.form-control-lg {
 
 .form-group {
   margin-bottom: $form-group-margin-bottom;
+
+  &.form-inline {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .form-text {
@@ -232,15 +237,10 @@ select.form-control-lg {
   }
 }
 
-.form-check-label {
-  padding-left: $form-check-input-gutter;
-  margin-bottom: 0; // Override default `<label>` bottom margin
-}
-
 .form-check-input {
-  position: absolute;
-  margin-top: $form-check-input-margin-y;
-  margin-left: -$form-check-input-gutter;
+  display: inline-block;
+  margin-right: .5rem;
+  align-self: flex-start;
 }
 
 // Radios and checkboxes on same line
@@ -249,10 +249,6 @@ select.form-control-lg {
 
   .form-check-label {
     vertical-align: middle;
-  }
-
-  + .form-check-inline {
-    margin-left: $form-check-inline-margin-x;
   }
 }
 
@@ -302,7 +298,6 @@ select.form-control-lg {
   display: flex;
   flex-flow: row wrap;
   align-items: center; // Prevent shorter elements from growing to same height as others (e.g., small buttons growing to normal sized button height)
-  margin: 0 -.25rem;
 
   // Because we use flex, the initial sizing of checkboxes is collapsed and
   // doesn't occupy the full-width (which is what we want for xs grid tier),
@@ -327,7 +322,7 @@ select.form-control-lg {
       flex-flow: row wrap;
       align-items: center;
       line-height: 1;
-      margin: 0 .125rem;
+      margin: 0 .5rem 0 0;
     }
 
     // Allow folks to *not* use `.form-group`
@@ -436,41 +431,70 @@ input[type='text']:focus,
   box-shadow: 0 1px 3px 0px $gray-rgba-400 !important;
 }
 
-label:not(.form-check-label),
 legend {
   font-size: .9em;
   font-weight: 600;
-  margin-bottom: .75rem;
   text-transform: uppercase;
   color: $body-color;
-}
-
-legend {
   margin-bottom: 1.25rem;
 }
 
-.form-inline > label,
-.form-inline > input,
-.form-inline > select,
-.form-inline > button {
-  margin: 0 .25rem .5rem .25rem;
+.form-label-strong {
+  font-size: .9em;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $body-color;
+  margin-top: 2px;
 }
 
-.form-group > label {
-  margin-right: .375rem;
+.trinary-control + .form-check-label,
+.trinary-control + .form-control-label {
+  padding-left: .5rem;
 }
 
-.form-check-label {
+.form-group .form-control-label {
+  cursor: pointer;
+}
+
+.form-group > label,
+.form-check > label {
+  margin-right: .4rem;
+}
+
+.form-inline .form-check-label,
+.form-inline .form-control-label {
   position: relative;
+  display: inline-flex;
+  margin-bottom: 0;
+  align-items: center;
+  line-height: 1.3;
+  vertical-align: middle;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-inline .sr-only {
+  position: absolute;
+}
+
+.card-header .form-check-label,
+.card-header .form-control-label {
+  font-size: .825rem;
+}
+
+.card-header .form-label-strong {
+  font-size: .75rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  flex: 0 0 auto;
 }
 
 .form-control:not(.form-control-sm).round {
   padding-left: 1rem;
-}
-
-.form-check-input {
-  margin-top: 0;
-  margin-right: .5rem;
 }
 
 .col-form-legend {
@@ -521,6 +545,7 @@ input::-moz-focus-inner {
 .page-header form,
 .card-header form {
   display: inline-block;  // use .d-inline-block
+  vertical-align: middle;
 }
 
 .page-header .form-group,
@@ -544,4 +569,39 @@ input::-moz-focus-inner {
  */
 .input-group ~ .invalid-feedback {
   display: block;  // use .d-block
+}
+
+
+// disabled form-control
+
+.form-control:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+  box-shadow: none !important;
+}
+
+.form-check.disabled,
+.form-check.disabled .form-check-label {
+  cursor: not-allowed;
+}
+
+
+// btn-check, radio-input, btn-toggle adjustments
+
+input.btn-check + label,
+input.radio-input + label {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: $transition;
+  vertical-align: middle;
+  text-indent: -5000px;
+}
+
+input.btn-check.form-control-xs + label,
+input.btn-check.form-control-sm + label,
+input.radio-input.form-control-xs + label,
+input.radio-input.form-control-sm + label {
+  vertical-align: text-bottom;
 }

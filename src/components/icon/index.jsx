@@ -2,18 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
+import mapNameToIcon from './mapNameToIcon';
 import './styles.scss';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  imgSrc: PropTypes.string,
+  src: PropTypes.string,
+  size: PropTypes.string,
+  inverse: PropTypes.bool,
   toggler: PropTypes.bool,
-  svg: PropTypes.string,
 };
 
 const defaultProps = {
   tag: 'img',
+  imgSrc: 'circle',
 };
 
 const Icon = (props) => {
@@ -21,17 +26,24 @@ const Icon = (props) => {
     className,
     cssModule,
     tag: Tag,
+    imgSrc,
+    src,
+    size,
+    inverse,
     toggler,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
-    toggler ? 'icon-toggler' : false,
     'icon',
+    size ? `icon-${size}` : false,
+    inverse ? 'icon-inverse' : false,
+    toggler ? 'icon-toggler' : false,
   ), cssModule);
 
+  const img = src || mapNameToIcon(imgSrc);
   return (
-    <Tag {...attributes} className={classes} src={require('./angle-right.svg')} />
+    <Tag {...attributes} className={classes} src={img} />
   );
 };
 

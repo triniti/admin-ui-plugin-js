@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../button';
-import iconSave from './save.svg';
+import Icon from '../icon';
 
 export default props => (
   <Button size="sm" className="mb-0" action="save" {...props}>
-    <img src={iconSave} alt="save" />Save
+    <Icon imgSrc="save" alt="save" />Save
   </Button>
 );
