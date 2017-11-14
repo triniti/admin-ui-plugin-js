@@ -68,23 +68,23 @@ class UiForm extends React.Component {
                   <Label for="exampleFile1">File</Label>
                   <Input type="file" name="file" id="exampleFile1" />
                   <FormText color="muted">
-                        This is some placeholder block-level help text for the above input.
-                        It's a bit lighter and easily wraps to a new line.
-                      </FormText>
+                    This is some placeholder block-level help text for the above input.
+                    It's a bit lighter and easily wraps to a new line.
+                  </FormText>
                 </FormGroup>
                 <FormGroup tag="fieldset">
                   <legend>Radio Buttons</legend>
                   <FormGroup check inline>
                     <Label check>
                       <Input type="radio" name="radio1" />
-                          Option one is this and that—be sure to include why it's great
-                        </Label>
+                      Option one is this and that—be sure to include why it's great
+                    </Label>
                   </FormGroup>
                   <FormGroup check inline>
                     <Label check>
                       <Input type="radio" name="radio1" />
-                        Option two can be something else and selecting it will deselect option one
-                      </Label>
+                      Option two can be something else and selecting it will deselect option one
+                    </Label>
                   </FormGroup>
                   <FormGroup check disabled inline>
                     <Label check>
@@ -100,7 +100,7 @@ class UiForm extends React.Component {
                   </Label>
                 </FormGroup>
 
-                <Button size="lg" color="primary" className={'mt-3'}>Submit</Button>
+                <Button size="lg" color="primary" className="mt-3">Submit</Button>
               </Form>
             </Col>
           </Row>
@@ -139,7 +139,7 @@ class UiForm extends React.Component {
         <CardBody spacing="lg">
           <Row>
             <Col sm="12">
-              <Form inline className={'mt-3'}>
+              <Form inline className="mt-3">
                 <FormGroup>
                   <Label for="exampleEmail4" hidden>Email</Label>
                   <Input type="email" name="email" id="exampleEmail4" placeholder="Email" radius="round" />
@@ -148,7 +148,10 @@ class UiForm extends React.Component {
                 <FormGroup>
                   <Label for="examplePassword4" hidden>Password</Label>
                   <Input
-                    type="password" name="password" id="examplePassword4" placeholder="Password"
+                    type="password"
+                    name="password"
+                    id="examplePassword4"
+                    placeholder="Password"
                     radius="round"
                   />
                 </FormGroup>
@@ -246,15 +249,15 @@ class UiForm extends React.Component {
                   <Label for="exampleFile">File</Label>
                   <Input type="file" name="file" id="exampleFile" />
                   <FormText color="muted">
-                        This is some placeholder block-level help text for the above input.
-                        It's a bit lighter and easily wraps to a new line.
-                      </FormText>
+                    This is some placeholder block-level help text for the above input.
+                    It's a bit lighter and easily wraps to a new line.
+                  </FormText>
                 </FormGroup>
-                <FormGroup check inline className={'mb-3'}>
+                <FormGroup check inline className="mb-3">
                   <Label check>
                     <Radio type="checkbox" name="radio1" id="radio1" />
-                        Option one is this and that—be sure to include why it's great
-                      </Label>
+                    Option one is this and that—be sure to include why it's great
+                  </Label>
                 </FormGroup>
                 <FormGroup check inline>
                   <Label check>
@@ -276,7 +279,7 @@ class UiForm extends React.Component {
         <CardHeader spacing="lg">Input Sizing</CardHeader>
         <CardBody spacing="lg">
           <Row>
-            <Col sm="10" md="8" lg="6" xl="4" className={'has-border'}>
+            <Col sm="10" md="8" lg="6" xl="4" className="has-border">
               <Form>
                 <Input placeholder="lg" size="lg" />
                 <Input placeholder="default" />
@@ -298,7 +301,7 @@ class UiForm extends React.Component {
         <CardHeader>Trinary Control - Default</CardHeader>
         <CardBody spacing="lg">
           <Row>
-            <Col xs="3" xs="4">
+            <Col xs="3" md="4">
               <FormGroup>
                 <Label check>
                   <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
@@ -311,7 +314,7 @@ class UiForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col xs="3" xs="4">
+            <Col xs="3" md="4">
               <FormGroup>
                 <Label>
                   <TrinaryControl name="trinaryDefault" id="trinaryDefault" width="6rem" onChange={this.handleChange} value={this.state.trinaryDefault} />
@@ -324,11 +327,11 @@ class UiForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col xs="3" xs="4">
-            <FormGroup>
-              <Label>Staff</Label>
-              <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
-            </FormGroup>
+            <Col xs="3" md="4">
+              <FormGroup>
+                <Label>Staff</Label>
+                <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
+              </FormGroup>
             </Col>
             <Col xs="6">
               <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -339,7 +342,7 @@ class UiForm extends React.Component {
         <CardHeader>Trinary Control - Custom</CardHeader>
         <CardBody spacing="lg">
           <Row>
-            <Col xs="3" xs="4">
+            <Col xs="3" md="4">
               <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" width="105px" value={this.state.trinaryCustom} onChange={this.handleChange} />
             </Col>
             <Col xs="6">
@@ -347,7 +350,7 @@ class UiForm extends React.Component {
             </Col>
           </Row>
           <Row>
-            <Col xs="3" xs="4">
+            <Col xs="3" md="4">
               <FormGroup disabled inline>
                 <Label check>Disabled</Label>
                 <TrinaryControl disabled name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="none" width="120px" value={this.state.trinaryCustom} onChange={this.handleChange} />
@@ -419,7 +422,7 @@ class UiForm extends React.Component {
                     <FormText color="muted">
                         This is some placeholder block-level help text for the above input.
                         It's a bit lighter and easily wraps to a new line.
-                      </FormText>
+                    </FormText>
                   </Col>
                 </FormGroup>
                 <FormGroup tag="fieldset" row>
@@ -434,26 +437,26 @@ class UiForm extends React.Component {
                     <FormGroup check inline>
                       <Label check>
                         <Radio size="sm" name="radio2" id="radio2b" />
-                            Option two can be something else and selecting it will deselect option one
-                          </Label>
+                        Option two can be something else and selecting it will deselect option one
+                      </Label>
                     </FormGroup>
                     <FormGroup check disabled inline>
                       <Label check>
                         <Radio size="sm" name="radio2" id="radio2c" disabled />
-                            Option three is disabled
-                          </Label>
+                        Option three is disabled
+                      </Label>
                     </FormGroup>
                   </Col>
                 </FormGroup>
                 <FormGroup row>
                   <Col sm={{ size: 10 }}>
-                    <div className={'has-border border-indent'}>
+                    <div className="has-border border-indent">
                       <Label for="checkbox3">Border Indented Checkbox</Label>
                       <FormGroup check inline>
                         <Label check>
                           <Checkbox size="sm" name="checkbox3" id="checkbox3" />
-                              Check me out
-                            </Label>
+                          Check me out
+                        </Label>
                       </FormGroup>
                     </div>
                   </Col>
