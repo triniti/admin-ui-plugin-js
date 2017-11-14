@@ -74,7 +74,6 @@ import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
 import NavbarToggler from './navbar-toggler';
 import PageActions from './page-actions';
-import PageActionButton from './page-action-button';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import PaginationItem from './pagination-item';
@@ -186,7 +185,6 @@ export {
   NavbarBrand,
   NavbarToggler,
   PageActions,
-  PageActionButton,
   PageHeader,
   Pagination,
   PaginationItem,

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, DeleteButton, Form, FormGroup, Icon, Label, PageActions, PageActionButton, Radio, Row, SaveButton, Switch } from '../../../../src/components';
+import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, DeleteButton, Form, FormGroup, Icon, Label, PageActions, Radio, Row, SaveButton, Switch } from '../../../../src/components';
 
 class UiButtons extends React.Component {
   constructor(props) {
@@ -34,9 +34,6 @@ class UiButtons extends React.Component {
               <BackButton />
               <DeleteButton />
               <SaveButton />
-              <PageActionButton color="warning" outline action="page" onClick={() => alert('do clicked a page action')}>
-                <Icon imgSrc="eye" size="xs" />page action
-              </PageActionButton>
               <Button color="primary" size="sm" className="mb-0" action="primary">save & close</Button>
             </PageActions>
           </CardHeader>
