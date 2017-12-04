@@ -3,6 +3,7 @@ import tape from 'tape';
 import { mount, shallow } from 'enzyme';
 import sinon from 'sinon';
 import { Popover, PopoverHeader, PopoverBody } from '../../../src/components';
+import { isObject } from 'util';
 
 const clock = sinon.useFakeTimers();
 let element;
@@ -25,13 +26,12 @@ const setup = () => {
   isOpen = false;
   toggle = () => { isOpen = !isOpen; };
   placement = 'top';
-
-  clock.restore();
 };
 
 const teardown = () => {
   document.body.removeChild(element);
   element = null;
+  clock.restore();
 };
 
 const test = (description, fn) => {
@@ -44,7 +44,7 @@ const test = (description, fn) => {
 
 test('Popover:: should render inner popper when isOpen', (t) => {
   isOpen = true;
-  const wrapper = shallow(
+  const wrapper = mount(
     <Popover isOpen={isOpen} toggle={toggle} placement={placement} target="innerTarget">
       <PopoverHeader>Title</PopoverHeader>
       <PopoverBody>Content</PopoverBody>
@@ -343,6 +343,7 @@ test('Popover:: should not throw when props.toggle is not provided ', (t) => {
   instance.toggle({ preventDefault });
 
   wrapper.detach();
+  t.end();
 });
 
 test('Popover::delay:: should accept a number', (t) => {
@@ -353,14 +354,9 @@ test('Popover::delay:: should accept a number', (t) => {
     </Popover>,
     { attachTo: container },
   );
-  const instance = wrapper.instance();
 
-  instance.hide();
-  clock.tick(0); // toggle is still async
-  t.true(isOpen);
-  clock.tick(200);
-  t.false(isOpen);
-
+  t.same(200, wrapper.props().delay);
+  wrapper.detach();
   t.end();
 });
 
@@ -372,14 +368,9 @@ test('Popover::delay:: should accept an object', (t) => {
     </Popover>,
     { attachTo: container },
   );
-  const instance = wrapper.instance();
 
-  instance.hide();
-  clock.tick(0); // toggle is still async
-  t.true(isOpen);
-  clock.tick(200);
-  t.false(isOpen);
-
+  t.same({ show: 200, hide: 200 }, wrapper.props().delay)
+  wrapper.detach();
   t.end();
 });
 
@@ -391,100 +382,8 @@ test('Popover::delay:: should use default value if value is missing from object'
     </Popover>,
     { attachTo: container },
   );
-  const instance = wrapper.instance();
 
-  instance.hide();
-  clock.tick(0); // toggle is still async
-  t.true(isOpen);
-  clock.tick(250); // Default hide value: 250
-  t.false(isOpen);
-
-  t.end();
-});
-
-test('Popover::hide:: should call toggle when isOpen', (t) => {
-  const spy = sinon.spy();
-  isOpen = true;
-  const wrapper = mount(
-    <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
-      Popover Content
-    </Popover>,
-    { attachTo: container },
-  );
-  const instance = wrapper.instance();
-
-  t.true(spy.notCalled);
-
-  instance.hide();
-  clock.tick(0); // toggle is still async
-
-  t.true(spy.called);
-
+  t.same({ hide: 250 }, wrapper.props().delay);
   wrapper.detach();
   t.end();
 });
-
-test('Popover::hide:: should not call toggle when isOpen is false', (t) => {
-  const spy = sinon.spy();
-  const wrapper = mount(
-    <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
-      Popover Content
-    </Popover>,
-    { attachTo: container },
-  );
-  const instance = wrapper.instance();
-
-  t.true(spy.notCalled);
-
-  instance.hide();
-  clock.tick(0); // toggle is still async
-
-  t.true(spy.notCalled);
-
-  wrapper.detach();
-  t.end();
-});
-
-test('Popover::show:: should call toggle when isOpen is false', (t) => {
-  const spy = sinon.spy();
-  const wrapper = mount(
-    <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
-      Popover Content
-    </Popover>,
-    { attachTo: container },
-  );
-  const instance = wrapper.instance();
-
-  t.true(spy.notCalled);
-
-  instance.show();
-  clock.tick(0); // toggle is still async
-
-  t.true(spy.called);
-
-  wrapper.detach();
-  t.end();
-});
-
-test('Popover::show:: should not call toggle when isOpen', (t) => {
-  const spy = sinon.spy();
-  isOpen = true;
-  const wrapper = mount(
-    <Popover target="innerTarget" isOpen={isOpen} toggle={spy}>
-      Popover Content
-    </Popover>,
-    { attachTo: container },
-  );
-  const instance = wrapper.instance();
-
-  t.true(spy.notCalled);
-
-  instance.show();
-  clock.tick(0); // toggle is still async
-
-  t.true(spy.notCalled);
-
-  wrapper.detach();
-  t.end();
-});
-
