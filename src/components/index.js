@@ -1,4 +1,5 @@
 import Alert from './alert';
+import AlertBar from './alert-bar';
 import BackButton from './back-button';
 import Backdrop from './backdrop';
 import Badge from './badge';
@@ -110,6 +111,7 @@ import {
 
 export {
   Alert,
+  AlertBar,
   Backdrop,
   BackButton,
   Badge,
