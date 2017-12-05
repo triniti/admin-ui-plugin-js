@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { Breadcrumb, BreadcrumbItem, BackButton, DeleteButton, MainContainer, MainContent, PageActions, PageHeader, SaveButton } from '../../../src/components';
+import { Breadcrumb, BreadcrumbItem, MainContainer, MainContent, PageActionButton, PageActions, PageHeader } from '../../../src/components';
 import UiComponents from '../config.module';
+
+import EnvelopeIcon from '../assets/img/svg/icon/fa-envelope.svg';
 
 const UiComponentContainer = ({ match }) => {
   const elem = UiComponents[match.params.componentId];
@@ -15,9 +17,10 @@ const UiComponentContainer = ({ match }) => {
           <BreadcrumbItem active>{(match.params.componentId)}</BreadcrumbItem>
         </Breadcrumb>
         <PageActions>
-          <BackButton />
-          <DeleteButton />
-          <SaveButton />
+          <PageActionButton text="Back" icon="back" />
+          <PageActionButton text="Delete" icon="delete" />
+          <PageActionButton text="Save" icon="save" />
+          <PageActionButton text="save & close" iconUrl={EnvelopeIcon} onClick={() => alert('save & close!')} />
         </PageActions>
       </PageHeader>
       <MainContent>
