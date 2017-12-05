@@ -15,17 +15,16 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-feature-settings: 'kern' 1;
   -moz-font-feature-settings: 'kern' 1;
+
+  @media (min-width: 1600px) {
+    font-size: .875rem;
+  }
 }
 
 
 // Increase base font size above 1600px wide
 
-@media (min-width: 1600px) {
-  body,
-  .dropdown-menu {
-    font-size: .875rem;
-  }
-}
+
 
 // Force col to 100% width on mobile if no col-12 set
 
@@ -55,6 +54,12 @@ button:focus,
   outline: 0;
   outline: 0 auto -webkit-focus-ring-color;
   outline-offset: 0;
+}
+
+a:focus,
+button:focus,
+.btn:focus,
+.btn:active:focus {
   box-shadow: none;
 }
 
@@ -71,6 +76,11 @@ h2,
 h3 {
   margin-bottom: 1rem;
   letter-spacing: .008em;
+}
+
+a:not([href]):not([tabindex]),
+.nav-link:hover {
+  cursor: pointer;
 }
 
 // Layout
@@ -98,71 +108,23 @@ h3 {
   justify-content: space-between;
 }
 
-// Todo Need to fix these Row styles
 
-.tab-pane .row {
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
-}
+// Close - used with modals and buttons
 
-.aside-content .tab-pane .row {
-  padding-top: 1.5rem;
-  padding-bottom: 2rem;
-}
+.close {
+  float: right;
+  font-size: $close-font-size;
+  font-weight: $close-font-weight;
+  line-height: 1;
+  color: $close-color;
+  text-shadow: $close-text-shadow;
+  opacity: .5;
 
-@media (max-width: 767px) {
-  .row {
-    padding-top: 1.5rem;
+  @include hover-focus {
+    color: $close-color;
+    text-decoration: none;
+    opacity: .75;
   }
-  .row:first-child {
-    padding-top: 0;
-  }
-}
-
-// Pagination
-//
-// Fixes missing right border on hover
-
-.page-link:focus,
-.page-link:hover {
-  z-index: 1;
-}
-
-
-// Footer Buttons
-//
-// Most often useed with small modals and asides so that the buttons touch the edges
-
-.footer-buttons {
-  padding: 0;
-  justify-content: space-between;
-}
-
-.footer-buttons .btn {
-  margin: 0 0 0 1px;
-  border: none;
-  border-radius: 0;
-  box-shadow: 1px 0 0 0 rgba(0, 0, 0, .125);
-  flex: 1;
-}
-
-.footer-button.border-0 {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
-.modal-dialog:not(.modal-sm) .footer-buttons .btn {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.footer-buttons .btn:first-child {
-  margin-left: 0;
-  border-bottom-left-radius: .2rem;
-}
-
-.footer-buttons .btn:last-child {
-  border-bottom-right-radius: .2rem;
 }
 
 
@@ -210,12 +172,19 @@ h3 {
 }
 
 
+// Borderless - remove border and box-shadow
+
+.borderless {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+
 // HR Inverse
 
 .card-inverse > hr {
   border-top: 1px solid $white-rgba-200;
 }
-
 
 // Hover that adds a transitioned background color on any element
 

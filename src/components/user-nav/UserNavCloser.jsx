@@ -9,6 +9,7 @@ const UserNavCloser = ({ handleClick }) => (
     color="hover"
     size="sm"
     onClick={handleClick}
+    className="mb-0"
   >
     <img src={iconClose} alt="close" />
   </Button>

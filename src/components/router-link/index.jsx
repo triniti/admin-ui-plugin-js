@@ -6,14 +6,13 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
-
 const RouterLink = ({
-  navTab, breadcrumbItem, to, className, ...attributes
+  navTab, to, className, ...attributes
 }) => (
   <NavLink
     className={classNames({
-      'navbar-tabs-link': navTab,
-      className,
+      'nav-link': navTab,
+      [className]: !!className,
     })}
     activeClassName="active"
     exact
@@ -25,12 +24,10 @@ const RouterLink = ({
 RouterLink.propTypes = {
   to: PropTypes.string.isRequired,
   className: PropTypes.string,
-  breadcrumbItem: PropTypes.bool,
   navTab: PropTypes.bool,
 };
 
 RouterLink.defaultProps = {
-  breadcrumbItem: false,
   navTab: false,
 };
 

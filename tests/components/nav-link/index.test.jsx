@@ -27,23 +27,23 @@ test('NavLink:: should render children', (t) => {
 
 test('NavLink:: should pass additional classNames', (t) => {
   const wrapper = shallow(<NavLink className="extra" />);
+  t.true(wrapper.hasClass('extra'));
+  t.true(wrapper.hasClass('nav-link'));
 
-  t.equal(wrapper.hasClass('extra'), true);
-  t.equal(wrapper.hasClass('nav-link'), true);
   t.end();
 });
 
 test('NavLink:: should render active class', (t) => {
   const wrapper = shallow(<NavLink active />);
 
-  t.equal(wrapper.hasClass('active'), true);
+  t.true(wrapper.hasClass('active'));
   t.end();
 });
 
 test('NavLink:: should render disabled markup', (t) => {
   const wrapper = shallow(<NavLink disabled />);
 
-  t.equal(wrapper.hasClass('disabled'), true);
+  t.true(wrapper.hasClass('disabled'));
   t.end();
 });
 

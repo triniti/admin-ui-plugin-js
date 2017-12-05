@@ -1,4 +1,5 @@
 // Card
+@import "~bootstrap/scss/mixins";
 
 .card {
   position: relative;
@@ -17,8 +18,12 @@
   }
 }
 
-.tab-pane > .card {
+.card-borderless {
   border: none;
+}
+
+.tab-pane > .card-borderless {
+  margin-top: 0;
 }
 
 // Card inside cards-container
@@ -41,6 +46,10 @@
   box-shadow: inset 0 1px 0 0 $gray-300;
 }
 
+.card-body + .card-inverse {
+  box-shadow: none;
+}
+
 // CardBody increased padding when card spacing="lg"
 
 .card-body-spacing-lg {
@@ -58,10 +67,6 @@
   @media (min-width: 1600px) {
     padding: ($padding-xl - .5rem) $padding-xl ($padding-xl + .5rem) $padding-xl;
   }
-}
-
-.card-body > .row:first-child {
-  padding-top: 0;
 }
 
 .jumbotron > .card-body {
@@ -84,6 +89,9 @@
   }
 }
 
+.card-body > .row:first-of-type {
+  padding-top: 0;
+}
 
 .card-title {
   display: flex;
@@ -111,14 +119,12 @@ h4.card-title {
   margin-top: 2rem;
 }
 
-
 .card-title-sm {
   margin-right: auto;
   margin-left: .5rem;
   font-size: $small-font-size;
   color: $text-muted;
 }
-
 
 .card-subtitle {
   margin-top: -($card-spacer-y / 2);

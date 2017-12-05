@@ -1,4 +1,5 @@
 import Alert from './alert';
+import BackButton from './back-button';
 import Backdrop from './backdrop';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
@@ -26,10 +27,12 @@ import CarouselCaption from './carousel-caption';
 import CarouselControl from './carousel-control';
 import CarouselIndicators from './carousel-indicators';
 import CarouselItem from './carousel-item';
+import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
 import ContentContainer from './content-container';
+import DeleteButton from './delete-button';
 import Divider from './divider';
 import Dropdown from './dropdown';
 import DropdownItem from './dropdown-item';
@@ -42,7 +45,7 @@ import Form from './form';
 import FormFeedback from './form-feedback';
 import FormGroup from './form-group';
 import FormText from './form-text';
-import HeaderDisplay from './header-display';
+import Icon from './icon';
 import Input from './input';
 import InputGroup from './input-group';
 import InputGroupAddon from './input-group-addon';
@@ -69,9 +72,8 @@ import NavItem from './nav-item';
 import NavLink from './nav-link';
 import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
-import NavbarTabs from './navbar-tabs';
-import NavbarTabsItem from './navbar-tabs-item';
 import NavbarToggler from './navbar-toggler';
+import PageActions from './page-actions';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import PaginationItem from './pagination-item';
@@ -82,17 +84,22 @@ import PopoverBody from './popover-body';
 import PopoverTitle from './popover-title';
 import PopoverHeader from './popover-header';
 import Progress from './progress';
+import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
+import SaveButton from './save-button';
 import ScrollableContainer from './scrollable-container';
 import SidenavContainer from './sidenav-container';
 import SidenavHeader from './sidenav-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
+import Switch from './switch';
 import TabContent from './tab-content';
+import TabNav from './tab-nav';
 import TabPane from './tab-pane';
 import Table from './table';
 import Tooltip from './tooltip';
+import TrinaryControl from './trinary-control';
 import UserNav from './user-nav';
 import {
   UncontrolledAlert,
@@ -105,6 +112,7 @@ import {
 export {
   Alert,
   Backdrop,
+  BackButton,
   Badge,
   Breadcrumb,
   BreadcrumbItem,
@@ -131,10 +139,12 @@ export {
   CarouselControl,
   CarouselIndicators,
   CarouselItem,
+  Checkbox,
   Col,
   Collapse,
   Container,
   ContentContainer,
+  DeleteButton,
   Divider,
   Dropdown,
   DropdownItem,
@@ -147,7 +157,7 @@ export {
   FormFeedback,
   FormGroup,
   FormText,
-  HeaderDisplay,
+  Icon,
   Input,
   InputGroup,
   InputGroupAddon,
@@ -174,9 +184,8 @@ export {
   NavLink,
   Navbar,
   NavbarBrand,
-  NavbarTabs,
-  NavbarTabsItem,
   NavbarToggler,
+  PageActions,
   PageHeader,
   Pagination,
   PaginationItem,
@@ -187,17 +196,22 @@ export {
   PopoverHeader,
   PopoverTitle,
   Progress,
+  Radio,
   RouterLink,
   Row,
+  SaveButton,
   ScrollableContainer,
   SidenavContainer,
   SidenavHeader,
   Spinner,
   StatusMessage,
+  Switch,
   TabContent,
+  TabNav,
   TabPane,
   Table,
   Tooltip,
+  TrinaryControl,
   UserNav,
   UncontrolledAlert,
   UncontrolledButtonDropdown,

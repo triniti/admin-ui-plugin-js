@@ -9,23 +9,29 @@
     height: 2.5rem;
     flex: 1 0 auto;
     justify-content: space-between;
-    background-color: theme-color("light");
+    background-color: $white;
+  }
+  .navbar-light .navbar-main-mobile {
+    background-color: $navbar-theme-light;
   }
   .navbar-dark .navbar-main-mobile {
-    background-color: theme-color("dark");
+    background-color: $navbar-theme-dark;
   }
 }
 
 .navbar-main-brand {
   display: inline-flex;
-  width: calc(100% - 7rem);
+  width: 240px;
   height: 2.5rem;
   padding: 0;
   text-align: center;
-  background: transparent url('tmz-logo.svg?fill=%23#{$icon-theme-light}') center center / auto 1.3rem no-repeat;
+  background: transparent $navbar-logo-light center center / auto 1.3rem no-repeat;
 
+  @media (max-width: 1024px) {
+    margin: 0 !important;
+  }
   @media (min-width: 1025px) {
-    width: 2.5rem;
+    width: $navbarlogo-width;
     height: 2.5rem;
     margin: 0 .5rem 0 1.25rem;
     transition: all $transition;
@@ -36,13 +42,13 @@
     }
   }
   @media (min-width: 1200px) {
-    width: 3.25rem;
+    width: $navbarlogo-width + .75rem;
     height: 3.25rem;
   }
 }
 
 .navbar-dark .navbar-main-brand {
-  background: transparent url('tmz-logo.svg?fill=%23#{$icon-theme-dark}') center center / auto 1.3rem no-repeat;
+  background: transparent $navbar-logo-dark center center / auto 1.3rem no-repeat;
 
   @media (min-width: 1025px) {
     background-size: 80% auto;
@@ -55,16 +61,5 @@
   @media (max-width: 1024px) {
     display: inline-block;
     width: 48px;
-  }
-}
-
-@media (max-width: 1024px) {
-  .navbar-main-mobile .navbar-toggler-icon {
-    background: transparent url('menu.svg?fill=%23#{$icon-theme-light}') center center / auto 20px no-repeat;
-    filter: opacity(.6);
-  }
-
-  .navbar-dark .navbar-main-mobile .navbar-toggler-icon {
-    background: transparent url('menu.svg?fill=%23#{$icon-theme-dark}') center center / auto 20px no-repeat;
   }
 }

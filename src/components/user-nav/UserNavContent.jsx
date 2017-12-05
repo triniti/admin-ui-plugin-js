@@ -1,14 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert2';
-import { TabContent, Badge, NavbarTabs, NavbarTabsItem, ScrollableContainer } from '../';
+import classnames from 'classnames';
+import { TabContent, Badge, Nav, NavItem, NavLink, ScrollableContainer } from '../';
 import UserSettingsTabPane from './UserSettingsTabPane';
 import MiscTabPane from './UserNavMiscTabPane';
 import UserNavCloser from './UserNavCloser';
 
 
 /* fixme:: create notification component, get unread numbers from redux stroe */
-const UnreadMsgBadge = () => <Badge color="warning" className="round">3</Badge>;
+const UnreadMsgBadge = () => <Badge color="warning" inline pill className="ml-0">3</Badge>;
 
 class UserNavContent extends React.Component {
   static propTypes = {
@@ -16,7 +17,6 @@ class UserNavContent extends React.Component {
     currentTheme: PropTypes.string,
     toggleTheme: PropTypes.func,
     toggleUserNav: PropTypes.func,
-    handleTabClick: PropTypes.func,
     handleLogout: PropTypes.func,
     position: PropTypes.string,
   };
@@ -26,6 +26,11 @@ class UserNavContent extends React.Component {
 
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
     this.getTabItemClass = this.getTabItemClass.bind(this);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      activeTab: '1',
+    };
   }
 
   getTabItemClass(tabId) {
@@ -46,10 +51,16 @@ class UserNavContent extends React.Component {
     });
   }
 
+  toggle(tab1) {
+    if (this.state.activeTab !== tab1) {
+      this.setState({
+        activeTab: tab1,
+      });
+    }
+  }
+
   render() {
     const {
-      activeTab,
-      handleTabClick,
       currentTheme,
       position,
       toggleTheme,
@@ -58,24 +69,18 @@ class UserNavContent extends React.Component {
 
     return (
       <div id="usernav-container" className={`usernav-container ${position}`}>
-        <NavbarTabs>
-          <NavbarTabsItem
-            title="Account Info"
-            handleClick={() => handleTabClick('1')}
-            classes={this.getTabItemClass('1')}
-          />
-          <NavbarTabsItem
-            title="Alerts"
-            handleClick={() => handleTabClick('2')}
-            classes={this.getTabItemClass('2')}
-          >
-            <UnreadMsgBadge />
-          </NavbarTabsItem>
+        <Nav underline className="pl-0">
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab === '1' })} onClick={() => { this.toggle('1'); }}>Account Info</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab === '2' })} onClick={() => { this.toggle('2'); }}>Alerts <UnreadMsgBadge /></NavLink>
+          </NavItem>
           <UserNavCloser handleClick={toggleUserNav} />
-        </NavbarTabs>
+        </Nav>
 
         <ScrollableContainer>
-          <TabContent activeTab={activeTab}>
+          <TabContent activeTab={this.state.activeTab}>
             <UserSettingsTabPane
               tabId="1"
               handleLogout={this.handleLogoutClick}

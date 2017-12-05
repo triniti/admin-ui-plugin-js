@@ -111,7 +111,7 @@ $theme-colors: (
   info: $cyan,
   warning: $orange,
   danger: $red,
-  light: $white,
+  light: $gray-400,
   dark: $gray-800
 ) !default;
 
@@ -252,8 +252,8 @@ $font-size-lg:   1rem !default;
 $font-size-sm:   .8rem !default;
 
 $font-weight-light: 300 !default;
-$font-weight-normal: normal !default;
-$font-weight-bold: bold !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
 
 $font-weight-base: $font-weight-normal !default;
 $line-height-base: 1.5 !default;
@@ -340,15 +340,17 @@ $input-btn-padding-y:       .5rem !default;
 $input-btn-padding-x:       1rem !default;
 $input-btn-line-height:     1.25 !default;
 
-$input-btn-padding-y-sm:    .25rem !default;
+$input-btn-padding-y-sm:    .125rem !default;
 $input-btn-padding-x-sm:    .75rem !default;
 $input-btn-line-height-sm:  1.25 !default;
 
-$input-btn-padding-y-lg:    .5rem !default;
+$input-btn-padding-y-lg:    .75rem !default;
 $input-btn-padding-x-lg:    1rem !default;
-$input-btn-line-height-lg:  1.5 !default;
+$input-btn-line-height-lg:  1.25 !default;
+$input-btn-focus-box-shadow: none !default;
+$input-btn-focus-width: none !default;
 
-$btn-font-weight:                $font-weight-normal !default;
+$btn-font-weight:                $font-weight-bold !default;
 $btn-box-shadow:                 none !default;
 $btn-focus-box-shadow:           none !default;
 $btn-active-box-shadow:          none !default;
@@ -371,7 +373,7 @@ $input-bg:                       $gray-100 !default;
 $input-disabled-bg:              $gray-200 !default;
 
 $input-color:                    $gray-900 !default;
-$input-border-color:             rgba($black,.1) !default;
+$input-border-color:             rgba($black,.125) !default;
 $input-btn-border-width:         $border-width !default; // For form controls and buttons
 $input-box-shadow:               none !default;
 
@@ -403,7 +405,7 @@ $form-text-margin-top:     .25rem !default;
 
 $form-check-margin-bottom:  .5rem !default;
 $form-check-input-gutter:   1.25rem !default;
-$form-check-input-margin-y: .25rem !default;
+$form-check-input-margin-y: .35rem !default;
 $form-check-input-margin-x: .25rem !default;
 
 $form-check-inline-margin-x: .75rem !default;
@@ -573,20 +575,20 @@ $navbar-brand-padding-y:            ($navbar-brand-height - $nav-link-height) / 
 $navbar-toggler-padding-y:           .25rem !default;
 $navbar-toggler-padding-x:           .75rem !default;
 $navbar-toggler-font-size:           $font-size-lg !default;
-$navbar-toggler-border-radius:       $btn-border-radius !default;
+$navbar-toggler-border-radius:       0 !default; // $btn-border-radius
 
-$navbar-dark-color:                 rgba($white,.75) !default;
+$navbar-dark-color:                 rgba($white,.6) !default;
 $navbar-dark-hover-color:           rgba($white,.825) !default;
 $navbar-dark-active-color:          rgba($white,1) !default;
 $navbar-dark-disabled-color:        rgba($white,.25) !default;
-$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
-$navbar-dark-toggler-border-color:  rgba($white,.1) !default;
+$navbar-dark-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-dark-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-dark-toggler-border-color:  transparent !default;
 
 $navbar-light-color:                rgba($black,.6) !default;
 $navbar-light-hover-color:          rgba($black,.8) !default;
 $navbar-light-active-color:         rgba($black,.9) !default;
 $navbar-light-disabled-color:       rgba($black,.3) !default;
-$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
+$navbar-light-toggler-icon-bg: str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-light-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23") !default;
 $navbar-light-toggler-border-color: rgba($black,.1) !default;
 
 // Pagination
@@ -666,7 +668,7 @@ $popover-bg:                          $white !default;
 $popover-max-width:                   276px !default;
 $popover-border-width:                $border-width !default;
 $popover-border-color:                rgba(#000, .2) !default;
-$popover-box-shadow:                  0 5px 10px rgba(#000, .2) !default;
+$popover-box-shadow:                  0 10px 8px -6px $gray-rgba-300 !default;
 
 $popover-header-bg:                    $body-bg !default;
 $popover-header-color:                 $headings-color !default;
@@ -757,7 +759,7 @@ $progress-bar-transition:       width .6s ease !default;
 // List group
 
 $list-group-bg:                  $body-bg !default;
-$list-group-border-color:        rgba(#000, .125) !default;
+$list-group-border-color:        rgba(#000, .1) !default;
 $list-group-border-width:        $border-width !default;
 $list-group-border-radius:       $border-radius !default;
 
@@ -852,3 +854,15 @@ $kbd-bg:                      $gray-900 !default;
 
 $pre-color:                   $gray-900 !default;
 $pre-scrollable-max-height:   340px !default;
+
+//
+// Additional Custom Variables
+//
+
+// Navbar Theme Colors
+
+$navbar-theme-light:    theme-color("light") !default;
+$navbar-theme-dark:     darken(theme-color("dark"), 10%) !default;
+
+$navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%) !default;
+$navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%) !default;

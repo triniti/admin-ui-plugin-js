@@ -51,16 +51,16 @@ class UiModal extends React.Component {
     return (
       <Card>
         <CardBody spacing="lg">
-          <Button color="secondary" size="lg" onClick={this.toggle} className="round">Click Me</Button>
+          <Button color="secondary" size="lg" onClick={this.toggle} radius="round">Click Me</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle}>
             <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
             <ModalBody className="pb-5">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
               </p>
-              <Button outline color="default" className="round" onClick={this.toggleNested}>Show Nested Modal</Button>
+              <Button outline color="default" radius="round" onClick={this.toggleNested}>Show Nested Modal</Button>
               <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} size="sm">
                 <ModalBody className="text-center modal-wrapper"><h4>Nested Modal title</h4>Do you want to clear everything?</ModalBody>
-                <ModalFooter className="footer-buttons">
+                <ModalFooter buttons>
                   <Button outline color="primary" size="lg" onClick={this.toggleAll}>Clear</Button>
                   <Button outline color="primary" size="lg" onClick={this.toggleNested}>Cancel</Button>
                 </ModalFooter>
@@ -72,19 +72,19 @@ class UiModal extends React.Component {
             </ModalFooter>
           </Modal>
 
-          <Button outline color="secondary" size="lg" onClick={this.toggleSmall} className="round ml-4">Small Modal</Button>
+          <Button outline color="secondary" size="lg" radius="round" onClick={this.toggleSmall}>Small Modal</Button>
           <Modal isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
             <ModalBody className="text-center modal-wrapper"><h4>Small Modal Action</h4>Do you want to clear everything?</ModalBody>
-            <ModalFooter className="footer-buttons">
+            <ModalFooter buttons>
               <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Clear</Button>
               <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Cancel</Button>
             </ModalFooter>
           </Modal>
 
-          <Button outline size="lg" onClick={this.toggleSingle} className="round ml-4 btn-border-secondary">Single XL Footer Button</Button>
+          <Button outline size="lg" radius="round" onClick={this.toggleSingle}>Single XL Footer Button</Button>
           <Modal isOpen={this.state.singleModal} toggle={this.toggleSingle} size="sm">
             <ModalBody className="text-center modal-wrapper"><h4>Single Modal Button</h4>Do you want to clear everything?</ModalBody>
-            <ModalFooter className="footer-buttons">
+            <ModalFooter buttons>
               <Button color="secondary" size="xl" onClick={this.toggleSingle}>Login</Button>
             </ModalFooter>
           </Modal>

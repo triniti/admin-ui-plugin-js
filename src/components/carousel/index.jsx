@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { TransitionGroup } from 'react-transition-group';
 import { mapToCssModules } from '../utils';
+import './styles.scss';
 
 class Carousel extends React.Component {
   constructor(props) {

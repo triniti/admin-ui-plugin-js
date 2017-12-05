@@ -2,11 +2,16 @@
 //
 // Custom styles for main nav for desktop dropdown menu and mobile aside nav.
 
-// variables
-$theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
-
 .main-nav {
   margin-right: auto;
+
+  @media (max-width: 1024px) {
+    background-color: $navbar-theme-light;
+  }
+}
+
+.navbar-dark .main-nav {
+  background-color: $navbar-theme-dark;
 }
 
 .main-nav .nav-link {
@@ -60,15 +65,15 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     height: calc(100vh - 2.5rem);
     margin: 2.5rem 0 0 0;
     padding: .5rem 0 3rem 0;
+    background-color: $navbar-theme-light-dropdown;
     border-top: 1px solid $gray-700;
-    background-color: $body-bg !important;
     -webkit-overflow-scrolling: touch;
     -webkit-backface-visibility: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     transition: left $transition;
   }
   .navbar-dark .main-nav {
-    background-color: $theme-dark-nav-dropdown !important;
+    background-color: $navbar-theme-dark-dropdown;
   }
   .main-nav .show .dropdown-divider {
     display: block;
@@ -81,7 +86,7 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
   .navbar-dark .main-nav {
     border-top: none;
   }
-  .main-nav .nav-link {
+  .main-nav .navbar-nav .nav-link {
     font-weight: 600;
     position: relative;
     padding: .75em 1em .75em 1.5em;
@@ -123,31 +128,32 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     transform: rotate(0deg);
     text-align: center;
     vertical-align: middle;
-    background: transparent url('ti-angle-left.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+    background: transparent url('./angle-left.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
   }
   .navbar-dark .main-nav .nav-link[aria-haspopup='true']::after {
-    background: transparent url('ti-angle-left.svg?fill=%23#{$icon-theme-dark}') center center / auto 14px no-repeat;
+    background: transparent url('./angle-left.svg?fill=%23#{$icon-theme-dark}') center center / auto 14px no-repeat;
   }
   .main-nav .show > .nav-link::after {
     transform: rotate(-90deg);
   }
   .main-nav .nav-dropdown-menu {
+    position: relative;
     display: block;
     width: 100%;
     margin-top: 0;
-    padding: 0;
+    padding: 0 .5rem;
     border: none;
     border-radius: 0;
     background-color: transparent;
     overflow: hidden;
     box-shadow: none;
+    transition: opacity $transition;
   }
   .main-nav .show .nav-dropdown-menu {
-    position: relative !important;
     padding: .125rem .75rem .125rem 0;
-    transform: none !important;
   }
-  .main-nav .nav-dropdown-menu {
+  .main-nav .navbar-nav .nav-dropdown-menu {
+    position: relative !important;
     background-color: $gray-rgba-100;
   }
   .navbar-dark .main-nav .nav-dropdown-menu {
@@ -162,7 +168,7 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     opacity: 0;
   }
   .main-nav .show .dropdown-item {
-    height: 2.25rem;
+    min-height: 2.25rem;
     margin: 5px 0;
     padding: .5rem 1rem .5rem 1.5rem;
     opacity: 1;
@@ -218,11 +224,11 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600;
   }
   .navbar-dark .dropdown:hover .nav-link:before {
-    background-color: $theme-dark-nav-dropdown;
+    background-color: $navbar-theme-dark-dropdown;
   }
-  .navbar-dark .navbar-nav .nav-item:hover .nav-link,
-  .navbar-dark .navbar-nav .navbar-nav .nav-link:hover {
-    background-color: $theme-dark-nav-dropdown;
+  .navbar-main-wrapper.navbar-dark .navbar-nav .nav-item:hover .nav-link,
+  .navbar-main-wrapper.navbar-dark .navbar-nav .navbar-nav .nav-link:hover {
+    background-color: $navbar-theme-dark-dropdown;
     box-shadow: none;
   }
   .navbar-nav .nav-dropdown-menu {
@@ -250,8 +256,9 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     box-shadow: 0 10px 14px -7px $gray-rgba-600;
   }
   .navbar-dark .navbar-nav .nav-dropdown-menu {
-    border-top: 1px solid darken(theme-color("dark"), 3%);
-    background-color: darken(theme-color("dark"), 3%);
+    border: none;
+    border-top: 1px solid $navbar-theme-dark-dropdown;
+    background-color: $navbar-theme-dark-dropdown;
   }
   .nav-item:hover > .dropdown-menu {
     display: block;
@@ -320,4 +327,17 @@ $theme-dark-nav-dropdown:   darken(theme-color("dark"), 3%) !default;
     bottom: .9rem;
     margin: 0 1rem;
   }
+}
+
+.navbar-main-wrapper {
+  z-index: $zindex-fixed + 3;
+  display: flex;
+  flex-direction: row;
+  padding: 0 !important;
+  background-color: $white;
+  box-shadow: 0 0 1px $gray-rgba-600, 0 1px 1px $gray-rgba-300;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  flex: 0 0 auto;
 }

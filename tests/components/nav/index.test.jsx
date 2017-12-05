@@ -31,24 +31,10 @@ test('Nav:: should handle justified prop', (t) => {
   t.end();
 });
 
-test('Nav:: should handle fill prop', (t) => {
-  const wrapper = shallow(<Nav fill />);
-
-  t.equal(wrapper.html(), '<ul class="nav nav-fill"></ul>');
-  t.end();
-});
-
 test('Nav:: should handle pills prop', (t) => {
   const wrapper = shallow(<Nav pills />);
 
   t.equal(wrapper.html(), '<ul class="nav nav-pills"></ul>');
-  t.end();
-});
-
-test('Nav:: should handle pills prop with card prop', (t) => {
-  const wrapper = shallow(<Nav pills card />);
-
-  t.equal(wrapper.html(), '<ul class="nav nav-pills card-header-pills"></ul>');
   t.end();
 });
 
@@ -59,31 +45,10 @@ test('Nav:: should handle tabs prop', (t) => {
   t.end();
 });
 
-test('Nav:: should handle tabs prop with card prop', (t) => {
-  const wrapper = shallow(<Nav tabs card />);
-
-  t.equal(wrapper.html(), '<ul class="nav nav-tabs card-header-tabs"></ul>');
-  t.end();
-});
-
 test('Nav:: should handle vertical prop', (t) => {
   const wrapper = shallow(<Nav vertical />);
 
   t.equal(wrapper.html(), '<ul class="nav flex-column"></ul>');
-  t.end();
-});
-
-test('Nav:: should handle vertical prop with string', (t) => {
-  const wrapper = shallow(<Nav vertical="sm" />);
-
-  t.equal(wrapper.html(), '<ul class="nav flex-sm-column"></ul>');
-  t.end();
-});
-
-test('Nav:: should handle horizontal prop with string', (t) => {
-  const wrapper = shallow(<Nav horizontal="end" />);
-
-  t.equal(wrapper.html(), '<ul class="nav justify-content-end"></ul>');
   t.end();
 });
 

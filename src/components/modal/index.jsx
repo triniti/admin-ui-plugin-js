@@ -11,6 +11,7 @@ import {
   omit,
   TransitionTimeouts,
 } from '../utils';
+import './styles.scss';
 
 function noop() { }
 

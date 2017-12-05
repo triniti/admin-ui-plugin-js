@@ -1,0 +1,300 @@
+// Button
+
+@import "~bootstrap/scss/mixins";
+
+//
+// Base styles
+//
+
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  color: $body-color;
+  background-color: $gray-400;
+  border: $input-btn-border-width solid $gray-400;
+  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
+  @include transition($btn-transition);
+
+  // Share hover and focus styles
+  @include hover-focus {
+    text-decoration: none;
+  }
+  &:focus,
+  &.focus {
+    outline: 0;
+    box-shadow: none !important; // $btn-focus-box-shadow
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: .65;
+    @include box-shadow(none);
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.d-block {
+    margin-right: 0;
+  }
+}
+
+.card-header .btn,
+.page-header .btn,
+.sidenav-header .btn,
+.form-inline .btn,
+.input-group-btn > .btn {
+  margin-bottom: 0;
+}
+
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+
+//
+// Alternate buttons
+//
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    @include button-variant($value, $value);
+  }
+}
+
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:focus {
+  color: #fff;
+}
+
+.btn.disabled,
+.btn.disabled:hover {
+  border-color: $gray-400;
+  background-color: $gray-400;
+  color: $text-muted;
+  cursor: not-allowed;
+}
+
+// btn-group btn-light overrides
+
+.btn-group > .btn-light {
+  border-color: $gray-700;
+}
+
+
+//
+// Block button
+//
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+//
+// Import Button Styles
+//
+
+@import "_btn-outline";
+@import "_btn-outline-text";
+@import "_btn-link";
+@import "_btn-link-bg";
+@import "_btn-hover";
+@import "_btn-hover-bg";
+@import "_btn-toggler";
+@import "_btn-check-radio";
+@import "_btn-multistate";
+
+
+// todo: need to move to modal footer and check items
+
+// Footer Buttons
+//
+// Most often useed with small modals and asides so that the buttons touch the edges
+
+.modal-footer-buttons {
+  padding: 0;
+  justify-content: space-between;
+}
+
+.modal-footer-buttons .btn {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  box-shadow: inset -1px 0 0 0 $gray-500;
+  flex: 1;
+}
+
+.modal-footer-buttons .btn:last-child {
+  box-shadow: none;
+}
+
+.footer-button.border-0 {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.modal-dialog:not(.modal-sm) .modal-footer-buttons .btn {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.modal-footer-buttons .btn:first-child {
+  margin-left: 0;
+  border-bottom-left-radius: .2rem;
+}
+
+.modal-footer-buttons .btn:last-child {
+  border-bottom-right-radius: .2rem;
+}
+
+// modal-footer fixes
+.modal-footer.modal-footer-buttons {
+  padding: 0;
+}
+
+.modal-footer.modal-footer-buttons .btn {
+  margin: 0;
+}
+
+.btn-tab,
+.btn-table {
+  padding-right: $table-cell-padding;
+  padding-left: $table-cell-padding;
+}
+
+// Action Buttons
+
+.btn-action img {
+  margin-right: .25rem;
+  margin-left: -.25rem;
+  opacity: .8;
+}
+
+
+//
+// Button Sizes
+//
+
+.btn-sm {
+  font-weight: 400;
+  @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}
+
+.btn-lg {
+  font-weight: $btn-font-weight;
+  @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+
+.btn-xl {
+  font-size: 1.25rem;
+  font-weight: $btn-font-weight;
+  padding: 1.5rem 2rem;
+  border-width: 2px;
+
+  &:hover {
+    border-width: 2px;
+  }
+}
+
+
+//
+// radius parameter: round, square, circle
+//
+
+.btn-radius-round {
+  margin-right: .35rem;
+  border-radius: $round;
+}
+
+.btn-radius-round span:not(.badge-alert) {
+  margin: 0 .25rem;
+  vertical-align: middle;
+}
+
+.btn-radius-none {
+  border-radius: 0;
+}
+
+.btn-radius-circle {
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 0;
+  letter-spacing: 0;
+  border-radius: $round;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Show dropdown-menu on hover
+
+.btn-radius-circle + .dropdown-menu:hover {
+  display: block;
+}
+
+.btn-radius-circle:hover + .dropdown-menu {
+  display: block;
+}
+
+
+// Close Button
+
+.btn-close {
+  position: absolute;
+  top: .25rem;
+  right: .25rem;
+}
+
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+// See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+// scss-lint:disable QualifyingElement
+button.close {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+// scss-lint:enable QualifyingElement

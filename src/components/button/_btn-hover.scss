@@ -1,0 +1,23 @@
+//
+// btn-hover
+//
+
+// Make a button look and behave like a link but change opacity on hover
+// Mostly used for icons
+// Default btn- and btn-utline are the same styles for now
+
+.btn-hover,
+.btn-outline-hover {
+  opacity: .6;
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-hover:hover,
+.btn-hover.active,
+.btn-outline-hover:hover,
+.btn-outline-hover.active {
+  opacity: 1;
+  border-color: transparent;
+  background-color: transparent;
+}

@@ -7,6 +7,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  buttons: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -18,10 +19,12 @@ const ModalFooter = (props) => {
     className,
     cssModule,
     tag: Tag,
+    buttons,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
+    buttons ? 'modal-footer-buttons' : false,
     'modal-footer',
   ), cssModule);
 

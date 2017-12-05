@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink } from '../../../../src/components';
+import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -26,14 +26,14 @@ class UiNavbar extends React.Component {
     return (
       <Card>
         <CardBody spacing="lg">
-          <h4>Full Width Inverse Expanded</h4>
-          <Navbar color="faded" dark expand="md">
+          <h4>Full Width Inverse Toggleable</h4>
+          <Navbar color="dark" toggleable className="justify-content-start">
+            <NavbarToggler onClick={this.toggleNavbar} />
             <NavbarBrand href="/">reactstrap</NavbarBrand>
-            <NavbarToggler onClick={this.toggle} />
-            <Collapse isOpen={this.state.isOpen} navbar>
-              <Nav className="ml-auto" navbar>
+            <Collapse isOpen={!this.state.collapsed} navbar>
+              <Nav vertical>
                 <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
+                  <NavLink href="/alerts">Components</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
@@ -44,14 +44,13 @@ class UiNavbar extends React.Component {
         </CardBody>
 
         <CardBody spacing="lg">
-          <h4>Full Width Light Collapse</h4>
-          <Navbar color="faded" light>
-            <NavbarBrand href="#" className="mr-auto">reactstrap</NavbarBrand>
-            <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
-            <Collapse isOpen={!this.state.collapsed} navbar>
-              <Nav navbar>
+          <Navbar color="light" toggleable className="mb-3">
+            <NavbarToggler onClick={this.toggle} />
+            <NavbarBrand href="/">reactstrap</NavbarBrand>
+            <Collapse isOpen={this.state.isOpen} navbar>
+              <Nav>
                 <NavItem>
-                  <NavLink href="/components/">Components</NavLink>
+                  <NavLink href="/alerts">Components</NavLink>
                 </NavItem>
                 <NavItem>
                   <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>

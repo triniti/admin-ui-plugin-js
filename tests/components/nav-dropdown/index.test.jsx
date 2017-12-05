@@ -42,3 +42,4 @@ test('NavDropdown:: should render multiple children when isOpen', (t) => {
   t.equal(wrapper.find('li').children().length, 2);
   t.end();
 });
+

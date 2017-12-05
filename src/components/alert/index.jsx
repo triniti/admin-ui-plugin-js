@@ -60,7 +60,7 @@ function Alert(props) {
     { 'alert-dismissible': toggle },
   ), cssModule);
 
-  const closeClasses = mapToCssModules(classNames('close', closeClassName), cssModule);
+  const closeClasses = mapToCssModules(classNames('btn-alert-close', closeClassName), cssModule);
 
   return (
     <Fade {...attributes} {...transition} tag={Tag} className={classes} in={isOpen} role="alert">
