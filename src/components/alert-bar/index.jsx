@@ -23,6 +23,14 @@ class AlertBar extends React.Component {
     this.setState(this.updateState(nextProps));
   }
 
+  componentWillUnmount() {
+    Object.entries(this.state).forEach(([, { timeoutId }]) => {
+      if (timeoutId) {
+        clearTimeout(timeoutId);
+      }
+    });
+  }
+
   updateState(props) {
     const newState = { ...this.state };
     const { alerts } = props;
