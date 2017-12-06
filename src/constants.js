@@ -23,4 +23,5 @@ export const actionTypes = {
 
   // alerts
   ALERT_RECEIVED: t('ALERT_RECEIVED'),
+  ALERT_REMOVED: t('ALERT_REMOVED'),
 };

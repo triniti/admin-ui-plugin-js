@@ -3,6 +3,7 @@ import { actionTypes } from '../constants';
 
 const {
   ALERT_RECEIVED,
+  ALERT_REMOVED,
 } = actionTypes;
 
 export const initialState = [];
@@ -13,6 +14,11 @@ const onAlertReceived = (state, action) => {
   return prevState;
 };
 
+const onAlertRemoved = (state, action) => {
+  debugger;
+}
+
 export default createReducer(initialState, {
   [ALERT_RECEIVED]: onAlertReceived,
+  [ALERT_REMOVED]: onAlertRemoved,
 });

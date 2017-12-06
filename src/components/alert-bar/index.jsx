@@ -8,45 +8,64 @@ import Alert from '../alert';
 class AlertBar extends React.Component {
   static propTypes = {
     alerts: PropTypes.array.isRequired,
+    onDismiss: PropTypes.func.isRequired,
   };
 
   constructor(props) {
     super(props);
 
-    this.state = this.newState(this.props);
+    this.state = this.updateState(this.props);
 
     this.dismiss = this.dismiss.bind(this);
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState(this.newState(nextProps));
+    this.setState(this.updateState(nextProps));
   }
 
-  newState(props) {
-    const newState = Object.assign({}, this.state);
+  updateState(props) {
+    const newState = { ...this.state };
     const { alerts } = props;
 
     alerts.forEach((alert) => {
-      if (!newState[alert.id]) {
-        newState[alert.id] = {
+      const { delay, id, isDismissible } = alert;
+
+      if (!newState[id]) {
+        newState[id] = {
           isOpen: true,
+          willDismiss: false,
         };
       }
-      if (newState[alert.id].isOpen && alert.isDismissable && Number.isInteger(alert.delay)) {
-        setTimeout(() => {
-          const futureState = Object.assign({}, this.state);
-          futureState[alert.id].isOpen = false;
+      if (
+        isDismissible
+        && Number.isInteger(delay)
+        && newState[id].isOpen
+        && !newState[id].willDismiss
+      ) {
+        newState[id].willDismiss = true;
+        newState[id].timeoutId = setTimeout(() => {
+          const futureState = { ...this.state };
+          futureState[id].isOpen = false;
           this.setState(futureState);
-        }, alert.delay);
+
+          this.props.onDismiss(id);
+        }, delay);
       }
     });
     return newState;
   }
 
-  dismiss(alert) {
-    const newState = Object.assign({}, this.state);
-    newState[alert.id].isOpen = false;
+  dismiss({ id }) {
+    const newState = { ...this.state };
+
+    if (typeof newState[id].timeoutId !== 'undefined') {
+      clearTimeout(newState[id].timeoutId);
+    }
+
+    newState[id].isOpen = false;
     this.setState(newState);
+
+    this.props.onDismiss(id);
   }
 
   render() {
@@ -54,7 +73,7 @@ class AlertBar extends React.Component {
     return (
       <div>
         {alerts.map((alert, index) => {
-          if (alert.isDismissable) {
+          if (alert.isDismissible) {
             return (
               <Alert color={alert.type} isOpen={this.state[alert.id].isOpen} toggle={() => this.dismiss(alert)} key={`${alert.type}-${index}`}>
                 {alert.message}
@@ -71,9 +90,5 @@ class AlertBar extends React.Component {
     );
   }
 }
-
-AlertBar.propTypes = {
-  alerts: PropTypes.array.isRequired,
-};
 
 export default AlertBar;
