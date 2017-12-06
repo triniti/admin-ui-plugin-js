@@ -15,8 +15,8 @@ const onAlertReceived = (state, action) => {
 };
 
 const onAlertRemoved = (state, action) => {
-  debugger;
-}
+  return state.filter(alert => action.message !== alert.id);
+};
 
 export default createReducer(initialState, {
   [ALERT_RECEIVED]: onAlertReceived,
