@@ -82,6 +82,7 @@ import PopoverContent from './popover-content';
 import PopoverBody from './popover-body';
 import PopoverTitle from './popover-title';
 import PopoverHeader from './popover-header';
+import PopperContent from './popper-content';
 import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
@@ -192,6 +193,7 @@ export {
   PopoverContent,
   PopoverHeader,
   PopoverTitle,
+  PopperContent,
   Progress,
   Radio,
   RouterLink,

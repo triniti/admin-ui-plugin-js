@@ -1,9 +1,8 @@
 import React from 'react';
 import tape from 'tape';
-import { mount, shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import sinon from 'sinon';
 import { Popover, PopoverHeader, PopoverBody } from '../../../src/components';
-import { isObject } from 'util';
 
 const clock = sinon.useFakeTimers();
 let element;
