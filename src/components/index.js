@@ -107,6 +107,7 @@ import {
   UncontrolledNavDropdown,
   UncontrolledTooltip,
 } from './uncontrolled';
+import UncontrolledCarousel from './uncontrolled-carousel';
 
 export {
   Alert,
@@ -216,4 +217,5 @@ export {
   UncontrolledDropdown,
   UncontrolledNavDropdown,
   UncontrolledTooltip,
+  UncontrolledCarousel,
 };
