@@ -3,6 +3,7 @@ import test from 'tape';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 import { AlertBar } from '../../../src/components';
+import { BrowserRouter } from 'react-router-dom';
 
 test('AlertBar:: should render children with the correct message', (t) => {
   const alerts = [
@@ -11,13 +12,13 @@ test('AlertBar:: should render children with the correct message', (t) => {
       type: 'success',
       isDismissible: false,
       delay: false,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
   const alert = mount(<AlertBar alerts={alerts} onDismiss={() => {}} />);
-  t.equal(alert.find('p').length, 1);
-  t.equal(alert.find('p').text(), 'Well done! You successfully read this important alert message.');
+  t.equal(alert.find('div.alert').length, 1);
+  t.equal(alert.find('div.alert').text(), 'Well done! You successfully read this important alert message.');
   t.end();
 });
 
@@ -44,7 +45,7 @@ test('AlertBar:: should be able to make a dismissible Alert', (t) => {
       type: 'success',
       isDismissible: true,
       delay: false,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
@@ -60,7 +61,7 @@ test('AlertBar:: should be able to make an indismissible Alert', (t) => {
       type: 'success',
       isDismissible: false,
       delay: false,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
@@ -76,7 +77,7 @@ test('AlertBar:: should be able to make an Alert that will dismiss itself after 
       type: 'success',
       isDismissible: true,
       delay: 0,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
@@ -94,7 +95,7 @@ test('AlertBar:: should be able to make an Alert that will not dismiss itself un
       type: 'success',
       isDismissible: false,
       delay: 0,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
@@ -112,7 +113,7 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
       type: 'success',
       isDismissible: true,
       delay: false,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
@@ -130,7 +131,7 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
       type: 'success',
       isDismissible: true,
       delay: 0,
-      message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
+      message: 'Well done! You successfully read this important alert message.',
     },
   ];
 
@@ -140,4 +141,48 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
     t.true(handleDismiss.called);
     t.end();
   }, 0);
+});
+
+test('AlertBar:: should be able to make an alert with an href link for a new tab', (t) => {
+  const alerts = [
+    {
+      id: Math.ceil(Math.random() * 10000000),
+      type: 'success',
+      isDismissible: false,
+      delay: false,
+      message: 'Well done! You successfully read this important alert message.',
+      link: {
+        openInNewTab: true,
+        text: 'sweet link bro',
+        url: 'https://google.com',
+      },
+    },
+  ];
+
+  const alert = mount(<AlertBar alerts={alerts} onDismiss={() => {}} />);
+  t.notEqual(alert.find('a.alert-link').html().indexOf('sweet link bro'), -1);
+  t.notEqual(alert.find('a.alert-link').html().indexOf('https://google.com'), -1);
+  t.notEqual(alert.find('a.alert-link').html().indexOf('_blank'), -1);
+  t.end();
+});
+
+test('AlertBar:: should be able to make an alert with a RouterLink for the same tab', (t) => {
+  const alerts = [
+    {
+      id: Math.ceil(Math.random() * 10000000),
+      type: 'success',
+      isDismissible: false,
+      delay: false,
+      message: 'Well done! You successfully read this important alert message.',
+      link: {
+        openInNewTab: false,
+        text: 'sweet link bro',
+        url: 'https://google.com',
+      },
+    },
+  ];
+
+  const alert = mount(<BrowserRouter><AlertBar alerts={alerts} onDismiss={() => {}} /></BrowserRouter>);
+  t.equal(alert.find('a.alert-link').html().indexOf('_blank'), -1);
+  t.end();
 });
