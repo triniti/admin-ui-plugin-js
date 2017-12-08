@@ -1,11 +1,11 @@
 import changeAsideActiveTab from './changeAsideActiveTab';
 import clickDropdown from './clickDropdown';
+import dismissAlert from './dismissAlert';
 import hideNotification from './hideNotification';
-import receiveAlert from './receiveAlert';
 import receiveFlashMessage from './receiveFlashMessage';
-import removeAlert from './removeAlert';
 import requestLogout from './requestLogout';
 import requestNewTheme from './requestNewTheme';
+import sendAlert from './sendAlert';
 import showNotification from './showNotification';
 import toggleDropdown from './toggleDropdown';
 import toggleMainNav from './toggleMainNav';
@@ -15,12 +15,12 @@ import toggleUserNav from './toggleUserNav';
 export default {
   changeAsideActiveTab,
   clickDropdown,
+  dismissAlert,
   hideNotification,
-  receiveAlert,
   receiveFlashMessage,
-  removeAlert,
   requestLogout,
   requestNewTheme,
+  sendAlert,
   showNotification,
   toggleDropdown,
   toggleMainNav,

@@ -1,6 +1,6 @@
 import { actionTypes } from '../constants';
 
-export default (message => ({
+export default (alert => ({
   type: actionTypes.ALERT_RECEIVED,
-  message,
+  alert,
 }));
