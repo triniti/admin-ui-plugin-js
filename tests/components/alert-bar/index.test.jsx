@@ -9,7 +9,7 @@ test('AlertBar:: should render children with the correct message', (t) => {
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: false,
       delay: false,
       message: 'Well done! You successfully read this important alert message.',
@@ -26,7 +26,7 @@ test('AlertBar:: should be able to make a success Alert', (t) => {
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: true,
       delay: false,
       message: (<p><strong>Well done!</strong> You successfully read this important alert message.</p>),
@@ -42,7 +42,7 @@ test('AlertBar:: should be able to make a dismissible Alert', (t) => {
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: true,
       delay: false,
       message: 'Well done! You successfully read this important alert message.',
@@ -58,7 +58,7 @@ test('AlertBar:: should be able to make an indismissible Alert', (t) => {
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: false,
       delay: false,
       message: 'Well done! You successfully read this important alert message.',
@@ -74,7 +74,7 @@ test('AlertBar:: should be able to make an Alert that will dismiss itself after 
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: true,
       delay: 0,
       message: 'Well done! You successfully read this important alert message.',
@@ -92,7 +92,7 @@ test('AlertBar:: should be able to make an Alert that will not dismiss itself un
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: false,
       delay: 0,
       message: 'Well done! You successfully read this important alert message.',
@@ -110,7 +110,7 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: true,
       delay: false,
       message: 'Well done! You successfully read this important alert message.',
@@ -128,7 +128,7 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: true,
       delay: 0,
       message: 'Well done! You successfully read this important alert message.',
@@ -147,14 +147,14 @@ test('AlertBar:: should be able to make an alert with an href link for a new tab
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: false,
       delay: false,
       message: 'Well done! You successfully read this important alert message.',
       link: {
         openInNewTab: true,
         text: 'sweet link bro',
-        url: 'https://google.com',
+        href: 'https://google.com',
       },
     },
   ];
@@ -170,14 +170,14 @@ test('AlertBar:: should be able to make an alert with a RouterLink for the same 
   const alerts = [
     {
       id: Math.ceil(Math.random() * 10000000),
-      type: 'success',
+      color: 'success',
       isDismissible: false,
       delay: false,
       message: 'Well done! You successfully read this important alert message.',
       link: {
         openInNewTab: false,
         text: 'sweet link bro',
-        url: 'https://google.com',
+        href: 'https://google.com',
       },
     },
   ];
