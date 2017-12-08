@@ -87,19 +87,19 @@ class AlertBar extends React.Component {
             isDismissible,
             link,
             message,
-            color,
+            type,
           } = alert;
 
           if (isDismissible) {
             return (
-              <Alert color={color} isOpen={this.state[id].isOpen} toggle={() => this.dismiss(id)} key={id}>
+              <Alert color={type} isOpen={this.state[id].isOpen} toggle={() => this.dismiss(id)} key={id}>
                 {message}
                 {link && AlertBar.renderLink(link)}
               </Alert>
             );
           }
           return (
-            <Alert color={color} key={id}>
+            <Alert color={type} key={id}>
               {message}
               {link && AlertBar.renderLink(link)}
             </Alert>
