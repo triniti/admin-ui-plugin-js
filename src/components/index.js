@@ -32,6 +32,7 @@ import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
 import ContentContainer from './content-container';
+import Datalist from './datalist';
 import DeleteButton from './delete-button';
 import Divider from './divider';
 import Dropdown from './dropdown';
@@ -143,6 +144,7 @@ export {
   Collapse,
   Container,
   ContentContainer,
+  Datalist,
   DeleteButton,
   Divider,
   Dropdown,
