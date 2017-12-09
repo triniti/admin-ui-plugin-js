@@ -39,7 +39,7 @@ const alerts = [
     link: {
       openInNewTab: true,
       text: 'a link that will open in a new tab',
-      url: 'https://google.com',
+      href: 'https://google.com',
     },
   },
   {
@@ -51,7 +51,7 @@ const alerts = [
     link: {
       openInNewTab: false,
       text: 'a link that will open in the same tab',
-      url: '/alerts',
+      href: '/alerts',
     },
   },
   {
