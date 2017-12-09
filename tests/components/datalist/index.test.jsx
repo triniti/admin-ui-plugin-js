@@ -14,10 +14,8 @@ test('Datalist:: should render with the intended options', (t) => {
   };
 
   const options = [];
-  if (!options.length) {
-    for (let i = 0; i < 10; i += 1) {
-      options.push(Math.random().toString(36).substring(2));
-    }
+  for (let i = 0; i < 10; i += 1) {
+    options.push(Math.random().toString(36).substring(2));
   }
 
   const datalist = mount(<Datalist
