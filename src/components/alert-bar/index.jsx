@@ -12,12 +12,12 @@ class AlertBar extends React.Component {
   static renderLink({
     openInNewTab,
     text,
-    url,
+    href,
   }) {
     if (openInNewTab) {
-      return <span> <a className="alert-link" target="_blank" href={url}>{text}</a></span>;
+      return <span> <a className="alert-link" target="_blank" href={href}>{text}</a></span>;
     }
-    return <span> <RouterLink className="alert-link" to={url}>{text}</RouterLink></span>;
+    return <span> <RouterLink className="alert-link" to={href}>{text}</RouterLink></span>;
   }
 
   constructor(props) {
@@ -38,13 +38,10 @@ class AlertBar extends React.Component {
     });
   }
 
-  updateState(props) {
+  updateState({ alerts }) {
     const newState = { ...this.state };
-    const { alerts } = props;
 
-    alerts.forEach((alert) => {
-      const { delay, id, isDismissible } = alert;
-
+    alerts.forEach(({ delay, id, isDismissible }) => {
       if (!newState[id]) {
         newState[id] = {
           isOpen: true,
@@ -72,22 +69,19 @@ class AlertBar extends React.Component {
 
   dismiss(id) {
     const newState = { ...this.state };
+    newState[id].isOpen = false;
+    this.setState(newState);
 
     if (typeof newState[id].timeoutId !== 'undefined') {
       clearTimeout(newState[id].timeoutId);
     }
-
-    newState[id].isOpen = false;
-    this.setState(newState);
-
     this.props.onDismiss(id);
   }
 
   render() {
-    const { alerts } = this.props;
     return (
       <div>
-        {alerts.map((alert, index) => {
+        {this.props.alerts.map((alert) => {
           const {
             id,
             isDismissible,
@@ -98,14 +92,14 @@ class AlertBar extends React.Component {
 
           if (isDismissible) {
             return (
-              <Alert color={type} isOpen={this.state[id].isOpen} toggle={() => this.dismiss(id)} key={`${type}-${index}`}>
+              <Alert color={type} isOpen={this.state[id].isOpen} toggle={() => this.dismiss(id)} key={id}>
                 {message}
                 {link && AlertBar.renderLink(link)}
               </Alert>
             );
           }
           return (
-            <Alert color={type} key={`${type}-${index}`}>
+            <Alert color={type} key={id}>
               {message}
               {link && AlertBar.renderLink(link)}
             </Alert>

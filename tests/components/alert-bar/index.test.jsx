@@ -154,7 +154,7 @@ test('AlertBar:: should be able to make an alert with an href link for a new tab
       link: {
         openInNewTab: true,
         text: 'sweet link bro',
-        url: 'https://google.com',
+        href: 'https://google.com',
       },
     },
   ];
@@ -177,7 +177,7 @@ test('AlertBar:: should be able to make an alert with a RouterLink for the same 
       link: {
         openInNewTab: false,
         text: 'sweet link bro',
-        url: 'https://google.com',
+        href: 'https://google.com',
       },
     },
   ];
