@@ -10,12 +10,12 @@ export const initialState = [];
 
 const onAlertReceived = (state, action) => {
   const prevState = state.slice();
-  prevState.push(action.message);
+  prevState.push(action.alert);
   return prevState;
 };
 
 const onAlertRemoved = (state, action) => {
-  return state.filter(alert => action.message !== alert.id);
+  return state.filter(alert => action.id !== alert.id);
 };
 
 export default createReducer(initialState, {

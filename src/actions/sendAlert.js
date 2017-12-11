@@ -1,6 +1,13 @@
 import { actionTypes } from '../constants';
 
-export default (alert => ({
+export default ({ isDismissible, delay, link, message, type }) => ({
   type: actionTypes.ALERT_RECEIVED,
-  alert,
-}));
+  alert: {
+    id: Math.ceil(Math.random() * 10000000),
+    isDismissible,
+    delay,
+    link,
+    message,
+    type,
+  },
+});
