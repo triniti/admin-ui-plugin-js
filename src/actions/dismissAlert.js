@@ -1,6 +1,6 @@
 import { actionTypes } from '../constants';
 
-export default (alert => ({
+export default id => ({
   type: actionTypes.ALERT_REMOVED,
-  alert,
-}));
+  id,
+});
