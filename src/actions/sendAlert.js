@@ -3,7 +3,11 @@ import { actionTypes } from '../constants';
 export default ({
   isDismissible = false,
   delay = false,
-  link = false,
+  link = {
+    openInNewTab: false,
+    text: '',
+    href: '',
+  },
   message = 'default message, none supplied',
   type = 'warning',
 }) => ({
