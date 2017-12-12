@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { FormFeedback, Input, InputGroup, InputGroupAddon } from '../../components';
+import { Button, FormFeedback, Input, InputGroup, InputGroupButton } from '../../components';
 
 const Datalist = ({
   addon,
@@ -15,9 +15,9 @@ const Datalist = ({
       {
         addon.show
         &&
-        <InputGroupAddon>
-          <img onClick={addon.handleClick} src={addon.img} alt="button" />
-        </InputGroupAddon>
+        <InputGroupButton>
+          <Button outline color="light" onClick={addon.handleClick}><img src={addon.img} alt="button" /></Button>
+        </InputGroupButton>
       }
       <datalist id={input.name}>
         {options.map((option, index) => <option value={option} key={`${option}-${index}`} />)}
