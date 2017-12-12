@@ -6,15 +6,12 @@ import './styles.scss';
 // fixme: components ideally are not requesting containers
 // they should given them via props or children
 import NavBarContainer from '../../containers/nav-bar';
-import FlashMessageContainer from '../../containers/flash-message';
 import AppContent from '../app-content';
-
 
 const App = ({
   location, navConfig, routes, authHoc,
 }) => (
   <div id="wrapper" data-slidedirection="">
-    <FlashMessageContainer />
     {
       location.pathname !== '/login'
       &&
