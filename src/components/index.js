@@ -1,6 +1,5 @@
 import Alert from './alert';
 import AlertBar from './alert-bar';
-import BackButton from './back-button';
 import Backdrop from './backdrop';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
@@ -34,7 +33,6 @@ import Collapse from './collapse';
 import Container from './container';
 import ContentContainer from './content-container';
 import Datalist from './datalist';
-import DeleteButton from './delete-button';
 import Divider from './divider';
 import Dropdown from './dropdown';
 import DropdownItem from './dropdown-item';
@@ -74,6 +72,7 @@ import NavLink from './nav-link';
 import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
 import NavbarToggler from './navbar-toggler';
+import PageActionButton from './page-action-button';
 import PageActions from './page-actions';
 import PageHeader from './page-header';
 import Pagination from './pagination';
@@ -83,11 +82,12 @@ import Popover from './popover';
 import PopoverContent from './popover-content';
 import PopoverBody from './popover-body';
 import PopoverTitle from './popover-title';
+import PopoverHeader from './popover-header';
+import PopperContent from './popper-content';
 import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
-import SaveButton from './save-button';
 import ScrollableContainer from './scrollable-container';
 import SidenavContainer from './sidenav-container';
 import SidenavHeader from './sidenav-header';
@@ -108,12 +108,12 @@ import {
   UncontrolledNavDropdown,
   UncontrolledTooltip,
 } from './uncontrolled';
+import UncontrolledCarousel from './uncontrolled-carousel';
 
 export {
   Alert,
   AlertBar,
   Backdrop,
-  BackButton,
   Badge,
   Breadcrumb,
   BreadcrumbItem,
@@ -146,7 +146,6 @@ export {
   Container,
   ContentContainer,
   Datalist,
-  DeleteButton,
   Divider,
   Dropdown,
   DropdownItem,
@@ -186,6 +185,7 @@ export {
   Navbar,
   NavbarBrand,
   NavbarToggler,
+  PageActionButton,
   PageActions,
   PageHeader,
   Pagination,
@@ -194,12 +194,13 @@ export {
   Popover,
   PopoverBody,
   PopoverContent,
+  PopoverHeader,
   PopoverTitle,
+  PopperContent,
   Progress,
   Radio,
   RouterLink,
   Row,
-  SaveButton,
   ScrollableContainer,
   SidenavContainer,
   SidenavHeader,
@@ -218,4 +219,5 @@ export {
   UncontrolledDropdown,
   UncontrolledNavDropdown,
   UncontrolledTooltip,
+  UncontrolledCarousel,
 };

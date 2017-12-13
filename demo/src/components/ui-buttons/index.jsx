@@ -1,5 +1,7 @@
 import React from 'react';
-import { BackButton, Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, DeleteButton, Form, FormGroup, Icon, Label, PageActions, Radio, Row, SaveButton, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Switch } from '../../../../src/components';
+
+import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
 
 class UiButtons extends React.Component {
   constructor(props) {
@@ -31,10 +33,10 @@ class UiButtons extends React.Component {
         <div>
           <CardHeader spacing="lg">Page Actions
             <PageActions>
-              <BackButton />
-              <DeleteButton />
-              <SaveButton />
-              <Button color="primary" size="sm" className="mb-0" action="primary">save & close</Button>
+              <PageActionButton text="Back" icon="back" />
+              <PageActionButton text="Delete" icon="delete" />
+              <PageActionButton text="Save" icon="save" />
+              <PageActionButton text="save & close" iconUrl={EnvelopeIcon} onClick={() => alert('save & close!')} />
             </PageActions>
           </CardHeader>
         </div>

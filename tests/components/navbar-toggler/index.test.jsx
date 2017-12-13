@@ -27,7 +27,7 @@ test('NavbarToggler:: should render children instead of navbar-toggler-icon ', (
 test('NavbarToggler:: should pass additional classNames', (t) => {
   const wrapper = shallow(<NavbarToggler className="extra" />);
 
-  t.equal(wrapper.hasClass('extra'), true);
-  t.equal(wrapper.hasClass('navbar-toggler'), true);
+  t.true(wrapper.hasClass('extra'));
+  t.true(wrapper.hasClass('navbar-toggler'));
   t.end();
 });

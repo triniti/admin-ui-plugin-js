@@ -27,9 +27,9 @@ test('NavLink:: should render children', (t) => {
 
 test('NavLink:: should pass additional classNames', (t) => {
   const wrapper = shallow(<NavLink className="extra" />);
-
   t.true(wrapper.hasClass('extra'));
   t.true(wrapper.hasClass('nav-link'));
+
   t.end();
 });
 

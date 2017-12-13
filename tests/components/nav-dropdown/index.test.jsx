@@ -1,20 +1,31 @@
 import React from 'react';
-import test from 'tape';
-import { mount, shallow } from 'enzyme';
-import { NavDropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../../../src/components';
+import tape from 'tape';
+import { mount } from 'enzyme';
+import { NavDropdown, DropdownToggle, DropdownMenu, DropdownItem, Dropdown } from '../../../src/components';
 
-let isOpen = false;
+let isOpen;
 const toggle = () => { isOpen = !isOpen; };
 
-test('NavDropdown::  should render a single child', (t) => {
-  const wrapper = shallow(<NavDropdown isOpen={isOpen} toggle={toggle}>Ello world</NavDropdown>);
+const setup = () => {
+  isOpen = false;
+};
 
-  t.equal(wrapper.text(), '<Dropdown />');
-  t.true(wrapper.hasClass('nav-item'));
+const test = (description, fn) => {
+  tape(description, (t) => {
+    setup();
+    fn(t);
+  });
+};
+
+test('NavDropdown:: should render a single child', (t) => {
+  const wrapper = mount(<NavDropdown isOpen={isOpen} toggle={toggle}>Ello world</NavDropdown>);
+
+  t.equal(wrapper.find(Dropdown).text(), 'Ello world');
+  t.equal(wrapper.find('li.nav-item').length, 1, wrapper.html());
   t.end();
 });
 
-test('NavDropdown::  should render multiple children when isOpen', (t) => {
+test('NavDropdown:: should render multiple children when isOpen', (t) => {
   isOpen = true;
   const wrapper = mount(
     <NavDropdown isOpen={isOpen} toggle={toggle}>
@@ -26,8 +37,9 @@ test('NavDropdown::  should render multiple children when isOpen', (t) => {
   );
 
   t.equal(wrapper.find('.btn').text(), 'Toggle');
-  t.equal(wrapper.find('.nav-item').length, 3);
+  t.equal(wrapper.find('li.nav-item').length, 1);
   t.equal(wrapper.find('.dropdown-item').length, 1);
+  t.equal(wrapper.find('li').children().length, 2);
   t.end();
 });
 
