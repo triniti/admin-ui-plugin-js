@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.2.0
+* New components: AlertBar, Datalist, PageActionButton
+* Removed specific Button components (SaveButton, etc)
+* Migrate tests to tape
+
 
 ## v0.1.5
 * Create multi-state dropdown/button.
