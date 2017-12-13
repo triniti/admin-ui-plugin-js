@@ -2,8 +2,8 @@ import React from 'react';
 import test from 'tape';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
-import { BrowserRouter } from 'react-router-dom';
 import { AlertBar } from '../../../src/components';
+import { BrowserRouter } from 'react-router-dom';
 
 test('AlertBar:: should render children with the correct message', (t) => {
   const alerts = [
@@ -85,7 +85,6 @@ test('AlertBar:: should be able to make an Alert that will dismiss itself after 
   setTimeout(() => {
     t.equal(alert.find('div.alert').first().html().indexOf('show'), -1);
   }, 0);
-
   t.end();
 });
 
@@ -104,7 +103,6 @@ test('AlertBar:: should be able to make an Alert that will not dismiss itself un
   setTimeout(() => {
     t.notEqual(alert.find('div.alert').first().html().indexOf('show'), -1);
   }, 0);
-
   t.end();
 });
 
@@ -142,7 +140,6 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
   setTimeout(() => {
     t.true(handleDismiss.called);
   }, 0);
-
   t.end();
 });
 
