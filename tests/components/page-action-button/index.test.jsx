@@ -6,7 +6,7 @@ import { PageActionButton, Icon } from '../../../src/components';
 test('PageActionButton:: should render default props', (t) => {
   const wrapper = mount(<PageActionButton />);
 
-  t.equal(wrapper.html(), '<button class="mb-0 btn-action btn btn-light btn-sm">Click</button>');
+  t.equal(wrapper.html(), '<button class="btn-action btn btn-light btn-sm">Click</button>');
   t.end();
 });
 
@@ -28,6 +28,6 @@ test('PageActionButton:: should render custom icon', (t) => {
 test('PageActionButton:: should pass all other props', (t) => {
   const wrapper = mount(<PageActionButton color="primary" />);
 
-  t.equal(wrapper.html(), '<button class="mb-0 btn-action btn btn-primary btn-sm">Click</button>', wrapper.html());
+  t.equal(wrapper.html(), '<button class="btn-action btn btn-primary btn-sm">Click</button>', wrapper.html());
   t.end();
 });
