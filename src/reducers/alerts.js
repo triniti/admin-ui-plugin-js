@@ -8,10 +8,10 @@ const {
 
 export const initialState = [];
 
-const onAlertReceived = (state, action) => {
-  const prevState = state.slice();
-  prevState.push(action.alert);
-  return prevState;
+const onAlertReceived = (prevState, action) => {
+  const newState = prevState.slice();
+  newState.push(action.alert);
+  return newState;
 };
 
 const onAlertRemoved = (state, { id }) => state.filter(alert => alert.id !== id);

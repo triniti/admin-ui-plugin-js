@@ -22,7 +22,7 @@ class AlertBar extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = this.updateState(props);
+    this.state = this.updateState(this.props);
     this.dismiss = this.dismiss.bind(this);
   }
 

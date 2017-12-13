@@ -2,8 +2,8 @@ import React from 'react';
 import test from 'tape';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
-import { BrowserRouter } from 'react-router-dom';
 import { AlertBar } from '../../../src/components';
+import { BrowserRouter } from 'react-router-dom';
 
 test('AlertBar:: should render children with the correct message', (t) => {
   const alerts = [
@@ -84,9 +84,8 @@ test('AlertBar:: should be able to make an Alert that will dismiss itself after 
   const alert = mount(<AlertBar alerts={alerts} onDismiss={() => {}} />);
   setTimeout(() => {
     t.equal(alert.find('div.alert').first().html().indexOf('show'), -1);
+    t.end();
   }, 0);
-
-  t.end();
 });
 
 test('AlertBar:: should be able to make an Alert that will not dismiss itself unless isDismissible (even with a delay value)', (t) => {
@@ -103,9 +102,8 @@ test('AlertBar:: should be able to make an Alert that will not dismiss itself un
   const alert = mount(<AlertBar alerts={alerts} onDismiss={() => {}} />);
   setTimeout(() => {
     t.notEqual(alert.find('div.alert').first().html().indexOf('show'), -1);
+    t.end();
   }, 0);
-
-  t.end();
 });
 
 test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert is dismissed manually', (t) => {
@@ -141,9 +139,8 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
   const alert = mount(<AlertBar alerts={alerts} onDismiss={handleDismiss} />);
   setTimeout(() => {
     t.true(handleDismiss.called);
+    t.end();
   }, 0);
-
-  t.end();
 });
 
 test('AlertBar:: should be able to make an alert with an href link for a new tab', (t) => {
