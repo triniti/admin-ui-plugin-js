@@ -8,8 +8,8 @@ const {
 
 export const initialState = [];
 
-const onAlertSent = (prevState, action) => {
-  const newState = prevState.slice();
+const onAlertSent = (state, action) => {
+  const newState = state.slice();
   newState.push(action.alert);
   return newState;
 };

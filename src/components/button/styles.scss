@@ -203,10 +203,16 @@ input[type="button"] {
 
 // Action Buttons
 
-.btn-action img {
-  margin-right: .25rem;
-  margin-left: -.25rem;
-  opacity: .8;
+.btn-action {
+  margin-top: .125rem;
+  margin-bottom: .125rem;
+
+  img {
+    margin-top: -1px;
+    margin-right: .25rem;
+    margin-left: -.25rem;
+    opacity: .8;
+  }
 }
 
 
