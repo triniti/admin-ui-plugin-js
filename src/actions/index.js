@@ -1,25 +1,21 @@
 import changeAsideActiveTab from './changeAsideActiveTab';
 import clickDropdown from './clickDropdown';
-import hideNotification from './hideNotification';
-import receiveFlashMessage from './receiveFlashMessage';
+import dismissAlert from './dismissAlert';
 import requestLogout from './requestLogout';
 import requestNewTheme from './requestNewTheme';
-import showNotification from './showNotification';
+import sendAlert from './sendAlert';
 import toggleDropdown from './toggleDropdown';
 import toggleMainNav from './toggleMainNav';
-import toggleNotification from './toggleNotification';
 import toggleUserNav from './toggleUserNav';
 
 export default {
   changeAsideActiveTab,
   clickDropdown,
-  hideNotification,
-  receiveFlashMessage,
+  dismissAlert,
   requestLogout,
   requestNewTheme,
-  showNotification,
+  sendAlert,
   toggleDropdown,
   toggleMainNav,
-  toggleNotification,
   toggleUserNav,
 };

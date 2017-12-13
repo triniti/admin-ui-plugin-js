@@ -1,6 +1,7 @@
 import React from 'react';
 
 import UiAlert from './components/ui-alert';
+import UiAlertBar from './components/ui-alert-bar';
 import UiBadge from './components/ui-badge';
 import UiBreadcrumbs from './components/ui-breadcrumbs';
 import UiButtons from './components/ui-buttons';
@@ -30,6 +31,7 @@ import UiTooltip from './components/ui-tool-tip';
 
 export default {
   alerts: UiAlert(),
+  'alert-bar': UiAlertBar(),
   badge: UiBadge(),
   breadcrumbs: UiBreadcrumbs(),
   buttons: <UiButtons />,
