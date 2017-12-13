@@ -9,9 +9,9 @@ const {
 export const initialState = [];
 
 const onAlertSent = (state, action) => {
-  const prevState = state.slice();
-  prevState.push(action.alert);
-  return prevState;
+  const newState = state.slice();
+  newState.push(action.alert);
+  return newState;
 };
 
 const onAlertDismissed = (state, { id }) => state.filter(alert => alert.id !== id);
