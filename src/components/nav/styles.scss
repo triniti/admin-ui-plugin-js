@@ -12,8 +12,34 @@
   list-style: none;
 }
 
+// sticky nav
+
+.nav-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+  background-color: $body-bg;
+  min-height: $header-height + 1;
+
+  .main-content & {
+    background-color: $gray-200;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      content: '';
+      box-shadow: 0 -1rem $gray-200;
+    }
+  }
+}
+
 .nav-link {
   display: block;
+  line-height: 1;
   padding: $nav-link-padding-y $nav-link-padding-x;
 
   @include hover-focus {
@@ -174,7 +200,7 @@
     font-size: .8rem;
     font-weight: 700;
     height: 100%;
-    padding: .9375rem 1.25rem;
+    padding: 1.125rem 1.25rem;
     text-transform: uppercase;
     border-radius: 0;
     box-shadow: none;
@@ -237,17 +263,6 @@
 
 .nav-item .dropdown-item {
   padding: .6em 1rem;
-}
-
-// sticky nav
-
-.nav-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: $zindex-sticky;
-  background-color: $body-bg;
-  min-height: $header-height + 1;
 }
 
 // size specific padding

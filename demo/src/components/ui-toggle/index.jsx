@@ -25,7 +25,7 @@ class UiToggle extends Component {
   render() {
     return (
       <Card>
-        <CardHeader>
+        <CardHeader inset>
           <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
@@ -47,6 +47,25 @@ class UiToggle extends Component {
           </CardBody>
         </Collapse>
 
+        <CardHeader inset>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseOuter2}>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
         <CardHeader>
           <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
@@ -54,15 +73,13 @@ class UiToggle extends Component {
           <CardBody spacing="lg">
             <Row>
               <Col xs="12" md="9" lg="6">
-                <Collapse isOpen={this.state.collapseInner}>
-                  <Card>
-                    <CardBody>
-                      <CardTitle>Special Title Treatment</CardTitle>
-                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" radius="none"> Button</Button>
-                    </CardBody>
-                  </Card>
-                </Collapse>
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
           </CardBody>

@@ -3,13 +3,13 @@
 // Scrollable content area inside main-container
 
 .main-content {
-  padding: 0 1rem;
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-backface-visibility: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-overflow-style: none;
+  background-color: $white;
 }
 
 .main-content:after {
@@ -21,7 +21,6 @@
 
 @media (max-width: 767px) {
   .main-content {
-    padding: .125rem .5rem;
     width: 100vw;
   }
   .main-content:after {

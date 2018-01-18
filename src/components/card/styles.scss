@@ -10,29 +10,32 @@
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
-  border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
+
+  .tab-pane > & {
+    margin-top: 0;
+  }
+
+  // Card inside cards-container
+
+  .cards-container & {
+    margin: .5rem 0;
+  }
 
   @media (max-width: 767px) {
     margin: .5rem 0;
   }
 }
 
-.card-borderless {
-  border: none;
-}
+.card-border {
+  border: $card-border-width solid $card-border-color;
 
-.tab-pane > .card-borderless {
-  margin-top: 0;
-}
-
-// Card inside cards-container
-
-.cards-container {
-  .card {
-    margin: .5rem 0;
+  .tab-pane > & {
+    margin-top: 1rem;
   }
 }
+
+
 
 .card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
@@ -179,10 +182,9 @@ h4.card-title {
   font-weight: 500;
   align-items: center;
   justify-content: space-between;
-  min-height: $header-height + 1;
+  min-height: $header-height + 2;
 
   background-color: $card-cap-bg;
-  box-shadow: 0 (-$card-border-width) 0 0 $card-border-color;
   border-bottom: $card-border-width solid $card-border-color;
 }
 
@@ -199,6 +201,28 @@ h4.card-title {
   }
   @media (min-width: 1600px) {
     padding: 0 $padding-xl;
+  }
+}
+
+// CardHeader increased padding when card spacing="lg"
+
+.card-header-inset {
+  padding: 0;
+  margin: 0 $card-spacer-x;
+
+  &.card-header-spacing-lg {
+    padding: 0;
+    margin: 0 $padding-xs;
+
+    @media (min-width: 768px) {
+      margin: 0 $padding-md;
+    }
+    @media (min-width: 1025px) {
+      margin: 0 $padding-lg;
+    }
+    @media (min-width: 1600px) {
+      margin: 0 $padding-xl;
+    }
   }
 }
 

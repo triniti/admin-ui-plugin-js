@@ -29,7 +29,7 @@ const Card = (props) => {
     body,
     hover,
     outline,
-    borderless,
+    border,
     inverse,
     tag: Tag,
     ...attributes
@@ -38,7 +38,7 @@ const Card = (props) => {
     className,
     'card',
     inverse ? 'card-inverse' : false,
-    borderless ? 'card-borderless' : false,
+    border ? 'card-border' : false,
     body ? 'card-body' : false,
     hover ? 'card-hover' : false,
     color ? `card${outline ? '-outline' : ''}-${color}` : false,

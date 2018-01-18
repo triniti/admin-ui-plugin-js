@@ -21,7 +21,7 @@ class UiInputGroup extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader spacing="lg">Standard Form</CardHeader>
+          <CardHeader spacing="lg" inset>Standard Form</CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col sm="6">

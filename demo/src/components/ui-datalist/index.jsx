@@ -51,7 +51,7 @@ function getOptions() {
 
 const UiDatalist = () => (
   <Card>
-    <CardHeader spacing="lg">A few Datalists with random options</CardHeader>
+    <CardHeader spacing="lg" inset>A few Datalists with random options</CardHeader>
     <CardBody spacing="lg">
       {fields.map(({ addon, input, meta}) => (
         <Datalist

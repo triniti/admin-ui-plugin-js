@@ -19,12 +19,14 @@ const CardHeader = (props) => {
     className,
     cssModule,
     spacing,
+    inset,
     tag: Tag,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'card-header',
+    inset ? 'card-header-inset' : false,
     spacing ? `card-header-spacing-${spacing}` : false,
   ), cssModule);
 

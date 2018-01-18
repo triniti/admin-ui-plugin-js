@@ -861,7 +861,7 @@ $pre-scrollable-max-height:   340px !default;
 
 // Navbar Theme Colors
 
-$navbar-theme-light:    theme-color("light") !default;
+$navbar-theme-light:    $gray-200 !default;
 $navbar-theme-dark:     darken(theme-color("dark"), 10%) !default;
 
 $navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%) !default;

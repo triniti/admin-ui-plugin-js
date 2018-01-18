@@ -73,7 +73,7 @@ const alerts = [
 const UiAlertBar = () => (
   <Card>
     <div>
-      <CardHeader spacing="lg">Assorted Alert Bar Variants</CardHeader>
+      <CardHeader spacing="lg" inset>Assorted Alert Bar Variants</CardHeader>
       <CardBody spacing="lg">
         <AlertBar alerts={alerts} onDismiss={() => {}} />
       </CardBody>

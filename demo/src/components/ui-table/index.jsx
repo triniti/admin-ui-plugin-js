@@ -2,7 +2,8 @@ import React from 'react';
 import { Card, CardBody, CardHeader, Row, Col, Table } from '../../../../src/components';
 
 const UiTable = () => (
-    <Card>
+   <div>
+    <CardBody>
       <div>
       <Table size="sm" stickyTop fixed>
         <thead>
@@ -73,9 +74,9 @@ const UiTable = () => (
         </tbody>
       </Table>
       </div>
-
+      <br/>
       <div>
-      <Table stickyTop fixed>
+      <Table hover>
         <thead>
         <tr>
           <th>#</th>
@@ -84,8 +85,6 @@ const UiTable = () => (
           <th>Username</th>
         </tr>
         </thead>
-      </Table>
-      <Table hover fixed>
         <tbody>
         <tr>
           <th scope="row">1</th>
@@ -144,10 +143,12 @@ const UiTable = () => (
         </tbody>
       </Table>
       </div>
+    </CardBody>
 
+    <CardBody>
       <div className={'pb-4'}>
       <CardHeader>Striped Table + Sticky</CardHeader>
-      <CardBody>
+      <Card>
         <Table striped className={'sticky-top fixed'}>
           <thead>
           <tr>
@@ -180,9 +181,11 @@ const UiTable = () => (
           </tr>
           </tbody>
         </Table>
-      </CardBody>
+      </Card>
       </div>
+    </CardBody>
 
+    <CardBody>
       <div>
       <CardHeader>Inverse Table</CardHeader>
       <Table inverse>
@@ -250,7 +253,9 @@ const UiTable = () => (
         </tbody>
       </Table>
       </div>
+    </CardBody>
 
+    <CardBody>
       <div>
       <CardHeader>Bordered Table</CardHeader>
       <Table bordered>
@@ -318,7 +323,9 @@ const UiTable = () => (
         </tbody>
       </Table>
       </div>
+    </CardBody>
 
+    <CardBody>
       <div>
       <CardHeader>Hoverable Rows Table</CardHeader>
       <Table hover>
@@ -432,7 +439,8 @@ const UiTable = () => (
         </tbody>
       </Table>
       </div>
-    </Card>
+      </CardBody>
+    </div>
 );
 
 export default UiTable;

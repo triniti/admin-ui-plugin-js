@@ -62,7 +62,7 @@ class UiSideNavContainer extends React.Component {
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
       <div className="sidenav-container bg-white" id="sidenav">
-        <SidenavHeader title="Filter Results">
+        <SidenavHeader>
           <Button outline color="hover" className={'btn-sidenav-close'} onClick={this.toggleSideWrapper} id={'btn-sidenav-close'}>
             <img src={iconArrowLeft} alt="<" />
           </Button>

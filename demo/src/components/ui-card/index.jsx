@@ -6,7 +6,7 @@ const UiCard = () => (
       <CardsContainer>
         <Row className="mb-3">
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover border>
               <CardImg
                 top width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
@@ -23,7 +23,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover border>
               <CardBody>
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
@@ -49,7 +49,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover border>
               <CardHeader tag="h3">Featured</CardHeader>
               <CardBody>
                 <CardTitle>Special Title Treatment</CardTitle>
@@ -60,7 +60,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover border>
               <CardImg
                 top width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
@@ -78,7 +78,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover border>
               <CardBody>
                 <CardTitle>Card Title</CardTitle>
                 <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -120,7 +120,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card body outline hover color="primary">
+            <Card body border outline hover color="primary">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button color="second">Button</Button>
@@ -129,13 +129,12 @@ const UiCard = () => (
         </Row>
       </CardsContainer>
 
-
-      <div>
+      <CardBody>
       <CardTitle tag="h4">Card Group</CardTitle>
         <Row>
           <Col>
             <CardGroup>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -149,7 +148,7 @@ const UiCard = () => (
                   <Button>Button</Button>
                 </CardBody>
               </Card>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -162,7 +161,7 @@ const UiCard = () => (
                   <Button>Button</Button>
                 </CardBody>
               </Card>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -184,7 +183,7 @@ const UiCard = () => (
         <Row>
           <Col>
             <CardDeck>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -198,7 +197,7 @@ const UiCard = () => (
                   <Button>Button</Button>
                 </CardBody>
               </Card>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -211,7 +210,7 @@ const UiCard = () => (
                   <Button>Button</Button>
                 </CardBody>
               </Card>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -235,7 +234,7 @@ const UiCard = () => (
         <Row>
           <Col>
             <CardColumns>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -249,7 +248,7 @@ const UiCard = () => (
                   <Button>Button</Button>
                 </CardBody>
               </Card>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -267,7 +266,7 @@ const UiCard = () => (
                 <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                 <Button>Button</Button>
               </Card>
-              <Card>
+              <Card border>
                 <CardImg
                   top width="100%"
                   src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
@@ -289,7 +288,7 @@ const UiCard = () => (
             </CardColumns>
           </Col>
         </Row>
-      </div>
+      </CardBody>
     </div>
 
 

@@ -22,7 +22,7 @@ class UiForm extends React.Component {
   render() {
     return (
       <Card>
-        <CardHeader spacing="lg">Standard Form</CardHeader>
+        <CardHeader spacing="lg" inset>Standard Form</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col sm="8" md="6">
@@ -106,7 +106,7 @@ class UiForm extends React.Component {
           </Row>
         </CardBody>
 
-        <CardHeader spacing="lg">Form Feedback</CardHeader>
+        <CardHeader spacing="lg" inset>Form Feedback</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col sm="6" md="4">
@@ -135,7 +135,7 @@ class UiForm extends React.Component {
           </Row>
         </CardBody>
 
-        <CardHeader spacing="lg">Inline Form</CardHeader>
+        <CardHeader spacing="lg" inset>Inline Form</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col sm="12">
@@ -176,7 +176,7 @@ class UiForm extends React.Component {
           </Row>
         </CardBody>
 
-        <CardHeader spacing="lg">Input Types</CardHeader>
+        <CardHeader spacing="lg" inset>Input Types</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col sm="9" md="6">
@@ -276,7 +276,7 @@ class UiForm extends React.Component {
           </Row>
         </CardBody>
 
-        <CardHeader spacing="lg">Input Sizing</CardHeader>
+        <CardHeader spacing="lg" inset>Input Sizing</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col sm="10" md="8" lg="6" xl="4" className="has-border">
@@ -362,7 +362,7 @@ class UiForm extends React.Component {
           </Row>
         </CardBody>
 
-        <CardHeader spacing="lg">Form Grid</CardHeader>
+        <CardHeader spacing="lg" inset>Form Grid</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col>

@@ -4,7 +4,7 @@ import { Alert, Card, CardBody, CardHeader, Col, Row, Table, UncontrolledAlert }
 const UiAlert = () => (
   <Card>
     <div>
-      <CardHeader spacing="lg">Inline Content Alerts</CardHeader>
+      <CardHeader spacing="lg" inset>Inline Content Alerts</CardHeader>
       <CardBody spacing="lg">
         <Alert color="success">
           <strong>Well done!</strong> You successfully read this important alert message.
@@ -46,7 +46,7 @@ const UiAlert = () => (
     </div>
 
     <div>
-      <CardHeader spacing="lg">Inline Content Alerts (alert-inverse)</CardHeader>
+      <CardHeader spacing="lg" inset>Inline Content Alerts (alert-inverse)</CardHeader>
       <CardBody spacing="lg">
         <Alert color="success" inverse>
           <strong>Well done!</strong> You successfully read this important alert message.
@@ -91,7 +91,7 @@ const UiAlert = () => (
     </div>
 
     <div>
-      <CardHeader spacing="lg">Border Alerts (has-border)</CardHeader>
+      <CardHeader spacing="lg" inset>Border Alerts (has-border)</CardHeader>
       <CardBody spacing="lg">
         <div className={'has-border border-primary mb-4'}>
           <strong>Well done!</strong> Example Border Alert - Primary
@@ -121,7 +121,7 @@ const UiAlert = () => (
     </div>
 
     <div>
-      <CardHeader spacing="lg">Border Alerts (has-border, border-indent)</CardHeader>
+      <CardHeader spacing="lg" inset>Border Alerts (has-border, border-indent)</CardHeader>
       <CardBody spacing="lg">
         <div className={'has-border border-indent border-primary mb-4'}>
           <strong>Well done!</strong> Example Border Alert - Primary
@@ -151,7 +151,7 @@ const UiAlert = () => (
     </div>
 
     <div>
-      <CardHeader spacing="lg">Striped Table</CardHeader>
+      <CardHeader spacing="lg" inset>Striped Table</CardHeader>
       <CardBody spacing="lg">
         <Table>
           <thead>

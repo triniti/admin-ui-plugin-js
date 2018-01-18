@@ -4,7 +4,7 @@ import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListG
 const UiListGroup = () => {
   return (
     <Card>
-      <CardHeader spacing="lg">List Group Items</CardHeader>
+      <CardHeader spacing="lg" inset>List Group Items</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -20,7 +20,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Buttons</CardHeader>
+      <CardHeader spacing="lg" inset>Buttons</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -34,7 +34,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Buttons Flush</CardHeader>
+      <CardHeader spacing="lg" inset>Buttons Flush</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -48,7 +48,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Buttons Borderless</CardHeader>
+      <CardHeader spacing="lg" inset>Buttons Borderless</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -62,7 +62,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Contextual Color Alert</CardHeader>
+      <CardHeader spacing="lg" inset>Contextual Color Alert</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -76,7 +76,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Heading and Item Text</CardHeader>
+      <CardHeader spacing="lg" inset>Heading and Item Text</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -104,7 +104,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">List Group Nav</CardHeader>
+      <CardHeader spacing="lg" inset>List Group Nav</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -132,7 +132,7 @@ const UiListGroup = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">List Group Nav Borderless</CardHeader>
+      <CardHeader spacing="lg" inset>List Group Nav Borderless</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>

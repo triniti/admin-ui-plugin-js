@@ -43,7 +43,7 @@ const Nav = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     size ? `nav-${size}` : false,
-    sticky ? 'nav-sticky' : false,
+    sticky ? `nav-sticky` : false,
     navbar ? 'navbar-nav' : 'nav',
     {
       'nav-boxed': boxed,

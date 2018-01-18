@@ -4,7 +4,7 @@ import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row } from '../../..
 const UiMedia = () => {
   return (
     <Card>
-      <CardHeader spacing="lg">Media Left</CardHeader>
+      <CardHeader spacing="lg" inset>Media Left</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -47,7 +47,7 @@ const UiMedia = () => {
       </CardBody>
 
 
-      <CardHeader spacing="lg">Vertical Alignment</CardHeader>
+      <CardHeader spacing="lg" inset>Vertical Alignment</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -90,7 +90,7 @@ const UiMedia = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Media List</CardHeader>
+      <CardHeader spacing="lg" inset>Media List</CardHeader>
       <CardBody spacing="lg">
         <Row>
           <Col>
@@ -157,7 +157,7 @@ const UiMedia = () => {
 
 
 
-      <CardHeader spacing="lg">Media Hover</CardHeader>
+      <CardHeader spacing="lg" inset>Media Hover</CardHeader>
       <CardBody spacing="lg">
         <Media left hover href="#">
           <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
@@ -188,7 +188,7 @@ const UiMedia = () => {
         </Row>
       </CardBody>
 
-      <CardHeader spacing="lg">Media HoverOutline</CardHeader>
+      <CardHeader spacing="lg" inset>Media HoverOutline</CardHeader>
       <CardBody spacing="lg">
         <Media left hoverOutline href="#">
           <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
