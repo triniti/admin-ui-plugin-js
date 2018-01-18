@@ -13,7 +13,14 @@ const UiHeaders = () => (
       <Divider />
       <h1>H1 Heading .h1</h1>
     </CardBody>
-    <CardHeader spacing="lg" inset>Card Header</CardHeader>
+
+    <CardHeader>Card Header</CardHeader>
+
+    <CardHeader inset>Card Header - inset</CardHeader>
+
+    <CardHeader spacing="lg">Card Header - spacing="lg"</CardHeader>
+
+    <CardHeader spacing="lg" inset>Card Header - spacing="lg" inset</CardHeader>
 
     <CardBody spacing="lg">
       <CardTitle tag="h1">Card Title h1</CardTitle>

@@ -147,8 +147,9 @@ const UiTable = () => (
 
     <CardBody>
       <div className={'pb-4'}>
-      <CardHeader>Striped Table + Sticky</CardHeader>
-      <Card>
+      <CardHeader className="pl-0">Striped Table + Sticky</CardHeader>
+
+      <div>
         <Table striped className={'sticky-top fixed'}>
           <thead>
           <tr>
@@ -181,7 +182,7 @@ const UiTable = () => (
           </tr>
           </tbody>
         </Table>
-      </Card>
+      </div>
       </div>
     </CardBody>
 

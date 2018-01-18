@@ -31,7 +31,7 @@ class UiDropdown extends React.Component {
   render() {
     return (
       <Card>
-        <CardHeader>Dropdown</CardHeader>
+        <CardHeader spacing="lg" inset>Dropdown</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col xs="6">
