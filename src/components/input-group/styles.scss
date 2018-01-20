@@ -176,7 +176,7 @@
   &:not(:first-child) {
     > .btn,
     > .btn-group {
-      z-index: 2;
+      // z-index: 2;
       margin-left: (-$input-btn-border-width);
       // Because specificity
       @include hover-focus-active {

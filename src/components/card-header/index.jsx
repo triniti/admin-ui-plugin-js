@@ -8,6 +8,8 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   spacing: PropTypes.string,
+  inset: PropTypes.bool,
+  subheader: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -20,6 +22,7 @@ const CardHeader = (props) => {
     cssModule,
     spacing,
     inset,
+    subheader,
     tag: Tag,
     ...attributes
   } = props;
@@ -27,6 +30,7 @@ const CardHeader = (props) => {
     className,
     'card-header',
     inset ? 'card-header-inset' : false,
+    subheader ? 'card-subheader' : false,
     spacing ? `card-header-spacing-${spacing}` : false,
   ), cssModule);
 

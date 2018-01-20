@@ -557,7 +557,8 @@ input::-moz-focus-inner {
 // form color themes - todo: need to change to parameter in prod
 
 .form-white .form-control,
-.form-white.form-control {
+.form-white.form-control,
+.main-content-sidebar .form-control {
   background-color: $body-bg;
 }
 

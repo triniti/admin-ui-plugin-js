@@ -25,6 +25,7 @@ import UiNav from './components/ui-nav';
 import UiPagination from './components/ui-pagination';
 import UiPopover from './components/ui-popover';
 import UiProgress from './components/ui-progress';
+import UiSidebar from './components/ui-sidebar';
 import UiTable from './components/ui-table';
 import UiTabs from './components/ui-tabs';
 import UiTooltip from './components/ui-tool-tip';
@@ -54,6 +55,7 @@ export default {
   pagination: <UiPagination />,
   popovers: <UiPopover />,
   'progress-bars': UiProgress(),
+  sidebar: <UiSidebar />,
   tables: <UiTable />,
   tabs: <UiTabs />,
   toggle: <UiToggle />,

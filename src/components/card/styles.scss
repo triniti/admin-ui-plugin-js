@@ -5,7 +5,8 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  flex-grow: 1;
+  margin: 0 0 1rem 0;
   min-width: 0;
   word-wrap: break-word;
   background-color: $card-bg;
@@ -16,14 +17,13 @@
     margin-top: 0;
   }
 
-  // Card inside cards-container
-
-  .cards-container & {
-    margin: .5rem 0;
+  .main-content > &,
+  .main-content-column & {
+    margin-top: .75rem;
   }
 
   @media (max-width: 767px) {
-    margin: .5rem 0;
+    margin: 0 0 .5rem 0;
   }
 }
 
@@ -94,6 +94,10 @@
 
 .card-body > .row:first-of-type {
   padding-top: 0;
+}
+
+.card-subheader + .row {
+  padding-top: 1.25rem;
 }
 
 .card-title {
@@ -172,7 +176,7 @@ h4.card-title {
 
 .card-header {
   position: sticky;
-  top: -1px;
+  top: 0;
   z-index: $zindex-sticky;
   display: flex;
   flex: 0 0 auto;
@@ -223,6 +227,41 @@ h4.card-title {
     @media (min-width: 1600px) {
       margin: 0 $padding-xl;
     }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    content: '';
+    background-color: $white;
+  }
+}
+
+// Subheader - most often used in sidebars
+
+.card-subheader {
+  position: relative;
+  min-height: auto;
+  padding: 0;
+  border-bottom: $card-border-width solid $card-border-color;
+  white-space: nowrap;
+  font-size: .9em;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  font-weight: 400;
+  color: $gray-rgba-800;
+  background-color: transparent;
+
+  &::before {
+    display: none;
   }
 }
 
@@ -468,5 +507,9 @@ h4.card-title {
 
 .card-outline-dark {
   border-color: theme-color("dark");
+}
+
+.card-transparent {
+  background-color: transparent;
 }
 

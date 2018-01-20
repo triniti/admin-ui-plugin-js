@@ -3,6 +3,7 @@
 // Scrollable content area inside main-container
 
 .main-content {
+  position: relative;
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -10,6 +11,9 @@
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-overflow-style: none;
   background-color: $white;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto;
 }
 
 .main-content:after {
@@ -57,4 +61,69 @@
   .max-width-xl {
     max-width: 1600px;
   }
+}
+
+.main-content-flex-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.main-content-row {
+  display: flex;
+  flex: 1;
+  height: calc(100% - 56px);
+}
+
+.main-content-scroll {
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
+  display: flex;
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
+}
+
+.main-content-sticky {
+  position: sticky;
+  top: 0;
+  flex: 0 0 100%;
+  background-color: $gray-200;
+  padding-top: 1rem;
+  z-index: $zindex-sticky;
+}
+
+.main-content-navtabs {
+  display: flex;
+  background-color: $gray-200;
+  height: 56px;
+
+  & .nav {
+    align-self: flex-end;
+    flex-grow: 1;
+  }
+}
+
+.main-content-col {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex: 1 1 auto;
+  z-index: 1;
+}
+
+.main-content-sidebar {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 0;
+  flex: 0 0 360px;
+  background: $gray-200;
+  border-left: 1px solid $gray-600;
 }
