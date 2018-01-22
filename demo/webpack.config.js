@@ -65,7 +65,18 @@ module.exports = () => ({
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader', 'postcss-loader'],
+        loader: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              config: {
+                path: resolve(__dirname, 'src/postcss.config.js'),
+              },
+            },
+          },
+        ],
       },
 
       // sass rule
@@ -83,6 +94,11 @@ module.exports = () => ({
           },
           {
             loader: 'postcss-loader',
+            options: {
+              config: {
+                path: resolve(__dirname, 'src/postcss.config.js'),
+              },
+            },
           },
           {
             loader: 'sass-loader',
