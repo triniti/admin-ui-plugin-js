@@ -5,15 +5,6 @@ import sinon from 'sinon';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from '../../../src/components';
 import { keyCodes } from '../../../src/components/utils';
 
-// polyfill
-global.requestAnimationFrame = (callback) => {
-  setTimeout(callback, 0);
-};
-
-window.cancelAnimationFrame = (callback) => {
-  setTimeout(callback, 0);
-};
-
 // shared vars
 let isOpen;
 let toggle;

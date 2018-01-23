@@ -1,5 +1,6 @@
 import Alert from './alert';
 import AlertBar from './alert-bar';
+// import App from './app';
 import Backdrop from './backdrop';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
@@ -114,6 +115,7 @@ import UncontrolledCarousel from './uncontrolled-carousel';
 export {
   Alert,
   AlertBar,
+  // App,
   Backdrop,
   Badge,
   Breadcrumb,

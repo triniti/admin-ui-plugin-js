@@ -11,3 +11,9 @@ const Adapter = require('enzyme-adapter-react-16');
 require('jsdom-global/register');
 
 enzyme.configure({ adapter: new Adapter() });
+
+// polyfill
+// eslint-disable-next-line
+cancelAnimationFrame = global.requestAnimationFrame = window.cancelAnimationFrame = (callback) => {
+  setTimeout(callback, 0);
+};
