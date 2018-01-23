@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, FlexSpacer, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Switch } from '../../../../src/components';
 
 import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
 
@@ -613,6 +613,7 @@ class UiButtons extends React.Component {
           </CardHeader>
         </div>
 
+        <FlexSpacer></FlexSpacer>
       </Card>
     );
   }

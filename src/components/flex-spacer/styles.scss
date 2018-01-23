@@ -1,0 +1,17 @@
+// Flex Spacer
+//
+// Used when bottom or top margin/padding is not recognized by flex container
+// or when you need a responsive container that has no height just bottom padding
+
+.flex-spacer {
+  position: relative;
+  height: 20rem;
+
+  &::after {
+    content: '';
+    display: block;
+    height: inherit;
+    padding-top: inherit;
+    padding-bottom: inherit;
+  }
+}

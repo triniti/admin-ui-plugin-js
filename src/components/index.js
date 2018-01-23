@@ -39,6 +39,7 @@ import DropdownItem from './dropdown-item';
 import DropdownMenu from './dropdown-menu';
 import DropdownToggle from './dropdown-toggle';
 import Fade from './fade';
+import FlexSpacer from './flex-spacer';
 import FooterNav from './footer-nav';
 import Form from './form';
 import FormFeedback from './form-feedback';
@@ -152,6 +153,7 @@ export {
   DropdownMenu,
   DropdownToggle,
   Fade,
+  FlexSpacer,
   FooterNav,
   Form,
   FormFeedback,
