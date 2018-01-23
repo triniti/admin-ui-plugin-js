@@ -5,12 +5,12 @@ import 'sweetalert2/dist/sweetalert2.min.css';
 import './styles.scss';
 // fixme: components ideally are not requesting containers
 // they should given them via props or children
-import NavBarContainer from '../../containers/nav-bar';
+import NavbarContainer from '../../containers/navbar';
 import createRoutes from './createRoutes';
 
 const App = ({ location, navConfig, routes, authHoc }) => (
   <div id="wrapper" data-slidedirection="">
-    {location.pathname !== '/login' && <NavBarContainer navConfig={navConfig} />}
+    {location.pathname !== '/login' && <NavbarContainer navConfig={navConfig} />}
     <Switch>
       {createRoutes(routes, authHoc)}
     </Switch>

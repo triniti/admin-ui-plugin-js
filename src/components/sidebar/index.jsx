@@ -12,21 +12,21 @@ const propTypes = {
   size: PropTypes.string,
   theme: PropTypes.string,
   offcanvas: PropTypes.string,
-  right: PropTypes.bool,
+  left: PropTypes.bool,
 };
 
 const defaultProps = {
-  tag: 'div',
+  tag: 'aside',
 };
 
-const SideBarContainer = (props) => {
+const Sidebar = (props) => {
   const {
     className,
     cssModule,
     tag: Tag,
     size,
     offcanvas,
-    right,
+    left,
     theme,
     children,
     ...attributes
@@ -34,11 +34,11 @@ const SideBarContainer = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'sidebar-container',
-    size ? `sidebar-container-${size}` : false,
-    offcanvas ? `sidebar-container-offcanvas-${offcanvas}` : false,
-    right ? `sidebar-container-right` : `sidebar-container-left`,
-    theme ? `sidebar-container-theme-${theme}` : false,
+    'sidebar',
+    size ? `sidebar-${size}` : false,
+    offcanvas ? `sidebar-offcanvas-${offcanvas}` : false,
+    left ? 'sidebar-left' : 'sidebar-right',
+    theme ? `sidebar-theme-${theme}` : false,
   ), cssModule);
 
   return (
@@ -46,7 +46,7 @@ const SideBarContainer = (props) => {
   );
 };
 
-SideBarContainer.propTypes = propTypes;
-SideBarContainer.defaultProps = defaultProps;
+Sidebar.propTypes = propTypes;
+Sidebar.defaultProps = defaultProps;
 
-export default SideBarContainer;
+export default Sidebar;

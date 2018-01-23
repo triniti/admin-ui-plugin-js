@@ -7,7 +7,7 @@ $sidebar-md:         320px !default;
 $sidebar-sm:         300px !default;
 $sidebar-xs:         260px !default;
 
-.sidebar-container {
+.sidebar {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,67 +20,67 @@ $sidebar-xs:         260px !default;
 
 // border based on position
 
-.sidebar-container-top {
+.sidebar-top {
   border-bottom-width: 1px;
 }
 
-.sidebar-container-right {
+.sidebar-right {
   border-left-width: 1px;
 }
 
-.sidebar-container-bottom {
+.sidebar-bottom {
   border-top-width: 1px;
 }
 
-.sidebar-container-left {
+.sidebar-left {
   border-right-width: 1px;
 }
 
 
 // sidebar widths
 
-.sidebar-container-xl {
+.sidebar-xl {
   flex: 0 0 $sidebar-xl;
   width: $sidebar-xl;
   border: none;
 }
 
-.sidebar-container-lg {
+.sidebar-lg {
   flex: 0 0 $sidebar-lg;
   width: $sidebar-lg;
 }
 
-.sidebar-container-md {
+.sidebar-md {
   flex: 0 0 $sidebar-md;
   width: $sidebar-md;
 }
 
-.sidebar-container-sm {
+.sidebar-sm {
   flex: 0 0 $sidebar-sm;
   width: $sidebar-sm;
 }
 
-.sidebar-container-xs {
+.sidebar-xs {
   flex: 0 0 $sidebar-xs;
   width: $sidebar-xs;
 }
 
-.sidebar-container-theme-white {
+.sidebar-theme-white {
   background-color: $white;
 }
 
-.sidebar-container-theme-light {
+.sidebar-theme-light {
   background-color: theme-color("light");
 }
 
-.sidebar-container-theme-dark {
+.sidebar-theme-dark {
   background-color: theme-color("dark");
 }
 
 
-// SideNav Moving Off Canvas
+// Sidebar Moving Off Canvas
 
-.sidenav {
+.sidebar {
    border-color: $gray-500;
 
   &.offcanvas-left {

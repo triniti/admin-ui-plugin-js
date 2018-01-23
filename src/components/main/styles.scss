@@ -1,6 +1,6 @@
-// Main Container
+// Main
 
-.main-container {
+.main {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -11,7 +11,7 @@
 }
 
 @media (max-width: 767px) {
-  .main-container {
+  .main {
     max-width: 100vw;
     flex: 1 1 auto;
   }
