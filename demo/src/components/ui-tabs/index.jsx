@@ -32,20 +32,20 @@ class UiTabs extends React.Component {
   }
 
   render() {
-    return (
-      <CardBody className="mt-0">
-        <div>
-          <Nav underline sticky className="pt-2" color="light">
-            <NavItem>
-              <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
-            </NavItem>
-          </Nav>
+    return [
+      <Card className="mt-0">
+        <Nav underline sticky className="pt-2" color="light">
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+          </NavItem>
+        </Nav>
 
-          <TabContent activeTab={this.state.activeTab1}>
-            <TabPane tabId="1">
+        <TabContent activeTab={this.state.activeTab1}>
+          <TabPane tabId="1">
+            <Card>
               <CardBody spacing="lg">
                 <Row>
                   <Col xs="12" sm="6">
@@ -57,8 +57,10 @@ class UiTabs extends React.Component {
                   </Col>
                 </Row>
               </CardBody>
-            </TabPane>
-            <TabPane tabId="2">
+            </Card>
+          </TabPane>
+          <TabPane tabId="2">
+            <Card>
               <CardBody spacing="lg">
                 <Row>
                   <Col sm="6">
@@ -77,38 +79,37 @@ class UiTabs extends React.Component {
                   </Col>
                 </Row>
               </CardBody>
-            </TabPane>
-          </TabContent>
-        </div>
-        <div>
-          <CardHeader spacing="lg" inset>Classic Standard Version</CardHeader>
-          <CardBody spacing="lg">
-            <Nav tabs>
-              <NavItem>
-                <div
-                  className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '3' })}
-                  onClick={() => { this.toggle2('3'); }}
-                >
-                  Tab1
-                </div>
-              </NavItem>
-              <NavItem>
-                <div
-                  className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '4' })}
-                  onClick={() => { this.toggle2('4'); }}
-                >
-                  Moar Tabs
-                </div>
-              </NavItem>
-            </Nav>
+              </Card>
+          </TabPane>
+        </TabContent>
+      </Card>,
 
-            <TabContent activeTab={this.state.activeTab2}>
-              <TabPane tabId="3">
-                <CardBody>
-                  <h4>Classic Tab Syle</h4>
-                </CardBody>
-              </TabPane>
-              <TabPane tabId="4">
+
+      <Card>
+        <CardHeader spacing="lg" inset>Classic Standard Version</CardHeader>
+        <CardBody spacing="lg">
+          <Nav tabs>
+            <NavItem>
+              <div
+                className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '3' })}
+                onClick={() => { this.toggle2('3'); }}
+              >
+                Tab1
+              </div>
+            </NavItem>
+            <NavItem>
+              <div
+                className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '4' })}
+                onClick={() => { this.toggle2('4'); }}
+              >
+                Moar Tabs
+              </div>
+            </NavItem>
+          </Nav>
+
+          <TabContent activeTab={this.state.activeTab2}>
+            <TabPane tabId="3">
+              <Card>
                 <CardBody>
                   <Row>
                     <Col sm="6">
@@ -127,12 +128,34 @@ class UiTabs extends React.Component {
                     </Col>
                   </Row>
                 </CardBody>
-              </TabPane>
-            </TabContent>
-          </CardBody>
-        </div>
+              </Card>
+            </TabPane>
+            <TabPane tabId="4">
+              <Card>
+                <CardBody>
+                  <Row>
+                    <Col sm="6">
+                      <Card>
+                        <CardTitle>Special Title Treatment</CardTitle>
+                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                        <Button>Go somewhere</Button>
+                      </Card>
+                    </Col>
+                    <Col sm="6">
+                      <Card>
+                        <CardTitle>CardsContainer</CardTitle>
+                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                        <Button>Go somewhere</Button>
+                      </Card>
+                    </Col>
+                  </Row>
+                </CardBody>
+              </Card>
+            </TabPane>
+          </TabContent>
+        </CardBody>
       </Card>
-    );
+    ];
   }
 }
 

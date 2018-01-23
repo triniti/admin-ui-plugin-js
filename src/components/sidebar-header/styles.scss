@@ -46,3 +46,17 @@
     border-bottom: 1px solid $gray-500;
   }
 }
+
+.sidebar-header {
+
+  .btn-sidebar-close {
+    margin-bottom: 0;
+    padding: .5rem;
+    transition: transform $transition;
+  }
+
+  .offcanvas-left & .btn-sidebar-close {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+  }
+}

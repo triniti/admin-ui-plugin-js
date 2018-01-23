@@ -17,11 +17,6 @@
     margin-top: 0;
   }
 
-  .main-content > &,
-  .main-content-column & {
-    margin-top: .75rem;
-  }
-
   @media (max-width: 767px) {
     margin: 0 0 .5rem 0;
   }
@@ -186,6 +181,10 @@ h4.card-title {
 
   background-color: $card-cap-bg;
   border-bottom: $card-border-width solid $card-border-color;
+
+  .main-content > .card:first-child & {
+    margin-top: .75rem;
+  }
 }
 
 // CardHeader increased padding when card spacing="lg"

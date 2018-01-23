@@ -102,18 +102,6 @@ $sidebar-xs:         260px !default;
   }
 }
 
-.sidenav-header {
-
-  .btn-sidenav-close {
-    padding: .5rem;
-    transition: transform $transition;
-  }
-
-  .offcanvas-left & .btn-sidenav-close {
-    -webkit-transform: rotate(-180deg);
-    transform: rotate(-180deg);
-  }
-}
 
 // Right Sidebar Mobile
 
