@@ -1,6 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router';
-import ContentContainer from '../../src/components/content-container';
+import ScreenContent from '../../src/components/screen-content';
 import UiSideNavContainer from './components/UiSideNavContainer';
 import UiComponentContainer from './components/UiComponentContainer';
 
@@ -9,9 +9,9 @@ export default () => {
   const UiComponentWithRouter = withRouter(UiComponentContainer);
 
   return (
-    <ContentContainer>
+    <ScreenContent>
       <SideNavWithRouter />
       <UiComponentWithRouter />
-    </ContentContainer>
+    </ScreenContent>
   );
 };

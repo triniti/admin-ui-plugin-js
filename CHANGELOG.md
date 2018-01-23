@@ -3,7 +3,9 @@
 
 ## v0.3.0
 * Integrate `app-content` into `app` component and delete `app-content` component.
-* 
+* Rename component `content-container` to `screen-content`, exports as old name and new name until next minor rev.
+* Rename component `main-container` to `main`, exports as old name and new name until next minor rev.
+* Rename `nav-bar` container component to just `navbar`.
 
 
 ## v0.2.0

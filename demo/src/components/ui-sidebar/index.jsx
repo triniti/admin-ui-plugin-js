@@ -1,6 +1,37 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardTitle, CardText, Checkbox, Container, ContentContainer, Col, DropdownItem, DropdownMenu, DropdownToggle, Form, FormFeedback, FormGroup, FormText, Icon, Input, InputGroup, InputGroupAddon, InputGroupButton, Label, Nav, NavDropdown, NavItem, NavLink, Radio, Row, SidebarContainer, ScrollableContainer, TabContent, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
+import {
+  Button,
+  ButtonDropdown,
+  Card,
+  CardBody,
+  CardHeader,
+  CardText,
+  CardTitle,
+  Checkbox,
+  Col,
+  Container,
+  DropdownItem,
+  DropdownMenu,
+  DropdownToggle,
+  Form,
+  FormGroup,
+  FormText,
+  Icon,
+  Input,
+  InputGroup,
+  InputGroupButton,
+  Label,
+  Nav,
+  NavItem,
+  NavLink,
+  Row,
+  ScreenContent,
+  ScrollableContainer,
+  Sidebar,
+  TabContent,
+  TabPane,
+} from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -51,10 +82,24 @@ class UiForm extends React.Component {
 
         <Nav underline className="pt-2" theme="light">
           <NavItem>
-            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+            <NavLink
+              href="#"
+              className={classnames({ active: this.state.activeTab1 === '1' })}
+              onClick={() => {
+              this.toggle1('1');
+            }}
+            >Tab1
+            </NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+            <NavLink
+              href="#"
+              className={classnames({ active: this.state.activeTab1 === '2' })}
+              onClick={() => {
+              this.toggle1('2');
+            }}
+            >Tab2
+            </NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="#">Scroll</NavLink>
@@ -67,8 +112,7 @@ class UiForm extends React.Component {
           </NavItem>
         </Nav>
 
-
-        <ContentContainer>
+        <ScreenContent>
           <ScrollableContainer>
             <Card className="mt-0">
               <TabContent activeTab={this.state.activeTab1}>
@@ -84,7 +128,12 @@ class UiForm extends React.Component {
                             </FormGroup>
                             <FormGroup>
                               <Label for="examplePassword1">Password</Label>
-                              <Input type="password" name="password" id="examplePassword1" placeholder="password placeholder" />
+                              <Input
+                                type="password"
+                                name="password"
+                                id="examplePassword1"
+                                placeholder="password placeholder"
+                              />
                             </FormGroup>
                             <FormGroup>
                               <Label for="exampleSelect1">Select</Label>
@@ -114,8 +163,8 @@ class UiForm extends React.Component {
                               <Label for="exampleFile1">File</Label>
                               <Input type="file" name="file" id="exampleFile1" />
                               <FormText color="muted">
-                              This is some placeholder block-level help text for the above input.
-                              It's a bit lighter and easily wraps to a new line.
+                                This is some placeholder block-level help text for the above input.
+                                It's a bit lighter and easily wraps to a new line.
                               </FormText>
                             </FormGroup>
                             <FormGroup tag="fieldset">
@@ -123,13 +172,14 @@ class UiForm extends React.Component {
                               <FormGroup check inline>
                                 <Label check>
                                   <Input type="radio" name="radio1" />
-                                Option one is this and that—be sure to include why it's great
+                                  Option one is this and that—be sure to include why it's great
                                 </Label>
                               </FormGroup>
                               <FormGroup check inline>
                                 <Label check>
                                   <Input type="radio" name="radio1" />
-                                Option two can be something else and selecting it will deselect option one
+                                  Option two can be something else
+                                  and selecting it will deselect option one
                                 </Label>
                               </FormGroup>
                               <FormGroup check disabled inline>
@@ -142,7 +192,7 @@ class UiForm extends React.Component {
                             <FormGroup check inline>
                               <Label check>
                                 <Checkbox />
-                              Check me out
+                                Check me out
                               </Label>
                             </FormGroup>
                           </Form>
@@ -153,29 +203,32 @@ class UiForm extends React.Component {
                 </TabPane>
                 <TabPane tabId="2">
                   <CardBody spacing="lg">
-
                     <Row>
                       <Col sm="8" lg="12">
-
                         <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                        <CardText>
+                          With supporting text below as a natural lead-in to additional content.
+                        </CardText>
                         <Button>Go somewhere</Button>
-
                       </Col>
                     </Row>
-
                   </CardBody>
                 </TabPane>
               </TabContent>
             </Card>
           </ScrollableContainer>
-          <SidebarContainer size="lg" right theme="light" offcanvas="right" className="sidebar-actions" id="sidebar-actions">
-            <Button radius="circle" color="info" className="btn-sidebar-actions" onClick={this.toggleSideWrapper}><Icon imgSrc="arrow-left" alt="arrow" size="xl" inverse /></Button>
+          <Sidebar size="lg" right theme="light" offcanvas="right" className="sidebar-actions" id="sidebar-actions">
+            <Button radius="circle" color="info" className="btn-sidebar-actions" onClick={this.toggleSideWrapper}><Icon
+              imgSrc="arrow-left"
+              alt="arrow"
+              size="xl"
+              inverse
+            />
+            </Button>
             <ScrollableContainer>
               <Card color="transparent">
                 <CardBody>
                   <CardHeader subheader>Subheader Sidebar</CardHeader>
-
                   <Row>
                     <Col>
                       <InputGroup>
@@ -197,12 +250,11 @@ class UiForm extends React.Component {
                       </InputGroup>
                     </Col>
                   </Row>
-
                 </CardBody>
               </Card>
             </ScrollableContainer>
-          </SidebarContainer>
-        </ContentContainer>
+          </Sidebar>
+        </ScreenContent>
       </Card>,
     ];
   }

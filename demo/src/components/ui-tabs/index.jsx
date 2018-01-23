@@ -50,7 +50,7 @@ class UiTabs extends React.Component {
                   <Col xs="12" sm="6">
                     <Card>
                       <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
-                      <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidenav is used in the future.</CardText>
+                      <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidebar is used in the future.</CardText>
                       <Button>Go somewhere</Button>
                     </Card>
                   </Col>

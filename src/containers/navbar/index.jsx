@@ -9,7 +9,7 @@ import UserNavContainer from '../user-nav';
 import MobileNavContainer from '../mobile-nav';
 import selectors from '../../selectors';
 
-const NavBarContainer = ({ navConfig, theme }) => {
+const NavbarContainer = ({ navConfig, theme }) => {
   const navbarClass = theme === 'light' ? 'navbar' : 'navbar-dark';
 
   return (
@@ -22,7 +22,7 @@ const NavBarContainer = ({ navConfig, theme }) => {
   );
 };
 
-NavBarContainer.propTypes = {
+NavbarContainer.propTypes = {
   navConfig: PropTypes.arrayOf(PropTypes.object),
   theme: PropTypes.string,
 };
@@ -31,4 +31,4 @@ const mapStateToProps = state => ({
   theme: selectors.getAppTheme(state),
 });
 
-export default withRouter(connect(mapStateToProps)(NavBarContainer));
+export default withRouter(connect(mapStateToProps)(NavbarContainer));

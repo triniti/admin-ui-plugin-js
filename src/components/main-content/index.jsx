@@ -1,4 +1,3 @@
-// react
 import React from 'react';
 import PropTypes from 'prop-types';
 import './styles.scss';
@@ -10,7 +9,7 @@ const MainContent = ({ size, children }) => (
       {children}
     </div>
     }
-    {!size && children }
+    {!size && children}
   </div>
 );
 

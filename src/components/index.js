@@ -32,7 +32,6 @@ import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
-import ContentContainer from './content-container';
 import Datalist from './datalist';
 import Divider from './divider';
 import Dropdown from './dropdown';
@@ -58,7 +57,7 @@ import ListGroupItem from './list-group-item';
 import ListGroupItemHeading from './list-group-item-heading';
 import ListGroupItemText from './list-group-item-text';
 import Loading from './loading';
-import MainContainer from './main-container';
+import Main from './main';
 import MainContent from './main-content';
 import MainNav from './main-nav';
 import Media from './media';
@@ -90,8 +89,9 @@ import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
+import ScreenContent from './screen-content';
 import ScrollableContainer from './scrollable-container';
-import SidebarContainer from './sidebar-container';
+import Sidebar from './sidebar';
 import SidebarHeader from './sidebar-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
@@ -147,7 +147,6 @@ export {
   Col,
   Collapse,
   Container,
-  ContentContainer,
   Datalist,
   Divider,
   Dropdown,
@@ -173,7 +172,8 @@ export {
   ListGroupItemHeading,
   ListGroupItemText,
   Loading,
-  MainContainer,
+  Main,
+  Main as MainContainer,
   MainContent,
   MainNav,
   Media,
@@ -205,8 +205,10 @@ export {
   Radio,
   RouterLink,
   Row,
+  ScreenContent as ContentContainer,
+  ScreenContent,
   ScrollableContainer,
-  SidebarContainer,
+  Sidebar,
   SidebarHeader,
   Spinner,
   StatusMessage,
