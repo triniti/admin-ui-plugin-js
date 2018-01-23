@@ -1,5 +1,10 @@
 # CHANGELOG
 
+
+## v0.3.0
+* Integrate `app-content` into `app` component and delete `app-content` component.
+
+
 ## v0.2.0
 * New components: AlertBar, Datalist, PageActionButton
 * Removed specific Button components (SaveButton, etc)

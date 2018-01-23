@@ -1,17 +1,10 @@
-// react
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// utilities
 import Exception from '@gdbots/common/Exception';
-
-// redux
 import { STATUS_NONE, STATUS_PENDING, STATUS_REJECTED } from '@triniti/app/constants';
-
-// external components
 import Alert from '../alert';
 
-const StatusMessage = ({ status = STATUS_NONE, exception = null }) => {
+const StatusMessage = ({ status, exception }) => {
   switch (status) {
     case STATUS_PENDING:
       return <Alert color="info">Loading...</Alert>;
@@ -30,5 +23,9 @@ StatusMessage.propTypes = {
   exception: PropTypes.instanceOf(Exception),
 };
 
-export default StatusMessage;
+StatusMessage.defaultProps = {
+  status: STATUS_NONE,
+  exception: null,
+};
 
+export default StatusMessage;

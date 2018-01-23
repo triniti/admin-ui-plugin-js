@@ -1,23 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import { Switch, withRouter } from 'react-router';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import './styles.scss';
 // fixme: components ideally are not requesting containers
 // they should given them via props or children
 import NavBarContainer from '../../containers/nav-bar';
-import AppContent from '../app-content';
+import createRoutes from './createRoutes';
 
-const App = ({
-  location, navConfig, routes, authHoc,
-}) => (
+const App = ({ location, navConfig, routes, authHoc }) => (
   <div id="wrapper" data-slidedirection="">
-    {
-      location.pathname !== '/login'
-      &&
-      <NavBarContainer navConfig={navConfig} />
-    }
-    <AppContent routes={routes} authHoc={authHoc} />
+    {location.pathname !== '/login' && <NavBarContainer navConfig={navConfig} />}
+    <Switch>
+      {createRoutes(routes, authHoc)}
+    </Switch>
   </div>
 );
 
