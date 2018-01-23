@@ -16,13 +16,6 @@
   flex: 1 1 auto;
 }
 
-.main-content:after {
-  display: block;
-  position: relative;
-  content: '';
-  height: 5rem; // works like bottom padding
-}
-
 @media (max-width: 767px) {
   .main-content {
     width: 100vw;
@@ -75,7 +68,7 @@
 .main-content-row {
   display: flex;
   flex: 1;
-  height: calc(100% - 56px);
+  height: 100%;
 }
 
 .main-content-scroll {
@@ -102,28 +95,26 @@
 .main-content-navtabs {
   display: flex;
   background-color: $gray-200;
+  padding-top: 18px;
+  flex: 0 0 100%;
   height: 56px;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    height: 0;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+  }
+  /* optional: show position indicator in red */
+  &::-webkit-scrollbar-thumb {
+      background: $gray-500;
+  }
 
   & .nav {
     align-self: flex-end;
-    flex-grow: 1;
   }
-}
-
-.main-content-col {
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  flex: 1 1 auto;
-  z-index: 1;
-}
-
-.main-content-sidebar {
-  position: relative;
-  overflow-y: auto;
-  overflow-x: hidden;
-  z-index: 0;
-  flex: 0 0 360px;
-  background: $gray-200;
-  border-left: 1px solid $gray-600;
 }

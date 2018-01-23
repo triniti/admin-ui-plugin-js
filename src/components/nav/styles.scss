@@ -47,8 +47,10 @@
   }
 
   // Disabled state lightens text
-  &.disabled {
+  &.disabled,
+  &.disabled:hover {
     color: $nav-link-disabled-color;
+    cursor: no-drop;
   }
 }
 
@@ -151,6 +153,8 @@
   flex: 0 0 auto;
   box-shadow: inset 0 -1px 0 0 $nav-tabs-border-color;
   flex-wrap: nowrap;
+  padding-left: .5rem;
+  width: 100%;
 
   @media(max-width: 767px) {
     overflow: hidden;
@@ -159,10 +163,6 @@
     -webkit-backface-visibility: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -ms-overflow-style: none;
-  }
-
-  @media(min-width: 768px) {
-    padding-left: .5rem;
   }
 
   @media(min-width: 1025px) {
@@ -216,7 +216,6 @@
   & .nav-item.show .nav-link {
     background-color: transparent;
   }
-
 }
 
 // nav
@@ -278,16 +277,24 @@
 
 // location specific styles
 
-.sticky-top > .nav-underline {
-  background-color: $gray-100;
-}
-
 .aside-content .nav-underline .nav-item {
   flex: 1 1 auto;
 }
 
-.main-container .nav-underline.sticky-top {
+.nav-underline.sticky-top {
   min-height: $header-height;
-  background-color: $gray-100;
 }
 
+// themes
+
+.nav-theme-light {
+  background-color: theme-color("light");
+}
+
+.nav-theme-dark {
+  background-color: theme-color("dark");
+}
+
+.nav-theme-white {
+  background-color: $white;
+}

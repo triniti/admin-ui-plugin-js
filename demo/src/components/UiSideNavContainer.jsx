@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import startCase from 'lodash/startCase';
-import { Button, ListGroup, ListGroupItem, ScrollableContainer, SidenavHeader, Tooltip } from '../../../src/components';
+import { Button, ListGroup, ListGroupItem, SideBar, ScrollableContainer, SidenavHeader, Tooltip } from '../../../src/components';
 
 import iconArrowLeft from '../assets/img/svg/icons/angle-left.svg';
 import UiComponents from '../config.module';
@@ -61,7 +61,7 @@ class UiSideNavContainer extends React.Component {
     const componentIds = Object.keys(UiComponents);
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
-      <div className="sidenav-container bg-white" id="sidenav">
+      <SideBar id="sidenav" className="sidenav">
         <SidenavHeader>
           <Button outline color="hover" className={'btn-sidenav-close'} onClick={this.toggleSideWrapper} id={'btn-sidenav-close'}>
             <img src={iconArrowLeft} alt="<" />
@@ -74,7 +74,7 @@ class UiSideNavContainer extends React.Component {
           </ListGroup>
         </ScrollableContainer>
 
-      </div>
+      </SideBar>
     );
   }
 }

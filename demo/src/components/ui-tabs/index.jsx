@@ -33,9 +33,9 @@ class UiTabs extends React.Component {
 
   render() {
     return (
-      <Card>
+      <Card className="mt-0">
         <div>
-          <Nav underline sticky theme="light">
+          <Nav underline sticky className="pt-2" color="light">
             <NavItem>
               <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
             </NavItem>
@@ -49,10 +49,10 @@ class UiTabs extends React.Component {
               <CardBody spacing="lg">
                 <Row>
                   <Col>
-                    <h3>Full Width Simple Tabs, Sticky Top - .tabs-simple</h3>
+                    <h3>Underline Tabs, Sticky Top, No Sidebar</h3>
                     <Card body className="col col-12 col-sm-6">
-                      <CardTitle>Special Title Treatment</CardTitle>
-                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                      <CardTitle>Card Title</CardTitle>
+                      <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidenav is used in the future.</CardText>
                       <Button>Go somewhere</Button>
                     </Card>
                   </Col>

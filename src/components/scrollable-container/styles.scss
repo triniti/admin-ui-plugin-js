@@ -3,6 +3,8 @@
 // side nav to the left of main-container, often used to control the main-container
 
 .scrollable-container {
+  position: relative;
+  flex: 1 1 auto;
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;

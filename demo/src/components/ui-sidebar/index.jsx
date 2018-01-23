@@ -1,16 +1,19 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, DropdownItem, DropdownMenu, DropdownToggle, Input, InputGroup, InputGroupAddon, InputGroupButton, Form, FormFeedback, FormGroup, FormText, Icon, Label, Nav, NavDropdown, NavItem, NavLink, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardTitle, CardText, Checkbox, Container, ContentContainer, Col, DropdownItem, DropdownMenu, DropdownToggle, Form, FormFeedback, FormGroup, FormText, Icon, Input, InputGroup, InputGroupAddon, InputGroupButton, Label, Nav, NavDropdown, NavItem, NavLink, Radio, Row, SideBar, ScrollableContainer, Switch, TabContent, TabPane, TrinaryControl } from '../../../../src/components';
+import classnames from 'classnames';
 
 class UiForm extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.toggle = this.toggle.bind(this);
+    this.toggle1 = this.toggle1.bind(this);
     this.state = {
+      activeTab1: '1',
       trinaryDefault: 0,
       trinaryCustom: 1,
-      dropdownOpen: false
+      ddropdownOpen: false,
     };
   }
 
@@ -23,152 +26,183 @@ class UiForm extends React.Component {
 
   toggle() {
     this.setState({
-      dropdownOpen: !this.state.dropdownOpen
+      dropdownOpen: !this.state.dropdownOpen,
     });
   }
+
+  toggle1(tab1) {
+    if (this.state.activeTab1 !== tab1) {
+      this.setState({
+        activeTab1: tab1,
+      });
+    }
+  }
+
+  toggleSideWrapper() {
+    const sideNavWrapper = document.getElementById('sidebar-actions');
+    if (sideNavWrapper.classList.contains('sidebar-actions--is-open')) {
+      sideNavWrapper.classList.remove('sidebar-actions--is-open');
+    } else {
+      sideNavWrapper.classList.add('sidebar-actions--is-open');
+    }
+  }
+
 
 
   render() {
     return [
-      <div className="main-content-flex-container">
-        <div className="main-content-navtabs">
-          <Nav size="sm" underline>
-            <NavItem>
-              <NavLink href="#" active>Link</NavLink>
-            </NavItem>
-            <NavDropdown isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
-              <DropdownToggle nav caret>
-                Dropdown
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem header>Header</DropdownItem>
-                <DropdownItem disabled>Action</DropdownItem>
-                <DropdownItem>Another Action</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Another Action</DropdownItem>
-              </DropdownMenu>
-            </NavDropdown>
-            <NavItem>
-              <NavLink href="#">Link</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">Another Link</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink disabled href="#">Disabled Link</NavLink>
-            </NavItem>
-          </Nav>
-        </div>
-        <div className="main-content-row">
-          <div className="main-content-col">
-          <Card className="mt-0">
-            <CardBody spacing="lg">
-              <Row>
-                <Col sm="12" md="8">
-                  <Form>
-                    <FormGroup>
-                      <Label for="exampleEmail1">Email</Label>
-                      <Input type="email" name="email" id="exampleEmail1" placeholder="with a placeholder" />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="examplePassword1">Password</Label>
-                      <Input type="password" name="password" id="examplePassword1" placeholder="password placeholder" />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleSelect1">Select</Label>
-                      <Input type="select" name="select1" id="exampleSelect1">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </Input>
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleSelectMulti1">Select Multiple</Label>
-                      <Input type="select" name="selectMulti1" id="exampleSelectMulti1" multiple>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </Input>
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleText1">Text Area</Label>
-                      <Input type="textarea" name="text" id="exampleText1" />
-                    </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleFile1">File</Label>
-                      <Input type="file" name="file" id="exampleFile1" />
-                      <FormText color="muted">
-                        This is some placeholder block-level help text for the above input.
-                        It's a bit lighter and easily wraps to a new line.
-                      </FormText>
-                    </FormGroup>
-                    <FormGroup tag="fieldset">
-                      <legend>Radio Buttons</legend>
-                      <FormGroup check inline>
-                        <Label check>
-                          <Input type="radio" name="radio1" />
-                          Option one is this and that—be sure to include why it's great
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check inline>
-                        <Label check>
-                          <Input type="radio" name="radio1" />
-                          Option two can be something else and selecting it will deselect option one
-                        </Label>
-                      </FormGroup>
-                      <FormGroup check disabled inline>
-                        <Label check>
-                          <Input type="radio" name="radio1" disabled />
-                            Option three is disabled
-                        </Label>
-                      </FormGroup>
-                    </FormGroup>
-                    <FormGroup check inline>
-                      <Label check>
-                        <Checkbox />
-                        Check me out
-                      </Label>
-                    </FormGroup>
-                  </Form>
-                </Col>
-              </Row>
-            </CardBody>
-          </Card>
-          </div>
-          <div className="main-content-col main-content-sidebar">
-            <Card color="transparent">
-              <CardBody>
-                <CardHeader subheader>Trinary Control - Default</CardHeader>
-                <Row>
-                  <Col>
-                    <InputGroup>
-                      <Input />
-                      <InputGroupButton>
-                        <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                          <DropdownToggle caret>
-                            Dropdown
-                          </DropdownToggle>
-                          <DropdownMenu arrow="right" right>
-                            <DropdownItem header>Header</DropdownItem>
-                            <DropdownItem disabled>Action</DropdownItem>
-                            <DropdownItem>Another Action</DropdownItem>
-                            <DropdownItem divider/>
-                            <DropdownItem>Another Action</DropdownItem>
-                          </DropdownMenu>
-                        </ButtonDropdown>
-                      </InputGroupButton>
-                    </InputGroup>
-                  </Col>
-                </Row>
-              </CardBody>
+      <Card className="m-0">
+
+        <Nav underline className="pt-2" theme="light">
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Scroll</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#">Horiz Mobile</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink disabled href="#">Disabled Link</NavLink>
+          </NavItem>
+        </Nav>
+
+
+        <ContentContainer>
+          <ScrollableContainer>
+            <Card className="mt-0">
+              <TabContent activeTab={this.state.activeTab1}>
+                <TabPane tabId="1">
+                  <CardBody spacing="lg">
+                    <Row>
+                      <Col xs="12">
+                        <Form>
+                          <FormGroup>
+                            <Label for="exampleEmail1">Email</Label>
+                            <Input type="email" name="email" id="exampleEmail1" placeholder="with a placeholder" />
+                          </FormGroup>
+                          <FormGroup>
+                            <Label for="examplePassword1">Password</Label>
+                            <Input type="password" name="password" id="examplePassword1" placeholder="password placeholder" />
+                          </FormGroup>
+                          <FormGroup>
+                            <Label for="exampleSelect1">Select</Label>
+                            <Input type="select" name="select1" id="exampleSelect1">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Input>
+                          </FormGroup>
+                          <FormGroup>
+                            <Label for="exampleSelectMulti1">Select Multiple</Label>
+                            <Input type="select" name="selectMulti1" id="exampleSelectMulti1" multiple>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </Input>
+                          </FormGroup>
+                          <FormGroup>
+                            <Label for="exampleText1">Text Area</Label>
+                            <Input type="textarea" name="text" id="exampleText1" />
+                          </FormGroup>
+                          <FormGroup>
+                            <Label for="exampleFile1">File</Label>
+                            <Input type="file" name="file" id="exampleFile1" />
+                            <FormText color="muted">
+                              This is some placeholder block-level help text for the above input.
+                              It's a bit lighter and easily wraps to a new line.
+                            </FormText>
+                          </FormGroup>
+                          <FormGroup tag="fieldset">
+                            <legend>Radio Buttons</legend>
+                            <FormGroup check inline>
+                              <Label check>
+                                <Input type="radio" name="radio1" />
+                                Option one is this and that—be sure to include why it's great
+                              </Label>
+                            </FormGroup>
+                            <FormGroup check inline>
+                              <Label check>
+                                <Input type="radio" name="radio1" />
+                                Option two can be something else and selecting it will deselect option one
+                              </Label>
+                            </FormGroup>
+                            <FormGroup check disabled inline>
+                              <Label check>
+                                <Input type="radio" name="radio1" disabled />
+                                  Option three is disabled
+                              </Label>
+                            </FormGroup>
+                          </FormGroup>
+                          <FormGroup check inline>
+                            <Label check>
+                              <Checkbox />
+                              Check me out
+                            </Label>
+                          </FormGroup>
+                        </Form>
+                      </Col>
+                    </Row>
+                  </CardBody>
+                </TabPane>
+                <TabPane tabId="2">
+                  <CardBody spacing="lg">
+                    <Row>
+                      <Col>
+                        <h3>Underline Tabs, Sticky Top, No Sidebar</h3>
+                        <Card body className="col col-12 col-sm-6">
+                          <CardTitle>Special Title Treatment</CardTitle>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                          <Button>Go somewhere</Button>
+                        </Card>
+                      </Col>
+                    </Row>
+                  </CardBody>
+                </TabPane>
+              </TabContent>
             </Card>
-          </div>
-        </div>
-      </div>
+          </ScrollableContainer>
+          <SideBar size="lg" right theme="light" offcanvas="right" className="sidebar-actions" id="sidebar-actions">
+            <Button radius="circle" color="info" className="btn-sidebar-actions" onClick={this.toggleSideWrapper}><Icon imgSrc="arrow-left" alt="arrow" size="xl" inverse /></Button>
+            <ScrollableContainer>
+              <Card color="transparent">
+                <CardBody>
+                  <CardHeader subheader>Subheader Sidebar</CardHeader>
+                  <Row>
+                    <Col>
+                      <InputGroup>
+                        <Input theme="white"/>
+                        <InputGroupButton>
+                          <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                            <DropdownToggle caret color="info">
+                              Dropdown
+                            </DropdownToggle>
+                            <DropdownMenu arrow="right" right>
+                              <DropdownItem header>Header</DropdownItem>
+                              <DropdownItem disabled>Action</DropdownItem>
+                              <DropdownItem>Another Action</DropdownItem>
+                              <DropdownItem divider/>
+                              <DropdownItem>Another Action</DropdownItem>
+                            </DropdownMenu>
+                          </ButtonDropdown>
+                        </InputGroupButton>
+                      </InputGroup>
+                    </Col>
+                  </Row>
+                </CardBody>
+              </Card>
+            </ScrollableContainer>
+          </SideBar>
+        </ContentContainer>
+      </Card>
     ];
   }
 }

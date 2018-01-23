@@ -89,7 +89,7 @@ import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
 import ScrollableContainer from './scrollable-container';
-import SidenavContainer from './sidenav-container';
+import SideBar from './sidebar';
 import SidenavHeader from './sidenav-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
@@ -202,7 +202,7 @@ export {
   RouterLink,
   Row,
   ScrollableContainer,
-  SidenavContainer,
+  SideBar,
   SidenavHeader,
   Spinner,
   StatusMessage,
