@@ -61,7 +61,7 @@ class UiSideNavContainer extends React.Component {
     const componentIds = Object.keys(UiComponents);
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
-      <Sidebar id="sidenav" className="sidenav">
+      <Sidebar id="sidenav" className="sidenav" left theme="white" size="sm">
         <SidebarHeader>
           <Button outline color="hover" className="btn-sidebar-close" onClick={this.toggleSideWrapper} id="btn-sidebar-close">
             <img src={iconArrowLeft} alt="<" />
