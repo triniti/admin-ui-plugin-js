@@ -37,7 +37,7 @@ const SideBarContainer = (props) => {
     'sidebar-container',
     size ? `sidebar-container-${size}` : false,
     offcanvas ? `sidebar-container-offcanvas-${offcanvas}` : false,
-    right ? `sidebar-container-right` : `sidebar-container-left`,
+    right ? 'sidebar-container-right' : 'sidebar-container-left',
     theme ? `sidebar-container-theme-${theme}` : false,
   ), cssModule);
 

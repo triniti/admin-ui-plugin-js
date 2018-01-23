@@ -83,7 +83,7 @@ class Input extends React.Component {
       size ? `form-control-${size}` : false,
       radius ? `form-control-radius-${radius}` : false,
       theme ? `form-control-theme-${theme}` : false,
-      formControlClass
+      formControlClass,
     ), cssModule);
 
     if (Tag === 'input') {

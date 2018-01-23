@@ -46,7 +46,7 @@ const Nav = (props) => {
     className,
     size ? `nav-${size}` : false,
     theme ? `nav-theme-${theme}` : false,
-    sticky ? `nav-sticky` : false,
+    sticky ? 'nav-sticky' : false,
     navbar ? 'navbar-nav' : 'nav',
     {
       'nav-boxed': boxed,
