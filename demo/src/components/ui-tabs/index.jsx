@@ -32,38 +32,88 @@ class UiTabs extends React.Component {
   }
 
   render() {
-    return (
-      <CardBody className="mt-0">
-        <div>
-          <Nav underline sticky className="pt-2" color="light">
+    return [
+      <Card className="mt-0">
+        <Nav underline sticky className="pt-2" color="light">
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+          </NavItem>
+        </Nav>
+
+        <TabContent activeTab={this.state.activeTab1}>
+          <TabPane tabId="1">
+            <CardBody spacing="lg">
+              <Row>
+                <Col xs="12" sm="6">
+                  <Card>
+                    <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
+                    <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidenav is used in the future.</CardText>
+                    <Button>Go somewhere</Button>
+                  </Card>
+                </Col>
+              </Row>
+            </CardBody>
+          </TabPane>
+          <TabPane tabId="2">
+            <CardBody spacing="lg">
+              <Row>
+                <Col sm="6">
+                  <Card>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button>Go somewhere</Button>
+                  </Card>
+                </Col>
+                <Col sm="6">
+                  <Card>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button>Go somewhere</Button>
+                  </Card>
+                </Col>
+              </Row>
+            </CardBody>
+          </TabPane>
+        </TabContent>
+      </Card>,
+
+      <Card>
+        <CardHeader spacing="lg" inset>Classic Standard Version</CardHeader>
+        <CardBody spacing="lg">
+          <Nav tabs>
             <NavItem>
-              <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+              <div
+                className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '3' })}
+                onClick={() => { this.toggle2('3'); }}
+              >
+                Tab1
+              </div>
             </NavItem>
             <NavItem>
-              <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+              <div
+                className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '4' })}
+                onClick={() => { this.toggle2('4'); }}
+              >
+                Moar Tabs
+              </div>
             </NavItem>
           </Nav>
 
-          <TabContent activeTab={this.state.activeTab1}>
-            <TabPane tabId="1">
-              <CardBody spacing="lg">
-                <Row>
-                  <Col xs="12" sm="6">
-                    <Card>
-                      <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
-                      <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidenav is used in the future.</CardText>
-                      <Button>Go somewhere</Button>
-                    </Card>
-                  </Col>
-                </Row>
+          <TabContent activeTab={this.state.activeTab2}>
+            <TabPane tabId="3">
+              <CardBody>
+                <h4>Classic Tab Syle</h4>
               </CardBody>
             </TabPane>
-            <TabPane tabId="2">
-              <CardBody spacing="lg">
+            <TabPane tabId="4">
+              <CardBody>
                 <Row>
                   <Col sm="6">
                     <Card>
-                      <CardTitle>Special Title Treatment</CardTitle>
+                      <CardTitle>CardsContainer</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                       <Button>Go somewhere</Button>
                     </Card>
@@ -79,60 +129,9 @@ class UiTabs extends React.Component {
               </CardBody>
             </TabPane>
           </TabContent>
-        </div>
-        <div>
-          <CardHeader spacing="lg" inset>Classic Standard Version</CardHeader>
-          <CardBody spacing="lg">
-            <Nav tabs>
-              <NavItem>
-                <div
-                  className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '3' })}
-                  onClick={() => { this.toggle2('3'); }}
-                >
-                  Tab1
-                </div>
-              </NavItem>
-              <NavItem>
-                <div
-                  className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '4' })}
-                  onClick={() => { this.toggle2('4'); }}
-                >
-                  Moar Tabs
-                </div>
-              </NavItem>
-            </Nav>
-
-            <TabContent activeTab={this.state.activeTab2}>
-              <TabPane tabId="3">
-                <CardBody>
-                  <h4>Classic Tab Syle</h4>
-                </CardBody>
-              </TabPane>
-              <TabPane tabId="4">
-                <CardBody>
-                  <Row>
-                    <Col sm="6">
-                      <Card>
-                        <CardTitle>CardsContainer</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                        <Button>Go somewhere</Button>
-                      </Card>
-                    </Col>
-                    <Col sm="6">
-                      <Card>
-                        <CardTitle>Special Title Treatment</CardTitle>
-                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                        <Button>Go somewhere</Button>
-                      </Card>
-                    </Col>
-                  </Row>
-                </CardBody>
-              </TabPane>
-            </TabContent>
-          </CardBody>
-        </div>
+        </CardBody>
       </Card>
-    );
+    ];
   }
 }
 
