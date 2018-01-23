@@ -16,6 +16,7 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
+  justify-content: space-around;
   user-select: none;
   color: $body-color;
   background-color: $gray-400;
@@ -160,7 +161,6 @@ input[type="button"] {
   border: none;
   border-radius: 0;
   box-shadow: inset -1px 0 0 0 $gray-500;
-  justify-content: space-around;
   flex: 1;
 }
 
