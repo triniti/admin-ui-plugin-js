@@ -90,8 +90,8 @@ import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
 import ScrollableContainer from './scrollable-container';
-import SideBar from './sidebar';
-import SidenavHeader from './sidenav-header';
+import SidebarContainer from './sidebar-container';
+import SidebarHeader from './sidebar-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Switch from './switch';
@@ -204,8 +204,8 @@ export {
   RouterLink,
   Row,
   ScrollableContainer,
-  SideBar,
-  SidenavHeader,
+  SidebarContainer,
+  SidebarHeader,
   Spinner,
   StatusMessage,
   Switch,

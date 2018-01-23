@@ -19,7 +19,7 @@ const defaultProps = {
   tag: 'div',
 };
 
-const SideBar = (props) => {
+const SideBarContainer = (props) => {
   const {
     className,
     cssModule,
@@ -34,11 +34,11 @@ const SideBar = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'sidebar',
-    size ? `sidebar-${size}` : false,
-    offcanvas ? `sidebar-offcanvas-${offcanvas}` : false,
-    right ? `sidebar-right` : `sidebar-left`,
-    theme ? `sidebar-theme-${theme}` : false,
+    'sidebar-container',
+    size ? `sidebar-container-${size}` : false,
+    offcanvas ? `sidebar-container-offcanvas-${offcanvas}` : false,
+    right ? `sidebar-container-right` : `sidebar-container-left`,
+    theme ? `sidebar-container-theme-${theme}` : false,
   ), cssModule);
 
   return (
@@ -46,7 +46,7 @@ const SideBar = (props) => {
   );
 };
 
-SideBar.propTypes = propTypes;
-SideBar.defaultProps = defaultProps;
+SideBarContainer.propTypes = propTypes;
+SideBarContainer.defaultProps = defaultProps;
 
-export default SideBar;
+export default SideBarContainer;
