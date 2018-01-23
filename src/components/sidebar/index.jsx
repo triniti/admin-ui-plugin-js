@@ -13,6 +13,7 @@ const propTypes = {
   theme: PropTypes.string,
   offcanvas: PropTypes.string,
   left: PropTypes.bool,
+  actions: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -28,6 +29,7 @@ const Sidebar = (props) => {
     offcanvas,
     left,
     theme,
+    actions,
     children,
     ...attributes
   } = props;
@@ -39,6 +41,7 @@ const Sidebar = (props) => {
     offcanvas ? `sidebar-offcanvas-${offcanvas}` : false,
     left ? 'sidebar-left' : 'sidebar-right',
     theme ? `sidebar-theme-${theme}` : false,
+    actions ? `sidebar-actions` : false,
   ), cssModule);
 
   return (

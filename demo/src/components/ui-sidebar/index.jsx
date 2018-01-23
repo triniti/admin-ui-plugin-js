@@ -14,6 +14,7 @@ import {
   DropdownItem,
   DropdownMenu,
   DropdownToggle,
+  FlexSpacer,
   Form,
   FormGroup,
   FormText,
@@ -217,7 +218,7 @@ class UiForm extends React.Component {
               </TabContent>
             </Card>
           </ScrollableContainer>
-          <Sidebar size="lg" right theme="light" offcanvas="right" className="sidebar-actions" id="sidebar-actions">
+          <Sidebar actions id="sidebar-actions">
             <Button radius="circle" color="info" className="btn-sidebar-actions" onClick={this.toggleSideWrapper}><Icon
               imgSrc="arrow-left"
               alt="arrow"
@@ -252,6 +253,7 @@ class UiForm extends React.Component {
                   </Row>
                 </CardBody>
               </Card>
+              <FlexSpacer/>
             </ScrollableContainer>
           </Sidebar>
         </ScreenContent>

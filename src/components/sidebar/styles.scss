@@ -11,11 +11,12 @@ $sidebar-xs:         260px !default;
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 0 0 $sidebar-sm;
+  flex: 0 0 $sidebar-lg;
   flex-wrap: nowrap;
   transition: margin $transition;
-  width: $sidebar-sm;
+  width: $sidebar-lg;
   border: 0 solid $gray-600;
+  background-color: theme-color("light");
 }
 
 // border based on position
@@ -106,7 +107,6 @@ $sidebar-xs:         260px !default;
 // Right Sidebar Mobile
 
 .sidebar-actions {
-  min-height: 320px;
 
   @media (max-width: 1023px) {
     position: absolute;
