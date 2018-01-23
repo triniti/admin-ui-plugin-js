@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, CardsContainer, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, CardsContainer, Col, Container, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
 
 
@@ -33,7 +33,7 @@ class UiTabs extends React.Component {
 
   render() {
     return (
-      <Card className="mt-0">
+      <CardBody className="mt-0">
         <div>
           <Nav underline sticky className="pt-2" color="light">
             <NavItem>
@@ -48,10 +48,9 @@ class UiTabs extends React.Component {
             <TabPane tabId="1">
               <CardBody spacing="lg">
                 <Row>
-                  <Col>
-                    <h3>Underline Tabs, Sticky Top, No Sidebar</h3>
-                    <Card body className="col col-12 col-sm-6">
-                      <CardTitle>Card Title</CardTitle>
+                  <Col xs="12" sm="6">
+                    <Card>
+                      <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
                       <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidenav is used in the future.</CardText>
                       <Button>Go somewhere</Button>
                     </Card>
@@ -63,14 +62,14 @@ class UiTabs extends React.Component {
               <CardBody spacing="lg">
                 <Row>
                   <Col sm="6">
-                    <Card body className="mt-0">
+                    <Card>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                       <Button>Go somewhere</Button>
                     </Card>
                   </Col>
                   <Col sm="6">
-                    <Card body className="mt-0">
+                    <Card>
                       <CardTitle>Special Title Treatment</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                       <Button>Go somewhere</Button>
@@ -105,31 +104,29 @@ class UiTabs extends React.Component {
 
             <TabContent activeTab={this.state.activeTab2}>
               <TabPane tabId="3">
-                <Card borderless className="mt-0">
-                  <CardBody spacing="lg">
-                    <h4>Classic Tab Syle</h4>
-                  </CardBody>
-                </Card>
+                <CardBody>
+                  <h4>Classic Tab Syle</h4>
+                </CardBody>
               </TabPane>
               <TabPane tabId="4">
-                <CardsContainer>
+                <CardBody>
                   <Row>
                     <Col sm="6">
-                      <Card body>
+                      <Card>
                         <CardTitle>CardsContainer</CardTitle>
                         <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                         <Button>Go somewhere</Button>
                       </Card>
                     </Col>
                     <Col sm="6">
-                      <Card body>
+                      <Card>
                         <CardTitle>Special Title Treatment</CardTitle>
                         <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                         <Button>Go somewhere</Button>
                       </Card>
                     </Col>
                   </Row>
-                </CardsContainer>
+                </CardBody>
               </TabPane>
             </TabContent>
           </CardBody>

@@ -29,10 +29,6 @@
 
 .card-border {
   border: $card-border-width solid $card-border-color;
-
-  .tab-pane > & {
-    margin-top: 1rem;
-  }
 }
 
 
