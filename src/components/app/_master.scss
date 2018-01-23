@@ -31,6 +31,13 @@ body {
   flex: 0 0 100%;
 }
 
+// remove container-fluid & container padding if directly inside card-body since it has its own
+
+.card-body > .container,
+.card-body > .container-fluid {
+  padding: 0;
+}
+
 /* removal of the glow on objects on focus */
 
 object,

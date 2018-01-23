@@ -613,7 +613,7 @@ class UiButtons extends React.Component {
           </CardHeader>
         </div>
 
-        <FlexSpacer></FlexSpacer>
+        <FlexSpacer height="5rem"></FlexSpacer>
       </Card>
     );
   }

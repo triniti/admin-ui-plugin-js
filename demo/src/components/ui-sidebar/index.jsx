@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardTitle, CardText, Checkbox, Container, ContentContainer, Col, DropdownItem, DropdownMenu, DropdownToggle, Form, FormFeedback, FormGroup, FormText, Icon, Input, InputGroup, InputGroupAddon, InputGroupButton, Label, Nav, NavDropdown, NavItem, NavLink, Radio, Row, SideBar, ScrollableContainer, Switch, TabContent, TabPane, TrinaryControl } from '../../../../src/components';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardTitle, CardText, Checkbox, Container, ContentContainer, Col, DropdownItem, DropdownMenu, DropdownToggle, Form, FormFeedback, FormGroup, FormText, Icon, Input, InputGroup, InputGroupAddon, InputGroupButton, Label, Nav, NavDropdown, NavItem, NavLink, Radio, Row, SidebarContainer, ScrollableContainer, Switch, TabContent, TabPane, TrinaryControl } from '../../../../src/components';
 import classnames from 'classnames';
 
 class UiForm extends React.Component {
@@ -78,6 +78,7 @@ class UiForm extends React.Component {
               <TabContent activeTab={this.state.activeTab1}>
                 <TabPane tabId="1">
                   <CardBody spacing="lg">
+                  <Container fluid>
                     <Row>
                       <Col xs="12">
                         <Form>
@@ -151,31 +152,34 @@ class UiForm extends React.Component {
                         </Form>
                       </Col>
                     </Row>
+                  </Container>
                   </CardBody>
                 </TabPane>
                 <TabPane tabId="2">
                   <CardBody spacing="lg">
+
                     <Row>
-                      <Col>
-                        <h3>Underline Tabs, Sticky Top, No Sidebar</h3>
-                        <Card body className="col col-12 col-sm-6">
-                          <CardTitle>Special Title Treatment</CardTitle>
-                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                          <Button>Go somewhere</Button>
-                        </Card>
+                      <Col sm="8" lg="12">
+
+                        <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
+                        <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                        <Button>Go somewhere</Button>
+
                       </Col>
                     </Row>
+
                   </CardBody>
                 </TabPane>
               </TabContent>
             </Card>
           </ScrollableContainer>
-          <SideBar size="lg" right theme="light" offcanvas="right" className="sidebar-actions" id="sidebar-actions">
+          <SidebarContainer size="lg" right theme="light" offcanvas="right" className="sidebar-actions" id="sidebar-actions">
             <Button radius="circle" color="info" className="btn-sidebar-actions" onClick={this.toggleSideWrapper}><Icon imgSrc="arrow-left" alt="arrow" size="xl" inverse /></Button>
             <ScrollableContainer>
               <Card color="transparent">
                 <CardBody>
                   <CardHeader subheader>Subheader Sidebar</CardHeader>
+
                   <Row>
                     <Col>
                       <InputGroup>
@@ -197,10 +201,11 @@ class UiForm extends React.Component {
                       </InputGroup>
                     </Col>
                   </Row>
+
                 </CardBody>
               </Card>
             </ScrollableContainer>
-          </SideBar>
+          </SidebarContainer>
         </ContentContainer>
       </Card>
     ];

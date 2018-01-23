@@ -9,6 +9,7 @@ const propTypes = {
   cssModule: PropTypes.object,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   children: PropTypes.node,
+  height: PropTypes.string,
 };
 
 const defaultProps = {
@@ -21,6 +22,7 @@ const FlexSpacer = (props) => {
     cssModule,
     tag: Tag,
     children,
+    height,
     ...attributes
   } = props;
 
@@ -30,7 +32,7 @@ const FlexSpacer = (props) => {
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>{children}</Tag>
+    <Tag {...attributes} className={classes} style={{ height }}>{children}</Tag>
   );
 };
 
