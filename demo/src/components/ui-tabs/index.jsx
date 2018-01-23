@@ -1,7 +1,6 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, CardsContainer, Col, Container, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
-
 
 class UiTabs extends React.Component {
   constructor(props) {
@@ -79,7 +78,7 @@ class UiTabs extends React.Component {
                   </Col>
                 </Row>
               </CardBody>
-              </Card>
+            </Card>
           </TabPane>
         </TabContent>
       </Card>,
@@ -154,7 +153,7 @@ class UiTabs extends React.Component {
             </TabPane>
           </TabContent>
         </CardBody>
-      </Card>
+      </Card>,
     ];
   }
 }

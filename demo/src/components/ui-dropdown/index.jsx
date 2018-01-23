@@ -10,8 +10,6 @@ class UiDropdown extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       dropdownOpen: false,
-      trinaryDefault: 0,
-      trinaryCustom: 1,
     };
   }
 

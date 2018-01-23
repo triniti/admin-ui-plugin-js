@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Card, CardBody, CardHeader, CardTitle, Divider } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Divider } from '../../../../src/components';
 
 const UiHeaders = () => (
   <Card>
@@ -49,7 +49,7 @@ const UiHeaders = () => (
 
 
     <CardHeader />
-    <br/>
+    <br />
     <CardHeader spacing="lg" inset>Dividers directly inside Card but outside CardBody</CardHeader>
     <hr />
 
@@ -69,10 +69,10 @@ const UiHeaders = () => (
     <Divider size="lg" />
 
     <CardBody spacing="lg">
-    <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>
+      <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>
     </CardBody>
 
-    <CardBody spacing="lg"></CardBody>
+    <CardBody spacing="lg" />
 
   </Card>
 );

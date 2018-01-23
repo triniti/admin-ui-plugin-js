@@ -49,8 +49,9 @@ class UiNav extends React.Component {
         <CardHeader spacing="lg" inset>Link Based</CardHeader>
         <CardBody spacing="lg">
           <Nav>
-            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another
-            Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
+            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink>
+            <NavLink href="#">Another Link</NavLink>
+            <NavLink disabled href="#">Disabled Link</NavLink>
           </Nav>
         </CardBody>
 
@@ -75,8 +76,9 @@ class UiNav extends React.Component {
         <CardHeader spacing="lg" inset>Link based - Vertical</CardHeader>
         <CardBody spacing="lg">
           <Nav vertical>
-            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another
-            Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
+            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink>
+            <NavLink href="#">Another Link</NavLink>
+            <NavLink disabled href="#">Disabled Link</NavLink>
           </Nav>
         </CardBody>
 
@@ -141,7 +143,7 @@ class UiNav extends React.Component {
         </CardBody>
 
         <CardHeader className="sticky-off" spacing="lg">Pills</CardHeader>
-        <CardBody className={'pb-5'} spacing="lg">
+        <CardBody className="pb-5" spacing="lg">
           <Nav pills>
             <NavItem>
               <NavLink href="#" active>Active</NavLink>
@@ -171,7 +173,7 @@ class UiNav extends React.Component {
         </CardBody>
 
         <CardHeader className="sticky-off" spacing="lg">Pills Small</CardHeader>
-        <CardBody className={'pb-5 mb-5'} spacing="lg">
+        <CardBody className="pb-5 mb-5" spacing="lg">
           <Row>
             <Col>
               <Nav pills className="nav-pills-sm">
