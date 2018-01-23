@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, withRouter } from 'react-router';
-import 'sweetalert2/dist/sweetalert2.min.css';
 import './styles.scss';
 // fixme: components ideally are not requesting containers
 // they should given them via props or children
