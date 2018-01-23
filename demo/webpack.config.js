@@ -72,7 +72,7 @@ module.exports = () => ({
             loader: 'postcss-loader',
             options: {
               config: {
-                path: resolve(__dirname, 'src/postcss.config.js'),
+                path: resolve(__dirname, 'postcss.config.js'),
               },
             },
           },
@@ -96,7 +96,7 @@ module.exports = () => ({
             loader: 'postcss-loader',
             options: {
               config: {
-                path: resolve(__dirname, 'src/postcss.config.js'),
+                path: resolve(__dirname, 'postcss.config.js'),
               },
             },
           },

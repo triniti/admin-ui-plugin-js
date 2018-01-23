@@ -11,7 +11,7 @@
     "start": "BABEL_ENV=browser webpack-dev-server --env.NODE_ENV=development --debug --progress --profile --colors --history-api-fallback"
   },
   "devDependencies": {
-    "@triniti/app": "^0.1.0",
+    "@triniti/app": "^0.3.1",
     "autoprefixer": "^7.2.5",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
