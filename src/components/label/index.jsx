@@ -101,7 +101,7 @@ const Label = (props) => {
     hidden ? 'sr-only' : false,
     check ? 'form-check-label' : false,
     size ? `col-form-label-${size}` : false,
-    strong ? `form-label-strong` : false,
+    strong ? 'form-label-strong' : false,
     colClasses,
     colClasses.length ? 'col-form-label' : false,
     !check && !colClasses.length ? 'form-control-label' : false,

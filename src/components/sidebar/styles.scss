@@ -1,0 +1,152 @@
+// SideBar
+
+// Variables for width and offcanvas
+$sidebar-xl:         100% !default;
+$sidebar-lg:         360px !default;
+$sidebar-md:         320px !default;
+$sidebar-sm:         300px !default;
+$sidebar-xs:         260px !default;
+
+.sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 $sidebar-lg;
+  flex-wrap: nowrap;
+  transition: margin $transition;
+  width: $sidebar-lg;
+  border: 0 solid $gray-600;
+  background-color: theme-color("light");
+}
+
+// border based on position
+
+.sidebar-top {
+  border-bottom-width: 1px;
+}
+
+.sidebar-right {
+  border-left-width: 1px;
+}
+
+.sidebar-bottom {
+  border-top-width: 1px;
+}
+
+.sidebar-left {
+  border-right-width: 1px;
+}
+
+
+// sidebar widths
+
+.sidebar-xl {
+  flex: 0 0 $sidebar-xl;
+  width: $sidebar-xl;
+  border: none;
+}
+
+.sidebar-lg {
+  flex: 0 0 $sidebar-lg;
+  width: $sidebar-lg;
+}
+
+.sidebar-md {
+  flex: 0 0 $sidebar-md;
+  width: $sidebar-md;
+}
+
+.sidebar-sm {
+  flex: 0 0 $sidebar-sm;
+  width: $sidebar-sm;
+}
+
+.sidebar-xs {
+  flex: 0 0 $sidebar-xs;
+  width: $sidebar-xs;
+}
+
+.sidebar-theme-white {
+  background-color: $white;
+}
+
+.sidebar-theme-light {
+  background-color: theme-color("light");
+}
+
+.sidebar-theme-dark {
+  background-color: theme-color("dark");
+}
+
+
+// Sidebar Moving Off Canvas
+
+.sidebar {
+   border-color: $gray-500;
+
+  &.offcanvas-left {
+    z-index: 10;
+    margin-left: -$offcanvas-desktop-margin;
+
+    @media (max-width: 767px) {
+      margin-left: -$offcanvas-width;
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      margin-left: -$offcanvas-desktop-margin;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .offcanvas-left + .main-container > .page-header .page-title {
+    margin-left: 1.75rem;
+  }
+}
+
+
+// Right Sidebar Mobile
+
+.sidebar-actions {
+
+  @media (max-width: 1023px) {
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    bottom: 0;
+    border-left-width: 0;
+    border-top-width: 1px;
+    flex: 0 0 auto;
+    transform: translateY(100%);
+    box-shadow: 0 0 5px rgba(0,0,0,0.1), inset 0 1px 0 $white;
+    transition: transform $transition;
+
+    &.sidebar-actions--is-open {
+      transform: translateY(0);
+    }
+  }
+}
+
+.btn-sidebar-actions {
+  position: absolute;
+  top: -3.25rem;
+  right: .5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  &:focus {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+  }
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  & img {
+    transform: rotate(90deg);
+
+    .sidebar-actions--is-open & {
+      transform: rotate(-90deg);
+    }
+  }
+}

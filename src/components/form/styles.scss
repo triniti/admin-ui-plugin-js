@@ -554,13 +554,19 @@ input::-moz-focus-inner {
 }
 
 
-// form color themes - todo: need to change to parameter in prod
+// form bg themes - todo: need to change to parameter in prod
 
-.form-white .form-control,
-.form-white.form-control {
-  background-color: $body-bg;
+.form-control-theme-white {
+  background-color: $white;
 }
 
+.form-control-theme-light {
+  background-color: theme-color("light");
+}
+
+.form-control-theme-dark {
+  background-color: theme-color("dark");
+}
 
 /*
   @fixme: temporarily fix a bootstarp input group bug

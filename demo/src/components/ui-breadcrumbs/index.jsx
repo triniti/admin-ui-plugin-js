@@ -10,7 +10,7 @@ const UiBreadcrumb = () => (
         <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
         <BreadcrumbItem active>Data</BreadcrumbItem>
       </Breadcrumb>
-      <br/>
+      <br />
       <CardHeader>
         <Breadcrumb>
           <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>

@@ -1,5 +1,6 @@
 import Alert from './alert';
 import AlertBar from './alert-bar';
+// import App from './app';
 import Backdrop from './backdrop';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
@@ -31,7 +32,6 @@ import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
-import ContentContainer from './content-container';
 import Datalist from './datalist';
 import Divider from './divider';
 import Dropdown from './dropdown';
@@ -39,6 +39,7 @@ import DropdownItem from './dropdown-item';
 import DropdownMenu from './dropdown-menu';
 import DropdownToggle from './dropdown-toggle';
 import Fade from './fade';
+import FlexSpacer from './flex-spacer';
 import FooterNav from './footer-nav';
 import Form from './form';
 import FormFeedback from './form-feedback';
@@ -56,7 +57,7 @@ import ListGroupItem from './list-group-item';
 import ListGroupItemHeading from './list-group-item-heading';
 import ListGroupItemText from './list-group-item-text';
 import Loading from './loading';
-import MainContainer from './main-container';
+import Main from './main';
 import MainContent from './main-content';
 import MainNav from './main-nav';
 import Media from './media';
@@ -88,9 +89,10 @@ import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
+import ScreenContent from './screen-content';
 import ScrollableContainer from './scrollable-container';
-import SidenavContainer from './sidenav-container';
-import SidenavHeader from './sidenav-header';
+import Sidebar from './sidebar';
+import SidebarHeader from './sidebar-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Switch from './switch';
@@ -113,6 +115,7 @@ import UncontrolledCarousel from './uncontrolled-carousel';
 export {
   Alert,
   AlertBar,
+  // App,
   Backdrop,
   Badge,
   Breadcrumb,
@@ -144,7 +147,6 @@ export {
   Col,
   Collapse,
   Container,
-  ContentContainer,
   Datalist,
   Divider,
   Dropdown,
@@ -152,6 +154,7 @@ export {
   DropdownMenu,
   DropdownToggle,
   Fade,
+  FlexSpacer,
   FooterNav,
   Form,
   FormFeedback,
@@ -169,7 +172,8 @@ export {
   ListGroupItemHeading,
   ListGroupItemText,
   Loading,
-  MainContainer,
+  Main,
+  Main as MainContainer,
   MainContent,
   MainNav,
   Media,
@@ -201,9 +205,11 @@ export {
   Radio,
   RouterLink,
   Row,
+  ScreenContent as ContentContainer,
+  ScreenContent,
   ScrollableContainer,
-  SidenavContainer,
-  SidenavHeader,
+  Sidebar,
+  SidebarHeader,
   Spinner,
   StatusMessage,
   Switch,

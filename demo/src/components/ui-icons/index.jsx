@@ -3,7 +3,7 @@ import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Spinner, U
 
 export default () => (
   <Card>
-    <CardHeader>Icons</CardHeader>
+    <CardHeader spacing="lg" inset>Icons</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>
@@ -43,7 +43,7 @@ export default () => (
       </Row>
     </CardBody>
 
-    <CardHeader>Button Icons</CardHeader>
+    <CardHeader spacing="lg" inset>Button Icons</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>
@@ -59,7 +59,7 @@ export default () => (
       </Row>
     </CardBody>
 
-    <CardHeader>Spinner</CardHeader>
+    <CardHeader spacing="lg" inset>Spinner</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>

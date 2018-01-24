@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Container, Jumbotron, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron } from '../../../../src/components';
 
 const UiJumbotron = () => (
   <Card spacing="lg">
@@ -8,7 +8,8 @@ const UiJumbotron = () => (
       <Container fluid>
         <CardTitle display="1">Fluid Jumbotron</CardTitle>
         <p className="lead">This is a modified jumbotron that occupies the entire
-            horizontal space of its parent.</p>
+            horizontal space of its parent.
+        </p>
       </Container>
     </Jumbotron>
 
@@ -17,7 +18,8 @@ const UiJumbotron = () => (
       <CardBody>
         <CardTitle display="1">CardBody Jumbotron</CardTitle>
         <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
-            parent.</p>
+            parent.
+        </p>
       </CardBody>
     </Jumbotron>
 
@@ -25,15 +27,17 @@ const UiJumbotron = () => (
     <CardBody>
       <Jumbotron>
         <CardBody>
-        <CardTitle display="3">Hello, world!</CardTitle>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra
-            attention to featured content or information.</p>
-        <hr/>
-        <p>It uses utility classes for typgraphy and spacing to space content out within the larger
-            container.</p>
-        <p className="lead">
-          <Button color="primary">Learn More</Button>
-        </p>
+          <CardTitle display="3">Hello, world!</CardTitle>
+          <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra
+            attention to featured content or information.
+          </p>
+          <hr />
+          <p>It uses utility classes for typgraphy and spacing to space content out within the larger
+            container.
+          </p>
+          <p className="lead">
+            <Button color="primary">Learn More</Button>
+          </p>
         </CardBody>
       </Jumbotron>
     </CardBody>
@@ -42,13 +46,14 @@ const UiJumbotron = () => (
     <CardBody>
       <Jumbotron>
         <Container fluid>
-        <CardTitle display="2">Fluid Jumbotron</CardTitle>
-        <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
-            parent.</p>
+          <CardTitle display="2">Fluid Jumbotron</CardTitle>
+          <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+            parent.
+          </p>
         </Container>
       </Jumbotron>
     </CardBody>
   </Card>
-  );
+);
 
 export default UiJumbotron;

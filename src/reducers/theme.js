@@ -1,4 +1,4 @@
-import createReducer from '@triniti/app/redux/createReducer';
+import createReducer from '@triniti/app/createReducer';
 import { actionTypes } from '../constants';
 
 export const initialState = 'light';

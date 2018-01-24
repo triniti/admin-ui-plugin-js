@@ -7,13 +7,13 @@ class UiInputGroup extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
     };
   }
 
   toggle() {
     this.setState({
-      dropdownOpen: !this.state.dropdownOpen
+      dropdownOpen: !this.state.dropdownOpen,
     });
   }
 
@@ -21,38 +21,38 @@ class UiInputGroup extends React.Component {
     return (
       <Card>
         <div>
-          <CardHeader spacing="lg">Standard Form</CardHeader>
+          <CardHeader spacing="lg" inset>Standard Form</CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col sm="6">
                 <InputGroup>
                   <InputGroupAddon>@</InputGroupAddon>
-                  <Input placeholder="username"/>
+                  <Input placeholder="username" />
                 </InputGroup>
 
                 <InputGroup>
                   <InputGroupAddon>
-                    <Input addon type="checkbox" aria-label="Checkbox for following text input"/>
+                    <Input addon type="checkbox" aria-label="Checkbox for following text input" />
                   </InputGroupAddon>
-                  <Input placeholder="Check it out"/>
+                  <Input placeholder="Check it out" />
                 </InputGroup>
 
                 <InputGroup>
-                  <Input placeholder="username"/>
+                  <Input placeholder="username" />
                   <InputGroupAddon>@example.com</InputGroupAddon>
                 </InputGroup>
 
                 <InputGroup>
                   <InputGroupAddon>$</InputGroupAddon>
                   <InputGroupAddon>$</InputGroupAddon>
-                  <Input placeholder="Dolla dolla billz yo!"/>
+                  <Input placeholder="Dolla dolla billz yo!" />
                   <InputGroupAddon>$</InputGroupAddon>
                   <InputGroupAddon>$</InputGroupAddon>
                 </InputGroup>
 
                 <InputGroup size="lg">
                   <InputGroupAddon>$</InputGroupAddon>
-                  <Input placeholder="Amount" type="number" step="1"/>
+                  <Input placeholder="Amount" type="number" step="1" />
                   <InputGroupAddon>.00</InputGroupAddon>
                 </InputGroup>
 
@@ -68,7 +68,7 @@ class UiInputGroup extends React.Component {
 
                 <InputGroup>
                   <InputGroupAddon>To the Left!</InputGroupAddon>
-                  <Input placeholder="and..."/>
+                  <Input placeholder="and..." />
                   <InputGroupAddon>To the Right!</InputGroupAddon>
                 </InputGroup>
 
@@ -88,7 +88,7 @@ class UiInputGroup extends React.Component {
                         <DropdownItem header>Header</DropdownItem>
                         <DropdownItem disabled>Action</DropdownItem>
                         <DropdownItem>Another Action</DropdownItem>
-                        <DropdownItem divider/>
+                        <DropdownItem divider />
                         <DropdownItem>Another Action</DropdownItem>
                       </DropdownMenu>
                     </ButtonDropdown>
@@ -96,8 +96,8 @@ class UiInputGroup extends React.Component {
                 </InputGroup>
 
                 <InputGroup>
-                  <InputGroupButton></InputGroupButton>
-                  <Input placeholder="and..."/>
+                  <InputGroupButton />
+                  <Input placeholder="and..." />
                   <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
                 </InputGroup>
               </Col>
@@ -106,37 +106,37 @@ class UiInputGroup extends React.Component {
         </div>
 
         <CardHeader spacing="lg">White Form on BG Color</CardHeader>
-        <CardBody className={'bg-light form-white'} spacing="lg">
+        <CardBody className="bg-light form-white" spacing="lg">
           <Row>
             <Col sm="6">
               <InputGroup>
                 <InputGroupAddon>@</InputGroupAddon>
-                <Input placeholder="username"/>
+                <Input placeholder="username" />
               </InputGroup>
 
               <InputGroup>
                 <InputGroupAddon>
-                  <Input addon type="checkbox" aria-label="Checkbox for following text input"/>
+                  <Input addon type="checkbox" aria-label="Checkbox for following text input" />
                 </InputGroupAddon>
-                <Input placeholder="Check it out"/>
+                <Input placeholder="Check it out" />
               </InputGroup>
 
               <InputGroup>
-                <Input placeholder="username"/>
+                <Input placeholder="username" />
                 <InputGroupAddon>@example.com</InputGroupAddon>
               </InputGroup>
 
               <InputGroup>
                 <InputGroupAddon>$</InputGroupAddon>
                 <InputGroupAddon>$</InputGroupAddon>
-                <Input placeholder="Dolla dolla billz yo!"/>
+                <Input placeholder="Dolla dolla billz yo!" />
                 <InputGroupAddon>$</InputGroupAddon>
                 <InputGroupAddon>$</InputGroupAddon>
               </InputGroup>
 
               <InputGroup size="lg">
                 <InputGroupAddon>$</InputGroupAddon>
-                <Input placeholder="Amount" type="number" step="1"/>
+                <Input placeholder="Amount" type="number" step="1" />
                 <InputGroupAddon>.00</InputGroupAddon>
               </InputGroup>
 
@@ -152,7 +152,7 @@ class UiInputGroup extends React.Component {
 
               <InputGroup>
                 <InputGroupAddon>To the Left!</InputGroupAddon>
-                <Input placeholder="and..."/>
+                <Input placeholder="and..." />
                 <InputGroupAddon>To the Right!</InputGroupAddon>
               </InputGroup>
 
@@ -172,7 +172,7 @@ class UiInputGroup extends React.Component {
                       <DropdownItem header>Header</DropdownItem>
                       <DropdownItem disabled>Action</DropdownItem>
                       <DropdownItem>Another Action</DropdownItem>
-                      <DropdownItem divider/>
+                      <DropdownItem divider />
                       <DropdownItem>Another Action</DropdownItem>
                     </DropdownMenu>
                   </ButtonDropdown>
@@ -180,8 +180,8 @@ class UiInputGroup extends React.Component {
               </InputGroup>
 
               <InputGroup>
-                <InputGroupButton></InputGroupButton>
-                <Input placeholder="and..."/>
+                <InputGroupButton />
+                <Input placeholder="and..." />
                 <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
               </InputGroup>
             </Col>

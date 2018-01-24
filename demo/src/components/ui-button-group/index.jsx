@@ -5,13 +5,13 @@ const UiButtonGroup = () => (
   <Card>
     <CardBody spacing="lg">
       <ButtonToolbar>
-        <ButtonGroup className={'mr-3'}>
+        <ButtonGroup className="mr-3">
           <Button outline>1</Button>
           <Button outline>2</Button>
           <Button outline>3</Button>
           <Button outline>4</Button>
         </ButtonGroup>
-        <ButtonGroup className={'mr-3'}>
+        <ButtonGroup className="mr-3">
           <Button>5</Button>
           <Button>6</Button>
           <Button>7</Button>

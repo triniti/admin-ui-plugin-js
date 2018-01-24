@@ -1,6 +1,6 @@
-// SideNav Header
+// Sidebar Header
 //
-// Unique header for sidenav container with arrow to close
+// Unique header for sidebar container with arrow to close
 //
 // 300px wide side containers
 //
@@ -13,7 +13,7 @@
 // $padding-md:            1.5rem;
 // $padding-xs:              1rem;
 
-.sidenav-header {
+.sidebar-header {
   font-size: 1em;
   display: flex;
   width: 100%;
@@ -27,15 +27,16 @@
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
+  box-shadow: inset 0 -1px 0 $gray-700, 0 1px 2px rgba(0, 0, 0, .03);
 }
 
-.sidenav-header-title {
+.sidebar-header-title {
   font-size: 1em;
   margin: 0;
 }
 
 @media (max-width: 767px) {
-  .offcanvas-left .sidenav-header {
+  .offcanvas-left .sidebar-header {
     position: absolute;
     z-index: 5;
     left: 0;
@@ -43,5 +44,19 @@
     width: calc(299px + 2.125rem);
     border-right: 1px solid $gray-500;
     border-bottom: 1px solid $gray-500;
+  }
+}
+
+.sidebar-header {
+
+  .btn-sidebar-close {
+    margin-bottom: 0;
+    padding: .5rem;
+    transition: transform $transition;
+  }
+
+  .offcanvas-left & .btn-sidebar-close {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg);
   }
 }

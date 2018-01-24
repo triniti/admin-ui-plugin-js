@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, FlexSpacer, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Switch } from '../../../../src/components';
 
 import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
 
@@ -30,19 +30,9 @@ class UiButtons extends React.Component {
   render() {
     return (
       <Card>
-        <div>
-          <CardHeader spacing="lg">Page Actions
-            <PageActions>
-              <PageActionButton text="Back" icon="back" />
-              <PageActionButton text="Delete" icon="delete" />
-              <PageActionButton text="Save" icon="save" />
-              <PageActionButton text="save & close" iconUrl={EnvelopeIcon} onClick={() => alert('save & close!')} />
-            </PageActions>
-          </CardHeader>
-        </div>
 
         <div>
-          <CardHeader spacing="lg">Solid
+          <CardHeader spacing="lg" inset>Solid
             <span>
               <Button color="hover-bg">hover-bg</Button>
               <Button>default</Button>
@@ -83,7 +73,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg"><span>Solid radius="none"</span>
+          <CardHeader spacing="lg" inset><span>Solid radius="none"</span>
             <Button outline radius="none" color="link">outline link</Button>
           </CardHeader>
           <CardBody spacing="lg">
@@ -177,7 +167,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Sizes</CardHeader>
+          <CardHeader spacing="lg" inset>Sizes</CardHeader>
           <CardBody spacing="lg">
             <div>
               <Button color="primary" size="sm">Size sm</Button>
@@ -200,7 +190,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Block Level</CardHeader>
+          <CardHeader spacing="lg" inset>Block Level</CardHeader>
           <CardBody spacing="lg">
             <Button color="primary" size="lg" block>Block level button</Button>
             <Button size="lg" block>Block level button</Button>
@@ -208,7 +198,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Active State</CardHeader>
+          <CardHeader spacing="lg" inset>Active State</CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col sm="6">
@@ -220,7 +210,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Disabled State</CardHeader>
+          <CardHeader spacing="lg" inset>Disabled State</CardHeader>
           <CardBody spacing="lg">
             <Row>
               <Col>
@@ -232,7 +222,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox and Radio Buttons (Stateful Buttons)
+          <CardHeader spacing="lg" inset>Checkbox and Radio Buttons (Stateful Buttons)
             <ButtonGroup>
               <Button outline size="sm">5</Button>
               <Button outline size="sm">6</Button>
@@ -447,7 +437,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Switch Component
+          <CardHeader spacing="lg" inset>Switch Component
             <span>
               <Button size="sm" outline radius="round" onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
               <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
@@ -482,7 +472,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Radio Component
+          <CardHeader spacing="lg" inset>Radio Component
             <Form>
               <FormGroup inline>
                 <Label check className="mr-3" strong>
@@ -537,7 +527,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Checkbox Component
+          <CardHeader spacing="lg" inset>Checkbox Component
             <Form>
               <FormGroup check inline>
                 <Label className="mr-3">
@@ -580,7 +570,7 @@ class UiButtons extends React.Component {
         </div>
 
         <div>
-          <CardHeader spacing="lg">Icons radius="circle"
+          <CardHeader spacing="lg" inset>Icons radius="circle"
             <Button outline color="link" radius="circle">
               <Icon imgSrc="close" />
             </Button>
@@ -612,6 +602,18 @@ class UiButtons extends React.Component {
           </CardBody>
         </div>
 
+        <div>
+          <CardHeader spacing="lg">Page Actions
+            <PageActions>
+              <PageActionButton text="Back" icon="back" />
+              <PageActionButton text="Delete" icon="delete" />
+              <PageActionButton text="Save" icon="save" />
+              <PageActionButton text="save & close" iconUrl={EnvelopeIcon} onClick={() => alert('save & close!')} />
+            </PageActions>
+          </CardHeader>
+        </div>
+
+        <FlexSpacer height="5rem" />
       </Card>
     );
   }

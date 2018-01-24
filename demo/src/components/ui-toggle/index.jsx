@@ -25,8 +25,8 @@ class UiToggle extends Component {
   render() {
     return (
       <Card>
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header</Button>
+        <CardHeader inset>
+          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - inset</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
           <CardBody spacing="lg">
@@ -47,11 +47,92 @@ class UiToggle extends Component {
           </CardBody>
         </Collapse>
 
+        <CardHeader inset>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example - inset</Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseOuter2}>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
+        <br /><br /><br />
+
         <CardHeader>
           <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
           <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseOuter2}>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseOuter2}>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
+        <br /><br /><br />
+
+        <CardHeader spacing="lg" inset>
+          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - spacing="lg" inset</Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseOuter}>
+          <CardBody spacing="lg">
+            <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Collapse isOpen={this.state.collapseInner}>
@@ -63,6 +144,44 @@ class UiToggle extends Component {
                     </CardBody>
                   </Card>
                 </Collapse>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
+        <CardHeader spacing="lg" inset>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example - spacing="lg" inset</Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseOuter2}>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
+              </Col>
+            </Row>
+          </CardBody>
+        </Collapse>
+
+        <CardHeader spacing="lg" inset>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example - spacing="lg" inset</Button>
+        </CardHeader>
+        <Collapse spacing="lg" isOpen={this.state.collapseOuter2}>
+          <CardBody spacing="lg">
+            <Row>
+              <Col xs="12" md="9" lg="6">
+                <Card>
+                  <CardBody>
+                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                    <Button outline size="lg" radius="none"> Button</Button>
+                  </CardBody>
+                </Card>
               </Col>
             </Row>
           </CardBody>

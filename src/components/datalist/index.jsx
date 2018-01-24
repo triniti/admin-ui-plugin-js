@@ -7,7 +7,7 @@ const Datalist = ({
   input,
   options,
   meta: { touched, error },
-  ...custom,
+  ...custom
 }) => (
   <div>
     <InputGroup className="mt-1 mb-2">

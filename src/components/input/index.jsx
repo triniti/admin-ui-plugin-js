@@ -19,6 +19,7 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   radius: PropTypes.string,
+  theme: PropTypes.string,
 };
 
 const defaultProps = {
@@ -38,6 +39,7 @@ class Input extends React.Component {
       tag,
       addon,
       radius,
+      theme,
       static: staticInput,
       plaintext,
       innerRef,
@@ -80,7 +82,8 @@ class Input extends React.Component {
       valid && 'is-valid',
       size ? `form-control-${size}` : false,
       radius ? `form-control-radius-${radius}` : false,
-      formControlClass
+      theme ? `form-control-theme-${theme}` : false,
+      formControlClass,
     ), cssModule);
 
     if (Tag === 'input') {

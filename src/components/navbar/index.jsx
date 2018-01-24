@@ -53,7 +53,7 @@ const Navbar = (props) => {
       [`navbar-${color}`]: color,
       [`fixed-${fixed}`]: fixed,
       [`sticky-${sticky}`]: sticky,
-    }
+    },
   ), cssModule);
 
   return (

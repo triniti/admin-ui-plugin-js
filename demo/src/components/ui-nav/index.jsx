@@ -28,7 +28,7 @@ class UiNav extends React.Component {
   render() {
     return (
       <Card>
-        <CardHeader spacing="lg">List Based</CardHeader>
+        <CardHeader spacing="lg" inset>List Based</CardHeader>
         <CardBody spacing="lg">
           <Nav>
             <NavItem>
@@ -46,15 +46,16 @@ class UiNav extends React.Component {
           </Nav>
         </CardBody>
 
-        <CardHeader spacing="lg">Link Based</CardHeader>
+        <CardHeader spacing="lg" inset>Link Based</CardHeader>
         <CardBody spacing="lg">
           <Nav>
-            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another
-            Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
+            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink>
+            <NavLink href="#">Another Link</NavLink>
+            <NavLink disabled href="#">Disabled Link</NavLink>
           </Nav>
         </CardBody>
 
-        <CardHeader spacing="lg">List Based - Vertical</CardHeader>
+        <CardHeader spacing="lg" inset>List Based - Vertical</CardHeader>
         <CardBody spacing="lg">
           <Nav vertical>
             <NavItem>
@@ -72,15 +73,16 @@ class UiNav extends React.Component {
           </Nav>
         </CardBody>
 
-        <CardHeader spacing="lg">Link based - Vertical</CardHeader>
+        <CardHeader spacing="lg" inset>Link based - Vertical</CardHeader>
         <CardBody spacing="lg">
           <Nav vertical>
-            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink> <NavLink href="#">Another
-            Link</NavLink> <NavLink disabled href="#">Disabled Link</NavLink>
+            <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink>
+            <NavLink href="#">Another Link</NavLink>
+            <NavLink disabled href="#">Disabled Link</NavLink>
           </Nav>
         </CardBody>
 
-        <CardHeader spacing="lg">Tabs</CardHeader>
+        <CardHeader spacing="lg" inset>Tabs</CardHeader>
         <CardBody spacing="lg">
           <Nav tabs>
             <NavItem>
@@ -110,7 +112,7 @@ class UiNav extends React.Component {
           </Nav>
         </CardBody>
 
-        <CardHeader spacing="lg">Underline</CardHeader>
+        <CardHeader spacing="lg" inset>Underline</CardHeader>
         <CardBody spacing="lg">
           <Nav size="sm" underline>
             <NavItem>
@@ -141,7 +143,7 @@ class UiNav extends React.Component {
         </CardBody>
 
         <CardHeader className="sticky-off" spacing="lg">Pills</CardHeader>
-        <CardBody className={'pb-5'} spacing="lg">
+        <CardBody className="pb-5" spacing="lg">
           <Nav pills>
             <NavItem>
               <NavLink href="#" active>Active</NavLink>
@@ -171,7 +173,7 @@ class UiNav extends React.Component {
         </CardBody>
 
         <CardHeader className="sticky-off" spacing="lg">Pills Small</CardHeader>
-        <CardBody className={'pb-5 mb-5'} spacing="lg">
+        <CardBody className="pb-5 mb-5" spacing="lg">
           <Row>
             <Col>
               <Nav pills className="nav-pills-sm">

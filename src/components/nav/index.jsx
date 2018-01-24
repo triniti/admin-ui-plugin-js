@@ -15,6 +15,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   size: PropTypes.string,
+  theme: PropTypes.string,
   sticky: PropTypes.bool,
   cssModule: PropTypes.object,
 };
@@ -35,6 +36,7 @@ const Nav = (props) => {
     justified,
     navbar,
     size,
+    theme,
     sticky,
     tag: Tag,
     ...attributes
@@ -43,6 +45,7 @@ const Nav = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     size ? `nav-${size}` : false,
+    theme ? `nav-theme-${theme}` : false,
     sticky ? 'nav-sticky' : false,
     navbar ? 'navbar-nav' : 'nav',
     {

@@ -5,34 +5,28 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  flex: 1 1 100%;
+  margin: 0 0 1rem 0;
   min-width: 0;
   word-wrap: break-word;
   background-color: $card-bg;
   background-clip: border-box;
-  border: $card-border-width solid $card-border-color;
   @include border-radius($card-border-radius);
 
+  .tab-pane > & {
+    margin-top: 0;
+  }
+
   @media (max-width: 767px) {
-    margin: .5rem 0;
+    margin: 0 0 .5rem 0;
   }
 }
 
-.card-borderless {
-  border: none;
+.card-border {
+  border: $card-border-width solid $card-border-color;
 }
 
-.tab-pane > .card-borderless {
-  margin-top: 0;
-}
 
-// Card inside cards-container
-
-.cards-container {
-  .card {
-    margin: .5rem 0;
-  }
-}
 
 .card-body {
   // Enable `flex-grow: 1` for decks and groups so that card blocks take up
@@ -90,6 +84,10 @@
 }
 
 .card-body > .row:first-of-type {
+  padding-top: 0;
+}
+
+.card-subheader + .row {
   padding-top: 0;
 }
 
@@ -169,7 +167,7 @@ h4.card-title {
 
 .card-header {
   position: sticky;
-  top: -1px;
+  top: 0;
   z-index: $zindex-sticky;
   display: flex;
   flex: 0 0 auto;
@@ -179,11 +177,14 @@ h4.card-title {
   font-weight: 500;
   align-items: center;
   justify-content: space-between;
-  min-height: $header-height + 1;
+  min-height: $header-height + 2;
 
   background-color: $card-cap-bg;
-  box-shadow: 0 (-$card-border-width) 0 0 $card-border-color;
   border-bottom: $card-border-width solid $card-border-color;
+
+  .main-content > .card:first-child & {
+    margin-top: .75rem;
+  }
 }
 
 // CardHeader increased padding when card spacing="lg"
@@ -199,6 +200,64 @@ h4.card-title {
   }
   @media (min-width: 1600px) {
     padding: 0 $padding-xl;
+  }
+}
+
+// CardHeader increased padding when card spacing="lg"
+
+.card-header-inset {
+  padding: 0;
+  margin: 0 $card-spacer-x;
+
+  &.card-header-spacing-lg {
+    padding: 0;
+    margin: 0 $padding-xs;
+
+    @media (min-width: 768px) {
+      margin: 0 $padding-md;
+    }
+    @media (min-width: 1025px) {
+      margin: 0 $padding-lg;
+    }
+    @media (min-width: 1600px) {
+      margin: 0 $padding-xl;
+    }
+  }
+
+  &::before {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    margin-left: -3rem;
+    margin-right: -3rem;
+    content: '';
+    background-color: $white;
+  }
+}
+
+// Subheader - most often used in sidebars
+
+.card-subheader {
+  position: relative;
+  min-height: auto;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  border-bottom: $card-border-width solid $card-border-color;
+  white-space: nowrap;
+  font-size: .9em;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  font-weight: 400;
+  color: $gray-rgba-800;
+  background-color: transparent;
+
+  &::before {
+    display: none;
   }
 }
 
@@ -444,5 +503,9 @@ h4.card-title {
 
 .card-outline-dark {
   border-color: theme-color("dark");
+}
+
+.card-transparent {
+  background-color: transparent;
 }
 

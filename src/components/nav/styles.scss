@@ -12,8 +12,34 @@
   list-style: none;
 }
 
+// sticky nav
+
+.nav-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: $zindex-sticky;
+  background-color: $body-bg;
+  min-height: $header-height + 1;
+
+  .main-content & {
+    background-color: $gray-200;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 100%;
+      content: '';
+      box-shadow: 0 -1rem $gray-200;
+    }
+  }
+}
+
 .nav-link {
   display: block;
+  line-height: 1;
   padding: $nav-link-padding-y $nav-link-padding-x;
 
   @include hover-focus {
@@ -21,8 +47,10 @@
   }
 
   // Disabled state lightens text
-  &.disabled {
+  &.disabled,
+  &.disabled:hover {
     color: $nav-link-disabled-color;
+    cursor: no-drop;
   }
 }
 
@@ -125,6 +153,8 @@
   flex: 0 0 auto;
   box-shadow: inset 0 -1px 0 0 $nav-tabs-border-color;
   flex-wrap: nowrap;
+  padding-left: .5rem;
+  width: 100%;
 
   @media(max-width: 767px) {
     overflow: hidden;
@@ -133,10 +163,6 @@
     -webkit-backface-visibility: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -ms-overflow-style: none;
-  }
-
-  @media(min-width: 768px) {
-    padding-left: .5rem;
   }
 
   @media(min-width: 1025px) {
@@ -174,7 +200,7 @@
     font-size: .8rem;
     font-weight: 700;
     height: 100%;
-    padding: .9375rem 1.25rem;
+    padding: 1.125rem 1.25rem;
     text-transform: uppercase;
     border-radius: 0;
     box-shadow: none;
@@ -190,7 +216,6 @@
   & .nav-item.show .nav-link {
     background-color: transparent;
   }
-
 }
 
 // nav
@@ -239,17 +264,6 @@
   padding: .6em 1rem;
 }
 
-// sticky nav
-
-.nav-sticky {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  z-index: $zindex-sticky;
-  background-color: $body-bg;
-  min-height: $header-height + 1;
-}
-
 // size specific padding
 
 .nav-sm > .nav-item > .nav-link {
@@ -263,16 +277,24 @@
 
 // location specific styles
 
-.sticky-top > .nav-underline {
-  background-color: $gray-100;
-}
-
 .aside-content .nav-underline .nav-item {
   flex: 1 1 auto;
 }
 
-.main-container .nav-underline.sticky-top {
+.nav-underline.sticky-top {
   min-height: $header-height;
-  background-color: $gray-100;
 }
 
+// themes
+
+.nav-theme-light {
+  background-color: theme-color("light");
+}
+
+.nav-theme-dark {
+  background-color: theme-color("dark");
+}
+
+.nav-theme-white {
+  background-color: $white;
+}

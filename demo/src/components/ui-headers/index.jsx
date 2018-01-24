@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Card, CardBody, CardHeader, CardTitle, Divider } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Divider } from '../../../../src/components';
 
 const UiHeaders = () => (
   <Card>
@@ -13,7 +13,14 @@ const UiHeaders = () => (
       <Divider />
       <h1>H1 Heading .h1</h1>
     </CardBody>
-    <CardHeader spacing="lg">Card Header</CardHeader>
+
+    <CardHeader>Card Header</CardHeader>
+
+    <CardHeader inset>Card Header - inset</CardHeader>
+
+    <CardHeader spacing="lg">Card Header - spacing="lg"</CardHeader>
+
+    <CardHeader spacing="lg" inset>Card Header - spacing="lg" inset</CardHeader>
 
     <CardBody spacing="lg">
       <CardTitle tag="h1">Card Title h1</CardTitle>
@@ -42,8 +49,8 @@ const UiHeaders = () => (
 
 
     <CardHeader />
-    <br/>
-    <CardHeader spacing="lg">Dividers directly inside Card but outside CardBody</CardHeader>
+    <br />
+    <CardHeader spacing="lg" inset>Dividers directly inside Card but outside CardBody</CardHeader>
     <hr />
 
     <CardBody spacing="lg">
@@ -62,10 +69,10 @@ const UiHeaders = () => (
     <Divider size="lg" />
 
     <CardBody spacing="lg">
-    <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>
+      <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>
     </CardBody>
 
-    <CardBody spacing="lg"></CardBody>
+    <CardBody spacing="lg" />
 
   </Card>
 );

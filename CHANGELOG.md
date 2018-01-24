@@ -1,5 +1,20 @@
 # CHANGELOG
 
+
+## v0.3.0
+* Integrate `app-content` into `app` component and delete `app-content` component.
+* Rename component `content-container` to `screen-content`, exports as old name and new name until next minor rev.
+* Rename component `main-container` to `main`, exports as old name and new name until next minor rev.
+* Rename `nav-bar` container component to just `navbar`.
+* Create `sidebar` widget and tons of other tiny fixes and renaming.
+* Add inset to `CardHeader`.
+* Add themes to form-control
+* Remove top margin on cards.
+* Update styles of table headers.
+* Create a FlexSpacer component that may or may not be used.
+
+
+
 ## v0.2.0
 * New components: AlertBar, Datalist, PageActionButton
 * Removed specific Button components (SaveButton, etc)

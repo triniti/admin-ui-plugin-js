@@ -9,6 +9,7 @@
 .dropdown {
   position: relative;
   display: inline-block; // *
+  cursor: pointer;
 }
 
 .dropdown-toggle {
@@ -142,11 +143,16 @@
 // Dropdown section headers
 .dropdown-header {
   display: block;
-  padding: $dropdown-padding-y $dropdown-item-padding-x;
-  margin-bottom: 0; // for use with heading elements
-  font-size: $font-size-sm;
-  color: $dropdown-header-color;
+  padding: .75rem $dropdown-item-padding-x;
+  margin-top: -.5rem;
+  margin-bottom: .5rem;
+  font-size: .9em;
+  color: $gray-rgba-800;
   white-space: nowrap; // as with > li > a
+  border-bottom: 1px solid $gray-500;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  font-weight: 400;
 }
 
 // Dropdown arrow

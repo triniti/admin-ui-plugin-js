@@ -10,8 +10,6 @@ class UiDropdown extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.state = {
       dropdownOpen: false,
-      trinaryDefault: 0,
-      trinaryCustom: 1,
     };
   }
 
@@ -30,8 +28,8 @@ class UiDropdown extends React.Component {
 
   render() {
     return (
-      <Card>
-        <CardHeader>Dropdown</CardHeader>
+      <Card className="mb-3">
+        <CardHeader spacing="lg" inset>Dropdown</CardHeader>
         <CardBody spacing="lg">
           <Row>
             <Col xs="6">
@@ -39,7 +37,7 @@ class UiDropdown extends React.Component {
                 <DropdownToggle caret color="default" outline>
                   Dropdown
                 </DropdownToggle>
-                <DropdownMenu arrow="right" right>
+                <DropdownMenu arrow="left" left>
                   <DropdownItem header>Header</DropdownItem>
                   <DropdownItem disabled>Action</DropdownItem>
                   <DropdownItem>Another Action</DropdownItem>

@@ -111,7 +111,7 @@ $theme-colors: (
   info: $cyan,
   warning: $orange,
   danger: $red,
-  light: $gray-400,
+  light: $gray-200,
   dark: $gray-800
 ) !default;
 
@@ -225,9 +225,9 @@ $line-height-sm:         1.5 !default;
 $border-width: 1px !default;
 $border-color: $gray-500 !default;
 
-$border-radius:          .125rem  !default;
+$border-radius:          .2rem  !default;
 $border-radius-lg:       .25rem !default;
-$border-radius-sm:       .125rem !default;
+$border-radius-sm:       .2rem !default;
 
 $component-active-color: inherit !default;
 $component-active-bg:    $gray-200 !default;
@@ -861,7 +861,7 @@ $pre-scrollable-max-height:   340px !default;
 
 // Navbar Theme Colors
 
-$navbar-theme-light:    theme-color("light") !default;
+$navbar-theme-light:    $gray-200 !default;
 $navbar-theme-dark:     darken(theme-color("dark"), 10%) !default;
 
 $navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%) !default;

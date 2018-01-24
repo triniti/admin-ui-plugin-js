@@ -9,7 +9,8 @@
     height: 2.5rem;
     flex: 1 0 auto;
     justify-content: space-between;
-    background-color: $white;
+    background-color: $gray-200;
+    // box-shadow: inset 0 -1px 1px $gray-rgba-200;
   }
   .navbar-light .navbar-main-mobile {
     background-color: $navbar-theme-light;

@@ -3,7 +3,7 @@ import { Card, CardBody, CardHeader, Row, Col, Progress } from '../../../../src/
 
 const UiProgress = () => (
   <Card>
-    <CardHeader spacing="lg">Plain</CardHeader>
+    <CardHeader spacing="lg" inset>Plain</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>
@@ -18,7 +18,7 @@ const UiProgress = () => (
       </Row>
     </CardBody>
 
-    <CardHeader spacing="lg">With Labels</CardHeader>
+    <CardHeader spacing="lg" inset>With Labels</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>
@@ -32,7 +32,7 @@ const UiProgress = () => (
       </Row>
     </CardBody>
 
-    <CardHeader spacing="lg">Stripes and Animations</CardHeader>
+    <CardHeader spacing="lg" inset>Stripes and Animations</CardHeader>
     <CardBody spacing="lg">
       <Row>
         <Col>
