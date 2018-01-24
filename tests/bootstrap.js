@@ -1,4 +1,4 @@
-require('ignore-styles').default(['.sass', '.scss']);
+require('ignore-styles');
 
 require('babel-register')({
   ignore: /node_modules\/(?!@gdbots|@triniti|lodash-es)/,
