@@ -41,7 +41,7 @@ const Sidebar = (props) => {
     offcanvas ? `sidebar-offcanvas-${offcanvas}` : false,
     left ? 'sidebar-left' : 'sidebar-right',
     theme ? `sidebar-theme-${theme}` : false,
-    actions ? `sidebar-actions` : false,
+    actions ? 'sidebar-actions' : false,
   ), cssModule);
 
   return (
