@@ -13,7 +13,10 @@
   background-color: $white;
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 auto;
+  flex: 1 1 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 @media (max-width: 767px) {
@@ -23,6 +26,11 @@
   .main-content:after {
     height: 4rem;
   }
+}
+
+.main-content-split {
+  overflow: visible;
+
 }
 
 

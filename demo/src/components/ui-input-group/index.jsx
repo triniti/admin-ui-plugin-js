@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row } from '../../../../src/components';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, MainContent, Row } from '../../../../src/components';
 
 class UiInputGroup extends React.Component {
   constructor(props) {
@@ -19,6 +19,7 @@ class UiInputGroup extends React.Component {
 
   render() {
     return (
+    <MainContent>
       <Card>
         <div>
           <CardHeader spacing="lg" inset>Standard Form</CardHeader>
@@ -188,6 +189,7 @@ class UiInputGroup extends React.Component {
           </Row>
         </CardBody>
       </Card>
+    </MainContent>
     );
   }
 }

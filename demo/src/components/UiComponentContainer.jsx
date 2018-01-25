@@ -23,10 +23,8 @@ const UiComponentContainer = ({ match }) => {
           <PageActionButton text="save & close" iconUrl={EnvelopeIcon} onClick={() => alert('save & close!')} />
         </PageActions>
       </PageHeader>
-      <MainContent>
-        {/* The UI component to be displayed, @see component-config */}
+      {/* The UI component to be displayed, @see component-config */}
         {elem}
-      </MainContent>
     </MainContainer>
   );
 };

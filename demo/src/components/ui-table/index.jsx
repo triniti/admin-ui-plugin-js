@@ -1,10 +1,10 @@
 import React from 'react';
-import { CardBody, CardHeader, Table } from '../../../../src/components';
+import { Card, CardBody, CardHeader, MainContent, Table } from '../../../../src/components';
 
 const UiTable = () => (
-  <div>
-    <CardBody>
-      <div>
+  <MainContent>
+    <Card>
+      <CardBody>
         <Table size="sm" stickyTop fixed>
           <thead>
             <tr>
@@ -73,9 +73,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
-      <br />
-      <div>
+      </CardBody>
+    </Card>
+
+    <Card>
+      <CardBody>
         <Table hover>
           <thead>
             <tr>
@@ -142,14 +144,16 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
-    </CardBody>
+      </CardBody>
+    </Card>
 
-    <CardBody>
-      <div className="pb-4">
+
+
+    <Card>
+      <CardBody>
         <CardHeader className="pl-0">Striped Table + Sticky</CardHeader>
 
-        <div>
+
           <Table striped className="sticky-top fixed">
             <thead>
               <tr>
@@ -182,12 +186,11 @@ const UiTable = () => (
               </tr>
             </tbody>
           </Table>
-        </div>
-      </div>
-    </CardBody>
+      </CardBody>
+    </Card>
 
-    <CardBody>
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Inverse Table</CardHeader>
         <Table inverse>
           <thead>
@@ -219,9 +222,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
+      </CardBody>
+    </Card>
 
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Striped Table</CardHeader>
         <Table striped>
           <thead>
@@ -253,11 +258,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
-    </CardBody>
+      </CardBody>
+    </Card>
 
-    <CardBody>
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Bordered Table</CardHeader>
         <Table bordered>
           <thead>
@@ -289,9 +294,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
+      </CardBody>
+    </Card>
 
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Borderless Table</CardHeader>
         <Table hover borderless>
           <thead>
@@ -323,11 +330,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
-    </CardBody>
+      </CardBody>
+    </Card>
 
-    <CardBody>
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Hoverable Rows Table</CardHeader>
         <Table hover>
           <thead>
@@ -359,9 +366,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
+      </CardBody>
+    </Card>
 
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Small</CardHeader>
         <Table size="sm">
           <thead>
@@ -393,9 +402,11 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
+      </CardBody>
+    </Card>
 
-      <div>
+    <Card>
+      <CardBody>
         <CardHeader>Responsive Table</CardHeader>
         <Table responsive>
           <thead>
@@ -439,9 +450,9 @@ const UiTable = () => (
             </tr>
           </tbody>
         </Table>
-      </div>
-    </CardBody>
-  </div>
+      </CardBody>
+    </Card>
+  </MainContent>
 );
 
 export default UiTable;

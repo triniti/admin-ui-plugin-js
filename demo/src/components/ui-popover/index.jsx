@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody } from '../../../../src/components';
+import { Card, CardBody, MainContent } from '../../../../src/components';
 import PopoverItem from './PopoverItem';
 
 class UiPopover extends React.Component {
@@ -31,23 +31,25 @@ class UiPopover extends React.Component {
 
   render() {
     return (
-      <Card>
-        <CardBody className="text-center" spacing="lg">
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          { this.state.popovers.map((popover, i) => <PopoverItem key={i} item={popover} id={i} />)}
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </CardBody>
-      </Card>
+      <MainContent>
+        <Card>
+          <CardBody className="text-center" spacing="lg">
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            { this.state.popovers.map((popover, i) => <PopoverItem key={i} item={popover} id={i} />)}
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+          </CardBody>
+        </Card>
+      </MainContent>
     );
   }
 }

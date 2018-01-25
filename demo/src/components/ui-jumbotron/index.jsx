@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron, MainContent } from '../../../../src/components';
 
 const UiJumbotron = () => (
+  <MainContent>
   <Card spacing="lg">
     <CardHeader>Jumbotron Theme Dark</CardHeader>
     <Jumbotron theme="dark">
@@ -54,6 +55,7 @@ const UiJumbotron = () => (
       </Jumbotron>
     </CardBody>
   </Card>
+  </MainContent>
 );
 
 export default UiJumbotron;

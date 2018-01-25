@@ -1,7 +1,8 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Row, Col, Progress } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Row, Col, MainContent, Progress } from '../../../../src/components';
 
 const UiProgress = () => (
+  <MainContent>
   <Card>
     <CardHeader spacing="lg" inset>Plain</CardHeader>
     <CardBody spacing="lg">
@@ -45,6 +46,7 @@ const UiProgress = () => (
       </Row>
     </CardBody>
   </Card>
+  </MainContent>
 );
 
 export default UiProgress;

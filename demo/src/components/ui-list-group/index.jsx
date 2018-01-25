@@ -1,7 +1,8 @@
 import React from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row } from '../../../../src/components';
+import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, MainContent, Row } from '../../../../src/components';
 
 const UiListGroup = () => (
+  <MainContent>
   <Card>
     <CardHeader spacing="lg" inset>List Group Items</CardHeader>
     <CardBody spacing="lg">
@@ -162,6 +163,7 @@ const UiListGroup = () => (
       </Row>
     </CardBody>
   </Card>
+  </MainContent>
 );
 
 export default UiListGroup;

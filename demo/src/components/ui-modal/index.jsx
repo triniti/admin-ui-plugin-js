@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, Modal, ModalHeader, ModalBody, ModalFooter } from '../../../../src/components';
+import { Button, Card, CardBody, MainContent, Modal, ModalHeader, ModalBody, ModalFooter } from '../../../../src/components';
 
 class UiModal extends React.Component {
   constructor(props) {
@@ -49,6 +49,7 @@ class UiModal extends React.Component {
 
   render() {
     return (
+    <MainContent>
       <Card>
         <CardBody spacing="lg">
           <Button color="secondary" size="lg" onClick={this.toggle} radius="round">Click Me</Button>
@@ -97,6 +98,7 @@ class UiModal extends React.Component {
           </Modal>
         </CardBody>
       </Card>
+    </MainContent>
     );
   }
 }

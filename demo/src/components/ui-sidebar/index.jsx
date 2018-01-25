@@ -1,38 +1,8 @@
 import React from 'react';
 import classnames from 'classnames';
-import {
-  Button,
-  ButtonDropdown,
-  Card,
-  CardBody,
-  CardHeader,
-  CardText,
-  CardTitle,
-  Checkbox,
-  Col,
-  Container,
-  DropdownItem,
-  DropdownMenu,
-  DropdownToggle,
-  FlexSpacer,
-  Form,
-  FormGroup,
-  FormText,
-  Icon,
-  Input,
-  InputGroup,
-  InputGroupButton,
-  Label,
-  Nav,
-  NavItem,
-  NavLink,
-  Row,
-  ScreenContent,
-  ScrollableContainer,
-  Sidebar,
-  TabContent,
-  TabPane,
-} from '../../../../src/components';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardText, CardTitle, Checkbox, Col, Container, DropdownItem, DropdownMenu, DropdownToggle,
+  FlexSpacer, Form, FormGroup, FormText, Icon, Input, InputGroup, InputGroupButton, Label, MainContent, Nav, NavItem, NavLink, Row, ScreenContent,
+  ScrollableContainer, Sidebar, TabContent, TabPane } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -78,8 +48,8 @@ class UiForm extends React.Component {
 
 
   render() {
-    return [
-      <Card className="m-0">
+    return (
+    <MainContent split>
 
         <Nav underline className="pt-2" theme="light">
           <NavItem>
@@ -257,8 +227,8 @@ class UiForm extends React.Component {
             </ScrollableContainer>
           </Sidebar>
         </ScreenContent>
-      </Card>,
-    ];
+    </MainContent>
+    );
   }
 }
 
