@@ -207,35 +207,38 @@ h4.card-title {
 
 .card-header-inset {
   padding: 0;
-  margin: 0 $card-spacer-x;
+  border-left: $card-spacer-x solid $white;
+  border-right: $card-spacer-x solid $white;
+  border-bottom: none;
 
   &.card-header-spacing-lg {
     padding: 0;
-    margin: 0 $padding-xs;
+    border-left: $padding-xs solid $white;
+    border-right: $padding-xs solid $white;
 
     @media (min-width: 768px) {
-      margin: 0 $padding-md;
+      border-left: $padding-md solid $white;
+      border-right: $padding-md solid $white;
     }
     @media (min-width: 1025px) {
-      margin: 0 $padding-lg;
+      border-left: $padding-lg solid $white;
+      border-right: $padding-lg solid $white;
     }
     @media (min-width: 1600px) {
-      margin: 0 $padding-xl;
+      border-left: $padding-xl solid $white;
+      border-right: $padding-xl solid $white;
     }
   }
 
   &::before {
     position: absolute;
-    z-index: -1;
-    top: 0;
+    z-index: 1;
     left: 0;
     bottom: 0;
     right: 0;
-    height: 100%;
-    margin-left: -3rem;
-    margin-right: -3rem;
+    height: 1px;
     content: '';
-    background-color: $white;
+    background-color: $gray-500;
   }
 }
 
