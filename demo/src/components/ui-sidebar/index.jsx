@@ -1,7 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import { Button, ButtonDropdown, Card, CardBody, CardHeader, CardText, CardTitle, Checkbox, Col, Container, DropdownItem, DropdownMenu, DropdownToggle,
-  FlexSpacer, Form, FormGroup, FormText, Icon, Input, InputGroup, InputGroupButton, Label, MainContent, Nav, NavItem, NavLink, Row, SplitContent,
+  FlexSpacer, Form, FormGroup, FormText, Icon, Input, InputGroup, InputGroupButton, Label, MainContent, TabNav, NavLink, Row, SplitContent,
   PrimaryContent, Sidebar, SidebarBody, TabContent, TabPane } from '../../../../src/components';
 
 class UiForm extends React.Component {
@@ -50,37 +50,27 @@ class UiForm extends React.Component {
   render() {
     return (
     <MainContent split>
-      <Nav underline className="pt-2" theme="light">
-        <NavItem>
-          <NavLink
-            href="#"
-            className={classnames({ active: this.state.activeTab1 === '1' })}
-            onClick={() => {
-            this.toggle1('1');
-          }}
-          >Tab1
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            href="#"
-            className={classnames({ active: this.state.activeTab1 === '2' })}
-            onClick={() => {
-            this.toggle1('2');
-          }}
-          >Tab2
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">Scroll</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink href="#">Horiz Mobile</NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink disabled href="#">Disabled Link</NavLink>
-        </NavItem>
-      </Nav>
+      <TabNav>
+        <NavLink
+          href="#"
+          className={classnames({ active: this.state.activeTab1 === '1' })}
+          onClick={() => {
+          this.toggle1('1');
+        }}
+        >Tab1
+        </NavLink>
+        <NavLink
+          href="#"
+          className={classnames({ active: this.state.activeTab1 === '2' })}
+          onClick={() => {
+          this.toggle1('2');
+        }}
+        >Tab2
+        </NavLink>
+        <NavLink href="#">Scroll</NavLink>
+        <NavLink href="#">Horiz Mobile</NavLink>
+        <NavLink disabled href="#">Disabled Link</NavLink>
+      </TabNav>
 
       <SplitContent>
         <PrimaryContent>

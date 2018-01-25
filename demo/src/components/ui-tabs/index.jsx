@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, MainContent, Nav, NavItem, NavLink, Row, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, MainContent, Nav, NavItem, NavLink, Row, TabContent, TabNav, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
 
 class UiTabs extends React.Component {
@@ -34,14 +34,10 @@ class UiTabs extends React.Component {
     return (
       <MainContent>
         <Card>
-          <Nav underline sticky className="pt-2" color="light">
-            <NavItem>
-              <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
-            </NavItem>
-          </Nav>
+          <TabNav sticky>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+          </TabNav>
 
           <TabContent activeTab={this.state.activeTab1}>
             <TabPane tabId="1">
