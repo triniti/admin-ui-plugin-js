@@ -4,6 +4,7 @@ export default ({
   isDismissible = false,
   delay = false,
   link = {
+    dismissOnClick: false,
     openInNewTab: false,
     text: '',
     href: '',
