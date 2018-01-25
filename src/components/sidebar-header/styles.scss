@@ -52,6 +52,8 @@
   .btn-sidebar-close {
     position: absolute;
     right: 0;
+    top: 50%;
+    margin-top: -18px;
     margin-bottom: 0;
     padding: .5rem;
     transition: transform $transition;

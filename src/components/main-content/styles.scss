@@ -6,6 +6,7 @@
   position: relative;
   display: flex;
   flex: 1 1 100%;
+  min-height: 0;
 
   &:not(.main-content-split) {
     flex-wrap: wrap;
