@@ -19,6 +19,22 @@ $sidebar-xs:         260px !default;
   background-color: theme-color("light");
 }
 
+.sidebar-body {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
+
+  .offcanvas-left & {
+    margin-right: 50px;
+  }
+}
+
 // border based on position
 
 .sidebar-top {
@@ -115,7 +131,8 @@ $sidebar-xs:         260px !default;
     bottom: 0;
     border-left-width: 0;
     border-top-width: 1px;
-    flex: 0 0 auto;
+    min-height: 50vh;
+    flex: 1 0 auto;
     transform: translateY(100%);
     box-shadow: 0 0 5px rgba(0,0,0,0.1), inset 0 1px 0 $white;
     transition: transform $transition;

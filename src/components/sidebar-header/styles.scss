@@ -50,6 +50,8 @@
 .sidebar-header {
 
   .btn-sidebar-close {
+    position: absolute;
+    right: 0;
     margin-bottom: 0;
     padding: .5rem;
     transition: transform $transition;

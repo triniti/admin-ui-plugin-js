@@ -1,0 +1,14 @@
+// Primary Content
+//
+// primary content inside a split content container
+
+.primary-content {
+  position: relative;
+  flex: 1 1 auto;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
+}

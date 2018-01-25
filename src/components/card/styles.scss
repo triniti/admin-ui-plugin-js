@@ -5,11 +5,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 1 1 100%;
   margin: 0 0 1rem 0;
   min-width: 0;
+  width: 100%;
   word-wrap: break-word;
-  background-color: $card-bg;
   background-clip: border-box;
   @include border-radius($card-border-radius);
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import startCase from 'lodash/startCase';
-import { Button, ListGroup, ListGroupItem, Sidebar, ScrollableContainer, SidebarHeader, Tooltip } from '../../../src/components';
+import { Button, Card, FlexSpacer, ListGroup, ListGroupItem, Sidebar, SidebarBody, ScrollableContainer, SidebarHeader, Tooltip } from '../../../src/components';
 
 import iconArrowLeft from '../assets/img/svg/icons/angle-left.svg';
 import UiComponents from '../config.module';
@@ -67,13 +67,12 @@ class UiSideNavContainer extends React.Component {
             <img src={iconArrowLeft} alt="<" />
           </Button>
         </SidebarHeader>
-
-        <ScrollableContainer>
-          <ListGroup nav>
+        <SidebarBody>
+          <ListGroup nav className="mt-3">
             { uiElementsList }
           </ListGroup>
-        </ScrollableContainer>
-
+          <FlexSpacer height="10rem"/>
+        </SidebarBody>
       </Sidebar>
     );
   }

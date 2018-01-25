@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import SidebarActionsToggle from '../sidebar-actions-toggle';
 import { mapToCssModules } from '../utils';
 import './styles.scss';
 
@@ -9,15 +10,16 @@ const propTypes = {
   cssModule: PropTypes.object,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   children: PropTypes.node,
+  id: PropTypes.string,
   size: PropTypes.string,
   theme: PropTypes.string,
-  offcanvas: PropTypes.string,
   left: PropTypes.bool,
   actions: PropTypes.bool,
 };
 
 const defaultProps = {
   tag: 'aside',
+  id: 'sidebar-actions',
 };
 
 const Sidebar = (props) => {
@@ -25,10 +27,10 @@ const Sidebar = (props) => {
     className,
     cssModule,
     tag: Tag,
+    id,
     size,
-    offcanvas,
-    left,
     theme,
+    left,
     actions,
     children,
     ...attributes
@@ -38,14 +40,19 @@ const Sidebar = (props) => {
     className,
     'sidebar',
     size ? `sidebar-${size}` : false,
-    offcanvas ? `sidebar-offcanvas-${offcanvas}` : false,
-    left ? 'sidebar-left' : 'sidebar-right',
     theme ? `sidebar-theme-${theme}` : false,
-    actions ? 'sidebar-actions' : false,
+    left ? 'sidebar-left' : 'sidebar-right',
+    actions ? `sidebar-actions` : false,
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes}>{children}</Tag>
+    <Tag {...attributes} className={classes} id={id}>
+      {actions &&
+        <SidebarActionsToggle/>
+      }
+
+      {children}
+    </Tag>
   );
 };
 

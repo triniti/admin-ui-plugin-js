@@ -5,7 +5,10 @@ import './styles.scss';
 
 const SidebarHeader = ({ title, children }) => (
   <div className="sidebar-header" >
-    <h3 className="sidebar-header-title">{title}</h3>{children}
+    {title &&
+      <h3 className="sidebar-header-title">{title}</h3>
+    }
+    {children}
   </div>
 );
 

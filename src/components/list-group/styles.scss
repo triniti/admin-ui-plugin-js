@@ -138,6 +138,11 @@
 
 // list-group-nav styles
 
+.list-group-nav {
+  flex-shrink: 0;
+}
+
+
 .list-group-nav .list-group-item {
   border: none;
   cursor: pointer;

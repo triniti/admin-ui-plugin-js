@@ -16,6 +16,7 @@ const propTypes = {
 const defaultProps = {
   tag: 'div',
   size: '',
+
 };
 
 const MainContent = (props) => {
@@ -41,7 +42,12 @@ const MainContent = (props) => {
           {children}
         </div>
         }
-        {!size && children}
+        {split &&
+        <div className={`main-content-column`}>
+          {children}
+        </div>
+        }
+        {!size && !split && children}
     </Tag>
   );
 };

@@ -85,6 +85,7 @@ import PopoverBody from './popover-body';
 import PopoverTitle from './popover-title';
 import PopoverHeader from './popover-header';
 import PopperContent from './popper-content';
+import PrimaryContent from './primary-content';
 import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
@@ -92,7 +93,10 @@ import Row from './row';
 import ScreenContent from './screen-content';
 import ScrollableContainer from './scrollable-container';
 import Sidebar from './sidebar';
+import SidebarActionsToggle from './sidebar-actions-toggle';
+import SidebarBody from './sidebar-body';
 import SidebarHeader from './sidebar-header';
+import SplitContent from './split-content';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Switch from './switch';
@@ -201,6 +205,7 @@ export {
   PopoverHeader,
   PopoverTitle,
   PopperContent,
+  PrimaryContent,
   Progress,
   Radio,
   RouterLink,
@@ -209,8 +214,11 @@ export {
   ScreenContent,
   ScrollableContainer,
   Sidebar,
+  SidebarActionsToggle,
+  SidebarBody,
   SidebarHeader,
   Spinner,
+  SplitContent,
   StatusMessage,
   Switch,
   TabContent,
