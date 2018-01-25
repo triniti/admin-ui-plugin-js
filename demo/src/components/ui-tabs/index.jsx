@@ -33,7 +33,7 @@ class UiTabs extends React.Component {
   render() {
     return (
       <MainContent>
-        <Card className="mt-0">
+        <Card>
           <Nav underline sticky className="pt-2" color="light">
             <NavItem>
               <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>

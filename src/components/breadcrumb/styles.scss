@@ -58,3 +58,8 @@
   }
 }
 
+@media (max-width: 767px) {
+  .offcanvas-left + .main > .page-header .breadcrumb {
+    margin-left: 1.75rem;
+  }
+}

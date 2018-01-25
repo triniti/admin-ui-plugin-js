@@ -113,12 +113,6 @@ $sidebar-xs:         260px !default;
   }
 }
 
-@media (max-width: 767px) {
-  .offcanvas-left + .main-container > .page-header .page-title {
-    margin-left: 1.75rem;
-  }
-}
-
 
 // Right Sidebar Mobile
 

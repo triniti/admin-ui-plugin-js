@@ -53,7 +53,7 @@
 }
 
 @media (max-width: 767px) {
-  .offcanvas-left + .main-container .page-header {
-    padding-left: 3rem;
+  .offcanvas-left + .main > .page-header .page-title {
+    margin-left: 1.75rem;
   }
 }

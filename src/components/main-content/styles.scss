@@ -4,21 +4,19 @@
 
 .main-content {
   position: relative;
-  overflow: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-backface-visibility: hidden;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  -ms-overflow-style: none;
-  background-color: $white;
   display: flex;
-  flex-wrap: wrap;
   flex: 1 1 100%;
-  flex-direction: row;
 
   &:not(.main-content-split) {
+    flex-wrap: wrap;
     align-items: flex-start;
     align-content: flex-start;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
   }
 }
 
