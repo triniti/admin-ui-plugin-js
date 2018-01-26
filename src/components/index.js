@@ -90,6 +90,7 @@ import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
+import Screen from './screen';
 import ScreenContent from './screen-content';
 import ScrollableContainer from './scrollable-container';
 import Sidebar from './sidebar';
@@ -210,6 +211,7 @@ export {
   Radio,
   RouterLink,
   Row,
+  Screen,
   ScreenContent as ContentContainer,
   ScreenContent,
   ScrollableContainer,

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Alert from '../alert';
 import RouterLink from '../router-link';
 
-class AlertBar extends React.Component {
+export default class AlertBar extends React.Component {
   static propTypes = {
     alerts: PropTypes.array.isRequired,
     onDismiss: PropTypes.func.isRequired,
@@ -73,12 +73,7 @@ class AlertBar extends React.Component {
     }
   }
 
-  renderLink({
-    dismissOnClick,
-    openInNewTab,
-    text,
-    href,
-  }, id) {
+  renderLink({ dismissOnClick, openInNewTab, text, href }, id) {
     if (openInNewTab) {
       return (
         <span>
@@ -142,5 +137,3 @@ class AlertBar extends React.Component {
     );
   }
 }
-
-export default AlertBar;

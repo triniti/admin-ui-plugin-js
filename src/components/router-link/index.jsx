@@ -1,14 +1,9 @@
-// react
 import React from 'react';
 import PropTypes from 'prop-types';
-
-// external components
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
 
-const RouterLink = ({
-  navTab, to, className, ...attributes
-}) => (
+const RouterLink = ({ navTab, to, className, ...attributes }) => (
   <NavLink
     className={classNames({
       'nav-link': navTab,
