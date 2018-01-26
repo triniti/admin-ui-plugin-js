@@ -4,7 +4,7 @@ The screen component provides exact placement of named regions. It applies appro
 
 Most of the props available expect `PropTypes.node`.  The intention is for you to fill the regions with zero or more components.
 
-> (Composition vs Inheritance)[https://reactjs.org/docs/composition-vs-inheritance.html]
+> Read [Composition vs Inheritance](https://reactjs.org/docs/composition-vs-inheritance.html)
 
 
 ## props
