@@ -2,8 +2,8 @@
 
 
 ## v0.3.1
-* Allow AlertBar Alerts to dismiss themselves when their link is clicked
-* Fix datalist error display and corresponding test
+* issue #48: Allow AlertBar Alerts to dismiss themselves when their link is clicked
+* issue #47: Fix datalist error display and corresponding test
 
 
 ## v0.3.0
