@@ -9,17 +9,6 @@ class AlertBar extends React.Component {
     onDismiss: PropTypes.func.isRequired,
   };
 
-  static renderLink({
-    openInNewTab,
-    text,
-    href,
-  }) {
-    if (openInNewTab) {
-      return <span> <a className="alert-link" target="_blank" href={href}>{text}</a></span>;
-    }
-    return <span> <RouterLink className="alert-link" to={href}>{text}</RouterLink></span>;
-  }
-
   constructor(props) {
     super(props);
     this.state = this.updateState(props);
@@ -78,6 +67,45 @@ class AlertBar extends React.Component {
     this.props.onDismiss(id);
   }
 
+  clickLink(dismissOnClick, id) {
+    if (dismissOnClick) {
+      this.dismiss(id);
+    }
+  }
+
+  renderLink({
+    dismissOnClick,
+    openInNewTab,
+    text,
+    href,
+  }, id) {
+    if (openInNewTab) {
+      return (
+        <span>
+          <a
+            className="alert-link"
+            target="_blank"
+            onClick={() => this.clickLink(dismissOnClick, id)}
+            href={href}
+          >
+            {text}
+          </a>
+        </span>
+      );
+    }
+    return (
+      <span>
+        <RouterLink
+          className="alert-link"
+          onClick={() => this.clickLink(dismissOnClick, id)}
+          to={href}
+        >
+          {text}
+        </RouterLink>
+      </span>
+    );
+  }
+
   render() {
     return (
       <div>
@@ -92,16 +120,21 @@ class AlertBar extends React.Component {
 
           if (isDismissible) {
             return (
-              <Alert color={type} isOpen={this.state[id].isOpen} toggle={() => this.dismiss(id)} key={id}>
+              <Alert
+                color={type}
+                isOpen={this.state[id].isOpen}
+                toggle={() => this.dismiss(id)}
+                key={id}
+              >
                 {message}
-                {link && AlertBar.renderLink(link)}
+                {link && this.renderLink(link, id)}
               </Alert>
             );
           }
           return (
             <Alert color={type} key={id}>
               {message}
-              {link && AlertBar.renderLink(link)}
+              {link && this.renderLink(link, id)}
             </Alert>
           );
         })}
@@ -111,4 +144,3 @@ class AlertBar extends React.Component {
 }
 
 export default AlertBar;
-

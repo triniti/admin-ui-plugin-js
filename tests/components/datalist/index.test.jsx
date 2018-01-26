@@ -40,9 +40,7 @@ test('Datalist:: should be able to render with an error', (t) => {
     addon: {},
     meta: {
       touched: true,
-      error: {
-        message: 'this one has an error.',
-      },
+      error: 'this one has an error.',
     },
   };
   const datalist = mount(<Datalist

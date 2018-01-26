@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.3.1
+* issue #48: Allow AlertBar Alerts to dismiss themselves when their link is clicked
+* issue #47: Fix datalist error display and corresponding test
+
+
 ## v0.3.0
 * Integrate `app-content` into `app` component and delete `app-content` component.
 * Rename component `content-container` to `screen-content`, exports as old name and new name until next minor rev.
