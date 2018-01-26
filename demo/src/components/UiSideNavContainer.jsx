@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import startCase from 'lodash/startCase';
-import { Button, Card, FlexSpacer, ListGroup, ListGroupItem, Sidebar, SidebarBody, ScrollableContainer, SidebarHeader, Tooltip } from '../../../src/components';
+import { Button, Card, Icon, FlexSpacer, ListGroup, ListGroupItem, ScrollableContainer, Sidebar, SidebarBody, SidenavHeader, Tooltip } from '../../../src/components';
 
-import iconArrowLeft from '../assets/img/svg/icons/angle-left.svg';
 import UiComponents from '../config.module';
 
 class UiSideNavContainer extends React.Component {
@@ -62,11 +61,7 @@ class UiSideNavContainer extends React.Component {
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
       <Sidebar id="sidenav" className="sidenav" left theme="white" size="sm">
-        <SidebarHeader>
-          <Button outline color="hover" className="btn-sidebar-close" onClick={this.toggleSideWrapper} id="btn-sidebar-close">
-            <img src={iconArrowLeft} alt="<" />
-          </Button>
-        </SidebarHeader>
+        <SidenavHeader/>
         <SidebarBody>
           <ListGroup nav className="mt-3">
             { uiElementsList }

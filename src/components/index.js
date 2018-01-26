@@ -97,6 +97,7 @@ import Sidebar from './sidebar';
 import SidebarActionsToggle from './sidebar-actions-toggle';
 import SidebarBody from './sidebar-body';
 import SidebarHeader from './sidebar-header';
+import SidenavHeader from './sidenav-header';
 import SplitContent from './split-content';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
@@ -219,6 +220,7 @@ export {
   SidebarActionsToggle,
   SidebarBody,
   SidebarHeader,
+  SidenavHeader,
   Spinner,
   SplitContent,
   StatusMessage,

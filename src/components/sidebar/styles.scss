@@ -7,6 +7,8 @@ $sidebar-md:         320px !default;
 $sidebar-sm:         300px !default;
 $sidebar-xs:         260px !default;
 
+$sidenav-width:     300px;
+
 .sidebar {
   position: relative;
   display: flex;
@@ -103,13 +105,13 @@ $sidebar-xs:         260px !default;
 
   &.offcanvas-left {
     z-index: 10;
-    margin-left: -$offcanvas-desktop-margin;
+    margin-left: -$sidenav-width + 38;
 
     @media (max-width: 767px) {
-      margin-left: -$offcanvas-width;
+      margin-left: -$sidenav-width;
     }
     @media (min-width: 769px) and (max-width: 1024px) {
-      margin-left: -$offcanvas-desktop-margin;
+      margin-left: -$sidenav-width + 38;
     }
   }
 }

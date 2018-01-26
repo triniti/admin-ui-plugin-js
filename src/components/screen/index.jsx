@@ -25,8 +25,8 @@ const Screen = (props) => {
     <div className="screen">
       {sidenav &&
       <div className="screen-sidenav">
-        {sidenavHeader && <div className="screen-sidenav-header">{sidenavHeader}</div>}
-        {sidenav}
+        {sidenavHeader && {sidenavHeader}}
+        {sidenav && <div className="screen-sidenav-body">{sidenav}</div>}
       </div>}
 
       {(header || primaryActions) &&
