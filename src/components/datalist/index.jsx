@@ -23,7 +23,7 @@ const Datalist = ({
         {options.map((option, index) => <option value={option} key={`${option}-${index}`} />)}
       </datalist>
     </InputGroup>
-    { touched && error && <FormFeedback>{error.message}</FormFeedback> }
+    { touched && error && <FormFeedback>{error}</FormFeedback> }
   </div>
 );
 
