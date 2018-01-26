@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v0.3.2
+* Adding support for lazy loading components with react universal
 
 ## v0.3.1
 * issue #48: Allow AlertBar Alerts to dismiss themselves when their link is clicked
