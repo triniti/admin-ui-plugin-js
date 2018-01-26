@@ -1,23 +1,15 @@
 // SideBar
 
-// Variables for width and offcanvas
-$sidebar-xl:         100% !default;
-$sidebar-lg:         360px !default;
-$sidebar-md:         320px !default;
-$sidebar-sm:         300px !default;
-$sidebar-xs:         260px !default;
-
-$sidenav-width:     300px;
+$sidebar-nav-width:       300px;
+$sidebar-actions-width:   360px;
 
 .sidebar {
   position: relative;
   display: flex;
   flex-direction: column;
-  flex: 0 0 $sidebar-lg;
+  flex: 0 0 auto;
   flex-wrap: nowrap;
   transition: margin $transition;
-  width: $sidebar-lg;
-  border: 0 solid $gray-600;
   background-color: theme-color("light");
 }
 
@@ -38,88 +30,33 @@ $sidenav-width:     300px;
   }
 }
 
-// border based on position
 
-.sidebar-top {
-  border-bottom-width: 1px;
-}
+// Sidebar Nav
 
-.sidebar-right {
-  border-left-width: 1px;
-}
-
-.sidebar-bottom {
-  border-top-width: 1px;
-}
-
-.sidebar-left {
-  border-right-width: 1px;
-}
-
-
-// sidebar widths
-
-.sidebar-xl {
-  flex: 0 0 $sidebar-xl;
-  width: $sidebar-xl;
-  border: none;
-}
-
-.sidebar-lg {
-  flex: 0 0 $sidebar-lg;
-  width: $sidebar-lg;
-}
-
-.sidebar-md {
-  flex: 0 0 $sidebar-md;
-  width: $sidebar-md;
-}
-
-.sidebar-sm {
-  flex: 0 0 $sidebar-sm;
-  width: $sidebar-sm;
-}
-
-.sidebar-xs {
-  flex: 0 0 $sidebar-xs;
-  width: $sidebar-xs;
-}
-
-.sidebar-theme-white {
+.sidebar-nav {
   background-color: $white;
-}
-
-.sidebar-theme-light {
-  background-color: theme-color("light");
-}
-
-.sidebar-theme-dark {
-  background-color: theme-color("dark");
-}
-
-
-// Sidebar Moving Off Canvas
-
-.sidebar {
-   border-color: $gray-500;
+  border-right: 1px solid $gray-500;
+  width: $sidebar-nav-width;
 
   &.offcanvas-left {
     z-index: 10;
-    margin-left: -$sidenav-width + 38;
+    margin-left: -$sidebar-nav-width + 38;
 
     @media (max-width: 767px) {
-      margin-left: -$sidenav-width;
+      margin-left: -$sidebar-nav-width;
     }
     @media (min-width: 769px) and (max-width: 1024px) {
-      margin-left: -$sidenav-width + 38;
+      margin-left: -$sidebar-nav-width + 38;
     }
   }
 }
 
 
-// Right Sidebar Mobile
+// Sidebar Actions
 
 .sidebar-actions {
+  width: $sidebar-actions-width;
+  border-left: 1px solid $gray-500;
 
   @media (max-width: 1023px) {
     position: absolute;
@@ -140,7 +77,7 @@ $sidenav-width:     300px;
   }
 }
 
-.btn-sidebar-actions {
+.sidebar-actions--toggler {
   position: absolute;
   top: -3.25rem;
   right: .5rem;

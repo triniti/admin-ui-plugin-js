@@ -37,15 +37,6 @@ class UiForm extends React.Component {
     }
   }
 
-  toggleSideWrapper() {
-    const sideNavWrapper = document.getElementById('sidebar-actions');
-    if (sideNavWrapper.classList.contains('sidebar-actions--is-open')) {
-      sideNavWrapper.classList.remove('sidebar-actions--is-open');
-    } else {
-      sideNavWrapper.classList.add('sidebar-actions--is-open');
-    }
-  }
-
 
   render() {
     return (
@@ -177,7 +168,7 @@ class UiForm extends React.Component {
             </TabContent>
           </Card>
         </PrimaryContent>
-        <Sidebar actions>
+        <Sidebar>
           <SidebarBody>
             <Card>
               <CardBody>

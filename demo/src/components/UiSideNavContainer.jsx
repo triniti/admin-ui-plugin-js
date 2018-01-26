@@ -10,7 +10,6 @@ class UiSideNavContainer extends React.Component {
     super(props);
 
     this.handleClick = this.handleClick.bind(this);
-    this.toggleSideWrapper = this.toggleSideWrapper.bind(this);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
@@ -21,15 +20,6 @@ class UiSideNavContainer extends React.Component {
   handleClick(e) {
     const to = e.target.getAttribute('to');
     this.props.history.push(to);
-  }
-
-  toggleSideWrapper() {
-    const sideNavWrapper = document.getElementById('sidenav');
-    if (sideNavWrapper.classList.contains('offcanvas-left')) {
-      sideNavWrapper.classList.remove('offcanvas-left');
-    } else {
-      sideNavWrapper.classList.add('offcanvas-left');
-    }
   }
 
   toggle() {
@@ -60,7 +50,7 @@ class UiSideNavContainer extends React.Component {
     const componentIds = Object.keys(UiComponents);
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
-      <Sidebar id="sidenav" className="sidenav" left theme="white" size="sm">
+      <Sidebar id="sidenav" nav>
         <SidenavHeader/>
         <SidebarBody>
           <ListGroup nav className="mt-3">

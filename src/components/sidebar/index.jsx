@@ -11,10 +11,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   children: PropTypes.node,
   id: PropTypes.string,
-  size: PropTypes.string,
-  theme: PropTypes.string,
-  left: PropTypes.bool,
-  actions: PropTypes.bool,
+  nav: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -28,10 +25,7 @@ const Sidebar = (props) => {
     cssModule,
     tag: Tag,
     id,
-    size,
-    theme,
-    left,
-    actions,
+    nav,
     children,
     ...attributes
   } = props;
@@ -39,15 +33,12 @@ const Sidebar = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     'sidebar',
-    size ? `sidebar-${size}` : false,
-    theme ? `sidebar-theme-${theme}` : false,
-    left ? 'sidebar-left' : 'sidebar-right',
-    actions ? `sidebar-actions` : false,
+    nav ? `sidebar-nav` : `sidebar-actions`,
   ), cssModule);
 
   return (
     <Tag {...attributes} className={classes} id={id}>
-      {actions &&
+      {!nav &&
         <SidebarActionsToggle/>
       }
 

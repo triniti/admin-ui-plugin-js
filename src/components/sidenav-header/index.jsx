@@ -19,7 +19,7 @@ const SidenavHeader = ({ title }) => (
         {title &&
         <h3 className="sidenav-header-title">{title}</h3>
         }
-        <Button outline color="hover" className="sidenav-toggler" onClick={this.toggleSideWrapper} id="sidenav-toggler">
+        <Button outline color="hover" className="sidenav-toggler" onClick={toggleSideWrapper} id="sidenav-toggler">
             <Icon imgSrc="angle-left" alt="close"/>
         </Button>
     </div>
