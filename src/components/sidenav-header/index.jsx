@@ -5,17 +5,14 @@ import Icon from '../icon';
 
 import './styles.scss';
 
-/*
-toggleSideWrapper()
-{
+const toggleSideWrapper = () => {
     const sideNavWrapper = document.getElementById('sidenav');
     if (sideNavWrapper.classList.contains('offcanvas-left')) {
         sideNavWrapper.classList.remove('offcanvas-left');
     } else {
         sideNavWrapper.classList.add('offcanvas-left');
     }
-}
-*/
+};
 
 const SidenavHeader = ({ title }) => (
     <div className="sidenav-header">
