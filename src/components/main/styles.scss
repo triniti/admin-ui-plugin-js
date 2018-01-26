@@ -4,10 +4,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100%;
   margin: 0;
   flex: 1 1 100%;
   flex-wrap: nowrap;
+  min-height: 0;
 }
 
 @media (max-width: 767px) {
