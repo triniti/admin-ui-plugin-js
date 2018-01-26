@@ -23,10 +23,10 @@ export default function createRoutes(routes, authHoc = null) {
     // handle private routes (default value, most pages in cms)
     let component = null;
     if (route.lazy) {
-      const universalComponent = universal(route.component);
-      component = authHoc(universalComponent, route.extra || {})
+      const universalComponent = universal(props => route.component());
+      component = authHoc(universalComponent, route.extra || {});
     } else {
-      component = authHoc(route.component, route.extra || {})
+      component = authHoc(route.component, route.extra || {});
     }
     return (
       <Route
