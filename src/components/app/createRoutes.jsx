@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
+import universal from 'react-universal-component';
 
 export default function createRoutes(routes, authHoc = null) {
   return Object.values(routes).map((route) => {
@@ -20,13 +21,20 @@ export default function createRoutes(routes, authHoc = null) {
     }
 
     // handle private routes (default value, most pages in cms)
+    let component = null;
+    if (route.lazy) {
+      const universalComponent = universal(route.component);
+      component = authHoc(universalComponent, route.extra || {})
+    } else {
+      component = authHoc(route.component, route.extra || {})
+    }
     return (
       <Route
         key={route.path}
         exact={route.exact || true}
         strict={route.strict || false}
         path={route.path}
-        component={authHoc(route.component, route.extra || {})}
+        component={component}
       />
     );
   });
