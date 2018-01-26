@@ -19,7 +19,9 @@
     "pub": "npm run build && cd dist && npm publish --access public",
     "test": "BABEL_ENV=cjs tape -r ./tests/bootstrap.js './tests/**/*.test.js*' | faucet"
   },
-  "dependencies": {},
+  "dependencies": {
+    "react-universal-component": "^2.8.1"
+  },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0.0",
     "@triniti/app": "~0.3 || ^1.0.0",
