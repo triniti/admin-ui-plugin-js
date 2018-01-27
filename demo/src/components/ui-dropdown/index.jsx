@@ -28,8 +28,8 @@ class UiDropdown extends React.Component {
 
   render() {
     return (
-      <MainContent>
-        <Card className="mb-3">
+      <MainContent split>
+        <Card>
           <CardHeader spacing="lg" inset>Dropdown</CardHeader>
           <CardBody spacing="lg">
             <Row>
@@ -38,7 +38,7 @@ class UiDropdown extends React.Component {
                   <DropdownToggle caret color="default" outline>
                     Dropdown
                   </DropdownToggle>
-                  <DropdownMenu arrow="left" left>
+                  <DropdownMenu arrow="right" right>
                     <DropdownItem header>Header</DropdownItem>
                     <DropdownItem disabled>Action</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
