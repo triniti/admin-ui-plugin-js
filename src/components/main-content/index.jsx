@@ -47,7 +47,14 @@ const MainContent = (props) => {
         {children}
       </div>
     }
-    {!size || !split && children}
+    {size && split &&
+      <div className={`main-content-column`}>
+        {children}
+      </div>
+    }
+    {!size && !split && children &&
+      {children}
+    }
     </Tag>
   );
 };
