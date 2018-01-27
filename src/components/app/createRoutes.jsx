@@ -15,26 +15,22 @@ export default function createRoutes(routes, authHoc = null) {
       );
     }
 
+    // Either standard or universal component
+    const component = route.eager ? route.component : universal(route.component, route.async || {});
+
     // handle public routes (no auth required, e.g: login)
     if (route.public || !authHoc) {
-      return <Route key={route.path} {...route} />;
+      return <Route key={route.path} {...Object.assign({}, route, {component: component})} />;
     }
 
     // handle private routes (default value, most pages in cms)
-    let component = null;
-    if (route.lazy) {
-      const universalComponent = universal(props => route.component());
-      component = authHoc(universalComponent, route.extra || {});
-    } else {
-      component = authHoc(route.component, route.extra || {});
-    }
     return (
       <Route
         key={route.path}
         exact={route.exact || true}
         strict={route.strict || false}
         path={route.path}
-        component={component}
+        component={authHoc(component, route.extra || {})}
       />
     );
   });

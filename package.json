@@ -19,9 +19,6 @@
     "pub": "npm run build && cd dist && npm publish --access public",
     "test": "BABEL_ENV=cjs tape -r ./tests/bootstrap.js './tests/**/*.test.js*' | faucet"
   },
-  "dependencies": {
-    "react-universal-component": "^2.8.1"
-  },
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0.0",
     "@triniti/app": "~0.3 || ^1.0.0",
@@ -37,6 +34,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-transition-group": "^2.2.1",
+    "react-universal-component": "^2.8.1",
     "redux": "^3.7.2",
     "svg-fill-loader": "^0.0.8",
     "sweetalert2": "^7.6.3"
