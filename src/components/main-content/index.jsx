@@ -37,22 +37,12 @@ const MainContent = (props) => {
 
   return (
     <Tag {...attributes} className={classes}>
-    {size && !split &&
+    {size &&
       <div className={`max-width max-width-${size}`}>
         {children}
       </div>
     }
-    {!size && split &&
-      <div className={`main-content-column`}>
-        {children}
-      </div>
-    }
-    {size && split &&
-      <div className={`main-content-column`}>
-        {children}
-      </div>
-    }
-    {!size && !split &&
+    {!size &&
       <div className={`main-content-column`}>
         {children}
       </div>
