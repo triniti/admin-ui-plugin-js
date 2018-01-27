@@ -4,9 +4,10 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  margin: 0;
-  flex: 1 1 100%;
+  flex: 1 1 auto;
   flex-wrap: nowrap;
+  margin: 0;
+  width: 100%;
   min-height: 0;
 }
 
