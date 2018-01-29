@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import universal from 'react-universal-component';
+import Loading from '../loading';
 
 export default function createRoutes(routes, authHoc = null) {
   return Object.values(routes).map((route) => {
@@ -16,11 +17,15 @@ export default function createRoutes(routes, authHoc = null) {
     }
 
     // Either standard or universal component
-    const component = route.eager ? route.component : universal(route.component, route.async || {});
+    let component = route.component;
+    if (!route.eager) {
+      let asyncOpts = Object.assign({}, {loading: Loading}, route.async || {});
+      component = universal(route.component, asyncOpts);
+    }
 
     // handle public routes (no auth required, e.g: login)
     if (route.public || !authHoc) {
-      return <Route key={route.path} {...Object.assign({}, route, {component: component})} />;
+      return <Route key={route.path} {...route} component={component} />;
     }
 
     // handle private routes (default value, most pages in cms)
