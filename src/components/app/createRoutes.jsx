@@ -3,6 +3,7 @@ import { Redirect, Route } from 'react-router-dom';
 import universal from 'react-universal-component';
 import Loading from '../loading';
 
+/* eslint max-statements: ["warn", 30] */
 export default function createRoutes(routes, authHoc = null) {
   return Object.values(routes).map((route) => {
     if (route.redirect) {
