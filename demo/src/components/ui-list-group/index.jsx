@@ -1,9 +1,8 @@
 import React from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, MainContent, Row } from '../../../../src/components';
+import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row } from '../../../../src/components';
 
-const UiListGroup = () => (
-  <MainContent>
-  <Card>
+const UiListGroup = () => [
+  <Card key="list-group1">
     <CardHeader spacing="lg" inset>List Group Items</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -22,7 +21,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group2">
     <CardHeader spacing="lg" inset>Buttons</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -36,7 +37,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group3">
     <CardHeader spacing="lg" inset>Buttons Flush</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -50,7 +53,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group4">
     <CardHeader spacing="lg" inset>Buttons Borderless</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -64,7 +69,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group5">
     <CardHeader spacing="lg" inset>Contextual Color Alert</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -78,7 +85,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group6">
     <CardHeader spacing="lg" inset>Heading and Item Text</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -106,7 +115,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group7">
     <CardHeader spacing="lg" inset>List Group Nav</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -134,7 +145,9 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
+  </Card>,
 
+  <Card key="list-group8">
     <CardHeader spacing="lg" inset>List Group Nav Borderless</CardHeader>
     <CardBody spacing="lg">
       <Row>
@@ -162,8 +175,7 @@ const UiListGroup = () => (
         </Col>
       </Row>
     </CardBody>
-  </Card>
-  </MainContent>
-);
+  </Card>,
+];
 
 export default UiListGroup;

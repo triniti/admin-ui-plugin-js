@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import startCase from 'lodash/startCase';
-import { Button, Card, Icon, FlexSpacer, ListGroup, ListGroupItem, ScrollableContainer, Sidebar, SidebarBody, SidenavHeader, Tooltip } from '../../../src/components';
+import { ListGroup, ListGroupItem } from '../../../src/components';
 
 import UiComponents from '../config.module';
 
@@ -50,15 +50,9 @@ class UiSideNavContainer extends React.Component {
     const componentIds = Object.keys(UiComponents);
     const uiElementsList = this.generateElementListItem(componentIds);
     return (
-      <Sidebar id="sidenav" nav>
-        <SidenavHeader/>
-        <SidebarBody>
-          <ListGroup nav className="mt-3">
-            { uiElementsList }
-          </ListGroup>
-          <FlexSpacer height="10rem"/>
-        </SidebarBody>
-      </Sidebar>
+      <ListGroup nav className="pt-3 pb-4">
+        { uiElementsList }
+      </ListGroup>
     );
   }
 }

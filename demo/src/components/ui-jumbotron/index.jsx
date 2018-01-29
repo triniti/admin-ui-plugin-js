@@ -1,9 +1,8 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron, MainContent } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron } from '../../../../src/components';
 
-const UiJumbotron = () => (
-  <MainContent>
-  <Card spacing="lg">
+const UiJumbotron = () => [
+  <Card spacing="lg" key="jumbotron1">
     <CardHeader>Jumbotron Theme Dark</CardHeader>
     <Jumbotron theme="dark">
       <Container fluid>
@@ -13,7 +12,9 @@ const UiJumbotron = () => (
         </p>
       </Container>
     </Jumbotron>
+  </Card>,
 
+  <Card spacing="lg" key="jumbotron2">
     <CardHeader>Jumbotron Theme Light</CardHeader>
     <Jumbotron theme="light">
       <CardBody>
@@ -23,7 +24,9 @@ const UiJumbotron = () => (
         </p>
       </CardBody>
     </Jumbotron>
+  </Card>,
 
+  <Card spacing="lg" key="jumbotron3">
     <CardHeader>Jumbotron Default inside CardBody</CardHeader>
     <CardBody>
       <Jumbotron>
@@ -42,7 +45,9 @@ const UiJumbotron = () => (
         </CardBody>
       </Jumbotron>
     </CardBody>
+  </Card>,
 
+  <Card spacing="lg" key="jumbotron4">
     <CardHeader>Jumbotron inside CardBody</CardHeader>
     <CardBody>
       <Jumbotron>
@@ -54,8 +59,7 @@ const UiJumbotron = () => (
         </Container>
       </Jumbotron>
     </CardBody>
-  </Card>
-  </MainContent>
-);
+  </Card>,
+];
 
 export default UiJumbotron;

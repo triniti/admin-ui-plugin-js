@@ -1,10 +1,9 @@
 import React from 'react';
-import { Alert, Card, CardBody, CardHeader, MainContent, Table, UncontrolledAlert } from '../../../../src/components';
+import { Alert, Card, CardBody, CardHeader, Table, UncontrolledAlert } from '../../../../src/components';
 
-const UiAlert = () => (
-  <MainContent>
+const UiAlert = () => [
 
-    <Card>
+    <Card key="alert1">
       <CardHeader spacing="lg" inset>Inline Content Alerts</CardHeader>
       <CardBody spacing="lg">
         <Alert color="success">
@@ -23,9 +22,9 @@ const UiAlert = () => (
           I am an alert and I can be dismissed!
         </UncontrolledAlert>
       </CardBody>
-    </Card>
+    </Card>,
 
-    <Card>
+    <Card key="alert2">
       <CardHeader spacing="lg">Full Width Content Alerts</CardHeader>
       <CardBody spacing="lg">
         <Alert color="success" fullWidth className="mb-3">
@@ -44,9 +43,9 @@ const UiAlert = () => (
           I am an alert and I can be dismissed!
         </UncontrolledAlert>
       </CardBody>
-    </Card>
+    </Card>,
 
-    <Card>
+    <Card key="alert3">
       <CardHeader spacing="lg" inset>Inline Content Alerts (alert-inverse)</CardHeader>
       <CardBody spacing="lg">
         <Alert color="success" inverse>
@@ -65,10 +64,10 @@ const UiAlert = () => (
           I am an alert and I can be dismissed!  Brand Color!
         </UncontrolledAlert>
       </CardBody>
-    </Card>
+    </Card>,
 
 
-    <Card>
+    <Card key="alert4">
       <CardHeader spacing="lg">Full Width Content Alerts (alert-inverse)</CardHeader>
       <UncontrolledAlert color="info" inverse fullWidth sticky>
         <span><strong>Full Width</strong> Alert outside of Card Container and Sticky</span>
@@ -90,9 +89,9 @@ const UiAlert = () => (
           I am an alert and I can be dismissed!
         </UncontrolledAlert>
       </CardBody>
-    </Card>
+    </Card>,
 
-    <Card>
+    <Card key="alert5">
       <CardHeader spacing="lg" inset>Border Alerts (has-border)</CardHeader>
       <CardBody spacing="lg">
         <div className="has-border border-primary mb-4">
@@ -120,9 +119,9 @@ const UiAlert = () => (
           <strong>Well done!</strong> Example Border Alert - Default
         </div>
       </CardBody>
-    </Card>
+    </Card>,
 
-    <Card>
+    <Card key="alert6">
       <CardHeader spacing="lg" inset>Border Alerts (has-border, border-indent)</CardHeader>
       <CardBody spacing="lg">
         <div className="has-border border-indent border-primary mb-4">
@@ -150,9 +149,9 @@ const UiAlert = () => (
           <strong>Well done!</strong> Example Border Alert - Default
         </div>
       </CardBody>
-    </Card>
+    </Card>,
 
-    <Card>
+    <Card key="alert7">
       <CardHeader spacing="lg" inset>Striped Table</CardHeader>
       <CardBody spacing="lg">
         <Table>
@@ -194,9 +193,7 @@ const UiAlert = () => (
           they, this, to, was, will, with
         </Alert>
       </CardBody>
-    </Card>
-
-  </MainContent>
-);
+    </Card>,
+];
 
 export default UiAlert;

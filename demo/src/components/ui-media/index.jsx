@@ -1,9 +1,8 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, CardTitle, Col, MainContent, Media, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row } from '../../../../src/components';
 
-const UiMedia = () => (
-  <MainContent>
-    <Card>
+const UiMedia = () => [
+    <Card key="media1">
       <CardHeader spacing="lg" inset>Media Left</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -45,8 +44,9 @@ const UiMedia = () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
-
+    <Card key="media2">
       <CardHeader spacing="lg" inset>Vertical Alignment</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -89,7 +89,9 @@ const UiMedia = () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
+    <Card key="media3">
       <CardHeader spacing="lg" inset>Media List</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -154,8 +156,9 @@ const UiMedia = () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
-
+    <Card key="media5">
       <CardHeader spacing="lg" inset>Media Hover</CardHeader>
       <CardBody spacing="lg">
         <Media left hover href="#">
@@ -186,7 +189,9 @@ const UiMedia = () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
+    <Card key="media6">
       <CardHeader spacing="lg" inset>Media HoverOutline</CardHeader>
       <CardBody spacing="lg">
         <Media left hoverOutline href="#">
@@ -217,8 +222,7 @@ const UiMedia = () => (
           </Col>
         </Row>
       </CardBody>
-    </Card>
-  </MainContent>
-);
+    </Card>,
+];
 
 export default UiMedia;

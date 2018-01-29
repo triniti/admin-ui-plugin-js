@@ -21,11 +21,9 @@ $sidenav-width:     300px;
   display: flex;
   flex-direction: column;
   flex: 0 0 $sidenav-width;
-  flex-wrap: nowrap;
   transition: margin $transition;
   width: $sidenav-width;
-  border-right: 1 solid $gray-600;
-  background-color: $white;
+  border-right: 1px solid $gray-500;
 
   &.offcanvas-left {
     z-index: 10;
@@ -42,8 +40,7 @@ $sidenav-width:     300px;
 
 // screen-sidenav-header
 
-/*
-.screen-sidenav-header {
+.screen-sidenav__header {
   position: relative;
   font-size: 1em;
   display: flex;
@@ -74,25 +71,29 @@ $sidenav-width:     300px;
   }
 }
 
-.screen-sidenav-header__toggler {
+.screen-sidenav__header-title {
+  font-size: 1em;
+  margin: 0;
+}
+
+.screen-sidenav__toggler {
   position: absolute;
   right: 0;
-  top: 50%;
-  margin-top: -18px;
   margin-bottom: 0;
   padding: .5rem;
+  border: none;
+  height: 100%;
   transition: transform $transition;
 }
 
-.offcanvas-left .screen-sidenav-header__toggler-img {
+.offcanvas-left .screen-sidenav__toggler-img {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
-*/
 
 // screen-sidenav-body
 
-.screen-sidenav-body {
+.screen-sidenav__body {
   display: flex;
   flex: 1 1 100%;
   flex-direction: column;
@@ -107,4 +108,127 @@ $sidenav-width:     300px;
   .offcanvas-left & {
     margin-right: 50px;
   }
+}
+
+// screen-main
+
+.screen-main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  flex-wrap: nowrap;
+  margin: 0;
+  width: 100%;
+  min-height: 0;
+}
+
+@media (max-width: 767px) {
+  .screen-main {
+    max-width: 100vw;
+    flex: 1 1 auto;
+  }
+}
+
+// Page Header
+
+.screen-header__container {
+  z-index: 2;
+  display: flex;
+  min-height: $header-height + 4;
+  padding-top: .25rem;
+  padding-right: $padding-xs;
+  padding-bottom: .25rem;
+  padding-left: $padding-xs;
+  border-bottom: 1px solid $gray-500;
+  border-radius: 0 !important;
+  background-color: $white;
+  align-items: center;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  box-shadow: inset 0 -1px 0 $gray-700, 0 1px 2px rgba(0, 0, 0, .03);
+
+  @media (max-width: 767px) {
+    transition: margin $transition;
+
+    // todo: mobile header scrolls horizontally or will have to reduce to smaller nav
+    overflow: hidden;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      height: 0;  /* remove scrollbar space */
+      background: transparent;  /* optional: just make scrollbar invisible */
+    }
+    /* optional: show position indicator in red */
+    &::-webkit-scrollbar-thumb {
+        background: $gray-500;
+    }
+  }
+  @media (min-width: 768px) {
+    padding-right: $padding-md;
+    padding-left: $padding-md;
+  }
+}
+
+.screen-header__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0;
+  padding: .5rem 0;
+  letter-spacing: 0;
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .offcanvas-left + .screen-header__container .screen-header__title {
+    margin-left: 1.75rem;
+  }
+}
+
+.screen-body__container {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+
+  &:not(.screen-body__container--split) {
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    overflow: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-overflow-style: none;
+  }
+
+  @media (max-width: 767px) {
+    width: 100vw;
+  }
+}
+
+.screen-body__container--split {
+  overflow: visible;
+}
+
+.screen-body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
 }

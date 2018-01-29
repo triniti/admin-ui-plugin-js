@@ -1,8 +1,7 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, CardTitle, Divider, MainContent } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Divider } from '../../../../src/components';
 
 const UiHeaders = () => (
-  <MainContent>
   <Card>
     <CardBody spacing="lg">
       <h1>H1 Heading .h1</h1>
@@ -76,7 +75,6 @@ const UiHeaders = () => (
     <CardBody spacing="lg" />
 
   </Card>
-  </MainContent>
 );
 
 export default UiHeaders;

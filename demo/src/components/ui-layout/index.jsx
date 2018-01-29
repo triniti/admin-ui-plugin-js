@@ -1,10 +1,9 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Col, Container, MainContent, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, Container, Row } from '../../../../src/components';
 import './styles.scss';
 
-const UiLayout = () => (
-  <MainContent>
-    <Card>
+const UiLayout = () => [
+    <Card key="layout1">
       <CardHeader spacing="lg">Full Width Columns</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -43,8 +42,9 @@ const UiLayout = () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
-
+    <Card key="layout1">
       <CardHeader spacing="lg">Surrounded by a Container</CardHeader>
       <CardBody className="bg-gray" spacing="lg">
         <Row>
@@ -83,8 +83,7 @@ const UiLayout = () => (
           </Col>
         </Row>
       </CardBody>
-    </Card>
-  </MainContent>
-);
+    </Card>,
+];
 
 export default UiLayout;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, MainContent, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Switch, TrinaryControl } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -21,7 +21,6 @@ class UiForm extends React.Component {
 
   render() {
     return (
-      <MainContent>
         <Card>
           <CardHeader spacing="lg" inset>Standard Form</CardHeader>
           <CardBody spacing="lg">
@@ -472,7 +471,6 @@ class UiForm extends React.Component {
             </Row>
           </CardBody>
         </Card>
-      </MainContent>
     );
   }
 }

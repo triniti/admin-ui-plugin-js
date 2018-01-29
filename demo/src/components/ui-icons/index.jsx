@@ -1,9 +1,8 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, MainContent, Row, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Spinner, UncontrolledTooltip } from '../../../../src/components';
 
-export default () => (
-  <MainContent>
-    <Card>
+export default () => [
+    <Card key="icons1">
       <CardHeader spacing="lg" inset>Icons</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -43,7 +42,9 @@ export default () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
+    <Card key="icons2">
       <CardHeader spacing="lg" inset>Button Icons</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -59,7 +60,9 @@ export default () => (
           </Col>
         </Row>
       </CardBody>
+    </Card>,
 
+    <Card key="icons3">
       <CardHeader spacing="lg" inset>Spinner</CardHeader>
       <CardBody spacing="lg">
         <Row>
@@ -92,6 +95,5 @@ export default () => (
           </Col>
         </Row>
       </CardBody>
-    </Card>
-  </MainContent>
-);
+    </Card>,
+];

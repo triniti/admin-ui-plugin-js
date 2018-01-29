@@ -1,8 +1,7 @@
 import React from 'react';
-import { Badge, Button, Card, CardBody, CardTitle, MainContent } from '../../../../src/components';
+import { Badge, Button, Card, CardBody, CardTitle } from '../../../../src/components';
 
 const UiBadge = () => (
-  <MainContent>
     <Card>
       <CardBody spacing="lg">
         <h1>H1 Heading .h1 <Badge>New</Badge></h1>
@@ -42,7 +41,7 @@ const UiBadge = () => (
         <Button outline color="link" radius="round" className="mr-3">link <Badge color="danger" alert>24</Badge></Button>
       </CardBody>
     </Card>
-  </MainContent>
+
 );
 
 export default UiBadge;

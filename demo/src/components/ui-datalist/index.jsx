@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Datalist, MainContent } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Datalist } from '../../../../src/components';
 
 const fields = [
   {
@@ -50,7 +50,6 @@ function getOptions() {
 }
 
 const UiDatalist = () => (
-  <MainContent>
     <Card>
       <CardHeader spacing="lg" inset>A few Datalists with random options</CardHeader>
       <CardBody spacing="lg">
@@ -65,7 +64,6 @@ const UiDatalist = () => (
         ))}
       </CardBody>
     </Card>
-  </MainContent>
 );
 
 export default UiDatalist;

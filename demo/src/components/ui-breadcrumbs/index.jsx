@@ -1,9 +1,8 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, Card, CardBody, CardHeader, CardTitle, MainContent } from '../../../../src/components';
+import { Breadcrumb, BreadcrumbItem, Button, Card, CardBody, CardHeader, CardTitle } from '../../../../src/components';
 import iconClose from '../../assets/img/svg/icons/close.svg';
 
 const UiBreadcrumb = () => (
-  <MainContent>
     <Card>
       <CardBody spacing="lg">
         <Breadcrumb>
@@ -11,6 +10,8 @@ const UiBreadcrumb = () => (
           <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
           <BreadcrumbItem active>Data</BreadcrumbItem>
         </Breadcrumb>
+        <br />
+        <br />
         <br />
         <CardHeader>
           <Breadcrumb>
@@ -22,7 +23,9 @@ const UiBreadcrumb = () => (
             <img src={iconClose} alt="x" />
           </Button>
         </CardHeader>
-
+        <br />
+        <br />
+        <br />
         <CardTitle tag="h4">No List Markup</CardTitle>
         <div className="breadcrumbs pl-0">
           <Breadcrumb tag="nav">
@@ -34,7 +37,6 @@ const UiBreadcrumb = () => (
         </div>
       </CardBody>
     </Card>
-  </MainContent>
 );
 
 export default UiBreadcrumb;

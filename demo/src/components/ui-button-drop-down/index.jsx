@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonDropdown, Card, CardBody, DropdownItem, DropdownMenu, DropdownToggle, MainContent } from '../../../../src/components';
+import { ButtonDropdown, Card, CardBody, DropdownItem, DropdownMenu, DropdownToggle } from '../../../../src/components';
 
 class UiButtonDropdown extends React.Component {
   constructor(props) {
@@ -19,24 +19,22 @@ class UiButtonDropdown extends React.Component {
 
   render() {
     return (
-      <MainContent>
-        <Card>
-          <CardBody spacing="lg">
-            <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
-              <DropdownToggle caret outline color="light">
-              Button Dropdown
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem header>Header</DropdownItem>
-                <DropdownItem disabled>Action</DropdownItem>
-                <DropdownItem>Another Action</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Another Action</DropdownItem>
-              </DropdownMenu>
-            </ButtonDropdown>
-          </CardBody>
-        </Card>
-      </MainContent>
+      <Card>
+        <CardBody spacing="lg">
+          <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
+            <DropdownToggle caret outline color="light">
+            Button Dropdown
+            </DropdownToggle>
+            <DropdownMenu>
+              <DropdownItem header>Header</DropdownItem>
+              <DropdownItem disabled>Action</DropdownItem>
+              <DropdownItem>Another Action</DropdownItem>
+              <DropdownItem divider />
+              <DropdownItem>Another Action</DropdownItem>
+            </DropdownMenu>
+          </ButtonDropdown>
+        </CardBody>
+      </Card>
     );
   }
 }

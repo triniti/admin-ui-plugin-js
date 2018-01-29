@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Col, Collapse, MainContent, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row } from '../../../../src/components';
+import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -23,9 +23,8 @@ class UiNavbar extends React.Component {
     });
   }
   render() {
-    return (
-      <MainContent>
-        <Card>
+    return [
+        <Card key="navbar1">
           <CardBody spacing="lg">
             <h4>Full Width Inverse Toggleable</h4>
             <Navbar color="dark" toggleable className="justify-content-start">
@@ -43,7 +42,9 @@ class UiNavbar extends React.Component {
               </Collapse>
             </Navbar>
           </CardBody>
+        </Card>,
 
+        <Card key="navbar2">
           <CardBody spacing="lg">
             <Navbar color="light" toggleable className="mb-3">
               <NavbarToggler onClick={this.toggle} />
@@ -60,9 +61,8 @@ class UiNavbar extends React.Component {
               </Collapse>
             </Navbar>
           </CardBody>
-        </Card>
-      </MainContent>
-    );
+        </Card>,
+    ];
   }
 }
 

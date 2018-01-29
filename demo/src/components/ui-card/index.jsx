@@ -1,9 +1,8 @@
 import React from 'react';
-import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, MainContent, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, Row } from '../../../../src/components';
 
-const UiCard = () => (
-  <MainContent>
-    <CardsContainer>
+const UiCard = () => [
+    <CardsContainer key="cards1">
       <Row className="mb-3">
         <Col xs="12" sm="6" md="4" lg="3">
           <Card hover border>
@@ -135,9 +134,9 @@ const UiCard = () => (
           </Card>
         </Col>
       </Row>
-    </CardsContainer>
+    </CardsContainer>,
 
-    <CardBody>
+    <CardBody key="cards2">
       <CardTitle tag="h4">Card Group</CardTitle>
       <Row>
         <Col>
@@ -311,9 +310,8 @@ const UiCard = () => (
         </Col>
       </Row>
     </CardBody>
-  </MainContent>
 
 
-);
+];
 
 export default UiCard;
