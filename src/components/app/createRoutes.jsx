@@ -18,9 +18,9 @@ export default function createRoutes(routes, authHoc = null) {
     }
 
     // Either standard or universal component
-    let component = route.component;
+    let component = { route };
     if (!route.eager) {
-      let asyncOpts = Object.assign({}, {loading: Loading}, route.async || {});
+      const asyncOpts = Object.assign({}, { loading: Loading }, route.async || {});
       component = universal(route.component, asyncOpts);
     }
 
