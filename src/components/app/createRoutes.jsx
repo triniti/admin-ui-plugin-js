@@ -3,7 +3,22 @@ import { Redirect, Route } from 'react-router-dom';
 import universal from 'react-universal-component';
 import Loading from '../loading';
 
-/* eslint max-statements: ["warn", 30] */
+/**
+ * Chooses to return either a standard component if `eager` is set to true or a universal component
+ * for a lazy loaded component.
+ *
+ * @param route.component
+ * @returns React.Component
+ */
+function getComponent(route) {
+  let component = { route };
+  if (!route.eager) {
+    const asyncOpts = Object.assign({}, { loading: Loading }, route.async || {});
+    component = universal(route.component, asyncOpts);
+  }
+  return component;
+}
+
 export default function createRoutes(routes, authHoc = null) {
   return Object.values(routes).map((route) => {
     if (route.redirect) {
@@ -18,11 +33,7 @@ export default function createRoutes(routes, authHoc = null) {
     }
 
     // Either standard or universal component
-    let component = { route };
-    if (!route.eager) {
-      const asyncOpts = Object.assign({}, { loading: Loading }, route.async || {});
-      component = universal(route.component, asyncOpts);
-    }
+    const component = getComponent(route);
 
     // handle public routes (no auth required, e.g: login)
     if (route.public || !authHoc) {
