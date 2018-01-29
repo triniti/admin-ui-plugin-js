@@ -10,17 +10,17 @@ import Loading from '../loading';
  * @param route.component
  * @returns React.Component
  */
-function getComponent(route) {
+const getComponent = (route) => {
   let component = { route };
   if (!route.eager) {
-    const asyncOpts = Object.assign({}, { loading: Loading }, route.async || {});
+    const asyncOpts = Object.assign({ loading: Loading }, route.async || {});
     component = universal(route.component, asyncOpts);
   }
   return component;
-}
+};
 
-export default function createRoutes(routes, authHoc = null) {
-  return Object.values(routes).map((route) => {
+export default (routes, authHoc = null) =>
+  Object.values(routes).map((route) => {
     if (route.redirect) {
       return (
         <Route
@@ -51,4 +51,3 @@ export default function createRoutes(routes, authHoc = null) {
       />
     );
   });
-}
