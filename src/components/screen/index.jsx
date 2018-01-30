@@ -6,13 +6,14 @@ import Button from '../button';
 import Icon from '../icon';
 import './styles.scss';
 
+// fixme: this seems not very reacty
 const toggleSideWrapper = () => {
-    const sideNavWrapper = document.getElementById('sidenav');
-    if (sideNavWrapper.classList.contains('offcanvas-left')) {
-        sideNavWrapper.classList.remove('offcanvas-left');
-    } else {
-        sideNavWrapper.classList.add('offcanvas-left');
-    }
+  const sideNavWrapper = document.getElementById('sidenav');
+  if (sideNavWrapper.classList.contains('offcanvas-left')) {
+    sideNavWrapper.classList.remove('offcanvas-left');
+  } else {
+    sideNavWrapper.classList.add('offcanvas-left');
+  }
 };
 
 const Screen = (props) => {
@@ -22,8 +23,7 @@ const Screen = (props) => {
     header,
     sidenav,
     sidenavHeader,
-    sidenavHeaderTitle,
-    screenBody,
+    body,
     footer,
     primaryActions,
     secondaryActions,
@@ -34,14 +34,13 @@ const Screen = (props) => {
 
       {sidenav &&
       <div className="screen-sidenav" id="sidenav">
-        {sidenavHeader &&
+        {sidenavHeader !== null &&
         <div className="screen-sidenav__header">
-          {sidenavHeaderTitle && <h3 className="screen-sidenav__header-title">{sidenavHeaderTitle}</h3>}
+          {sidenavHeader && <h3 className="screen-sidenav__header-title">{sidenavHeader}</h3>}
           <Button outline color="hover" className="screen-sidenav__toggler" onClick={toggleSideWrapper}>
             <Icon imgSrc="angle-left" alt="close" className="screen-sidenav__toggler-img" />
           </Button>
-        </div>
-        }
+        </div>}
         <div className="screen-sidenav__body">{sidenav}</div>
       </div>}
 
@@ -53,11 +52,8 @@ const Screen = (props) => {
         </div>}
 
         <AlertBar alerts={alerts} onDismiss={id => dispatch(dismissAlert(id))} />
-
-        {screenBody}
+        {body}
       </div>
-
-
 
       {(footer || secondaryActions) &&
       <div className="screen-footer-container">
@@ -70,20 +66,24 @@ const Screen = (props) => {
 };
 
 Screen.propTypes = {
-  dispatch: PropTypes.func.isRequired,
+  dispatch: PropTypes.func,
   alerts: PropTypes.array,
   header: PropTypes.node,
   sidenav: PropTypes.node,
-  sidenavHeader: PropTypes.bool,
-  sidenavHeaderTitle: PropTypes.node,
-  screenBody: PropTypes.node,
+  sidenavHeader: PropTypes.node,
+  body: PropTypes.node,
   footer: PropTypes.node,
   primaryActions: PropTypes.node,
   secondaryActions: PropTypes.node,
 };
 
+const noop = () => {
+};
+
 Screen.defaultProps = {
+  dispatch: noop,
   alerts: [],
+  sidenavHeader: null,
 };
 
 export default Screen;

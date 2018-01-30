@@ -1,3 +1,4 @@
+import ActionButton from './action-button';
 import Alert from './alert';
 import AlertBar from './alert-bar';
 // import App from './app';
@@ -73,8 +74,6 @@ import NavLink from './nav-link';
 import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
 import NavbarToggler from './navbar-toggler';
-import PageActionButton from './page-action-button';
-import PageActions from './page-actions';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import PaginationItem from './pagination-item';
@@ -120,6 +119,7 @@ import {
 import UncontrolledCarousel from './uncontrolled-carousel';
 
 export {
+  ActionButton,
   Alert,
   AlertBar,
   // App,
@@ -196,8 +196,6 @@ export {
   Navbar,
   NavbarBrand,
   NavbarToggler,
-  PageActionButton,
-  PageActions,
   PageHeader,
   Pagination,
   PaginationItem,

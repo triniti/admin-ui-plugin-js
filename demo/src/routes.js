@@ -1,17 +1,15 @@
-import DemoScreen from '../DemoScreen';
-
 const r = id => `demo/${id}`;
 
 const routes = {
   [r('demo')]: {
-    path: '/:componentId',
-    component: DemoScreen,
+    path: '/:screen',
+    component: props => import(`./screens/${props.match.params.screen}`),
   },
   [r('indexRedirect')]: {
     path: '/',
     exact: false,
     redirect: {
-      to: '/alerts',
+      to: '/welcome',
     },
   },
 };

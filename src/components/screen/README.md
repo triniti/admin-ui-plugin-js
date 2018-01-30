@@ -8,9 +8,9 @@ Most of the props available expect `PropTypes.node`.  The intention is for you t
 
 
 ## props
-The only required prop is the `dispatch` function from redux.  This is needed to allow the `<AlertBar>` to dismiss messages.  It may be expanded in the future but it is not likely that this component will become a "container" (connected to redux).  The goal is for this to be responsible for placing components and styling, not managing state. 
+The `dispatch` function is expected to be from redux.  This is needed to allow the `<AlertBar>` to dismiss messages.  It may be expanded in the future but it is not likely that this component will become a "container" (connected to redux).  The goal is for this to be responsible for placing components and styling, not managing state. 
 
-+ __dispatch:__ `PropTypes.func.isRequired` - The redux dispatch function.
++ __dispatch:__ `PropTypes.func` - The redux dispatch function, if not supplied dismissing alerts is a noop.
 + __alerts:__ `PropTypes.array` - An array of alerts that the `<AlertBar>` component supports.
 + __header:__ `PropTypes.node` - Intended for page header-like elements, e.g. `<Breadcrumb>`, `<h1>`, `<header>`. 
 + __sidenav:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.  Everything provided is contained within a collapsable _drawer_.
