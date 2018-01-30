@@ -2,6 +2,7 @@
 
 
 ## v0.4.0
+* Add support for lazy loading components with react universal (default is to lazy load).
 * Add new `screen` component which handles all of the placement of regions by exposing semantic props rather than requiring the assembly of components.
 * Change `page-action-button` to just `action-button`.
 * Remove the following components as they are not necessary now that screen exists:
