@@ -5,7 +5,6 @@
 $sidenav-width:     300px;
 
 
-
 .screen {
   display: flex;
   flex-direction: row;
@@ -151,6 +150,7 @@ $sidenav-width:     300px;
 
   @media (max-width: 767px) {
     transition: margin $transition;
+    width: 100vw;
 
     // todo: mobile header scrolls horizontally or will have to reduce to smaller nav
     overflow: hidden;
@@ -178,6 +178,7 @@ $sidenav-width:     300px;
 .screen-header__title {
   font-size: 1.1rem;
   font-weight: 500;
+  margin-right: 1rem;
   margin-bottom: 0;
   padding: .5rem 0;
   letter-spacing: 0;
@@ -185,50 +186,12 @@ $sidenav-width:     300px;
 }
 
 @media (max-width: 767px) {
-  .offcanvas-left + .screen-header__container .screen-header__title {
+  .offcanvas-left + .screen-main .screen-header__title {
     margin-left: 1.75rem;
   }
 }
 
-.screen-body__container {
-  position: relative;
-  display: flex;
-  flex: 1 1 auto;
-  min-height: 0;
-  width: 100%;
-
-  &:not(.screen-body__container--split) {
-    flex-wrap: wrap;
-    align-items: flex-start;
-    align-content: flex-start;
-    overflow: hidden;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    -webkit-backface-visibility: hidden;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    -ms-overflow-style: none;
-  }
-
-  @media (max-width: 767px) {
-    width: 100vw;
-  }
-}
-
-.screen-body__container--split {
-  overflow: visible;
-}
-
-.screen-body {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  flex: 1 1 auto;
-  min-height: 0;
-  width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-backface-visibility: hidden;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  -ms-overflow-style: none;
+.screen-primary-actions {
+  flex: 0 0 auto;
+  margin: .25rem 0 .25rem auto;
 }

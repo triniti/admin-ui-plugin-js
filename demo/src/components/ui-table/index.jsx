@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Table } from '../../../../src/components';
+import { Card, CardBody, CardHeader, ScreenBody, Table } from '../../../../src/components';
 
-const UiTable = () => [
+const UiTable = () => (
+  <ScreenBody
+    body={[
     <Card key="table1">
       <CardBody>
         <Table size="sm" stickyTop fixed>
@@ -447,6 +449,9 @@ const UiTable = () => [
         </Table>
       </CardBody>
     </Card>,
-];
+    ]}
+  >
+  </ScreenBody>
+);
 
 export default UiTable;

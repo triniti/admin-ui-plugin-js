@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row, ScreenBody } from '../../../../src/components';
 
 class UiNav extends React.Component {
   constructor(props) {
@@ -26,7 +26,9 @@ class UiNav extends React.Component {
   }
 
   render() {
-    return [
+    return (
+    <ScreenBody
+      body={[
       <Card key="nav1">
         <CardHeader spacing="lg" inset>List Based</CardHeader>
         <CardBody spacing="lg">
@@ -224,7 +226,10 @@ class UiNav extends React.Component {
           </Row>
         </CardBody>
       </Card>,
-    ];
+      ]}
+      >
+      </ScreenBody>
+    );
   }
 }
 

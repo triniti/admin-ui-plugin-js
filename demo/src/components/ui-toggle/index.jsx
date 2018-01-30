@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row, ScreenBody } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {
@@ -23,7 +23,9 @@ class UiToggle extends Component {
   }
 
   render() {
-    return [
+    return (
+    <ScreenBody
+      body={[
       <Card key="toggle1">
         <CardHeader inset>
           <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - inset</Button>
@@ -197,7 +199,10 @@ class UiToggle extends Component {
           </CardBody>
         </Collapse>
       </Card>,
-    ];
+      ]}
+      >
+      </ScreenBody>
+    );
   }
 }
 

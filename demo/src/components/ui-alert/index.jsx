@@ -1,8 +1,9 @@
 import React from 'react';
-import { Alert, Card, CardBody, CardHeader, Table, UncontrolledAlert } from '../../../../src/components';
+import { Alert, Card, CardBody, CardHeader, ScreenBody, Table, UncontrolledAlert } from '../../../../src/components';
 
-const UiAlert = () => [
-
+const UiAlert = () => (
+  <ScreenBody
+    body={[
     <Card key="alert1">
       <CardHeader spacing="lg" inset>Inline Content Alerts</CardHeader>
       <CardBody spacing="lg">
@@ -194,6 +195,10 @@ const UiAlert = () => [
         </Alert>
       </CardBody>
     </Card>,
-];
+  ]}
+  >
+  </ScreenBody>
+);
+
 
 export default UiAlert;

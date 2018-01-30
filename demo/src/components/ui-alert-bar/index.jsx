@@ -1,5 +1,5 @@
 import React from 'react';
-import { AlertBar, Card, CardBody, CardHeader } from '../../../../src/components';
+import { AlertBar, Card, CardBody, CardHeader, ScreenBody } from '../../../../src/components';
 
 const alerts = [
   {
@@ -71,12 +71,17 @@ const alerts = [
 ];
 
 const UiAlertBar = () => (
+  <ScreenBody
+    body={
     <Card>
       <CardHeader spacing="lg" inset>Assorted Alert Bar Variants</CardHeader>
       <CardBody spacing="lg">
         <AlertBar alerts={alerts} onDismiss={() => {}} />
       </CardBody>
     </Card>
+  }
+  >
+  </ScreenBody>
 );
 
 export default UiAlertBar;

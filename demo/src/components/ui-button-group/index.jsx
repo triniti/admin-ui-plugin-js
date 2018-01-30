@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardBody, Button, ButtonGroup, ButtonToolbar } from '../../../../src/components';
+import { Card, CardBody, Button, ButtonGroup, ButtonToolbar, ScreenBody } from '../../../../src/components';
 
 const UiButtonGroup = () => (
+  <ScreenBody
+    body={
     <Card>
       <CardBody spacing="lg">
         <ButtonToolbar>
@@ -24,6 +26,10 @@ const UiButtonGroup = () => (
         </ButtonToolbar>
       </CardBody>
     </Card>
+   }
+  >
+  </ScreenBody>
 );
+
 
 export default UiButtonGroup;

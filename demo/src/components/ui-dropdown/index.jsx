@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row } from '../../../../src/components';
+import { Card, CardBody, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, ScreenBody } from '../../../../src/components';
 import CardHeader from '../../../../src/components/card-header/index';
 
 class UiDropdown extends React.Component {
@@ -28,6 +28,8 @@ class UiDropdown extends React.Component {
 
   render() {
     return (
+    <ScreenBody
+    body={
       <Card>
         <CardHeader spacing="lg" inset>Dropdown</CardHeader>
         <CardBody spacing="lg">
@@ -49,6 +51,9 @@ class UiDropdown extends React.Component {
           </Row>
         </CardBody>
       </Card>
+      }
+      >
+      </ScreenBody>
     );
   }
 }

@@ -1,7 +1,9 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, ScreenBody, Spinner, UncontrolledTooltip } from '../../../../src/components';
 
-export default () => [
+const UiIcons = () => (
+<ScreenBody
+  body={[
     <Card key="icons1">
       <CardHeader spacing="lg" inset>Icons</CardHeader>
       <CardBody spacing="lg">
@@ -96,4 +98,9 @@ export default () => [
         </Row>
       </CardBody>
     </Card>,
-];
+    ]}
+  >
+  </ScreenBody>
+);
+
+export default UiIcons;

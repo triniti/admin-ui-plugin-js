@@ -1,8 +1,10 @@
 import React from 'react';
-import { Breadcrumb, BreadcrumbItem, Button, Card, CardBody, CardHeader, CardTitle } from '../../../../src/components';
+import { Breadcrumb, BreadcrumbItem, Button, Card, CardBody, CardHeader, CardTitle, ScreenBody } from '../../../../src/components';
 import iconClose from '../../assets/img/svg/icons/close.svg';
 
 const UiBreadcrumb = () => (
+  <ScreenBody
+  body={
     <Card>
       <CardBody spacing="lg">
         <Breadcrumb>
@@ -37,6 +39,9 @@ const UiBreadcrumb = () => (
         </div>
       </CardBody>
     </Card>
+  }
+  >
+  </ScreenBody>
 );
 
 export default UiBreadcrumb;

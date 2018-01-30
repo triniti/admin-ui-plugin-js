@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row } from '../../../../src/components';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row, ScreenBody } from '../../../../src/components';
 
 class UiInputGroup extends React.Component {
   constructor(props) {
@@ -18,7 +18,9 @@ class UiInputGroup extends React.Component {
   }
 
   render() {
-    return [
+    return (
+    <ScreenBody
+      body={[
       <Card key="imput1">
         <CardHeader spacing="lg" inset>Standard Form</CardHeader>
         <CardBody spacing="lg">
@@ -111,58 +113,58 @@ class UiInputGroup extends React.Component {
             <Col sm="6">
               <InputGroup>
                 <InputGroupAddon>@</InputGroupAddon>
-                <Input placeholder="username" />
+                <Input placeholder="username" theme="white" />
               </InputGroup>
 
               <InputGroup>
                 <InputGroupAddon>
                   <Input addon type="checkbox" aria-label="Checkbox for following text input" />
                 </InputGroupAddon>
-                <Input placeholder="Check it out" />
+                <Input placeholder="Check it out" theme="white" />
               </InputGroup>
 
               <InputGroup>
-                <Input placeholder="username" />
+                <Input placeholder="username" theme="white" />
                 <InputGroupAddon>@example.com</InputGroupAddon>
               </InputGroup>
 
               <InputGroup>
                 <InputGroupAddon>$</InputGroupAddon>
                 <InputGroupAddon>$</InputGroupAddon>
-                <Input placeholder="Dolla dolla billz yo!" />
+                <Input placeholder="Dolla dolla billz yo!" theme="white" />
                 <InputGroupAddon>$</InputGroupAddon>
                 <InputGroupAddon>$</InputGroupAddon>
               </InputGroup>
 
               <InputGroup size="lg">
                 <InputGroupAddon>$</InputGroupAddon>
-                <Input placeholder="Amount" type="number" step="1" />
+                <Input placeholder="Amount" type="number" step="1" theme="white" />
                 <InputGroupAddon>.00</InputGroupAddon>
               </InputGroup>
 
               <InputGroup>
                 <InputGroupAddon>To the Left!</InputGroupAddon>
-                <Input />
+                <Input theme="white" />
               </InputGroup>
 
               <InputGroup size="sm">
-                <Input />
+                <Input theme="white" />
                 <InputGroupAddon>To the Right!</InputGroupAddon>
               </InputGroup>
 
               <InputGroup>
                 <InputGroupAddon>To the Left!</InputGroupAddon>
-                <Input placeholder="and..." />
+                <Input placeholder="and..." theme="white" />
                 <InputGroupAddon>To the Right!</InputGroupAddon>
               </InputGroup>
 
               <InputGroup>
                 <InputGroupButton><Button color="primary">I'm a button</Button></InputGroupButton>
-                <Input />
+                <Input theme="white" />
               </InputGroup>
 
               <InputGroup>
-                <Input />
+                <Input theme="white" />
                 <InputGroupButton>
                   <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle caret>
@@ -181,14 +183,17 @@ class UiInputGroup extends React.Component {
 
               <InputGroup>
                 <InputGroupButton />
-                <Input placeholder="and..." />
+                <Input placeholder="and..." theme="white" />
                 <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
               </InputGroup>
             </Col>
           </Row>
         </CardBody>
       </Card>,
-    ];
+      ]}
+      >
+      </ScreenBody>
+    );
   }
 }
 

@@ -19,17 +19,12 @@ const Screen = (props) => {
   const {
     dispatch,
     alerts,
-
     header,
     sidenav,
     sidenavHeader,
     sidenavHeaderTitle,
-    sidebar,
-    tabs,
-    split,
-    body,
+    screenBody,
     footer,
-
     primaryActions,
     secondaryActions,
   } = props;
@@ -53,20 +48,13 @@ const Screen = (props) => {
       <div className="screen-main">
         {(header || primaryActions) &&
         <div className="screen-header__container">
-          {header && <h1 className="screen-header">{header}</h1>}
+          {header && <h1 className="screen-header__title">{header}</h1>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
 
         <AlertBar alerts={alerts} onDismiss={id => dispatch(dismissAlert(id))} />
 
-        {tabs && <div className="screen-tabs">{tabs}</div>}
-
-        {body && <div className="screen-body">{body}</div>}
-
-        {split && <div className="screen-body__container">
-            <div className="screen-body">{body}</div>
-            {sidebar && <div className="screen-sidebar">{sidebar}</div>}
-        </div>}
+        {screenBody}
       </div>
 
 
@@ -84,17 +72,12 @@ const Screen = (props) => {
 Screen.propTypes = {
   dispatch: PropTypes.func.isRequired,
   alerts: PropTypes.array,
-
   header: PropTypes.node,
   sidenav: PropTypes.node,
   sidenavHeader: PropTypes.bool,
   sidenavHeaderTitle: PropTypes.node,
-  sidebar: PropTypes.node,
-  tabs: PropTypes.node,
-  split: PropTypes.node,
-  body: PropTypes.node,
+  screenBody: PropTypes.node,
   footer: PropTypes.node,
-
   primaryActions: PropTypes.node,
   secondaryActions: PropTypes.node,
 };

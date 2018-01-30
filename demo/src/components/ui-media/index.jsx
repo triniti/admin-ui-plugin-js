@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row, ScreenBody } from '../../../../src/components';
 
-const UiMedia = () => [
+const UiMedia = () => (
+<ScreenBody
+  body={[
     <Card key="media1">
       <CardHeader spacing="lg" inset>Media Left</CardHeader>
       <CardBody spacing="lg">
@@ -223,6 +225,9 @@ const UiMedia = () => [
         </Row>
       </CardBody>
     </Card>,
-];
+    ]}
+  >
+  </ScreenBody>
+);
 
 export default UiMedia;

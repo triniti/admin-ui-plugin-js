@@ -91,6 +91,7 @@ import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
 import Screen from './screen';
+import ScreenBody from './screen-body';
 import ScreenContent from './screen-content';
 import ScrollableContainer from './scrollable-container';
 import Sidebar from './sidebar';
@@ -213,6 +214,7 @@ export {
   RouterLink,
   Row,
   Screen,
+  ScreenBody,
   ScreenContent as ContentContainer,
   ScreenContent,
   ScrollableContainer,

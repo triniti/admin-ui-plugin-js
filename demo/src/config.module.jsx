@@ -9,7 +9,6 @@ import UiButtonDropDown from './components/ui-button-drop-down';
 import UiButtonGroup from './components/ui-button-group';
 import UiCard from './components/ui-card';
 import UiToggle from './components/ui-toggle';
-import UiDatalist from './components/ui-datalist';
 import UiDropdown from './components/ui-dropdown';
 import UiForm from './components/ui-form';
 import UiHeaders from './components/ui-headers';
@@ -39,7 +38,6 @@ export default {
   'button-drop-down': <UiButtonDropDown />,
   'button-group': UiButtonGroup(),
   card: UiCard(),
-  datalist: <UiDatalist />,
   dropdown: <UiDropdown />,
   form: <UiForm />,
   headers: <UiHeaders />,

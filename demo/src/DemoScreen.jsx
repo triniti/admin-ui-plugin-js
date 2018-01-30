@@ -3,19 +3,21 @@ import { withRouter } from 'react-router';
 import Screen from '../../src/components/screen';
 import UiSideNavContainer from './components/UiSideNavContainer';
 import UiComponentContainer from './components/UiComponentContainer';
-import UiPageActions from './components/UiPageActions';
+import UiScreenActions from './components/UiScreenActions';
+import UiScreenHeader from './components/UiScreenHeader';
 
 export default () => {
   const SideNavWithRouter = withRouter(UiSideNavContainer);
   const UiComponentWithRouter = withRouter(UiComponentContainer);
+  const UiScreenHeaderWithRouter = withRouter(UiScreenHeader);
 
   return (
     <Screen
         sidenav={<SideNavWithRouter />}
-        body={<UiComponentWithRouter />}
+        screenBody={<UiComponentWithRouter />}
         sidenavHeader
-        header
-        primaryActions={<UiPageActions />}
+        header={<UiScreenHeaderWithRouter />}
+        primaryActions={<UiScreenActions />}
         >
     </Screen>
   );

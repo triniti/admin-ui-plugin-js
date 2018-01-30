@@ -257,6 +257,7 @@ h4.card-title {
   font-weight: 400;
   color: $gray-rgba-800;
   background-color: transparent;
+  z-index: initial;
 
   &::before {
     display: none;

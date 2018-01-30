@@ -1,7 +1,9 @@
 import React from 'react';
-import { Card, CardTitle, CardBody, Pagination, PaginationItem, PaginationLink } from '../../../../src/components';
+import { Card, CardTitle, CardBody, Pagination, PaginationItem, PaginationLink, ScreenBody } from '../../../../src/components';
 
 const UiPagination = () => (
+  <ScreenBody
+    body={
     <Card>
       <CardBody spacing="lg">
         <Pagination>
@@ -89,6 +91,9 @@ const UiPagination = () => (
         </Pagination>
       </CardBody>
     </Card>
+  }
+  >
+  </ScreenBody>
 );
 
 export default UiPagination;

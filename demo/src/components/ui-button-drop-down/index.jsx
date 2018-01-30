@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonDropdown, Card, CardBody, DropdownItem, DropdownMenu, DropdownToggle } from '../../../../src/components';
+import { ButtonDropdown, Card, CardBody, DropdownItem, DropdownMenu, DropdownToggle, ScreenBody } from '../../../../src/components';
 
 class UiButtonDropdown extends React.Component {
   constructor(props) {
@@ -19,6 +19,8 @@ class UiButtonDropdown extends React.Component {
 
   render() {
     return (
+    <ScreenBody
+    body={
       <Card>
         <CardBody spacing="lg">
           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
@@ -35,6 +37,9 @@ class UiButtonDropdown extends React.Component {
           </ButtonDropdown>
         </CardBody>
       </Card>
+      }
+      >
+      </ScreenBody>
     );
   }
 }

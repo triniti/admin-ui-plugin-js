@@ -6,7 +6,7 @@ import NavItem from '../nav-item';
 const TabNav = ({ children }) => {
   const navs = children.map((child, i) => <NavItem key={i}>{child}</NavItem>);
   return (
-  <Nav underline className="pt-2" theme="light" sticky>
+  <Nav underline className="pt-2" theme="light">
     {navs}
   </Nav>
   );

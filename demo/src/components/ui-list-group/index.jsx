@@ -1,7 +1,9 @@
 import React from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row } from '../../../../src/components';
+import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, ScreenBody } from '../../../../src/components';
 
-const UiListGroup = () => [
+const UiListGroup = () => (
+<ScreenBody
+  body={[
   <Card key="list-group1">
     <CardHeader spacing="lg" inset>List Group Items</CardHeader>
     <CardBody spacing="lg">
@@ -176,6 +178,9 @@ const UiListGroup = () => [
       </Row>
     </CardBody>
   </Card>,
-];
+  ]}
+  >
+  </ScreenBody>
+);
 
 export default UiListGroup;
