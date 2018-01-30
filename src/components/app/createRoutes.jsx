@@ -4,13 +4,20 @@ import universal from 'react-universal-component';
 import Loading from '../loading';
 
 /**
- * Chooses to return either a standard component if `eager` is set to true or a universal component
- * for a lazy loaded component.
+ * Chooses to return either a standard component if `route.eager` is set to true or a universal
+ * component for a lazy loaded component.
  *
- * @param route.component
+ * If universal component, then `route.component` must be a method or import (promise).
+ *
+ * Ie: import('somepath/component');
+ * Ie: (props) => import('somepath/component');
+ *
+ * @param {Boolean|undefined} [route.eager]
+ * @param {React.Component|function} route.component
  * @returns React.Component
+ * @see https://github.com/faceyspacey/react-universal-component
  */
-const getComponent = route => {
+const getComponent = (route) => {
   if (route.eager) {
     return route.component;
   }
