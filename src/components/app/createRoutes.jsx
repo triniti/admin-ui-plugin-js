@@ -10,13 +10,12 @@ import Loading from '../loading';
  * @param route.component
  * @returns React.Component
  */
-const getComponent = (route) => {
-  let component = { route };
-  if (!route.eager) {
-    const asyncOpts = Object.assign({ loading: Loading }, route.async || {});
-    component = universal(route.component, asyncOpts);
+const getComponent = route => {
+  if (route.eager) {
+    return route.component;
   }
-  return component;
+
+  return universal(route.component, Object.assign({ loading: Loading }, route.async || {}));
 };
 
 export default (routes, authHoc = null) =>
