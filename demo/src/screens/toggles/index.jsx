@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row, Screen } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {
     super(props);
     this.toggleOuter = this.toggleOuter.bind(this);
     this.toggleOuter2 = this.toggleOuter2.bind(this);
+    this.toggleOuter3 = this.toggleOuter3.bind(this);
+    this.toggleOuter4 = this.toggleOuter4.bind(this);
     this.toggleInner = this.toggleInner.bind(this);
     this.state = { collapseOuter: false };
   }
@@ -18,6 +20,14 @@ class UiToggle extends Component {
 
   toggleOuter2() {
     this.setState({ collapseOuter2: !this.state.collapseOuter2 });
+  }
+
+  toggleOuter3() {
+    this.setState({ collapseOuter3: !this.state.collapseOuter3 });
+  }
+
+  toggleOuter4() {
+    this.setState({ collapseOuter4: !this.state.collapseOuter4 });
   }
 
   toggleInner() {
@@ -37,20 +47,20 @@ class UiToggle extends Component {
       primaryActions={<PrimaryActions />}
       body={[
       <Card key="toggle1">
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header -</Button>
+        <CardHeader fullwidth>
+          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - fullwidth</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
           <CardBody>
-            <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
+            <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" inverse /> Toggle Content</Button>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Collapse isOpen={this.state.collapseInner}>
                   <Card>
                     <CardBody>
-                      <CardTitle>Special Title Treatment</CardTitle>
+                      <CardTitle>Card Title 1</CardTitle>
                       <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" radius="none"> Button</Button>
+                      <Button outline> Button</Button>
                     </CardBody>
                   </Card>
                 </Collapse>
@@ -61,8 +71,8 @@ class UiToggle extends Component {
       </Card>,
 
       <Card key="toggle2">
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example -</Button>
+        <CardHeader fullwidth>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example  - fullwidth</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
           <CardBody>
@@ -70,30 +80,9 @@ class UiToggle extends Component {
               <Col xs="12" md="9" lg="6">
                 <Card>
                   <CardBody>
-                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardTitle>Card Title 2</CardTitle>
                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button outline size="lg" radius="none"> Button</Button>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </CardBody>
-        </Collapse>
-      </Card>,
-
-      <Card key="toggle2">
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
-        </CardHeader>
-        <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody>
-            <Row>
-              <Col xs="12" md="9" lg="6">
-                <Card>
-                  <CardBody>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button outline size="lg" radius="none"> Button</Button>
+                    <Button outline> Button</Button>
                   </CardBody>
                 </Card>
               </Col>
@@ -104,17 +93,17 @@ class UiToggle extends Component {
 
       <Card key="toggle3">
         <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+          <Button color="toggler" onClick={this.toggleOuter3} active={this.state.collapseOuter3}>Second Example</Button>
         </CardHeader>
-        <Collapse isOpen={this.state.collapseOuter2}>
+        <Collapse isOpen={this.state.collapseOuter3}>
           <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
                   <CardBody>
-                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardTitle>Card Title 3</CardTitle>
                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button outline size="lg" radius="none"> Button</Button>
+                    <Button outline> Button</Button>
                   </CardBody>
                 </Card>
               </Col>
@@ -125,83 +114,17 @@ class UiToggle extends Component {
 
       <Card key="toggle4">
         <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
+          <Button color="toggler" onClick={this.toggleOuter4} active={this.state.collapseOuter4}>Second Example</Button>
         </CardHeader>
-        <Collapse isOpen={this.state.collapseOuter2}>
+        <Collapse isOpen={this.state.collapseOuter4}>
           <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
                   <CardBody>
-                    <CardTitle>Special Title Treatment</CardTitle>
+                    <CardTitle>Card Title 4</CardTitle>
                     <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button outline size="lg" radius="none"> Button</Button>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </CardBody>
-        </Collapse>
-      </Card>,
-
-      <Card key="toggle5">
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header -</Button>
-        </CardHeader>
-        <Collapse isOpen={this.state.collapseOuter}>
-          <CardBody>
-            <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
-            <Row>
-              <Col xs="12" md="9" lg="6">
-                <Collapse isOpen={this.state.collapseInner}>
-                  <Card>
-                    <CardBody>
-                      <CardTitle>Special Title Treatment</CardTitle>
-                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                      <Button outline size="lg" radius="none"> Button</Button>
-                    </CardBody>
-                  </Card>
-                </Collapse>
-              </Col>
-            </Row>
-          </CardBody>
-        </Collapse>
-      </Card>,
-
-      <Card key="toggle6">
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example -</Button>
-        </CardHeader>
-        <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody>
-            <Row>
-              <Col xs="12" md="9" lg="6">
-                <Card>
-                  <CardBody>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button outline size="lg" radius="none"> Button</Button>
-                  </CardBody>
-                </Card>
-              </Col>
-            </Row>
-          </CardBody>
-        </Collapse>
-      </Card>,
-
-      <Card key="toggle7">
-        <CardHeader>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example -</Button>
-        </CardHeader>
-        <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody>
-            <Row>
-              <Col xs="12" md="9" lg="6">
-                <Card>
-                  <CardBody>
-                    <CardTitle>Special Title Treatment</CardTitle>
-                    <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                    <Button outline size="lg" radius="none"> Button</Button>
+                    <Button outline> Button</Button>
                   </CardBody>
                 </Card>
               </Col>

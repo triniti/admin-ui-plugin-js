@@ -236,7 +236,7 @@ $sidenav-width:     300px;
   flex: 0 0 auto;
   flex-wrap: nowrap;
   transition: margin $transition;
-  background-color: theme-color("light");
+  // background-color: theme-color("light");
   width: 360px;
   border-left: 1px solid $gray-500;
   overflow: hidden;

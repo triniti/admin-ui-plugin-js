@@ -36,24 +36,22 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert2">
-      <CardHeader>Full Width Content Alerts</CardHeader>
-      <CardBody>
-        <Alert color="success" fullWidth className="mb-3">
-          <strong>Well done!</strong> You successfully read this important alert message.
-        </Alert>
-        <Alert color="info" fullWidth className="mb-3">
-          <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-        </Alert>
-        <Alert color="warning" fullWidth className="mb-3">
-          <strong>Warning!</strong> Better check yourself, you're not looking too good.
-        </Alert>
-        <Alert color="danger" fullWidth className="mb-3">
-          <strong>Oh snap!</strong> Change a few things up and try submitting again.
-        </Alert>
-        <UncontrolledAlert color="info" fullWidth className="mb-3">
-          I am an alert and I can be dismissed!
-        </UncontrolledAlert>
-      </CardBody>
+      <CardHeader fullwidth className="mb-3">Full Width Content Alerts</CardHeader>
+      <Alert color="success" className="mb-3">
+        <strong>Well done!</strong> You successfully read this important alert message.
+      </Alert>
+      <Alert color="info" className="mb-3">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      </Alert>
+      <Alert color="warning" className="mb-3">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      </Alert>
+      <Alert color="danger" className="mb-3">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </Alert>
+      <UncontrolledAlert color="info" className="mb-3">
+        I am an alert and I can be dismissed!
+      </UncontrolledAlert>
     </Card>,
 
     <Card key="alert3">
@@ -79,87 +77,27 @@ const UiAlert = () => (
 
 
     <Card key="alert4">
-      <CardHeader>Full Width Content Alerts (alert-inverse)</CardHeader>
+      <CardHeader fullwidth className="mb-3">Full Width Content Alerts (alert-inverse)</CardHeader>
       <UncontrolledAlert color="info" inverse fullWidth sticky>
         <span><strong>Full Width</strong> Alert outside of Card Container and Sticky</span>
       </UncontrolledAlert>
-      <CardBody>
-        <Alert color="success" inverse fullWidth className="mb-3">
-          <strong>Well done!</strong> Full Width inside Section Container
-        </Alert>
-        <Alert color="info" inverse fullWidth className="mb-3">
-          <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-        </Alert>
-        <Alert color="warning" inverse fullWidth className="mb-3">
-          <strong>Warning!</strong> Better check yourself, you're not looking too good.
-        </Alert>
-        <Alert color="danger" inverse fullWidth className="mb-3">
-          <strong>Oh snap!</strong> Change a few things up and try submitting again.
-        </Alert>
-        <UncontrolledAlert color="info" inverse fullWidth className="mb-3">
-          I am an alert and I can be dismissed!
-        </UncontrolledAlert>
-      </CardBody>
-    </Card>,
 
-    <Card key="alert5">
-      <CardHeader>Border Alerts (has-border)</CardHeader>
-      <CardBody>
-        <div className="has-border border-primary mb-4">
-          <strong>Well done!</strong> Example Border Alert - Primary
-        </div>
-        <div className="has-border border-success mb-4">
-          <strong>Well done!</strong> Example Border Alert - Success
-        </div>
-        <div className="has-border border-info mb-4">
-          <strong>Well done!</strong> Example Border Alert - Info
-        </div>
-        <div className="has-border border-warning mb-4">
-          <strong>Well done!</strong> Example Border Alert - Warning
-        </div>
-        <div className="has-border border-danger mb-4">
-          <strong>Well done!</strong> Example Border Alert - Danger
-        </div>
-        <div className="has-border border-inverse mb-4">
-          <strong>Well done!</strong> Example Border Alert - Inverse
-        </div>
-        <div className="has-border border-secondary mb-4">
-          <strong>Well done!</strong> Example Border Alert - Secondary
-        </div>
-        <div className="has-border mb-4">
-          <strong>Well done!</strong> Example Border Alert - Default
-        </div>
-      </CardBody>
-    </Card>,
+      <Alert color="success" inverse fullWidth className="mb-3">
+        <strong>Well done!</strong> Full Width inside Section Container
+      </Alert>
+      <Alert color="info" inverse fullWidth className="mb-3">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
+      </Alert>
+      <Alert color="warning" inverse fullWidth className="mb-3">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+      </Alert>
+      <Alert color="danger" inverse fullWidth className="mb-3">
+        <strong>Oh snap!</strong> Change a few things up and try submitting again.
+      </Alert>
+      <UncontrolledAlert color="info" inverse fullWidth className="mb-3">
+        I am an alert and I can be dismissed!
+      </UncontrolledAlert>
 
-    <Card key="alert6">
-      <CardHeader>Border Alerts (has-border, border-indent)</CardHeader>
-      <CardBody>
-        <div className="has-border border-indent border-primary mb-4">
-          <strong>Well done!</strong> Example Border Alert - Primary
-        </div>
-        <div className="has-border border-indent border-success mb-4">
-          <strong>Well done!</strong> Example Border Alert - Success
-        </div>
-        <div className="has-border border-indent border-info mb-4">
-          <strong>Well done!</strong> Example Border Alert - Info
-        </div>
-        <div className="has-border border-indent border-warning mb-4">
-          <strong>Well done!</strong> Example Border Alert - Warning
-        </div>
-        <div className="has-border border-indent border-danger mb-4">
-          <strong>Well done!</strong> Example Border Alert - Danger
-        </div>
-        <div className="has-border border-indent border-inverse mb-4">
-          <strong>Well done!</strong> Example Border Alert - Inverse
-        </div>
-        <div className="has-border border-indent border-secondary mb-4">
-          <strong>Well done!</strong> Example Border Alert - Secondary
-        </div>
-        <div className="has-border border-indent mb-4">
-          <strong>Well done!</strong> Example Border Alert - Default
-        </div>
-      </CardBody>
     </Card>,
 
     <Card key="alert7">

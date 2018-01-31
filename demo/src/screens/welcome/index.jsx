@@ -34,8 +34,10 @@ export default () => (
     ]}
     body={
       <Jumbotron>
+        <Card body>
         <h1>Triniti Admin UI Demos</h1>
         <p className="lead">Use the sidenav to view different examples.</p>
+        </Card>
       </Jumbotron>
     }
   />
