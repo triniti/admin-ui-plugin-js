@@ -21,20 +21,6 @@
   z-index: $zindex-sticky;
   background-color: $body-bg;
   min-height: $header-height + 1;
-
-  .main-content & {
-    background-color: $gray-200;
-
-    &::before {
-      position: absolute;
-      top: 0;
-      right: 0;
-      left: 0;
-      height: 100%;
-      content: '';
-      box-shadow: 0 -1rem $gray-200;
-    }
-  }
 }
 
 .nav-link {
@@ -163,6 +149,7 @@
     -webkit-backface-visibility: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -ms-overflow-style: none;
+    max-width: 100vw;
   }
 
   @media(min-width: 1025px) {

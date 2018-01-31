@@ -3,11 +3,12 @@ import PropTypes from 'prop-types';
 import Exception from '@gdbots/common/Exception';
 import { STATUS_NONE, STATUS_PENDING, STATUS_REJECTED } from '@triniti/app/constants';
 import Alert from '../alert';
+import Loading from '../loading';
 
 const StatusMessage = ({ status, exception }) => {
   switch (status) {
     case STATUS_PENDING:
-      return <Alert color="info">Loading...</Alert>;
+      return <Loading />;
 
     case STATUS_REJECTED:
       // fixme: we can derive a friendly message based on exception.getCode() as well

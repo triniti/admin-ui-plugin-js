@@ -1,3 +1,4 @@
+import ActionButton from './action-button';
 import Alert from './alert';
 import AlertBar from './alert-bar';
 // import App from './app';
@@ -57,8 +58,6 @@ import ListGroupItem from './list-group-item';
 import ListGroupItemHeading from './list-group-item-heading';
 import ListGroupItemText from './list-group-item-text';
 import Loading from './loading';
-import Main from './main';
-import MainContent from './main-content';
 import MainNav from './main-nav';
 import Media from './media';
 import MobileNav from './mobile-nav';
@@ -73,8 +72,6 @@ import NavLink from './nav-link';
 import Navbar from './navbar';
 import NavbarBrand from './navbar-brand';
 import NavbarToggler from './navbar-toggler';
-import PageActionButton from './page-action-button';
-import PageActions from './page-actions';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import PaginationItem from './pagination-item';
@@ -89,15 +86,12 @@ import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
-import ScreenContent from './screen-content';
+import Screen from './screen';
 import ScrollableContainer from './scrollable-container';
-import Sidebar from './sidebar';
-import SidebarHeader from './sidebar-header';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Switch from './switch';
 import TabContent from './tab-content';
-import TabNav from './tab-nav';
 import TabPane from './tab-pane';
 import Table from './table';
 import Tooltip from './tooltip';
@@ -113,6 +107,7 @@ import {
 import UncontrolledCarousel from './uncontrolled-carousel';
 
 export {
+  ActionButton,
   Alert,
   AlertBar,
   // App,
@@ -172,9 +167,6 @@ export {
   ListGroupItemHeading,
   ListGroupItemText,
   Loading,
-  Main,
-  Main as MainContainer,
-  MainContent,
   MainNav,
   Media,
   MobileNav,
@@ -189,8 +181,6 @@ export {
   Navbar,
   NavbarBrand,
   NavbarToggler,
-  PageActionButton,
-  PageActions,
   PageHeader,
   Pagination,
   PaginationItem,
@@ -205,16 +195,12 @@ export {
   Radio,
   RouterLink,
   Row,
-  ScreenContent as ContentContainer,
-  ScreenContent,
+  Screen,
   ScrollableContainer,
-  Sidebar,
-  SidebarHeader,
   Spinner,
   StatusMessage,
   Switch,
   TabContent,
-  TabNav,
   TabPane,
   Table,
   Tooltip,

@@ -7,7 +7,7 @@
   @include border-radius(0);
 
   @include media-breakpoint-up(sm) {
-    padding: ($jumbotron-padding * 2) $jumbotron-padding;
+    padding: $jumbotron-padding;
   }
 }
 

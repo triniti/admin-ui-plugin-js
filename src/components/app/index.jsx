@@ -19,10 +19,13 @@ const App = ({ location, navConfig, routes, authHoc }) => (
 App.propTypes = {
   location: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
-  authHoc: PropTypes.func.isRequired,
+  authHoc: PropTypes.func,
   navConfig: PropTypes.array,
 };
 
-App.defaultProps = { navConfig: [] };
+App.defaultProps = {
+  navConfig: [],
+  authHoc: null,
+};
 
 export default withRouter(App);

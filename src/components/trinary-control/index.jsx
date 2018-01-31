@@ -9,7 +9,7 @@ const TRUE_VAL = 1;
 const FALSE_VAL = 2;
 
 const propTypes = {
-  value: PropTypes.oneOf([0, 1, 2, '0', '1', '2']).isRequired,
+  value: PropTypes.oneOf([0, 1, 2, '0', '1', '2']),
   onChange: PropTypes.func.isRequired,
   className: PropTypes.string,
   cssModule: PropTypes.object,
@@ -23,6 +23,7 @@ const propTypes = {
 };
 
 const defaultProps = {
+  value: UNKNOWN,
   unsetText: 'Any',
   trueText: 'Yes',
   falseText: 'No',

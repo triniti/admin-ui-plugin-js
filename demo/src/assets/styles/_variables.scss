@@ -85,8 +85,8 @@ $red:     #f74b4b !default;
 $orange:  #f99121 !default;
 $yellow:  #fbba23 !default;
 $green:   #1dc185 !default;
-$teal:    #00c1b3 !default;
-$cyan:    #14a0f3 !default;
+$teal:    #2ec0b3 !default; // #00c1b3
+$cyan:    #2fa4ed !default; //
 
 $colors: (
   blue: $blue,
@@ -106,9 +106,9 @@ $colors: (
 
 $theme-colors: (
   primary: $teal,
-  secondary: #2f3347,
+  secondary: $cyan,
   success: $green,
-  info: $cyan,
+  info: #14a0f3,
   warning: $orange,
   danger: $red,
   light: $gray-200,
@@ -621,7 +621,7 @@ $pagination-disabled-border-color:     $gray-600 !default;
 
 // Jumbotron
 
-$jumbotron-padding:              2rem !default;
+$jumbotron-padding:              3.25rem !default;
 $jumbotron-bg:                   transparent !default;
 
 

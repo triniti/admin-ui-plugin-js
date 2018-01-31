@@ -8,6 +8,7 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   display: PropTypes.string,
+  section: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -20,6 +21,7 @@ const CardTitle = (props) => {
     className,
     cssModule,
     display,
+    section,
     tag: Tag,
     ...attributes
   } = props;
@@ -27,6 +29,7 @@ const CardTitle = (props) => {
     className,
     'card-title',
     display ? `display-${display}` : false,
+    section ? `card-section-title` : false,
   ), cssModule);
 
   return (

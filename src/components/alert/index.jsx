@@ -14,7 +14,6 @@ const propTypes = {
   color: PropTypes.string,
   isOpen: PropTypes.bool,
   inverse: PropTypes.bool,
-  fullWidth: PropTypes.bool,
   sticky: PropTypes.bool,
   toggle: PropTypes.func,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -45,7 +44,6 @@ function Alert(props) {
     children,
     transition,
     inverse,
-    fullWidth,
     sticky,
     ...attributes
   } = props;
@@ -55,7 +53,6 @@ function Alert(props) {
     'alert',
     `alert-${color}`,
     inverse ? 'alert-inverse' : false,
-    fullWidth ? 'alert-full-width' : false,
     sticky ? 'alert-sticky' : false,
     { 'alert-dismissible': toggle },
   ), cssModule);

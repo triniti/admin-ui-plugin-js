@@ -1,0 +1,407 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins";
+@import "variables-custom";
+
+// Variables
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Bootstrap defaults without modifying key, versioned files.
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Table of Contents
+//
+// Color system
+// Options
+// Spacing
+// Body
+// Links
+// Paragraphs
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navs
+// Navbar
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+
+//
+// Color system
+//
+
+$white:    #fff !default;
+$gray-100: #fafafa;
+$gray-200: #f7f7f7;
+$gray-300: #f2f2f2;
+$gray-400: #efefef;
+$gray-500: #e9e9e9;
+$gray-600: #e0e0e0;
+$gray-700: #d9d9de;
+$gray-800: #505050;
+$gray-900: #292929;
+$black:    #000 !default;
+
+
+$blue:    #166cd6;
+$indigo:  #6610f2;
+$purple:  #8052da;
+$pink:    #ea1761;
+$red:     #f74b4b;
+$orange:  #f99121;
+$yellow:  #fbba23;
+$green:   #1dc185;
+$teal:    #00c1b3;
+$cyan:    #14a0f3;
+
+$primary:       $teal;
+$secondary:     #2f3347;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $orange;
+$danger:        $red !default;
+$light:         $gray-200;
+$dark:          $gray-800 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:            theme-color("primary") !default;
+$link-decoration:       none !default;
+$link-hover-color:      darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px, // 992px is default
+  xl: 1200px
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-gutter-width: 2rem;
+
+// Components
+//
+// Define common padding and radius sizes and more.
+
+$border-color:                $gray-500;
+
+$border-radius:               .2rem;
+$border-radius-lg:            .25rem;
+$border-radius-sm:            .2rem;
+
+$component-active-color:      inherit;
+$component-active-bg:         $gray-200;  // todo theme-color("primary") !default; affects $input-btn-focus-color
+
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-size-base:              .825rem; // Assumes the browser default, typically `16px` = `13.2px`
+$font-size-lg:                1rem;
+$font-size-sm:                .8rem;
+
+
+$h1-font-size:                1.75rem;
+$h2-font-size:                1.5rem;
+$h3-font-size:                1.25rem;
+$h4-font-size:                1.1rem;
+$h5-font-size:                1rem;
+$h6-font-size:                .825rem;
+
+$headings-line-height:        1.1;
+
+
+$display1-size:               3rem;
+$display2-size:               2.5rem;
+$display3-size:               2rem;
+$display4-size:               1.5rem;
+
+$text-muted:                  #bdbdbd;
+
+$blockquote-small-color:      $gray-700;
+
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+
+$table-accent-bg:               $gray-100;
+$table-hover-bg:                $gray-100;
+
+$table-head-bg:                 $white;
+$table-head-color:              $gray-900;
+
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+
+// Buttons
+//
+// For each of Bootstrap's buttons, define text, background, and border color.
+
+$btn-font-weight:             $font-weight-bold;
+$btn-box-shadow:              none;
+$btn-focus-width:             0;
+$btn-focus-box-shadow:        none;
+
+$btn-active-box-shadow:       none;
+
+$btn-link-disabled-color:     $gray-700;
+
+// Allows for customizing button radius independently from global border radius
+
+$btn-transition:                 background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+
+// Forms
+
+$input-bg:                       $gray-100;
+
+$input-color:                    $gray-900;
+$input-border-color:             rgba($black,.125);
+$input-box-shadow:               none;
+
+// $input-focus-border-color:       $gray-700;
+// $input-focus-box-shadow:         none;
+
+$input-placeholder-color:        $text-muted;
+
+$input-group-addon-bg:           $white;
+
+$custom-control-indicator-bg:    #ddd;  // $gray-300 !default;
+
+$custom-file-focus-box-shadow: 0 0 0 .075rem $white, 0 0 0 .2rem theme-color("primary");  // todo $input-btn-focus-box-shadow
+
+$custom-file-text: (
+  placeholder: (
+    en: "Choose file..."
+  ),
+  button-label: (
+    en: "Browse"
+  )
+);  // todo placeholder may longer be needed
+
+
+// Dropdowns
+//
+// Dropdown menu container and contents.
+
+$dropdown-border-color:          rgba($black,.125);
+$dropdown-divider-bg:            $gray-300;
+$dropdown-box-shadow:            0 2px 8px 0 rgba(#000, .1);
+
+$dropdown-link-active-bg:        $dropdown-link-hover-bg;
+
+$dropdown-link-disabled-color:   $text-muted;
+
+$dropdown-header-color:          $gray-900;
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown:           1025;
+$zindex-popover:            1025;
+
+// Navs
+
+$nav-link-disabled-color:       $text-muted;
+
+$nav-tabs-border-color:                       $gray-300;
+$nav-tabs-border-radius:                      0;
+$nav-tabs-link-hover-border-color:            transparent;
+$nav-tabs-link-active-color:                  $black;
+$nav-tabs-link-active-border-color:           $gray-600; // todo check if multiple border colors is better
+
+// Navbar
+
+$navbar-toggler-border-radius:       0;
+
+$navbar-dark-color:                 rgba($white,.6);
+$navbar-dark-hover-color:           rgba($white,.825);
+$navbar-dark-active-color:          $white;
+$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-dark-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-dark-toggler-border-color:  transparent;
+
+$navbar-light-color:                rgba($black,.6);
+$navbar-light-hover-color:          rgba($black,.8);
+$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-light-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-border-color: transparent;
+
+// Pagination
+
+$pagination-color:                     $gray-900;
+$pagination-border-color:              $gray-600;
+
+$pagination-hover-border-color:        $gray-600;
+
+$pagination-active-color:              $white;
+$pagination-active-bg:                 theme-color("primary");
+$pagination-active-border-color:       theme-color("primary");
+
+$pagination-disabled-color:            $text-muted;
+$pagination-disabled-bg:               $gray-200;
+$pagination-disabled-border-color:     $gray-600;
+
+
+// Jumbotron
+
+$jumbotron-bg:                   transparent;
+
+
+// Cards
+
+$card-border-width:        1px;
+$card-border-radius:       0;
+$card-border-color:        $gray-500;
+$card-inner-border-radius: 0;
+$card-cap-bg:              transparent;
+$card-bg:                  transparent;
+
+
+// Tooltips
+
+$tooltip-bg:                  $gray-900;
+$tooltip-opacity:             .98;
+$tooltip-padding-y:           5px;
+$tooltip-padding-x:           10px;
+$tooltip-margin:              3px;
+
+
+$tooltip-arrow-width:         10px; // todo check since it was 5px and had no effect
+$tooltip-arrow-height:        5px;
+
+
+// Popovers
+
+$popover-box-shadow:                  0 10px 8px -6px $gray-rgba-300;
+
+$popover-header-bg:                   $body-bg;
+
+$popover-header-padding-x:            .875rem;
+
+$popover-body-padding-y:              9px;
+$popover-body-padding-x:              $popover-header-padding-x;
+
+$popover-arrow-width:                 14px; // todo check since it was 15px
+$popover-arrow-height:                9px;
+
+
+// Badges
+
+$badge-padding-y:             .33em;
+$badge-padding-x:             .6em;
+
+
+// Modals
+
+$modal-content-box-shadow-xs:    0 3px 9px rgba(#000, .1);
+$modal-content-box-shadow-sm-up: 0 5px 15px rgba(#000, .1);
+
+$modal-backdrop-opacity:      .4;
+$modal-header-border-color:   $gray-500;
+$modal-header-padding:        1rem;
+
+
+// Alerts
+//
+// Define alert colors, border radius, and padding.
+
+$alert-border-radius:         $border-radius-lg;
+
+
+// Progress bars
+
+$progress-font-size:            .75rem;
+$progress-bg:                   $gray-400;
+$progress-border-radius:        10rem;
+
+// List group
+
+$list-group-bg:                  transparent;
+$list-group-border-color:        rgba(#000, .1);
+
+$list-group-active-bg:                $gray-400;
+$list-group-active-border-color:      $gray-600;
+
+$list-group-action-color:             $gray-900;
+
+
+// Image thumbnails
+
+$thumbnail-border-color:      $gray-500;
+$thumbnail-box-shadow:        0 1px 2px rgba(#000, .0625);
+
+
+// Breadcrumbs
+
+$breadcrumb-padding-y:          0;
+$breadcrumb-padding-x:          0;
+$breadcrumb-item-padding:       .75rem;
+
+$breadcrumb-margin-bottom:      0;
+
+$breadcrumb-bg:                 transparent;
+$breadcrumb-active-color:       $gray-900;
+
+
+//
+// Additional Custom Variables
+//
+
+// Navbar Theme Colors
+
+$navbar-theme-light:    $gray-200 !default;
+$navbar-theme-dark:     darken(theme-color("dark"), 10%) !default;
+
+$navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%) !default;
+$navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%) !default;

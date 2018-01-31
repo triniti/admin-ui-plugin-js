@@ -11,7 +11,11 @@
   padding: $alert-padding-y $alert-padding-x;
   margin-bottom: $alert-margin-bottom;
   border: none;
-  @include border-radius($alert-border-radius);
+  border-radius: 0;
+
+  .card-body > & {
+    @include border-radius($alert-border-radius);
+  }
 }
 
 // Headings for larger alerts
@@ -51,7 +55,7 @@
   z-index: $zindex-sticky;
 
   display: flex;
-  min-height: $header-height;
+  min-height: $header-height + 2;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
@@ -73,49 +77,6 @@
 
 .alert p:last-of-type {
   margin-bottom: 0;
-}
-
-
-// full-width alerts
-
-.alert-full-width {
-  margin: 0;
-  padding-top: .75rem;
-  padding-right: $padding-xs;
-  padding-bottom: .75rem;
-  padding-left: $padding-xs;
-  border-radius: 0;
-
-  @media (min-width: 768px) {
-    padding-right: $padding-md;
-    padding-left: $padding-md;
-  }
-  @media (min-width: 1025px) {
-    padding-right: $padding-lg;
-    padding-left: $padding-lg;
-  }
-  @media (min-width: 1600px) {
-    padding-right: $padding-xl;
-    padding-left: $padding-xl;
-  }
-}
-
-.card-body .alert-full-width {
-  margin: 0 (-$padding-sm);
-}
-
-.card-body-spacing-lg .alert-full-width {
-  margin: 0 (-$padding-xs);
-
-  @media (min-width: 768px) {
-    margin: 0 (-$padding-md);
-  }
-  @media (min-width: 1025px) {
-    margin: 0 (-$padding-lg);
-  }
-  @media (min-width: 1600px) {
-    margin: 0 (-$padding-xl);
-  }
 }
 
 

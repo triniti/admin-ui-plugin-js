@@ -138,6 +138,29 @@
 
 // list-group-nav styles
 
+.list-group-nav {
+  flex-shrink: 0;
+}
+
+.list-group-nav .list-group-item {
+  padding: 0;
+}
+
+.list-group-nav .list-group-item a {
+  display: block;
+  font-size: .9rem;
+  color: $gray-900;
+  font-weight: 400;
+  line-height: 1;
+  padding: 1rem 1.25rem;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    box-shadow: inset 3px 0 0 $gray-700;
+  }
+}
+
 .list-group-nav .list-group-item {
   border: none;
   cursor: pointer;
@@ -165,11 +188,6 @@
   height: 100%;
   margin-left: 0;
   background-color: theme-color("primary");
-}
-.scrollable-container .list-group-nav {
-  padding-top: 1rem;
-  margin-bottom: 1rem;
-  border-bottom: 1px solid $gray-500;
 }
 
 
