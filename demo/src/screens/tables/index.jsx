@@ -156,7 +156,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader3" className="mb-0">
-        <CardHeader fullwidth>Striped Table + Sticky</CardHeader>
+        <CardHeader fullWidth>Striped Table + Sticky</CardHeader>
       </Card>,
       <Card body key="table3">
         <Table striped className="sticky-top fixed">
@@ -194,7 +194,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader4" className="mb-0">
-        <CardHeader fullwidth>Inverse Table</CardHeader>
+        <CardHeader fullWidth>Inverse Table</CardHeader>
       </Card>,
       <Card body key="table4">
         <Table inverse>
@@ -230,7 +230,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader5" className="mb-0">
-        <CardHeader fullwidth>Striped Table</CardHeader>
+        <CardHeader fullWidth>Striped Table</CardHeader>
       </Card>,
       <Card body key="table5">
         <Table striped>
@@ -266,7 +266,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader6" className="mb-0">
-        <CardHeader fullwidth>Bordered Table</CardHeader>
+        <CardHeader fullWidth>Bordered Table</CardHeader>
       </Card>,
       <Card body key="table6">
         <Table bordered>
@@ -302,7 +302,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader7" className="mb-0">
-        <CardHeader fullwidth>Borderless Table</CardHeader>
+        <CardHeader fullWidth>Borderless Table</CardHeader>
       </Card>,
       <Card body key="table7">
         <Table hover borderless>
@@ -338,7 +338,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader8" className="mb-0">
-        <CardHeader fullwidth>Hoverable Rows Table</CardHeader>
+        <CardHeader fullWidth>Hoverable Rows Table</CardHeader>
       </Card>,
       <Card body key="table8">
           <Table hover>
@@ -374,7 +374,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader9" className="mb-0">
-        <CardHeader fullwidth>Small</CardHeader>
+        <CardHeader fullWidth>Small</CardHeader>
       </Card>,
       <Card body key="table9">
         <Table size="sm">
@@ -410,7 +410,7 @@ export default () => (
       </Card>,
 
       <Card key="tableheader10" className="mb-0">
-        <CardHeader fullwidth>Responsive Table</CardHeader>
+        <CardHeader fullWidth>Responsive Table</CardHeader>
       </Card>,
       <Card body key="table10">
         <Table responsive>

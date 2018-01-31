@@ -16,7 +16,7 @@ const UiBreadcrumb = () => (
     primaryActions={<PrimaryActions />}
     body={
     <Card>
-      <CardHeader fullwidth>
+      <CardHeader fullWidth>
         <Breadcrumb>
           <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
           <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>

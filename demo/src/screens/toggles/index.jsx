@@ -47,8 +47,8 @@ class UiToggle extends Component {
       primaryActions={<PrimaryActions />}
       body={[
       <Card key="toggle1" className="mb-0">
-        <CardHeader fullwidth>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - fullwidth</Button>
+        <CardHeader fullWidth>
+          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - fullWidth</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
           <CardBody>
@@ -71,8 +71,8 @@ class UiToggle extends Component {
       </Card>,
 
       <Card key="toggle2">
-        <CardHeader fullwidth>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example  - fullwidth</Button>
+        <CardHeader fullWidth>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example  - fullWidth</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
           <CardBody>

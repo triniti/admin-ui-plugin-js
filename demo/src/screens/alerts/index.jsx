@@ -36,7 +36,7 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert2">
-      <CardHeader fullwidth className="mb-3">Full Width Content Alerts</CardHeader>
+      <CardHeader fullWidth className="mb-3">Full Width Content Alerts</CardHeader>
       <Alert color="success" className="mb-3">
         <strong>Well done!</strong> You successfully read this important alert message.
       </Alert>
@@ -77,7 +77,7 @@ const UiAlert = () => (
 
 
     <Card key="alert4">
-      <CardHeader fullwidth className="mb-3">Full Width Content Alerts (alert-inverse)</CardHeader>
+      <CardHeader fullWidth className="mb-3">Full Width Content Alerts (alert-inverse)</CardHeader>
       <UncontrolledAlert color="info" inverse sticky>
         <span><strong>Full Width</strong> Alert outside of Card Container and Sticky</span>
       </UncontrolledAlert>

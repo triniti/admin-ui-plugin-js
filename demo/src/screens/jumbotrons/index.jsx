@@ -18,7 +18,7 @@ export default () => (
     sidenavHeader
     body={[
       <Card key="jumbotron1">
-        <CardHeader fullwidth>Jumbotron Theme Dark</CardHeader>
+        <CardHeader fullWidth>Jumbotron Theme Dark</CardHeader>
         <Jumbotron theme="dark">
           <Container fluid>
             <CardTitle display="1" tag="h1">Inside Container Fluid</CardTitle>
@@ -30,7 +30,7 @@ export default () => (
       </Card>,
 
       <Card key="jumbotron2">
-        <CardHeader fullwidth>Jumbotron Theme Light</CardHeader>
+        <CardHeader fullWidth>Jumbotron Theme Light</CardHeader>
         <Jumbotron theme="light">
           <CardBody>
             <CardTitle display="1" tag="h1">Inside CardBody</CardTitle>
@@ -42,7 +42,7 @@ export default () => (
       </Card>,
 
       <Card key="jumbotron3">
-        <CardHeader fullwidth>Jumbotron Default inside CardBody & Container</CardHeader>
+        <CardHeader fullWidth>Jumbotron Default inside CardBody & Container</CardHeader>
         <CardBody>
           <Jumbotron>
             <CardBody>
@@ -64,7 +64,7 @@ export default () => (
       </Card>,
 
       <Card key="jumbotron4">
-        <CardHeader fullwidth>Jumbotron inside Container Fluid</CardHeader>
+        <CardHeader fullWidth>Jumbotron inside Container Fluid</CardHeader>
 
           <Jumbotron>
             <Container fluid>

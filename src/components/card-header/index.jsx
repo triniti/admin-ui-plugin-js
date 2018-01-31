@@ -7,7 +7,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  fullwidth: PropTypes.bool,
+  fullWidth: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -18,14 +18,14 @@ const CardHeader = (props) => {
   const {
     className,
     cssModule,
-    fullwidth,
+    fullWidth,
     tag: Tag,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'card-header',
-    fullwidth ? `card-header-full-width` : false,
+    fullWidth ? `card-header-full-width` : false,
   ), cssModule);
 
   return (
