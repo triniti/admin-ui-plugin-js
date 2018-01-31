@@ -20,12 +20,12 @@ const toggleSidenav = () => {
 };
 
 const toggleSidebar = () => {
-    const sideBarWrapper = document.getElementById('screen-sidebar');
-    if (sideBarWrapper.classList.contains('screen-sidebar-is-open')) {
-      sideBarWrapper.classList.remove('screen-sidebar-is-open');
-    } else {
-      sideBarWrapper.classList.add('screen-sidebar-is-open');
-    }
+  const sideBarWrapper = document.getElementById('screen-sidebar');
+  if (sideBarWrapper.classList.contains('screen-sidebar-is-open')) {
+    sideBarWrapper.classList.remove('screen-sidebar-is-open');
+  } else {
+    sideBarWrapper.classList.add('screen-sidebar-is-open');
+  }
 };
 
 const Screen = (props) => {
@@ -78,15 +78,14 @@ const Screen = (props) => {
 
         <div className="screen-body-container">
           <div className="screen-body">{body}</div>
-          {sidebar && <div className="screen-sidebar" id="screen-sidebar">
+          {sidebar &&
+          <div className="screen-sidebar" id="screen-sidebar">
             <Button radius="circle" color="info" className="screen-sidebar-toggler" onClick={toggleSidebar}>
               <Icon imgSrc="arrow-left" alt="arrow" size="xl" inverse />
             </Button>
             <div className="screen-sidebar-body">{sidebar}</div>
-          </div>
-          }
+          </div>}
         </div>
-
       </div>
 
       {(footer || secondaryActions) &&
@@ -94,7 +93,6 @@ const Screen = (props) => {
         {footer && <div className="screen-footer">{footer}</div>}
         {secondaryActions && <div className="screen-secondary-actions">{secondaryActions}</div>}
       </div>}
-
     </div>
   );
 };
