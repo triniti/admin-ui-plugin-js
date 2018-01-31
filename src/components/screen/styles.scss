@@ -236,15 +236,9 @@ $sidenav-width:     300px;
   flex: 0 0 auto;
   flex-wrap: nowrap;
   transition: margin $transition;
-  // background-color: theme-color("light");
+  background-color: $white; // theme-color("light")
   width: 360px;
   border-left: 1px solid $gray-500;
-  overflow: hidden;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  -webkit-backface-visibility: hidden;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  -ms-overflow-style: none;
 
   @media (max-width: 1023px) {
     position: absolute;
@@ -258,12 +252,12 @@ $sidenav-width:     300px;
     min-height: 50vh;
     flex: 1 0 auto;
     transform: translateY(100%);
-
     transition: transform $transition;
+    z-index: $zindex-fixed;
 
-    &.screen-sidebar--is-open {
+    &.screen-sidebar-is-open {
       transform: translateY(0);
-      box-shadow: 0 -6px 12px -3px rgba(0,0,0,0.25), inset 0 1px 0 $white;
+      // box-shadow: 0 -6px 12px -3px rgba(0,0,0,0.25), inset 0 1px 0 $white;
 
       &::before {
         content: '';
@@ -278,7 +272,7 @@ $sidenav-width:     300px;
   }
 }
 
-.screen-sidebar__body {
+.screen-sidebar-body {
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -292,7 +286,7 @@ $sidenav-width:     300px;
   width: 100%;
 }
 
-.screen-sidebar__toggler {
+.screen-sidebar-toggler {
   position: absolute;
   top: -3.25rem;
   right: .5rem;
@@ -312,7 +306,7 @@ $sidenav-width:     300px;
   & img {
     transform: rotate(90deg);
 
-    .screen-sidebar--is-open & {
+    .screen-sidebar-is-open & {
       transform: rotate(-90deg);
     }
   }

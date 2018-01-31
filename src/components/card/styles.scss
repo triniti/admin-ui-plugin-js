@@ -95,23 +95,6 @@
   align-items: center;
   flex: 1 1 auto;
   margin-bottom: $card-spacer-y;
-
-  .screen-sidebar & {
-    position: relative;
-    min-height: auto;
-    margin-bottom: 1.25rem;
-    padding: 0;
-    border-bottom: $card-border-width solid $card-border-color;
-    white-space: nowrap;
-    font-size: .9em;
-    line-height: 2;
-    text-transform: uppercase;
-    letter-spacing: .01em;
-    font-weight: 400;
-    color: $gray-rgba-800;
-    background-color: transparent;
-    z-index: initial;
-  }
 }
 
 h1.card-title {
@@ -130,6 +113,23 @@ h3.card-title {
 
 h4.card-title {
   margin-top: 2rem;
+}
+
+.card-section-title {
+  position: relative;
+  min-height: auto;
+  margin-bottom: 1.25rem;
+  padding: 0;
+  border-bottom: $card-border-width solid $card-border-color;
+  white-space: nowrap;
+  font-size: .9em;
+  line-height: 2;
+  text-transform: uppercase;
+  letter-spacing: .01em;
+  font-weight: 400;
+  color: $gray-rgba-800;
+  background-color: transparent;
+  z-index: initial;
 }
 
 .card-title-sm {
@@ -202,8 +202,8 @@ h4.card-title {
     background-color: theme-color("light");
   }
 
-  .screen-sidebar > .card:not(:first-child) & {
-      border-top: 1px solid $card-border-color;
+  .screen-sidebar-body > .card:not(:first-child) & {
+      box-shadow: 0 -1px 0 $card-border-color;
     }
 
   .screen-body > .card:first-child > & {

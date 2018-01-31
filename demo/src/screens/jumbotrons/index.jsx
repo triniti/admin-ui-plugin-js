@@ -18,10 +18,10 @@ export default () => (
     sidenavHeader
     body={[
       <Card key="jumbotron1">
-        <CardHeader>Jumbotron Theme Dark</CardHeader>
+        <CardHeader fullwidth>Jumbotron Theme Dark</CardHeader>
         <Jumbotron theme="dark">
           <Container fluid>
-            <CardTitle display="1">Fluid Jumbotron</CardTitle>
+            <CardTitle display="1" tag="h1">Inside Container Fluid</CardTitle>
             <p className="lead">This is a modified jumbotron that occupies the entire
               horizontal space of its parent.
             </p>
@@ -30,10 +30,10 @@ export default () => (
       </Card>,
 
       <Card key="jumbotron2">
-        <CardHeader>Jumbotron Theme Light</CardHeader>
+        <CardHeader fullwidth>Jumbotron Theme Light</CardHeader>
         <Jumbotron theme="light">
           <CardBody>
-            <CardTitle display="1">CardBody Jumbotron</CardTitle>
+            <CardTitle display="1" tag="h1">Inside CardBody</CardTitle>
             <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
               parent.
             </p>
@@ -42,11 +42,11 @@ export default () => (
       </Card>,
 
       <Card key="jumbotron3">
-        <CardHeader>Jumbotron Default inside CardBody</CardHeader>
+        <CardHeader fullwidth>Jumbotron Default inside CardBody & Container</CardHeader>
         <CardBody>
           <Jumbotron>
             <CardBody>
-              <CardTitle display="3">Hello, world!</CardTitle>
+              <CardTitle display="3" tag="h1">Hello, world!</CardTitle>
               <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra
                 attention to featured content or information.
               </p>
@@ -64,17 +64,17 @@ export default () => (
       </Card>,
 
       <Card key="jumbotron4">
-        <CardHeader>Jumbotron inside CardBody</CardHeader>
-        <CardBody>
+        <CardHeader fullwidth>Jumbotron inside Container Fluid</CardHeader>
+
           <Jumbotron>
             <Container fluid>
-              <CardTitle display="2">Fluid Jumbotron</CardTitle>
+              <CardTitle display="2" tag="h1">Fluid Jumbotron</CardTitle>
               <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
                 parent.
               </p>
             </Container>
           </Jumbotron>
-        </CardBody>
+
       </Card>,
     ]}
   />

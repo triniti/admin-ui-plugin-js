@@ -1,25 +1,10 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions jsx-a11y/click-events-have-key-events */
 import React from 'react';
-import classnames from 'classnames';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import {
-  Button,
-  Card,
-  CardBody,
-  CardHeader,
-  CardText,
-  CardTitle,
-  Col,
-  Nav,
-  NavItem,
-  Row,
-  Screen,
-  TabContent,
-  TabPane,
-} from '../../../../src/components';
+import classnames from 'classnames';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, Screen, TabContent, TabPane } from '../../../../src/components';
 
-export default class TabsScreen extends React.Component {
+class UiTabs extends React.Component {
   constructor(props) {
     super(props);
 
@@ -50,22 +35,29 @@ export default class TabsScreen extends React.Component {
   render() {
     return (
       <Screen
-        sidenav={<Sidenav activeScreen="tabs" />}
-        sidenavHeader
-        header="Tabs"
-        primaryActions={<PrimaryActions />}
-        tabs={[
-          { to: '#/tabs', text: 'Inactive Tab' },
-          { to: '/tabs', text: 'Active Tab' },
-        ]}
-        sidebar={
-          <Card>
-            <CardBody>
-              <CardTitle>Card Title</CardTitle>
-              body
-            </CardBody>
-          </Card>
-        }
+      sidenav={<Sidenav activeScreen="tabs" />}
+      sidenavHeader
+      header="Tabs"
+      primaryActions={<PrimaryActions />}
+      tabs={[
+        { to: '/tabs', text: 'Tab1' },
+        { to: '#/test2', text: 'Tab2' },
+      ]}
+      sidebar={
+        <Card>
+          <CardHeader>Sidebar Header</CardHeader>
+          <CardBody>
+            <CardTitle section>Card Title Section</CardTitle>
+            body
+          </CardBody>
+        </Card>
+      }
+
+      // tabs={[
+      //    <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>,
+      //    <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+      //    ]
+      //  }
         body={
           <Card>
             <TabContent activeTab={this.state.activeTab1}>
@@ -76,11 +68,7 @@ export default class TabsScreen extends React.Component {
                       <Col xs="12" sm="6">
                         <Card>
                           <CardTitle>Underline Tabs, Sticky Top, No Sidebar</CardTitle>
-                          <CardText>If using tabs as navigation for main-content, should probably
-                            follow sidebar template since it has additional containers in case
-                            sidebar is used in the
-                            future.
-                          </CardText>
+                          <CardText>If using tabs as navigation for main-content, should probably follow sidebar template since it has additional containers in case sidebar is used in the future.</CardText>
                           <Button>Go somewhere</Button>
                         </Card>
                       </Col>
@@ -95,20 +83,14 @@ export default class TabsScreen extends React.Component {
                       <Col sm="6">
                         <Card>
                           <CardTitle>Special Title Treatment</CardTitle>
-                          <CardText>
-                            With supporting text below as a natural lead-in to
-                            additional content.
-                          </CardText>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                           <Button>Go somewhere</Button>
                         </Card>
                       </Col>
                       <Col sm="6">
                         <Card>
                           <CardTitle>Special Title Treatment</CardTitle>
-                          <CardText>
-                            With supporting text below as a natural lead-in
-                            to additional content.
-                          </CardText>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                           <Button>Go somewhere</Button>
                         </Card>
                       </Col>
@@ -124,9 +106,7 @@ export default class TabsScreen extends React.Component {
                 <NavItem>
                   <div
                     className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '3' })}
-                    onClick={() => {
-                      this.toggle2('3');
-                    }}
+                    onClick={() => { this.toggle2('3'); }}
                   >
                     Tab1
                   </div>
@@ -134,9 +114,7 @@ export default class TabsScreen extends React.Component {
                 <NavItem>
                   <div
                     className={classnames('nav-link tabindex', { active: this.state.activeTab2 === '4' })}
-                    onClick={() => {
-                      this.toggle2('4');
-                    }}
+                    onClick={() => { this.toggle2('4'); }}
                   >
                     Moar Tabs
                   </div>
@@ -151,20 +129,14 @@ export default class TabsScreen extends React.Component {
                         <Col sm="6">
                           <Card>
                             <CardTitle>CardsContainer</CardTitle>
-                            <CardText>
-                              With supporting text below as a natural
-                              lead-in to additional content.
-                            </CardText>
+                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                             <Button>Go somewhere</Button>
                           </Card>
                         </Col>
                         <Col sm="6">
                           <Card>
                             <CardTitle>Special Title Treatment</CardTitle>
-                            <CardText>
-                              With supporting text below as a natural lead-in
-                              to additional content.
-                            </CardText>
+                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                             <Button>Go somewhere</Button>
                           </Card>
                         </Col>
@@ -179,20 +151,14 @@ export default class TabsScreen extends React.Component {
                         <Col sm="6">
                           <Card>
                             <CardTitle>Special Title Treatment</CardTitle>
-                            <CardText>
-                              With supporting text below as a natural lead-in
-                              to additional content.
-                            </CardText>
+                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                             <Button>Go somewhere</Button>
                           </Card>
                         </Col>
                         <Col sm="6">
                           <Card>
                             <CardTitle>CardsContainer</CardTitle>
-                            <CardText>
-                              With supporting text below as a natural lead-in
-                              to additional content.
-                            </CardText>
+                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                             <Button>Go somewhere</Button>
                           </Card>
                         </Col>
@@ -208,3 +174,5 @@ export default class TabsScreen extends React.Component {
     );
   }
 }
+
+export default UiTabs;

@@ -136,22 +136,28 @@ const UiListGroup = () => (
         <Col>
           <ListGroup nav>
             <ListGroupItem active>
+              <a href="">
               <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
               <ListGroupItemText className="mb-0">
                   Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </ListGroupItemText>
+              </a>
             </ListGroupItem>
             <ListGroupItem>
+              <a href="">
               <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
               <ListGroupItemText className="mb-0">
                   Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </ListGroupItemText>
+              </a>
             </ListGroupItem>
             <ListGroupItem>
+              <a href="">
               <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
               <ListGroupItemText className="mb-0">
                   Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </ListGroupItemText>
+              </a>
             </ListGroupItem>
           </ListGroup>
         </Col>
@@ -166,22 +172,28 @@ const UiListGroup = () => (
         <Col>
           <ListGroup borderless nav>
             <ListGroupItem active>
+              <a href="">
               <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
               <ListGroupItemText className="mb-0">
                   Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </ListGroupItemText>
+              </a>
             </ListGroupItem>
             <ListGroupItem>
+              <a href="">
               <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
               <ListGroupItemText className="mb-0">
                   Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </ListGroupItemText>
+              </a>
             </ListGroupItem>
             <ListGroupItem>
+              <a href="">
               <ListGroupItemHeading>List group item heading</ListGroupItemHeading>
               <ListGroupItemText className="mb-0">
                   Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
               </ListGroupItemText>
+              </a>
             </ListGroupItem>
           </ListGroup>
         </Col>

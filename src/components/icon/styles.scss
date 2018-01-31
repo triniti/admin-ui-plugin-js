@@ -61,6 +61,8 @@
   transform: rotate(90deg);
 }
 
-.icon-inverse {
+img.icon-inverse,
+.icon-inverse > img {
   filter: invert(1);
+  opacity: 1;
 }

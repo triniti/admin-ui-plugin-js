@@ -10,13 +10,22 @@ import RouterLink from '../router-link';
 import './styles.scss';
 
 // fixme: this seems not very reacty
-const toggleSideWrapper = () => {
+const toggleSidenav = () => {
   const sideNavWrapper = document.getElementById('sidenav');
   if (sideNavWrapper.classList.contains('offcanvas-left')) {
     sideNavWrapper.classList.remove('offcanvas-left');
   } else {
     sideNavWrapper.classList.add('offcanvas-left');
   }
+};
+
+const toggleSidebar = () => {
+    const sideBarWrapper = document.getElementById('screen-sidebar');
+    if (sideBarWrapper.classList.contains('screen-sidebar-is-open')) {
+      sideBarWrapper.classList.remove('screen-sidebar-is-open');
+    } else {
+      sideBarWrapper.classList.add('screen-sidebar-is-open');
+    }
 };
 
 const Screen = (props) => {
@@ -42,7 +51,7 @@ const Screen = (props) => {
         {sidenavHeader !== null &&
         <div className="screen-sidenav__header">
           {sidenavHeader && <h3 className="screen-sidenav__header-title">{sidenavHeader}</h3>}
-          <Button outline color="hover" className="screen-sidenav__toggler" onClick={toggleSideWrapper}>
+          <Button outline color="hover" className="screen-sidenav__toggler" onClick={toggleSidenav}>
             <Icon imgSrc="angle-left" alt="close" className="screen-sidenav__toggler-img" />
           </Button>
         </div>}
@@ -69,7 +78,13 @@ const Screen = (props) => {
 
         <div className="screen-body-container">
           <div className="screen-body">{body}</div>
-          {sidebar && <div className="screen-sidebar">{sidebar}</div>}
+          {sidebar && <div className="screen-sidebar" id="screen-sidebar">
+            <Button radius="circle" color="info" className="screen-sidebar-toggler" onClick={toggleSidebar}>
+              <Icon imgSrc="arrow-left" alt="arrow" size="xl" inverse />
+            </Button>
+            <div className="screen-sidebar-body">{sidebar}</div>
+          </div>
+          }
         </div>
 
       </div>

@@ -28,21 +28,3 @@
   background-color: $gray-100;
   box-shadow: 0 -1px 0 0 $gray-300;
 }
-
-.card-body > .divider {
-  margin: 1rem (-$card-spacer-x);
-}
-
-.card-body-spacing-lg > .divider {
-  margin: 1.5rem (-$padding-xs);
-
-  @media (min-width: 768px) {
-    margin: 1.5rem (-$padding-md);
-  }
-  @media (min-width: 1025px) {
-    margin: 1.5rem (-$padding-lg);
-  }
-  @media (min-width: 1600px) {
-    margin: 1.5rem (-$padding-xl);
-  }
-}

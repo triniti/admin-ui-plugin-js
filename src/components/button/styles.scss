@@ -12,7 +12,7 @@
   align-items: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -205,11 +205,10 @@ input[type="button"] {
 // Action Buttons
 
 .btn-action {
-  margin-top: .125rem;
-  margin-bottom: .125rem;
+  margin-top: -1px;
+  margin-bottom: 0;
 
   img {
-    margin-top: -1px;
     margin-right: .25rem;
     margin-left: -.25rem;
     opacity: .8;
@@ -234,7 +233,7 @@ input[type="button"] {
 .btn-xl {
   font-size: 1.25rem;
   font-weight: $btn-font-weight;
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 2rem;
   border-width: 2px;
 
   &:hover {

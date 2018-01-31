@@ -157,7 +157,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
-    box-shadow: inset 3px 0 0 theme-color("primary");
+    box-shadow: inset 3px 0 0 $gray-700;
   }
 }
 

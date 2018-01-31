@@ -17,20 +17,26 @@ export default () => (
       <Card key="card2">
         <CardHeader>Sample Card</CardHeader>
         <CardBody>
-          <CardTitle>Card Title</CardTitle>
-          <p>card body text in p tag.</p>
+          <CardTitle section>Card Title</CardTitle>
+          {'Matt, I think card header should be used as the header rather than <CardTitle>.' +
+           'There will be use cases where we want a title in addition to a header.' +
+           'Visually it may look how you have it here, but <CardHeader> should be the header.' +
+           'We will need to visually separate multiple cards.'}
         </CardBody>
       </Card>,
       <Card key="card2">
         <CardHeader>Another Card</CardHeader>
-        <CardBody>card body text.</CardBody>
+        <CardBody>
+          <CardTitle section>Section Title</CardTitle>
+          Moar text. (todo: test with tall sidebar)
+        </CardBody>
       </Card>,
     ]}
     body={
       <Jumbotron>
         <Card body>
-          <h1>Triniti Admin UI Demos</h1>
-          <p className="lead">Use the sidenav to view different examples.</p>
+        <CardTitle tag="h1" display="2">Triniti Admin UI Demos</CardTitle>
+        <p className="lead">Use the sidenav to view different examples.</p>
         </Card>
       </Jumbotron>
     }
