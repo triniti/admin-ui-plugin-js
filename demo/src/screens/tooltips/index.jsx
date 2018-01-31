@@ -4,7 +4,7 @@ import Sidenav from '../../components/sidenav';
 import { Card, CardBody, Screen } from '../../../../src/components';
 import TooltipItem from './TooltipItem';
 
-class UiTooltip extends React.Component {
+export default class TooltipsScreen extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,25 +33,20 @@ class UiTooltip extends React.Component {
   render() {
     return (
       <Screen
-      sidenav={<Sidenav activeScreen="tooltips" />}
-      sidenavHeader
-      header="Tooltips"
-      // tabs={[
-      //   { to: '/welcome', text: 'Tab1' },
-      //   { to: '#/test2', text: 'Tab2' },
-      // ]}
-      primaryActions={<PrimaryActions />}
-      body={
-      <Card>
-        <CardBody>
-          { this.state.tooltips.map((tooltip, i) =>
-            <TooltipItem key={tooltip.placement} item={tooltip} id={i} />)}
-        </CardBody>
-      </Card>
-      }
+        header="Tooltips"
+        sidenav={<Sidenav activeScreen="tooltips" />}
+        sidenavHeader
+        primaryActions={<PrimaryActions />}
+        body={
+          <Card>
+            <CardBody>
+              {this.state.tooltips.map((tooltip, i) => (
+                <TooltipItem key={tooltip.placement} item={tooltip} id={i} />
+              ))}
+            </CardBody>
+          </Card>
+        }
       />
     );
   }
 }
-
-export default UiTooltip;
