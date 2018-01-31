@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
-import PrimaryActions from '../../components/primary-actions';
+import { connect } from 'react-redux';
 import Sidenav from '../../components/sidenav';
-import { AlertBar, Card, CardBody, CardHeader, Screen } from '../../../../src/components';
+import { Screen } from '../../../../src/components';
 
 const alerts = [
   {
@@ -72,25 +73,14 @@ const alerts = [
   },
 ];
 
-const UiAlertBar = () => (
+const AlertBarsScreen = props => (
   <Screen
+    dispatch={props.dispatch}
+    alerts={alerts}
+    header="Alert Bars"
     sidenav={<Sidenav activeScreen="alert-bars" />}
     sidenavHeader
-    header="Alert Bars"
-    // tabs={[
-    //   { to: '/welcome', text: 'Tab1' },
-    //   { to: '#/test2', text: 'Tab2' },
-    // ]}
-    primaryActions={<PrimaryActions />}
-    body={
-    <Card>
-      <CardHeader>Assorted Alert Bar Variants</CardHeader>
-      <CardBody>
-        <AlertBar alerts={alerts} onDismiss={() => {}} />
-      </CardBody>
-    </Card>
-    }
   />
 );
 
-export default UiAlertBar;
+export default connect()(AlertBarsScreen);

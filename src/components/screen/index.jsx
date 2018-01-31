@@ -68,7 +68,7 @@ const Screen = (props) => {
         </Nav>}
 
         <div className="screen-body-container">
-        <div className="screen-body">{body}</div>
+          <div className="screen-body">{body}</div>
           {sidebar && <div className="screen-sidebar">{sidebar}</div>}
         </div>
 

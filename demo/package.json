@@ -66,6 +66,6 @@
     "defaults"
   ],
   "dependencies": {
-    "react-universal-component": "^2.8.1"
+    "react-universal-component": "^2.8.2"
   }
 }

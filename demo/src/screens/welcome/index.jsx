@@ -1,7 +1,7 @@
 import React from 'react';
 // import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, CardTitle, Jumbotron, Screen } from '../../../../src/components';
+import { Card, CardBody, CardHeader, CardTitle, Jumbotron, Screen } from '../../../../src/components';
 
 export default () => (
   <Screen
@@ -13,14 +13,25 @@ export default () => (
     //   { to: '#/test2', text: 'Tab2' },
     // ]}
     // primaryActions={<PrimaryActions />}
-    sidebar={
-      <Card>
+    sidebar={[
+      <Card key="card2">
+        <CardHeader>Sample Card</CardHeader>
         <CardBody>
           <CardTitle>Card Title</CardTitle>
-          body
+          {'Matt, I think card header should be used as the header rather than <CardTitle>.' +
+           'There will be use cases where we want a title in addition to a header.' +
+           'Visually it may look how you have it here, but <CardHeader> should be the header.' +
+           'We will need to visually separate multiple cards.'}
         </CardBody>
-      </Card>
-    }
+      </Card>,
+      <Card key="card2">
+        <CardHeader>Another Card</CardHeader>
+        <CardBody>
+          <CardTitle>Another Title</CardTitle>
+          Moar text. (todo: test with tall sidebar)
+        </CardBody>
+      </Card>,
+    ]}
     body={
       <Jumbotron>
         <h1>Triniti Admin UI Demos</h1>

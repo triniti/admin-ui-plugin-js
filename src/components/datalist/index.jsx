@@ -1,14 +1,9 @@
+/* eslint-disable react/no-array-index-key */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, FormFeedback, Input, InputGroup, InputGroupButton } from '../../components';
 
-const Datalist = ({
-  addon,
-  input,
-  options,
-  meta: { touched, error },
-  ...custom
-}) => (
+const Datalist = ({ addon, input, options, meta: { touched, error }, ...custom }) => (
   <div>
     <InputGroup className="mt-1 mb-2">
       <Input list={input.name} valid={touched ? !error : null} {...input} {...custom} />
@@ -23,7 +18,7 @@ const Datalist = ({
         {options.map((option, index) => <option value={option} key={`${option}-${index}`} />)}
       </datalist>
     </InputGroup>
-    { touched && error && <FormFeedback>{error}</FormFeedback> }
+    {touched && error && <FormFeedback>{error}</FormFeedback>}
   </div>
 );
 
@@ -32,7 +27,6 @@ Datalist.propTypes = {
   input: PropTypes.object.isRequired,
   meta: PropTypes.object.isRequired,
   options: PropTypes.array.isRequired,
-
   custom: PropTypes.object,
 };
 

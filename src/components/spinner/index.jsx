@@ -1,4 +1,3 @@
-// react
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -6,10 +5,16 @@ import './styles.scss';
 
 const Spinner = ({ className, children }) => (
   <div className={classnames('spinner-container', className)}>
-    <svg className="spinner-animation" width="65px" height="65px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      className="spinner-animation"
+      width="65px"
+      height="65px"
+      viewBox="0 0 66 66"
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <circle className="path" fill="none" strokeWidth="6" strokeLinecap="round" cx="33" cy="33" r="30" />
     </svg>
-    <span className="spinner-children">{ children }</span>
+    <span className="spinner-children">{children}</span>
   </div>
 );
 
