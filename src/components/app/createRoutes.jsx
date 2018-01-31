@@ -9,13 +9,16 @@ import Loading from '../loading';
  *
  * If universal component, then `route.component` must be a method or import (promise).
  *
+ * @see https://github.com/faceyspacey/react-universal-component
+ *
  * Ie: import('somepath/component');
  * Ie: (props) => import('somepath/component');
  *
  * @param {Boolean|undefined} [route.eager]
- * @param {React.Component|function} route.component
- * @returns React.Component
- * @see https://github.com/faceyspacey/react-universal-component
+ * @param {React.Component|Function|PromiseLike} route.component
+ *
+ * @returns {React.Component|Function}
+ *
  */
 const getComponent = (route) => {
   if (route.eager) {

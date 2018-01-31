@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, ScreenBody, TabContent, TabNav, TabPane } from '../../../../src/components';
 import classnames from 'classnames';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, ScreenBody, TabContent, TabPane } from '../../../../src/components';
 
 class UiTabs extends React.Component {
   constructor(props) {

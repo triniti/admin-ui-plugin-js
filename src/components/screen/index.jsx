@@ -4,6 +4,9 @@ import dismissAlert from '../../actions/dismissAlert';
 import AlertBar from '../alert-bar';
 import Button from '../button';
 import Icon from '../icon';
+import Nav from '../nav';
+import NavItem from '../nav-item';
+import RouterLink from '../router-link';
 import './styles.scss';
 
 // fixme: this seems not very reacty
@@ -23,6 +26,8 @@ const Screen = (props) => {
     header,
     sidenav,
     sidenavHeader,
+    sidebar,
+    tabs,
     body,
     footer,
     primaryActions,
@@ -52,7 +57,19 @@ const Screen = (props) => {
         </div>}
 
         <AlertBar alerts={alerts} onDismiss={id => dispatch(dismissAlert(id))} />
+
+        {tabs.length > 0 &&
+        <Nav underline className="pt-2" theme="light">
+          {tabs.map(tab => (
+            <NavItem key={tab.to}>
+              <RouterLink navTab to={tab.to}>{tab.text}</RouterLink>
+            </NavItem>
+          ))}
+        </Nav>}
+
         {body}
+
+        {sidebar && <div className="screen-sidebar">{sidebar}</div>}
       </div>
 
       {(footer || secondaryActions) &&
@@ -70,7 +87,9 @@ Screen.propTypes = {
   alerts: PropTypes.array,
   header: PropTypes.node,
   sidenav: PropTypes.node,
-  sidenavHeader: PropTypes.node,
+  sidenavHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
+  sidebar: PropTypes.node,
+  tabs: PropTypes.array,
   body: PropTypes.node,
   footer: PropTypes.node,
   primaryActions: PropTypes.node,
@@ -84,6 +103,7 @@ Screen.defaultProps = {
   dispatch: noop,
   alerts: [],
   sidenavHeader: null,
+  tabs: [],
 };
 
 export default Screen;

@@ -16,7 +16,7 @@ The `dispatch` function is expected to be from redux.  This is needed to allow t
 + __sidenav:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.  Everything provided is contained within a collapsable _drawer_.
 + __sidenavHeader:__ `PropTypes.node` - Typically text that is sticky to the top of the sidenav with an arrow to close it.
 + __sidebar:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.
-+ __tabs:__ `PropTypes.node` - Typically expected a tab control, e.g. `<TabNav>`.  Expected to be tabs that control what is seen in the `body`.
++ __tabs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/tab-url', text: 'Tab Name' }` that control what is seen in the `body`.
 + __body:__ `PropTypes.node` - The primary component(s) that the screen renders.
 + __footer:__ `PropTypes.node` - Intended for secondary information or features that do not need to be prominent.
 + __primaryActions:__ `PropTypes.node` - Intended for an array of `<ActionButton>` elements or something similar which can be used to perform a quick action.  When using an array you must set key props.  To avoid that, it is possible to wrap them in a div tag.

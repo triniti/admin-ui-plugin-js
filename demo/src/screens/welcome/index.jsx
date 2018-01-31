@@ -8,6 +8,10 @@ export default () => (
     sidenav={<Sidenav activeScreen="welcome" />}
     sidenavHeader
     header="Welcome"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
     // primaryActions={<PrimaryActions />}
     body={
       <Jumbotron>

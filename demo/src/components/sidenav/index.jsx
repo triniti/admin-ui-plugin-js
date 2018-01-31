@@ -10,7 +10,6 @@ const screens = [
   'alerts',
   'badges',
   'breadcrumbs',
-  'buttons',
   'button-dropdowns',
   'button-groups',
   'buttons',
@@ -40,7 +39,7 @@ const screens = [
 const Sidenav = props => (
   <ListGroup nav className="pt-3 pb-4">
     {screens.map(screen => (
-      <ListGroupItem key={screen} active={props.activeScreen === screen} className="pt-3 pb-4" nav>
+      <ListGroupItem key={screen} active={props.activeScreen === screen} className="pt-3 pb-4">
         <RouterLink to={`/${screen}`}>{screen.split('-').map(startCase).join(' ')}</RouterLink>
       </ListGroupItem>
     ))}
