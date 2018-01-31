@@ -16,7 +16,6 @@
   * sidebar-header
   * split-content
   * tab-nav
-  * fixme: matt?  any others we can nix?
 
 
 ## v0.3.1
