@@ -1,27 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import kebabCase from 'lodash/kebabCase';
 import Button from '../button';
 import Icon from '../icon';
 
-const ActionButton = ({ className, text, icon, iconUrl, ...rest }) => (
-  <Button {...rest} className={classNames('btn-action', className)}>
+const ActionButton = ({ icon, iconUrl, text, ...rest }) => (
+  <Button {...rest} action={kebabCase(`action-${text}`)}>
     {(iconUrl || icon) && <Icon imgSrc={icon} src={iconUrl} alt={text} />}
     {text}
   </Button>
 );
 
 ActionButton.propTypes = {
-  className: PropTypes.string,
   icon: PropTypes.string,
   iconUrl: PropTypes.string,
   text: PropTypes.string,
 };
 
 ActionButton.defaultProps = {
-  text: 'Click',
   icon: '',
   iconUrl: '',
+  text: 'Click',
 };
 
 export default ActionButton;

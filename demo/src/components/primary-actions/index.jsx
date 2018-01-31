@@ -6,7 +6,7 @@ import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
 export default () => (
   [
     <ActionButton key="back" text="Back" icon="back" />,
-    <ActionButton key="delete" text="Delete" icon="delete" />,
+    <ActionButton key="delete" text="Delete" icon="delete" outline />,
     <ActionButton key="save" text="Save" icon="save" color="primary" />,
     <ActionButton
       key="save-and-close"
