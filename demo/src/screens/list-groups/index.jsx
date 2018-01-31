@@ -1,12 +1,22 @@
 import React from 'react';
-import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Badge, Card, CardBody, CardHeader, Col, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Row, Screen } from '../../../../src/components';
 
 const UiListGroup = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="list-groups" />}
+  sidenavHeader
+  header="List Groups"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={[
   <Card key="list-group1">
-    <CardHeader spacing="lg" inset>List Group Items</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>List Group Items</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup>
@@ -26,8 +36,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group2">
-    <CardHeader spacing="lg" inset>Buttons</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Buttons</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup>
@@ -42,8 +52,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group3">
-    <CardHeader spacing="lg" inset>Buttons Flush</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Buttons Flush</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup flush>
@@ -58,8 +68,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group4">
-    <CardHeader spacing="lg" inset>Buttons Borderless</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Buttons Borderless</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup borderless>
@@ -74,8 +84,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group5">
-    <CardHeader spacing="lg" inset>Contextual Color Alert</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Contextual Color Alert</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup>
@@ -90,8 +100,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group6">
-    <CardHeader spacing="lg" inset>Heading and Item Text</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Heading and Item Text</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup>
@@ -120,8 +130,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group7">
-    <CardHeader spacing="lg" inset>List Group Nav</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>List Group Nav</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup nav>
@@ -150,8 +160,8 @@ const UiListGroup = () => (
   </Card>,
 
   <Card key="list-group8">
-    <CardHeader spacing="lg" inset>List Group Nav Borderless</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>List Group Nav Borderless</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <ListGroup borderless nav>
@@ -179,8 +189,7 @@ const UiListGroup = () => (
     </CardBody>
   </Card>,
   ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiListGroup;

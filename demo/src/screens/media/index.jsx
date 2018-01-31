@@ -1,12 +1,22 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, CardHeader, CardTitle, Col, Media, Row, Screen } from '../../../../src/components';
 
 const UiMedia = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="media" />}
+  sidenavHeader
+  header="Media"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={[
     <Card key="media1">
-      <CardHeader spacing="lg" inset>Media Left</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Media Left</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <Media>
@@ -49,8 +59,8 @@ const UiMedia = () => (
     </Card>,
 
     <Card key="media2">
-      <CardHeader spacing="lg" inset>Vertical Alignment</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Vertical Alignment</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <Media>
@@ -94,8 +104,8 @@ const UiMedia = () => (
     </Card>,
 
     <Card key="media3">
-      <CardHeader spacing="lg" inset>Media List</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Media List</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <Media list>
@@ -161,8 +171,8 @@ const UiMedia = () => (
     </Card>,
 
     <Card key="media5">
-      <CardHeader spacing="lg" inset>Media Hover</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Media Hover</CardHeader>
+      <CardBody>
         <Media left hover href="#">
           <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
         </Media>
@@ -194,8 +204,8 @@ const UiMedia = () => (
     </Card>,
 
     <Card key="media6">
-      <CardHeader spacing="lg" inset>Media HoverOutline</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Media HoverOutline</CardHeader>
+      <CardBody>
         <Media left hoverOutline href="#">
           <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
         </Media>
@@ -226,8 +236,7 @@ const UiMedia = () => (
       </CardBody>
     </Card>,
     ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiMedia;

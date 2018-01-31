@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; import Sidenav from '../../components/sidenav';
 import { Button, Tooltip } from '../../../../src/components';
 
 class TooltipItem extends React.Component {

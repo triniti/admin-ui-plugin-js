@@ -1,7 +1,7 @@
 import React from 'react';
 // import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardHeader, CardBody, Jumbotron, Screen } from '../../../../src/components';
+import { Card, CardBody, CardTitle, Jumbotron, Screen } from '../../../../src/components';
 
 export default () => (
   <Screen
@@ -15,8 +15,10 @@ export default () => (
     // primaryActions={<PrimaryActions />}
     sidebar={
       <Card>
-        <CardHeader>Sidebar Card</CardHeader>
-        <CardBody>Card Body</CardBody>
+        <CardBody>
+          <CardTitle>Card Title</CardTitle>
+          body
+        </CardBody>
       </Card>
     }
     body={

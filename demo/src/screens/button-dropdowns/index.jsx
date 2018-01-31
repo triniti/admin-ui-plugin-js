@@ -1,5 +1,7 @@
 import React from 'react';
-import { ButtonDropdown, Card, CardBody, DropdownItem, DropdownMenu, DropdownToggle, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { ButtonDropdown, Card, CardBody, DropdownItem, DropdownMenu, DropdownToggle, Screen } from '../../../../src/components';
 
 class UiButtonDropdown extends React.Component {
   constructor(props) {
@@ -19,10 +21,18 @@ class UiButtonDropdown extends React.Component {
 
   render() {
     return (
-    <ScreenBody
-    body={
+    <Screen
+      sidenav={<Sidenav activeScreen="button-dropdowns" />}
+      sidenavHeader
+      header="Button Dropdowns"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
+      body={
       <Card>
-        <CardBody spacing="lg">
+        <CardBody>
           <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
             <DropdownToggle caret outline color="light">
             Button Dropdown
@@ -38,8 +48,7 @@ class UiButtonDropdown extends React.Component {
         </CardBody>
       </Card>
       }
-      >
-      </ScreenBody>
+      />
     );
   }
 }

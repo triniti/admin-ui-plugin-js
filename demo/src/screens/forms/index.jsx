@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, ScreenBody, Switch, TrinaryControl } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -21,11 +23,19 @@ class UiForm extends React.Component {
 
   render() {
     return (
-    <ScreenBody
+    <Screen
+      sidenav={<Sidenav activeScreen="forms" />}
+      sidenavHeader
+      header="Forms"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={[
       <Card key="form1">
-        <CardHeader spacing="lg" inset>Standard Form</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Standard Form</CardHeader>
+        <CardBody>
           <Row>
             <Col sm="8" md="6">
               <CardTitle tag="h2">Card Title H2 with Button
@@ -110,8 +120,8 @@ class UiForm extends React.Component {
        </Card>,
 
        <Card key="form2">
-        <CardHeader spacing="lg" inset>Form Feedback</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Form Feedback</CardHeader>
+        <CardBody>
           <Row>
             <Col sm="6" md="4">
               <CardTitle tag="h3">Card Title H3</CardTitle>
@@ -141,8 +151,8 @@ class UiForm extends React.Component {
       </Card>,
 
       <Card key="form3">
-        <CardHeader spacing="lg" inset>Inline Form</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Inline Form</CardHeader>
+        <CardBody>
           <Row>
             <Col sm="12">
               <Form inline className="mt-3">
@@ -184,8 +194,8 @@ class UiForm extends React.Component {
       </Card>,
 
       <Card key="form4">
-        <CardHeader spacing="lg" inset>Input Types</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Input Types</CardHeader>
+        <CardBody>
           <Row>
             <Col sm="9" md="6">
               <Form>
@@ -286,8 +296,8 @@ class UiForm extends React.Component {
       </Card>,
 
       <Card key="form5">
-        <CardHeader spacing="lg" inset>Input Sizing</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Input Sizing</CardHeader>
+        <CardBody>
           <Row>
             <Col sm="10" md="8" lg="6" xl="4" className="has-border">
               <Form>
@@ -311,7 +321,7 @@ class UiForm extends React.Component {
 
       <Card key="form6">
         <CardHeader>Trinary Control - Default</CardHeader>
-        <CardBody spacing="lg">
+        <CardBody>
           <Row>
             <Col xs="3" md="4">
               <FormGroup>
@@ -354,7 +364,7 @@ class UiForm extends React.Component {
 
       <Card key="form7">
         <CardHeader>Trinary Control - Custom</CardHeader>
-        <CardBody spacing="lg">
+        <CardBody>
           <Row>
             <Col xs="3" md="4">
               <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" width="105px" value={this.state.trinaryCustom} onChange={this.handleChange} />
@@ -378,8 +388,8 @@ class UiForm extends React.Component {
       </Card>,
 
       <Card key="form8">
-        <CardHeader spacing="lg" inset>Form Grid</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Form Grid</CardHeader>
+        <CardBody>
           <Row>
             <Col>
               <Form>
@@ -488,8 +498,7 @@ class UiForm extends React.Component {
         </CardBody>
       </Card>,
       ]}
-      >
-      </ScreenBody>
+      />
     );
   }
 }

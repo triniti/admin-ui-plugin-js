@@ -1,11 +1,21 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, CardTitle, Divider, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, CardHeader, CardTitle, Divider, Screen } from '../../../../src/components';
 
 const UiHeaders = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="headers" />}
+  sidenavHeader
+  header="Headers"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={
   <Card>
-    <CardBody spacing="lg">
+    <CardBody>
       <h1>H1 Heading .h1</h1>
       <h2>H2 Heading .h2</h2>
       <h3>H3 Heading .h3</h3>
@@ -18,13 +28,13 @@ const UiHeaders = () => (
 
     <CardHeader>Card Header</CardHeader>
 
-    <CardHeader inset>Card Header - inset</CardHeader>
+    <CardHeader>Card Header -</CardHeader>
 
-    <CardHeader spacing="lg">Card Header - spacing="lg"</CardHeader>
+    <CardHeader>Card Header -</CardHeader>
 
-    <CardHeader spacing="lg" inset>Card Header - spacing="lg" inset</CardHeader>
+    <CardHeader>Card Header -</CardHeader>
 
-    <CardBody spacing="lg">
+    <CardBody>
       <CardTitle tag="h1">Card Title h1</CardTitle>
       <CardTitle tag="h2">Card Title h2</CardTitle>
       <CardTitle tag="h3">Card Title h3</CardTitle>
@@ -52,34 +62,33 @@ const UiHeaders = () => (
 
     <CardHeader />
     <br />
-    <CardHeader spacing="lg" inset>Dividers directly inside Card but outside CardBody</CardHeader>
+    <CardHeader>Dividers directly inside Card but outside CardBody</CardHeader>
     <hr />
 
-    <CardBody spacing="lg">
+    <CardBody>
       <CardTitle tag="h5">Divider size="sm"</CardTitle>
     </CardBody>
     <Divider size="sm" />
 
-    <CardBody spacing="lg">
+    <CardBody>
       <CardTitle tag="h5">Divider, defaults to size="md"</CardTitle>
     </CardBody>
     <Divider />
 
-    <CardBody spacing="lg">
+    <CardBody>
       <CardTitle tag="h5">Divider size="lg"</CardTitle>
     </CardBody>
     <Divider size="lg" />
 
-    <CardBody spacing="lg">
+    <CardBody>
       <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>
     </CardBody>
 
-    <CardBody spacing="lg" />
+    <CardBody />
 
   </Card>
   }
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiHeaders;

@@ -1,13 +1,23 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Col, Container, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, CardHeader, Col, Container, Row, Screen } from '../../../../src/components';
 import './styles.scss';
 
 const UiLayout = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="layouts" />}
+  sidenavHeader
+  header="Layouts"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={[
     <Card key="layout1">
-      <CardHeader spacing="lg">Full Width Columns</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Full Width Columns</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <div className="ui-cols">
@@ -47,8 +57,8 @@ const UiLayout = () => (
     </Card>,
 
     <Card key="layout1">
-      <CardHeader spacing="lg">Surrounded by a Container</CardHeader>
-      <CardBody className="bg-gray" spacing="lg">
+      <CardHeader>Surrounded by a Container</CardHeader>
+      <CardBody className="bg-gray">
         <Row>
           <Col>
             <Container className="ui-cols">
@@ -87,8 +97,7 @@ const UiLayout = () => (
       </CardBody>
     </Card>,
     ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiLayout;

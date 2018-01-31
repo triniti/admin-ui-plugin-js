@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Row, Screen } from '../../../../src/components';
 
 class UiToggle extends Component {
   constructor(props) {
@@ -24,14 +26,22 @@ class UiToggle extends Component {
 
   render() {
     return (
-    <ScreenBody
+    <Screen
+      sidenav={<Sidenav activeScreen="toggles" />}
+      sidenavHeader
+      header="Toggles"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={[
       <Card key="toggle1">
-        <CardHeader inset>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - inset</Button>
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header -</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
             <Row>
               <Col xs="12" md="9" lg="6">
@@ -51,11 +61,11 @@ class UiToggle extends Component {
       </Card>,
 
       <Card key="toggle2">
-        <CardHeader inset>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example - inset</Button>
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example -</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
@@ -76,7 +86,7 @@ class UiToggle extends Component {
           <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
@@ -97,7 +107,7 @@ class UiToggle extends Component {
           <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
@@ -118,7 +128,7 @@ class UiToggle extends Component {
           <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
@@ -135,11 +145,11 @@ class UiToggle extends Component {
       </Card>,
 
       <Card key="toggle5">
-        <CardHeader spacing="lg" inset>
-          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - spacing="lg" inset</Button>
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header -</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Button color="dark" onClick={this.toggleInner} radius="none">Toggle Content</Button>
             <Row>
               <Col xs="12" md="9" lg="6">
@@ -159,11 +169,11 @@ class UiToggle extends Component {
       </Card>,
 
       <Card key="toggle6">
-        <CardHeader spacing="lg" inset>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example - spacing="lg" inset</Button>
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example -</Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseOuter2}>
-          <CardBody spacing="lg">
+          <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
@@ -180,11 +190,11 @@ class UiToggle extends Component {
       </Card>,
 
       <Card key="toggle7">
-        <CardHeader spacing="lg" inset>
-          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example - spacing="lg" inset</Button>
+        <CardHeader>
+          <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example -</Button>
         </CardHeader>
-        <Collapse spacing="lg" isOpen={this.state.collapseOuter2}>
-          <CardBody spacing="lg">
+        <Collapse isOpen={this.state.collapseOuter2}>
+          <CardBody>
             <Row>
               <Col xs="12" md="9" lg="6">
                 <Card>
@@ -200,8 +210,7 @@ class UiToggle extends Component {
         </Collapse>
       </Card>,
       ]}
-      >
-      </ScreenBody>
+      />
     );
   }
 }

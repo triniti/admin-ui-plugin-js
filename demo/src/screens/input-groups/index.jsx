@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, ButtonDropdown, Card, CardBody, CardHeader, Col, DropdownToggle, DropdownMenu, DropdownItem, Input, InputGroup, InputGroupAddon, InputGroupButton, Row, Screen } from '../../../../src/components';
 
 class UiInputGroup extends React.Component {
   constructor(props) {
@@ -19,11 +21,19 @@ class UiInputGroup extends React.Component {
 
   render() {
     return (
-    <ScreenBody
+    <Screen
+      sidenav={<Sidenav activeScreen="input-groups" />}
+      sidenavHeader
+      header="Input Groups"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={[
       <Card key="imput1">
-        <CardHeader spacing="lg" inset>Standard Form</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Standard Form</CardHeader>
+        <CardBody>
           <Row>
             <Col sm="6">
               <InputGroup>
@@ -107,8 +117,8 @@ class UiInputGroup extends React.Component {
       </Card>,
 
       <Card key="imput2" className="mb-0">
-        <CardHeader spacing="lg">White Form on BG Color</CardHeader>
-        <CardBody className="bg-light form-white" spacing="lg">
+        <CardHeader>White Form on BG Color</CardHeader>
+        <CardBody className="bg-light form-white">
           <Row>
             <Col sm="6">
               <InputGroup>
@@ -191,8 +201,7 @@ class UiInputGroup extends React.Component {
         </CardBody>
       </Card>,
       ]}
-      >
-      </ScreenBody>
+      />
     );
   }
 }

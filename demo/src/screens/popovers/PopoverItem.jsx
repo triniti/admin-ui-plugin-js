@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; import Sidenav from '../../components/sidenav';
 import { Button, Popover, PopoverTitle, PopoverContent } from '../../../../src/components';
 
 class PopoverItem extends React.Component {

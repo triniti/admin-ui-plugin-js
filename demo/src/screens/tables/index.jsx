@@ -1,14 +1,20 @@
 /* eslint-disable react/jsx-indent */
 import React from 'react';
+import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Card, CardBody, CardHeader, Screen, Table } from '../../../../src/components';
 
 export default () => (
-  <Screen
-    sidenav={<Sidenav activeScreen="tables" />}
-    sidenavHeader
-    header="Tables"
-    body={[
+    <Screen
+      sidenav={<Sidenav activeScreen="tables" />}
+      sidenavHeader
+      header="Tables"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
+      body={[
       <Card key="table1">
         <CardBody>
           <Table size="sm" stickyTop fixed>

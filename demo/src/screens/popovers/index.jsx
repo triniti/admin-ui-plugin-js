@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, Screen } from '../../../../src/components';
 import PopoverItem from './PopoverItem';
 
 class UiPopover extends React.Component {
@@ -31,10 +33,18 @@ class UiPopover extends React.Component {
 
   render() {
     return (
-    <ScreenBody
+    <Screen
+      sidenav={<Sidenav activeScreen="popovers" />}
+      sidenavHeader
+      header="Popovers"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={
       <Card>
-        <CardBody className="text-center" spacing="lg">
+        <CardBody className="text-center">
           <br />
           <br />
           <br />
@@ -51,8 +61,7 @@ class UiPopover extends React.Component {
         </CardBody>
       </Card>
       }
-      >
-      </ScreenBody>
+      />
     );
   }
 }

@@ -1,12 +1,22 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, ScreenBody, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
 
 const UiIcons = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="icons" />}
+  sidenavHeader
+  header="Icons"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={[
     <Card key="icons1">
-      <CardHeader spacing="lg" inset>Icons</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Icons</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <Icon imgSrc="angle-double-left" id="angle-double-left" />
@@ -47,8 +57,8 @@ const UiIcons = () => (
     </Card>,
 
     <Card key="icons2">
-      <CardHeader spacing="lg" inset>Button Icons</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Button Icons</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <Button outline radius="circle" color="link"><Icon imgSrc="cog" alt="edit" /></Button>
@@ -65,8 +75,8 @@ const UiIcons = () => (
     </Card>,
 
     <Card key="icons3">
-      <CardHeader spacing="lg" inset>Spinner</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Spinner</CardHeader>
+      <CardBody>
         <Row>
           <Col>
             <Spinner />
@@ -99,8 +109,7 @@ const UiIcons = () => (
       </CardBody>
     </Card>,
     ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiIcons;

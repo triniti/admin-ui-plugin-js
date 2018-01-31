@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem, Row, Screen } from '../../../../src/components';
 import CardHeader from '../../../../src/components/card-header/index';
 
 class UiDropdown extends React.Component {
@@ -28,18 +30,26 @@ class UiDropdown extends React.Component {
 
   render() {
     return (
-    <ScreenBody
-    body={
+    <Screen
+      sidenav={<Sidenav activeScreen="dropdowns" />}
+      sidenavHeader
+      header="Dropdowns"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
+      body={
       <Card>
-        <CardHeader spacing="lg" inset>Dropdown</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Dropdown</CardHeader>
+        <CardBody>
           <Row>
             <Col xs="6">
               <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
                 <DropdownToggle caret color="default" outline>
                   Dropdown
                 </DropdownToggle>
-                <DropdownMenu arrow="right" right>
+                <DropdownMenu left>
                   <DropdownItem header>Header</DropdownItem>
                   <DropdownItem disabled>Action</DropdownItem>
                   <DropdownItem>Another Action</DropdownItem>
@@ -52,8 +62,7 @@ class UiDropdown extends React.Component {
         </CardBody>
       </Card>
       }
-      >
-      </ScreenBody>
+      />
     );
   }
 }

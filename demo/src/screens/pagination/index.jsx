@@ -1,11 +1,21 @@
 import React from 'react';
-import { Card, CardTitle, CardBody, Pagination, PaginationItem, PaginationLink, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardTitle, CardBody, Pagination, PaginationItem, PaginationLink, Screen } from '../../../../src/components';
 
 const UiPagination = () => (
-  <ScreenBody
+  <Screen
+    sidenav={<Sidenav activeScreen="pagination" />}
+    sidenavHeader
+    header="Pagination"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
     body={
     <Card>
-      <CardBody spacing="lg">
+      <CardBody>
         <Pagination>
           <PaginationItem>
             <PaginationLink previous href="#" />
@@ -91,9 +101,8 @@ const UiPagination = () => (
         </Pagination>
       </CardBody>
     </Card>
-  }
-  >
-  </ScreenBody>
+    }
+  />
 );
 
 export default UiPagination;

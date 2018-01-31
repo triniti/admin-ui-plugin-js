@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row, Screen } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -24,10 +26,18 @@ class UiNavbar extends React.Component {
   }
   render() {
     return (
-      <ScreenBody
+      <Screen
+      sidenav={<Sidenav activeScreen="navbars" />}
+      sidenavHeader
+      header="Navbars"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={[
         <Card key="navbar1">
-          <CardBody spacing="lg">
+          <CardBody>
             <h4>Full Width Inverse Toggleable</h4>
             <Navbar color="dark" toggleable className="justify-content-start">
               <NavbarToggler onClick={this.toggleNavbar} />
@@ -47,7 +57,7 @@ class UiNavbar extends React.Component {
         </Card>,
 
         <Card key="navbar2">
-          <CardBody spacing="lg">
+          <CardBody>
             <Navbar color="light" toggleable className="mb-3">
               <NavbarToggler onClick={this.toggle} />
               <NavbarBrand href="/">reactstrap</NavbarBrand>
@@ -65,8 +75,7 @@ class UiNavbar extends React.Component {
           </CardBody>
         </Card>,
         ]}
-      >
-      </ScreenBody>
+      />
     );
   }
 }

@@ -1,11 +1,21 @@
 import React from 'react';
-import { Badge, Button, Card, CardBody, CardTitle, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Badge, Button, Card, CardBody, CardTitle, Screen } from '../../../../src/components';
 
 const UiBadge = () => (
-  <ScreenBody
+  <Screen
+    sidenav={<Sidenav activeScreen="badges" />}
+    sidenavHeader
+    header="Badges"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
     body={
     <Card>
-      <CardBody spacing="lg">
+      <CardBody>
         <h1>H1 Heading .h1 <Badge>New</Badge></h1>
         <h2>H2 Heading .h2 <Badge color="primary">New</Badge></h2>
         <h3>H3 Heading .h3 <Badge color="success" pill>New</Badge></h3>
@@ -43,9 +53,8 @@ const UiBadge = () => (
         <Button outline color="link" radius="round" className="mr-3">link <Badge color="danger" alert>24</Badge></Button>
       </CardBody>
     </Card>
-  }
-  >
-  </ScreenBody>
+    }
+  />
 );
 
 export default UiBadge;

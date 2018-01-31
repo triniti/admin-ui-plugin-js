@@ -1,12 +1,22 @@
 import React from 'react';
-import { Alert, Card, CardBody, CardHeader, ScreenBody, Table, UncontrolledAlert } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Alert, Card, CardBody, CardHeader, Screen, Table, UncontrolledAlert } from '../../../../src/components';
 
 const UiAlert = () => (
-  <ScreenBody
+  <Screen
+    sidenav={<Sidenav activeScreen="alerts" />}
+    sidenavHeader
+    header="Alerts"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
     body={[
     <Card key="alert1">
-      <CardHeader spacing="lg" inset>Inline Content Alerts</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Inline Content Alerts</CardHeader>
+      <CardBody>
         <Alert color="success">
           <strong>Well done!</strong> You successfully read this important alert message.
         </Alert>
@@ -26,8 +36,8 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert2">
-      <CardHeader spacing="lg">Full Width Content Alerts</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Full Width Content Alerts</CardHeader>
+      <CardBody>
         <Alert color="success" fullWidth className="mb-3">
           <strong>Well done!</strong> You successfully read this important alert message.
         </Alert>
@@ -47,8 +57,8 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert3">
-      <CardHeader spacing="lg" inset>Inline Content Alerts (alert-inverse)</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Inline Content Alerts (alert-inverse)</CardHeader>
+      <CardBody>
         <Alert color="success" inverse>
           <strong>Well done!</strong> You successfully read this important alert message.
         </Alert>
@@ -69,11 +79,11 @@ const UiAlert = () => (
 
 
     <Card key="alert4">
-      <CardHeader spacing="lg">Full Width Content Alerts (alert-inverse)</CardHeader>
+      <CardHeader>Full Width Content Alerts (alert-inverse)</CardHeader>
       <UncontrolledAlert color="info" inverse fullWidth sticky>
         <span><strong>Full Width</strong> Alert outside of Card Container and Sticky</span>
       </UncontrolledAlert>
-      <CardBody spacing="lg">
+      <CardBody>
         <Alert color="success" inverse fullWidth className="mb-3">
           <strong>Well done!</strong> Full Width inside Section Container
         </Alert>
@@ -93,8 +103,8 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert5">
-      <CardHeader spacing="lg" inset>Border Alerts (has-border)</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Border Alerts (has-border)</CardHeader>
+      <CardBody>
         <div className="has-border border-primary mb-4">
           <strong>Well done!</strong> Example Border Alert - Primary
         </div>
@@ -123,8 +133,8 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert6">
-      <CardHeader spacing="lg" inset>Border Alerts (has-border, border-indent)</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Border Alerts (has-border, border-indent)</CardHeader>
+      <CardBody>
         <div className="has-border border-indent border-primary mb-4">
           <strong>Well done!</strong> Example Border Alert - Primary
         </div>
@@ -153,8 +163,8 @@ const UiAlert = () => (
     </Card>,
 
     <Card key="alert7">
-      <CardHeader spacing="lg" inset>Striped Table</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Striped Table</CardHeader>
+      <CardBody>
         <Table>
           <thead>
             <tr>
@@ -196,8 +206,7 @@ const UiAlert = () => (
       </CardBody>
     </Card>,
   ]}
-  >
-  </ScreenBody>
+  />
 );
 
 

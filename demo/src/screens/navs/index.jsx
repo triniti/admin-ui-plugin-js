@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row, Screen } from '../../../../src/components';
 
 class UiNav extends React.Component {
   constructor(props) {
@@ -27,11 +29,19 @@ class UiNav extends React.Component {
 
   render() {
     return (
-    <ScreenBody
+    <Screen
+      sidenav={<Sidenav activeScreen="navs" />}
+      sidenavHeader
+      header="Navs"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={[
       <Card key="nav1">
-        <CardHeader spacing="lg" inset>List Based</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>List Based</CardHeader>
+        <CardBody>
           <Nav>
             <NavItem>
               <NavLink href="#">Link</NavLink>
@@ -50,8 +60,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav2">
-        <CardHeader spacing="lg" inset>Link Based</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Link Based</CardHeader>
+        <CardBody>
           <Nav>
             <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink>
             <NavLink href="#">Another Link</NavLink>
@@ -61,8 +71,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav3">
-        <CardHeader spacing="lg" inset>List Based - Vertical</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>List Based - Vertical</CardHeader>
+        <CardBody>
           <Nav vertical>
             <NavItem>
               <NavLink href="#">Link</NavLink>
@@ -81,8 +91,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav4">
-        <CardHeader spacing="lg" inset>Link based - Vertical</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Link based - Vertical</CardHeader>
+        <CardBody>
           <Nav vertical>
             <NavLink href="#">Link</NavLink> <NavLink href="#">Link</NavLink>
             <NavLink href="#">Another Link</NavLink>
@@ -92,8 +102,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav5">
-        <CardHeader spacing="lg" inset>Tabs</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Tabs</CardHeader>
+        <CardBody>
           <Nav tabs>
             <NavItem>
               <NavLink href="#" active>Link</NavLink>
@@ -124,8 +134,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav6">
-        <CardHeader spacing="lg" inset>Underline</CardHeader>
-        <CardBody spacing="lg">
+        <CardHeader>Underline</CardHeader>
+        <CardBody>
           <Nav size="sm" underline>
             <NavItem>
               <NavLink href="#" active>Link</NavLink>
@@ -156,8 +166,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav7">
-        <CardHeader className="sticky-off" spacing="lg">Pills</CardHeader>
-        <CardBody className="pb-5" spacing="lg">
+        <CardHeader className="sticky-off">Pills</CardHeader>
+        <CardBody className="pb-5">
           <Nav pills>
             <NavItem>
               <NavLink href="#" active>Active</NavLink>
@@ -188,8 +198,8 @@ class UiNav extends React.Component {
       </Card>,
 
       <Card key="nav8">
-        <CardHeader className="sticky-off" spacing="lg">Pills Small</CardHeader>
-        <CardBody className="pb-5 mb-5" spacing="lg">
+        <CardHeader className="sticky-off">Pills Small</CardHeader>
+        <CardBody className="pb-5 mb-5">
           <Row>
             <Col>
               <Nav pills className="nav-pills-sm">
@@ -227,8 +237,7 @@ class UiNav extends React.Component {
         </CardBody>
       </Card>,
       ]}
-      >
-      </ScreenBody>
+      />
     );
   }
 }

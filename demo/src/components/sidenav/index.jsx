@@ -39,7 +39,7 @@ const screens = [
 const Sidenav = props => (
   <ListGroup nav className="pt-3 pb-4">
     {screens.map(screen => (
-      <ListGroupItem key={screen} active={props.activeScreen === screen} className="pt-3 pb-4">
+      <ListGroupItem key={screen} active={props.activeScreen === screen}>
         <RouterLink to={`/${screen}`}>{screen.split('-').map(startCase).join(' ')}</RouterLink>
       </ListGroupItem>
     ))}

@@ -1,8 +1,18 @@
 import React from 'react';
-import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, Row, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, Row, Screen } from '../../../../src/components';
 
 const UiCard = () => (
-  <ScreenBody
+  <Screen
+    sidenav={<Sidenav activeScreen="cards" />}
+    sidenavHeader
+    header="Cards"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
     body={[
     <CardsContainer key="cards1">
       <Row className="mb-3">
@@ -313,8 +323,7 @@ const UiCard = () => (
       </Row>
     </CardBody>
     ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiCard;

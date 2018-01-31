@@ -1,11 +1,21 @@
 import React from 'react';
-import { Card, CardBody, Button, ButtonGroup, ButtonToolbar, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, Button, ButtonGroup, ButtonToolbar, Screen } from '../../../../src/components';
 
 const UiButtonGroup = () => (
-  <ScreenBody
+  <Screen
+    sidenav={<Sidenav activeScreen="button-groups" />}
+    sidenavHeader
+    header="Button Groups"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
     body={
     <Card>
-      <CardBody spacing="lg">
+      <CardBody>
         <ButtonToolbar>
           <ButtonGroup className="mr-3">
             <Button outline>1</Button>
@@ -27,8 +37,7 @@ const UiButtonGroup = () => (
       </CardBody>
     </Card>
    }
-  >
-  </ScreenBody>
+  />
 );
 
 

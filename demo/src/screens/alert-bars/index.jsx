@@ -1,5 +1,7 @@
 import React from 'react';
-import { AlertBar, Card, CardBody, CardHeader, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { AlertBar, Card, CardBody, CardHeader, Screen } from '../../../../src/components';
 
 const alerts = [
   {
@@ -71,17 +73,24 @@ const alerts = [
 ];
 
 const UiAlertBar = () => (
-  <ScreenBody
+  <Screen
+    sidenav={<Sidenav activeScreen="alert-bars" />}
+    sidenavHeader
+    header="Alert Bars"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
     body={
     <Card>
-      <CardHeader spacing="lg" inset>Assorted Alert Bar Variants</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>Assorted Alert Bar Variants</CardHeader>
+      <CardBody>
         <AlertBar alerts={alerts} onDismiss={() => {}} />
       </CardBody>
     </Card>
-  }
-  >
-  </ScreenBody>
+    }
+  />
 );
 
 export default UiAlertBar;

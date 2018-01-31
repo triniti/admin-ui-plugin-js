@@ -1,4 +1,6 @@
 import React from 'react';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
 import { Card, CardBody, CardHeader, Datalist } from '../../../../src/components';
 
 const fields = [
@@ -51,8 +53,8 @@ function getOptions() {
 
 const UiDatalist = () => (
     <Card>
-      <CardHeader spacing="lg" inset>A few Datalists with random options</CardHeader>
-      <CardBody spacing="lg">
+      <CardHeader>A few Datalists with random options</CardHeader>
+      <CardBody>
         {fields.map(({ addon, input, meta }) => (
           <Datalist
             key={input.name}

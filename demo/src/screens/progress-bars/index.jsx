@@ -1,12 +1,22 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Row, Col, Progress, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, CardHeader, Row, Col, Progress, Screen } from '../../../../src/components';
 
 const UiProgress = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="progress-bars" />}
+  sidenavHeader
+  header="Progress Bars"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={[
   <Card key="progress1">
-    <CardHeader spacing="lg" inset>Plain</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Plain</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <Progress multi>
@@ -22,8 +32,8 @@ const UiProgress = () => (
   </Card>,
 
   <Card key="progress2">
-    <CardHeader spacing="lg" inset>With Labels</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>With Labels</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <Progress multi>
@@ -38,8 +48,8 @@ const UiProgress = () => (
   </Card>,
 
   <Card key="progress3">
-    <CardHeader spacing="lg" inset>Stripes and Animations</CardHeader>
-    <CardBody spacing="lg">
+    <CardHeader>Stripes and Animations</CardHeader>
+    <CardBody>
       <Row>
         <Col>
           <Progress multi>
@@ -52,8 +62,7 @@ const UiProgress = () => (
     </CardBody>
   </Card>
   ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiProgress;

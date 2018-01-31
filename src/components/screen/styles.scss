@@ -44,7 +44,7 @@ $sidenav-width:     300px;
   font-size: 1em;
   display: flex;
   width: 100%;
-  min-height: $header-height + 4;
+  min-height: $header-height + 8;
   margin: 0;
   padding-left: $padding-xs;
   transition: width $transition;
@@ -134,7 +134,7 @@ $sidenav-width:     300px;
 .screen-header__container {
   z-index: 2;
   display: flex;
-  min-height: $header-height + 4;
+  min-height: $header-height + 8;
   padding-top: .25rem;
   padding-right: $padding-xs;
   padding-bottom: .25rem;

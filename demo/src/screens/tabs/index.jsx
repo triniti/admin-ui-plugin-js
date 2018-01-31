@@ -1,6 +1,8 @@
 import React from 'react';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
 import classnames from 'classnames';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, ScreenBody, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, Screen, TabContent, TabPane } from '../../../../src/components';
 
 class UiTabs extends React.Component {
   constructor(props) {
@@ -32,18 +34,35 @@ class UiTabs extends React.Component {
 
   render() {
     return (
-      <ScreenBody
-        tabs={[
-          <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>,
-          <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
-          ]
-        }
+      <Screen
+      sidenav={<Sidenav activeScreen="tabs" />}
+      sidenavHeader
+      header="Tabs"
+      primaryActions={<PrimaryActions />}
+      tabs={[
+        { to: '/tabs', text: 'Tab1' },
+        { to: '#/test2', text: 'Tab2' },
+      ]}
+      sidebar={
+        <Card>
+          <CardBody>
+            <CardTitle>Card Title</CardTitle>
+            body
+          </CardBody>
+        </Card>
+      }
+
+      // tabs={[
+      //    <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '1' })} onClick={() => { this.toggle1('1'); }}>Tab1</NavLink>,
+      //    <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
+      //    ]
+      //  }
         body={
           <Card>
             <TabContent activeTab={this.state.activeTab1}>
               <TabPane tabId="1">
                 <Card>
-                  <CardBody spacing="lg">
+                  <CardBody>
                     <Row>
                       <Col xs="12" sm="6">
                         <Card>
@@ -58,7 +77,7 @@ class UiTabs extends React.Component {
               </TabPane>
               <TabPane tabId="2">
                 <Card>
-                  <CardBody spacing="lg">
+                  <CardBody>
                     <Row>
                       <Col sm="6">
                         <Card>
@@ -80,8 +99,8 @@ class UiTabs extends React.Component {
               </TabPane>
             </TabContent>
 
-            <CardHeader spacing="lg" inset>Classic Standard Version</CardHeader>
-            <CardBody spacing="lg">
+            <CardHeader>Classic Standard Version</CardHeader>
+            <CardBody>
               <Nav tabs>
                 <NavItem>
                   <div
@@ -150,8 +169,7 @@ class UiTabs extends React.Component {
             </CardBody>
           </Card>
         }
-      >
-      </ScreenBody>
+      />
     );
   }
 }

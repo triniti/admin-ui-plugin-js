@@ -1,10 +1,20 @@
 import React from 'react';
-import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, CardHeader, CardTitle, Container, Jumbotron, Screen } from '../../../../src/components';
 
 const UiJumbotron = () => (
-<ScreenBody
+<Screen
+  sidenav={<Sidenav activeScreen="jumbotrons" />}
+  sidenavHeader
+  header="Jumbotrons"
+  // tabs={[
+  //   { to: '/welcome', text: 'Tab1' },
+  //   { to: '#/test2', text: 'Tab2' },
+  // ]}
+  primaryActions={<PrimaryActions />}
   body={[
-  <Card spacing="lg" key="jumbotron1">
+  <Card key="jumbotron1">
     <CardHeader>Jumbotron Theme Dark</CardHeader>
     <Jumbotron theme="dark">
       <Container fluid>
@@ -16,7 +26,7 @@ const UiJumbotron = () => (
     </Jumbotron>
   </Card>,
 
-  <Card spacing="lg" key="jumbotron2">
+  <Card key="jumbotron2">
     <CardHeader>Jumbotron Theme Light</CardHeader>
     <Jumbotron theme="light">
       <CardBody>
@@ -28,7 +38,7 @@ const UiJumbotron = () => (
     </Jumbotron>
   </Card>,
 
-  <Card spacing="lg" key="jumbotron3">
+  <Card key="jumbotron3">
     <CardHeader>Jumbotron Default inside CardBody</CardHeader>
     <CardBody>
       <Jumbotron>
@@ -49,7 +59,7 @@ const UiJumbotron = () => (
     </CardBody>
   </Card>,
 
-  <Card spacing="lg" key="jumbotron4">
+  <Card key="jumbotron4">
     <CardHeader>Jumbotron inside CardBody</CardHeader>
     <CardBody>
       <Jumbotron>
@@ -63,8 +73,7 @@ const UiJumbotron = () => (
     </CardBody>
   </Card>,
   ]}
-  >
-  </ScreenBody>
+  />
 );
 
 export default UiJumbotron;

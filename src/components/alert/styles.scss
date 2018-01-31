@@ -104,7 +104,7 @@
   margin: 0 (-$padding-sm);
 }
 
-.card-body-spacing-lg .alert-full-width {
+.screen-body > .card .card-body .alert-full-width {
   margin: 0 (-$padding-xs);
 
   @media (min-width: 768px) {

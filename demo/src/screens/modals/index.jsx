@@ -1,5 +1,7 @@
 import React from 'react';
-import { Button, Card, CardBody, Modal, ModalHeader, ModalBody, ModalFooter, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, Modal, ModalHeader, ModalBody, ModalFooter, Screen } from '../../../../src/components';
 
 class UiModal extends React.Component {
   constructor(props) {
@@ -49,10 +51,18 @@ class UiModal extends React.Component {
 
   render() {
     return (
-      <ScreenBody
+      <Screen
+      sidenav={<Sidenav activeScreen="modals" />}
+      sidenavHeader
+      header="Modals"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={
       <Card>
-        <CardBody spacing="lg">
+        <CardBody>
           <Button color="secondary" size="lg" onClick={this.toggle} radius="round">Click Me</Button>
           <Modal isOpen={this.state.modal} toggle={this.toggle}>
             <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
@@ -99,9 +109,8 @@ class UiModal extends React.Component {
           </Modal>
         </CardBody>
       </Card>
-        }
-      >
-      </ScreenBody>
+      }
+      />
     );
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
-import { Card, CardBody, ScreenBody } from '../../../../src/components';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Card, CardBody, Screen } from '../../../../src/components';
 import TooltipItem from './TooltipItem';
 
 class UiTooltip extends React.Component {
@@ -30,17 +32,24 @@ class UiTooltip extends React.Component {
 
   render() {
     return (
-      <ScreenBody
+      <Screen
+      sidenav={<Sidenav activeScreen="tooltips" />}
+      sidenavHeader
+      header="Tooltips"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+      primaryActions={<PrimaryActions />}
       body={
       <Card>
-        <CardBody spacing="lg">
+        <CardBody>
           { this.state.tooltips.map((tooltip, i) =>
             <TooltipItem key={tooltip.placement} item={tooltip} id={i} />)}
         </CardBody>
       </Card>
       }
-      >
-      </ScreenBody>
+      />
     );
   }
 }
