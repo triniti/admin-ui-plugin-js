@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, CardHeader, Datalist } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Datalist, Screen } from '../../../../src/components';
 
 const fields = [
   {
@@ -52,6 +52,16 @@ function getOptions() {
 }
 
 const UiDatalist = () => (
+  <Screen
+    sidenav={<Sidenav activeScreen="dropdowns" />}
+    sidenavHeader
+    header="Dropdowns"
+    // tabs={[
+    //   { to: '/welcome', text: 'Tab1' },
+    //   { to: '#/test2', text: 'Tab2' },
+    // ]}
+    primaryActions={<PrimaryActions />}
+    body={
     <Card>
       <CardHeader>A few Datalists with random options</CardHeader>
       <CardBody>
@@ -66,6 +76,8 @@ const UiDatalist = () => (
         ))}
       </CardBody>
     </Card>
+    }
+  />
 );
 
 export default UiDatalist;
