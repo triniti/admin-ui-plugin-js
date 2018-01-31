@@ -1,7 +1,7 @@
 import React from 'react';
 // import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Jumbotron, Screen } from '../../../../src/components';
+import { Card, CardHeader, CardBody, Jumbotron, Screen } from '../../../../src/components';
 
 export default () => (
   <Screen
@@ -13,6 +13,12 @@ export default () => (
     //   { to: '#/test2', text: 'Tab2' },
     // ]}
     // primaryActions={<PrimaryActions />}
+    sidebar={
+      <Card>
+        <CardHeader>Sidebar Card</CardHeader>
+        <CardBody>Card Body</CardBody>
+      </Card>
+    }
     body={
       <Jumbotron>
         <h1>Triniti Admin UI Demos</h1>
