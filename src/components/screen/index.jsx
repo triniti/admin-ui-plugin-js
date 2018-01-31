@@ -67,9 +67,11 @@ const Screen = (props) => {
           ))}
         </Nav>}
 
-        {body}
+        <div className="screen-body-container">
+        <div className="screen-body">{body}</div>
+          {sidebar && <div className="screen-sidebar">{sidebar}</div>}
+        </div>
 
-        {sidebar && <div className="screen-sidebar">{sidebar}</div>}
       </div>
 
       {(footer || secondaryActions) &&
