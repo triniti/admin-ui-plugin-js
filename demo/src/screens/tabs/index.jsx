@@ -2,7 +2,7 @@ import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import classnames from 'classnames';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Nav, NavItem, NavLink, Row, Screen, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Container, Nav, NavItem, NavLink, Row, Screen, TabContent, TabPane } from '../../../../src/components';
 
 class UiTabs extends React.Component {
   constructor(props) {
@@ -122,49 +122,45 @@ class UiTabs extends React.Component {
               </Nav>
 
               <TabContent activeTab={this.state.activeTab2}>
-                <TabPane tabId="3">
-                  <Card>
-                    <CardBody>
-                      <Row>
-                        <Col sm="6">
-                          <Card>
-                            <CardTitle>CardsContainer</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                            <Button>Go somewhere</Button>
-                          </Card>
-                        </Col>
-                        <Col sm="6">
-                          <Card>
-                            <CardTitle>Special Title Treatment</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                            <Button>Go somewhere</Button>
-                          </Card>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                  </Card>
+                <TabPane tabId="3" className="pt-4">
+                  <Container fluid className="pt-2">
+                    <Row>
+                      <Col sm="6">
+                        <Card>
+                          <CardTitle>CardsContainer</CardTitle>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                          <Button>Go somewhere</Button>
+                        </Card>
+                      </Col>
+                      <Col sm="6">
+                        <Card>
+                          <CardTitle>Special Title Treatment</CardTitle>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                          <Button>Go somewhere</Button>
+                        </Card>
+                      </Col>
+                    </Row>
+                  </Container>
                 </TabPane>
-                <TabPane tabId="4">
-                  <Card>
-                    <CardBody>
-                      <Row>
-                        <Col sm="6">
-                          <Card>
-                            <CardTitle>Special Title Treatment</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                            <Button>Go somewhere</Button>
-                          </Card>
-                        </Col>
-                        <Col sm="6">
-                          <Card>
-                            <CardTitle>CardsContainer</CardTitle>
-                            <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                            <Button>Go somewhere</Button>
-                          </Card>
-                        </Col>
-                      </Row>
-                    </CardBody>
-                  </Card>
+                <TabPane tabId="4" className="pt-4">
+                  <Container fluid className="pt-2">
+                    <Row>
+                      <Col sm="6">
+                        <Card>
+                          <CardTitle>Special Title Treatment</CardTitle>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                          <Button>Go somewhere</Button>
+                        </Card>
+                      </Col>
+                      <Col sm="6">
+                        <Card>
+                          <CardTitle>CardsContainer</CardTitle>
+                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                          <Button>Go somewhere</Button>
+                        </Card>
+                      </Col>
+                    </Row>
+                  </Container>
                 </TabPane>
               </TabContent>
             </CardBody>
