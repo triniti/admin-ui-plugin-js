@@ -56,7 +56,7 @@ const UiLayout = () => (
       </CardBody>
     </Card>,
 
-    <Card key="layout1">
+    <Card key="layout2">
       <CardHeader>Surrounded by a Container</CardHeader>
       <CardBody className="bg-gray">
         <Row>

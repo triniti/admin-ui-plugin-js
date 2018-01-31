@@ -14,7 +14,7 @@ export default () => (
     // ]}
     // primaryActions={<PrimaryActions />}
     sidebar={[
-      <Card key="card2">
+      <Card key="card1">
         <CardHeader>Sample Card</CardHeader>
         <CardBody>
           <CardTitle section>Card Title</CardTitle>

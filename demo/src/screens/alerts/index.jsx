@@ -78,23 +78,23 @@ const UiAlert = () => (
 
     <Card key="alert4">
       <CardHeader fullwidth className="mb-3">Full Width Content Alerts (alert-inverse)</CardHeader>
-      <UncontrolledAlert color="info" inverse fullWidth sticky>
+      <UncontrolledAlert color="info" inverse sticky>
         <span><strong>Full Width</strong> Alert outside of Card Container and Sticky</span>
       </UncontrolledAlert>
 
-      <Alert color="success" inverse fullWidth className="mb-3">
+      <Alert color="success" inverse className="mb-3">
         <strong>Well done!</strong> Full Width inside Section Container
       </Alert>
-      <Alert color="info" inverse fullWidth className="mb-3">
+      <Alert color="info" inverse className="mb-3">
         <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
       </Alert>
-      <Alert color="warning" inverse fullWidth className="mb-3">
+      <Alert color="warning" inverse className="mb-3">
         <strong>Warning!</strong> Better check yourself, you're not looking too good.
       </Alert>
-      <Alert color="danger" inverse fullWidth className="mb-3">
+      <Alert color="danger" inverse className="mb-3">
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </Alert>
-      <UncontrolledAlert color="info" inverse fullWidth className="mb-3">
+      <UncontrolledAlert color="info" inverse className="mb-3">
         I am an alert and I can be dismissed!
       </UncontrolledAlert>
 
