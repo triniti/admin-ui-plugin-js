@@ -35,30 +35,30 @@ const UiHeaders = () => (
       <CardTitle tag="h5">Card Title h5</CardTitle>
       <CardTitle tag="h6">Card Title h6</CardTitle>
 
-      <Divider size="sm" />
+      <Divider vertical="sm" />
 
       <p className="lead">Lead paragraph tag</p>
       <p>Standard paragraph tag</p>
       <p>HR</p>
       <hr />
-      <p>Divider size="sm"</p>
-      <Divider size="sm" />
+      <p>Divider vertical="sm"</p>
+      <Divider vertical="sm" />
     </CardBody>
 
     <CardBody>
-      <CardTitle tag="h5">Divider size="sm"</CardTitle>
+      <CardTitle tag="h5">Divider vertical="sm"</CardTitle>
     </CardBody>
-    <Divider size="sm" />
+    <Divider vertical="sm" />
 
     <CardBody>
-      <CardTitle tag="h5">Divider, defaults to size="md"</CardTitle>
+      <CardTitle tag="h5">Divider vertical="md"</CardTitle>
     </CardBody>
-    <Divider />
+    <Divider vertical="md" />
 
     <CardBody>
-      <CardTitle tag="h5">Divider size="lg"</CardTitle>
+      <CardTitle tag="h5">Divider vertical="lg"</CardTitle>
     </CardBody>
-    <Divider size="lg" />
+    <Divider vertical="lg" />
 
     <CardBody>
       <CardTitle tag="h5">Dividing Line between stacked CardBodys</CardTitle>

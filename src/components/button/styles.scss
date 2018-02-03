@@ -19,8 +19,8 @@
   justify-content: space-around;
   user-select: none;
   color: $body-color;
-  background-color: $gray-400;
-  border: $input-btn-border-width solid $gray-400;
+  background-color: $white; // $gray-400
+  border: $input-btn-border-width solid $gray-700; // $gray-400
   @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
 
@@ -48,6 +48,7 @@
   }
 
   &:hover {
+    background-color: #efefef;
     cursor: pointer;
   }
 
@@ -102,8 +103,13 @@ fieldset[disabled] a.btn {
 
 // btn-group btn-light overrides
 
-.btn-group > .btn-light {
+.btn-light {
   border-color: $gray-700;
+}
+
+.btn-group > .btn-light,
+.btn-group > .btn {
+  border-color: $gray-rgba-300; // $gray-700
 }
 
 
@@ -205,13 +211,21 @@ input[type="button"] {
 // Action Buttons
 
 .btn-action {
-  margin-top: -1px;
   margin-bottom: 0;
 
   img {
     margin-right: .25rem;
     margin-left: -.25rem;
     opacity: .8;
+  }
+}
+
+.btn-action-back {
+  font-size: 0; // hides back text
+
+  img {
+    margin-right: 0;
+    margin-left: 0;
   }
 }
 

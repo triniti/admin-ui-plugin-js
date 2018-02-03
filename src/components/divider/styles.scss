@@ -1,28 +1,54 @@
 // Divider
 
-.divider {
-  margin: 1rem 0;
+.divider-horizontal-sm {
+  display: inline-block;
+  border-left: 1px solid $gray-500;
+  margin-left: .5rem;
+  padding-right: 1rem;
+  height: 25px;
+  vertical-align: middle;
 }
 
-.divider-sm {
+.divider-horizontal-md {
+  display: inline-block;
+  border-left: 1px solid $gray-500;
+  margin-left: .5rem;
+  padding-right: 1rem;
+  height: 34px;
+  vertical-align: middle;
+}
+
+.divider-horizontal-lg {
+  display: inline-block;
+  border-left: 1px solid $gray-500;
+  margin-left: .5rem;
+  padding-right: 1rem;
+  height: 50px;
+  vertical-align: middle;
+}
+
+.divider-vertical-sm {
   height: 0;
   min-height: 0;
+  margin: 1rem 0;
   padding: 0;
   border-bottom: 1px solid $gray-300;
   overflow: visible;
   box-sizing: content-box;
 }
 
-.divider-md {
+.divider-vertical-md {
   min-height: 1em;
+  margin: 1rem 0;
   padding: .3rem $padding-xs;
   border-bottom: 1px solid $gray-300;
   background-color: $gray-100;
   box-shadow: 0 -1px 0 0 $gray-300;
 }
 
-.divider-lg {
+.divider-vertical-lg {
   min-height: 1em;
+  margin: 1rem 0;
   padding: $padding-xs;
   border-bottom: 1px solid $gray-300;
   background-color: $gray-100;

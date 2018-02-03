@@ -16,6 +16,11 @@
   .card-body > & {
     @include border-radius($alert-border-radius);
   }
+
+  .screen-main > & {
+    margin-bottom: 0;
+    border-bottom: 1px solid $gray-rgba-200;
+  }
 }
 
 // Headings for larger alerts
