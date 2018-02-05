@@ -44,6 +44,10 @@
   // Customize the `:focus` state to imitate native WebKit styles.
   @include form-control-focus();
 
+  &:focus {
+    border-color: $secondary;
+  }
+
   // Placeholder
   &::placeholder {
     color: $input-placeholder-color;
@@ -77,7 +81,7 @@ select.form-control {
     // See https://github.com/twbs/bootstrap/issues/19398.
     color: $input-color;
     background-color: $body-bg;
-    box-shadow: 0 1px 3px 0px $gray-rgba-400;
+    // box-shadow: 0 1px 3px 0px $gray-rgba-400;
   }
 }
 
@@ -416,7 +420,7 @@ input[type='text']:hover,
 .form-control.form-control-warning:hover,
 .form-control.form-control-danger:hover,
 .form-control.form-control-info:hover {
-  box-shadow: 0 1px 3px 0px $gray-rgba-200;
+  // box-shadow: 0 1px 3px 0px $gray-rgba-200;
 }
 
 select:focus option:checked {
@@ -428,7 +432,7 @@ input[type='text']:focus,
 .was-validated .form-control:valid,
 .was-validated .custom-select:valid {
   background-color: $body-bg;
-  box-shadow: 0 1px 3px 0px $gray-rgba-400 !important;
+  // box-shadow: 0 1px 3px 0px $gray-rgba-400 !important;
 }
 
 legend {

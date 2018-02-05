@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Container, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -36,6 +36,7 @@ class UiForm extends React.Component {
       <Card key="form1">
         <CardHeader>Standard Form</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col sm="8" md="6">
               <CardTitle tag="h2">Card Title H2 with Button
@@ -116,12 +117,14 @@ class UiForm extends React.Component {
               </Form>
             </Col>
           </Row>
+          </Container>
         </CardBody>
        </Card>,
 
        <Card key="form2">
         <CardHeader>Form Feedback</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col sm="6" md="4">
               <CardTitle tag="h3">Card Title H3</CardTitle>
@@ -147,12 +150,14 @@ class UiForm extends React.Component {
               </Form>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
 
       <Card key="form3">
         <CardHeader>Inline Form</CardHeader>
         <CardBody>
+        <Container fluid>
           <Row>
             <Col sm="12">
               <Form inline className="mt-3">
@@ -190,12 +195,14 @@ class UiForm extends React.Component {
               </Form>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
 
       <Card key="form4">
         <CardHeader>Input Types</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col sm="9" md="6">
               <Form>
@@ -292,12 +299,14 @@ class UiForm extends React.Component {
               </Form>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
 
       <Card key="form5">
         <CardHeader>Input Sizing</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col sm="10" md="8" lg="6" xl="4" className="has-border">
               <Form>
@@ -316,12 +325,14 @@ class UiForm extends React.Component {
               </Form>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
 
       <Card key="form6">
         <CardHeader>Trinary Control - Default</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col xs="3" md="4">
               <FormGroup>
@@ -359,12 +370,14 @@ class UiForm extends React.Component {
               <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
 
       <Card key="form7">
         <CardHeader>Trinary Control - Custom</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col xs="3" md="4">
               <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" width="105px" value={this.state.trinaryCustom} onChange={this.handleChange} />
@@ -384,12 +397,14 @@ class UiForm extends React.Component {
               <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
 
       <Card key="form8">
         <CardHeader>Form Grid</CardHeader>
         <CardBody>
+          <Container fluid>
           <Row>
             <Col>
               <Form>
@@ -495,6 +510,7 @@ class UiForm extends React.Component {
               </Form>
             </Col>
           </Row>
+          </Container>
         </CardBody>
       </Card>,
       ]}

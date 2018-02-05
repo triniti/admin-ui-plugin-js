@@ -20,8 +20,11 @@
 
   &:hover,
   &:focus {
-    background-color: #efefef;
     cursor: pointer;
+  }
+
+  &:hover {
+    background-color: $gray-400;
   }
 
   &:last-child {
@@ -42,6 +45,10 @@
 .form-inline .btn,
 .input-group-btn > .btn {
   margin-bottom: 0;
+}
+
+.input-group-btn > .btn {
+  min-height: 100%;
 }
 
 //

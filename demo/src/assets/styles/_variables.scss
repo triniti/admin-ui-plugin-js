@@ -62,12 +62,12 @@ $gray-600: #e0e0e0;
 $gray-700: #d9d9de;
 $gray-800: #505050;
 $gray-900: #292929;
-$black:    #000 !default;
+$black:    #000;
 
 $blue:    #166cd6;
 $indigo:  #584bc3;
 $purple:  #8052da;
-$pink:    #ea1761;
+$pink:    #de41b2;
 $red:     #f74b4b;
 $orange:  #f99121;
 $yellow:  #fbba23;
@@ -124,7 +124,7 @@ $yiq-text-light: $white !default;
 // Navbar Theme Colors
 
 $navbar-theme-light:    $gray-200;
-$navbar-theme-dark:     #2b2b2b; // darken(theme-color("dark"), 10%)
+$navbar-theme-dark:     #21252b; // darken(theme-color("dark"), 10%)
 
 $navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%);
 $navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%);
@@ -156,15 +156,15 @@ $transition:         250ms ease-in-out !default;
 
 
 // Common Transparent Grays
-$gray-rgba-100:      rgba(#292929, .04) !default;
-$gray-rgba-200:      rgba(#000, .0625) !default;
-$gray-rgba-300:      rgba(#000, .1) !default;
-$gray-rgba-400:      rgba(#000, .125) !default;
-$gray-rgba-500:      rgba(#000, .15) !default;
-$gray-rgba-600:      rgba(#000, .2) !default;
-$gray-rgba-700:      rgba(#000, .5) !default;
-$gray-rgba-800:      rgba(#000, .625) !default;
-$gray-rgba-900:      rgba(#000, .8) !default;
+$gray-rgba-100:      rgba($black, .04) !default;
+$gray-rgba-200:      rgba($black, .0625) !default;
+$gray-rgba-300:      rgba($black, .1) !default;
+$gray-rgba-400:      rgba($black, .125) !default;
+$gray-rgba-500:      rgba($black, .15) !default;
+$gray-rgba-600:      rgba($black, .2) !default;
+$gray-rgba-700:      rgba($black, .5) !default;
+$gray-rgba-800:      rgba($black, .625) !default;
+$gray-rgba-900:      rgba($black, .8) !default;
 
 
 // Common Transparent Whites
@@ -332,7 +332,7 @@ $btn-transition:                 background-color .15s ease-in-out, border-color
 
 // Forms
 
-$input-bg:                       $gray-100;
+$input-bg:                       $gray-200;
 
 $input-color:                    $gray-900;
 $input-border-color:             rgba($black,.125);
@@ -427,6 +427,7 @@ $card-border-color:        $gray-500;
 $card-inner-border-radius: 0;
 $card-cap-bg:              $body-bg;
 $card-bg:                  $body-bg;
+$card-columns-margin:      1.25rem;
 
 
 // Tooltips
