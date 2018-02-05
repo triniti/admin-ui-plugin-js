@@ -22,7 +22,7 @@
   "peerDependencies": {
     "@gdbots/common": "~0.1 || ^1.0.0",
     "@triniti/app": "~0.3 || ^1.0.0",
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "^4.0.0",
     "classnames": "^2.2.5",
     "lodash": "^4.17.4",
     "lodash-es": "^4.17.4",
@@ -61,7 +61,7 @@
     "babel-preset-stage-2": "^6.24.1",
     "babel-register": "^6.26.0",
     "babel-tape-runner": "^2.0.1",
-    "bootstrap": "^4.0.0-beta.2",
+    "bootstrap": "^4.0.0",
     "classnames": "^2.2.5",
     "cpx": "^1.5.0",
     "deep-freeze": "^0.0.1",
