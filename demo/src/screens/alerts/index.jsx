@@ -12,6 +12,20 @@ const UiAlert = () => (
     //   { to: '/welcome', text: 'Tab1' },
     //   { to: '#/test2', text: 'Tab2' },
     // ]}
+    alerts={[
+    {
+      id: Math.ceil(Math.random() * 10000000),
+      type: 'success',
+      isDismissible: true,
+      delay: false,
+      message: 'I am an alert and I have',
+      link: {
+        openInNewTab: true,
+        text: 'a link that will open in a new tab',
+        href: 'https://google.com',
+      }
+      }
+    ]}
     primaryActions={<PrimaryActions />}
     body={[
     <Card key="alert1">

@@ -15,9 +15,13 @@
     @include border-radius($alert-border-radius);
   }
 
-  .screen-main > & {
+  .alert-container & {
     margin-bottom: 0;
     border-bottom: 1px solid $gray-rgba-200;
+  }
+
+  & span::before {
+      content: ' ';
   }
 }
 
@@ -32,6 +36,22 @@
     color: $white;
     text-shadow: 0 1px 0 $gray-rgba-600;
   }
+}
+
+.alert-link {
+  font-weight: 500;
+  border-bottom: 1px dotted rgba(0,0,0,0.4);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+.alert-inverse .alert-link {
+  color: #fff;
+  font-weight: 500;
+  border-bottom: 1px dotted #fff;
 }
 
 
@@ -98,6 +118,7 @@
   text-shadow: 0 1px 0 #fff;
   opacity: .5;
   -webkit-appearance: none;
+  cursor: pointer;
 }
 
 .btn-alert-close:hover {
