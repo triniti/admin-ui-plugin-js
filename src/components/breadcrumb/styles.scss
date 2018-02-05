@@ -11,7 +11,6 @@
 // Breadcrumb Item
 
 .breadcrumb-item {
-  float: left;
   color: $breadcrumb-active-color;
 
   & a {
@@ -21,11 +20,5 @@
   &:hover,
   & a:hover {
     color: darken($gray-900, 15%);
-  }
-}
-
-@media (max-width: 767px) {
-  .offcanvas-left + .main > .page-header .breadcrumb {
-    margin-left: 1.75rem;
   }
 }
