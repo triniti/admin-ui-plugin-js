@@ -124,7 +124,7 @@ $yiq-text-light: $white !default;
 // Navbar Theme Colors
 
 $navbar-theme-light:    $gray-200;
-$navbar-theme-dark:     #21252b; // darken(theme-color("dark"), 10%)
+$navbar-theme-dark:     #272a31; // #21252b darken(theme-color("dark"), 10%)
 
 $navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%);
 $navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%);
@@ -387,13 +387,13 @@ $nav-tabs-link-active-border-color:           $gray-600; // todo check if multip
 
 $navbar-toggler-border-radius:       0;
 
-$navbar-dark-color:                 rgba($white,.6);
+$navbar-dark-color:                 rgba($white,.5);
 $navbar-dark-hover-color:           rgba($white,.825);
 $navbar-dark-active-color:          $white;
 $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-dark-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
 $navbar-dark-toggler-border-color:  transparent;
 
-$navbar-light-color:                rgba($black,.6);
+$navbar-light-color:                rgba($black,.5);
 $navbar-light-hover-color:          rgba($black,.8);
 $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-light-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
 $navbar-light-toggler-border-color: transparent;

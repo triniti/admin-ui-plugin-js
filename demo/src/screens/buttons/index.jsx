@@ -41,6 +41,17 @@ class UiButtons extends React.Component {
       // ]}
       primaryActions={<PrimaryActions />}
       body={[
+        <Card key="button0">
+          <CardHeader>Brand</CardHeader>
+          <CardBody>
+            <Button>default</Button>
+            <Button outline>outline</Button>
+            <Button color="primary">primary</Button>
+            <Button color="primary" outline>primary</Button>
+            <Button color="secondary">secondary</Button>
+          </CardBody>
+        </Card>,
+
         <Card key="button1">
           <CardHeader>Solid
             <span>
