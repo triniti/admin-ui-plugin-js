@@ -1,0 +1,20 @@
+// Action Button
+
+.btn-action {
+  margin-bottom: 0;
+
+  img {
+    margin-right: .25rem;
+    margin-left: -.25rem;
+    opacity: .8;
+  }
+}
+
+.btn-action-back {
+  font-size: 0; // hides back text
+
+  img {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

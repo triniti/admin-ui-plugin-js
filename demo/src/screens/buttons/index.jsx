@@ -52,8 +52,6 @@ class UiButtons extends React.Component {
             <Button>default</Button>
             <Button color="primary">primary</Button>
             <Button color="secondary">secondary</Button>
-            <Button color="success">success</Button>
-            <Button color="info">info</Button>
             <Button color="warning">warning</Button>
             <Button color="danger">danger</Button>
             <Button color="light">light</Button>
@@ -74,8 +72,6 @@ class UiButtons extends React.Component {
             <Button radius="round">default</Button>
             <Button color="primary" radius="round">primary</Button>
             <Button color="secondary" radius="round">secondary</Button>
-            <Button color="success" radius="round">success</Button>
-            <Button color="info" radius="round">info</Button>
             <Button color="warning" radius="round">warning</Button>
             <Button color="danger" radius="round">danger</Button>
             <Button color="light" radius="round">light</Button>
@@ -92,8 +88,6 @@ class UiButtons extends React.Component {
             <Button radius="none">default</Button>
             <Button color="primary" radius="none">primary</Button>
             <Button color="secondary" radius="none">secondary</Button>
-            <Button color="success" radius="none">success</Button>
-            <Button color="info" radius="none">info</Button>
             <Button color="warning" radius="none">warning</Button>
             <Button color="danger" radius="none">danger</Button>
             <Button color="light" radius="none">light</Button>
@@ -110,8 +104,6 @@ class UiButtons extends React.Component {
             <Button outline>default</Button>
             <Button outline color="primary">primary</Button>
             <Button outline color="secondary">secondary</Button>
-            <Button outline color="success">success</Button>
-            <Button outline color="info">info</Button>
             <Button outline color="warning">warning</Button>
             <Button outline color="danger">danger</Button>
             <Button outline color="light">light</Button>
@@ -122,8 +114,6 @@ class UiButtons extends React.Component {
             <Button outline radius="round">default</Button>
             <Button outline radius="round" color="primary">primary</Button>
             <Button outline radius="round" color="secondary">secondary</Button>
-            <Button outline radius="round" color="success">success</Button>
-            <Button outline radius="round" color="info">info</Button>
             <Button outline radius="round" color="warning">warning</Button>
             <Button outline radius="round" color="danger">danger</Button>
             <Button outline radius="round" color="light">light</Button>
@@ -133,8 +123,6 @@ class UiButtons extends React.Component {
             <Button outline radius="none">default</Button>
             <Button outline radius="none" color="primary">primary</Button>
             <Button outline radius="none" color="secondary">secondary</Button>
-            <Button outline radius="none" color="success">success</Button>
-            <Button outline radius="none" color="info">info</Button>
             <Button outline radius="none" color="warning">warning</Button>
             <Button outline radius="none" color="danger">danger</Button>
             <Button outline radius="none" color="light">light</Button>
@@ -151,8 +139,6 @@ class UiButtons extends React.Component {
               <Button outlineText size="lg">default</Button>
               <Button outlineText color="primary" size="lg">primary</Button>
               <Button outlineText color="secondary" size="lg">secondary</Button>
-              <Button outlineText color="success" size="lg">success</Button>
-              <Button outlineText color="info" size="lg">info</Button>
               <Button outlineText color="warning" size="lg">warning</Button>
               <Button outlineText color="danger" size="lg">danger</Button>
               <Button outlineText color="dark" size="lg">dark</Button>
@@ -162,8 +148,6 @@ class UiButtons extends React.Component {
             <Button outlineText>default</Button>
             <Button outlineText color="primary">primary</Button>
             <Button outlineText color="secondary">secondary</Button>
-            <Button outlineText color="success">success</Button>
-            <Button outlineText color="info">info</Button>
             <Button outlineText color="warning">warning</Button>
             <Button outlineText color="danger">danger</Button>
             <Button outlineText color="dark">dark</Button>
@@ -172,8 +156,6 @@ class UiButtons extends React.Component {
             <Button outlineText size="sm" radius="round">default</Button>
             <Button outlineText color="primary" size="sm" radius="round">primary</Button>
             <Button outlineText color="secondary" size="sm" radius="round">secondary</Button>
-            <Button outlineText color="success" size="sm" radius="round">success</Button>
-            <Button outlineText color="info" size="sm" radius="round">info</Button>
             <Button outlineText color="warning" size="sm" radius="round">warning</Button>
             <Button outlineText color="danger" size="sm" radius="round">danger</Button>
             <Button outlineText color="dark" size="sm" radius="round">dark</Button>

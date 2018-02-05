@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import kebabCase from 'lodash/kebabCase';
 import Button from '../button';
 import Icon from '../icon';
+import './styles.scss';
 
 const ActionButton = ({ icon, iconUrl, text, ...rest }) => (
   <Button {...rest} action={kebabCase(`action-${text}`)}>
