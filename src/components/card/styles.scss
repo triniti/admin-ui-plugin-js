@@ -1,18 +1,13 @@
 // Card
+
 @import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/card";
 
 .card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   flex-shrink: 0;
   margin: 0 0 1rem 0;
-  min-width: 0;
   width: 100%;
-  word-wrap: break-word;
-  background-clip: border-box;
-  background-color: $white;
-  @include border-radius($card-border-radius);
+  border: none;
 
   .tab-pane > & {
     margin-top: 0;
@@ -28,13 +23,7 @@
 }
 
 
-
 .card-body {
-  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
-  // as much space as possible, ensuring footers are aligned to the bottom.
-  flex: 1 1 auto;
-  padding: $card-spacer-x;
-  box-shadow: none;
 
   .screen-body > .card & {
     position: relative;
@@ -58,15 +47,12 @@
   box-shadow: inset 0 1px 0 0 $gray-300;
 }
 
-.card-body + .card-inverse {
-  box-shadow: none;
-}
-
 .jumbotron > .card-body {
   background-color: inherit;
 }
 
 .card-body > .row {
+  margin: 0;
   padding-top: ($padding-xs - .125rem);
 
   @media (min-width: 768px) and (max-width: 1024px) {
@@ -95,7 +81,6 @@
   justify-content: space-between;
   align-items: center;
   flex: 1 1 auto;
-  margin-bottom: $card-spacer-y;
 }
 
 h1.card-title {
@@ -140,37 +125,8 @@ h4.card-title {
   color: $text-muted;
 }
 
-.card-subtitle {
-  margin-top: -($card-spacer-y / 2);
-  margin-bottom: 0;
-}
-
 .card-text:last-child {
   margin-bottom: 0;
-}
-
-.card-link {
-  @include hover {
-    text-decoration: none;
-  }
-
-  + .card-link {
-    margin-left: $card-spacer-x;
-  }
-}
-
-.card {
-  > .list-group:first-child {
-    .list-group-item:first-child {
-      @include border-top-radius($card-border-radius);
-    }
-  }
-
-  > .list-group:last-child {
-    .list-group-item:last-child {
-      @include border-bottom-radius($card-border-radius);
-    }
-  }
 }
 
 
@@ -187,16 +143,12 @@ h4.card-title {
   z-index: $zindex-sticky;
   display: flex;
   flex: 0 0 auto;
-  margin-bottom: 0;
   padding: 0 $card-spacer-x;
   font-size: 1rem;
   font-weight: 500;
   align-items: center;
   justify-content: space-between;
   min-height: $header-height + 2;
-
-  background-color: $card-cap-bg;
-  border-bottom: $card-border-width solid $card-border-color;
 
   .screen-sidebar & {
     font-weight: 400;
@@ -284,19 +236,6 @@ h4.card-title {
   }
 }
 
-// Adjustment for btn-icons in card-header todo: find a better way
-
-.card-header > .rounded-circle {
-  margin: -.75rem;
-}
-
-
-.card-footer {
-  padding: $card-spacer-y $card-spacer-x;
-  background-color: $card-cap-bg;
-  border-top: $card-border-width solid $card-border-color;
-}
-
 .card-spacing-lg .card-footer {
   padding-left: $padding-xs;
   padding-left: $padding-xs;
@@ -317,71 +256,9 @@ h4.card-title {
 
 
 //
-// Header navs
-//
-
-.card-header-tabs {
-  margin-right: -($card-spacer-x / 2);
-  margin-bottom: -$card-spacer-y;
-  margin-left: -($card-spacer-x / 2);
-  border-bottom: 0;
-}
-
-.card-header-pills {
-  margin-right: -($card-spacer-x / 2);
-  margin-left: -($card-spacer-x / 2);
-}
-
-// Card image
-.card-img-overlay {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: $card-img-overlay-padding;
-}
-
-.card-img {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-radius($card-inner-border-radius);
-}
-
-// Card image caps
-.card-img-top {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-top-radius($card-inner-border-radius);
-}
-
-.card-img-bottom {
-  width: 100%; // Required because we use flexbox and this inherently applies align-self: stretch
-  @include border-bottom-radius($card-inner-border-radius);
-}
-
-
-// Card deck
-
-@include media-breakpoint-up(sm) {
-  .card-deck {
-    display: flex;
-    flex-flow: row wrap;
-    margin-right: -$card-deck-margin;
-    margin-left: -$card-deck-margin;
-
-    .card {
-      display: flex;
-      flex: 1 0 0%;
-      flex-direction: column;
-      margin-right: $card-deck-margin;
-      margin-left: $card-deck-margin;
-    }
-  }
-}
-
-
-//
 // Card groups
 //
+// Left this old style since it worked better
 
 @include media-breakpoint-up(sm) {
   .card-group {
@@ -428,27 +305,6 @@ h4.card-title {
           }
         }
       }
-    }
-  }
-}
-
-
-//
-// Columns
-//
-
-.card-columns {
-  .card {
-    margin-bottom: $card-columns-margin;
-  }
-
-  @include media-breakpoint-up(sm) {
-    column-count: $card-columns-count;
-    column-gap: $card-columns-gap;
-
-    .card {
-      display: inline-block; // Don't let them vertically span multiple columns
-      width: 100%; // Don't let their width change
     }
   }
 }
@@ -531,4 +387,3 @@ h4.card-title {
 .card-transparent {
   background-color: transparent;
 }
-

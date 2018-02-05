@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Divider, Row, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Container, Divider, Row, Screen } from '../../../../src/components';
 
 const UiCard = () => (
   <Screen
@@ -15,7 +15,7 @@ const UiCard = () => (
     primaryActions={<PrimaryActions />}
     body={[
     <CardsContainer key="cards1">
-      <Row className="mb-3">
+      <Row>
         <Col xs="12" sm="6" md="4" lg="3">
           <Card hover border>
             <CardImg
@@ -148,7 +148,7 @@ const UiCard = () => (
       </Row>
     </CardsContainer>,
 
-    <CardBody key="cards2">
+    <Container fluid key="cards2">
       <CardTitle tag="h4">Card Group</CardTitle>
       <Row>
         <Col>
@@ -321,7 +321,7 @@ const UiCard = () => (
           </CardColumns>
         </Col>
       </Row>
-    </CardBody>
+    </Container>
     ]}
   />
 );
