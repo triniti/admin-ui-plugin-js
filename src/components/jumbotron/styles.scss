@@ -1,20 +1,14 @@
 // Jumbotron
 
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/jumbotron";
+
 .jumbotron {
-  padding: $jumbotron-padding ($jumbotron-padding / 2);
-  margin-bottom: 0;
-  background-color: $jumbotron-bg;
   @include border-radius(0);
 
   @include media-breakpoint-up(sm) {
     padding: $jumbotron-padding;
   }
-}
-
-.jumbotron-fluid {
-  padding-right: 0;
-  padding-left: 0;
-  @include border-radius(0);
 }
 
 // Example theme options
