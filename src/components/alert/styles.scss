@@ -10,6 +10,7 @@
 .alert {
   border: none;
   border-radius: 0;
+  font-size: .875rem;
 
   .card-body > & {
     @include border-radius($alert-border-radius);
@@ -32,7 +33,7 @@
 @each $color, $value in $theme-colors {
   .alert-#{$color}.alert-inverse {
     background-color: theme-color($color);
-    font-weight: 500;
+    font-weight: 700;
     color: $white;
     text-shadow: 0 1px 0 $gray-rgba-600;
   }
@@ -50,7 +51,7 @@
 
 .alert-inverse .alert-link {
   color: #fff;
-  font-weight: 500;
+  font-weight: 700;
   border-bottom: 1px dotted #fff;
 }
 

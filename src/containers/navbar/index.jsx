@@ -10,7 +10,7 @@ import MobileNavContainer from '../mobile-nav';
 import selectors from '../../selectors';
 
 const NavbarContainer = ({ navConfig, theme }) => {
-  const navbarClass = theme === 'light' ? 'navbar' : 'navbar-dark';
+  const navbarClass = theme === 'light' ? 'navbar-light' : 'navbar-dark';
 
   return (
     <Navbar className={`${navbarClass} navbar-main-wrapper`}>

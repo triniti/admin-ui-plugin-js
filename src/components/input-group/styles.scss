@@ -1,7 +1,6 @@
 // input-group
 
 @import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/forms";
 @import "~bootstrap/scss/input-group";
 
 //
@@ -145,6 +144,7 @@
     position: relative;
     background-clip: padding-box;
     border: $input-btn-border-width solid $input-group-btn-border-color;
+    z-index: 3;
 
     + .btn {
       margin-left: (-$input-btn-border-width);
@@ -152,7 +152,7 @@
 
     // Bring the "active" button to the front
     @include hover-focus-active {
-      z-index: 3;
+
     }
   }
 

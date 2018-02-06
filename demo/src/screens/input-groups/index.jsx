@@ -84,7 +84,7 @@ class UiInputGroup extends React.Component {
               </InputGroup>
 
               <InputGroup>
-                <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
+                <InputGroupButton><Button outline color="secondary">I'm a button</Button></InputGroupButton>
                 <Input />
               </InputGroup>
 
@@ -92,7 +92,7 @@ class UiInputGroup extends React.Component {
                 <Input />
                 <InputGroupButton>
                   <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                    <DropdownToggle caret color="dark">
+                    <DropdownToggle caret color="secondary">
                       Button Dropdown
                     </DropdownToggle>
                     <DropdownMenu>
@@ -109,7 +109,7 @@ class UiInputGroup extends React.Component {
               <InputGroup>
                 <InputGroupButton />
                 <Input placeholder="and..." />
-                <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
+                <InputGroupButton><Button outline color="secondary">I'm a button</Button></InputGroupButton>
               </InputGroup>
             </Col>
           </Row>
@@ -169,14 +169,14 @@ class UiInputGroup extends React.Component {
               </InputGroup>
 
               <InputGroup>
-                <InputGroupButton><Button color="primary">I'm a button</Button></InputGroupButton>
+                <InputGroupButton><Button color="secondary">I'm a button</Button></InputGroupButton>
                 <Input theme="white" />
               </InputGroup>
 
               <InputGroup>
                 <InputGroupButton />
                 <Input placeholder="and..." theme="white" />
-                <InputGroupButton><Button>I'm a button</Button></InputGroupButton>
+                <InputGroupButton><Button outline color="secondary">I'm a button</Button></InputGroupButton>
               </InputGroup>
             </Col>
           </Row>

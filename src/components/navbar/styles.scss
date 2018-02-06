@@ -69,6 +69,7 @@
   .dropdown-menu {
     position: absolute;
     float: none;
+    transform: none !important;
   }
 }
 
@@ -219,7 +220,7 @@
     .active > .nav-link,
     .nav-link.show,
     .nav-link.active {
-    
+
       @media (max-width: 1024px) {
         color: $navbar-light-active-color;
       }
