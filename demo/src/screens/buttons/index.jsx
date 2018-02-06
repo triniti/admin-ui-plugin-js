@@ -240,24 +240,24 @@ class UiButtons extends React.Component {
           <CardBody>
             <Row>
               <Col xs="12" sm="6">
-                <CardTitle tag="h4">Radio Buttons color="primary"</CardTitle>
+                <CardTitle tag="h4">Radio Buttons default</CardTitle>
                 <ButtonGroup className="mb-2">
                   <Button
-                    color="primary"
+
                     onClick={() => this.onRadioBtnClick(1)}
                     active={this.state.rSelected === 1}
                     radius="round"
                   >One
                   </Button>
                   <Button
-                    color="primary"
+
                     onClick={() => this.onRadioBtnClick(2)}
                     active={this.state.rSelected === 2}
                     radius="round"
                   >Two
                   </Button>
                   <Button
-                    color="primary"
+
                     onClick={() => this.onRadioBtnClick(3)}
                     active={this.state.rSelected === 3}
                     radius="round"

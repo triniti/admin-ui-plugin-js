@@ -287,6 +287,8 @@ $display2-size:               2.5rem;
 $display3-size:               2rem;
 $display4-size:               1.5rem;
 
+$lead-font-size:              1.125rem;
+
 $text-muted:                  #bdbdbd;
 
 $blockquote-small-color:      $gray-700;
@@ -325,6 +327,14 @@ $btn-disabled-opacity:        .65;
 $btn-focus-box-shadow:        none !important;
 $btn-active-box-shadow:       none !important;
 
+$input-btn-line-height:       1.6;
+
+$form-check-input-margin-x:             .3125rem;
+
+$form-check-inline-margin-x:            .75rem !default;
+
+$form-check-inline-input-margin-x:      .3125rem;
+
 // Allows for customizing button radius independently from global border radius
 
 $btn-transition:                 background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -337,8 +347,10 @@ $input-bg:                       $gray-200;
 $input-color:                    $gray-900;
 $input-border-color:             rgba($black,.125);
 $input-box-shadow:               none;
+$form-group-margin-bottom:       1.25rem;
+$input-line-height:              1.5;
 
-// $input-focus-border-color:       $gray-700;
+$input-focus-border-color:       $gray-700;
 // $input-focus-box-shadow:         none;
 
 $input-placeholder-color:        $text-muted;

@@ -117,7 +117,7 @@ class UiInputGroup extends React.Component {
       </Card>,
 
       <Card key="imput2" className="mb-0">
-        <CardHeader>White Form on BG Color</CardHeader>
+        <CardHeader fullWidth>White Form on BG Color</CardHeader>
         <CardBody className="bg-light form-white">
           <Row>
             <Col sm="6">
@@ -171,24 +171,6 @@ class UiInputGroup extends React.Component {
               <InputGroup>
                 <InputGroupButton><Button color="primary">I'm a button</Button></InputGroupButton>
                 <Input theme="white" />
-              </InputGroup>
-
-              <InputGroup>
-                <Input theme="white" />
-                <InputGroupButton>
-                  <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                    <DropdownToggle caret>
-                      Button Dropdown
-                    </DropdownToggle>
-                    <DropdownMenu>
-                      <DropdownItem header>Header</DropdownItem>
-                      <DropdownItem disabled>Action</DropdownItem>
-                      <DropdownItem>Another Action</DropdownItem>
-                      <DropdownItem divider />
-                      <DropdownItem>Another Action</DropdownItem>
-                    </DropdownMenu>
-                  </ButtonDropdown>
-                </InputGroupButton>
               </InputGroup>
 
               <InputGroup>

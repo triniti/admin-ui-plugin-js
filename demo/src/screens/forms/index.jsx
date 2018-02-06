@@ -278,7 +278,7 @@ class UiForm extends React.Component {
                     It's a bit lighter and easily wraps to a new line.
                   </FormText>
                 </FormGroup>
-                <FormGroup check inline className="mb-3">
+                <FormGroup check inline>
                   <Label check>
                     <Radio type="checkbox" name="radio1" id="radio1" />
                     Option one is this and that—be sure to include why it's great
@@ -361,9 +361,9 @@ class UiForm extends React.Component {
           </Row>
           <Row>
             <Col xs="3" md="4">
-              <FormGroup>
-                <Label>Staff</Label>
-                <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
+              <FormGroup inline>
+                <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                <Button color="info" size="sm">Submit</Button>
               </FormGroup>
             </Col>
             <Col xs="6">
@@ -379,7 +379,7 @@ class UiForm extends React.Component {
         <CardBody>
           <Container fluid>
           <Row>
-            <Col xs="3" md="4">
+            <Col xs="3" md="4" className="mb-3">
               <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" width="105px" value={this.state.trinaryCustom} onChange={this.handleChange} />
             </Col>
             <Col xs="6">

@@ -32,19 +32,24 @@
 
 .btn-outline-light:not(.dropdown-toggle):not([disabled]):not(.disabled).active {
   color: $white !important;
-  background-color: theme-color("primary");
-  border: $input-btn-border-width solid darken(theme-color("primary"), 3%) !important;;
+  background-color: theme-color("secondary");
+  border: $input-btn-border-width solid darken(theme-color("secondary"), 3%) !important;;
 }
 
 .show > .btn-outline-light.dropdown-toggle {
   color: $body-color;
-  background-color: $gray-400;
-  border-color: $gray-400;
+  background-color: $white;
+  border-color: $gray-700;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $gray-400;
-    border-color: $gray-400;
+    border-color: $gray-700;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background-color: $white;
+    border-color: $gray-700;
     box-shadow: none;
   }
 }

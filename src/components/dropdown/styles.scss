@@ -114,8 +114,7 @@
 
 // increases bottom area to fix hover for dropdown
 
-.dropdown .btn:before,
-.dropdown:before {
+.dropdown .btn:before {
   position: absolute;
   content: '';
   top: 0;

@@ -1,30 +1,20 @@
 // input-group
 
 @import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/input-group";
 
 //
 // Base styles
 //
 
 .input-group {
-  position: relative;
-  display: flex;
-  width: 100%;
-
   @include hover-focus-active {
     z-index: $zindex-dropdown;
   }
 
   .form-control {
-    // Ensure that the input is always above the *appended* addon button for
-    // proper border colors.
-    position: relative;
     z-index: 2;
-    flex: 1 1 auto;
-    // Add width 1% and flex-basis auto to ensure that button will not wrap out
-    // the column. Applies to IE Edge+ and Firefox. Chrome does not require this.
-    width: 1%;
-    margin-bottom: 0;
 
     // Bring the "active" form control to the front
     @include hover-focus-active {
@@ -210,4 +200,8 @@
 
 .input-group-btn > .btn-danger {
   border-color: theme-color("danger");
+}
+
+.form-control-theme-white {
+  background-color: $white;
 }
