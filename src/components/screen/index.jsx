@@ -41,6 +41,7 @@ const Screen = (props) => {
     footer,
     primaryActions,
     secondaryActions,
+    breadcrumbs,
   } = props;
 
   return (
@@ -62,6 +63,17 @@ const Screen = (props) => {
         {(header || primaryActions) &&
         <div className="screen-header-container">
           {header && <h1 className="screen-header-title">{header}</h1>}
+          {breadcrumbs.length > 0 &&
+          <Breadcrumb>
+            {breadcrumbs.map(tab => (
+              <BreadcrumbItem>
+                {tab.to &&
+                <RouterLink to={tab.to}>{tab.text}</RouterLink>
+                }
+                {!tab.to && tab.text}
+              </BreadcrumbItem>
+            ))}
+          </Breadcrumb>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
 
@@ -109,6 +121,7 @@ Screen.propTypes = {
   footer: PropTypes.node,
   primaryActions: PropTypes.node,
   secondaryActions: PropTypes.node,
+  breadcrumbs: PropTypes.array,
 };
 
 const noop = () => {
@@ -119,6 +132,7 @@ Screen.defaultProps = {
   alerts: [],
   sidenavHeader: null,
   tabs: [],
+  breadcrumbs: [],
 };
 
 export default Screen;
