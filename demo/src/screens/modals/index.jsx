@@ -76,7 +76,7 @@ class UiModal extends React.Component {
                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
                 deserunt mollit anim id est laborum.
               </p>
-              <Button outline color="default" radius="round" onClick={this.toggleNested}>Show Nested Modal</Button>
+              <Button outline onClick={this.toggleNested}>Show Nested Modal</Button>
               <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} size="sm">
                 <ModalBody className="text-center modal-wrapper"><h4>Nested Modal title</h4>Do you want to clear everything?</ModalBody>
                 <ModalFooter buttons>
