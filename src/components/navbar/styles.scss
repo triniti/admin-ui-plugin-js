@@ -2,6 +2,14 @@
 
 @import "~bootstrap/scss/navbar";
 
+.navbar-nav {
+
+  .dropdown-menu {
+    position: absolute;
+    float: none;
+    transform: none !important;
+  }
+}
 
 // Button for toggling the navbar when in its collapsed state
 .navbar-toggler {
