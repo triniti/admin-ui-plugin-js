@@ -1,7 +1,7 @@
 import React from 'react';
 import test from 'tape';
 import { shallow, mount } from 'enzyme';
-import { InputGroupAddon, InputGroupText } from '../../../src/components';
+import { Button, InputGroupAddon, InputGroupText } from '../../../src/components';
 
 test('InputGroupAddon:: should render with "div" tag', (t) => {
   const wrapper = shallow(<InputGroupAddon addonType="prepend">Yo!</InputGroupAddon>);
@@ -15,6 +15,16 @@ test('InputGroupAddon:: should render text children', (t) => {
 
   t.equal(wrapper.find(InputGroupText).length, 1);
   t.equal(wrapper.text(), 'Yo!');
+  t.end();
+});
+
+test('InputGroupAddon:: should render component children', (t) => {
+  const wrapper = mount(<InputGroupAddon addonType="prepend"><Button>not a text child</Button></InputGroupAddon>);
+
+  t.equal(wrapper.children().length, 1);
+  t.equal(wrapper.find(Button).length, 1);
+  t.equal(wrapper.text(), 'not a text child');
+  t.equal(wrapper.html(), '<div class="input-group-prepend"><button class="btn btn-light">not a text child</button></div>');
   t.end();
 });
 
