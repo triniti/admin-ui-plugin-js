@@ -2,41 +2,36 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
-import './styles.scss';
 
 const propTypes = {
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  children: PropTypes.node,
-  height: PropTypes.string,
 };
 
 const defaultProps = {
-  tag: 'div',
+  tag: 'span'
 };
 
-const FlexSpacer = (props) => {
+const InputGroupText = (props) => {
   const {
     className,
     cssModule,
     tag: Tag,
-    children,
-    height,
     ...attributes
   } = props;
 
   const classes = mapToCssModules(classNames(
     className,
-    'flex-spacer',
+    'input-group-text'
   ), cssModule);
 
   return (
-    <Tag {...attributes} className={classes} style={{ height }}>{children}</Tag>
+    <Tag {...attributes} className={classes} />
   );
 };
 
-FlexSpacer.propTypes = propTypes;
-FlexSpacer.defaultProps = defaultProps;
+InputGroupText.propTypes = propTypes;
+InputGroupText.defaultProps = defaultProps;
 
-export default FlexSpacer;
+export default InputGroupText;

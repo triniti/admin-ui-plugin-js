@@ -18,6 +18,7 @@
 
   &:focus {
     border-color: $secondary;
+    box-shadow: none !important;
   }
 }
 
