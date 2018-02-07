@@ -30,37 +30,37 @@ class UiDropdown extends React.Component {
 
   render() {
     return (
-    <Screen
-      sidenav={<Sidenav activeScreen="dropdowns" />}
-      sidenavHeader
-      header="Dropdowns"
+      <Screen
+        sidenav={<Sidenav activeScreen="dropdowns" />}
+        sidenavHeader
+        header="Dropdowns"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
       //   { to: '#/test2', text: 'Tab2' },
       // ]}
-      primaryActions={<PrimaryActions />}
-      body={
-      <Card>
-        <CardHeader>Dropdown</CardHeader>
-        <CardBody>
-          <Row>
-            <Col xs="6">
-              <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
-                <DropdownToggle caret color="default" outline>
+        primaryActions={<PrimaryActions />}
+        body={
+          <Card>
+            <CardHeader>Dropdown</CardHeader>
+            <CardBody>
+              <Row>
+                <Col xs="6">
+                  <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
+                    <DropdownToggle caret color="default" outline>
                   Dropdown
-                </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem disabled>Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-            </Col>
-          </Row>
-        </CardBody>
-      </Card>
+                    </DropdownToggle>
+                    <DropdownMenu>
+                      <DropdownItem header>Header</DropdownItem>
+                      <DropdownItem disabled>Action</DropdownItem>
+                      <DropdownItem>Another Action</DropdownItem>
+                      <DropdownItem divider />
+                      <DropdownItem>Another Action</DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>
       }
       />
     );

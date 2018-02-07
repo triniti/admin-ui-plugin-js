@@ -33,33 +33,33 @@ class UiPopover extends React.Component {
 
   render() {
     return (
-    <Screen
-      sidenav={<Sidenav activeScreen="popovers" />}
-      sidenavHeader
-      header="Popovers"
+      <Screen
+        sidenav={<Sidenav activeScreen="popovers" />}
+        sidenavHeader
+        header="Popovers"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
       //   { to: '#/test2', text: 'Tab2' },
       // ]}
-      primaryActions={<PrimaryActions />}
-      body={
-      <Card>
-        <CardBody className="text-center">
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          { this.state.popovers.map((popover, i) => <PopoverItem key={i} item={popover} id={i} />)}
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-        </CardBody>
-      </Card>
+        primaryActions={<PrimaryActions />}
+        body={
+          <Card>
+            <CardBody className="text-center">
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              { this.state.popovers.map((popover, i) => <PopoverItem key={i} item={popover} id={i} />)}
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+              <br />
+            </CardBody>
+          </Card>
       }
       />
     );
