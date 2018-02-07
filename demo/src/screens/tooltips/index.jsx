@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, Screen } from '../../../../src/components';
+import { Card, CardBody, Jumbotron, Screen } from '../../../../src/components';
 import TooltipItem from './TooltipItem';
 
 export default class TooltipsScreen extends React.Component {
@@ -40,9 +40,11 @@ export default class TooltipsScreen extends React.Component {
         body={
           <Card>
             <CardBody>
-              {this.state.tooltips.map((tooltip, i) => (
-                <TooltipItem key={tooltip.placement} item={tooltip} id={i} />
-              ))}
+              <Jumbotron>
+                {this.state.tooltips.map((tooltip, i) => (
+                  <TooltipItem key={tooltip.placement} item={tooltip} id={i} />
+                ))}
+              </Jumbotron>
             </CardBody>
           </Card>
         }
