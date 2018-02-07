@@ -148,7 +148,7 @@ const UiCard = () => (
       </Row>
     </CardsContainer>,
 
-    <Container fluid key="cards2">
+    <Container fluid key="cards2" className="px-4">
       <CardTitle tag="h4">Card Group</CardTitle>
       <Row>
         <Col>

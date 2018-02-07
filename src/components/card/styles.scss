@@ -13,6 +13,10 @@
     margin-top: 0;
   }
 
+  .card-columns > & {
+    margin-bottom: 1rem;
+  }
+
   @media (max-width: 767px) {
     margin: 0 0 .5rem 0;
   }
