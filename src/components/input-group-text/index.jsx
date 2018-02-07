@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'span'
+  tag: 'span',
 };
 
 const InputGroupText = (props) => {
@@ -23,7 +23,7 @@ const InputGroupText = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'input-group-text'
+    'input-group-text',
   ), cssModule);
 
   return (

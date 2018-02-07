@@ -7,11 +7,9 @@ const propTypes = {
   children: PropTypes.node,
 };
 
-const InputGroupButtonDropdown = (props) => {
-  return (
-    <Dropdown {...props} />
-  );
-};
+const InputGroupButtonDropdown = props => (
+  <Dropdown {...props} />
+);
 
 InputGroupButtonDropdown.propTypes = propTypes;
 

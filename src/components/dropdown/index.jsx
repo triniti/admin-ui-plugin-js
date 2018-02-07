@@ -77,14 +77,12 @@ class Dropdown extends React.Component {
 
   addEvents() {
     ['click', 'touchstart', 'keyup'].forEach(event =>
-      document.addEventListener(event, this.handleDocumentClick, true)
-    );
+      document.addEventListener(event, this.handleDocumentClick, true));
   }
 
   removeEvents() {
     ['click', 'touchstart', 'keyup'].forEach(event =>
-      document.removeEventListener(event, this.handleDocumentClick, true)
-    );
+      document.removeEventListener(event, this.handleDocumentClick, true));
   }
 
   handleDocumentClick(e) {
@@ -190,9 +188,9 @@ class Dropdown extends React.Component {
         [`btn-group-${size}`]: !!size,
         dropdown: !group && !addonType,
         show: isOpen,
-        dropup: dropup,
-        'nav-item': nav
-      }
+        dropup,
+        'nav-item': nav,
+      },
     ), cssModule);
     return <Manager {...attrs} className={classes} onKeyDown={this.handleKeyDown} />;
   }
