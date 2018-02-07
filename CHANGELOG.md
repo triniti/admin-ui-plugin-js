@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v0.4.1
+* Add `breadcrumbs` prop to `Screen` component
 
 ## v0.4.0
 __BREAKING CHANGES__
