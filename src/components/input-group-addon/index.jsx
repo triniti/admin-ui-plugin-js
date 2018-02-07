@@ -13,7 +13,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'div'
+  tag: 'div',
 };
 
 const InputGroupAddon = (props) => {
@@ -28,20 +28,20 @@ const InputGroupAddon = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'input-group-' + addonType
+    `input-group-${addonType}`,
   ), cssModule);
 
   // Convenience to assist with transition
   if (typeof children === 'string') {
     return (
       <Tag {...attributes} className={classes}>
-        <InputGroupText children={children} />
+        <InputGroupText>{children}</InputGroupText>
       </Tag>
     );
   }
 
   return (
-    <Tag {...attributes} className={classes} children={children} />
+    <Tag {...attributes} className={classes}>{children}</Tag>
   );
 };
 
