@@ -7,6 +7,8 @@ import Icon from '../icon';
 import Nav from '../nav';
 import NavItem from '../nav-item';
 import RouterLink from '../router-link';
+import Breadcrumb from '../breadcrumb';
+import BreadcrumbItem from '../breadcrumb-item';
 import './styles.scss';
 
 // fixme: this seems not very reacty
@@ -41,6 +43,7 @@ const Screen = (props) => {
     footer,
     primaryActions,
     secondaryActions,
+    breadcrumbs,
   } = props;
 
   return (
@@ -59,9 +62,20 @@ const Screen = (props) => {
       </div>}
 
       <div className="screen-main">
-        {(header || primaryActions) &&
+        {(header || primaryActions || breadcrumbs) &&
         <div className="screen-header-container">
           {header && <h1 className="screen-header-title">{header}</h1>}
+          {breadcrumbs.length > 0 &&
+          <Breadcrumb>
+            {breadcrumbs.map(breadcrumb => (
+              <BreadcrumbItem>
+                {breadcrumb.to &&
+                <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>
+                }
+                {!breadcrumb.to && breadcrumb.text}
+              </BreadcrumbItem>
+            ))}
+          </Breadcrumb>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
 
@@ -101,6 +115,7 @@ Screen.propTypes = {
   dispatch: PropTypes.func,
   alerts: PropTypes.array,
   header: PropTypes.node,
+  breadcrumbs: PropTypes.array,
   sidenav: PropTypes.node,
   sidenavHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   sidebar: PropTypes.node,
@@ -119,6 +134,7 @@ Screen.defaultProps = {
   alerts: [],
   sidenavHeader: null,
   tabs: [],
+  breadcrumbs: [],
 };
 
 export default Screen;

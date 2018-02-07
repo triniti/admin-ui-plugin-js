@@ -18,6 +18,10 @@ const UiBreadcrumb = () => (
     sidenav={<Sidenav activeScreen="breadcrumbs" />}
     sidenavHeader
     header="Breadcrumbs"
+    breadcrumbs={[
+      { to: '/', text: 'Demos' },
+      { text: 'Breadcrumbs' },
+    ]}
     // tabs={[
     //   { to: '/welcome', text: 'Tab1' },
     //   { to: '#/test2', text: 'Tab2' },
