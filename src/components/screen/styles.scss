@@ -94,10 +94,10 @@ $sidenav-width:     300px;
 
 .screen-sidenav-body {
   display: flex;
-  flex: 1 1 auto;
+  flex: 1 1 100%;
   flex-direction: column;
   min-height: 0;
-  width: 100%;
+  width: auto;
   overflow: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
