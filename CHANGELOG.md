@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## v0.5.0
+## v0.4.2
 __BREAKING CHANGES__
 * Update peerDependencies, now requires bootstrap v4.
 
