@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.4.1
+* Datalist component is now deprecated, it's moving to `@triniti/redux-form-plugin/components/data-list-field`.
+* Update peerDependencies, now requires bootstrap v4.
+* Match style to bootstrap v4.0.0 (demo -> src -> assets -> styles -> *.scss).
+* Update reactstrap components accordingly with bootstrap v4.0.0.
+* Add `breadcrumbs` prop to `Screen` component
+* Remove InputGroupButton.
+* InputGroupAddon now has a reqired prop `addonType`=`string` (one of `append`, `prepend`).
+* Rename `Table` prop `inverse` to `dark`.
+
+
 ## v0.4.0
 __BREAKING CHANGES__
 

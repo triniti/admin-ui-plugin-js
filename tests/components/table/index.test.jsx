@@ -29,16 +29,16 @@ test('Table:: should render custom tag', (t) => {
 });
 
 test('Table:: should render modifier classes', (t) => {
-  const wrapper = shallow(<Table size="sm" bordered striped reflow inverse hover>Yo!</Table>);
+  const wrapper = shallow(<Table size="sm" bordered striped reflow dark hover>Yo!</Table>);
 
   t.equal(wrapper.text(), 'Yo!');
-  t.true(wrapper.hasClass('table'));
-  t.true(wrapper.hasClass('table-sm'));
-  t.true(wrapper.hasClass('table-bordered'));
-  t.true(wrapper.hasClass('table-striped'));
-  t.true(wrapper.hasClass('table-hover'));
-  t.true(wrapper.hasClass('table-reflow'));
-  t.true(wrapper.hasClass('table-inverse'));
+  t.true(wrapper.hasClass('table'), 'table');
+  t.true(wrapper.hasClass('table-sm'), 'table-sm');
+  t.true(wrapper.hasClass('table-bordered'), 'table-bordered');
+  t.true(wrapper.hasClass('table-striped'), 'table-striped');
+  t.true(wrapper.hasClass('table-hover'), 'table-hover');
+  t.true(wrapper.hasClass('table-reflow'), 'table-reflow');
+  t.true(wrapper.hasClass('table-dark'), 'table-dark');
   t.end();
 });
 

@@ -35,22 +35,22 @@ class UiTabs extends React.Component {
   render() {
     return (
       <Screen
-      sidenav={<Sidenav activeScreen="tabs" />}
-      sidenavHeader
-      header="Tabs"
-      primaryActions={<PrimaryActions />}
-      tabs={[
+        sidenav={<Sidenav activeScreen="tabs" />}
+        sidenavHeader
+        header="Tabs"
+        primaryActions={<PrimaryActions />}
+        tabs={[
         { to: '/tabs', text: 'Tab1' },
         { to: '#/test2', text: 'Tab2' },
       ]}
-      sidebar={
-        <Card>
-          <CardHeader>Sidebar Header</CardHeader>
-          <CardBody>
-            <CardTitle section>Card Title Section</CardTitle>
+        sidebar={
+          <Card>
+            <CardHeader>Sidebar Header</CardHeader>
+            <CardBody>
+              <CardTitle section>Card Title Section</CardTitle>
             body
-          </CardBody>
-        </Card>
+            </CardBody>
+          </Card>
       }
 
       // tabs={[

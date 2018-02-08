@@ -66,14 +66,14 @@ export default () => (
       <Card key="jumbotron4">
         <CardHeader fullWidth>Jumbotron inside Container Fluid</CardHeader>
 
-          <Jumbotron>
-            <Container fluid>
-              <CardTitle display="2" tag="h1">Fluid Jumbotron</CardTitle>
-              <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
+        <Jumbotron>
+          <Container fluid>
+            <CardTitle display="2" tag="h1">Fluid Jumbotron</CardTitle>
+            <p className="lead">This is a modified jumbotron that occupies the entire horizontal space of its
                 parent.
-              </p>
-            </Container>
-          </Jumbotron>
+            </p>
+          </Container>
+        </Jumbotron>
 
       </Card>,
     ]}

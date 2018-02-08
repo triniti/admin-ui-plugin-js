@@ -1,6 +1,7 @@
 // Button
 
 @import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/buttons";
 
 //
 // Base styles
@@ -10,45 +11,20 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  font-weight: 500;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  justify-content: space-around;
-  user-select: none;
   color: $body-color;
-  background-color: $gray-400;
-  border: $input-btn-border-width solid $gray-400;
-  @include button-size($input-btn-padding-y, $input-btn-padding-x, $font-size-base, $input-btn-line-height, $btn-border-radius);
-  @include transition($btn-transition);
+  background-color: $white;
+  border: $btn-border-width solid $gray-700;
 
-  // Share hover and focus styles
-  @include hover-focus {
-    text-decoration: none;
-  }
-  &:focus,
-  &.focus {
-    outline: 0;
-    box-shadow: none !important; // $btn-focus-box-shadow
-  }
-
-  // Disabled comes first so active can properly restyle
-  &.disabled,
-  &:disabled {
-    opacity: .65;
-    @include box-shadow(none);
-  }
-
-  &:active,
-  &.active {
-    background-image: none;
-    @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+  &:hover,
+  &:focus {
+    cursor: pointer;
   }
 
   &:hover {
-    cursor: pointer;
+    background-color: $gray-400;
   }
 
   &:last-child {
@@ -60,21 +36,21 @@
   }
 }
 
+
+// instances to remove margin bottom
+
 .card-header .btn,
-.page-header .btn,
+.screen-header-container .btn,
 .sidenav-header .btn,
 .form-inline .btn,
 .input-group-btn > .btn {
   margin-bottom: 0;
 }
 
-
-// Future-proof disabling of clicks on `<a>` elements
-a.btn.disabled,
-fieldset[disabled] a.btn {
-  pointer-events: none;
+.input-group .btn {
+  margin: 0;
+  min-height: 100%;
 }
-
 
 //
 // Alternate buttons
@@ -102,33 +78,20 @@ fieldset[disabled] a.btn {
 
 // btn-group btn-light overrides
 
-.btn-group > .btn-light {
+.btn-light {
   border-color: $gray-700;
-}
 
-
-//
-// Block button
-//
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-// Vertically space out multiple block buttons
-.btn-block + .btn-block {
-  margin-top: $btn-block-spacing-y;
-}
-
-// Specificity overrides
-input[type="submit"],
-input[type="reset"],
-input[type="button"] {
-  &.btn-block {
-    width: 100%;
+  &:hover,
+  &:focus {
+    background-color: $gray-400;
   }
 }
+
+.btn-group > .btn-light,
+.btn-group > .btn {
+  border-color: $gray-rgba-300; // $gray-700
+}
+
 
 //
 // Import Button Styles
@@ -202,19 +165,6 @@ input[type="button"] {
   padding-left: $table-cell-padding;
 }
 
-// Action Buttons
-
-.btn-action {
-  margin-top: -1px;
-  margin-bottom: 0;
-
-  img {
-    margin-right: .25rem;
-    margin-left: -.25rem;
-    opacity: .8;
-  }
-}
-
 
 //
 // Button Sizes
@@ -222,12 +172,12 @@ input[type="button"] {
 
 .btn-sm {
   font-weight: 400;
-  @include button-size($input-btn-padding-y-sm, $input-btn-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+  line-height: 1.45;
 }
 
 .btn-lg {
   font-weight: $btn-font-weight;
-  @include button-size($input-btn-padding-y-lg, $input-btn-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+  line-height: 1.8;
 }
 
 .btn-xl {
@@ -235,6 +185,7 @@ input[type="button"] {
   font-weight: $btn-font-weight;
   padding: 1.25rem 2rem;
   border-width: 2px;
+  line-height: 1.8;
 
   &:hover {
     border-width: 2px;

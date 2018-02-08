@@ -1,40 +1,16 @@
 // Badge
 
 @import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/badge";
 
 //
 // Requires one of the contextual, color modifier classes for `color` and
 // `background-color`.
 
 .badge {
-  display: inline-flex;
-  padding: $badge-padding-y $badge-padding-x;
-  font-size: $badge-font-size;
-  font-weight: $badge-font-weight;
-  line-height: 1;
-  background-color: #a0a0a0;
+  background-color: $orange;
   color: $badge-color;
   text-shadow: $text-shadow;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  @include border-radius();
-
-  // Empty badges collapse automatically
-  &:empty {
-    display: none;
-  }
-}
-
-// Pill badges
-//
-// Make them extra rounded with a modifier to replace v3's badges.
-
-.badge-pill {
-  padding-right: $badge-pill-padding-x;
-  padding-left: $badge-pill-padding-x;
-  @include border-radius($badge-pill-border-radius);
-  line-height: 10px;
 }
 
 // Colors

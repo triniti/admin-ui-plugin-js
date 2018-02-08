@@ -25,7 +25,7 @@ const CardHeader = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     'card-header',
-    fullWidth ? `card-header-full-width` : false,
+    fullWidth ? 'card-header-full-width' : false,
   ), cssModule);
 
   return (

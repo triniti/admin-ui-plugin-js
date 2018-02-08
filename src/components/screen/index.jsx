@@ -7,6 +7,8 @@ import Icon from '../icon';
 import Nav from '../nav';
 import NavItem from '../nav-item';
 import RouterLink from '../router-link';
+import Breadcrumb from '../breadcrumb';
+import BreadcrumbItem from '../breadcrumb-item';
 import './styles.scss';
 
 // fixme: this seems not very reacty
@@ -41,6 +43,7 @@ const Screen = (props) => {
     footer,
     primaryActions,
     secondaryActions,
+    breadcrumbs,
   } = props;
 
   return (
@@ -49,19 +52,30 @@ const Screen = (props) => {
       {sidenav &&
       <div className="screen-sidenav" id="sidenav">
         {sidenavHeader !== null &&
-        <div className="screen-sidenav__header">
-          {sidenavHeader && <h3 className="screen-sidenav__header-title">{sidenavHeader}</h3>}
-          <Button outline color="hover" className="screen-sidenav__toggler" onClick={toggleSidenav}>
-            <Icon imgSrc="angle-left" alt="close" className="screen-sidenav__toggler-img" />
+        <div className="screen-sidenav-header">
+          {sidenavHeader && <h3 className="screen-sidenav-header-title">{sidenavHeader}</h3>}
+          <Button outline color="hover" className="screen-sidenav-toggler" onClick={toggleSidenav}>
+            <Icon imgSrc="angle-left" alt="close" className="screen-sidenav-toggler-img" />
           </Button>
         </div>}
-        <div className="screen-sidenav__body">{sidenav}</div>
+        <div className="screen-sidenav-body">{sidenav}</div>
       </div>}
 
       <div className="screen-main">
-        {(header || primaryActions) &&
-        <div className="screen-header__container">
-          {header && <h1 className="screen-header__title">{header}</h1>}
+        {(header || primaryActions || breadcrumbs.length) &&
+        <div className="screen-header-container">
+          {breadcrumbs.length > 0 &&
+          <h1 className="screen-header-title">
+            <Breadcrumb>
+              {breadcrumbs.map(breadcrumb => (
+                <BreadcrumbItem>
+                  {breadcrumb.to && <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>}
+                  {!breadcrumb.to && breadcrumb.text}
+                </BreadcrumbItem>
+              ))}
+            </Breadcrumb>
+          </h1>}
+          {breadcrumbs.length === 0 && header && <h1 className="screen-header-title">{header}</h1>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
 
@@ -101,6 +115,7 @@ Screen.propTypes = {
   dispatch: PropTypes.func,
   alerts: PropTypes.array,
   header: PropTypes.node,
+  breadcrumbs: PropTypes.array,
   sidenav: PropTypes.node,
   sidenavHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   sidebar: PropTypes.node,
@@ -117,6 +132,7 @@ const noop = () => {
 Screen.defaultProps = {
   dispatch: noop,
   alerts: [],
+  breadcrumbs: [],
   sidenavHeader: null,
   tabs: [],
 };

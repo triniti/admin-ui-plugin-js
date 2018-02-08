@@ -199,7 +199,9 @@
   }
   .main-nav .navbar-nav .nav-link {
     font-size: .8rem;
-    padding: 1.4em .7em;
+    padding: 1.25rem .75rem;
+    text-transform: uppercase;
+    font-weight: 600;
   }
   .navbar-main-wrapper .nav-item > .dropdown-menu {
     display: none;
@@ -317,7 +319,6 @@
 
 @media (min-width: 1200px) {
   .main-nav .navbar-nav .nav-link {
-    font-size: inherit;
     padding: 1.25rem .75rem;
   }
   .main-nav .is-current .nav-link::after {

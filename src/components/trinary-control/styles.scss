@@ -3,8 +3,9 @@
 .trinary-control {
   position: relative;
   display: inline-block;
+  margin: 0 .5rem 0 0;
   padding: 0;
-  margin: 0;
+  line-height: 1.6;
   min-width: 4.25rem;
   border: 1px solid $input-border-color;
   border-radius: $input-border-radius;
@@ -57,7 +58,8 @@
 }
 
 .trinary-control select {
-  padding: 5px 8px;
+  padding: 0.375rem 0.75rem;
+  line-height: 1.6;
   width: 130%;
   border: none;
   box-shadow: none;
@@ -78,13 +80,13 @@
   border-radius: 0.125rem;
 
   & select {
-    padding: 0.125rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     font-size: 0.8rem;
-    line-height: 1.25;
+    line-height: 1.45;
   }
 
   &.trinary-control-radius-round  select {
-    padding-left: .675rem;
+    padding-left: .75rem;
   }
 
   &:after {
@@ -99,7 +101,6 @@
   & select {
     padding: 0.75rem 1rem;
     font-size: 1rem;
-    line-height: 1.25;
   }
 
   &.trinary-control-radius-round  select {
@@ -119,11 +120,6 @@
 
 .trinary-control-radius-none {
   border-radius: 0;
-}
-
-.form-check-label .trinary-control,
-.form-control-label .trinary-control {
-  margin-right: .5rem;
 }
 
 // disabled trinary-control

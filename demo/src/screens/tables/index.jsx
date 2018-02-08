@@ -194,10 +194,10 @@ export default () => (
       </Card>,
 
       <Card key="tableheader4" className="mb-0">
-        <CardHeader fullWidth>Inverse Table</CardHeader>
+        <CardHeader fullWidth>Dark Table</CardHeader>
       </Card>,
       <Card body key="table4">
-        <Table inverse>
+        <Table dark>
           <thead>
           <tr>
             <th>#</th>
@@ -457,5 +457,5 @@ export default () => (
         </Table>
       </Card>,
     ]}
-  />
+    />
 );

@@ -103,7 +103,7 @@ export default class AlertBar extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="alert-container">
         {this.props.alerts.map((alert) => {
           const {
             id,

@@ -13,6 +13,7 @@ The `dispatch` function is expected to be from redux.  This is needed to allow t
 + __dispatch:__ `PropTypes.func` - The redux dispatch function, if not supplied dismissing alerts is a noop.
 + __alerts:__ `PropTypes.array` - An array of alerts that the `<AlertBar>` component supports.
 + __header:__ `PropTypes.node` - Intended for page header-like elements, e.g. `<Breadcrumb>`, `<h1>`, `<header>`. 
++ __breadcrumbs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/url', text: 'Breadcrumb Name' }` that render a list of breadcrumbs.  The 'to' field is optional. 
 + __sidenav:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.  Everything provided is contained within a collapsable _drawer_.
 + __sidenavHeader:__ `PropTypes.node` - Typically text that is sticky to the top of the sidenav with an arrow to close it.
 + __sidebar:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.

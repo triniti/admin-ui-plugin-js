@@ -40,7 +40,6 @@ import DropdownItem from './dropdown-item';
 import DropdownMenu from './dropdown-menu';
 import DropdownToggle from './dropdown-toggle';
 import Fade from './fade';
-import FlexSpacer from './flex-spacer';
 import FooterNav from './footer-nav';
 import Form from './form';
 import FormFeedback from './form-feedback';
@@ -50,7 +49,8 @@ import Icon from './icon';
 import Input from './input';
 import InputGroup from './input-group';
 import InputGroupAddon from './input-group-addon';
-import InputGroupButton from './input-group-button';
+import InputGroupButtonDropdown from './input-group-button-dropdown';
+import InputGroupText from './input-group-text';
 import Jumbotron from './jumbotron';
 import Label from './label';
 import ListGroup from './list-group';
@@ -149,7 +149,6 @@ export {
   DropdownMenu,
   DropdownToggle,
   Fade,
-  FlexSpacer,
   FooterNav,
   Form,
   FormFeedback,
@@ -159,7 +158,8 @@ export {
   Input,
   InputGroup,
   InputGroupAddon,
-  InputGroupButton,
+  InputGroupButtonDropdown,
+  InputGroupText,
   Jumbotron,
   Label,
   ListGroup,

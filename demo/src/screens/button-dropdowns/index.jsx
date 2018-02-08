@@ -21,32 +21,32 @@ class UiButtonDropdown extends React.Component {
 
   render() {
     return (
-    <Screen
-      sidenav={<Sidenav activeScreen="button-dropdowns" />}
-      sidenavHeader
-      header="Button Dropdowns"
+      <Screen
+        sidenav={<Sidenav activeScreen="button-dropdowns" />}
+        sidenavHeader
+        header="Button Dropdowns"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
       //   { to: '#/test2', text: 'Tab2' },
       // ]}
-      primaryActions={<PrimaryActions />}
-      body={
-      <Card>
-        <CardBody>
-          <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
-            <DropdownToggle caret outline color="light">
+        primaryActions={<PrimaryActions />}
+        body={
+          <Card>
+            <CardBody>
+              <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
+                <DropdownToggle caret outline color="light">
             Button Dropdown
-            </DropdownToggle>
-            <DropdownMenu>
-              <DropdownItem header>Header</DropdownItem>
-              <DropdownItem disabled>Action</DropdownItem>
-              <DropdownItem>Another Action</DropdownItem>
-              <DropdownItem divider />
-              <DropdownItem>Another Action</DropdownItem>
-            </DropdownMenu>
-          </ButtonDropdown>
-        </CardBody>
-      </Card>
+                </DropdownToggle>
+                <DropdownMenu>
+                  <DropdownItem header>Header</DropdownItem>
+                  <DropdownItem disabled>Action</DropdownItem>
+                  <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Another Action</DropdownItem>
+                </DropdownMenu>
+              </ButtonDropdown>
+            </CardBody>
+          </Card>
       }
       />
     );

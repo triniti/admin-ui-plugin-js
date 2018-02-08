@@ -29,7 +29,7 @@ const CardTitle = (props) => {
     className,
     'card-title',
     display ? `display-${display}` : false,
-    section ? `card-section-title` : false,
+    section ? 'card-section-title' : false,
   ), cssModule);
 
   return (
