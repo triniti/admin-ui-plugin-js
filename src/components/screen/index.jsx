@@ -64,7 +64,7 @@ const Screen = (props) => {
       <div className="screen-main">
         {(header || primaryActions || breadcrumbs) &&
         <div className="screen-header-container">
-          {breadcrumbs && breadcrumbs.length > 0 &&
+          {breadcrumbs.length > 0 &&
           <h1 className="screen-header-title">
             <Breadcrumb>
               {breadcrumbs.map(breadcrumb => (
@@ -78,7 +78,7 @@ const Screen = (props) => {
             </Breadcrumb>
           </h1>
           }
-          {(!breadcrumbs && header) && <h1 className="screen-header-title">{header}</h1>}
+          {breadcrumbs.length === 0 && header && <h1 className="screen-header-title">{header}</h1>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
 
