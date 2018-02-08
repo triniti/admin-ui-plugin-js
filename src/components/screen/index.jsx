@@ -64,18 +64,21 @@ const Screen = (props) => {
       <div className="screen-main">
         {(header || primaryActions || breadcrumbs) &&
         <div className="screen-header-container">
-          {header && <h1 className="screen-header-title">{header}</h1>}
-          {breadcrumbs.length > 0 &&
-          <Breadcrumb>
-            {breadcrumbs.map(breadcrumb => (
-              <BreadcrumbItem>
-                {breadcrumb.to &&
-                <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>
-                }
-                {!breadcrumb.to && breadcrumb.text}
-              </BreadcrumbItem>
-            ))}
-          </Breadcrumb>}
+          {breadcrumbs && breadcrumbs.length > 0 &&
+          <h1 className="screen-header-title">
+            <Breadcrumb>
+              {breadcrumbs.map(breadcrumb => (
+                <BreadcrumbItem>
+                  {breadcrumb.to &&
+                  <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>
+                  }
+                  {!breadcrumb.to && breadcrumb.text}
+                </BreadcrumbItem>
+              ))}
+            </Breadcrumb>
+          </h1>
+          }
+          {(!breadcrumbs && header) && <h1 className="screen-header-title">{header}</h1>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
 
