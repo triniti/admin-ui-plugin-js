@@ -62,22 +62,19 @@ const Screen = (props) => {
       </div>}
 
       <div className="screen-main">
-        {(header || primaryActions || breadcrumbs) &&
+        {(header || primaryActions || breadcrumbs.length) &&
         <div className="screen-header-container">
           {breadcrumbs.length > 0 &&
           <h1 className="screen-header-title">
             <Breadcrumb>
               {breadcrumbs.map(breadcrumb => (
                 <BreadcrumbItem>
-                  {breadcrumb.to &&
-                  <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>
-                  }
+                  {breadcrumb.to && <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>}
                   {!breadcrumb.to && breadcrumb.text}
                 </BreadcrumbItem>
               ))}
             </Breadcrumb>
-          </h1>
-          }
+          </h1>}
           {breadcrumbs.length === 0 && header && <h1 className="screen-header-title">{header}</h1>}
           {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
         </div>}
@@ -135,9 +132,9 @@ const noop = () => {
 Screen.defaultProps = {
   dispatch: noop,
   alerts: [],
+  breadcrumbs: [],
   sidenavHeader: null,
   tabs: [],
-  breadcrumbs: [],
 };
 
 export default Screen;

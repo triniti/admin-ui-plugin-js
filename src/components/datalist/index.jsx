@@ -1,7 +1,9 @@
-/* eslint-disable react/no-array-index-key */
+/* eslint-disable react/no-array-index-key, no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, FormFeedback, Input, InputGroup, InputGroupAddon } from '../../components';
+
+console.warn('datalist is deprecated, use @triniti/redux-form-plugin/components/datalist-field');
 
 const Datalist = ({ addon, input, options, meta: { touched, error }, ...custom }) => (
   <div>

@@ -14,7 +14,6 @@ const screens = [
   'button-groups',
   'buttons',
   'cards',
-  'datalists',
   'dropdowns',
   'forms',
   'headers',
