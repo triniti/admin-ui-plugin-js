@@ -345,7 +345,7 @@ $btn-transition:                 background-color .15s ease-in-out, border-color
 $input-bg:                       $gray-200;
 
 $input-color:                    $gray-900;
-$input-border-color:             rgba($black,.125);
+$input-border-color:             $gray-700; // rgba($black,.125)
 $input-box-shadow:               none;
 $form-group-margin-bottom:       1.25rem;
 $input-line-height:              1.5;
@@ -400,7 +400,7 @@ $nav-tabs-link-active-border-color:           $gray-600; // todo check if multip
 // Navbar Theme Colors
 
 $navbar-theme-light:    $gray-200;
-$navbar-theme-dark:     #232935; // #373e4b #21252b #101d6b #21252b #272a31 //  darken(theme-color("dark"), 10%)
+$navbar-theme-dark:     #232935; // #272727 #232935 #373e4b #21252b #101d6b #21252b #272a31 //  darken(theme-color("dark"), 10%)
 
 $navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%);
 $navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%);

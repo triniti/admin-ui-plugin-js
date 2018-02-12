@@ -14,6 +14,7 @@ const screens = [
   'button-groups',
   'buttons',
   'cards',
+  'collapse',
   'dropdowns',
   'forms',
   'headers',
@@ -31,7 +32,6 @@ const screens = [
   'progress-bars',
   'tables',
   'tabs',
-  'toggles',
   'tooltips',
 ];
 

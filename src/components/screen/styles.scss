@@ -49,12 +49,13 @@ $sidenav-width:     300px;
   padding-left: $padding-xs;
   transition: width $transition;
   letter-spacing: -.015rem;
-  border-bottom: 1px solid $gray-500;
+  border-bottom: 1px solid $gray-700;
   background-color: $white;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
-  box-shadow: inset 0 -1px 0 $gray-700, 0 1px 2px rgba(0, 0, 0, .03);
+  box-shadow: 0 1px 1px $gray-rgba-300;
+  z-index: $zindex-dropdown - 1;
 
 
   .offcanvas-left & {
@@ -140,14 +141,15 @@ $sidenav-width:     300px;
   padding-right: $padding-xs;
   padding-bottom: .25rem;
   padding-left: $padding-xs;
-  border-bottom: 1px solid $gray-500;
+  border-bottom: 1px solid $gray-700;
   border-radius: 0 !important;
   background-color: $white;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
   flex-wrap: nowrap;
-  box-shadow: inset 0 -1px 0 $gray-700, 0 1px 2px rgba(0, 0, 0, .03);
+  box-shadow: 0 1px 1px $gray-rgba-300;
+  z-index: $zindex-dropdown - 1;
 
   @media (max-width: 767px) {
     transition: margin $transition;

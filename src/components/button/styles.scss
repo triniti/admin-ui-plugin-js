@@ -43,6 +43,7 @@
 .screen-header-container .btn,
 .sidenav-header .btn,
 .form-inline .btn,
+.modal-footer .btn,
 .input-group-btn > .btn {
   margin-bottom: 0;
 }
@@ -198,8 +199,12 @@
 //
 
 .btn-radius-round {
-  margin-right: .35rem;
   border-radius: $round;
+
+  &.btn-sm {
+    padding-left: $input-btn-padding-x;
+    padding-right: $input-btn-padding-x;
+  }
 }
 
 .btn-radius-round span:not(.badge-alert) {
@@ -225,11 +230,11 @@
 // Show dropdown-menu on hover
 
 .btn-radius-circle + .dropdown-menu:hover {
-  display: block;
+  // display: block;
 }
 
 .btn-radius-circle:hover + .dropdown-menu {
-  display: block;
+  // display: block;
 }
 
 

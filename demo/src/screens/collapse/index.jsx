@@ -3,7 +3,7 @@ import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row, Screen } from '../../../../src/components';
 
-class UiToggle extends Component {
+class UiCollapse extends Component {
   constructor(props) {
     super(props);
     this.toggleOuter = this.toggleOuter.bind(this);
@@ -37,9 +37,9 @@ class UiToggle extends Component {
   render() {
     return (
       <Screen
-        sidenav={<Sidenav activeScreen="toggles" />}
+        sidenav={<Sidenav activeScreen="collapse" />}
         sidenavHeader
-        header="Toggles"
+        header="Collapse"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
       //   { to: '#/test2', text: 'Tab2' },
@@ -48,11 +48,11 @@ class UiToggle extends Component {
         body={[
           <Card key="toggle1" className="mb-0">
             <CardHeader fullWidth>
-              <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Toggle Header - fullWidth</Button>
+              <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Collapse Header - fullWidth</Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseOuter}>
               <CardBody>
-                <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" inverse /> Toggle Content</Button>
+                <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" inverse /> Collapse Content</Button>
                 <Row>
                   <Col xs="12" md="9" lg="6">
                     <Collapse isOpen={this.state.collapseInner}>
@@ -138,4 +138,4 @@ class UiToggle extends Component {
   }
 }
 
-export default UiToggle;
+export default UiCollapse;
