@@ -51,7 +51,7 @@ select.form-control {
 select:not([multiple]) {
   -webkit-appearance: button;
   -webkit-padding-end: 1.25rem;
-  -webkit-padding-start: .75rem;
+  -webkit-padding-start: $input-btn-padding-x;
   -webkit-user-select: none;
   background-image: url('./sort.svg?fill=%23#{$icon-theme-light}');
   background-repeat: no-repeat;
@@ -60,6 +60,14 @@ select:not([multiple]) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+select:not([multiple]).form-control-sm {
+  -webkit-padding-start: $input-btn-padding-x-sm;
+}
+
+select:not([multiple]).form-control-lg {
+  -webkit-padding-start: $input-padding-x-lg;
 }
 
 //
@@ -197,6 +205,9 @@ input[type="checkbox"] {
   cursor: not-allowed;
   box-shadow: none !important;
   border-color: $gray-200;
+  background-image: url('./bg-disabled.png');
+  background-repeat: repeat;
+  background-size: auto 4px;
 }
 
 .form-check.disabled,
