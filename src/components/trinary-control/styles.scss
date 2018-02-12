@@ -8,7 +8,7 @@
   line-height: 1.6;
   min-width: 4.25rem;
   border: 1px solid $input-border-color;
-  border-radius: $input-border-radius;
+  border-radius: $form-control-radius;
   overflow: hidden;
   background-color: $input-bg;
   vertical-align: middle;
@@ -29,8 +29,8 @@
     height: 100%;
     background-color: $input-bg;
     border-left: 1px solid $input-border-color;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
+    border-top-right-radius: $form-control-radius;
+    border-bottom-right-radius: $form-control-radius;
     content: "";
     pointer-events: none;
   }

@@ -173,18 +173,16 @@
 
 .btn-sm {
   font-weight: 400;
-  line-height: 1.45;
 }
 
 .btn-lg {
   font-weight: $btn-font-weight;
-  line-height: 1.8;
 }
 
 .btn-xl {
   font-size: 1.25rem;
   font-weight: $btn-font-weight;
-  padding: 1.25rem 2rem;
+  padding: 1.25rem 3rem;
   border-width: 2px;
   line-height: 1.8;
 
@@ -200,6 +198,8 @@
 
 .btn-radius-round {
   border-radius: $round;
+  padding-left: $input-btn-padding-x + .25rem;
+  padding-right: $input-btn-padding-x + .25rem;
 
   &.btn-sm {
     padding-left: $input-btn-padding-x;

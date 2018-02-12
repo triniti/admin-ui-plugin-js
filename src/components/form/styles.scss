@@ -12,6 +12,7 @@
 .form-control {
   position: relative;
   line-height: $input-btn-line-height;
+  border-radius: $form-control-radius;
 
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
@@ -49,9 +50,8 @@ select.form-control {
 
 select:not([multiple]) {
   -webkit-appearance: button;
-  -webkit-border-radius: 0;
   -webkit-padding-end: 1.25rem;
-  -webkit-padding-start: .5rem;
+  -webkit-padding-start: .75rem;
   -webkit-user-select: none;
   background-image: url('./sort.svg?fill=%23#{$icon-theme-light}');
   background-repeat: no-repeat;
