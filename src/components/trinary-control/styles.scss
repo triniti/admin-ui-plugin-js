@@ -50,7 +50,7 @@
     width: 1rem;
     height: 1rem;
     margin-left: 0.255em;
-    vertical-align: 0.255em;
+    vertical-align: middle;
     content: "";
     background: transparent url('./sort.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
     pointer-events: none;
@@ -77,7 +77,7 @@
 // sizes
 
 .trinary-control-sm {
-  border-radius: 0.125rem;
+  // border-radius: 0.125rem;
 
   & select {
     padding: 0.25rem 0.5rem;

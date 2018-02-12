@@ -350,6 +350,10 @@ $input-box-shadow:               none;
 $form-group-margin-bottom:       1.25rem;
 $input-line-height:              1.5;
 
+$input-border-radius:            0; // $border-radius !default
+$input-border-radius-lg:         0; // $border-radius-lg !default
+$input-border-radius-sm:         0; // $border-radius-sm !default
+
 $input-focus-border-color:       $gray-700;
 // $input-focus-box-shadow:         none;
 

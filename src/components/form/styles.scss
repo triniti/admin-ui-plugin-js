@@ -10,8 +10,8 @@
 //
 
 .form-control {
+  position: relative;
   line-height: $input-btn-line-height;
-  border-radius: 0;
 
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
@@ -31,6 +31,9 @@
 }
 
 select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 
   &:focus::-ms-value {
     // Suppress the nested default white text on blue background highlight given to
@@ -42,6 +45,21 @@ select.form-control {
     background-color: $body-bg;
     // box-shadow: 0 1px 3px 0px $gray-rgba-400;
   }
+}
+
+select:not([multiple]) {
+  -webkit-appearance: button;
+  -webkit-border-radius: 0;
+  -webkit-padding-end: 1.25rem;
+  -webkit-padding-start: .5rem;
+  -webkit-user-select: none;
+  background-image: url('./sort.svg?fill=%23#{$icon-theme-light}');
+  background-repeat: no-repeat;
+  background-position: right .5rem center;
+  background-size: auto 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 //
