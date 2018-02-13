@@ -3,6 +3,19 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/dropdown";
 
+.dropdown-item {
+
+  &.active,
+  &:active {
+    color: $white;
+    background-color: $component-active-bg;
+  }
+
+  &:active {
+    color: $body-color;
+    background-color: $gray-200;
+  }
+}
 
 .dropdown-toggle {
   margin-bottom: 0;

@@ -214,8 +214,9 @@ input[type="checkbox"] {
 
 // disabled form-control
 
-.form-control:disabled {
-  opacity: .4;
+.form-control:disabled,
+.form-control.disabled {
+  opacity: $btn-disabled-opacity;
   cursor: not-allowed;
   box-shadow: none !important;
 }

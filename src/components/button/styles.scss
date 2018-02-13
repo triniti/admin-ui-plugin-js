@@ -59,6 +59,22 @@
   color: #fff;
 }
 
+.btn-group .btn-primary {
+  border-color: darken(theme-color("primary"), 5%)
+}
+
+.btn-group .btn-secondary {
+  border-color: darken(theme-color("secondary"), 5%)
+}
+
+.btn-group .btn-warning {
+  border-color: darken(theme-color("warning"), 5%)
+}
+
+.btn-group .btn-danger {
+  border-color: darken(theme-color("danger"), 5%)
+}
+
 // btn-light overrides
 
 .btn-light {

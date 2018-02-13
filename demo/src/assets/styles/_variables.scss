@@ -258,8 +258,8 @@ $border-radius:               3px;
 $border-radius-lg:            .25rem;
 $border-radius-sm:            3px;
 
-$component-active-color:      inherit;
-$component-active-bg:         $gray-200;  // todo theme-color("primary") !default; affects $input-btn-focus-color
+$component-active-color:      $white;
+$component-active-bg:         theme-color("secondary");  // $gray-200 theme-color("primary") !default; affects $input-btn-focus-color
 
 
 // Fonts
@@ -327,7 +327,7 @@ $btn-focus-box-shadow:        none;
 $btn-active-box-shadow:       none;
 
 $btn-link-disabled-color:     $gray-700;
-$btn-disabled-opacity:        .65;
+$btn-disabled-opacity:        .5;
 $btn-focus-box-shadow:        none !important;
 $btn-active-box-shadow:       none !important;
 
