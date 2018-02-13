@@ -31,6 +31,11 @@
   line-height: 1.8;
 }
 
+select:-moz-focusring {
+  color: transparent !important;
+  text-shadow: 0 0 0 #000;
+}
+
 select.form-control {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -50,8 +55,8 @@ select.form-control {
 
 select:not([multiple]) {
   -webkit-appearance: button;
-  -webkit-padding-end: 1.25rem;
-  -webkit-padding-start: $input-btn-padding-x;
+  -webkit-padding-end: 1.75rem;
+  -webkit-padding-start: .875rem;
   -webkit-user-select: none;
   background-image: url('./sort.svg?fill=%23#{$icon-theme-light}');
   background-repeat: no-repeat;
@@ -60,14 +65,23 @@ select:not([multiple]) {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding-right: 1.75rem;
+  padding-left: .875rem;
 }
 
 select:not([multiple]).form-control-sm {
   -webkit-padding-start: $input-btn-padding-x-sm;
+  padding-left: $input-btn-padding-x-sm;
+}
+
+select:not([multiple]).form-control-radius-round {
+  -webkit-padding-start: 1rem;
+  padding-left: 1rem;
 }
 
 select:not([multiple]).form-control-lg {
   -webkit-padding-start: $input-padding-x-lg;
+  padding-left: $input-padding-x-lg;
 }
 
 //
@@ -110,8 +124,8 @@ legend {
 .form-control-static {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.75rem;
-  font-size: 0.825rem;
+  padding: .5rem .75rem;
+  font-size: .825rem;
   line-height: 1.25;
   background-color: transparent;
   border-color: transparent;
@@ -157,7 +171,7 @@ input[type='text']:focus,
 
 .form-group > label,
 .form-check > label {
-  margin-right: .4rem;
+  margin-right: $form-item-spacing;
 }
 
 .form-inline .form-check-label,
@@ -190,7 +204,7 @@ input[type="checkbox"] {
 }
 
 .form-inline .form-group {
-  margin-right: .5rem;
+  margin-right: $form-item-spacing;
 }
 
 .form-control:not(.form-control-sm).round {
@@ -201,13 +215,9 @@ input[type="checkbox"] {
 // disabled form-control
 
 .form-control:disabled {
-  opacity: .8;
+  opacity: .4;
   cursor: not-allowed;
   box-shadow: none !important;
-  border-color: $gray-200;
-  background-image: url('./bg-disabled.png');
-  background-repeat: repeat;
-  background-size: auto 4px;
 }
 
 .form-check.disabled,

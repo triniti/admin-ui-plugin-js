@@ -303,6 +303,8 @@ $table-hover-bg:                $gray-100;
 $table-head-bg:                 $white;
 $table-head-color:              $gray-900;
 
+$table-cell-padding-sm:         .375rem;
+
 
 // Buttons + Forms
 //
@@ -353,13 +355,15 @@ $form-group-margin-bottom:       1.25rem;
 $line-height-base:               1.5;
 $input-line-height:              1.7;
 $line-height-lg:                 1.8;
-$line-height-sm:                 1.45;
+$line-height-sm:                 1.5;
 
 $border-radius:               3px;
-$border-radius-lg:            4px;
+$border-radius-lg:            3px;
 $border-radius-sm:            2px;
 
-$form-control-radius:         0;
+$form-control-radius:         2px;
+
+$form-item-spacing:           .5rem;
 
 $input-focus-border-color:       $gray-700;
 // $input-focus-box-shadow:         none;

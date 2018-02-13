@@ -4,12 +4,6 @@
 
 .table {
 
-  th,
-  td {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-  }
-
   td {
     font-size: .8rem;
   }
@@ -25,23 +19,6 @@
     opacity: .7;
   }
 }
-
-
-//
-// Condensed table w/ half padding
-//
-
-.table-sm {
-  th {
-    padding-top: .75rem;
-    padding-bottom: .75rem;
-  }
-  th[scope="row"] {
-    padding-top: $table-cell-padding-sm;
-    padding-bottom: $table-cell-padding-sm;
-  }
-}
-
 
 // Custom overrides
 
@@ -90,32 +67,16 @@ table.sticky-top + table,
 }
 
 
-// Responsive left padding
+// Left padding
 
 tr > th:first-child,
 tr > td:first-child {
   padding-left: $padding-xs;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) {
   tr > th:first-child,
   tr > td:first-child {
     padding-left: $padding-md;
-  }
-}
-
-@media (min-width: 1025px) {
-  tr > th:first-child,
-  tr > td:first-child {
-    padding-left: $padding-lg + .3rem;
-  }
-}
-
-
-// Responsive Overflow
-
-@media (min-width: 768px) {
-  .table-responsive {
-    overflow: visible;
   }
 }

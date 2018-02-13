@@ -335,12 +335,12 @@ class UiForm extends React.Component {
               <Container fluid>
                 <Row>
                   <Col xs="3" md="4">
-                    <FormGroup>
-                      <Label check>
-                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
-                  Staff
-                      </Label>
-                    </FormGroup>
+                    <Form inline className="mb-4">
+                      <FormGroup>
+                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                        <Label>Staff</Label>
+                      </FormGroup>
+                    </Form>
                   </Col>
                   <Col xs="6">
                     <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -348,12 +348,12 @@ class UiForm extends React.Component {
                 </Row>
                 <Row>
                   <Col xs="3" md="4">
-                    <FormGroup>
-                      <Label>
-                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" width="6rem" onChange={this.handleChange} value={this.state.trinaryDefault} />
-                  Staff
-                      </Label>
-                    </FormGroup>
+                    <Form inline className="mb-4">
+                      <FormGroup>
+                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" width="6rem" radius="round" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                        <Label>Staff</Label>
+                      </FormGroup>
+                    </Form>
                   </Col>
                   <Col xs="6">
                     <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -361,8 +361,8 @@ class UiForm extends React.Component {
                 </Row>
                 <Row>
                   <Col xs="3" md="4">
-                    <FormGroup inline>
-                      <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                    <FormGroup inline className="mb-4">
+                      <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
                       <Button color="info" size="sm">Submit</Button>
                     </FormGroup>
                   </Col>
