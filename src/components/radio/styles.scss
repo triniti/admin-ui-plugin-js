@@ -18,7 +18,7 @@ input.radio-input + label {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: $round;
-  box-shadow: inset 0 0 0 2px $gray-600;
+  box-shadow: inset 0 0 0 2px $gray-700;
   transition: box-shadow $transition;
 }
 
@@ -33,12 +33,12 @@ input.radio-input + label:before {
   content: '';
   transition: all $transition;
   border-radius: $round;
-  background-color: $gray-200;
+  background-color: $white;
   transform: scale(.75);
 }
 
 input.radio-input + label:hover:before {
-  background-color: $gray-600;
+  background-color: $gray-200;
 }
 
 input.radio-input:checked + label {
@@ -83,7 +83,7 @@ input.form-control-sm.radio-input + label:before {
 input.form-control-md.radio-input + label {
   width: 2rem;
   height: 2rem;
-  box-shadow: inset 0 0 0 3px $gray-600;
+  box-shadow: inset 0 0 0 3px $gray-700;
 }
 
 input.form-control-md.radio-input + label:before {
@@ -102,7 +102,7 @@ input.form-control-md.radio-input:checked + label {
 input.form-control-lg.radio-input + label {
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: inset 0 0 0 3px $gray-600;
+  box-shadow: inset 0 0 0 3px $gray-700;
 }
 
 input.form-control-lg.radio-input + label:before {

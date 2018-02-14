@@ -353,7 +353,7 @@ class UiButtons extends React.Component {
                     </Button>
                   </ButtonGroup>
 
-                  <p className="text-muted">Selected: <span className="text-danger">{this.state.rSelected}</span></p>
+                  <p className="text-muted">Selected: <span className="text-info">{this.state.rSelected}</span></p>
 
                 </Col>
                 <Col xs="12" sm="6">
@@ -400,7 +400,7 @@ class UiButtons extends React.Component {
 
                   <p className="text-muted">
                   Selected:
-                    <span className="text-success">
+                    <span className="text-info">
                       {JSON.stringify(this.state.cSelected)}
                     </span>
                   </p>

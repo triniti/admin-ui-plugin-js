@@ -7,6 +7,7 @@
 .btn-link {
   color: $link-color;
   border-radius: 0;
+  box-shadow: $shadow-depth0;
 
   &,
   &:active,
@@ -49,6 +50,7 @@
 .btn-outline-link {
   background-color: transparent;
   border-color: transparent;
+  box-shadow: $shadow-depth0;
 }
 
 .btn-outline-link:hover,

@@ -14,6 +14,7 @@
   justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  box-shadow: $shadow-depth1;
 
   &:hover,
   &:focus {
@@ -26,6 +27,12 @@
 
   &.d-block {
     margin-right: 0;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    border-color: darken($value, 5%);
   }
 }
 
@@ -59,27 +66,11 @@
   color: #fff;
 }
 
-.btn-group .btn-primary {
-  border-color: darken(theme-color("primary"), 5%)
-}
-
-.btn-group .btn-secondary {
-  border-color: darken(theme-color("secondary"), 5%)
-}
-
-.btn-group .btn-warning {
-  border-color: darken(theme-color("warning"), 5%)
-}
-
-.btn-group .btn-danger {
-  border-color: darken(theme-color("danger"), 5%)
-}
-
 // btn-light overrides
 
 .btn-light {
   color: $body-color;
-  background-color: $gray-200;
+  background-color: $body-bg;
   border-color: $gray-700;
 
   &:hover,
@@ -111,6 +102,7 @@
 .btn.disabled,
 .btn.disabled:hover {
   cursor: not-allowed;
+  box-shadow: $shadow-depth0;
 }
 
 // btn-outline-light overrides since color and border are too light
@@ -136,6 +128,12 @@
   &.disabled,
   &:disabled {
     color: $body-color;
+    background-color: $white;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
     background-color: $white;
   }
 }
@@ -178,7 +176,6 @@
 @import "_btn-hover";
 @import "_btn-hover-bg";
 @import "_btn-toggler";
-@import "_btn-check-radio";
 
 
 // todo: need to move to modal footer and check items

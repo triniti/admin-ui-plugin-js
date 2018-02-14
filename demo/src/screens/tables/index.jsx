@@ -15,7 +15,7 @@ export default () => (
       // ]}
       primaryActions={<PrimaryActions />}
       body={[
-      <Card body key="table1">
+      <Card key="table1">
         <Table size="sm" stickyTop fixed>
           <thead>
           <tr>
@@ -86,7 +86,7 @@ export default () => (
         </Table>
       </Card>,
 
-      <Card body key="table2">
+      <Card key="table2">
         <Table hover>
           <thead>
           <tr>
@@ -158,7 +158,7 @@ export default () => (
       <Card key="tableheader3" className="mb-0">
         <CardHeader fullWidth>Striped Table + Sticky</CardHeader>
       </Card>,
-      <Card body key="table3">
+      <Card key="table3">
         <Table striped className="sticky-top fixed">
           <thead>
           <tr>
@@ -196,7 +196,7 @@ export default () => (
       <Card key="tableheader4" className="mb-0">
         <CardHeader fullWidth>Dark Table</CardHeader>
       </Card>,
-      <Card body key="table4">
+      <Card key="table4">
         <Table dark>
           <thead>
           <tr>
@@ -232,7 +232,7 @@ export default () => (
       <Card key="tableheader5" className="mb-0">
         <CardHeader fullWidth>Striped Table</CardHeader>
       </Card>,
-      <Card body key="table5">
+      <Card key="table5">
         <Table striped>
           <thead>
           <tr>
@@ -268,7 +268,7 @@ export default () => (
       <Card key="tableheader6" className="mb-0">
         <CardHeader fullWidth>Bordered Table</CardHeader>
       </Card>,
-      <Card body key="table6">
+      <Card key="table6">
         <Table bordered>
           <thead>
           <tr>
@@ -304,7 +304,7 @@ export default () => (
       <Card key="tableheader7" className="mb-0">
         <CardHeader fullWidth>Borderless Table</CardHeader>
       </Card>,
-      <Card body key="table7">
+      <Card key="table7">
         <Table hover borderless>
           <thead>
           <tr>
@@ -340,7 +340,7 @@ export default () => (
       <Card key="tableheader8" className="mb-0">
         <CardHeader fullWidth>Hoverable Rows Table</CardHeader>
       </Card>,
-      <Card body key="table8">
+      <Card key="table8">
           <Table hover>
             <thead>
             <tr>
@@ -376,7 +376,7 @@ export default () => (
       <Card key="tableheader9" className="mb-0">
         <CardHeader fullWidth>Small</CardHeader>
       </Card>,
-      <Card body key="table9">
+      <Card key="table9">
         <Table size="sm">
           <thead>
           <tr>
@@ -412,7 +412,7 @@ export default () => (
       <Card key="tableheader10" className="mb-0">
         <CardHeader fullWidth>Responsive Table</CardHeader>
       </Card>,
-      <Card body key="table10">
+      <Card key="table10">
         <Table responsive>
           <thead>
           <tr>

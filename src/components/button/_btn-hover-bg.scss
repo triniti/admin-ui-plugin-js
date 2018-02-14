@@ -8,6 +8,7 @@
 .btn-hover-bg {
   border-color: transparent;
   background-color: transparent;
+  box-shadow: $shadow-depth0;
 
   &:hover {
     border-color: transparent;

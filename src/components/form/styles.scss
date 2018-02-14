@@ -2,6 +2,7 @@
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/input-group";
 
 // scss-lint:disable QualifyingElement, VendorPrefix
 
@@ -19,7 +20,9 @@
 
   &:focus {
     border-color: $secondary;
-    box-shadow: none !important;
+    // box-shadow: none !important;
+    background-color: $white !important;
+    box-shadow: $shadow-depth1;
   }
 }
 
@@ -48,7 +51,7 @@ select.form-control {
     // match the appearance of the native widget.
     // See https://github.com/twbs/bootstrap/issues/19398.
     color: $input-color;
-    background-color: $body-bg;
+    background-color: $white;
     // box-shadow: 0 1px 3px 0px $gray-rgba-400;
   }
 }

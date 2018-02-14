@@ -20,6 +20,33 @@
   @media (max-width: 767px) {
     margin: 0 0 .5rem 0;
   }
+
+  .jumbotron > & {
+    border: none;
+  }
+
+  .screen-sidenav-body > &,
+  .screen-sidebar-body > & {
+    background-color: transparent;
+    border: none;
+  }
+
+  .screen-body > & {
+    box-shadow: $shadow-depth2;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.5rem;
+  }
+
+  .screen-body > &:first-child {
+    margin-top: 1.5rem;
+  }
+
+  .cards-container & {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+
 }
 
 .card-border {
@@ -29,6 +56,7 @@
 
 .card-body {
 
+  /*
   .screen-body > .card & {
     position: relative;
     padding: ($padding-xs - .125rem) $padding-xs ($padding-xs + .5rem) $padding-xs;
@@ -44,7 +72,7 @@
     @media (min-width: 1600px) {
       padding: ($padding-xl - .5rem) $padding-xl ($padding-xl + .5rem) $padding-xl;
     }
-  }
+  }*/
 }
 
 .card-body + .card-body {
@@ -159,7 +187,7 @@ h4.card-title {
 
   .screen-sidebar & {
     font-weight: 500;
-    background-color: theme-color("light");
+    background-color: $gray-300;
     font-size: .875rem;
     min-height: 44px;
 
@@ -173,26 +201,26 @@ h4.card-title {
     }
 
   .screen-body > .card:first-child > & {
-    margin-top: .75rem;
+    // margin-top: .75rem;
   }
 
-  .screen-body > .card & {
+  /* .screen-body > .card & {
     padding: 0;
     border-bottom: none;
-    border-left: $padding-xs solid $white;
-    border-right: $padding-xs solid $white;
+     border-left: $padding-xs solid transparent;
+    border-right: $padding-xs solid transparent;
 
     @media (min-width: 768px) {
-      border-left: $padding-md solid $white;
-      border-right: $padding-md solid $white;
+      border-left: $padding-md solid transparent;
+      border-right: $padding-md solid transparent;
     }
     @media (min-width: 1025px) {
-      border-left: $padding-lg solid $white;
-      border-right: $padding-lg solid $white;
+      border-left: $padding-lg solid transparent;
+      border-right: $padding-lg solid transparent;
     }
     @media (min-width: 1600px) {
-      border-left: $padding-xl solid $white;
-      border-right: $padding-xl solid $white;
+      border-left: $padding-xl solid transparent;
+      border-right: $padding-xl solid transparent;
     }
 
     &::before {
@@ -205,11 +233,13 @@ h4.card-title {
       content: '';
       background-color: $gray-500;
     }
-  }
+  }*/
 }
 
 // CardHeader stretches full width
 
+/*
+.screen-body > .card .card-header,
 .card-header-full-width {
   padding: 0 $padding-xs !important;
   border-left: none !important;
@@ -224,7 +254,7 @@ h4.card-title {
   @media (min-width: 1600px) {
     padding: 0 $padding-xl !important;
   }
-}
+}*/
 
 // Subheader - most often used in sidebars
 

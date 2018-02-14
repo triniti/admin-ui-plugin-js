@@ -23,6 +23,7 @@ $sidenav-width:     300px;
   transition: margin $transition;
   width: $sidenav-width;
   border-right: 1px solid $gray-500;
+  background-color: $white;
 
   &.offcanvas-left {
     z-index: 10;
@@ -224,6 +225,7 @@ $sidenav-width:     300px;
   align-items: flex-start;
   align-content: flex-start;
   min-height: 0;
+  padding: 0 $padding-md $padding-md $padding-md;
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
@@ -240,7 +242,6 @@ $sidenav-width:     300px;
   flex: 0 0 auto;
   flex-wrap: nowrap;
   transition: margin $transition;
-  background-color: $white; // theme-color("light")
   width: 360px;
   border-left: 1px solid $gray-500;
 

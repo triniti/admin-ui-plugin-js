@@ -104,13 +104,15 @@ $font-weight-bold:            700 !default;
 
 $dropdown-link-hover-bg:            $gray-100 !default;
 
-$body-bg:                   $white;
+$body-bg:                   $gray-200;
 $body-color:                $gray-900;
 
 // +++++++++++++++++
 
 
 // stylelint-enable
+
+$enable-gradients:          true;
 
 // Customize the light and dark text colors for use in our YIQ color contrast function.
 $yiq-text-dark: $gray-900 !default;
@@ -409,6 +411,7 @@ $nav-tabs-border-radius:                      0;
 $nav-tabs-link-hover-border-color:            transparent;
 $nav-tabs-link-active-color:                  $black;
 $nav-tabs-link-active-border-color:           $gray-600; // todo check if multiple border colors is better
+$nav-tabs-link-active-bg:                     $white;
 
 // Navbar
 
@@ -462,9 +465,10 @@ $card-border-width:        1px;
 $card-border-radius:       0;
 $card-border-color:        $gray-500;
 $card-inner-border-radius: 0;
-$card-cap-bg:              $body-bg;
-$card-bg:                  $body-bg;
+$card-cap-bg:              $white;
+$card-bg:                  $white;
 $card-columns-margin:      1.25rem;
+$card-spacer-x:            1.5rem;
 
 
 // Tooltips
@@ -558,6 +562,14 @@ $breadcrumb-active-color:       $gray-900;
 // Input Groups
 
 $input-group-btn-border-color:   $gray-700;
+
+
+// Shadow Depths
+
+$shadow-depth0:                  none;
+$shadow-depth1:                  0 1px 2px rgba(0,0,0,0.1);
+$shadow-depth2:                  0 1px 2px rgba(0,0,0,0.2);
+
 
 // Fixes
 

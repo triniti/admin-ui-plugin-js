@@ -17,7 +17,7 @@ const UiCard = () => (
       <CardsContainer key="cards1">
         <Row>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardImg
                 top
                 width="100%"
@@ -35,7 +35,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardBody>
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
@@ -63,7 +63,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardHeader tag="h3">Featured</CardHeader>
               <CardBody>
                 <CardTitle>Special Title Treatment</CardTitle>
@@ -74,7 +74,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardImg
                 top
                 width="100%"
@@ -94,7 +94,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardBody>
                 <CardTitle>Card Title</CardTitle>
                 <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -113,7 +113,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card inverse hover>
+            <Card inverse>
               <CardImg
                 width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97270&w=318&h=270&bg=333333&txtclr=666666"
@@ -139,7 +139,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card body border outline hover color="primary">
+            <Card body outline hover color="primary">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button color="second">Button</Button>
