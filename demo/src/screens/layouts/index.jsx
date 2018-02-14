@@ -17,7 +17,7 @@ const UiLayout = () => (
     body={[
       <Card key="layout1">
         <CardHeader>Full Width Columns</CardHeader>
-        <CardBody>
+        <Container fluid>
           <Row>
             <Col>
               <div className="ui-cols">
@@ -53,7 +53,7 @@ const UiLayout = () => (
               </div>
             </Col>
           </Row>
-        </CardBody>
+        </Container>
       </Card>,
 
       <Card key="layout2">

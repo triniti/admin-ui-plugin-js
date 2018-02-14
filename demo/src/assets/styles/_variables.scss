@@ -104,7 +104,7 @@ $font-weight-bold:            700 !default;
 
 $dropdown-link-hover-bg:            $gray-100 !default;
 
-$body-bg:                   $gray-200;
+$body-bg:                   $gray-400;
 $body-color:                $gray-900;
 
 // +++++++++++++++++
@@ -438,6 +438,7 @@ $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=
 $navbar-light-toggler-border-color: transparent;
 
 $nav-pills-link-active-bg:          $white;
+$nav-pills-link-active-bg:          theme-color("secondary");
 
 // Pagination
 
@@ -447,8 +448,8 @@ $pagination-border-color:              $gray-600;
 $pagination-hover-border-color:        $gray-600;
 
 $pagination-active-color:              $white;
-$pagination-active-bg:                 theme-color("primary");
-$pagination-active-border-color:       theme-color("primary");
+$pagination-active-bg:                 theme-color("secondary");
+$pagination-active-border-color:       theme-color("secondary");
 
 $pagination-disabled-color:            $text-muted;
 $pagination-disabled-bg:               $gray-200;
@@ -489,7 +490,7 @@ $tooltip-arrow-height:        5px;
 
 $popover-box-shadow:                  0 10px 8px -6px $gray-rgba-300;
 
-$popover-header-bg:                   $body-bg;
+$popover-header-bg:                   $gray-200;
 
 $popover-header-padding-x:            .875rem;
 
@@ -569,9 +570,10 @@ $input-group-btn-border-color:   $gray-700;
 
 $shadow-card:                    0 1px 2px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.05);
 $shadow-depth0:                  none;
-$shadow-depth1:                  0 1px 2px rgba(0,0,0,0.1);
-$shadow-depth2:                  0 1px 2px rgba(0,0,0,0.2);
-$shadow-depth3:                  0 1px 2px 1px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.2);
+$shadow-depth1:                  0 1px 1px rgba(0,0,0,0.1);
+$shadow-depth2:                  0 1px 2px rgba(0,0,0,0.1);
+$shadow-depth3:                  0 1px 2px rgba(0,0,0,0.2);
+$shadow-depth4:                  0 1px 2px 1px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.2);
 
 // Fixes
 

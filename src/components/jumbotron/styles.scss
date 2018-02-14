@@ -9,6 +9,10 @@
   @include media-breakpoint-up(sm) {
     padding: $jumbotron-padding;
   }
+
+  .card > & {
+    margin-bottom: 0;
+  }
 }
 
 // Example theme options

@@ -83,7 +83,7 @@ const Screen = (props) => {
         <AlertBar alerts={alerts} onDismiss={id => dispatch(dismissAlert(id))} />
 
         {tabs.length > 0 &&
-        <Nav underline className="pt-2" theme="light">
+        <Nav underline className="screen-navtabs">
           {tabs.map(tab => (
             <NavItem key={tab.to}>
               <RouterLink navTab to={tab.to}>{tab.text}</RouterLink>

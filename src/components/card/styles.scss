@@ -193,9 +193,11 @@ h4.card-title {
 
   .screen-sidebar & {
     font-weight: 500;
-    background-color: $gray-300;
+    background-color: $gray-100;
     font-size: .875rem;
     min-height: 44px;
+    box-shadow: $shadow-depth1;
+    border: none;
 
     & .btn-toggler {
       font-size: .875rem;
@@ -203,7 +205,7 @@ h4.card-title {
   }
 
   .screen-sidebar-body > .card:not(:first-child) & {
-      box-shadow: 0 -1px 0 $card-border-color;
+      box-shadow: $shadow-depth1, 0 -1px 0 $card-border-color;
     }
 
   .screen-body > .card:first-child > & {

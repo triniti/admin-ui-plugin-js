@@ -14,10 +14,22 @@
 }
 
 .nav-link {
+
   &.disabled,
   &.disabled:hover {
     color: $nav-link-disabled-color;
     cursor: no-drop;
+  }
+
+  .navbar-dark & {
+    color: $navbar-dark-color;
+  }
+
+  .navbar-dark &:hover,
+  .navbar-dark &:focus,
+  .navbar-dark &:active,
+  .navbar-dark &.active {
+    color: $navbar-dark-active-color;
   }
 }
 
@@ -45,9 +57,13 @@
 .nav-pills {
   .nav-link {
 
-    &.active,
     .show > & {
       box-shadow: inset 0 0 0 1px $gray-600;
+    }
+
+    &.active {
+      box-shadow: inset 0 0 0 1px $nav-pills-link-active-bg;
+
     }
   }
 }

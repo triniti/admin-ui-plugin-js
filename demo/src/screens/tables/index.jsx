@@ -19,8 +19,8 @@ export default () => (
         <Table size="sm" stickyTop fixed>
           <thead>
           <tr>
-            <th className="table-col-md">#</th>
-            <th className="table-col-lg">First Name</th>
+            <th>#</th>
+            <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
           </tr>
@@ -29,8 +29,8 @@ export default () => (
         <Table hover size="sm" borderless fixed>
           <tbody>
           <tr>
-            <th scope="row" className="table-col-md">1</th>
-            <td className="table-col-lg">Mark</td>
+            <th scope="row">1</th>
+            <td>Mark</td>
             <td>Otto</td>
             <td>@mdo</td>
           </tr>

@@ -3,12 +3,16 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/list-group";
 
-
 // Custom Classes
 
 .list-group-item {
   justify-content: space-between;
   flex: 0 0 auto;
+
+  &.active,
+  &:active {
+    color: $body-color;
+  }
 }
 
 .list-group-item-text {
