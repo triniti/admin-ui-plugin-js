@@ -58,8 +58,8 @@ class UiTabs extends React.Component {
       //    <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
       //    ]
       //  }
-        body={
-          <Card>
+        body={[
+          <Card key="card1">
             <TabContent activeTab={this.state.activeTab1}>
               <TabPane tabId="1">
                 <Card>
@@ -99,7 +99,9 @@ class UiTabs extends React.Component {
                 </Card>
               </TabPane>
             </TabContent>
+          </Card>,
 
+          <Card key="card2">
             <CardHeader>Classic Standard Version</CardHeader>
             <CardBody>
               <Nav tabs>
@@ -165,7 +167,7 @@ class UiTabs extends React.Component {
               </TabContent>
             </CardBody>
           </Card>
-        }
+        ]}
       />
     );
   }

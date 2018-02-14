@@ -66,6 +66,20 @@ table.sticky-top + table,
   text-align: right;
 }
 
+// fixed table columns widths
+
+.table-col-sm {
+  width: 3.25rem;  // 52px
+}
+
+.table-col-md {
+  width: 5rem;  // 80px
+}
+
+.table-col-lg {
+  width: 7.5rem;  // 120px
+}
+
 
 // Left padding
 

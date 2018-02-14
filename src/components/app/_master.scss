@@ -35,10 +35,13 @@ body {
 
 .card-body > .container,
 .card-body > .container-fluid {
-  padding: 0;
+
+  @media (max-width: 767px) {
+    padding: 0;
+  }
 }
 
-/* removal of the glow on objects on focus */
+// removal of the glow on objects on focus
 
 object,
 embed,
@@ -66,10 +69,7 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-a:focus,
-button:focus,
-.btn:focus,
-.btn:active:focus {
+a:focus {
   box-shadow: none;
 }
 

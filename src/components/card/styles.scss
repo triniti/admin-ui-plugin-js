@@ -21,6 +21,14 @@
     margin: 0 0 .5rem 0;
   }
 
+  .card-group > & {
+    border-right: $card-border-width solid $card-border-color;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
   .jumbotron > & {
     border: none;
   }
@@ -31,16 +39,10 @@
     border: none;
   }
 
-  .screen-body > & {
-    box-shadow: $shadow-depth2;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 1.5rem;
-  }
-
-  .screen-body > &:first-child {
-    margin-top: 1.5rem;
+  .screen-body-content > &,
+  .card-deck  > &,
+  .card-columns > & {
+    box-shadow: $shadow-card;
   }
 
   .cards-container & {
@@ -51,6 +53,10 @@
 
 .card-border {
   border: $card-border-width solid $card-border-color;
+}
+
+.card-group {
+  box-shadow: $shadow-card;
 }
 
 
@@ -75,7 +81,7 @@
   }*/
 }
 
-.card-body + .card-body {
+.card > .card-body + .card-body {
   box-shadow: inset 0 1px 0 0 $gray-300;
 }
 
@@ -294,61 +300,6 @@ h4.card-title {
   @media (min-width: 1600px) {
     padding-left: $padding-xl;
     padding-left: $padding-xl;
-  }
-}
-
-
-//
-// Card groups
-//
-// Left this old style since it worked better
-
-@include media-breakpoint-up(sm) {
-  .card-group {
-    display: flex;
-    flex-flow: row wrap;
-
-    .card {
-      flex: 1 0 0%;
-
-      + .card {
-        margin-left: 0;
-        border-left: 0;
-      }
-
-      // Handle rounded corners
-      @if $enable-rounded {
-        &:first-child {
-          @include border-right-radius(0);
-
-          .card-img-top {
-            border-top-right-radius: 0;
-          }
-          .card-img-bottom {
-            border-bottom-right-radius: 0;
-          }
-        }
-        &:last-child {
-          @include border-left-radius(0);
-
-          .card-img-top {
-            border-top-left-radius: 0;
-          }
-          .card-img-bottom {
-            border-bottom-left-radius: 0;
-          }
-        }
-
-        &:not(:first-child):not(:last-child) {
-          border-radius: 0;
-
-          .card-img-top,
-          .card-img-bottom {
-            border-radius: 0;
-          }
-        }
-      }
-    }
   }
 }
 

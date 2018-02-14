@@ -26,7 +26,7 @@ $sidenav-width:     300px;
   background-color: $white;
 
   &.offcanvas-left {
-    z-index: 10;
+    z-index: $zindex-fixed;
     margin-left: -$sidenav-width + 38;
 
     @media (max-width: 767px) {
@@ -62,12 +62,11 @@ $sidenav-width:     300px;
   .offcanvas-left & {
 
     @media (max-width: 767px) {
-    z-index: 5;
     left: 0;
     margin-right: -1px;
     width: calc(299px + 2.125rem);
     border-right: 1px solid $gray-500;
-    border-bottom: 1px solid $gray-500;
+    box-shadow: none;
     }
   }
 }
@@ -124,6 +123,16 @@ $sidenav-width:     300px;
   margin: 0;
   width: 100%;
   min-height: 0;
+
+  @media (min-width: 768px) {
+    .screen-sidenav + & {
+      width: calc(100% - 300px);
+    }
+
+    .screen-sidenav.offcanvas-left + & {
+      width: calc(100% - 38px);
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -225,7 +234,7 @@ $sidenav-width:     300px;
   align-items: flex-start;
   align-content: flex-start;
   min-height: 0;
-  padding: 0 $padding-md $padding-md $padding-md;
+  padding: 0;
   width: 100%;
   overflow: hidden;
   overflow-y: auto;
@@ -233,6 +242,16 @@ $sidenav-width:     300px;
   -webkit-backface-visibility: hidden;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-overflow-style: none;
+}
+
+.screen-body-content {
+  padding: 0 $padding-sm;
+  margin: $padding-sm auto;
+
+  @media (min-width: 768px) {
+    padding: 0 $padding-md;
+    margin: $padding-md auto;
+  }
 }
 
 .screen-sidebar {

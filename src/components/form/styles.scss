@@ -172,9 +172,13 @@ input[type='text']:focus,
   cursor: pointer;
 }
 
-.form-group > label,
-.form-check > label {
+.form-group > label:not(.col-form-label),
+.form-check > label:not(.col-form-label) {
   margin-right: $form-item-spacing;
+}
+
+.form-check.row {
+  padding-left: 0;
 }
 
 .form-inline .form-check-label,

@@ -29,7 +29,7 @@
 .navbar-dark .main-nav .dropdown-item:hover,
 .navbar-dark .main-nav .dropdown-item:focus {
   color: $navbar-dark-hover-color;
-  background-color: $gray-rgba-500;
+  background: $gray-rgba-500;
 }
 
 .navbar-dark .main-nav .dropdown-item.active:hover,
@@ -37,7 +37,7 @@
 .navbar-dark .main-nav .dropdown-item.active,
 .navbar-dark .main-nav .dropdown-item:active {
   color: $navbar-dark-active-color;
-  background-color: $gray-rgba-500;
+  background: $gray-rgba-500;
   box-shadow: inset 3px 0 0 0 theme-color("primary");
 }
 
@@ -157,7 +157,7 @@
     padding: 0 .5rem;
     border: none;
     border-radius: 0;
-    background-color: transparent;
+    background: transparent;
     overflow: hidden;
     box-shadow: none;
     transition: opacity $transition;
@@ -167,10 +167,10 @@
   }
   .main-nav .navbar-nav .nav-dropdown-menu {
     position: relative !important;
-    background-color: $gray-rgba-100;
+    background: $gray-rgba-100;
   }
   .navbar-dark .main-nav .nav-dropdown-menu {
-    background-color: $gray-rgba-300;
+    background: $gray-rgba-300;
   }
   .main-nav .nav-item .dropdown-item {
     overflow: hidden;
@@ -235,7 +235,7 @@
   .navbar-main-wrapper .navbar-nav .nav-item:hover .nav-link,
   .navbar-main-wrapper .navbar-nav .nav-link:hover {
     position: relative;
-    background-color: $white;
+    background: $white;
     box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600;
   }
   .navbar-dark .dropdown:hover .nav-link:before {
@@ -243,7 +243,7 @@
   }
   .navbar-main-wrapper.navbar-dark .navbar-nav .nav-item:hover .nav-link,
   .navbar-main-wrapper.navbar-dark .navbar-nav .navbar-nav .nav-link:hover {
-    background-color: $navbar-theme-dark-dropdown;
+    background: $navbar-theme-dark-dropdown;
     box-shadow: none;
   }
   .navbar-nav .nav-dropdown-menu {
@@ -260,7 +260,7 @@
     color: $body-color;
     border-top-color: transparent;
     border-radius: $border-radius-lg;
-    background-color: $body-bg;
+    background: $white;
     background-clip: padding-box;
     box-shadow: 0 1px 14px -2px $gray-rgba-600, 0 0 0 1px rgba($black, .05);
     transform: none !important;
@@ -273,7 +273,7 @@
   .navbar-dark .navbar-nav .nav-dropdown-menu {
     border: none;
     border-top: 1px solid $navbar-theme-dark-dropdown;
-    background-color: $navbar-theme-dark-dropdown;
+    background: $navbar-theme-dark-dropdown;
   }
   .nav-item:hover > .dropdown-menu {
     display: block;
@@ -298,7 +298,7 @@
   .navbar-dark .dropdown-item:hover,
   .navbar-dark .dropdown-item.active,
   .navbar-dark .dropdown-item:active {
-    background-color: $gray-rgba-600;
+    background: $gray-rgba-600;
   }
   .navbar-dark .dropdown-divider {
     background-color: $gray-rgba-600;

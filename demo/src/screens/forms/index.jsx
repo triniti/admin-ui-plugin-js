@@ -38,7 +38,7 @@ class UiForm extends React.Component {
             <CardBody>
               <Container fluid>
                 <Row>
-                  <Col sm="8" md="6">
+                  <Col>
                     <CardTitle tag="h2">Card Title H2 with Button
                       <Button outline color="link" radius="circle">
                         <Icon imgSrc="close" alt="x" />
@@ -126,7 +126,7 @@ class UiForm extends React.Component {
             <CardBody>
               <Container fluid>
                 <Row>
-                  <Col sm="6" md="4">
+                  <Col>
                     <CardTitle tag="h3">Card Title H3</CardTitle>
                     <Form>
                       <FormGroup>
@@ -177,7 +177,7 @@ class UiForm extends React.Component {
                       />
                       </FormGroup>
 
-                      <Button outline color="default" radius="round">Submit</Button>
+                      <Button outline radius="round">Submit</Button>
                     </Form>
                     <CardTitle tag="h4">Card Title H4</CardTitle>
                     <Form inline className="mb-3">
@@ -204,7 +204,7 @@ class UiForm extends React.Component {
             <CardBody>
               <Container fluid>
                 <Row>
-                  <Col sm="9" md="6">
+                  <Col>
                     <Form>
                       <FormGroup>
                         <Label for="exampleEmail">Plain Text (Static)</Label>
