@@ -56,8 +56,8 @@ class UiButtons extends React.Component {
           <Card key="button1">
             <CardHeader>Solid
               <span>
-                <Button color="hover-bg">hover-bg</Button>
-                <Button>default</Button>
+                <Button color="hover-bg" size="sm">hover-bg</Button>
+                <Button size="sm">default</Button>
               </span>
             </CardHeader>
             <CardBody>

@@ -16,28 +16,36 @@
     @include border-radius($alert-border-radius);
   }
 
-
+  /*
   .alert-container & {
     margin-bottom: 0;
     border-bottom: 1px solid $gray-rgba-200;
   }
+  */
 
-  /* alert inverse absolutely positioned above content
   .alert-container & {
-    position: absolute;
-    z-index: 1040;
-    margin: .5rem auto 0 auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    max-width: 680px;
     @include border-radius($alert-border-radius);
     box-shadow: $shadow-depth4;
-  }*/
+  }
 
   & span::before {
       content: ' ';
   }
+}
+
+.alert-wrapper {
+  position: relative;
+}
+
+.alert-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+  margin: 0 auto;
+  padding: .5rem 1rem;
+  max-width: 680px;
 }
 
 // Alternate styles
@@ -46,7 +54,7 @@
 
 @each $color, $value in $theme-colors {
   .alert-#{$color}.alert-inverse {
-    background: theme-color($color);
+    background: darken(theme-color($color), 4%);
     font-weight: 700;
     color: $white;
     text-shadow: 0 1px 0 $gray-rgba-600;
@@ -148,8 +156,4 @@
 .alert-inverse .btn-alert-close:hover {
   color: $white;
   opacity: 1;
-}
-
-.alert-container {
-  position: relative;
 }

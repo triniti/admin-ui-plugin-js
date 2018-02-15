@@ -14,17 +14,18 @@ const UiHeaders = () => (
   // ]}
     primaryActions={<PrimaryActions />}
     body={
-      <Card>
+      <Card key="headers1">
+        <CardHeader>Headlines</CardHeader>
         <CardBody>
           <Container fluid>
-            <h1>H1 Heading .h1</h1>
-            <h2>H2 Heading .h2</h2>
-            <h3>H3 Heading .h3</h3>
-            <h4>H4 Heading .h4</h4>
-            <h5>H5 Heading .h5</h5>
-            <h6>h6 Heading .h6</h6>
+            <h1>H1 Headine .h1</h1>
+            <h2>H2 Headine .h2</h2>
+            <h3>H3 Headine .h3</h3>
+            <h4>H4 Headine .h4</h4>
+            <h5>H5 Headine .h5</h5>
+            <h6>h6 Headine .h6</h6>
             <hr />
-            <h1>H1 Heading .h1</h1>
+            <p>Lorem Ipsum standard paragraph</p>
           </Container>
         </CardBody>
 
@@ -68,10 +69,8 @@ const UiHeaders = () => (
           <CardTitle tag="h5" className="justify-content-center">Dividing Line between stacked CardBodys</CardTitle>
         </CardBody>
 
-        <CardBody />
-
       </Card>
-  }
+    }
   />
 );
 

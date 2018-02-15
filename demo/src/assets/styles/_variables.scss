@@ -522,6 +522,7 @@ $modal-header-padding:        1rem;
 // Define alert colors, border radius, and padding.
 
 $alert-border-radius:         $border-radius-lg;
+$alert-margin-bottom:         .75rem;
 
 
 // Progress bars
@@ -573,7 +574,7 @@ $shadow-depth0:                  none;
 $shadow-depth1:                  0 1px 1px rgba(0,0,0,0.1);
 $shadow-depth2:                  0 1px 2px rgba(0,0,0,0.1);
 $shadow-depth3:                  0 1px 2px rgba(0,0,0,0.2);
-$shadow-depth4:                  0 1px 2px 1px rgba(0,0,0,0.1), 0 4px 8px rgba(0,0,0,0.2);
+$shadow-depth4:                  inset 0 0 0 1px rgba(0,0,0,0.0625), 0 1px 2px rgba(0,0,0,0.2), 0 14px 14px -8px rgba(0,0,0,0.2);
 
 // Fixes
 
