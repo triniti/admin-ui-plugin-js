@@ -417,7 +417,7 @@ class UiButtons extends React.Component {
                 <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
                 <Form>
                   <FormGroup inline>
-                    <Switch id="toggler0" />
+                    <Switch id="toggler0" size="md" />
                   </FormGroup>
                 </Form>
               </span>

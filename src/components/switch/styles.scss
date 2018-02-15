@@ -2,6 +2,8 @@
 // switch-input
 //
 
+$form-check-width-ratio: 1.75;
+
 input.switch-input {
   position: absolute;
   visibility: hidden;
@@ -14,8 +16,8 @@ input.switch-input {
 }
 
 input.switch-input + label {
-  width: 2.625rem;
-  height: 1.5rem;
+  height: $form-check-height;
+  width: $form-check-height * $form-check-width-ratio;
   border-radius: $round;
   background-color: $gray-700;
   cursor: pointer;
@@ -27,8 +29,8 @@ input.switch-input + label:after {
   top: 0;
   left: 0;
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: $form-check-height;
+  height: $form-check-height;
   content: '';
   transition: $transition;
   border-radius: $round;
@@ -54,53 +56,53 @@ input.switch-input:checked + label:after {
 // switch-input xs
 
 input.switch-input.form-control-xs + label {
-  width: 21px;
-  height: 13px;
+  height: $form-check-height-xs;
+  width: $form-check-height-xs * $form-check-width-ratio;
 }
 
 input.switch-input.form-control-xs + label:before,
 input.switch-input.form-control-xs + label:after {
-  width: 13px;
-  height: 13px;
+  width: $form-check-height-xs;
+  height: $form-check-height-xs;
 }
 
 // switch-input sm
 
 input.switch-input.form-control-sm + label {
-  width: 1.75rem;
-  height: 1rem;
+  height: $form-check-height-sm;
+  width: $form-check-height-sm * $form-check-width-ratio;
 }
 
 input.switch-input.form-control-sm + label:before,
 input.switch-input.form-control-sm + label:after {
-  width: 1rem;
-  height: 1rem;
+  width: $form-check-height-sm;
+  height: $form-check-height-sm;
 }
 
 // switch-input md
 
 input.switch-input.form-control-md + label {
-  width: 3.5rem;
-  height: 2rem;
+  height: $form-check-height-md;
+  width: $form-check-height-md * $form-check-width-ratio;
 }
 
 input.switch-input.form-control-md + label:before,
 input.switch-input.form-control-md + label:after {
-  width: 2rem;
-  height: 2rem;
+  width: $form-check-height-md;
+  height: $form-check-height-md;
 }
 
 // switch-input lg
 
 input.switch-input.form-control-lg + label {
-  width: 4.375rem;
-  height: 2.5rem;
+  height: $form-check-height-lg;
+  width: $form-check-height-lg * $form-check-width-ratio;
 }
 
 input.switch-input.form-control-lg + label:before,
 input.switch-input.form-control-lg + label:after {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: $form-check-height-lg;
+  height: $form-check-height-lg;
 }
 
 // switch-input adjustments
@@ -149,6 +151,7 @@ input.switch-input.form-control-sm + label {
 input.switch-input:checked + label:before {
   width: 100%;
   background: theme-color("secondary");
+  box-shadow: $form-check-shadow;
 }
 
 // switch label

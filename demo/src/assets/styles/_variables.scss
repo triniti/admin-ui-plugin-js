@@ -358,7 +358,7 @@ $form-group-margin-bottom:       1.25rem;
 $line-height-base:               1.5;
 $input-line-height:              1.7;
 $line-height-lg:                 1.8;
-$line-height-sm:                 1.5;
+$line-height-sm:                 1.45;
 
 $border-radius:               3px;
 $border-radius-lg:            3px;
@@ -578,17 +578,14 @@ $shadow-depth2:                  0 1px 2px rgba(0,0,0,0.1);
 $shadow-depth3:                  0 1px 2px rgba(0,0,0,0.2);
 $shadow-depth4:                  inset 0 0 0 1px rgba(0,0,0,0.0625), 0 1px 2px rgba(0,0,0,0.2), 0 14px 14px -8px rgba(0,0,0,0.2);
 
-// Fixes
+// Checkbox Radio Switch Heights
 
-$thumbnail-transition:        all .2s ease-in-out !default;
-$form-check-margin-bottom:  .5rem !default;
-$popover-inner-padding:               1px !default;
-$table-inverse-color:           $body-bg !default;
-$badge-color:                 $white !default;
-$table-inverse-bg:              $gray-900 !default;
-$popover-arrow-outer-width:           ($popover-arrow-width + 1px) !default;
-$table-inverse-border-color:    lighten($gray-900, 7.5%) !default;
-$table-inverse-accent-bg:       rgba($white, .05) !default;
-$table-inverse-hover-bg:        rgba($white, .075) !default;
+$form-check-height-xs:   1rem;
+$form-check-height-sm:   1.25rem;
+$form-check-height:      1.5rem;
+$form-check-height-md:   1.75rem;
+$form-check-height-lg:   2.5rem;
+$form-check-shadow:      inset 0 0 0 1px $gray-rgba-300;
+
 
 @import "~bootstrap/scss/variables";
