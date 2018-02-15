@@ -14,12 +14,14 @@ input.radio-input {
 }
 
 input.radio-input + label {
+  positon: relative;
   flex: 0 0 auto;
   width: 1.5rem;
   height: 1.5rem;
   border-radius: $round;
   box-shadow: inset 0 0 0 2px $gray-700;
-  transition: box-shadow $transition;
+  background-color: $white;
+  transition: box-shadow $transition, background-color $transition;
 }
 
 input.radio-input + label:before {
@@ -38,15 +40,16 @@ input.radio-input + label:before {
 }
 
 input.radio-input + label:hover:before {
-  background-color: $gray-200;
+  background-color: $gray-300;
 }
 
 input.radio-input:checked + label {
-  box-shadow: inset 0 0 0 2px theme-color("secondary");
+  box-shadow: none !important;
+  background-color: theme-color("secondary");
 }
 
 input.radio-input:checked + label:before {
-  background-color: theme-color("secondary");
+  background-color: $white;
   transform: scale(1);
 }
 
@@ -93,10 +96,6 @@ input.form-control-md.radio-input + label:before {
   height: 1rem;
 }
 
-input.form-control-md.radio-input:checked + label {
-  box-shadow: inset 0 0 0 3px theme-color("secondary");
-}
-
 // radio-input lg
 
 input.form-control-lg.radio-input + label {
@@ -110,10 +109,6 @@ input.form-control-lg.radio-input + label:before {
   left: .55rem;
   width: 1.4rem;
   height: 1.4rem;
-}
-
-input.form-control-lg.radio-input:checked + label {
-  box-shadow: inset 0 0 0 3px theme-color("secondary");
 }
 
 // radio-input-label
@@ -130,10 +125,6 @@ input.form-control-lg.radio-input:checked + label {
 
 .radio-input:disabled + .radio-input-label:hover {
   cursor: not-allowed;
-}
-
-.radio-input:disabled + .radio-input-label:before {
-  display: none;
 }
 
 // radio label

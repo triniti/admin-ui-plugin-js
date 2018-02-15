@@ -496,6 +496,16 @@ class UiButtons extends React.Component {
                   size="lg"
                   </Label>
 
+                  <Label check className="mr-4" strong>
+                    <Radio type="checkbox" name="toggler8" id="toggler8" disabled />
+                disabled
+                  </Label>
+
+                  <Label check className="mr-4" strong>
+                    <Radio type="checkbox" name="toggler8" id="toggler8" disabled checked />
+                disabled on
+                  </Label>
+
                 </FormGroup>
               </Form>
             </CardBody>
@@ -539,6 +549,16 @@ class UiButtons extends React.Component {
                   <Label className="mr-4" strong>
                     <Checkbox size="lg" name="toggler19" id="toggler19" />
                 size="lg"
+                  </Label>
+
+                  <Label className="mr-4" strong>
+                    <Checkbox disabled />
+                disabled
+                  </Label>
+
+                  <Label className="mr-4" strong>
+                    <Checkbox disabled checked />
+                disabled on
                   </Label>
                 </FormGroup>
               </Form>

@@ -134,7 +134,11 @@ input.switch-input + label {
 }
 
 input.switch-input[disabled] + label {
-  pointer-events: none;
+  opacity: .5;
+
+  &:hover {
+    cursor: not-allowed;
+  }
 }
 
 input.switch-input.form-control-xs + label,
