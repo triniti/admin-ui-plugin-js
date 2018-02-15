@@ -17,7 +17,8 @@ input.switch-input + label {
   width: 2.625rem;
   height: 1.5rem;
   border-radius: $round;
-  background-color: $gray-700;
+  background-color: $body-bg;
+  box-shadow: inset 0 0 0 1px $gray-600;
   cursor: pointer;
 }
 
@@ -35,18 +36,13 @@ input.switch-input + label:after {
   background: transparent;
 }
 
+input.switch-input + label:before {
+  border: $input-btn-border-width solid transparent;
+}
+
 input.switch-input + label:after {
-  background: $white;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-input.switch-input.form-control-md + label:after {
-  border: 3px solid transparent;
-}
-
-input.switch-input.form-control-lg + label:after {
-  border: 4px solid transparent;
+  background: white;
+  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
 }
 
 input.switch-input:checked + label:before {
@@ -56,8 +52,8 @@ input.switch-input:checked + label:before {
 }
 
 input.switch-input:checked + label:after {
-  left: 100%;
-  transform: translateX(-100%);
+  left: 1.125rem;
+  box-shadow: inset 0 0 0 1px theme-color("secondary"), 0 2px 4px $gray-rgba-600;
 }
 
 // switch-input xs
@@ -73,8 +69,17 @@ input.switch-input.form-control-xs + label:after {
   height: 13px;
 }
 
+input.switch-input + label:after {
+  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 1px 3px $gray-rgba-600;
+}
+
 input.switch-input.form-control-xs:checked + label:before {
   width: 21px;
+}
+
+input.switch-input.form-control-xs:checked + label:after {
+  left: 8px;
+  box-shadow: inset 0 0 0 1px theme-color("secondary"), 0 1px 3px $gray-rgba-600;
 }
 
 // switch-input sm
@@ -94,11 +99,16 @@ input.switch-input.form-control-sm:checked + label:before {
   width: 1.75rem;
 }
 
+input.switch-input.form-control-sm:checked + label:after {
+  left: .75rem;
+}
+
 // switch-input md
 
 input.switch-input.form-control-md + label {
   width: 3.5rem;
   height: 2rem;
+  box-shadow: inset 0 0 0 2px $gray-600;
 }
 
 input.switch-input.form-control-md + label:before,
@@ -107,8 +117,17 @@ input.switch-input.form-control-md + label:after {
   height: 2rem;
 }
 
+input.switch-input.form-control-md + label:after {
+  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
+}
+
 input.switch-input.form-control-md:checked + label:before {
   width: 3.5rem;
+}
+
+input.switch-input.form-control-md:checked + label:after {
+  left: 1.5rem;
+  box-shadow: inset 0 0 0 2px theme-color("secondary"), 0 2px 4px $gray-rgba-600;
 }
 
 // switch-input lg
@@ -116,6 +135,7 @@ input.switch-input.form-control-md:checked + label:before {
 input.switch-input.form-control-lg + label {
   width: 4.375rem;
   height: 2.5rem;
+  box-shadow: inset 0 0 0 2px $gray-600;
 }
 
 input.switch-input.form-control-lg + label:before,
@@ -124,8 +144,17 @@ input.switch-input.form-control-lg + label:after {
   height: 2.5rem;
 }
 
+input.switch-input.form-control-lg + label:after {
+  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 3px 6px $gray-rgba-600;
+}
+
 input.switch-input.form-control-lg:checked + label:before {
   width: 4.375rem;
+}
+
+input.switch-input.form-control-lg:checked + label:after {
+  left: 2rem;
+  box-shadow: inset 0 0 0 2px theme-color("secondary"), 0 3px 6px $gray-rgba-600;
 }
 
 // switch-input adjustments

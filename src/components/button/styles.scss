@@ -34,6 +34,12 @@
   .btn-#{$color} {
     border-color: darken($value, 5%);
   }
+  .btn-outline-#{$color} {
+    &:hover,
+    &:focus {
+      border-color: darken($value, 5%);
+    }
+  }
 }
 
 .btn-default {
@@ -113,19 +119,19 @@
 
 .btn-outline-light {
   color: $body-color;
-  background-color: $white;
+  background: $white;
   border: $input-btn-border-width solid $gray-700;
 
   &:hover,
   &:focus {
     color: $body-color;
-    background-color: $gray-400;
+    background: $gray-400;
     border: $input-btn-border-width solid $gray-700;
   }
   &:active,
   &.active {
     color: $body-color !important;
-    background-color: $gray-500;
+    background: $gray-500;
     border: $input-btn-border-width solid $gray-700 !important;
   }
 
