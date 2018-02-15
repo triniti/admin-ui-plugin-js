@@ -53,6 +53,54 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="user">user</UncontrolledTooltip>
             </Col>
           </Row>
+          <Row>
+            <Col>
+              <Icon imgSrc="upload" id="upload" />
+              <UncontrolledTooltip placement="top" target="upload">upload</UncontrolledTooltip>
+              <Icon imgSrc="download" id="download" />
+              <UncontrolledTooltip placement="top" target="download">download</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign" id="plus-sign" />
+              <UncontrolledTooltip placement="top" target="plus-sign">plus-sign</UncontrolledTooltip>
+              <Icon imgSrc="minus-sign" id="minus-sign" />
+              <UncontrolledTooltip placement="top" target="minus-sign">minus-sign</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" />
+              <UncontrolledTooltip placement="top" target="plus-sign-outline">plus-sign-outline</UncontrolledTooltip>
+              <Icon imgSrc="minus-sign-outline" id="minus-sign-outline" />
+              <UncontrolledTooltip placement="top" target="minus-sign-outline">minus-sign-outline</UncontrolledTooltip>
+              <Icon imgSrc="apps" id="apps" />
+              <UncontrolledTooltip placement="top" target="apps">apps</UncontrolledTooltip>
+              <Icon imgSrc="arrow-back" id="arrow-back" />
+              <UncontrolledTooltip placement="top" target="arrow-back">arrow-back</UncontrolledTooltip>
+              <Icon imgSrc="arrow-forward" id="arrow-forward" />
+              <UncontrolledTooltip placement="top" target="arrow-forward">arrow-forward</UncontrolledTooltip>
+              <Icon imgSrc="cancel" id="cancel" />
+              <UncontrolledTooltip placement="top" target="cancel">cancel</UncontrolledTooltip>
+              <Icon imgSrc="file-download" id="file-download" />
+              <UncontrolledTooltip placement="top" target="file-download">file-download</UncontrolledTooltip>
+              <Icon imgSrc="file-upload" id="file-upload" />
+              <UncontrolledTooltip placement="top" target="file-upload">file-upload</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-arrow-down" id="keyboard-arrow-down" />
+              <UncontrolledTooltip placement="top" target="keyboard-arrow-down">keyboard-arrow-down</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-arrow-left" id="keyboard-arrow-left" />
+              <UncontrolledTooltip placement="top" target="keyboard-arrow-left">keyboard-arrow-left</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-arrow-right" id="keyboard-arrow-right" />
+              <UncontrolledTooltip placement="top" target="keyboard-arrow-right">keyboard-arrow-right</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-arrow-up" id="keyboard-arrow-up" />
+              <UncontrolledTooltip placement="top" target="keyboard-arrow-up">keyboard-arrow-up</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-backspace" id="keyboard-backspace" />
+              <UncontrolledTooltip placement="top" target="keyboard-backspace">keyboard-backspace</UncontrolledTooltip>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Icon imgSrc="list" id="list" />
+              <UncontrolledTooltip placement="top" target="list">list</UncontrolledTooltip>
+              <Icon imgSrc="move" id="move" />
+              <UncontrolledTooltip placement="top" target="move">move</UncontrolledTooltip>
+              <Icon imgSrc="trash" id="trash" />
+              <UncontrolledTooltip placement="top" target="trash">trash</UncontrolledTooltip>
+            </Col>
+          </Row>
         </CardBody>
       </Card>,
 
