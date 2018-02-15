@@ -46,11 +46,6 @@ input.switch-input.form-control-lg + label:after {
   border: 3px solid transparent;
 }
 
-input.switch-input:checked + label:before {
-  width: 2.625rem;
-  background: theme-color("secondary");
-}
-
 input.switch-input:checked + label:after {
   left: 100%;
   transform: translateX(-100%);
@@ -69,10 +64,6 @@ input.switch-input.form-control-xs + label:after {
   height: 13px;
 }
 
-input.switch-input.form-control-xs:checked + label:before {
-  width: 21px;
-}
-
 // switch-input sm
 
 input.switch-input.form-control-sm + label {
@@ -84,10 +75,6 @@ input.switch-input.form-control-sm + label:before,
 input.switch-input.form-control-sm + label:after {
   width: 1rem;
   height: 1rem;
-}
-
-input.switch-input.form-control-sm:checked + label:before {
-  width: 1.75rem;
 }
 
 // switch-input md
@@ -103,10 +90,6 @@ input.switch-input.form-control-md + label:after {
   height: 2rem;
 }
 
-input.switch-input.form-control-md:checked + label:before {
-  width: 3.5rem;
-}
-
 // switch-input lg
 
 input.switch-input.form-control-lg + label {
@@ -118,10 +101,6 @@ input.switch-input.form-control-lg + label:before,
 input.switch-input.form-control-lg + label:after {
   width: 2.5rem;
   height: 2.5rem;
-}
-
-input.switch-input.form-control-lg:checked + label:before {
-  width: 4.375rem;
 }
 
 // switch-input adjustments
@@ -161,6 +140,11 @@ input.switch-input[disabled] + label {
 input.switch-input.form-control-xs + label,
 input.switch-input.form-control-sm + label {
   vertical-align: text-bottom;
+}
+
+input.switch-input:checked + label:before {
+  width: 100%;
+  background: theme-color("secondary");
 }
 
 // switch label
