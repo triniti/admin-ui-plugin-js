@@ -20,14 +20,14 @@ input.checkbox-input + label {
   flex: 0 0 auto;
   width: 1.5rem;
   height: 1.5rem;
-  border-radius: $border-radius;
+  border-radius: $round; // $border-radius
   box-shadow: inset 0 0 0 2px $gray-600;
   background-color: $white;
   transition: box-shadow $transition, background-color $transition;
 }
 
 input.checkbox-input:checked + label {
-  box-shadow: inset 0 0 0 2px theme-color("secondary");
+  box-shadow: inset 0 0 0 0 theme-color("secondary") !important;
   background-color: theme-color("secondary");
 }
 
@@ -41,13 +41,13 @@ input.checkbox-input + label:before {
   content: '';
   background: transparent url('./check.svg?fill=%23#{$icon-theme-light}') center center / 100% auto no-repeat;
   opacity: .05;
-  transform: scale(.7);
+  transform: scale(.6);
 }
 
 input.checkbox-input:checked + label:before {
   opacity: 1;
   background: transparent url('./check.svg?fill=%23#{$icon-theme-dark}') center center / 100% auto no-repeat;
-  transform: scale(.8);
+  transform: scale(.675);
 }
 
 // checkbox-input xs
@@ -72,9 +72,6 @@ input.form-control-md.checkbox-input + label {
   box-shadow: inset 0 0 0 3px $gray-600;
 }
 
-input.form-control-md.checkbox-input:checked + label {
-  box-shadow: inset 0 0 0 3px theme-color("secondary");
-}
 
 // checkbox-input lg
 
@@ -82,10 +79,6 @@ input.form-control-lg.checkbox-input + label {
   width: 2.5rem;
   height: 2.5rem;
   box-shadow: inset 0 0 0 3px $gray-600;
-}
-
-input.form-control-lg.checkbox-input:checked + label {
-  box-shadow: inset 0 0 0 3px theme-color("secondary");
 }
 
 // radio-input-label
