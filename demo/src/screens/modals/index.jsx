@@ -64,7 +64,7 @@ class UiModal extends React.Component {
           <Card>
             <CardBody>
               <Button color="secondary" onClick={this.toggle}>Click Me</Button>
-              <Modal isOpen={this.state.modal} toggle={this.toggle}>
+              <Modal isOpen={this.state.modal} toggle={this.toggle} size="xl" maxWidth="1400px">
                 <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                 <ModalBody className="pb-5">
                   <p>

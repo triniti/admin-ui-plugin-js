@@ -21,6 +21,7 @@ const propTypes = {
   isOpen: PropTypes.bool,
   autoFocus: PropTypes.bool,
   size: PropTypes.string,
+  maxWidth: PropTypes.string,
   toggle: PropTypes.func,
   keyboard: PropTypes.bool,
   role: PropTypes.string,
@@ -199,6 +200,7 @@ class Modal extends React.Component {
           this._dialog = c;
         }}
         {...attributes}
+        style={{ maxWidth: `${this.props.maxWidth}` }}
       >
         <div
           className={mapToCssModules(

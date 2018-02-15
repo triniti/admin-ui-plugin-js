@@ -138,18 +138,46 @@
   .modal-content {
     @include box-shadow($modal-content-box-shadow-sm-up);
   }
-
-  .modal-sm { max-width: $modal-sm; }
 }
 
-@include media-breakpoint-up(lg) {
-  .modal-lg { max-width: $modal-lg; }
+.modal-xs {
+  max-width: 240px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0.5rem auto;
+  }
 }
 
-// Custom Modal Styles
+.modal-sm {
+  max-width: $modal-sm;
 
-@media (min-width: 576px) {
-  .modal-xs {
-    max-width: 240px;
+  @include media-breakpoint-down(sm) {
+    margin: 0.5rem auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .modal-lg {
+    width: calc(100% - 1rem);
+    max-width: $modal-lg;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .modal-lg {
+    max-width: calc(100% - 1rem) !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .modal-xl {
+    width: calc(100% - 1rem);
+    .modal-xl { max-width: $modal-xl; }
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .modal-xl {
+    max-width: calc(100% - 1rem) !important;
   }
 }
