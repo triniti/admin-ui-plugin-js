@@ -41,18 +41,14 @@ input.switch-input + label:after {
   background-clip: padding-box;
 }
 
-input.switch-input.form-control-md + label:after {
-  border: 3px solid transparent;
-}
-
+input.switch-input.form-control-md + label:after,
 input.switch-input.form-control-lg + label:after {
-  border: 4px solid transparent;
+  border: 3px solid transparent;
 }
 
 input.switch-input:checked + label:before {
   width: 2.625rem;
   background: theme-color("secondary");
-  border: $input-btn-border-width solid darken(theme-color("secondary"), 3%);
 }
 
 input.switch-input:checked + label:after {
