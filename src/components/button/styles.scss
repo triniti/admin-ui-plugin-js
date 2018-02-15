@@ -3,6 +3,9 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/buttons";
 
+// This is undefined otherwise
+$btn-border-width: default;
+
 //
 // Base styles
 //
