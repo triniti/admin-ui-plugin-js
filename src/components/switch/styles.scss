@@ -39,19 +39,22 @@ input.switch-input + label:after {
 }
 
 input.switch-input + label:after {
-  background: $white;
-  border: 2px solid transparent;
-  background-clip: padding-box;
-}
-
-input.switch-input.form-control-md + label:after,
-input.switch-input.form-control-lg + label:after {
-  border: 3px solid transparent;
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background: transparent url('./switch.svg') center center / 100% auto no-repeat;
+  border-radius: initial;
+  transform: scale(.76);
+  filter: drop-shadow( 0 1px 1px rgba(0,0,0,0.3));
 }
 
 input.switch-input:checked + label:after {
   left: 100%;
-  transform: translateX(-100%);
+  transform: translateX(-100%) scale(.76);
 }
 
 // Infix labels
