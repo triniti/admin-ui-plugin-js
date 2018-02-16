@@ -82,6 +82,7 @@
   align-items: center; // vertically center it
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
+  background-color: $gray-100;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
 
   .close {
