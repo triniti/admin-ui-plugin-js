@@ -111,10 +111,24 @@ test('Modal:: should render with class "modal-dialog" and have custom class name
   t.end();
 });
 
+test('Modal:: should render with maxWidth prop', (t) => {
+  isOpen = true;
+  const wrapper = mount(
+    <Modal isOpen={isOpen} toggle={toggle} maxWidth="95%" >
+      Yo!
+    </Modal>,
+  );
+
+  clock.tick(300);
+  t.equal(document.getElementsByClassName('modal-dialog')[0].style.maxWidth, '95%');
+  wrapper.unmount();
+  t.end();
+});
+
 test('Modal:: should render with additional props if provided', (t) => {
   isOpen = true;
   const wrapper = mount(
-    <Modal isOpen={isOpen} toggle={toggle} style={{ maxWidth: '95%' }}>
+    <Modal isOpen={isOpen} toggle={toggle} style={{ height: '95%' }}>
       Yo!
     </Modal>,
   );
@@ -122,7 +136,7 @@ test('Modal:: should render with additional props if provided', (t) => {
   clock.tick(300);
   t.equal(wrapper.children().length, 0);
   t.equal(document.getElementsByClassName('modal-dialog').length, 1);
-  t.equal(document.getElementsByClassName('modal-dialog')[0].style.maxWidth, '95%');
+  t.equal(document.getElementsByClassName('modal-dialog')[0].style.height, '95%', document.getElementsByClassName('modal-dialog')[0].style.height);
   wrapper.unmount();
   t.end();
 });
