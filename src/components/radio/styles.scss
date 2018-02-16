@@ -93,10 +93,11 @@ input.form-control-lg.radio-input + label {
 
 .radio-input:disabled + .radio-input-label {
   opacity: .5;
-}
+  pointer-events: none;
 
-.radio-input:disabled + .radio-input-label:hover {
-  cursor: not-allowed;
+  &:hover {
+    cursor: not-allowed;
+  }
 }
 
 // radio label

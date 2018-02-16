@@ -113,6 +113,7 @@
 .btn.disabled:hover {
   cursor: not-allowed;
   box-shadow: $shadow-depth0;
+  pointer-events: none;
 }
 
 // btn-outline-light overrides since color and border are too light

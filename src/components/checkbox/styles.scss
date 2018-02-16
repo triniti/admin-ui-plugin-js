@@ -91,10 +91,11 @@ input.form-control-lg.checkbox-input + label {
 
 .checkbox-input:disabled + .checkbox-input-label {
   opacity: .5;
-}
+  pointer-events: none;
 
-.checkbox-input:disabled + .checkbox-input-label:hover {
-  cursor: not-allowed;
+  &:hover {
+    cursor: not-allowed;
+  }
 }
 
 // radio label
