@@ -172,7 +172,7 @@
 @include media-breakpoint-up(md) {
   .modal-xl {
     width: calc(100% - 1rem);
-    .modal-xl { max-width: $modal-xl; }
+    max-width: $modal-xl;
   }
 }
 
