@@ -84,7 +84,12 @@ $sidenav-width:     300px;
   padding: .5rem;
   border: none;
   height: 100%;
+  width: 37px;
   transition: transform $transition;
+}
+
+.screen-sidenav-toggler-img {
+  margin: 0 !important;
 }
 
 .offcanvas-left .screen-sidenav-toggler-img {
