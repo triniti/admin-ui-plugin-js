@@ -41,7 +41,7 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="eye">eye</UncontrolledTooltip>
               <Icon imgSrc="menu" id="menu" />
               <UncontrolledTooltip placement="top" target="menu">menu</UncontrolledTooltip>
-              <Icon imgSrc="more-vertical" id="more-vertical" size="lg" />
+              <Icon imgSrc="more-vertical" id="more-vertical" />
               <UncontrolledTooltip placement="top" target="more-vertical">more-vertical</UncontrolledTooltip>
               <Icon imgSrc="save" id="save" />
               <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
@@ -111,7 +111,7 @@ const UiIcons = () => (
             <Col>
               <Button outline radius="circle" color="link"><Icon imgSrc="cog" alt="edit" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="eye" alt="details" /></Button>
-              <Button outline radius="circle" color="link"><Icon imgSrc="more-vertical" alt="more" size="md" /></Button>
+              <Button outline radius="circle" color="link"><Icon imgSrc="more-vertical" alt="more" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="close" alt="close" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
