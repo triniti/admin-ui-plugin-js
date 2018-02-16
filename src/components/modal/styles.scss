@@ -82,7 +82,10 @@
   align-items: center; // vertically center it
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
+  background-color: $gray-100;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   .close {
     margin-left: auto; // Force icon to the right even when there's no .modal-title
@@ -172,7 +175,7 @@
 @include media-breakpoint-up(md) {
   .modal-xl {
     width: calc(100% - 1rem);
-    .modal-xl { max-width: $modal-xl; }
+    max-width: $modal-xl;
   }
 }
 

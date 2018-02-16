@@ -8,15 +8,18 @@ import arrowBack from './arrow-back.svg';
 import arrowForward from './arrow-forward.svg';
 import arrowLeft from './arrow-left.svg';
 import back from './back.svg';
-import cancel from './cancel.svg';
+import circleX from './circle-x.svg';
 import circle from './circle.svg';
 import close from './close.svg';
 import cog from './cog.svg';
 import deleteIcon from './delete.svg';
 import download from './download.svg';
 import eye from './eye.svg';
-import fileDownload from './file-download.svg';
-import fileUpload from './file-upload.svg';
+import dataTransferDownload from './data-transfer-download.svg';
+import dataTransferUpload from './data-transfer-upload.svg';
+import gridFourUp from './grid-four-up.svg';
+import gridThreeUp from './grid-three-up.svg';
+import gridTwoUp from './grid-two-up.svg';
 import keyboardArrowDown from './keyboard-arrow-down.svg';
 import keyboardArrowLeft from './keyboard-arrow-left.svg';
 import keyboardArrowRight from './keyboard-arrow-right.svg';
@@ -48,15 +51,18 @@ const icons = {
   'arrow-forward': arrowForward,
   'arrow-left': arrowLeft,
   back,
-  cancel,
+  'circle-x': circleX,
   circle,
   close,
   cog,
   delete: deleteIcon,
   download,
   eye,
-  'file-download': fileDownload,
-  'file-upload': fileUpload,
+  'data-transfer-download': dataTransferDownload,
+  'data-transfer-upload': dataTransferUpload,
+  'grid-four-up': gridFourUp,
+  'grid-three-up': gridThreeUp,
+  'grid-two-up': gridTwoUp,
   'keyboard-arrow-down': keyboardArrowDown,
   'keyboard-arrow-left': keyboardArrowLeft,
   'keyboard-arrow-right': keyboardArrowRight,

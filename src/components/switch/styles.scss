@@ -228,6 +228,7 @@ input.switch-input + label {
 
 input.switch-input[disabled] + label {
   opacity: .5;
+  pointer-events: none;
 
   &:hover {
     cursor: not-allowed;
