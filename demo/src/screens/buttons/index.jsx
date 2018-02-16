@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
 
 import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
 
@@ -431,14 +431,35 @@ class UiButtons extends React.Component {
                   <Label for="toggler2" className="ml-4">size="sm"</Label>
                   <Switch id="toggler2" size="sm" />
 
-                  <Label for="toggler3" strong className="ml-4">default</Label>
+                  <Divider horizontal="md" className="ml-4"/>
+
+                  <Label for="toggler3" strong>Off</Label>
                   <Switch id="toggler3" />
+                  <Label for="toggler3" strong>On</Label>
+
+                  <Divider horizontal="md" />
+
 
                   <Label for="toggler4" className="ml-4">size="md"</Label>
                   <Switch id="toggler4" size="md" />
 
                   <Label for="toggler5" className="ml-4">size="lg"</Label>
                   <Switch id="toggler5" size="lg" />
+
+                </FormGroup>
+              </Form>
+
+              <Form>
+                <FormGroup inline>
+                  <Switch id="toggler1b" size="xs" label1="Disabled" label2="Enabled"></Switch>
+
+                  <Switch id="toggler2b" size="sm" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+
+                  <Switch id="toggler3b" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+
+                  <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+
+                  <Switch id="toggler5b" size="lg" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
 
                 </FormGroup>
               </Form>

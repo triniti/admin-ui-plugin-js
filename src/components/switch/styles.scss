@@ -17,10 +17,11 @@ input.switch-input {
 
 input.switch-input + label {
   height: $form-check-height;
-  width: $form-check-height * $form-check-width-ratio;
+  min-width: $form-check-height * $form-check-width-ratio;
   border-radius: $round;
   background-color: $gray-700;
   cursor: pointer;
+  flex-direction: column;
 }
 
 input.switch-input + label:before,
@@ -53,57 +54,143 @@ input.switch-input:checked + label:after {
   transform: translateX(-100%);
 }
 
+// Infix labels
+
+//
+
+.switch-input + label span {
+  position: relative;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 0 $form-check-height/2 0 ($form-check-height + .125rem);
+  height: $form-check-height;
+  line-height: $form-check-height;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-align: left;
+  text-indent: 0;
+  opacity: 1;
+  transition: opacity $transition;
+
+  &:last-child {
+    padding: 0 ($form-check-height + .125rem) 0 $form-check-height/2;
+    margin-top: -$form-check-height;
+    color: $white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    opacity: 0;
+  }
+}
+
+.switch-input:checked + label span {
+  opacity: 0;
+
+  &:last-child {
+    opacity: 1;
+  }
+}
+
+
 // switch-input xs
 
 input.switch-input.form-control-xs + label {
   height: $form-check-height-xs;
-  width: $form-check-height-xs * $form-check-width-ratio;
+  min-width: $form-check-height-xs * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-xs;
+    height: $form-check-height-xs;
+  }
 }
 
-input.switch-input.form-control-xs + label:before,
-input.switch-input.form-control-xs + label:after {
-  width: $form-check-height-xs;
+.switch-input.form-control-xs + label span {
+  padding: 0 $form-check-height-xs/2 0 ($form-check-height-xs + .125rem);
   height: $form-check-height-xs;
+  line-height: $form-check-height-xs;
+  font-size: .5rem;
+
+  &:last-child {
+    padding: 0 ($form-check-height-xs + .125rem) 0 $form-check-height-xs/2;
+    margin-top: -$form-check-height-xs;
+  }
 }
 
 // switch-input sm
 
 input.switch-input.form-control-sm + label {
   height: $form-check-height-sm;
-  width: $form-check-height-sm * $form-check-width-ratio;
+  min-width: $form-check-height-sm * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-sm;
+    height: $form-check-height-sm;
+  }
 }
 
-input.switch-input.form-control-sm + label:before,
-input.switch-input.form-control-sm + label:after {
-  width: $form-check-height-sm;
+.switch-input.form-control-sm + label span {
+  padding: 0 $form-check-height-sm/2 0 ($form-check-height-sm + .125rem);
   height: $form-check-height-sm;
+  line-height: $form-check-height-sm;
+  font-size: .675rem;
+
+  &:last-child {
+    padding: 0 ($form-check-height-sm + .125rem) 0 $form-check-height-sm/2;
+    margin-top: -$form-check-height-sm;
+  }
 }
 
 // switch-input md
 
 input.switch-input.form-control-md + label {
   height: $form-check-height-md;
-  width: $form-check-height-md * $form-check-width-ratio;
+  min-width: $form-check-height-md * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-md;
+    height: $form-check-height-md;
+  }
 }
 
-input.switch-input.form-control-md + label:before,
-input.switch-input.form-control-md + label:after {
-  width: $form-check-height-md;
+.switch-input.form-control-md + label span {
+  padding: 0 $form-check-height-md/2 0 ($form-check-height-md + .125rem);
   height: $form-check-height-md;
+  line-height: $form-check-height-md;
+  font-size: .8rem;
+
+  &:last-child {
+    padding: 0 ($form-check-height-md + .125rem) 0 $form-check-height-md/2;
+    margin-top: -$form-check-height-md;
+  }
 }
 
 // switch-input lg
 
 input.switch-input.form-control-lg + label {
   height: $form-check-height-lg;
-  width: $form-check-height-lg * $form-check-width-ratio;
+  min-width: $form-check-height-lg * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-lg;
+    height: $form-check-height-lg;
+  }
 }
 
-input.switch-input.form-control-lg + label:before,
-input.switch-input.form-control-lg + label:after {
-  width: $form-check-height-lg;
+.switch-input.form-control-lg + label span {
+  padding: 0 $form-check-height-lg/2 0 ($form-check-height-lg + .125rem);
   height: $form-check-height-lg;
+  line-height: $form-check-height-lg;
+  font-size: .875rem;
+
+  &:last-child {
+    padding: 0 ($form-check-height-lg + .125rem) 0 $form-check-height-lg/2;
+    margin-top: -$form-check-height-lg;
+  }
 }
+
 
 // switch-input adjustments
 
@@ -153,6 +240,7 @@ input.switch-input:checked + label:before {
   background: theme-color("secondary");
   box-shadow: $form-check-shadow;
 }
+
 
 // switch label
 
