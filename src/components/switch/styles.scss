@@ -76,6 +76,7 @@ input.switch-input:checked + label:after {
   &:last-child {
     padding: 0 ($form-check-height + .125rem) 0 $form-check-height/2;
     margin-top: -$form-check-height;
+    font-weight: 600;
     color: $white;
     text-shadow: 0 1px 1px rgba(0,0,0,0.1);
     opacity: 0;
