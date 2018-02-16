@@ -73,12 +73,12 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="arrow-back">arrow-back</UncontrolledTooltip>
               <Icon imgSrc="arrow-forward" id="arrow-forward" />
               <UncontrolledTooltip placement="top" target="arrow-forward">arrow-forward</UncontrolledTooltip>
-              <Icon imgSrc="cancel" id="cancel" />
-              <UncontrolledTooltip placement="top" target="cancel">cancel</UncontrolledTooltip>
-              <Icon imgSrc="file-download" id="file-download" />
-              <UncontrolledTooltip placement="top" target="file-download">file-download</UncontrolledTooltip>
-              <Icon imgSrc="file-upload" id="file-upload" />
-              <UncontrolledTooltip placement="top" target="file-upload">file-upload</UncontrolledTooltip>
+              <Icon imgSrc="circle-x" id="circle-x" />
+              <UncontrolledTooltip placement="top" target="circle-x">circle-x</UncontrolledTooltip>
+              <Icon imgSrc="data-transfer-download" id="data-transfer-download" />
+              <UncontrolledTooltip placement="top" target="data-transfer-download">data-transfer-download</UncontrolledTooltip>
+              <Icon imgSrc="data-transfer-upload" id="data-transfer-upload" />
+              <UncontrolledTooltip placement="top" target="data-transfer-upload">data-transfer-upload</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-down" id="keyboard-arrow-down" />
               <UncontrolledTooltip placement="top" target="keyboard-arrow-down">keyboard-arrow-down</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-left" id="keyboard-arrow-left" />
@@ -95,6 +95,12 @@ const UiIcons = () => (
             <Col>
               <Icon imgSrc="list" id="list" />
               <UncontrolledTooltip placement="top" target="list">list</UncontrolledTooltip>
+              <Icon imgSrc="grid-four-up" id="grid-four-up" />
+              <UncontrolledTooltip placement="top" target="grid-four-up">grid-four-up</UncontrolledTooltip>
+              <Icon imgSrc="grid-three-up" id="grid-three-up" />
+              <UncontrolledTooltip placement="top" target="grid-three-up">grid-three-up</UncontrolledTooltip>
+              <Icon imgSrc="grid-two-up" id="grid-two-up" />
+              <UncontrolledTooltip placement="top" target="grid-two-up">grid-two-up</UncontrolledTooltip>
               <Icon imgSrc="move" id="move" />
               <UncontrolledTooltip placement="top" target="move">move</UncontrolledTooltip>
               <Icon imgSrc="trash" id="trash" />
