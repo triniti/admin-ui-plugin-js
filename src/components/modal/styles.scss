@@ -84,6 +84,8 @@
   padding: $modal-header-padding;
   background-color: $gray-100;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   .close {
     margin-left: auto; // Force icon to the right even when there's no .modal-title
