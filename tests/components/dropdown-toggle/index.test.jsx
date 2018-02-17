@@ -95,7 +95,7 @@ test('DropdownToggle:: should render a caret', (t) => {
   t.end();
 });
 
-test('DropdownToggle::color:: should render the dropdown as a BUTTON element with default color secondary', (t) => {
+test('DropdownToggle::color:: should render the dropdown as a BUTTON element with default color light', (t) => {
   const wrapper = mount(
     <DropdownToggle />,
     {
@@ -105,7 +105,7 @@ test('DropdownToggle::color:: should render the dropdown as a BUTTON element wit
   );
 
   t.equal(wrapper.find('button').length, 1);
-  t.true(wrapper.find('button').hasClass('btn-secondary'));
+  t.true(wrapper.find('button').hasClass('btn-light'));
   t.end();
 });
 

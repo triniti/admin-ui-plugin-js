@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v0.4.2
+* Added depth to the design with a darker background, drop shadows and gradient buttons.
+* Centered cards.
+* Update modal
+  * added a xl modal
+  * add maxWidth prop to set any width and fixed mobile resizing of all modals. **maxWidth will overwrite the maxWidth set by style prop**
+* Switch now can have infix labels.
+* Fixed disabled state for checkboxes.
+* Form element components now all have the same heights as buttons and form-controls for better inlining.
+* Added new icons.
+* rename `UiToggle` to `UiCollapse`.
+* Other fine tunes and style cleanup
 
 ## v0.4.1
 * Datalist component is now deprecated, it's moving to `@triniti/redux-form-plugin/components/data-list-field`.

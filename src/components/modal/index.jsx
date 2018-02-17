@@ -189,6 +189,10 @@ class Modal extends React.Component {
 
   renderModalDialog() {
     const attributes = omit(this.props, propsToOmit);
+    let style = Object.assign({}, attributes.style);
+    if (this.props.maxWidth) {
+      style = Object.assign(style, { maxWidth: `${this.props.maxWidth}` });
+    }
 
     return (
       <div
@@ -200,7 +204,7 @@ class Modal extends React.Component {
           this._dialog = c;
         }}
         {...attributes}
-        style={{ maxWidth: `${this.props.maxWidth}` }}
+        style={style}
       >
         <div
           className={mapToCssModules(
