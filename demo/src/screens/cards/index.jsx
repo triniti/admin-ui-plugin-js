@@ -5,6 +5,7 @@ import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, C
 
 const UiCard = () => (
   <Screen
+    maxWidth="100%"
     sidenav={<Sidenav activeScreen="cards" />}
     sidenavHeader
     header="Cards"
@@ -17,7 +18,7 @@ const UiCard = () => (
       <CardsContainer key="cards1">
         <Row>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardImg
                 top
                 width="100%"
@@ -35,7 +36,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardBody>
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
@@ -63,7 +64,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardHeader tag="h3">Featured</CardHeader>
               <CardBody>
                 <CardTitle>Special Title Treatment</CardTitle>
@@ -74,7 +75,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardImg
                 top
                 width="100%"
@@ -94,7 +95,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover border>
+            <Card hover>
               <CardBody>
                 <CardTitle>Card Title</CardTitle>
                 <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -113,7 +114,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card inverse hover>
+            <Card inverse>
               <CardImg
                 width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97270&w=318&h=270&bg=333333&txtclr=666666"
@@ -139,7 +140,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card body border outline hover color="primary">
+            <Card body outline hover color="primary">
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button color="second">Button</Button>
@@ -148,180 +149,168 @@ const UiCard = () => (
         </Row>
       </CardsContainer>,
 
-      <Container fluid key="cards2" className="px-4">
-        <CardTitle tag="h4">Card Group</CardTitle>
-        <Row>
-          <Col>
-            <CardGroup>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
-                      This content is a little bit longer.
-                  </CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
-                      This card has even longer content than the first to show that equal height action.
-                  </CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-            </CardGroup>
-          </Col>
-        </Row>
+      <CardTitle tag="h4" key="cardtitle2">Card Group</CardTitle>,
 
-        <CardTitle tag="h4">Card Deck</CardTitle>
-        <Row>
-          <Col>
-            <CardDeck>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
-                      This content is a little bit longer.
-                  </CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
-                      This card has even longer content than the first to show that equal height action.
-                  </CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-            </CardDeck>
-          </Col>
-        </Row>
+      <CardGroup key="cardgroup2">
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
+                This card has even longer content than the first to show that equal height action.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+      </CardGroup>,
 
+      <CardTitle tag="h4" key="cardtitle3">Card Deck</CardTitle>,
 
-        <CardTitle tag="h4">Card Columns</CardTitle>
-        <Row>
-          <Col>
-            <CardColumns>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
-                      This content is a little bit longer.
-                  </CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-              </Card>
-              <Card body inverse color="secondary">
-                <CardTitle>Card title</CardTitle>
-                <CardSubtitle>Card subtitle</CardSubtitle>
-                <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
-                <Button>Button</Button>
-              </Card>
-              <Card body inverse color="dark">
-                <CardTitle>Special Title Treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                <Button>Button</Button>
-              </Card>
-              <Card border>
-                <CardImg
-                  top
-                  width="100%"
-                  src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
-                  alt="Card image cap"
-                />
-                <CardBody>
-                  <CardTitle>Card title</CardTitle>
-                  <CardSubtitle>Card subtitle</CardSubtitle>
-                  <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
-                      This card has even longer content than the first to show that equal height action.
-                  </CardText>
-                  <Button>Button</Button>
-                </CardBody>
-              </Card>
-              <Card body inverse color="primary">
-                <CardTitle>Special Title Treatment</CardTitle>
-                <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                <Button color="secondary">Button</Button>
-              </Card>
-            </CardColumns>
-          </Col>
-        </Row>
-      </Container>,
+      <CardDeck key="carddeck3">
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
+                This card has even longer content than the first to show that equal height action.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+      </CardDeck>,
+
+      <CardTitle tag="h4" key="cardtitle4">Card Columns</CardTitle>,
+
+      <CardColumns key="cardcolumns4">
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
+                This content is a little bit longer.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+        </Card>
+        <Card body inverse color="secondary">
+          <CardTitle>Card title</CardTitle>
+          <CardSubtitle>Card subtitle</CardSubtitle>
+          <CardText>This card has supporting text below as a natural lead-in to additional content.</CardText>
+          <Button>Button</Button>
+        </Card>
+        <Card body inverse color="dark">
+          <CardTitle>Special Title Treatment</CardTitle>
+          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+          <Button>Button</Button>
+        </Card>
+        <Card>
+          <CardImg
+            top
+            width="100%"
+            src="https://placeholdit.imgix.net/~text?txtsize=33&txt=256%C3%97180&w=256&h=180"
+            alt="Card image cap"
+          />
+          <CardBody>
+            <CardTitle>Card title</CardTitle>
+            <CardSubtitle>Card subtitle</CardSubtitle>
+            <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
+                This card has even longer content than the first to show that equal height action.
+            </CardText>
+            <Button>Button</Button>
+          </CardBody>
+        </Card>
+        <Card body inverse color="primary">
+          <CardTitle>Special Title Treatment</CardTitle>
+          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+          <Button color="secondary">Button</Button>
+        </Card>
+      </CardColumns>,
     ]}
   />
 );

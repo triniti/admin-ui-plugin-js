@@ -2,6 +2,8 @@
 // switch-input
 //
 
+$form-check-width-ratio: 1.75;
+
 input.switch-input {
   position: absolute;
   visibility: hidden;
@@ -14,12 +16,12 @@ input.switch-input {
 }
 
 input.switch-input + label {
-  width: 2.625rem;
-  height: 1.5rem;
+  height: $form-check-height;
+  min-width: $form-check-height * $form-check-width-ratio;
   border-radius: $round;
-  background-color: $body-bg;
-  box-shadow: inset 0 0 0 1px $gray-600;
+  background-color: $gray-700;
   cursor: pointer;
+  flex-direction: column;
 }
 
 input.switch-input + label:before,
@@ -28,134 +30,171 @@ input.switch-input + label:after {
   top: 0;
   left: 0;
   display: block;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: $form-check-height;
+  height: $form-check-height;
   content: '';
   transition: $transition;
   border-radius: $round;
   background: transparent;
 }
 
-input.switch-input + label:before {
-  border: $input-btn-border-width solid transparent;
-}
-
 input.switch-input + label:after {
-  background: white;
-  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
-}
-
-input.switch-input:checked + label:before {
-  width: 2.625rem;
-  background: theme-color("secondary");
-  border: $input-btn-border-width solid darken(theme-color("secondary"), 3%);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  background: transparent url('./switch.svg') center center / 100% auto no-repeat;
+  border-radius: initial;
+  transform: scale(.76);
+  filter: drop-shadow( 0 1px 1px rgba(0,0,0,0.3));
 }
 
 input.switch-input:checked + label:after {
-  left: 1.125rem;
-  box-shadow: inset 0 0 0 1px theme-color("secondary"), 0 2px 4px $gray-rgba-600;
+  left: 100%;
+  transform: translateX(-100%) scale(.76);
 }
+
+// Infix labels
+
+//
+
+.switch-input + label span {
+  position: relative;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 0 $form-check-height/2 0 ($form-check-height + .125rem);
+  height: $form-check-height;
+  line-height: $form-check-height;
+  font-size: .75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: left;
+  text-indent: 0;
+  opacity: 1;
+  transition: opacity $transition;
+
+  &:last-child {
+    padding: 0 ($form-check-height + .125rem) 0 $form-check-height/2;
+    margin-top: -$form-check-height;
+    font-weight: 600;
+    color: $white;
+    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    opacity: 0;
+  }
+}
+
+.switch-input:checked + label span {
+  opacity: 0;
+
+  &:last-child {
+    opacity: 1;
+  }
+}
+
 
 // switch-input xs
 
 input.switch-input.form-control-xs + label {
-  width: 21px;
-  height: 13px;
+  height: $form-check-height-xs;
+  min-width: $form-check-height-xs * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-xs;
+    height: $form-check-height-xs;
+  }
 }
 
-input.switch-input.form-control-xs + label:before,
-input.switch-input.form-control-xs + label:after {
-  width: 13px;
-  height: 13px;
-}
+.switch-input.form-control-xs + label span {
+  padding: 0 $form-check-height-xs/2 0 ($form-check-height-xs + .125rem);
+  height: $form-check-height-xs;
+  line-height: $form-check-height-xs;
+  font-size: .5rem;
 
-input.switch-input + label:after {
-  box-shadow: inset 0 0 0 1px $gray-rgba-600, 0 1px 3px $gray-rgba-600;
-}
-
-input.switch-input.form-control-xs:checked + label:before {
-  width: 21px;
-}
-
-input.switch-input.form-control-xs:checked + label:after {
-  left: 8px;
-  box-shadow: inset 0 0 0 1px theme-color("secondary"), 0 1px 3px $gray-rgba-600;
+  &:last-child {
+    padding: 0 ($form-check-height-xs + .125rem) 0 $form-check-height-xs/2;
+    margin-top: -$form-check-height-xs;
+  }
 }
 
 // switch-input sm
 
 input.switch-input.form-control-sm + label {
-  width: 1.75rem;
-  height: 1rem;
+  height: $form-check-height-sm;
+  min-width: $form-check-height-sm * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-sm;
+    height: $form-check-height-sm;
+  }
 }
 
-input.switch-input.form-control-sm + label:before,
-input.switch-input.form-control-sm + label:after {
-  width: 1rem;
-  height: 1rem;
-}
+.switch-input.form-control-sm + label span {
+  padding: 0 $form-check-height-sm/2 0 ($form-check-height-sm + .125rem);
+  height: $form-check-height-sm;
+  line-height: $form-check-height-sm;
+  font-size: .675rem;
 
-input.switch-input.form-control-sm:checked + label:before {
-  width: 1.75rem;
-}
-
-input.switch-input.form-control-sm:checked + label:after {
-  left: .75rem;
+  &:last-child {
+    padding: 0 ($form-check-height-sm + .125rem) 0 $form-check-height-sm/2;
+    margin-top: -$form-check-height-sm;
+  }
 }
 
 // switch-input md
 
 input.switch-input.form-control-md + label {
-  width: 3.5rem;
-  height: 2rem;
-  box-shadow: inset 0 0 0 2px $gray-600;
+  height: $form-check-height-md;
+  min-width: $form-check-height-md * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-md;
+    height: $form-check-height-md;
+  }
 }
 
-input.switch-input.form-control-md + label:before,
-input.switch-input.form-control-md + label:after {
-  width: 2rem;
-  height: 2rem;
-}
+.switch-input.form-control-md + label span {
+  padding: 0 $form-check-height-md/2 0 ($form-check-height-md + .125rem);
+  height: $form-check-height-md;
+  line-height: $form-check-height-md;
+  font-size: .8rem;
 
-input.switch-input.form-control-md + label:after {
-  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 2px 4px $gray-rgba-600;
-}
-
-input.switch-input.form-control-md:checked + label:before {
-  width: 3.5rem;
-}
-
-input.switch-input.form-control-md:checked + label:after {
-  left: 1.5rem;
-  box-shadow: inset 0 0 0 2px theme-color("secondary"), 0 2px 4px $gray-rgba-600;
+  &:last-child {
+    padding: 0 ($form-check-height-md + .125rem) 0 $form-check-height-md/2;
+    margin-top: -$form-check-height-md;
+  }
 }
 
 // switch-input lg
 
 input.switch-input.form-control-lg + label {
-  width: 4.375rem;
-  height: 2.5rem;
-  box-shadow: inset 0 0 0 2px $gray-600;
+  height: $form-check-height-lg;
+  min-width: $form-check-height-lg * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height-lg;
+    height: $form-check-height-lg;
+  }
 }
 
-input.switch-input.form-control-lg + label:before,
-input.switch-input.form-control-lg + label:after {
-  width: 2.5rem;
-  height: 2.5rem;
+.switch-input.form-control-lg + label span {
+  padding: 0 $form-check-height-lg/2 0 ($form-check-height-lg + .125rem);
+  height: $form-check-height-lg;
+  line-height: $form-check-height-lg;
+  font-size: .875rem;
+
+  &:last-child {
+    padding: 0 ($form-check-height-lg + .125rem) 0 $form-check-height-lg/2;
+    margin-top: -$form-check-height-lg;
+  }
 }
 
-input.switch-input.form-control-lg + label:after {
-  box-shadow: inset 0 0 0 2px $gray-rgba-600, 0 3px 6px $gray-rgba-600;
-}
-
-input.switch-input.form-control-lg:checked + label:before {
-  width: 4.375rem;
-}
-
-input.switch-input.form-control-lg:checked + label:after {
-  left: 2rem;
-  box-shadow: inset 0 0 0 2px theme-color("secondary"), 0 3px 6px $gray-rgba-600;
-}
 
 // switch-input adjustments
 
@@ -188,7 +227,12 @@ input.switch-input + label {
 }
 
 input.switch-input[disabled] + label {
+  opacity: .5;
   pointer-events: none;
+
+  &:hover {
+    cursor: not-allowed;
+  }
 }
 
 input.switch-input.form-control-xs + label,
@@ -196,9 +240,16 @@ input.switch-input.form-control-sm + label {
   vertical-align: text-bottom;
 }
 
+input.switch-input:checked + label:before {
+  width: 100%;
+  background: theme-color("secondary");
+  box-shadow: $form-check-shadow;
+}
+
+
 // switch label
 
 .form-group .switch-input-label,
 .form-check .switch-input-label {
-  margin-right: .4rem;
+  margin-right: .5rem;
 }

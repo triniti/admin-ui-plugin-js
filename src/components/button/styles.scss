@@ -14,17 +14,11 @@
   justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  color: $body-color;
-  background-color: $white;
-  border: $btn-border-width solid $gray-700;
+  box-shadow: $shadow-depth2;
 
   &:hover,
   &:focus {
     cursor: pointer;
-  }
-
-  &:hover {
-    background-color: $gray-400;
   }
 
   &:last-child {
@@ -36,6 +30,22 @@
   }
 }
 
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+    border-color: darken($value, 5%);
+  }
+  .btn-outline-#{$color} {
+    &:hover,
+    &:focus {
+      border-color: darken($value, 5%);
+    }
+  }
+}
+
+.btn-default {
+  box-shadow: none;
+}
+
 
 // instances to remove margin bottom
 
@@ -43,7 +53,9 @@
 .screen-header-container .btn,
 .sidenav-header .btn,
 .form-inline .btn,
-.input-group-btn > .btn {
+.modal-footer .btn,
+.btn-group .btn,
+.input-group-btn .btn {
   margin-bottom: 0;
 }
 
@@ -56,40 +68,112 @@
 // Alternate buttons
 //
 
-@each $color, $value in $theme-colors {
-  .btn-#{$color} {
-    @include button-variant($value, $value);
-  }
-}
-
 .btn-warning,
 .btn-warning:hover,
-.btn-warning:focus {
+.btn-warning:focus,
+.btn-outline-warning:hover,
+.btn-outline-warning:focus {
   color: #fff;
 }
 
-.btn.disabled,
-.btn.disabled:hover {
-  border-color: $gray-400;
-  background-color: $gray-400;
-  color: $text-muted;
-  cursor: not-allowed;
-}
-
-// btn-group btn-light overrides
+// btn-light overrides
 
 .btn-light {
+  color: $body-color;
+  background-color: $body-bg;
   border-color: $gray-700;
 
   &:hover,
   &:focus {
     background-color: $gray-400;
+    border-color: $gray-700;
+  }
+
+  &:active,
+  &.active {
+    background-color: $gray-500;
+    border-color: $gray-700;
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: $gray-200;
+    border-color: $gray-700;
   }
 }
 
-.btn-group > .btn-light,
-.btn-group > .btn {
-  border-color: $gray-rgba-300; // $gray-700
+.btn-light:not(:disabled):not(.disabled):active,
+.btn-light:not(:disabled):not(.disabled).active,
+.show > .btn-light.dropdown-toggle {
+  background-color: $gray-400;
+  border-color: $gray-700;
+}
+
+.btn.disabled,
+.btn.disabled:hover {
+  cursor: not-allowed;
+  box-shadow: $shadow-depth0;
+  pointer-events: none;
+}
+
+// btn-outline-light overrides since color and border are too light
+
+.btn-outline-light {
+  color: $body-color;
+  background: $white;
+  border: $input-btn-border-width solid $gray-700;
+
+  &:hover,
+  &:focus {
+    color: $body-color;
+    background: $gray-400;
+    border: $input-btn-border-width solid $gray-700;
+  }
+  &:active,
+  &.active {
+    color: $body-color !important;
+    background: $gray-500;
+    border: $input-btn-border-width solid $gray-700 !important;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $body-color;
+    background-color: $white;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .btn-outline-#{$color} {
+    background-color: $white;
+  }
+}
+
+.btn-light:not(.dropdown-toggle):not([disabled]):not(.disabled).active,
+.btn-outline-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
+.btn-secondary:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
+.btn-outline-secondary:not(.dropdown-toggle):not(:disabled):not(.disabled).active {
+  color: $white !important;
+  background-color: theme-color("secondary");
+  border: $input-btn-border-width solid darken(theme-color("secondary"), 5%) !important;;
+}
+
+.show > .btn-outline-light.dropdown-toggle {
+  color: $body-color;
+  background-color: $white;
+  border-color: $gray-700;
+
+  &:hover {
+    background-color: $gray-400;
+    border-color: $gray-700;
+    box-shadow: none;
+  }
+
+  &:focus {
+    background-color: $white;
+    border-color: $gray-700;
+    box-shadow: none;
+  }
 }
 
 
@@ -97,15 +181,12 @@
 // Import Button Styles
 //
 
-@import "_btn-outline";
 @import "_btn-outline-text";
 @import "_btn-link";
 @import "_btn-link-bg";
 @import "_btn-hover";
 @import "_btn-hover-bg";
 @import "_btn-toggler";
-@import "_btn-check-radio";
-@import "_btn-multistate";
 
 
 // todo: need to move to modal footer and check items
@@ -172,24 +253,17 @@
 
 .btn-sm {
   font-weight: 400;
-  line-height: 1.45;
 }
 
 .btn-lg {
   font-weight: $btn-font-weight;
-  line-height: 1.8;
 }
 
 .btn-xl {
   font-size: 1.25rem;
   font-weight: $btn-font-weight;
-  padding: 1.25rem 2rem;
-  border-width: 2px;
+  padding: 1.25rem 3rem;
   line-height: 1.8;
-
-  &:hover {
-    border-width: 2px;
-  }
 }
 
 
@@ -198,8 +272,14 @@
 //
 
 .btn-radius-round {
-  margin-right: .35rem;
   border-radius: $round;
+  padding-left: $input-btn-padding-x + .25rem;
+  padding-right: $input-btn-padding-x + .25rem;
+
+  &.btn-sm {
+    padding-left: $input-btn-padding-x;
+    padding-right: $input-btn-padding-x;
+  }
 }
 
 .btn-radius-round span:not(.badge-alert) {
@@ -225,11 +305,11 @@
 // Show dropdown-menu on hover
 
 .btn-radius-circle + .dropdown-menu:hover {
-  display: block;
+  // display: block;
 }
 
 .btn-radius-circle:hover + .dropdown-menu {
-  display: block;
+  // display: block;
 }
 
 

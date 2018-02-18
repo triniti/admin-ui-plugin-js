@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
 
 import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
 
@@ -49,14 +49,15 @@ class UiButtons extends React.Component {
               <Button color="primary">primary</Button>
               <Button color="primary" outline>primary</Button>
               <Button color="secondary">secondary</Button>
+              <Button color="secondary" outline>secondary</Button>
             </CardBody>
           </Card>,
 
           <Card key="button1">
             <CardHeader>Solid
               <span>
-                <Button color="hover-bg">hover-bg</Button>
-                <Button>default</Button>
+                <Button color="hover-bg" size="sm">hover-bg</Button>
+                <Button size="sm">default</Button>
               </span>
             </CardHeader>
             <CardBody>
@@ -209,8 +210,10 @@ class UiButtons extends React.Component {
             <CardBody>
               <Row>
                 <Col sm="6">
-                  <Button color="primary" size="lg" active>Primary link</Button>
-                  <Button size="lg" active>Link</Button>
+                  <Button active>Default</Button>
+                  <Button outline active>Outline</Button>
+                  <Button color="primary" active>Primary</Button>
+                  <Button color="secondary" active>Secondary</Button>
                 </Col>
               </Row>
             </CardBody>
@@ -221,8 +224,10 @@ class UiButtons extends React.Component {
             <CardBody>
               <Row>
                 <Col>
-                  <Button color="primary" size="lg" disabled>Primary button</Button>
-                  <Button size="lg" disabled>Button</Button>
+                  <Button disabled>Default</Button>
+                  <Button disabled outline>Outline</Button>
+                  <Button color="primary" disabled>Primary</Button>
+                  <Button color="secondary" disabled>Secondary</Button>
                 </Col>
               </Row>
             </CardBody>
@@ -265,59 +270,12 @@ class UiButtons extends React.Component {
                     </Button>
                   </ButtonGroup>
 
-                  <CardTitle tag="h4">Radio Buttons color="multistate"</CardTitle>
-                  <ButtonGroup className="mb-2">
-                    <Button
-                      color="multistate"
-                      onClick={() => this.onRadioBtnClick(1)}
-                      active={this.state.rSelected === 1}
-                    >One
-                    </Button>
-                    <Button
-                      color="multistate"
-                      onClick={() => this.onRadioBtnClick(2)}
-                      active={this.state.rSelected === 2}
-                    >Two
-                    </Button>
-                    <Button
-                      color="multistate"
-                      onClick={() => this.onRadioBtnClick(3)}
-                      active={this.state.rSelected === 3}
-                    >Three
-                    </Button>
-                  </ButtonGroup>
-                  <br />
-                  <ButtonGroup className="mb-2">
-                    <Button
-                      color="multistate"
-                      onClick={() => this.onRadioBtnClick(1)}
-                      active={this.state.rSelected === 1}
-                      size="sm"
-                    >One
-                    </Button>
-                    <Button
-                      color="multistate"
-                      onClick={() => this.onRadioBtnClick(2)}
-                      active={this.state.rSelected === 2}
-                      size="sm"
-                    >Two
-                    </Button>
-                    <Button
-                      color="multistate"
-                      onClick={() => this.onRadioBtnClick(3)}
-                      active={this.state.rSelected === 3}
-                      size="sm"
-                    >Three
-                    </Button>
-                  </ButtonGroup>
-
                   <CardTitle tag="h4">Radio Buttons outline</CardTitle>
                   <ButtonGroup className="mb-2">
                     <Button
                       onClick={() => this.onRadioBtnClick(1)}
                       active={this.state.rSelected === 1}
                       size="sm"
-                      radius="round"
                       outline
                     >One
                     </Button>
@@ -325,7 +283,6 @@ class UiButtons extends React.Component {
                       onClick={() => this.onRadioBtnClick(2)}
                       active={this.state.rSelected === 2}
                       size="sm"
-                      radius="round"
                       outline
                     >Two
                     </Button>
@@ -333,30 +290,38 @@ class UiButtons extends React.Component {
                       onClick={() => this.onRadioBtnClick(3)}
                       active={this.state.rSelected === 3}
                       size="sm"
-                      radius="round"
                       outline
                     >Three
                     </Button>
                   </ButtonGroup>
 
-                  <CardTitle tag="h4">Radio Buttons outline</CardTitle>
+                  <CardTitle tag="h4">Radio Buttons outline secondary</CardTitle>
                   <ButtonGroup className="mb-2">
                     <Button
                       outline
                       onClick={() => this.onRadioBtnClick(1)}
                       active={this.state.rSelected === 1}
+                      color="secondary"
+                      radius="round"
+                      size="sm"
                     >One
                     </Button>
                     <Button
                       outline
                       onClick={() => this.onRadioBtnClick(2)}
                       active={this.state.rSelected === 2}
+                      color="secondary"
+                      radius="round"
+                      size="sm"
                     >Two
                     </Button>
                     <Button
                       outline
                       onClick={() => this.onRadioBtnClick(3)}
                       active={this.state.rSelected === 3}
+                      color="secondary"
+                      radius="round"
+                      size="sm"
                     >Three
                     </Button>
                   </ButtonGroup>
@@ -388,7 +353,7 @@ class UiButtons extends React.Component {
                     </Button>
                   </ButtonGroup>
 
-                  <p className="text-muted">Selected: <span className="text-danger">{this.state.rSelected}</span></p>
+                  <p className="text-muted">Selected: <span className="text-info">{this.state.rSelected}</span></p>
 
                 </Col>
                 <Col xs="12" sm="6">
@@ -435,7 +400,7 @@ class UiButtons extends React.Component {
 
                   <p className="text-muted">
                   Selected:
-                    <span className="text-success">
+                    <span className="text-info">
                       {JSON.stringify(this.state.cSelected)}
                     </span>
                   </p>
@@ -452,7 +417,7 @@ class UiButtons extends React.Component {
                 <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
                 <Form>
                   <FormGroup inline>
-                    <Switch id="toggler0" />
+                    <Switch id="toggler0" size="md" />
                   </FormGroup>
                 </Form>
               </span>
@@ -466,14 +431,35 @@ class UiButtons extends React.Component {
                   <Label for="toggler2" className="ml-4">size="sm"</Label>
                   <Switch id="toggler2" size="sm" />
 
-                  <Label for="toggler3" strong className="ml-4">default</Label>
+                  <Divider horizontal="md" className="ml-4"/>
+
+                  <Label for="toggler3" strong>Off</Label>
                   <Switch id="toggler3" />
+                  <Label for="toggler3" strong>On</Label>
+
+                  <Divider horizontal="md" />
+
 
                   <Label for="toggler4" className="ml-4">size="md"</Label>
                   <Switch id="toggler4" size="md" />
 
                   <Label for="toggler5" className="ml-4">size="lg"</Label>
                   <Switch id="toggler5" size="lg" />
+
+                </FormGroup>
+              </Form>
+
+              <Form>
+                <FormGroup inline>
+                  <Switch id="toggler1b" size="xs" label1="Disabled" label2="Enabled"></Switch>
+
+                  <Switch id="toggler2b" size="sm" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+
+                  <Switch id="toggler3b" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+
+                  <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+
+                  <Switch id="toggler5b" size="lg" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
 
                 </FormGroup>
               </Form>
@@ -531,6 +517,16 @@ class UiButtons extends React.Component {
                   size="lg"
                   </Label>
 
+                  <Label check className="mr-4" strong>
+                    <Radio type="checkbox" name="toggler8" id="toggler8" disabled />
+                disabled
+                  </Label>
+
+                  <Label check className="mr-4" strong>
+                    <Radio type="checkbox" name="toggler8" id="toggler8" disabled checked />
+                disabled on
+                  </Label>
+
                 </FormGroup>
               </Form>
             </CardBody>
@@ -574,6 +570,16 @@ class UiButtons extends React.Component {
                   <Label className="mr-4" strong>
                     <Checkbox size="lg" name="toggler19" id="toggler19" />
                 size="lg"
+                  </Label>
+
+                  <Label className="mr-4" strong>
+                    <Checkbox disabled />
+                disabled
+                  </Label>
+
+                  <Label className="mr-4" strong>
+                    <Checkbox disabled checked />
+                disabled on
                   </Label>
                 </FormGroup>
               </Form>

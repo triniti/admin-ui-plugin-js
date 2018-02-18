@@ -82,7 +82,10 @@
   align-items: center; // vertically center it
   justify-content: space-between; // Put modal header elements (title and dismiss) on opposite ends
   padding: $modal-header-padding;
+  background-color: $gray-100;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 
   .close {
     margin-left: auto; // Force icon to the right even when there's no .modal-title
@@ -138,18 +141,46 @@
   .modal-content {
     @include box-shadow($modal-content-box-shadow-sm-up);
   }
-
-  .modal-sm { max-width: $modal-sm; }
 }
 
-@include media-breakpoint-up(lg) {
-  .modal-lg { max-width: $modal-lg; }
+.modal-xs {
+  max-width: 240px;
+
+  @include media-breakpoint-down(sm) {
+    margin: 0.5rem auto;
+  }
 }
 
-// Custom Modal Styles
+.modal-sm {
+  max-width: $modal-sm;
 
-@media (min-width: 576px) {
-  .modal-xs {
-    max-width: 240px;
+  @include media-breakpoint-down(sm) {
+    margin: 0.5rem auto;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .modal-lg {
+    width: calc(100% - 1rem);
+    max-width: $modal-lg;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .modal-lg {
+    max-width: calc(100% - 1rem) !important;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .modal-xl {
+    width: calc(100% - 1rem);
+    max-width: $modal-xl;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .modal-xl {
+    max-width: calc(100% - 1rem) !important;
   }
 }

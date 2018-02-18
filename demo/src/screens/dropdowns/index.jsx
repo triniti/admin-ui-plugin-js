@@ -46,7 +46,7 @@ class UiDropdown extends React.Component {
               <Row>
                 <Col xs="6">
                   <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
-                    <DropdownToggle caret color="default" outline>
+                    <DropdownToggle caret>
                   Dropdown
                     </DropdownToggle>
                     <DropdownMenu>

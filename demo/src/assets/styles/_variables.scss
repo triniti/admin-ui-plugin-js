@@ -98,13 +98,13 @@ $theme-colors: map-merge((
   "dark":       $dark
 ), $theme-colors);
 
-$font-weight-light:           300 !default;
-$font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
+$font-weight-light:           300;
+$font-weight-normal:          400;
+$font-weight-bold:            700;
 
-$dropdown-link-hover-bg:            $gray-100 !default;
+$dropdown-link-hover-bg:            $gray-100;
 
-$body-bg:                   $white;
+$body-bg:                   $gray-400;
 $body-color:                $gray-900;
 
 // +++++++++++++++++
@@ -112,9 +112,12 @@ $body-color:                $gray-900;
 
 // stylelint-enable
 
+$enable-gradients:          true;
+$enable-shadows:            false;
+
 // Customize the light and dark text colors for use in our YIQ color contrast function.
-$yiq-text-dark: $gray-900 !default;
-$yiq-text-light: $white !default;
+$yiq-text-dark: $gray-900;
+$yiq-text-light: $white;
 
 
 //
@@ -126,64 +129,64 @@ $yiq-text-light: $white !default;
 // Variables not used in _variables.scss in case the two are separated
 
 // referenced in _type but in _variables - $font-size-h1 is the variable
-$h1-font-size: 1.75rem !default;
-$h2-font-size: 1.5rem !default;
-$h3-font-size: 1.25rem !default;
-$h4-font-size: 1.1rem !default;
-$h5-font-size: 1rem !default;
-$h6-font-size: .825rem !default;
+$h1-font-size: 1.75rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1.1rem;
+$h5-font-size: 1rem;
+$h6-font-size: .825rem;
 
 
 // Calculations for Header and Offcanvas
-$header-height:                 48px !default;
+$header-height:                 48px;
 
 
 // Offcanvas
-$offcanvas-desktop-margin:      262px !default;
-$offcanvas-width:               300px !default;
+$offcanvas-desktop-margin:      262px;
+$offcanvas-width:               300px;
 
 
 // Transition to be used with any parameter, use instead of -base, -fade, -collapse
-$transition:         250ms ease-in-out !default;
+$transition:         250ms ease-in-out;
 
 
 // Common Transparent Grays
-$gray-rgba-100:      rgba($black, .04) !default;
-$gray-rgba-200:      rgba($black, .0625) !default;
-$gray-rgba-300:      rgba($black, .1) !default;
-$gray-rgba-400:      rgba($black, .125) !default;
-$gray-rgba-500:      rgba($black, .15) !default;
-$gray-rgba-600:      rgba($black, .2) !default;
-$gray-rgba-700:      rgba($black, .5) !default;
-$gray-rgba-800:      rgba($black, .625) !default;
-$gray-rgba-900:      rgba($black, .8) !default;
+$gray-rgba-100:      rgba($black, .04);
+$gray-rgba-200:      rgba($black, .0625);
+$gray-rgba-300:      rgba($black, .1);
+$gray-rgba-400:      rgba($black, .125);
+$gray-rgba-500:      rgba($black, .15);
+$gray-rgba-600:      rgba($black, .2);
+$gray-rgba-700:      rgba($black, .5);
+$gray-rgba-800:      rgba($black, .625);
+$gray-rgba-900:      rgba($black, .8);
 
 
 // Common Transparent Whites
-$white-rgba-100:     rgba(#fff, .0625) !default;
-$white-rgba-200:     rgba(#fff, .1) !default;
-$white-rgba-300:     rgba(#fff, .125) !default;
-$white-rgba-400:     rgba(#fff, .25) !default;
-$white-rgba-500:     rgba(#fff, .5) !default;
-$white-rgba-600:     rgba(#fff, .625) !default;
-$white-rgba-700:     rgba(#fff, .75) !default;
-$white-rgba-800:     rgba(#fff, .8) !default;
-$white-rgba-900:     rgba(#fff, .9) !default;
+$white-rgba-100:     rgba(#fff, .0625);
+$white-rgba-200:     rgba(#fff, .1);
+$white-rgba-300:     rgba(#fff, .125);
+$white-rgba-400:     rgba(#fff, .25);
+$white-rgba-500:     rgba(#fff, .5);
+$white-rgba-600:     rgba(#fff, .625);
+$white-rgba-700:     rgba(#fff, .75);
+$white-rgba-800:     rgba(#fff, .8);
+$white-rgba-900:     rgba(#fff, .9);
 
 
 // Icon Fills
-$icon-fill-light:    #fff !default;
-$icon-fill-dark:     #000 !default;
-$icon-theme-light:   str-slice(quote($icon-fill-dark), 2) !default;
-$icon-theme-dark:    str-slice(quote($icon-fill-light), 2) !default;
+$icon-fill-light:    #fff;
+$icon-fill-dark:     #000;
+$icon-theme-light:   str-slice(quote($icon-fill-dark), 2);
+$icon-theme-dark:    str-slice(quote($icon-fill-light), 2);
 
 
 // Common side padding
-$padding-xl:         2.5rem !default;
-$padding-lg:         2rem !default;
-$padding-md:         1.5rem !default;
-$padding-sm:         1.25rem !default;
-$padding-xs:         1rem !default;
+$padding-xl:         2.5rem;
+$padding-lg:         2rem;
+$padding-md:         1.5rem;
+$padding-sm:         1.25rem;
+$padding-xs:         1rem;
 
 
 // Common Text Shadow
@@ -258,8 +261,8 @@ $border-radius:               3px;
 $border-radius-lg:            .25rem;
 $border-radius-sm:            3px;
 
-$component-active-color:      inherit;
-$component-active-bg:         $gray-200;  // todo theme-color("primary") !default; affects $input-btn-focus-color
+$component-active-color:      $white;
+$component-active-bg:         theme-color("secondary");  // $gray-200 theme-color("primary") !default; affects $input-btn-focus-color
 
 
 // Fonts
@@ -303,6 +306,8 @@ $table-hover-bg:                $gray-100;
 $table-head-bg:                 $white;
 $table-head-color:              $gray-900;
 
+$table-cell-padding-sm:         .375rem;
+
 
 // Buttons + Forms
 //
@@ -312,9 +317,11 @@ $table-head-color:              $gray-900;
 //
 // For each of Bootstrap's buttons, define text, background, and border color.
 
+$input-btn-padding-y:         .5rem;
 $input-btn-padding-x:         1rem;
 $input-btn-padding-y-lg:      .75rem;
 $input-btn-padding-x-lg:      1.5rem;
+$input-padding-x-lg:          1.25rem;
 $btn-font-weight:             500;
 $btn-box-shadow:              none;
 $btn-focus-width:             0;
@@ -323,7 +330,7 @@ $btn-focus-box-shadow:        none;
 $btn-active-box-shadow:       none;
 
 $btn-link-disabled-color:     $gray-700;
-$btn-disabled-opacity:        .65;
+$btn-disabled-opacity:        .5;
 $btn-focus-box-shadow:        none !important;
 $btn-active-box-shadow:       none !important;
 
@@ -345,10 +352,21 @@ $btn-transition:                 background-color .15s ease-in-out, border-color
 $input-bg:                       $gray-200;
 
 $input-color:                    $gray-900;
-$input-border-color:             rgba($black,.125);
+$input-border-color:             $gray-700; // rgba($black,.125)
 $input-box-shadow:               none;
 $form-group-margin-bottom:       1.25rem;
-$input-line-height:              1.5;
+$line-height-base:               1.5;
+$input-line-height:              1.7;
+$line-height-lg:                 1.8;
+$line-height-sm:                 1.45;
+
+$border-radius:               3px;
+$border-radius-lg:            3px;
+$border-radius-sm:            2px;
+
+$form-control-radius:         2px;
+
+$form-item-spacing:           .5rem;
 
 $input-focus-border-color:       $gray-700;
 // $input-focus-box-shadow:         none;
@@ -394,13 +412,14 @@ $nav-tabs-border-radius:                      0;
 $nav-tabs-link-hover-border-color:            transparent;
 $nav-tabs-link-active-color:                  $black;
 $nav-tabs-link-active-border-color:           $gray-600; // todo check if multiple border colors is better
+$nav-tabs-link-active-bg:                     $white;
 
 // Navbar
 
 // Navbar Theme Colors
 
-$navbar-theme-light:    $gray-200;
-$navbar-theme-dark:     #232935; // #373e4b #21252b #101d6b #21252b #272a31 //  darken(theme-color("dark"), 10%)
+$navbar-theme-light:    $white;
+$navbar-theme-dark:     #232935; // #272727 #232935 #373e4b #21252b #101d6b #21252b #272a31 //  darken(theme-color("dark"), 10%)
 
 $navbar-theme-dark-dropdown:   lighten($navbar-theme-dark, 4%);
 $navbar-theme-light-dropdown:  lighten($navbar-theme-light, 4%);
@@ -419,6 +438,7 @@ $navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=
 $navbar-light-toggler-border-color: transparent;
 
 $nav-pills-link-active-bg:          $white;
+$nav-pills-link-active-bg:          theme-color("secondary");
 
 // Pagination
 
@@ -428,8 +448,8 @@ $pagination-border-color:              $gray-600;
 $pagination-hover-border-color:        $gray-600;
 
 $pagination-active-color:              $white;
-$pagination-active-bg:                 theme-color("primary");
-$pagination-active-border-color:       theme-color("primary");
+$pagination-active-bg:                 theme-color("secondary");
+$pagination-active-border-color:       theme-color("secondary");
 
 $pagination-disabled-color:            $text-muted;
 $pagination-disabled-bg:               $gray-200;
@@ -447,9 +467,10 @@ $card-border-width:        1px;
 $card-border-radius:       0;
 $card-border-color:        $gray-500;
 $card-inner-border-radius: 0;
-$card-cap-bg:              $body-bg;
-$card-bg:                  $body-bg;
+$card-cap-bg:              $white;
+$card-bg:                  $white;
 $card-columns-margin:      1.25rem;
+$card-spacer-x:            1.5rem;
 
 
 // Tooltips
@@ -469,7 +490,7 @@ $tooltip-arrow-height:        5px;
 
 $popover-box-shadow:                  0 10px 8px -6px $gray-rgba-300;
 
-$popover-header-bg:                   $body-bg;
+$popover-header-bg:                   $gray-200;
 
 $popover-header-padding-x:            .875rem;
 
@@ -495,12 +516,15 @@ $modal-backdrop-opacity:      .4;
 $modal-header-border-color:   $gray-500;
 $modal-header-padding:        1rem;
 
+$modal-md:                     560px;
+$modal-xl:                     1000px;
 
 // Alerts
 //
 // Define alert colors, border radius, and padding.
 
 $alert-border-radius:         $border-radius-lg;
+$alert-margin-bottom:         .75rem;
 
 
 // Progress bars
@@ -544,17 +568,24 @@ $breadcrumb-active-color:       $gray-900;
 
 $input-group-btn-border-color:   $gray-700;
 
-// Fixes
 
-$thumbnail-transition:        all .2s ease-in-out !default;
-$form-check-margin-bottom:  .5rem !default;
-$popover-inner-padding:               1px !default;
-$table-inverse-color:           $body-bg !default;
-$badge-color:                 $white !default;
-$table-inverse-bg:              $gray-900 !default;
-$popover-arrow-outer-width:           ($popover-arrow-width + 1px) !default;
-$table-inverse-border-color:    lighten($gray-900, 7.5%) !default;
-$table-inverse-accent-bg:       rgba($white, .05) !default;
-$table-inverse-hover-bg:        rgba($white, .075) !default;
+// Shadow Depths
+
+$shadow-card:                    0 1px 2px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.05);
+$shadow-depth0:                  none;
+$shadow-depth1:                  0 1px 1px rgba(0,0,0,0.1);
+$shadow-depth2:                  0 1px 2px rgba(0,0,0,0.1);
+$shadow-depth3:                  0 1px 2px rgba(0,0,0,0.2);
+$shadow-depth4:                  inset 0 0 0 1px rgba(0,0,0,0.0625), 0 1px 2px rgba(0,0,0,0.2), 0 14px 14px -8px rgba(0,0,0,0.2);
+
+// Checkbox Radio Switch Heights
+
+$form-check-height-xs:   1rem;
+$form-check-height-sm:   1.25rem;
+$form-check-height:      1.5rem;
+$form-check-height-md:   1.75rem;
+$form-check-height-lg:   2.5rem;
+$form-check-shadow:      inset 0 0 0 1px $gray-rgba-300;
+
 
 @import "~bootstrap/scss/variables";

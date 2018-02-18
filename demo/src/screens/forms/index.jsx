@@ -38,7 +38,7 @@ class UiForm extends React.Component {
             <CardBody>
               <Container fluid>
                 <Row>
-                  <Col sm="8" md="6">
+                  <Col>
                     <CardTitle tag="h2">Card Title H2 with Button
                       <Button outline color="link" radius="circle">
                         <Icon imgSrc="close" alt="x" />
@@ -126,7 +126,7 @@ class UiForm extends React.Component {
             <CardBody>
               <Container fluid>
                 <Row>
-                  <Col sm="6" md="4">
+                  <Col>
                     <CardTitle tag="h3">Card Title H3</CardTitle>
                     <Form>
                       <FormGroup>
@@ -177,7 +177,7 @@ class UiForm extends React.Component {
                       />
                       </FormGroup>
 
-                      <Button outline color="default" radius="round">Submit</Button>
+                      <Button outline radius="round">Submit</Button>
                     </Form>
                     <CardTitle tag="h4">Card Title H4</CardTitle>
                     <Form inline className="mb-3">
@@ -204,7 +204,7 @@ class UiForm extends React.Component {
             <CardBody>
               <Container fluid>
                 <Row>
-                  <Col sm="9" md="6">
+                  <Col>
                     <Form>
                       <FormGroup>
                         <Label for="exampleEmail">Plain Text (Static)</Label>
@@ -335,12 +335,12 @@ class UiForm extends React.Component {
               <Container fluid>
                 <Row>
                   <Col xs="3" md="4">
-                    <FormGroup>
-                      <Label check>
-                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" onChange={this.handleChange} value={this.state.trinaryDefault} />
-                  Staff
-                      </Label>
-                    </FormGroup>
+                    <Form inline className="mb-4">
+                      <FormGroup>
+                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                        <Label>Staff</Label>
+                      </FormGroup>
+                    </Form>
                   </Col>
                   <Col xs="6">
                     <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -348,12 +348,12 @@ class UiForm extends React.Component {
                 </Row>
                 <Row>
                   <Col xs="3" md="4">
-                    <FormGroup>
-                      <Label>
-                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" width="6rem" onChange={this.handleChange} value={this.state.trinaryDefault} />
-                  Staff
-                      </Label>
-                    </FormGroup>
+                    <Form inline className="mb-4">
+                      <FormGroup>
+                        <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" width="6rem" radius="round" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                        <Label>Staff</Label>
+                      </FormGroup>
+                    </Form>
                   </Col>
                   <Col xs="6">
                     <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
@@ -361,8 +361,8 @@ class UiForm extends React.Component {
                 </Row>
                 <Row>
                   <Col xs="3" md="4">
-                    <FormGroup inline>
-                      <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                    <FormGroup inline className="mb-4">
+                      <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
                       <Button color="info" size="sm">Submit</Button>
                     </FormGroup>
                   </Col>

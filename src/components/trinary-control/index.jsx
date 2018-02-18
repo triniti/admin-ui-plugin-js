@@ -47,20 +47,18 @@ const TrinaryControl = (props) => {
 
   const classes = mapToCssModules(classNames(
     className,
-    'trinary-control',
-    size ? `trinary-control-${size}` : false,
-    radius ? `trinary-control-radius-${radius}` : false,
-    disabled ? 'trinary-control-disabled' : false,
+    'form-control',
+    size ? `form-control-${size}` : false,
+    radius ? `form-control-radius-${radius}` : false,
+    disabled ? 'form-control-disabled' : false,
   ), cssModule);
 
   return (
-    <div className={classes} style={{ width }}>
-      <select value={parseInt(value, 10)} onChange={onChange} {...attributes} disabled={disabled}>
-        <option value={UNKNOWN}>{unsetText}</option>
-        <option value={TRUE_VAL}>{trueText}</option>
-        <option value={FALSE_VAL}>{falseText}</option>
-      </select>
-    </div>
+    <select className={classes} style={{ width }} value={parseInt(value, 10)} onChange={onChange} {...attributes} disabled={disabled}>
+      <option value={UNKNOWN}>{unsetText}</option>
+      <option value={TRUE_VAL}>{trueText}</option>
+      <option value={FALSE_VAL}>{falseText}</option>
+    </select>
   );
 };
 

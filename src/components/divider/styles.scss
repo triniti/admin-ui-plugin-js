@@ -2,7 +2,7 @@
 
 .divider-horizontal-sm {
   display: inline-block;
-  border-left: 1px solid $gray-500;
+  border-left: 1px solid $card-border-color;
   margin-left: .5rem;
   padding-right: 1rem;
   height: 25px;
@@ -11,7 +11,7 @@
 
 .divider-horizontal-md {
   display: inline-block;
-  border-left: 1px solid $gray-500;
+  border-left: 1px solid $card-border-color;
   margin-left: .5rem;
   padding-right: 1rem;
   height: 34px;
@@ -20,7 +20,7 @@
 
 .divider-horizontal-lg {
   display: inline-block;
-  border-left: 1px solid $gray-500;
+  border-left: 1px solid $card-border-color;
   margin-left: .5rem;
   padding-right: 1rem;
   height: 50px;
@@ -32,7 +32,7 @@
   min-height: 0;
   margin: 1rem 0;
   padding: 0;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid $card-border-color;
   overflow: visible;
   box-sizing: content-box;
 }
@@ -41,16 +41,16 @@
   min-height: 1em;
   margin: 1rem 0;
   padding: .3rem $padding-xs;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid $card-border-color;
   background-color: $gray-100;
-  box-shadow: 0 -1px 0 0 $gray-300;
+  box-shadow: 0 -1px 0 0 $card-border-color;
 }
 
 .divider-vertical-lg {
   min-height: 1em;
   margin: 1rem 0;
   padding: $padding-xs;
-  border-bottom: 1px solid $gray-300;
+  border-bottom: 1px solid $card-border-color;
   background-color: $gray-100;
-  box-shadow: 0 -1px 0 0 $gray-300;
+  box-shadow: 0 -1px 0 0 $card-border-color;
 }

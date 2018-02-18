@@ -4,7 +4,7 @@
 
 @mixin button-outline-text-variant($color, $color-hover: #fff) {
   color: $color;
-  background-color: transparent;
+  background-color: $white;
   background-image: none;
   border-color: $gray-700;
 

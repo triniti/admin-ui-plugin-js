@@ -103,36 +103,39 @@ export default class AlertBar extends React.Component {
 
   render() {
     return (
-      <div className="alert-container">
-        {this.props.alerts.map((alert) => {
-          const {
-            id,
-            isDismissible,
-            link,
-            message,
-            type,
-          } = alert;
+      <div className="alert-wrapper">
+        <div className="alert-container">
+          {this.props.alerts.map((alert) => {
+            const {
+              id,
+              isDismissible,
+              link,
+              message,
+              type,
+            } = alert;
 
-          if (isDismissible) {
+            if (isDismissible) {
+              return (
+                <Alert
+                  color={type}
+                  isOpen={this.state[id].isOpen}
+                  toggle={() => this.dismiss(id)}
+                  key={id}
+                  inverse
+                >
+                  {message}
+                  {link && this.renderLink(link, id)}
+                </Alert>
+              );
+            }
             return (
-              <Alert
-                color={type}
-                isOpen={this.state[id].isOpen}
-                toggle={() => this.dismiss(id)}
-                key={id}
-              >
+              <Alert color={type} key={id} inverse>
                 {message}
                 {link && this.renderLink(link, id)}
               </Alert>
             );
-          }
-          return (
-            <Alert color={type} key={id}>
-              {message}
-              {link && this.renderLink(link, id)}
-            </Alert>
-          );
-        })}
+          })}
+        </div>
       </div>
     );
   }

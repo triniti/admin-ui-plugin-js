@@ -2,15 +2,17 @@ import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import classnames from 'classnames';
-import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Container, Nav, NavItem, NavLink, Row, Screen, TabContent, TabPane } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, CardText, Col, Container, DropdownItem, DropdownMenu, DropdownToggle, Input, InputGroup, InputGroupButtonDropdown, Nav, NavItem, NavLink, Row, Screen, TabContent, TabPane } from '../../../../src/components';
 
 class UiTabs extends React.Component {
   constructor(props) {
     super(props);
 
+    this.toggleDropDown = this.toggleDropDown.bind(this);
     this.toggle1 = this.toggle1.bind(this);
     this.toggle2 = this.toggle2.bind(this);
     this.state = {
+      dropdownOpen: false,
       activeTab1: '1',
       activeTab2: '3',
     };
@@ -32,6 +34,12 @@ class UiTabs extends React.Component {
     }
   }
 
+  toggleDropDown() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen,
+    });
+  }
+
   render() {
     return (
       <Screen
@@ -48,7 +56,19 @@ class UiTabs extends React.Component {
             <CardHeader>Sidebar Header</CardHeader>
             <CardBody>
               <CardTitle section>Card Title Section</CardTitle>
-            body
+              <InputGroup>
+                <Input />
+                <InputGroupButtonDropdown addonType="append" isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown}>
+                  <DropdownToggle caret color="secondary"></DropdownToggle>
+                  <DropdownMenu right arrow="right">
+                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem disabled>Action</DropdownItem>
+                    <DropdownItem>Another Action</DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>Another Action</DropdownItem>
+                  </DropdownMenu>
+                </InputGroupButtonDropdown>
+              </InputGroup>
             </CardBody>
           </Card>
       }
@@ -58,8 +78,8 @@ class UiTabs extends React.Component {
       //    <NavLink href="#" className={classnames({ active: this.state.activeTab1 === '2' })} onClick={() => { this.toggle1('2'); }}>Tab2</NavLink>
       //    ]
       //  }
-        body={
-          <Card>
+        body={[
+          <Card key="card1">
             <TabContent activeTab={this.state.activeTab1}>
               <TabPane tabId="1">
                 <Card>
@@ -99,7 +119,9 @@ class UiTabs extends React.Component {
                 </Card>
               </TabPane>
             </TabContent>
+          </Card>,
 
+          <Card key="card2">
             <CardHeader>Classic Standard Version</CardHeader>
             <CardBody>
               <Nav tabs>
@@ -165,7 +187,7 @@ class UiTabs extends React.Component {
               </TabContent>
             </CardBody>
           </Card>
-        }
+        ]}
       />
     );
   }

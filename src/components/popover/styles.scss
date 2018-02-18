@@ -6,3 +6,8 @@
 .popover {
   box-shadow: $popover-box-shadow;
 }
+
+.bs-popover-bottom .arrow::after,
+.bs-popover-auto[x-placement^="bottom"] .arrow::after {
+  border-bottom-color: $popover-header-bg;
+}

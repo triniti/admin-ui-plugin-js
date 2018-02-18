@@ -12,6 +12,8 @@ const propTypes = {
   type: PropTypes.string,
   id: PropTypes.string,
   name: PropTypes.string,
+  label1: PropTypes.string,
+  label2: PropTypes.string,
 };
 
 const defaultProps = {
@@ -27,6 +29,8 @@ const Switch = (props) => {
     type,
     id,
     name,
+    label1,
+    label2,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -36,7 +40,7 @@ const Switch = (props) => {
 
   return [
     <Input type={type} id={id} className={classes} key={`${name}-switch-input`} {...attributes} />,
-    <Label for={id} className="switch-input-label" key={`${name}-switch-label`} />,
+    <Label for={id} className="switch-input-label" key={`${name}-switch-label`}>{label1 && <span>{label1}</span>}{label2 && <span>{label2}</span>}</Label>,
   ];
 };
 

@@ -21,7 +21,7 @@ const propTypes = {
 
 const defaultProps = {
   'aria-haspopup': true,
-  color: 'secondary',
+  color: 'light',
 };
 
 const contextTypes = {

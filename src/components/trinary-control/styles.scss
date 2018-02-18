@@ -8,7 +8,7 @@
   line-height: 1.6;
   min-width: 4.25rem;
   border: 1px solid $input-border-color;
-  border-radius: $input-border-radius;
+  border-radius: $border-radius;
   overflow: hidden;
   background-color: $input-bg;
   vertical-align: middle;
@@ -29,8 +29,8 @@
     height: 100%;
     background-color: $input-bg;
     border-left: 1px solid $input-border-color;
-    border-top-right-radius: .25rem;
-    border-bottom-right-radius: .25rem;
+    border-top-right-radius: $form-control-radius;
+    border-bottom-right-radius: $form-control-radius;
     content: "";
     pointer-events: none;
   }
@@ -50,7 +50,7 @@
     width: 1rem;
     height: 1rem;
     margin-left: 0.255em;
-    vertical-align: 0.255em;
+    vertical-align: middle;
     content: "";
     background: transparent url('./sort.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
     pointer-events: none;
@@ -77,7 +77,7 @@
 // sizes
 
 .trinary-control-sm {
-  border-radius: 0.125rem;
+  // border-radius: 0.125rem;
 
   & select {
     padding: 0.25rem 0.5rem;

@@ -44,6 +44,7 @@ const Screen = (props) => {
     primaryActions,
     secondaryActions,
     breadcrumbs,
+    maxWidth,
   } = props;
 
   return (
@@ -82,7 +83,7 @@ const Screen = (props) => {
         <AlertBar alerts={alerts} onDismiss={id => dispatch(dismissAlert(id))} />
 
         {tabs.length > 0 &&
-        <Nav underline className="pt-2" theme="light">
+        <Nav underline className="screen-navtabs">
           {tabs.map(tab => (
             <NavItem key={tab.to}>
               <RouterLink navTab to={tab.to}>{tab.text}</RouterLink>
@@ -91,7 +92,7 @@ const Screen = (props) => {
         </Nav>}
 
         <div className="screen-body-container">
-          <div className="screen-body">{body}</div>
+          <div className="screen-body"><div className="screen-body-content" style={{ maxWidth }}>{body}</div></div>
           {sidebar &&
           <div className="screen-sidebar" id="screen-sidebar">
             <Button radius="circle" color="info" className="screen-sidebar-toggler" onClick={toggleSidebar}>
@@ -124,6 +125,7 @@ Screen.propTypes = {
   footer: PropTypes.node,
   primaryActions: PropTypes.node,
   secondaryActions: PropTypes.node,
+  maxWidth: PropTypes.string,
 };
 
 const noop = () => {
@@ -135,6 +137,7 @@ Screen.defaultProps = {
   breadcrumbs: [],
   sidenavHeader: null,
   tabs: [],
+  maxWidth: '1000px',
 };
 
 export default Screen;

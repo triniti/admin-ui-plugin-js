@@ -9,8 +9,9 @@
 .btn-hover,
 .btn-outline-hover {
   opacity: .6;
-  border-color: transparent;
+  border-color: transparent !important;
   background-color: transparent;
+  box-shadow: $shadow-depth0;
 }
 
 .btn-hover:hover,
@@ -18,6 +19,6 @@
 .btn-outline-hover:hover,
 .btn-outline-hover.active {
   opacity: 1;
-  border-color: transparent;
+  border-color: transparent !important;
   background-color: transparent;
 }
