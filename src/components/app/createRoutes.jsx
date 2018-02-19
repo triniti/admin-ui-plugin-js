@@ -1,7 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import universal from 'react-universal-component';
-import Loading from '../loading';
+import createLazyComponent from '../create-lazy-component';
 
 /**
  * Chooses to return either a standard component if `route.eager` is set to true or a universal
@@ -25,7 +24,7 @@ const getComponent = (route) => {
     return route.component;
   }
 
-  return universal(route.component, Object.assign({ loading: Loading }, route.async || {}));
+  return createLazyComponent(route.component, route.async || {});
 };
 
 export default (routes, authHoc = null) =>
