@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
-import createLazyComponent from '../create-lazy-component';
+import createLazyComponent from '../createLazyComponent';
 
 /**
  * Chooses to return either a standard component if `route.eager` is set to true or a universal
