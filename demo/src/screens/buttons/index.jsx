@@ -547,38 +547,80 @@ class UiButtons extends React.Component {
             <CardBody>
               <Form>
                 <FormGroup inline>
-                  <Label className="mr-4">
+                  <Label className="mr-4 mb-2">
                     <Checkbox size="xs" name="toggler15" id="toggler15" />
                 size="xs"
                   </Label>
 
-                  <Label className="mr-4">
+                  <Label className="mr-4 mb-2">
                     <Checkbox size="sm" name="toggler16" id="toggler16" />
                 size="sm"
                   </Label>
 
-                  <Label className="mr-4" strong>
+                  <Label className="mr-4 mb-2" strong>
                     <Checkbox name="toggler17" id="toggler17" />
                 default
                   </Label>
 
-                  <Label className="mr-4" strong>
+                  <Label className="mr-4 mb-2" strong>
                     <Checkbox size="md" name="toggler18" id="toggler18" />
                 size="md"
                   </Label>
 
-                  <Label className="mr-4" strong>
+                  <Label className="mr-4 mb-2" strong>
                     <Checkbox size="lg" name="toggler19" id="toggler19" />
                 size="lg"
                   </Label>
 
-                  <Label className="mr-4" strong>
+                  <Label className="mr-4 mb-2" strong>
                     <Checkbox disabled />
                 disabled
                   </Label>
 
-                  <Label className="mr-4" strong>
+                  <Label className="mr-4 mb-2" strong>
                     <Checkbox disabled checked />
+                disabled on
+                  </Label>
+                </FormGroup>
+              </Form>
+            </CardBody>
+          </Card>,
+
+          <Card key="button13b">
+            <CardHeader>
+            Checkbox Button Component
+            </CardHeader>
+            <CardBody>
+              <Form>
+                <FormGroup inline>
+
+                  <Label className="mr-4 mb-2">
+                    <Checkbox size="sm" name="toggler162" id="toggler162" button>Checkbox</Checkbox>
+                size="sm"
+                  </Label>
+
+                  <Label className="mr-4 mb-2" strong>
+                    <Checkbox name="toggler172" id="toggler172" button>Checkbox</Checkbox>
+                default
+                  </Label>
+
+                  <Label className="mr-4 mb-2" strong>
+                    <Checkbox size="lg" name="toggler192" id="toggler192" button>Checkbox</Checkbox>
+                size="lg"
+                  </Label>
+
+                  <Label className="mr-4 mb-2" strong>
+                    <Checkbox size="sm" name="toggler182" id="toggler182" button radius="round">Checkbox</Checkbox>
+                radius="round"
+                  </Label>
+
+                  <Label className="mr-4 mb-2" strong>
+                    <Checkbox size="sm" disabled button radius="round">Checkbox</Checkbox>
+                disabled
+                  </Label>
+
+                  <Label className="mr-4 mb-2" strong>
+                    <Checkbox size="sm" disabled checked button radius="round">Checkbox</Checkbox>
                 disabled on
                   </Label>
                 </FormGroup>
