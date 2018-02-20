@@ -2,7 +2,8 @@
 
 
 ## v0.4.3
-* Adding createLazyComponent HOC
+* Add createLazyComponent HOC.
+
 
 ## v0.4.2
 * Add depth to the design with a darker background, drop shadows and gradient buttons.

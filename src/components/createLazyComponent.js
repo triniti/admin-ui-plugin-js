@@ -2,12 +2,14 @@ import universal from 'react-universal-component';
 import Loading from './loading';
 
 /**
+ * @link https://github.com/faceyspacey/react-universal-component
+ *
  * Wrapper for creating a universal component. Provides defaults.
  *
  * @param {React.Component|function} component
  * @param {Object} options
- * @return {React.Component}
- * @see https://github.com/faceyspacey/react-universal-component
+ *
+ * @returns {React.Component}
  */
 export default (component, options) => {
   const defaults = {
