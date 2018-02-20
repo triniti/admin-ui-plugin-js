@@ -10,7 +10,6 @@ import Loading from './loading';
  * @see https://github.com/faceyspacey/react-universal-component
  */
 export default (component, options) => {
-
   const defaults = {
     loading: Loading,
     timeout: 1500,
