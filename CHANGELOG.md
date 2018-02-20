@@ -3,6 +3,7 @@
 
 ## v0.4.3
 * Add createLazyComponent HOC.
+* Add button style to checkbox component.  Allows for style parameters from Button component with text from children.
 
 
 ## v0.4.2
