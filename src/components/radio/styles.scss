@@ -35,7 +35,7 @@ input.radio-input + label:before {
   content: '';
   transition: all $transition;
   border-radius: $round;
-  background-color: $white;
+  background-color: $gray-200;
   transform: scale(.75);
 }
 
