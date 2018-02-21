@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="12px" height="9px" viewBox="0 0 12 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
-    <title>keyboard-arrow-down</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Artboard-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-342.000000, -487.000000)">
-        <g id="keyboard-arrow-down" transform="translate(336.000000, 480.000000)">
-            <g id="Icon-24px">
-                <polygon id="Shape" fill="#000000" points="7.41 7.84 12 12.42 16.59 7.84 18 9.25 12 15.25 6 9.25"></polygon>
-                <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"><path d="M7.999 10.597l6.307-6.307a.991.991 0 0 1 1.402 1.402L8.7 12.7a.991.991 0 0 1-1.402 0L.29 5.692A.991.991 0 1 1 1.692 4.29l6.307 6.307z"/></svg>
