@@ -115,20 +115,20 @@ const UiIcons = () => (
         <CardBody>
           <Row>
             <Col>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="xs"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="xs"/>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="sm"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="sm"/>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="default"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline"/>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="sd"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="sd"/>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="md"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="md"/>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="lg"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="lg"/>
-              <UncontrolledTooltip placement="top" target="minus-sign">size="xl"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="xl"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-xs">size="xs"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-xs" size="xs"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-sm">size="sm"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-sm" size="sm"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-default">size="default"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-default"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-sd">size="sd"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-sd" size="sd"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-md">size="md"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-md" size="md"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-lg">size="lg"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-lg" size="lg"/>
+              <UncontrolledTooltip placement="top" target="plus-sign-outline-xl">size="xl"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-xl" size="xl"/>
             </Col>
           </Row>
         </CardBody>
