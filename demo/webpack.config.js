@@ -51,9 +51,8 @@ module.exports = () => ({
       },
       {
         test: /\.svg$/,
-        use: [
-          'url-loader',
-          'svg-fill-loader',
+        loader: [
+          'raw-loader',
         ],
       },
       {

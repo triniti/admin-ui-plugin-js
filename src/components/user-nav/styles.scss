@@ -55,7 +55,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: transparent url('./user.svg?fill=%23#{$icon-theme-light}') center center / auto 17px no-repeat;
+  background: transparent;
+  color: $body-color;
   opacity: .8;
 
   &:hover,
@@ -79,7 +80,7 @@
 }
 
 .navbar-dark .btn-usernav {
-  background: transparent url('./user.svg?fill=%23#{$icon-theme-dark}') center center / auto 17px no-repeat;
+  color: $white;
 
   &:hover,
   &:active {

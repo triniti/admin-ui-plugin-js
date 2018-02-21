@@ -17,7 +17,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-  tag: 'img',
+  tag: 'span',
   imgSrc: 'circle',
 };
 
@@ -43,7 +43,7 @@ const Icon = (props) => {
 
   const img = src || mapNameToIcon(imgSrc);
   return (
-    <Tag {...attributes} className={classes} src={img} />
+    <Tag {...attributes} className={classes} dangerouslySetInnerHTML={{__html: img}} />
   );
 };
 

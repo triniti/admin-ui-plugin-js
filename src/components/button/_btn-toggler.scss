@@ -27,7 +27,7 @@
   content: '';
   transition: transform $transition;
   opacity: .5;
-  background: transparent url('./angle-right.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+  background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3e%3cpath d='M13.207 8.472l-7.854 7.854-.707-.707 7.146-7.146-7.146-7.148.707-.707 7.854 7.854z' fill='%23000000'/%3e%3c/svg%3e") center center / auto 14px no-repeat;
   transform: rotate(90deg);
 }
 

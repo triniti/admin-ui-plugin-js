@@ -107,6 +107,17 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="trash">trash</UncontrolledTooltip>
             </Col>
           </Row>
+          <Row>
+            <Col>
+              <Icon imgSrc="list" id="list" size="xs"/>
+              <Icon imgSrc="list" id="list" size="sm"/>
+              <Icon imgSrc="list" id="list"/>
+              <Icon imgSrc="list" id="list" size="sd"/>
+              <Icon imgSrc="list" id="list" size="md"/>
+              <Icon imgSrc="list" id="list" size="lg"/>
+              <Icon imgSrc="list" id="list" size="xl"/>
+            </Col>
+          </Row>
         </CardBody>
       </Card>,
 
