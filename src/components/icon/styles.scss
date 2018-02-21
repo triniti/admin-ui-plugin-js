@@ -11,8 +11,11 @@
 }
 
 .icon {
+  position: relative;
   display: inline-flex;
-  height: 1rem; // 16px
+  height: 1rem;
+  width: 1rem; // 16px
+  align-self: center;
 
   .btn & {
     margin-right: .5rem;
@@ -23,61 +26,76 @@
   }
 
   > svg {
+    position: absolute;
+    top: 0;
+    right: 0;
     height: 1rem;
-    width: auto;
+    width: 1rem;
   }
 }
 
 .icon-xs {
-  height: .75rem; // 12px
+  width: .75rem; // 12px
+  height: .75rem;
 
   > svg {
+    width: .75rem;
     height: .75rem;
   }
 }
 
 .icon-sm {
-  height: .875rem; // 14px
+  width: .875rem; // 14px
+  height: .875rem;
 
   > svg {
+    width: .875rem;
     height: .875rem;
   }
 }
 
 .icon-sd {
-  height: 1.125rem; // 18px
+  width: 1.125rem; // 18px
+  height: 1.125rem;
 
   > svg {
+    width: 1.125rem;
     height: 1.125rem;
   }
 }
 
 .icon-md {
-  height: 1.25rem; // 20px
+  width: 1.25rem; // 20px
+  height: 1.25rem;
 
   > svg {
+    width: 1.25rem;
     height: 1.25rem;
   }
 }
 
 .icon-lg {
-  height: 1.5rem; // 24px
+  width: 1.5rem; // 24px
+  height: 1.5rem;
 
   > svg {
+    width: 1.5rem;
     height: 1.5rem;
   }
 }
 
 .icon-xl {
-  height: 2rem; // 32px
+  width: 2rem; // 32px
+  height: 2rem;
 
   > svg {
+    width: 2rem;
     height: 2rem;
   }
 }
 
 .icon + .icon {
-  margin-left: .75rem;
+  margin-left: .5rem;
 }
 
 .icon-toggler {

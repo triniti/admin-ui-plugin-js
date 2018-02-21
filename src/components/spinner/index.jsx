@@ -7,8 +7,8 @@ const Spinner = ({ className, children }) => (
   <div className={classnames('spinner-container', className)}>
     <svg
       className="spinner-animation"
-      width="65px"
-      height="65px"
+      width="33px"
+      height="33px"
       viewBox="0 0 66 66"
       xmlns="http://www.w3.org/2000/svg"
     >

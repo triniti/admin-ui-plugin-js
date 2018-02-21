@@ -6,24 +6,29 @@ $offset: 178;
 $duration: 1.5s;
 
 .spinner-container {
+  position: relative;
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
   margin: 1rem;
-  overflow: hidden;
+  height: 33px;
 }
 
 .spinner-animation {
-  height: 2.25em;
-  width: 2.25em;
-  padding: 0 0.125rem;
+  height: 33px;
+  width: 33px;
+  padding: 0;
   animation: rotator $duration linear infinite;
 }
 
 .spinner-children {
   margin-left: .75rem;
   font-weight: 600;
+
+  &:empty {
+    margin-left: 0;
+  }
 }
 
 @keyframes rotator {
