@@ -107,21 +107,34 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="trash">trash</UncontrolledTooltip>
             </Col>
           </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons2">
+        <CardHeader>Icon Sizes</CardHeader>
+        <CardBody>
           <Row>
             <Col>
-              <Icon imgSrc="list" id="list" size="xs"/>
-              <Icon imgSrc="list" id="list" size="sm"/>
-              <Icon imgSrc="list" id="list"/>
-              <Icon imgSrc="list" id="list" size="sd"/>
-              <Icon imgSrc="list" id="list" size="md"/>
-              <Icon imgSrc="list" id="list" size="lg"/>
-              <Icon imgSrc="list" id="list" size="xl"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="xs"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="xs"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="sm"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="sm"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="default"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="sd"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="sd"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="md"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="md"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="lg"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="lg"/>
+              <UncontrolledTooltip placement="top" target="minus-sign">size="xl"</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" size="xl"/>
             </Col>
           </Row>
         </CardBody>
       </Card>,
 
-      <Card key="icons2">
+      <Card key="icons3">
         <CardHeader>Button Icons</CardHeader>
         <CardBody>
           <Row>
@@ -139,7 +152,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons3">
+      <Card key="icons4">
         <CardHeader>Spinner</CardHeader>
         <CardBody>
           <Row>
