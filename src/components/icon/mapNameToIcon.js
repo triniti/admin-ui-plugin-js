@@ -9,6 +9,8 @@ import arrowRight from './arrow-right.svg';
 import arrowUp from './arrow-up.svg';
 import arrowDown from './arrow-down.svg';
 import back from './back.svg';
+import calendar from './calendar.svg';
+import camera from './camera.svg';
 import circleX from './circle-x.svg';
 import circle from './circle.svg';
 import close from './close.svg';
@@ -22,17 +24,21 @@ import dataTransferUpload from './data-transfer-upload.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
 import gridTwoUp from './grid-two-up.svg';
+import iconSave from './icon-save.svg';
 import keyboardArrowDown from './keyboard-arrow-down.svg';
 import keyboardArrowLeft from './keyboard-arrow-left.svg';
 import keyboardArrowRight from './keyboard-arrow-right.svg';
 import keyboardArrowUp from './keyboard-arrow-up.svg';
 import keyboardBackspace from './keyboard-backspace.svg';
 import list from './list.svg';
+import mail from './mail.svg';
 import menu from './menu.svg';
+import microphone from './microphone.svg';
 import move from './move.svg';
 import minusSign from './minus-sign.svg';
 import minusSignOutline from './minus-sign-outline.svg';
 import moreVertical from './more-vertical.svg';
+import photo from './photo.svg';
 import plusSign from './plus-sign.svg';
 import plusSignOutline from './plus-sign-outline.svg';
 import save from './save.svg';
@@ -54,6 +60,8 @@ const icons = {
   'arrow-up': arrowUp,
   'arrow-down': arrowDown,
   back,
+  calendar,
+  camera,
   'circle-x': circleX,
   circle,
   close,
@@ -67,17 +75,21 @@ const icons = {
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
   'grid-two-up': gridTwoUp,
+  'icon-save': iconSave,
   'keyboard-arrow-down': keyboardArrowDown,
   'keyboard-arrow-left': keyboardArrowLeft,
   'keyboard-arrow-right': keyboardArrowRight,
   'keyboard-arrow-up': keyboardArrowUp,
   'keyboard-backspace': keyboardBackspace,
   list,
+  mail,
   menu,
+  microphone,
   move,
   'minus-sign': minusSign,
   'minus-sign-outline': minusSignOutline,
   'more-vertical': moreVertical,
+  photo,
   'plus-sign': plusSign,
   'plus-sign-outline': plusSignOutline,
   save,

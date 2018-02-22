@@ -19,7 +19,7 @@ const UiIcons = () => (
         <CardBody>
           <Row>
             <Col>
-              <Icon imgSrc="arrow-double-left" id="arrow-double-left" />
+              <Icon imgSrc="arrow-double-left" id="arrow-double-left"/>
               <UncontrolledTooltip placement="top" target="arrow-double-left">arrow-double-left</UncontrolledTooltip>
               <Icon imgSrc="arrow-double-right" id="arrow-double-right" />
               <UncontrolledTooltip placement="top" target="arrow-double-right">arrow-double-right</UncontrolledTooltip>
@@ -31,30 +31,42 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="arrow-up">arrow-up</UncontrolledTooltip>
               <Icon imgSrc="arrow-down" id="arrow-down" />
               <UncontrolledTooltip placement="top" target="arrow-down">arrow-down</UncontrolledTooltip>
+              <Icon imgSrc="arrow-back" id="arrow-back" />
+              <UncontrolledTooltip placement="top" target="arrow-back">arrow-back</UncontrolledTooltip>
+              <Icon imgSrc="arrow-forward" id="arrow-forward" />
+              <UncontrolledTooltip placement="top" target="arrow-forward">arrow-forward</UncontrolledTooltip>
               <Icon imgSrc="back" id="back" />
               <UncontrolledTooltip placement="top" target="back">back</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-backspace" id="keyboard-backspace" />
+              <UncontrolledTooltip placement="top" target="keyboard-backspace">keyboard-backspace</UncontrolledTooltip>
               <Icon imgSrc="close" id="close-tooltip" />
               <UncontrolledTooltip placement="top" target="close-tooltip">close</UncontrolledTooltip>
               <Icon imgSrc="close-sm" id="close-sm" />
               <UncontrolledTooltip placement="top" target="close-sm">close-sm</UncontrolledTooltip>
-              <Icon imgSrc="cog" id="cog" />
-              <UncontrolledTooltip placement="top" target="cog">cog</UncontrolledTooltip>
-              <Icon imgSrc="delete" id="delete" />
-              <UncontrolledTooltip placement="top" target="delete">delete</UncontrolledTooltip>
-              <Icon imgSrc="eye" id="eye" />
-              <UncontrolledTooltip placement="top" target="eye">eye</UncontrolledTooltip>
-              <Icon imgSrc="menu" id="menu" />
-              <UncontrolledTooltip placement="top" target="menu">menu</UncontrolledTooltip>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <Icon imgSrc="more-vertical" id="more-vertical" />
               <UncontrolledTooltip placement="top" target="more-vertical">more-vertical</UncontrolledTooltip>
+              <Icon imgSrc="cog" id="cog" />
+              <UncontrolledTooltip placement="top" target="cog">cog</UncontrolledTooltip>
               <Icon imgSrc="save" id="save" />
               <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
-              <Icon imgSrc="search" id="search" />
-              <UncontrolledTooltip placement="top" target="search">search</UncontrolledTooltip>
+              <Icon imgSrc="delete" id="delete" />
+              <UncontrolledTooltip placement="top" target="delete">delete</UncontrolledTooltip>
               <Icon imgSrc="sort" id="sort" />
               <UncontrolledTooltip placement="top" target="sort">sort</UncontrolledTooltip>
-              <Icon imgSrc="user" id="user" />
-              <UncontrolledTooltip placement="top" target="user">user</UncontrolledTooltip>
+              <Icon imgSrc="apps" id="apps" />
+              <UncontrolledTooltip placement="top" target="apps">apps</UncontrolledTooltip>
+              <Icon imgSrc="list" id="list" />
+              <UncontrolledTooltip placement="top" target="list">list</UncontrolledTooltip>
+              <Icon imgSrc="grid-four-up" id="grid-four-up" />
+              <UncontrolledTooltip placement="top" target="grid-four-up">grid-four-up</UncontrolledTooltip>
+              <Icon imgSrc="grid-three-up" id="grid-three-up" />
+              <UncontrolledTooltip placement="top" target="grid-three-up">grid-three-up</UncontrolledTooltip>
+              <Icon imgSrc="grid-two-up" id="grid-two-up" />
+              <UncontrolledTooltip placement="top" target="grid-two-up">grid-two-up</UncontrolledTooltip>
             </Col>
           </Row>
           <Row>
@@ -71,18 +83,44 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="plus-sign-outline">plus-sign-outline</UncontrolledTooltip>
               <Icon imgSrc="minus-sign-outline" id="minus-sign-outline" />
               <UncontrolledTooltip placement="top" target="minus-sign-outline">minus-sign-outline</UncontrolledTooltip>
-              <Icon imgSrc="apps" id="apps" />
-              <UncontrolledTooltip placement="top" target="apps">apps</UncontrolledTooltip>
-              <Icon imgSrc="arrow-back" id="arrow-back" />
-              <UncontrolledTooltip placement="top" target="arrow-back">arrow-back</UncontrolledTooltip>
-              <Icon imgSrc="arrow-forward" id="arrow-forward" />
-              <UncontrolledTooltip placement="top" target="arrow-forward">arrow-forward</UncontrolledTooltip>
               <Icon imgSrc="circle-x" id="circle-x" />
               <UncontrolledTooltip placement="top" target="circle-x">circle-x</UncontrolledTooltip>
               <Icon imgSrc="data-transfer-download" id="data-transfer-download" />
               <UncontrolledTooltip placement="top" target="data-transfer-download">data-transfer-download</UncontrolledTooltip>
               <Icon imgSrc="data-transfer-upload" id="data-transfer-upload" />
               <UncontrolledTooltip placement="top" target="data-transfer-upload">data-transfer-upload</UncontrolledTooltip>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Icon imgSrc="menu" id="menu" />
+              <UncontrolledTooltip placement="top" target="menu">menu</UncontrolledTooltip>
+              <Icon imgSrc="search" id="search" />
+              <UncontrolledTooltip placement="top" target="search">search</UncontrolledTooltip>
+              <Icon imgSrc="user" id="user" />
+              <UncontrolledTooltip placement="top" target="user">user</UncontrolledTooltip>
+              <Icon imgSrc="move" id="move" />
+              <UncontrolledTooltip placement="top" target="move">move</UncontrolledTooltip>
+              <Icon imgSrc="trash" id="trash" />
+              <UncontrolledTooltip placement="top" target="trash">trash</UncontrolledTooltip>
+              <Icon imgSrc="microphone" id="microphone" />
+              <UncontrolledTooltip placement="top" target="microphone">microphone</UncontrolledTooltip>
+              <Icon imgSrc="camera" id="camera" />
+              <UncontrolledTooltip placement="top" target="camera">camera</UncontrolledTooltip>
+              <Icon imgSrc="icon-save" id="icon-save" />
+              <UncontrolledTooltip placement="top" target="icon-save">icon-save</UncontrolledTooltip>
+              <Icon imgSrc="mail" id="mail" />
+              <UncontrolledTooltip placement="top" target="mail">mail</UncontrolledTooltip>
+              <Icon imgSrc="photo" id="photo" />
+              <UncontrolledTooltip placement="top" target="photo">photo</UncontrolledTooltip>
+              <Icon imgSrc="calendar" id="calendar" />
+              <UncontrolledTooltip placement="top" target="calendar">calendar</UncontrolledTooltip>
+              <Icon imgSrc="eye" id="eye" />
+              <UncontrolledTooltip placement="top" target="eye">eye</UncontrolledTooltip>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
               <Icon imgSrc="keyboard-arrow-down" id="keyboard-arrow-down" />
               <UncontrolledTooltip placement="top" target="keyboard-arrow-down">keyboard-arrow-down</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-left" id="keyboard-arrow-left" />
@@ -91,25 +129,7 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="keyboard-arrow-right">keyboard-arrow-right</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-up" id="keyboard-arrow-up" />
               <UncontrolledTooltip placement="top" target="keyboard-arrow-up">keyboard-arrow-up</UncontrolledTooltip>
-              <Icon imgSrc="keyboard-backspace" id="keyboard-backspace" />
-              <UncontrolledTooltip placement="top" target="keyboard-backspace">keyboard-backspace</UncontrolledTooltip>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Icon imgSrc="list" id="list" />
-              <UncontrolledTooltip placement="top" target="list">list</UncontrolledTooltip>
-              <Icon imgSrc="grid-four-up" id="grid-four-up" />
-              <UncontrolledTooltip placement="top" target="grid-four-up">grid-four-up</UncontrolledTooltip>
-              <Icon imgSrc="grid-three-up" id="grid-three-up" />
-              <UncontrolledTooltip placement="top" target="grid-three-up">grid-three-up</UncontrolledTooltip>
-              <Icon imgSrc="grid-two-up" id="grid-two-up" />
-              <UncontrolledTooltip placement="top" target="grid-two-up">grid-two-up</UncontrolledTooltip>
-              <Icon imgSrc="move" id="move" />
-              <UncontrolledTooltip placement="top" target="move">move</UncontrolledTooltip>
-              <Icon imgSrc="trash" id="trash" />
-              <UncontrolledTooltip placement="top" target="trash">trash</UncontrolledTooltip>
-            </Col>
+              </Col>
           </Row>
         </CardBody>
       </Card>,
