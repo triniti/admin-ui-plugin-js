@@ -11,12 +11,16 @@ import arrowDown from './arrow-down.svg';
 import back from './back.svg';
 import calendar from './calendar.svg';
 import camera from './camera.svg';
+import checkOutline from './check-outline.svg';
+import checkSign from './check-sign.svg';
 import circleX from './circle-x.svg';
 import circle from './circle.svg';
 import close from './close.svg';
 import closeSm from './close-sm.svg';
 import cog from './cog.svg';
 import deleteIcon from './delete.svg';
+import deleteOutline from './delete-outline.svg';
+import deleteSign from './delete-sign.svg';
 import download from './download.svg';
 import eye from './eye.svg';
 import dataTransferDownload from './data-transfer-download.svg';
@@ -24,24 +28,28 @@ import dataTransferUpload from './data-transfer-upload.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
 import gridTwoUp from './grid-two-up.svg';
-import iconSave from './icon-save.svg';
 import keyboardArrowDown from './keyboard-arrow-down.svg';
 import keyboardArrowLeft from './keyboard-arrow-left.svg';
 import keyboardArrowRight from './keyboard-arrow-right.svg';
 import keyboardArrowUp from './keyboard-arrow-up.svg';
 import keyboardBackspace from './keyboard-backspace.svg';
 import list from './list.svg';
+import listCards from './list-cards.svg';
 import mail from './mail.svg';
 import menu from './menu.svg';
 import microphone from './microphone.svg';
-import move from './move.svg';
+import minus from './minus.svg';
 import minusSign from './minus-sign.svg';
-import minusSignOutline from './minus-sign-outline.svg';
+import minusOutline from './minus-outline.svg';
+import moreHorizontal from './more-horizontal.svg';
 import moreVertical from './more-vertical.svg';
+import move from './move.svg';
 import photo from './photo.svg';
+import plus from './plus.svg';
 import plusSign from './plus-sign.svg';
-import plusSignOutline from './plus-sign-outline.svg';
+import plusOutline from './plus-outline.svg';
 import save from './save.svg';
+import saveDisk from './save-disk.svg';
 import search from './search.svg';
 import sort from './sort.svg';
 import trash from './trash.svg';
@@ -62,12 +70,16 @@ const icons = {
   back,
   calendar,
   camera,
+  'check-outline': checkOutline,
+  'check-sign': checkSign,
   'circle-x': circleX,
   circle,
   close,
   'close-sm': closeSm,
   cog,
   delete: deleteIcon,
+  'delete-sign': deleteSign,
+  'delete-outline': deleteOutline,
   download,
   eye,
   'data-transfer-download': dataTransferDownload,
@@ -75,24 +87,28 @@ const icons = {
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
   'grid-two-up': gridTwoUp,
-  'icon-save': iconSave,
   'keyboard-arrow-down': keyboardArrowDown,
   'keyboard-arrow-left': keyboardArrowLeft,
   'keyboard-arrow-right': keyboardArrowRight,
   'keyboard-arrow-up': keyboardArrowUp,
   'keyboard-backspace': keyboardBackspace,
   list,
+  'list-cards': listCards,
   mail,
   menu,
   microphone,
-  move,
+  minus,
   'minus-sign': minusSign,
-  'minus-sign-outline': minusSignOutline,
+  'minus-outline': minusOutline,
+  'more-horizontal': moreHorizontal,
   'more-vertical': moreVertical,
+  move,
   photo,
+  plus,
   'plus-sign': plusSign,
-  'plus-sign-outline': plusSignOutline,
+  'plus-outline': plusOutline,
   save,
+  'save-disk': saveDisk,
   search,
   sort,
   trash,

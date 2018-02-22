@@ -49,18 +49,26 @@ const UiIcons = () => (
             <Col>
               <Icon imgSrc="more-vertical" id="more-vertical" />
               <UncontrolledTooltip placement="top" target="more-vertical">more-vertical</UncontrolledTooltip>
+              <Icon imgSrc="more-horizontal" id="more-horizontal" />
+              <UncontrolledTooltip placement="top" target="more-horizontal">more-horizontal</UncontrolledTooltip>
               <Icon imgSrc="cog" id="cog" />
               <UncontrolledTooltip placement="top" target="cog">cog</UncontrolledTooltip>
-              <Icon imgSrc="save" id="save" />
-              <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
+              <Icon imgSrc="plus" id="plus" />
+              <UncontrolledTooltip placement="top" target="plus">plus</UncontrolledTooltip>
+              <Icon imgSrc="minus" id="minus" />
+              <UncontrolledTooltip placement="top" target="minus">minus</UncontrolledTooltip>
               <Icon imgSrc="delete" id="delete" />
               <UncontrolledTooltip placement="top" target="delete">delete</UncontrolledTooltip>
+              <Icon imgSrc="save" id="save" />
+              <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
               <Icon imgSrc="sort" id="sort" />
               <UncontrolledTooltip placement="top" target="sort">sort</UncontrolledTooltip>
               <Icon imgSrc="apps" id="apps" />
               <UncontrolledTooltip placement="top" target="apps">apps</UncontrolledTooltip>
               <Icon imgSrc="list" id="list" />
               <UncontrolledTooltip placement="top" target="list">list</UncontrolledTooltip>
+              <Icon imgSrc="list-cards" id="list-cards" />
+              <UncontrolledTooltip placement="top" target="list-cards">list-cards</UncontrolledTooltip>
               <Icon imgSrc="grid-four-up" id="grid-four-up" />
               <UncontrolledTooltip placement="top" target="grid-four-up">grid-four-up</UncontrolledTooltip>
               <Icon imgSrc="grid-three-up" id="grid-three-up" />
@@ -75,20 +83,26 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="upload">upload</UncontrolledTooltip>
               <Icon imgSrc="download" id="download" />
               <UncontrolledTooltip placement="top" target="download">download</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign" id="plus-sign" />
-              <UncontrolledTooltip placement="top" target="plus-sign">plus-sign</UncontrolledTooltip>
-              <Icon imgSrc="minus-sign" id="minus-sign" />
-              <UncontrolledTooltip placement="top" target="minus-sign">minus-sign</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" />
-              <UncontrolledTooltip placement="top" target="plus-sign-outline">plus-sign-outline</UncontrolledTooltip>
-              <Icon imgSrc="minus-sign-outline" id="minus-sign-outline" />
-              <UncontrolledTooltip placement="top" target="minus-sign-outline">minus-sign-outline</UncontrolledTooltip>
-              <Icon imgSrc="circle-x" id="circle-x" />
-              <UncontrolledTooltip placement="top" target="circle-x">circle-x</UncontrolledTooltip>
               <Icon imgSrc="data-transfer-download" id="data-transfer-download" />
               <UncontrolledTooltip placement="top" target="data-transfer-download">data-transfer-download</UncontrolledTooltip>
               <Icon imgSrc="data-transfer-upload" id="data-transfer-upload" />
               <UncontrolledTooltip placement="top" target="data-transfer-upload">data-transfer-upload</UncontrolledTooltip>
+              <Icon imgSrc="plus-sign" id="plus-sign" />
+              <UncontrolledTooltip placement="top" target="plus-sign">plus-sign</UncontrolledTooltip>
+              <Icon imgSrc="minus-sign" id="minus-sign" />
+              <UncontrolledTooltip placement="top" target="minus-sign">minus-sign</UncontrolledTooltip>
+              <Icon imgSrc="delete-sign" id="delete-sign" />
+              <UncontrolledTooltip placement="top" target="delete-sign">delete-sign</UncontrolledTooltip>
+              <Icon imgSrc="check-sign" id="check-sign" />
+              <UncontrolledTooltip placement="top" target="check-sign">check-sign</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline" />
+              <UncontrolledTooltip placement="top" target="plus-outline">plus-outline</UncontrolledTooltip>
+              <Icon imgSrc="minus-outline" id="minus-outline" />
+              <UncontrolledTooltip placement="top" target="minus-outline">minus-outline</UncontrolledTooltip>
+              <Icon imgSrc="delete-outline" id="delete-outline" />
+              <UncontrolledTooltip placement="top" target="delete-outline">delete-outline</UncontrolledTooltip>
+              <Icon imgSrc="check-outline" id="check-outline" />
+              <UncontrolledTooltip placement="top" target="check-outline">check-outline</UncontrolledTooltip>
             </Col>
           </Row>
           <Row>
@@ -107,8 +121,8 @@ const UiIcons = () => (
               <UncontrolledTooltip placement="top" target="microphone">microphone</UncontrolledTooltip>
               <Icon imgSrc="camera" id="camera" />
               <UncontrolledTooltip placement="top" target="camera">camera</UncontrolledTooltip>
-              <Icon imgSrc="icon-save" id="icon-save" />
-              <UncontrolledTooltip placement="top" target="icon-save">icon-save</UncontrolledTooltip>
+              <Icon imgSrc="save-disk" id="save-disk" />
+              <UncontrolledTooltip placement="top" target="save-disk">save-disk</UncontrolledTooltip>
               <Icon imgSrc="mail" id="mail" />
               <UncontrolledTooltip placement="top" target="mail">mail</UncontrolledTooltip>
               <Icon imgSrc="photo" id="photo" />
@@ -121,14 +135,14 @@ const UiIcons = () => (
           </Row>
           <Row>
             <Col>
-              <Icon imgSrc="keyboard-arrow-down" id="keyboard-arrow-down" />
-              <UncontrolledTooltip placement="top" target="keyboard-arrow-down">keyboard-arrow-down</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-left" id="keyboard-arrow-left" />
               <UncontrolledTooltip placement="top" target="keyboard-arrow-left">keyboard-arrow-left</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-right" id="keyboard-arrow-right" />
               <UncontrolledTooltip placement="top" target="keyboard-arrow-right">keyboard-arrow-right</UncontrolledTooltip>
               <Icon imgSrc="keyboard-arrow-up" id="keyboard-arrow-up" />
               <UncontrolledTooltip placement="top" target="keyboard-arrow-up">keyboard-arrow-up</UncontrolledTooltip>
+              <Icon imgSrc="keyboard-arrow-down" id="keyboard-arrow-down" />
+              <UncontrolledTooltip placement="top" target="keyboard-arrow-down">keyboard-arrow-down</UncontrolledTooltip>
               </Col>
           </Row>
         </CardBody>
@@ -139,20 +153,20 @@ const UiIcons = () => (
         <CardBody>
           <Row>
             <Col>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-xs">size="xs"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-xs" size="xs"/>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-sm">size="sm"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-sm" size="sm"/>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-default">size="default"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-default"/>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-sd">size="sd"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-sd" size="sd"/>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-md">size="md"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-md" size="md"/>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-lg">size="lg"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-lg" size="lg"/>
-              <UncontrolledTooltip placement="top" target="plus-sign-outline-xl">size="xl"</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline-xl" size="xl"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-xs">size="xs"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-xs" size="xs"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-sm">size="sm"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-sm" size="sm"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-default">size="default"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-default"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-sd">size="sd"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-sd" size="sd"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-md">size="md"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-md" size="md"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-lg">size="lg"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-lg" size="lg"/>
+              <UncontrolledTooltip placement="top" target="plus-outline-xl">size="xl"</UncontrolledTooltip>
+              <Icon imgSrc="plus-outline" id="plus-outline-xl" size="xl"/>
             </Col>
           </Row>
         </CardBody>
