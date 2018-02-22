@@ -1,16 +1,18 @@
 import addCircle from './add-circle.svg';
-import angleDoubleLeft from './angle-double-left.svg';
-import angleDoubleRight from './angle-double-right.svg';
-import angleLeft from './angle-left.svg';
-import angleRight from './angle-right.svg';
 import apps from './apps.svg';
+import arrowDoubleLeft from './arrow-double-left.svg';
+import arrowDoubleRight from './arrow-double-right.svg';
 import arrowBack from './arrow-back.svg';
 import arrowForward from './arrow-forward.svg';
 import arrowLeft from './arrow-left.svg';
+import arrowRight from './arrow-right.svg';
+import arrowUp from './arrow-up.svg';
+import arrowDown from './arrow-down.svg';
 import back from './back.svg';
 import circleX from './circle-x.svg';
 import circle from './circle.svg';
 import close from './close.svg';
+import closeSm from './close-sm.svg';
 import cog from './cog.svg';
 import deleteIcon from './delete.svg';
 import download from './download.svg';
@@ -42,18 +44,20 @@ import user from './user.svg';
 
 const icons = {
   'add-circle': addCircle,
-  'angle-double-left': angleDoubleLeft,
-  'angle-double-right': angleDoubleRight,
-  'angle-left': angleLeft,
-  'angle-right': angleRight,
   apps,
+  'arrow-double-left': arrowDoubleLeft,
+  'arrow-double-right': arrowDoubleRight,
   'arrow-back': arrowBack,
   'arrow-forward': arrowForward,
   'arrow-left': arrowLeft,
+  'arrow-right': arrowRight,
+  'arrow-up': arrowUp,
+  'arrow-down': arrowDown,
   back,
   'circle-x': circleX,
   circle,
   close,
+  'close-sm': closeSm,
   cog,
   delete: deleteIcon,
   download,

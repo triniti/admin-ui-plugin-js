@@ -56,7 +56,7 @@ const Screen = (props) => {
         <div className="screen-sidenav-header">
           {sidenavHeader && <h3 className="screen-sidenav-header-title">{sidenavHeader}</h3>}
           <Button outline color="hover" className="screen-sidenav-toggler" onClick={toggleSidenav}>
-            <Icon imgSrc="angle-left" alt="close" className="screen-sidenav-toggler-img" />
+            <Icon imgSrc="arrow-left" alt="close" className="screen-sidenav-toggler-img" />
           </Button>
         </div>}
         <div className="screen-sidenav-body">{sidenav}</div>

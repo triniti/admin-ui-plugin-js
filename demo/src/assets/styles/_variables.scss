@@ -431,12 +431,12 @@ $navbar-toggler-border-radius:       0;
 $navbar-dark-color:                 rgba($white,.6);
 $navbar-dark-hover-color:           rgba($white,.825);
 $navbar-dark-active-color:          $white;
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-dark-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M1 4.25h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5z' fill='#fff' /%3e%3c/svg%3e");
 $navbar-dark-toggler-border-color:  transparent;
 
 $navbar-light-color:                rgba($black,.5);
 $navbar-light-hover-color:          rgba($black,.8);
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-light-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M1 4.25h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5z'/%3e%3c/svg%3e");
 $navbar-light-toggler-border-color: transparent;
 
 $nav-pills-link-active-bg:          $white;

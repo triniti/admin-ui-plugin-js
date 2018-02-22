@@ -19,20 +19,24 @@ const UiIcons = () => (
         <CardBody>
           <Row>
             <Col>
-              <Icon imgSrc="angle-double-left" id="angle-double-left" />
-              <UncontrolledTooltip placement="top" target="angle-double-left">angle-double-left</UncontrolledTooltip>
-              <Icon imgSrc="angle-double-right" id="angle-double-right" />
-              <UncontrolledTooltip placement="top" target="angle-double-right">angle-double-right</UncontrolledTooltip>
-              <Icon imgSrc="angle-left" id="angle-left" />
-              <UncontrolledTooltip placement="top" target="angle-left">angle-left</UncontrolledTooltip>
-              <Icon imgSrc="angle-right" id="angle-right" />
-              <UncontrolledTooltip placement="top" target="angle-right">angle-right</UncontrolledTooltip>
+              <Icon imgSrc="arrow-double-left" id="arrow-double-left" />
+              <UncontrolledTooltip placement="top" target="arrow-double-left">arrow-double-left</UncontrolledTooltip>
+              <Icon imgSrc="arrow-double-right" id="arrow-double-right" />
+              <UncontrolledTooltip placement="top" target="arrow-double-right">arrow-double-right</UncontrolledTooltip>
               <Icon imgSrc="arrow-left" id="arrow-left" />
               <UncontrolledTooltip placement="top" target="arrow-left">arrow-left</UncontrolledTooltip>
+              <Icon imgSrc="arrow-right" id="arrow-right" />
+              <UncontrolledTooltip placement="top" target="arrow-right">arrow-right</UncontrolledTooltip>
+              <Icon imgSrc="arrow-up" id="arrow-up" />
+              <UncontrolledTooltip placement="top" target="arrow-up">arrow-up</UncontrolledTooltip>
+              <Icon imgSrc="arrow-down" id="arrow-down" />
+              <UncontrolledTooltip placement="top" target="arrow-down">arrow-down</UncontrolledTooltip>
               <Icon imgSrc="back" id="back" />
               <UncontrolledTooltip placement="top" target="back">back</UncontrolledTooltip>
-              <Icon imgSrc="close" id="close" />
-              <UncontrolledTooltip placement="top" target="close">close</UncontrolledTooltip>
+              <Icon imgSrc="close" id="close-tooltip" />
+              <UncontrolledTooltip placement="top" target="close-tooltip">close</UncontrolledTooltip>
+              <Icon imgSrc="close-sm" id="close-sm" />
+              <UncontrolledTooltip placement="top" target="close-sm">close-sm</UncontrolledTooltip>
               <Icon imgSrc="cog" id="cog" />
               <UncontrolledTooltip placement="top" target="cog">cog</UncontrolledTooltip>
               <Icon imgSrc="delete" id="delete" />
