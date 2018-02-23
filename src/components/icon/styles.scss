@@ -34,6 +34,16 @@
   }
 }
 
+.icon-xxs {
+  width: .675rem; // 10px
+  height: .675rem;
+
+  > svg {
+    width: .675rem;
+    height: .675rem;
+  }
+}
+
 .icon-xs {
   width: .75rem; // 12px
   height: .75rem;
@@ -91,6 +101,16 @@
   > svg {
     width: 2rem;
     height: 2rem;
+  }
+}
+
+.icon-xxl {
+  width: 2.5rem; // 40px
+  height: 2.5rem;
+
+  > svg {
+    width: 2.5rem;
+    height: 2.5rem;
   }
 }
 
