@@ -28,11 +28,15 @@ const UiIcons = () => (
               <IconTooltip iconName="arrow-down"/>
               <IconTooltip iconName="arrow-back"/>
               <IconTooltip iconName="arrow-forward"/>
+              <IconTooltip iconName="backspace"/>
               <IconTooltip iconName="back"/>
-              <IconTooltip iconName="keyboard-backspace"/>
-              <Icon imgSrc="close" id="close-tooltip" />
-              <UncontrolledTooltip placement="top" target="close-tooltip">close</UncontrolledTooltip>
+              <IconTooltip iconName="revert"/>
+              <IconTooltip iconName="close"/>
               <IconTooltip iconName="close-sm"/>
+              <IconTooltip iconName="expand"/>
+              <IconTooltip iconName="full-screen"/>
+              <IconTooltip iconName="compress"/>
+              <IconTooltip iconName="refresh"/>
             </Col>
           </Row>
           <Row>
@@ -47,14 +51,14 @@ const UiIcons = () => (
               <IconTooltip iconName="caret-up"/>
               <IconTooltip iconName="caret-down"/>
               <IconTooltip iconName="sort"/>
+              <IconTooltip iconName="sort-horizontal"/>
               <IconTooltip iconName="apps"/>
               <IconTooltip iconName="list"/>
+              <IconTooltip iconName="ordered-list"/>
               <IconTooltip iconName="list-cards"/>
               <IconTooltip iconName="grid-four-up"/>
               <IconTooltip iconName="grid-three-up"/>
               <IconTooltip iconName="grid-two-up"/>
-              <IconTooltip iconName="expand"/>
-              <IconTooltip iconName="refresh"/>
             </Col>
           </Row>
           <Row>
@@ -65,10 +69,14 @@ const UiIcons = () => (
               <IconTooltip iconName="data-transfer-upload"/>
               <IconTooltip iconName="data-download"/>
               <IconTooltip iconName="data-upload"/>
-              <IconTooltip iconName="plus-sign"/>
-              <IconTooltip iconName="minus-sign"/>
-              <IconTooltip iconName="delete-sign"/>
-              <IconTooltip iconName="check-sign"/>
+              <IconTooltip iconName="cloud-download"/>
+              <IconTooltip iconName="cloud-upload"/>
+              <IconTooltip iconName="plus-outline-square"/>
+              <IconTooltip iconName="minus-outline-square"/>
+              <IconTooltip iconName="plus-solid"/>
+              <IconTooltip iconName="minus-solid"/>
+              <IconTooltip iconName="delete-solid"/>
+              <IconTooltip iconName="check-solid"/>
               <IconTooltip iconName="plus-outline"/>
               <IconTooltip iconName="minus-outline"/>
               <IconTooltip iconName="delete-outline"/>
@@ -83,7 +91,14 @@ const UiIcons = () => (
             <Col>
               <IconTooltip iconName="menu"/>
               <IconTooltip iconName="search"/>
+              <IconTooltip iconName="zoom-in"/>
+              <IconTooltip iconName="zoom-out"/>
               <IconTooltip iconName="user"/>
+              <IconTooltip iconName="user-solid"/>
+              <IconTooltip iconName="activity"/>
+              <IconTooltip iconName="social"/>
+              <IconTooltip iconName="login"/>
+              <IconTooltip iconName="logout"/>
               <IconTooltip iconName="move"/>
               <IconTooltip iconName="trash"/>
               <IconTooltip iconName="microphone"/>
@@ -91,15 +106,57 @@ const UiIcons = () => (
               <IconTooltip iconName="save-disk"/>
               <IconTooltip iconName="mail"/>
               <IconTooltip iconName="photo"/>
+              <IconTooltip iconName="video"/>
               <IconTooltip iconName="calendar"/>
               <IconTooltip iconName="comment"/>
               <IconTooltip iconName="eye"/>
-              <IconTooltip iconName="link"/>
-              <IconTooltip iconName="paperclip"/>
               <IconTooltip iconName="bookmark-outline"/>
               <IconTooltip iconName="bookmark"/>
-              <IconTooltip iconName="login"/>
-              <IconTooltip iconName="logout"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="info-outline"/>
+              <IconTooltip iconName="info-solid"/>
+              <IconTooltip iconName="question-outline"/>
+              <IconTooltip iconName="warning"/>
+              <IconTooltip iconName="warning-outline"/>
+              <IconTooltip iconName="warning-outline-alt"/>
+              <IconTooltip iconName="warning-outline-triangle"/>
+              <IconTooltip iconName="warning-solid"/>
+              <IconTooltip iconName="warning-solid-alt"/>
+              <IconTooltip iconName="warning-solid-triangle"/>
+              <IconTooltip iconName="heart"/>
+              <IconTooltip iconName="star-outline"/>
+              <IconTooltip iconName="star"/>
+              <IconTooltip iconName="notification-outline"/>
+              <IconTooltip iconName="notification"/>
+              <IconTooltip iconName="locked"/>
+              <IconTooltip iconName="unlocked"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="pencil"/>
+              <IconTooltip iconName="edit"/>
+              <IconTooltip iconName="insert"/>
+              <IconTooltip iconName="bold"/>
+              <IconTooltip iconName="italic"/>
+              <IconTooltip iconName="underline"/>
+              <IconTooltip iconName="strikethrough"/>
+              <IconTooltip iconName="highlight"/>
+              <IconTooltip iconName="external"/>
+              <IconTooltip iconName="clock-outline"/>
+              <IconTooltip iconName="clock-solid"/>
+              <IconTooltip iconName="folder"/>
+              <IconTooltip iconName="document"/>
+              <IconTooltip iconName="add-item"/>
+              <IconTooltip iconName="clipboard"/>
+              <IconTooltip iconName="tag-outline"/>
+              <IconTooltip iconName="tag-solid"/>
+              <IconTooltip iconName="link"/>
+              <IconTooltip iconName="paperclip"/>
+              <IconTooltip iconName="delete-key"/>
             </Col>
           </Row>
           <Row>
@@ -112,6 +169,11 @@ const UiIcons = () => (
               <IconTooltip iconName="minus-line-thick"/>
               <IconTooltip iconName="delete-line-thick"/>
               <IconTooltip iconName="check-line-thick"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="triniti" size="xl"/>
             </Col>
           </Row>
         </CardBody>
