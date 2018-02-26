@@ -292,15 +292,33 @@
 }
 
 .btn-radius-circle {
-  width: 2.125rem;
-  height: 2.125rem;
+  width: $button-round-height;
+  height: $button-round-height;
   padding: 0;
   letter-spacing: 0;
   border-radius: $round;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
+  &.btn-sm {
+    width: $button-round-height-sm;
+    height: $button-round-height-sm;
+  }
+  &.btn-md {
+    width: $button-round-height-md;
+    height: $button-round-height-md;
+  }
+  &.btn-lg {
+    width: $button-round-height-lg;
+    height: $button-round-height-lg;
+  }
+  &.btn-xl {
+    width: $button-round-height-xl;
+    height: $button-round-height-xl;
+  }
 }
+
 
 // Show dropdown-menu on hover
 

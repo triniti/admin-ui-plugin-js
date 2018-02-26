@@ -118,6 +118,7 @@ const UiIcons = () => (
             <Col>
               <IconTooltip iconName="info-outline"/>
               <IconTooltip iconName="info-solid"/>
+              <IconTooltip iconName="question"/>
               <IconTooltip iconName="question-outline"/>
               <IconTooltip iconName="warning"/>
               <IconTooltip iconName="warning-outline"/>
@@ -157,6 +158,8 @@ const UiIcons = () => (
               <IconTooltip iconName="link"/>
               <IconTooltip iconName="paperclip"/>
               <IconTooltip iconName="delete-key"/>
+              <IconTooltip iconName="code"/>
+              <IconTooltip iconName="print"/>
             </Col>
           </Row>
           <Row>
@@ -184,7 +187,6 @@ const UiIcons = () => (
         <CardBody>
           <Row>
             <Col>
-
               <IconTooltip iconName="plus-outline" size="xxs"/>
               <IconTooltip iconName="plus-outline" size="xs"/>
               <IconTooltip iconName="plus-outline" size="sm"/>
@@ -194,12 +196,37 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="lg"/>
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
+              <IconTooltip iconName="code" size="alert" />
+              <IconTooltip iconName="document" size="alert" border />
+              <IconTooltip iconName="calendar" size="alert" color="dark" radius="rounded" />
+              <IconTooltip iconName="folder" size="alert" color="dark" radius="rounded" border />
             </Col>
           </Row>
         </CardBody>
       </Card>,
 
       <Card key="icons3">
+        <CardHeader>Icon Colors</CardHeader>
+        <CardBody>
+          <Row>
+            <Col>
+              <IconTooltip iconName="check-outline" size="default"/>
+              <IconTooltip iconName="check-outline" size="md" color="warning"/>
+              <IconTooltip iconName="check-outline" size="lg" color="info"/>
+              <IconTooltip iconName="check-outline" size="xl" color="danger"/>
+              <IconTooltip iconName="check-outline" size="xxl" color="success"/>
+              <IconTooltip iconName="cloud-upload" size="alert-sm" color="dark" radius="rounded" border />
+              <IconTooltip iconName="warning-solid-triangle" size="alert-sm" color="warning" />
+              <IconTooltip iconName="warning" size="alert" banner="lg-sm" border />
+              <IconTooltip iconName="check-line-thick" size="alert" color="success" />
+              <IconTooltip iconName="delete-line-thick" size="alert" color="danger" />
+              <IconTooltip iconName="question" size="alert" color="info" border />
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons4">
         <CardHeader>Button Icons</CardHeader>
         <CardBody>
           <Row>
@@ -211,13 +238,17 @@ const UiIcons = () => (
               <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
+              <Button radius="circle" color="success" size="sm"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="sm"/></Button>
               <Button radius="circle" color="success"><Icon imgSrc="check-line-thick" alt="check-line-thick" /></Button>
+              <Button radius="circle" color="success" size="md"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="md"/></Button>
+              <Button radius="circle" color="success" size="lg"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="lg"/></Button>
+              <Button radius="circle" color="success" size="xl"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="xl"/></Button>
             </Col>
           </Row>
         </CardBody>
       </Card>,
 
-      <Card key="icons4">
+      <Card key="icons5">
         <CardHeader>Spinner</CardHeader>
         <CardBody>
           <Row>

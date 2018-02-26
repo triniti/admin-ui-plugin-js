@@ -597,10 +597,10 @@ class UiButtons extends React.Component {
               <Button radius="circle" color="link-bg">
                 <Icon imgSrc="close" alt="x" />
               </Button>
-              <Button outlineText color="secondary" radius="circle" size="sm">
+              <Button outlineText color="secondary" radius="circle" size="md">
                 <Icon imgSrc="close" alt="x" />
               </Button>
-              <Button radius="circle">
+              <Button radius="circle" size="lg">
                 <Icon imgSrc="close" alt="x" />
               </Button>
               <Button outline color="secondary" radius="none" size="lg">

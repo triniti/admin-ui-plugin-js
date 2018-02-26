@@ -69,7 +69,7 @@ $indigo:  #584bc3;
 $purple:  #8052da;
 $pink:    #de41b2;
 $red:     #f74b4b;
-$orange:  #f99121;
+$orange:  #f99520; // #f99121
 $yellow:  #fbba23;
 $green:   #03caa5; // #03c09d
 $teal:    #00c1b3;
@@ -82,7 +82,7 @@ $info:          $cyan;
 $warning:       $orange;
 $danger:        $red;
 $light:         $gray-200;
-$dark:          $gray-800;
+$dark:          #717274;
 
 
 // additions +++++++++++++++
@@ -344,6 +344,15 @@ $form-check-inline-margin-x:            .75rem !default;
 
 $form-check-inline-input-margin-x:      .3125rem;
 
+// Round button heights
+
+$button-round-height-sm: 1.75rem;
+$button-round-height:    2.125rem;
+$button-round-height-md: 2.5rem;
+$button-round-height-lg: 3.375rem;
+$button-round-height-xl: 4.875rem;
+
+
 // Allows for customizing button radius independently from global border radius
 
 $btn-transition:                 background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -588,6 +597,5 @@ $form-check-height:      1.5rem;
 $form-check-height-md:   1.75rem;
 $form-check-height-lg:   2.5rem;
 $form-check-shadow:      inset 0 0 0 1px $gray-rgba-300;
-
 
 @import "~bootstrap/scss/variables";

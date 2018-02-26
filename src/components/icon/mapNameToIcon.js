@@ -35,6 +35,7 @@ import close from './close.svg';
 import closeSm from './close-sm.svg';
 import cloudDownload from './cloud-download.svg';
 import cloudUpload from './cloud-upload.svg';
+import code from './code.svg';
 import cog from './cog.svg';
 import comment from './comment.svg';
 import compress from './compress.svg';
@@ -80,6 +81,7 @@ import minusLineThick from './minus-line-thick.svg';
 import minusOutline from './minus-outline.svg';
 import minusOutlineSquare from './minus-outline-square.svg';
 import minusSolid from './minus-solid.svg';
+import print from './print.svg';
 import moreHorizontal from './more-horizontal.svg';
 import moreVertical from './more-vertical.svg';
 import move from './move.svg';
@@ -95,6 +97,7 @@ import plusLineThick from './plus-line-thick.svg';
 import plusOutline from './plus-outline.svg';
 import plusOutlineSquare from './plus-outline-square.svg';
 import plusSolid from './plus-solid.svg';
+import question from './question.svg';
 import questionOutline from './question-outline.svg';
 import refresh from './refresh.svg';
 import revert from './revert.svg';
@@ -165,6 +168,7 @@ const icons = {
   'close-sm': closeSm,
   'cloud-download': cloudDownload,
   'cloud-upload': cloudUpload,
+  code,
   cog,
   comment,
   compress,
@@ -225,6 +229,8 @@ const icons = {
   'plus-outline': plusOutline,
   'plus-outline-square': plusOutlineSquare,
   'plus-solid': plusSolid,
+  print,
+  question,
   'question-outline': questionOutline,
   refresh,
   revert,

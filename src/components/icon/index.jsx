@@ -12,8 +12,10 @@ const propTypes = {
   imgSrc: PropTypes.string,
   src: PropTypes.string,
   size: PropTypes.string,
-  inverse: PropTypes.bool,
   toggler: PropTypes.bool,
+  color: PropTypes.string,
+  border: PropTypes.bool,
+  radius: PropTypes.string,
 };
 
 const defaultProps = {
@@ -29,16 +31,20 @@ const Icon = (props) => {
     imgSrc,
     src,
     size,
-    inverse,
     toggler,
+    color,
+    border,
+    radius,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'icon',
     size ? `icon-${size}` : false,
-    inverse ? 'icon-inverse' : false,
     toggler ? 'icon-toggler' : false,
+    color ? `icon-color-${color}` : false,
+    border ? 'icon-border' : false,
+    radius ? `icon-radius-${radius}` : false,
   ), cssModule);
 
   const img = src || mapNameToIcon(imgSrc);
