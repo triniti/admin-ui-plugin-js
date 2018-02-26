@@ -196,10 +196,11 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="lg"/>
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
-              <IconTooltip iconName="code" size="alert" />
-              <IconTooltip iconName="document" size="alert" border />
-              <IconTooltip iconName="calendar" size="alert" color="dark" radius="rounded" />
-              <IconTooltip iconName="folder" size="alert" color="dark" radius="rounded" border />
+              <IconTooltip iconName="code" size="alert-sm" />
+              <IconTooltip iconName="document" size="alert-md" border />
+              <IconTooltip iconName="calendar" size="alert-md" color="dark" radius="rounded" />
+              <IconTooltip iconName="folder" size="alert-lg" color="dark" radius="rounded" border />
+              <IconTooltip iconName="user" size="alert-lg" color="dark" radius="rounded" />
             </Col>
           </Row>
         </CardBody>
@@ -217,10 +218,10 @@ const UiIcons = () => (
               <IconTooltip iconName="check-outline" size="xxl" color="success"/>
               <IconTooltip iconName="cloud-upload" size="alert-sm" color="dark" radius="rounded" border />
               <IconTooltip iconName="warning-solid-triangle" size="alert-sm" color="warning" />
-              <IconTooltip iconName="warning" size="alert" banner="lg-sm" border />
-              <IconTooltip iconName="check-line-thick" size="alert" color="success" />
-              <IconTooltip iconName="delete-line-thick" size="alert" color="danger" />
-              <IconTooltip iconName="question" size="alert" color="info" border />
+              <IconTooltip iconName="warning" size="alert-md" border />
+              <IconTooltip iconName="check-line-thick" size="alert-md" color="success" />
+              <IconTooltip iconName="delete-line-thick" size="alert-lg" color="danger" />
+              <IconTooltip iconName="question" size="alert-lg" color="info" border />
             </Col>
           </Row>
         </CardBody>

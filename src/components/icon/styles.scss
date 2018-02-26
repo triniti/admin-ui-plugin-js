@@ -117,8 +117,8 @@
   }
 }
 
-.icon-alert {
-  width: 7rem; // 40px
+.icon-alert-lg {
+  width: 7rem; // 112px
   height: 7rem;
   border-radius: 7rem;
   background-color: $body-color;
@@ -131,8 +131,8 @@
   }
 }
 
-.icon-alert-sm {
-  width: 5rem; // 40px
+.icon-alert-md {
+  width: 5rem; // 80px
   height: 5rem;
   border-radius: 5rem;
   background-color: $body-color;
@@ -142,6 +142,20 @@
     padding: 1rem;
     width: 5rem;
     height: 5rem;
+  }
+}
+
+.icon-alert-sm {
+  width: 3.375rem; // 54px
+  height: 3.375rem;
+  border-radius: 5rem;
+  background-color: $body-color;
+  color: $white;
+
+  > svg {
+    padding: .5rem;
+    width: 3.375rem;
+    height: 3.375rem;
   }
 }
 
@@ -166,9 +180,12 @@
 .icon-border {
   background-color: transparent;
   color: $body-color;
-  box-shadow: inset 0 0 0 4px $body-color;
+  box-shadow: inset 0 0 0 3px $body-color;
 
-  &.icon-alert {
+  &.icon-alert-md {
+    box-shadow: inset 0 0 0 4px $body-color;
+  }
+  &.icon-alert-lg {
     box-shadow: inset 0 0 0 5px $body-color;
   }
 }
@@ -177,7 +194,8 @@
   .icon-color-#{$color} {
     color: $value;
 
-    &.icon-alert,
+    &.icon-alert-lg,
+    &.icon-alert-md,
     &.icon-alert-sm {
       background-color: $value;
       color: $white;
@@ -185,9 +203,12 @@
     &.icon-border {
       background-color: transparent;
       color: $value;
-      box-shadow: inset 0 0 0 4px $value;
+      box-shadow: inset 0 0 0 3px $value;
 
-      &.icon-alert {
+      &.icon-alert-lg {
+        box-shadow: inset 0 0 0 4px $value;
+      }
+      &.icon-alert-lg {
         box-shadow: inset 0 0 0 5px $value;
       }
     }
