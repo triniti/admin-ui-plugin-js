@@ -39,15 +39,13 @@ input.checkbox-input {
   bottom: 0;
   left: 0;
   content: '';
-  background: transparent url('./check.svg?fill=%23#{$icon-theme-light}') center center / 100% auto no-repeat;
+  background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='22' height='18' viewBox='0 0 22 18'%3e%3cpath fill='%23000000' d='M3.525 6.356L7.767 10.6 18.367 0l3.545 3.525L7.77 17.667 0 9.881z'/%3e%3c/svg%3e")  center center / 60% auto no-repeat;
   opacity: .05;
-  transform: scale(.6);
 }
 
 .checkbox-input:checked + .checkbox-input-label::before {
   opacity: 1;
-  background: transparent url('./check.svg?fill=%23#{$icon-theme-dark}') center center / 100% auto no-repeat;
-  transform: scale(.675);
+  background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='22' height='18' viewBox='0 0 22 18'%3e%3cpath fill='%23ffffff' d='M3.525 6.356L7.767 10.6 18.367 0l3.545 3.525L7.77 17.667 0 9.881z'/%3e%3c/svg%3e")  center center / 67.5% auto no-repeat;
 }
 
 // checkbox-input xs

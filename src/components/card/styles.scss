@@ -42,7 +42,7 @@
   }
 
   .cards-container & {
-    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    box-shadow: $shadow-depth2;
   }
 
 }
@@ -56,25 +56,12 @@
 }
 
 
-.card-body {
+.card-body-indent {
 
-  /*
-  .screen-body > .card & {
-    position: relative;
-    padding: ($padding-xs - .125rem) $padding-xs ($padding-xs + .5rem) $padding-xs;
-
-    @media (min-width: 768px) and (max-width: 1024px) {
-      padding: ($padding-md - .25rem) $padding-md ($padding-md + .5rem) $padding-md;
-    }
-
-    @media (min-width: 1025px) and (max-width: 1599px) {
-      padding: ($padding-lg - .5rem) $padding-lg ($padding-lg + .5rem) $padding-lg;
-    }
-
-    @media (min-width: 1600px) {
-      padding: ($padding-xl - .5rem) $padding-xl ($padding-xl + .5rem) $padding-xl;
-    }
-  }*/
+  @media (min-width: 768px) {
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+  }
 }
 
 .card > .card-body + .card-body {
@@ -175,9 +162,7 @@ h4.card-title {
 // Card Header
 
 .card-header {
-  position: sticky;
-  top: 0;
-  z-index: $zindex-sticky;
+  z-index: 1;
   display: flex;
   flex: 0 0 auto;
   padding: 0 $card-spacer-x;
@@ -201,64 +186,9 @@ h4.card-title {
   }
 
   .screen-sidebar-body > .card:not(:first-child) & {
-      box-shadow: $shadow-depth1, 0 -1px 0 $card-border-color;
+      box-shadow: $shadow-depth2, 0 -1px 0 $card-border-color;
     }
-
-  .screen-body > .card:first-child > & {
-    // margin-top: .75rem;
-  }
-
-  /* .screen-body > .card & {
-    padding: 0;
-    border-bottom: none;
-     border-left: $padding-xs solid transparent;
-    border-right: $padding-xs solid transparent;
-
-    @media (min-width: 768px) {
-      border-left: $padding-md solid transparent;
-      border-right: $padding-md solid transparent;
-    }
-    @media (min-width: 1025px) {
-      border-left: $padding-lg solid transparent;
-      border-right: $padding-lg solid transparent;
-    }
-    @media (min-width: 1600px) {
-      border-left: $padding-xl solid transparent;
-      border-right: $padding-xl solid transparent;
-    }
-
-    &::before {
-      position: absolute;
-      z-index: 1;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      height: 1px;
-      content: '';
-      background-color: $gray-500;
-    }
-  }*/
 }
-
-// CardHeader stretches full width
-
-/*
-.screen-body > .card .card-header,
-.card-header-full-width {
-  padding: 0 $padding-xs !important;
-  border-left: none !important;
-  border-right: none !important;
-
-  @media (min-width: 768px) {
-    padding: 0 $padding-md !important;
-  }
-  @media (min-width: 1025px) {
-    padding: 0 $padding-lg !important;
-  }
-  @media (min-width: 1600px) {
-    padding: 0 $padding-xl !important;
-  }
-}*/
 
 // Subheader - most often used in sidebars
 
@@ -280,24 +210,6 @@ h4.card-title {
 
   &::before {
     display: none;
-  }
-}
-
-.card-spacing-lg .card-footer {
-  padding-left: $padding-xs;
-  padding-left: $padding-xs;
-
-  @media (min-width: 768px) {
-    padding-left: $padding-md;
-    padding-left: $padding-md;
-  }
-  @media (min-width: 1025px) {
-    padding-left: $padding-lg;
-    padding-left: $padding-lg;
-  }
-  @media (min-width: 1600px) {
-    padding-left: $padding-xl;
-    padding-left: $padding-xl;
   }
 }
 

@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { mapToCssModules } from '../utils';
-import './styles.scss';
 
 const UNKNOWN = 0;
 const TRUE_VAL = 1;

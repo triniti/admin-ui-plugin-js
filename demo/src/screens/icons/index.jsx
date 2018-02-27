@@ -2,6 +2,7 @@ import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import IconTooltip from './IconTooltip';
 
 const UiIcons = () => (
   <Screen
@@ -16,103 +17,219 @@ const UiIcons = () => (
     body={[
       <Card key="icons1">
         <CardHeader>Icons</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
-              <Icon imgSrc="angle-double-left" id="angle-double-left" />
-              <UncontrolledTooltip placement="top" target="angle-double-left">angle-double-left</UncontrolledTooltip>
-              <Icon imgSrc="angle-double-right" id="angle-double-right" />
-              <UncontrolledTooltip placement="top" target="angle-double-right">angle-double-right</UncontrolledTooltip>
-              <Icon imgSrc="angle-left" id="angle-left" />
-              <UncontrolledTooltip placement="top" target="angle-left">angle-left</UncontrolledTooltip>
-              <Icon imgSrc="angle-right" id="angle-right" />
-              <UncontrolledTooltip placement="top" target="angle-right">angle-right</UncontrolledTooltip>
-              <Icon imgSrc="arrow-left" id="arrow-left" />
-              <UncontrolledTooltip placement="top" target="arrow-left">arrow-left</UncontrolledTooltip>
-              <Icon imgSrc="back" id="back" />
-              <UncontrolledTooltip placement="top" target="back">back</UncontrolledTooltip>
-              <Icon imgSrc="close" id="close" />
-              <UncontrolledTooltip placement="top" target="close">close</UncontrolledTooltip>
-              <Icon imgSrc="cog" id="cog" />
-              <UncontrolledTooltip placement="top" target="cog">cog</UncontrolledTooltip>
-              <Icon imgSrc="delete" id="delete" />
-              <UncontrolledTooltip placement="top" target="delete">delete</UncontrolledTooltip>
-              <Icon imgSrc="eye" id="eye" />
-              <UncontrolledTooltip placement="top" target="eye">eye</UncontrolledTooltip>
-              <Icon imgSrc="menu" id="menu" />
-              <UncontrolledTooltip placement="top" target="menu">menu</UncontrolledTooltip>
-              <Icon imgSrc="more-vertical" id="more-vertical" />
-              <UncontrolledTooltip placement="top" target="more-vertical">more-vertical</UncontrolledTooltip>
-              <Icon imgSrc="save" id="save" />
-              <UncontrolledTooltip placement="top" target="save">save</UncontrolledTooltip>
-              <Icon imgSrc="search" id="search" />
-              <UncontrolledTooltip placement="top" target="search">search</UncontrolledTooltip>
-              <Icon imgSrc="sort" id="sort" />
-              <UncontrolledTooltip placement="top" target="sort">sort</UncontrolledTooltip>
-              <Icon imgSrc="user" id="user" />
-              <UncontrolledTooltip placement="top" target="user">user</UncontrolledTooltip>
+              <IconTooltip iconName="arrow-double-left"/>
+              <IconTooltip iconName="arrow-double-right"/>
+              <IconTooltip iconName="arrow-left"/>
+              <IconTooltip iconName="arrow-right"/>
+              <IconTooltip iconName="arrow-up"/>
+              <IconTooltip iconName="arrow-down"/>
+              <IconTooltip iconName="arrow-back"/>
+              <IconTooltip iconName="arrow-forward"/>
+              <IconTooltip iconName="backspace"/>
+              <IconTooltip iconName="back"/>
+              <IconTooltip iconName="revert"/>
+              <IconTooltip iconName="close"/>
+              <IconTooltip iconName="close-sm"/>
+              <IconTooltip iconName="expand"/>
+              <IconTooltip iconName="full-screen"/>
+              <IconTooltip iconName="compress"/>
+              <IconTooltip iconName="refresh"/>
             </Col>
           </Row>
           <Row>
             <Col>
-              <Icon imgSrc="upload" id="upload" />
-              <UncontrolledTooltip placement="top" target="upload">upload</UncontrolledTooltip>
-              <Icon imgSrc="download" id="download" />
-              <UncontrolledTooltip placement="top" target="download">download</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign" id="plus-sign" />
-              <UncontrolledTooltip placement="top" target="plus-sign">plus-sign</UncontrolledTooltip>
-              <Icon imgSrc="minus-sign" id="minus-sign" />
-              <UncontrolledTooltip placement="top" target="minus-sign">minus-sign</UncontrolledTooltip>
-              <Icon imgSrc="plus-sign-outline" id="plus-sign-outline" />
-              <UncontrolledTooltip placement="top" target="plus-sign-outline">plus-sign-outline</UncontrolledTooltip>
-              <Icon imgSrc="minus-sign-outline" id="minus-sign-outline" />
-              <UncontrolledTooltip placement="top" target="minus-sign-outline">minus-sign-outline</UncontrolledTooltip>
-              <Icon imgSrc="apps" id="apps" />
-              <UncontrolledTooltip placement="top" target="apps">apps</UncontrolledTooltip>
-              <Icon imgSrc="arrow-back" id="arrow-back" />
-              <UncontrolledTooltip placement="top" target="arrow-back">arrow-back</UncontrolledTooltip>
-              <Icon imgSrc="arrow-forward" id="arrow-forward" />
-              <UncontrolledTooltip placement="top" target="arrow-forward">arrow-forward</UncontrolledTooltip>
-              <Icon imgSrc="circle-x" id="circle-x" />
-              <UncontrolledTooltip placement="top" target="circle-x">circle-x</UncontrolledTooltip>
-              <Icon imgSrc="data-transfer-download" id="data-transfer-download" />
-              <UncontrolledTooltip placement="top" target="data-transfer-download">data-transfer-download</UncontrolledTooltip>
-              <Icon imgSrc="data-transfer-upload" id="data-transfer-upload" />
-              <UncontrolledTooltip placement="top" target="data-transfer-upload">data-transfer-upload</UncontrolledTooltip>
-              <Icon imgSrc="keyboard-arrow-down" id="keyboard-arrow-down" />
-              <UncontrolledTooltip placement="top" target="keyboard-arrow-down">keyboard-arrow-down</UncontrolledTooltip>
-              <Icon imgSrc="keyboard-arrow-left" id="keyboard-arrow-left" />
-              <UncontrolledTooltip placement="top" target="keyboard-arrow-left">keyboard-arrow-left</UncontrolledTooltip>
-              <Icon imgSrc="keyboard-arrow-right" id="keyboard-arrow-right" />
-              <UncontrolledTooltip placement="top" target="keyboard-arrow-right">keyboard-arrow-right</UncontrolledTooltip>
-              <Icon imgSrc="keyboard-arrow-up" id="keyboard-arrow-up" />
-              <UncontrolledTooltip placement="top" target="keyboard-arrow-up">keyboard-arrow-up</UncontrolledTooltip>
-              <Icon imgSrc="keyboard-backspace" id="keyboard-backspace" />
-              <UncontrolledTooltip placement="top" target="keyboard-backspace">keyboard-backspace</UncontrolledTooltip>
+              <IconTooltip iconName="more-vertical"/>
+              <IconTooltip iconName="more-horizontal"/>
+              <IconTooltip iconName="cog"/>
+              <IconTooltip iconName="plus"/>
+              <IconTooltip iconName="minus"/>
+              <IconTooltip iconName="delete"/>
+              <IconTooltip iconName="save"/>
+              <IconTooltip iconName="caret-up"/>
+              <IconTooltip iconName="caret-down"/>
+              <IconTooltip iconName="sort"/>
+              <IconTooltip iconName="sort-horizontal"/>
+              <IconTooltip iconName="apps"/>
+              <IconTooltip iconName="list"/>
+              <IconTooltip iconName="ordered-list"/>
+              <IconTooltip iconName="list-cards"/>
+              <IconTooltip iconName="grid-four-up"/>
+              <IconTooltip iconName="grid-three-up"/>
+              <IconTooltip iconName="grid-two-up"/>
             </Col>
           </Row>
           <Row>
             <Col>
-              <Icon imgSrc="list" id="list" />
-              <UncontrolledTooltip placement="top" target="list">list</UncontrolledTooltip>
-              <Icon imgSrc="grid-four-up" id="grid-four-up" />
-              <UncontrolledTooltip placement="top" target="grid-four-up">grid-four-up</UncontrolledTooltip>
-              <Icon imgSrc="grid-three-up" id="grid-three-up" />
-              <UncontrolledTooltip placement="top" target="grid-three-up">grid-three-up</UncontrolledTooltip>
-              <Icon imgSrc="grid-two-up" id="grid-two-up" />
-              <UncontrolledTooltip placement="top" target="grid-two-up">grid-two-up</UncontrolledTooltip>
-              <Icon imgSrc="move" id="move" />
-              <UncontrolledTooltip placement="top" target="move">move</UncontrolledTooltip>
-              <Icon imgSrc="trash" id="trash" />
-              <UncontrolledTooltip placement="top" target="trash">trash</UncontrolledTooltip>
+              <IconTooltip iconName="upload"/>
+              <IconTooltip iconName="download"/>
+              <IconTooltip iconName="data-transfer-download"/>
+              <IconTooltip iconName="data-transfer-upload"/>
+              <IconTooltip iconName="data-download"/>
+              <IconTooltip iconName="data-upload"/>
+              <IconTooltip iconName="cloud-download"/>
+              <IconTooltip iconName="cloud-upload"/>
+              <IconTooltip iconName="plus-outline-square"/>
+              <IconTooltip iconName="minus-outline-square"/>
+              <IconTooltip iconName="plus-solid"/>
+              <IconTooltip iconName="minus-solid"/>
+              <IconTooltip iconName="delete-solid"/>
+              <IconTooltip iconName="check-solid"/>
+              <IconTooltip iconName="plus-outline"/>
+              <IconTooltip iconName="minus-outline"/>
+              <IconTooltip iconName="delete-outline"/>
+              <IconTooltip iconName="check-outline"/>
+              <IconTooltip iconName="plus-line"/>
+              <IconTooltip iconName="minus-line"/>
+              <IconTooltip iconName="delete-line"/>
+              <IconTooltip iconName="check-line"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="menu"/>
+              <IconTooltip iconName="search"/>
+              <IconTooltip iconName="zoom-in"/>
+              <IconTooltip iconName="zoom-out"/>
+              <IconTooltip iconName="user"/>
+              <IconTooltip iconName="user-solid"/>
+              <IconTooltip iconName="activity"/>
+              <IconTooltip iconName="social"/>
+              <IconTooltip iconName="login"/>
+              <IconTooltip iconName="logout"/>
+              <IconTooltip iconName="move"/>
+              <IconTooltip iconName="trash"/>
+              <IconTooltip iconName="microphone"/>
+              <IconTooltip iconName="camera"/>
+              <IconTooltip iconName="save-disk"/>
+              <IconTooltip iconName="mail"/>
+              <IconTooltip iconName="photo"/>
+              <IconTooltip iconName="video"/>
+              <IconTooltip iconName="calendar"/>
+              <IconTooltip iconName="comment"/>
+              <IconTooltip iconName="eye"/>
+              <IconTooltip iconName="bookmark-outline"/>
+              <IconTooltip iconName="bookmark"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="info-outline"/>
+              <IconTooltip iconName="info-solid"/>
+              <IconTooltip iconName="question"/>
+              <IconTooltip iconName="question-outline"/>
+              <IconTooltip iconName="warning"/>
+              <IconTooltip iconName="warning-outline"/>
+              <IconTooltip iconName="warning-outline-alt"/>
+              <IconTooltip iconName="warning-outline-triangle"/>
+              <IconTooltip iconName="warning-solid"/>
+              <IconTooltip iconName="warning-solid-alt"/>
+              <IconTooltip iconName="warning-solid-triangle"/>
+              <IconTooltip iconName="heart"/>
+              <IconTooltip iconName="star-outline"/>
+              <IconTooltip iconName="star"/>
+              <IconTooltip iconName="notification-outline"/>
+              <IconTooltip iconName="notification"/>
+              <IconTooltip iconName="locked"/>
+              <IconTooltip iconName="unlocked"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="pencil"/>
+              <IconTooltip iconName="edit"/>
+              <IconTooltip iconName="insert"/>
+              <IconTooltip iconName="bold"/>
+              <IconTooltip iconName="italic"/>
+              <IconTooltip iconName="underline"/>
+              <IconTooltip iconName="strikethrough"/>
+              <IconTooltip iconName="highlight"/>
+              <IconTooltip iconName="external"/>
+              <IconTooltip iconName="clock-outline"/>
+              <IconTooltip iconName="clock-solid"/>
+              <IconTooltip iconName="folder"/>
+              <IconTooltip iconName="document"/>
+              <IconTooltip iconName="add-item"/>
+              <IconTooltip iconName="clipboard"/>
+              <IconTooltip iconName="tag-outline"/>
+              <IconTooltip iconName="tag-solid"/>
+              <IconTooltip iconName="link"/>
+              <IconTooltip iconName="paperclip"/>
+              <IconTooltip iconName="delete-key"/>
+              <IconTooltip iconName="code"/>
+              <IconTooltip iconName="print"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="arrow-left-thick"/>
+              <IconTooltip iconName="arrow-right-thick"/>
+              <IconTooltip iconName="arrow-up-thick"/>
+              <IconTooltip iconName="arrow-down-thick"/>
+              <IconTooltip iconName="plus-line-thick"/>
+              <IconTooltip iconName="minus-line-thick"/>
+              <IconTooltip iconName="delete-line-thick"/>
+              <IconTooltip iconName="check-line-thick"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <IconTooltip iconName="triniti" size="xl"/>
             </Col>
           </Row>
         </CardBody>
       </Card>,
 
       <Card key="icons2">
+        <CardHeader>Icon Sizes</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <IconTooltip iconName="plus-outline" size="xxs"/>
+              <IconTooltip iconName="plus-outline" size="xs"/>
+              <IconTooltip iconName="plus-outline" size="sm"/>
+              <IconTooltip iconName="plus-outline" size="default"/>
+              <IconTooltip iconName="plus-outline" size="sd"/>
+              <IconTooltip iconName="plus-outline" size="md"/>
+              <IconTooltip iconName="plus-outline" size="lg"/>
+              <IconTooltip iconName="plus-outline" size="xl"/>
+              <IconTooltip iconName="plus-outline" size="xxl"/>
+              <IconTooltip iconName="code" size="alert-sm" />
+              <IconTooltip iconName="document" size="alert-md" border />
+              <IconTooltip iconName="calendar" size="alert-md" color="dark" radius="rounded" />
+              <IconTooltip iconName="folder" size="alert-lg" color="dark" radius="rounded" border />
+              <IconTooltip iconName="user" size="alert-lg" color="dark" radius="rounded" />
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons3">
+        <CardHeader>Icon Colors</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <IconTooltip iconName="check-outline" size="default"/>
+              <IconTooltip iconName="check-outline" size="md" color="warning"/>
+              <IconTooltip iconName="check-outline" size="lg" color="info"/>
+              <IconTooltip iconName="check-outline" size="xl" color="danger"/>
+              <IconTooltip iconName="check-outline" size="xxl" color="success"/>
+              <IconTooltip iconName="cloud-upload" size="alert-sm" color="dark" radius="rounded" border />
+              <IconTooltip iconName="warning-solid-triangle" size="alert-sm" color="warning" />
+              <IconTooltip iconName="warning" size="alert-md" border />
+              <IconTooltip iconName="check-line-thick" size="alert-md" color="success" />
+              <IconTooltip iconName="delete-line-thick" size="alert-lg" color="danger" />
+              <IconTooltip iconName="question" size="alert-lg" color="info" border />
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons4">
         <CardHeader>Button Icons</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <Button outline radius="circle" color="link"><Icon imgSrc="cog" alt="edit" /></Button>
@@ -122,15 +239,19 @@ const UiIcons = () => (
               <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
-              <Button radius="circle" color="dark"><Icon imgSrc="menu" alt="menu" inverse /></Button>
+              <Button radius="circle" color="success" size="sm"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="sm"/></Button>
+              <Button radius="circle" color="success"><Icon imgSrc="check-line-thick" alt="check-line-thick" /></Button>
+              <Button radius="circle" color="success" size="md"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="md"/></Button>
+              <Button radius="circle" color="success" size="lg"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="lg"/></Button>
+              <Button radius="circle" color="success" size="xl"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="xl"/></Button>
             </Col>
           </Row>
         </CardBody>
       </Card>,
 
-      <Card key="icons3">
+      <Card key="icons5">
         <CardHeader>Spinner</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <Spinner />

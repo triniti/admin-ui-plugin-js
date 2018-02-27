@@ -6,49 +6,216 @@
 // Base styles
 //
 
-.icon {
-  display: inline-block;
-  max-width: 1rem;  // 16px
-  height: 1rem;
+.icon > svg path {
+  fill: currentColor;
+}
 
-  .btn:not(.btn-radius-circle) & {
+.icon {
+  position: relative;
+  display: inline-flex;
+  height: 1rem;
+  width: 1rem; // 16px
+  align-self: center;
+
+  .btn & {
     margin-right: .5rem;
+  }
+
+  .btn-radius-circle & {
+    margin-right: 0;
+  }
+
+  > svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 1rem;
+    width: 1rem;
+  }
+  & + .icon {
+    margin-left: .5rem;
+  }
+}
+
+.icon-xxs {
+  width: .675rem; // 10px
+  height: .675rem;
+
+  > svg {
+    width: .675rem;
+    height: .675rem;
   }
 }
 
 .icon-xs {
-  max-width: .75rem;   // 12px
+  width: .75rem; // 12px
   height: .75rem;
+
+  > svg {
+    width: .75rem;
+    height: .75rem;
+  }
 }
 
 .icon-sm {
-  max-width: .875rem;   // 14px
+  width: .875rem; // 14px
   height: .875rem;
+
+  > svg {
+    width: .875rem;
+    height: .875rem;
+  }
 }
 
 .icon-sd {
-  max-width: 1.0625rem;   // 17px
-  height: 1.0625rem;
+  width: 1.125rem; // 18px
+  height: 1.125rem;
+
+  > svg {
+    width: 1.125rem;
+    height: 1.125rem;
+  }
 }
 
 .icon-md {
-  max-width: 1.125rem;   // 18px
-  height: 1.125rem;
+  width: 1.25rem; // 20px
+  height: 1.25rem;
+
+  > svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }
 
 .icon-lg {
-  max-width: 1.25rem;   // 20px
-  height: 1.25rem;
+  width: 1.5rem; // 24px
+  height: 1.5rem;
+
+  > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .icon-xl {
-  max-width: 1.375rem !important;;   // 22px
-  height: 1.375rem !important;;
+  width: 2rem; // 32px
+  height: 2rem;
+
+  > svg {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
-.icon + .icon {
-  margin-left: .75rem;
+.icon-xxl {
+  width: 2.5rem; // 40px
+  height: 2.5rem;
+
+  > svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
+
+.icon-alert-lg {
+  width: 7rem; // 112px
+  height: 7rem;
+  border-radius: 7rem;
+  background-color: $body-color;
+  color: $white;
+
+  > svg {
+    padding: 1.25rem;
+    width: 7rem;
+    height: 7rem;
+  }
+}
+
+.icon-alert-md {
+  width: 5rem; // 80px
+  height: 5rem;
+  border-radius: 5rem;
+  background-color: $body-color;
+  color: $white;
+
+  > svg {
+    padding: 1rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+.icon-alert-sm {
+  width: 3.375rem; // 54px
+  height: 3.375rem;
+  border-radius: 5rem;
+  background-color: $body-color;
+  color: $white;
+
+  > svg {
+    padding: .5rem;
+    width: 3.375rem;
+    height: 3.375rem;
+  }
+}
+
+.icon-radius-rounded {
+  border-radius: .25rem;
+
+  &.icon-alert,
+  &.icon-alert-sm {
+    border-radius: .5rem;
+  }
+}
+
+.icon-radius-none {
+  border-radius: 0;
+
+  &.icon-alert,
+  &.icon-alert-sm {
+    border-radius: 0;
+  }
+}
+
+.icon-border {
+  background-color: transparent;
+  color: $body-color;
+  box-shadow: inset 0 0 0 3px $body-color;
+
+  &.icon-alert-md {
+    box-shadow: inset 0 0 0 4px $body-color;
+  }
+  &.icon-alert-lg {
+    box-shadow: inset 0 0 0 5px $body-color;
+  }
+}
+
+@each $color, $value in $theme-colors {
+  .icon-color-#{$color} {
+    color: $value;
+
+    &.icon-alert-lg,
+    &.icon-alert-md,
+    &.icon-alert-sm {
+      background-color: $value;
+      color: $white;
+    }
+    &.icon-border {
+      background-color: transparent;
+      color: $value;
+      box-shadow: inset 0 0 0 3px $value;
+
+      &.icon-alert-lg {
+        box-shadow: inset 0 0 0 4px $value;
+      }
+      &.icon-alert-lg {
+        box-shadow: inset 0 0 0 5px $value;
+      }
+    }
+  }
+}
+
+// icon toggler
 
 .icon-toggler {
   position: absolute;
@@ -63,10 +230,4 @@
 
 .active > .icon-toggler {
   transform: rotate(90deg);
-}
-
-img.icon-inverse,
-.icon-inverse > img {
-  filter: invert(1);
-  opacity: 1;
 }

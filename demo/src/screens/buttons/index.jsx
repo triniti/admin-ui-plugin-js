@@ -636,19 +636,17 @@ class UiButtons extends React.Component {
               </Button>
             </CardHeader>
             <CardBody>
-              <Button color="hover" radius="circle">×</Button>
-              <Button outline color="link" radius="circle">×</Button>
               <Button radius="circle" color="link-bg">
                 <Icon imgSrc="close" alt="x" />
               </Button>
-              <Button outline radius="circle" size="sm">
+              <Button outlineText color="secondary" radius="circle" size="md">
                 <Icon imgSrc="close" alt="x" />
               </Button>
-              <Button radius="circle">
+              <Button radius="circle" size="lg">
                 <Icon imgSrc="close" alt="x" />
               </Button>
-              <Button outline radius="none" size="lg">
-                <Icon imgSrc="close" alt="x" />
+              <Button outline color="secondary" radius="none" size="lg">
+                <Icon imgSrc="close" alt="x" className="mr-0"/>
               </Button>
               <Button radius="round" outline>
                 <Icon imgSrc="close" alt="x" /> <span>Close Me Please</span>

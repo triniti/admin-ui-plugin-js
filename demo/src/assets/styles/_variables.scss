@@ -69,7 +69,7 @@ $indigo:  #584bc3;
 $purple:  #8052da;
 $pink:    #de41b2;
 $red:     #f74b4b;
-$orange:  #f99121;
+$orange:  #f99520; // #f99121
 $yellow:  #fbba23;
 $green:   #03caa5; // #03c09d
 $teal:    #00c1b3;
@@ -82,7 +82,7 @@ $info:          $cyan;
 $warning:       $orange;
 $danger:        $red;
 $light:         $gray-200;
-$dark:          $gray-800;
+$dark:          #717274;
 
 
 // additions +++++++++++++++
@@ -187,6 +187,8 @@ $padding-lg:         2rem;
 $padding-md:         1.5rem;
 $padding-sm:         1.25rem;
 $padding-xs:         1rem;
+
+$padding-content-bottom: 15rem;
 
 
 // Common Text Shadow
@@ -342,6 +344,15 @@ $form-check-inline-margin-x:            .75rem !default;
 
 $form-check-inline-input-margin-x:      .3125rem;
 
+// Round button heights
+
+$button-round-height-sm: 1.75rem;
+$button-round-height:    2.125rem;
+$button-round-height-md: 2.5rem;
+$button-round-height-lg: 3.375rem;
+$button-round-height-xl: 4.875rem;
+
+
 // Allows for customizing button radius independently from global border radius
 
 $btn-transition:                 background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -368,8 +379,11 @@ $form-control-radius:         2px;
 
 $form-item-spacing:           .5rem;
 
-$input-focus-border-color:       $gray-700;
-// $input-focus-box-shadow:         none;
+$input-focus-width:       1px;
+
+$custom-control-indicator-focus-box-shadow:     0 0 0 1px $body-bg;
+
+$input-focus-box-shadow:  0 0 0 $input-focus-width rgba($component-active-bg, .25);
 
 $input-placeholder-color:        $text-muted;
 
@@ -429,12 +443,12 @@ $navbar-toggler-border-radius:       0;
 $navbar-dark-color:                 rgba($white,.6);
 $navbar-dark-hover-color:           rgba($white,.825);
 $navbar-dark-active-color:          $white;
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-dark-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-dark-toggler-icon-bg:       url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M1 4.25h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5z' fill='#fff' /%3e%3c/svg%3e");
 $navbar-dark-toggler-border-color:  transparent;
 
 $navbar-light-color:                rgba($black,.5);
 $navbar-light-hover-color:          rgba($black,.8);
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='#{$navbar-light-color}' d='M17.5 6h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 11h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1zM17.5 16h-15a.5.5 0 0 1 0-1h15a.5.5 0 0 1 0 1z'/%3E%3C/svg%3E"), "#", "%23");
+$navbar-light-toggler-icon-bg:      url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M1 4.25h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5zm0 7h22v1.5H1v-1.5z'/%3e%3c/svg%3e");
 $navbar-light-toggler-border-color: transparent;
 
 $nav-pills-link-active-bg:          $white;
@@ -571,11 +585,11 @@ $input-group-btn-border-color:   $gray-700;
 
 // Shadow Depths
 
-$shadow-card:                    0 1px 2px rgba(0, 0, 0, 0.2), 0 -1px 0 rgba(0, 0, 0, 0.05);
+$shadow-card:                    0 1px 1px rgba(0, 0, 0, 0.15), 0 -1px 0 rgba(0, 0, 0, 0.05);
 $shadow-depth0:                  none;
 $shadow-depth1:                  0 1px 1px rgba(0,0,0,0.1);
-$shadow-depth2:                  0 1px 2px rgba(0,0,0,0.1);
-$shadow-depth3:                  0 1px 2px rgba(0,0,0,0.2);
+$shadow-depth2:                  0 1px 1px rgba(0,0,0,0.15);
+$shadow-depth3:                  0 1px 2px rgba(0,0,0,0.1);
 $shadow-depth4:                  inset 0 0 0 1px rgba(0,0,0,0.0625), 0 1px 2px rgba(0,0,0,0.2), 0 14px 14px -8px rgba(0,0,0,0.2);
 
 // Checkbox Radio Switch Heights
@@ -586,6 +600,5 @@ $form-check-height:      1.5rem;
 $form-check-height-md:   1.75rem;
 $form-check-height-lg:   2.5rem;
 $form-check-shadow:      inset 0 0 0 1px $gray-rgba-300;
-
 
 @import "~bootstrap/scss/variables";

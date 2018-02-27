@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../button';
-import iconClose from './close.svg';
+import Icon from '../icon';
 
 const UserNavCloser = ({ handleClick }) => (
   <Button
@@ -9,9 +9,9 @@ const UserNavCloser = ({ handleClick }) => (
     color="hover"
     size="sm"
     onClick={handleClick}
-    className="mb-0"
+    className="mb-0 ml-auto pr-3"
   >
-    <img src={iconClose} alt="close" />
+    <Icon imgSrc="close" id="close" className="mr-0" />
   </Button>
 );
 

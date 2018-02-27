@@ -20,9 +20,8 @@
 
   &:focus {
     border-color: $secondary;
-    // box-shadow: none !important;
+    color: $body-color;
     background-color: $white !important;
-    box-shadow: $shadow-depth2;
   }
 }
 
@@ -61,10 +60,10 @@ select:not([multiple]) {
   -webkit-padding-end: 1.75rem;
   -webkit-padding-start: .875rem;
   -webkit-user-select: none;
-  background-image: url('./sort.svg?fill=%23#{$icon-theme-light}');
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M5 9h14l-6.079 6.586a1.233 1.233 0 0 1-1.842 0L5 9z' fill='%23999999'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
-  background-position: right .5rem center;
-  background-size: auto 14px;
+  background-position: right .55rem center;
+  background-size: auto 16px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -157,7 +156,6 @@ input[type='text']:focus,
 .was-validated .form-control:valid,
 .was-validated .custom-select:valid {
   background-color: $body-bg;
-  // box-shadow: 0 1px 3px 0px $gray-rgba-400 !important;
 }
 
 .form-label-strong {

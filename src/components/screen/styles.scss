@@ -103,6 +103,7 @@ $sidenav-width:     300px;
   display: flex;
   flex: 1 1 100%;
   flex-direction: column;
+  padding-bottom: $padding-content-bottom;
   min-height: 0;
   width: auto;
   overflow: hidden;
@@ -250,11 +251,11 @@ $sidenav-width:     300px;
 }
 
 .screen-body-content {
-  padding: 0 $padding-sm;
+  padding: 0 $padding-sm $padding-content-bottom $padding-sm;
   margin: $padding-sm auto;
 
   @media (min-width: 768px) {
-    padding: 0 $padding-md;
+    padding: 0 $padding-md $padding-content-bottom $padding-md;
     margin: $padding-md auto;
   }
 }
@@ -314,6 +315,7 @@ $sidenav-width:     300px;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   -ms-overflow-style: none;
   width: 100%;
+  padding-bottom: $padding-content-bottom;
 }
 
 .screen-sidebar-toggler {

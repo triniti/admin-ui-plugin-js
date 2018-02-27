@@ -141,10 +141,10 @@
     transform: rotate(0deg);
     text-align: center;
     vertical-align: middle;
-    background: transparent url('./angle-left.svg?fill=%23#{$icon-theme-light}') center center / auto 14px no-repeat;
+    background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3e%3cpath d='M5.207 8.471l7.146 7.147-.707.707-7.853-7.854L11.647.618l.707.707-7.147 7.146z' fill='%23000000'/%3e%3c/svg%3e") center center / auto 14px no-repeat;
   }
   .navbar-dark .main-nav .nav-link[aria-haspopup='true']::after {
-    background: transparent url('./angle-left.svg?fill=%23#{$icon-theme-dark}') center center / auto 14px no-repeat;
+    background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3e%3cpath d='M5.207 8.471l7.146 7.147-.707.707-7.853-7.854L11.647.618l.707.707-7.147 7.146z' fill='%23ffffff'/%3e%3c/svg%3e") center center / auto 14px no-repeat;
   }
   .main-nav .show > .nav-link::after {
     transform: rotate(-90deg);

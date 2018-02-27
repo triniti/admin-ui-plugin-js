@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.4.4
+* Remove datalist component.
+* issue #66: Add Parameter to Checkbox to use a button instead of check icon.
+* issue #65: Update Icons to insert SVG instead of Data64.
+
+
 ## v0.4.3
 * Add createLazyComponent HOC.
 * Add button style to checkbox component.  Allows for style parameters from Button component with text from children.

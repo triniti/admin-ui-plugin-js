@@ -9,9 +9,9 @@ import {
   CardBody,
   CardHeader,
   CardTitle,
+  Icon,
   Screen,
 } from '../../../../src/components';
-import iconClose from '../../assets/img/svg/icons/close.svg';
 
 const UiBreadcrumb = () => (
   <Screen
@@ -36,7 +36,7 @@ const UiBreadcrumb = () => (
             <BreadcrumbItem active>Data</BreadcrumbItem>
           </Breadcrumb>
           <Button outline color="link" radius="circle">
-            <img src={iconClose} alt="x" />
+            <Icon imgSrc="close-sm"/>
           </Button>
         </CardHeader>
         <CardBody>
