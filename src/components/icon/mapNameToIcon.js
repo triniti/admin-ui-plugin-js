@@ -42,7 +42,7 @@ import compress from './compress.svg';
 import dataDownload from './data-download.svg';
 import dataUpload from './data-upload.svg';
 import deleteIcon from './delete.svg';
-import deleteKey from './delete-key.svg'
+import deleteKey from './delete-key.svg';
 import deleteLine from './delete-line.svg';
 import deleteLineThick from './delete-line-thick.svg';
 import deleteOutline from './delete-outline.svg';
