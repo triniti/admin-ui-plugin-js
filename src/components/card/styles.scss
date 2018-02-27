@@ -175,9 +175,9 @@ h4.card-title {
 // Card Header
 
 .card-header {
-  position: sticky;
-  top: 0;
-  z-index: $zindex-sticky;
+  // position: sticky;
+  // top: 0;
+  // z-index: $zindex-sticky;
   display: flex;
   flex: 0 0 auto;
   padding: 0 $card-spacer-x;
