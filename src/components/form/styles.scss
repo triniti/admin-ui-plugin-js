@@ -20,6 +20,7 @@
 
   &:focus {
     border-color: $secondary;
+    color: $body-color;
     // box-shadow: none !important;
     background-color: $white !important;
     // box-shadow: $shadow-depth2;

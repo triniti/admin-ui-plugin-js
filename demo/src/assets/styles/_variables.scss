@@ -379,8 +379,9 @@ $form-control-radius:         2px;
 
 $form-item-spacing:           .5rem;
 
-$input-focus-border-color:       $gray-700;
-$input-focus-box-shadow:         0 0 0 3px rgba(8, 160, 232, .2);
+$input-focus-width:       1px;
+$input-focus-color:       rgba($component-active-bg, .25);
+$input-focus-box-shadow:  0 0 4px $input-focus-width $input-focus-color;
 
 $input-placeholder-color:        $text-muted;
 
