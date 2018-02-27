@@ -17,7 +17,7 @@ const UiIcons = () => (
     body={[
       <Card key="icons1">
         <CardHeader>Icons</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <IconTooltip iconName="arrow-double-left"/>
@@ -184,7 +184,7 @@ const UiIcons = () => (
 
       <Card key="icons2">
         <CardHeader>Icon Sizes</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <IconTooltip iconName="plus-outline" size="xxs"/>
@@ -208,7 +208,7 @@ const UiIcons = () => (
 
       <Card key="icons3">
         <CardHeader>Icon Colors</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <IconTooltip iconName="check-outline" size="default"/>
@@ -229,7 +229,7 @@ const UiIcons = () => (
 
       <Card key="icons4">
         <CardHeader>Button Icons</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <Button outline radius="circle" color="link"><Icon imgSrc="cog" alt="edit" /></Button>
@@ -251,7 +251,7 @@ const UiIcons = () => (
 
       <Card key="icons5">
         <CardHeader>Spinner</CardHeader>
-        <CardBody>
+        <CardBody indent>
           <Row>
             <Col>
               <Spinner />

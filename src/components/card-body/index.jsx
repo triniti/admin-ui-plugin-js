@@ -7,7 +7,7 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  spacing: PropTypes.string,
+  indent: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -18,14 +18,14 @@ const CardBody = (props) => {
   const {
     className,
     cssModule,
-    spacing,
+    indent,
     tag: Tag,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'card-body',
-    spacing ? `card-body-spacing-${spacing}` : false,
+    indent ? `card-body-indent` : false,
   ), cssModule);
 
   return (
