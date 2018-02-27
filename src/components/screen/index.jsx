@@ -69,7 +69,7 @@ const Screen = (props) => {
           <h1 className="screen-header-title">
             <Breadcrumb>
               {breadcrumbs.map(breadcrumb => (
-                <BreadcrumbItem>
+                <BreadcrumbItem key={breadcrumb.text}>
                   {breadcrumb.to && <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>}
                   {!breadcrumb.to && breadcrumb.text}
                 </BreadcrumbItem>

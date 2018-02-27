@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.4.3
+* Add createLazyComponent HOC.
+* Add button style to checkbox component.  Allows for style parameters from Button component with text from children.
+* Fix issue #67: breadcrumbs created by "screen" need a "key" prop.
+
+
 ## v0.4.2
 * Add depth to the design with a darker background, drop shadows and gradient buttons.
 * Center cards.

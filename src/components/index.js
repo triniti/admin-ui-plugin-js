@@ -1,3 +1,4 @@
+import createLazyComponent from './createLazyComponent';
 import ActionButton from './action-button';
 import Alert from './alert';
 import AlertBar from './alert-bar';
@@ -106,6 +107,7 @@ import {
 import UncontrolledCarousel from './uncontrolled-carousel';
 
 export {
+  createLazyComponent,
   ActionButton,
   Alert,
   AlertBar,

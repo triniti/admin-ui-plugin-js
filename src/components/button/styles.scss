@@ -28,6 +28,16 @@
   &.d-block {
     margin-right: 0;
   }
+
+  .checkbox-input-button & {
+    text-transform: none;
+  }
+
+  .checkbox-input:checked + .checkbox-input-button & {
+    color: $white !important;
+    background: theme-color("secondary");
+    border-color: darken(theme-color("secondary"), 5%);
+  }
 }
 
 @each $color, $value in $theme-colors {
@@ -277,8 +287,23 @@
   padding-right: $input-btn-padding-x + .25rem;
 
   &.btn-sm {
-    padding-left: $input-btn-padding-x;
-    padding-right: $input-btn-padding-x;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .checkbox-input-button &.btn {
+    padding-left: 1rem;
+    padding-right: .75rem;
+  }
+
+  .checkbox-input-button &.btn-sm {
+    padding-left: .675rem;
+    padding-right: .5rem;
+  }
+
+  .checkbox-input-button &.btn-lg {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
   }
 }
 
