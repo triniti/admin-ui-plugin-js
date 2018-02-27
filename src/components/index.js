@@ -33,7 +33,6 @@ import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
-import Datalist from './datalist';
 import Divider from './divider';
 import Dropdown from './dropdown';
 import DropdownItem from './dropdown-item';
@@ -142,7 +141,6 @@ export {
   Col,
   Collapse,
   Container,
-  Datalist,
   Divider,
   Dropdown,
   DropdownItem,
