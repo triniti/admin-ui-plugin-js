@@ -97,6 +97,11 @@ a:not([href]):not([tabindex]),
   cursor: pointer;
 }
 
+.sticky-top {
+  position: -webkit-sticky !important;
+  position: sticky !important;
+}
+
 // Layout
 
 #wrapper {
