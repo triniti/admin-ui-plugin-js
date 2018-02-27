@@ -22,7 +22,7 @@
     border-color: $secondary;
     // box-shadow: none !important;
     background-color: $white !important;
-    box-shadow: $shadow-depth2;
+    // box-shadow: $shadow-depth2;
   }
 }
 
@@ -61,10 +61,10 @@ select:not([multiple]) {
   -webkit-padding-end: 1.75rem;
   -webkit-padding-start: .875rem;
   -webkit-user-select: none;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath d='M7.999 10.597l6.307-6.307a.991.991 0 0 1 1.402 1.402L8.7 12.7a.991.991 0 0 1-1.402 0L.29 5.692A.991.991 0 1 1 1.692 4.29l6.307 6.307z' fill='%23555555'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M5 9h14l-6.079 6.586a1.233 1.233 0 0 1-1.842 0L5 9z' fill='%23999999'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right .55rem center;
-  background-size: auto 12px;
+  background-size: auto 16px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
