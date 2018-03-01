@@ -150,7 +150,7 @@ class UiInputGroup extends React.Component {
 
           <Card key="imput2" className="mb-0">
             <CardHeader fullWidth>Form theme="white" on BG Color</CardHeader>
-            <CardBody className="bg-light" main>
+            <CardBody className="bg-light" indent>
               <Row>
                 <Col>
                   <InputGroup>

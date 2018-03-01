@@ -121,7 +121,7 @@ class UiForm extends React.Component {
 
           <Card key="form2">
             <CardHeader>Form Feedback</CardHeader>
-            <CardBody>
+            <CardBody indent>
               <Row>
                 <Col>
                   <CardTitle tag="h3">Card Title H3</CardTitle>

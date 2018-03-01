@@ -59,7 +59,7 @@
 .card-body-indent {
 
   @media (min-width: 768px) {
-    padding: 2rem 2.5rem 2.5rem 2.5rem;
+    padding: 2.5rem;
   }
 }
 
@@ -161,7 +161,6 @@ h4.card-title {
 // Card Header
 
 .card-header {
-  z-index: 1;
   display: flex;
   flex: 0 0 auto;
   padding: 0 $card-spacer-x;
