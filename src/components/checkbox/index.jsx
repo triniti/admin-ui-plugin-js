@@ -63,7 +63,7 @@ const Checkbox = (props) => {
   return [
     <Input type={type} id={id} className={classes} key={`${name}-checkbox-input`} {...attributes} />,
     <Label for={id} className={inputClasses} key={`${name}-checkbox-label`}>
-      {button && <Button tag="span" className={buttonClasses}>{children} <Icon imgSrc="plus-sign-outline" className={iconClasses}/><Icon imgSrc="minus-sign" className={iconClasses} /></Button>}
+      {button && <Button tag="span" className={buttonClasses}>{children} <Icon imgSrc="plus-outline" className={iconClasses}/><Icon imgSrc="minus-solid" className={iconClasses} /></Button>}
     </Label>,
   ];
 };

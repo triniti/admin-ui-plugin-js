@@ -155,7 +155,7 @@ class UiForm extends React.Component {
             <CardBody indent>
               <Row>
                 <Col sm="12">
-                  <Form inline className="mt-3">
+                  <Form inline>
                     <FormGroup>
                       <Label for="exampleEmail4" hidden>Email</Label>
                       <Input type="email" name="email" id="exampleEmail4" placeholder="Email" radius="round" />

@@ -59,8 +59,7 @@
 .card-body-indent {
 
   @media (min-width: 768px) {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    padding: 2rem 2.5rem 2.5rem 2.5rem;
   }
 }
 
@@ -186,8 +185,16 @@ h4.card-title {
   }
 
   .screen-sidebar-body > .card:not(:first-child) & {
-      box-shadow: $shadow-depth2, 0 -1px 0 $card-border-color;
+      box-shadow: $shadow-depth2, 0 -1px 0 $gray-400;
     }
+}
+
+.card-header-toggler {
+ box-shadow: 0 -1px 0 $gray-400;
+
+ .card:first-child & {
+  box-shadow: none;
+ }
 }
 
 // Subheader - most often used in sidebars

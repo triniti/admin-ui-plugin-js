@@ -3,6 +3,7 @@ import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
+import IconList from './IconList';
 
 const UiIcons = () => (
   <Screen
@@ -206,10 +207,8 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
               <IconTooltip iconName="code" size="alert-sm" />
-              <IconTooltip iconName="document" size="alert-md" border />
-              <IconTooltip iconName="calendar" size="alert-md" color="dark" radius="rounded" />
-              <IconTooltip iconName="folder" size="alert-lg" color="dark" radius="rounded" border />
-              <IconTooltip iconName="user" size="alert-lg" color="dark" radius="rounded" />
+              <IconTooltip iconName="document" size="alert-md" color="dark" />
+              <IconTooltip iconName="check-line-thick" size="alert-lg" color="success" border />
             </Col>
           </Row>
         </CardBody>
@@ -289,6 +288,152 @@ const UiIcons = () => (
                 <span className="loading-children">children</span>
               </div>
             </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons6">
+        <CardHeader>Icon Names</CardHeader>
+        <CardBody indent>
+          <Row>
+            <IconList iconName="activity"/>
+            <IconList iconName="add-item"/>
+            <IconList iconName="apps"/>
+            <IconList iconName="archive"/>
+            <IconList iconName="arrow-double-left"/>
+            <IconList iconName="arrow-double-right"/>
+            <IconList iconName="arrow-left"/>
+            <IconList iconName="arrow-right"/>
+            <IconList iconName="arrow-left-thick"/>
+            <IconList iconName="arrow-right-thick"/>
+            <IconList iconName="arrow-up-thick"/>
+            <IconList iconName="arrow-down-thick"/>
+            <IconList iconName="arrow-back"/>
+            <IconList iconName="arrow-down"/>
+            <IconList iconName="arrow-forward"/>
+            <IconList iconName="arrow-up"/>
+            <IconList iconName="audio"/>
+            <IconList iconName="back"/>
+            <IconList iconName="backspace"/>
+            <IconList iconName="bold"/>
+            <IconList iconName="bookmark"/>
+            <IconList iconName="bookmark-outline"/>
+            <IconList iconName="box"/>
+            <IconList iconName="calendar"/>
+            <IconList iconName="camera"/>
+            <IconList iconName="caret-down"/>
+            <IconList iconName="caret-up"/>
+            <IconList iconName="check-line"/>
+            <IconList iconName="check-line-thick"/>
+            <IconList iconName="check-outline"/>
+            <IconList iconName="check-solid"/>
+            <IconList iconName="compress"/>
+            <IconList iconName="clipboard"/>
+            <IconList iconName="clock-outline"/>
+            <IconList iconName="clock-solid"/>
+            <IconList iconName="close"/>
+            <IconList iconName="close-sm"/>
+            <IconList iconName="cloud-download"/>
+            <IconList iconName="cloud-upload"/>
+            <IconList iconName="code"/>
+            <IconList iconName="cog"/>
+            <IconList iconName="comment"/>
+            <IconList iconName="data-download"/>
+            <IconList iconName="data-upload"/>
+            <IconList iconName="data-transfer-download"/>
+            <IconList iconName="data-transfer-upload"/>
+            <IconList iconName="delete"/>
+            <IconList iconName="delete-key"/>
+            <IconList iconName="delete-line"/>
+            <IconList iconName="delete-line-thick"/>
+            <IconList iconName="delete-outline"/>
+            <IconList iconName="delete-solid"/>
+            <IconList iconName="document"/>
+            <IconList iconName="documents"/>
+            <IconList iconName="download"/>
+            <IconList iconName="edit"/>
+            <IconList iconName="expand"/>
+            <IconList iconName="external"/>
+            <IconList iconName="eye"/>
+            <IconList iconName="folder"/>
+            <IconList iconName="full-screen"/>
+            <IconList iconName="grid-four-up"/>
+            <IconList iconName="grid-three-up"/>
+            <IconList iconName="grid-two-up"/>
+            <IconList iconName="headphones"/>
+            <IconList iconName="heart"/>
+            <IconList iconName="highlight"/>
+            <IconList iconName="info-outline"/>
+            <IconList iconName="info-solid"/>
+            <IconList iconName="insert"/>
+            <IconList iconName="italic"/>
+            <IconList iconName="link"/>
+            <IconList iconName="list"/>
+            <IconList iconName="list-cards"/>
+            <IconList iconName="locked"/>
+            <IconList iconName="login"/>
+            <IconList iconName="logout"/>
+            <IconList iconName="mail"/>
+            <IconList iconName="menu"/>
+            <IconList iconName="microphone"/>
+            <IconList iconName="minus"/>
+            <IconList iconName="minus-line"/>
+            <IconList iconName="minus-line-thick"/>
+            <IconList iconName="minus-outline"/>
+            <IconList iconName="minus-outline-square"/>
+            <IconList iconName="minus-solid"/>
+            <IconList iconName="more-horizontal"/>
+            <IconList iconName="more-vertical"/>
+            <IconList iconName="move"/>
+            <IconList iconName="notification"/>
+            <IconList iconName="notification-outline"/>
+            <IconList iconName="ordered-list"/>
+            <IconList iconName="paperclip"/>
+            <IconList iconName="pencil"/>
+            <IconList iconName="photo"/>
+            <IconList iconName="plus"/>
+            <IconList iconName="plus-line"/>
+            <IconList iconName="plus-line-thick"/>
+            <IconList iconName="plus-outline"/>
+            <IconList iconName="plus-outline-square"/>
+            <IconList iconName="plus-solid"/>
+            <IconList iconName="print"/>
+            <IconList iconName="question"/>
+            <IconList iconName="question-outline"/>
+            <IconList iconName="refresh"/>
+            <IconList iconName="revert"/>
+            <IconList iconName="save"/>
+            <IconList iconName="save-disk"/>
+            <IconList iconName="search"/>
+            <IconList iconName="social"/>
+            <IconList iconName="sort"/>
+            <IconList iconName="sort-horizontal"/>
+            <IconList iconName="sound-histogram"/>
+            <IconList iconName="sound-wave"/>
+            <IconList iconName="star"/>
+            <IconList iconName="star-outline"/>
+            <IconList iconName="strikethrough"/>
+            <IconList iconName="tag-outline"/>
+            <IconList iconName="tag-solid"/>
+            <IconList iconName="triniti"/>
+            <IconList iconName="trash"/>
+            <IconList iconName="underline"/>
+            <IconList iconName="unknown"/>
+            <IconList iconName="unlocked"/>
+            <IconList iconName="upload"/>
+            <IconList iconName="user"/>
+            <IconList iconName="user-solid"/>
+            <IconList iconName="video"/>
+            <IconList iconName="warning"/>
+            <IconList iconName="warning-outline"/>
+            <IconList iconName="warning-outline-alt"/>
+            <IconList iconName="warning-outline-triangle"/>
+            <IconList iconName="warning-solid"/>
+            <IconList iconName="warning-solid-alt"/>
+            <IconList iconName="warning-solid-triangle"/>
+            <IconList iconName="zip"/>
+            <IconList iconName="zoom-in"/>
+            <IconList iconName="zoom-out"/>
           </Row>
         </CardBody>
       </Card>,

@@ -652,10 +652,10 @@ class UiButtons extends React.Component {
                 <Icon imgSrc="close" alt="x" /> <span>Close Me Please</span>
               </Button>
               <Button outline radius="round" size="sm">
-              × <span>Close Me Please</span>
+              <Icon imgSrc="delete-line" alt="x" className="mr-1" />Close Me Please
               </Button>
               <Button radius="round" size="sm">
-              × <span>Close Me Please</span>
+              <Icon imgSrc="pencil" alt="x" className="mr-1" />Edit
               </Button>
             </CardBody>
           </Card>,
