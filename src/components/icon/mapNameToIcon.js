@@ -2,6 +2,7 @@ import activity from './activity.svg';
 import addCircle from './add-circle.svg';
 import addItem from './add-item.svg';
 import apps from './apps.svg';
+import archive from './archive.svg';
 import arrowDoubleLeft from './arrow-double-left.svg';
 import arrowDoubleRight from './arrow-double-right.svg';
 import arrowBack from './arrow-back.svg';
@@ -14,11 +15,13 @@ import arrowRight from './arrow-right.svg';
 import arrowRightThick from './arrow-right-thick.svg';
 import arrowUp from './arrow-up.svg';
 import arrowUpThick from './arrow-up-thick.svg';
+import audio from './audio.svg';
 import back from './back.svg';
 import backspace from './backspace.svg';
 import bold from './bold.svg';
 import bookmark from './bookmark.svg';
 import bookmarkOutline from './bookmark-outline.svg';
+import box from './box.svg';
 import calendar from './calendar.svg';
 import camera from './camera.svg';
 import caretDown from './caret-down.svg';
@@ -48,6 +51,7 @@ import deleteLineThick from './delete-line-thick.svg';
 import deleteOutline from './delete-outline.svg';
 import deleteSolid from './delete-solid.svg';
 import document from './document.svg';
+import documents from './documents.svg';
 import download from './download.svg';
 import edit from './edit.svg';
 import eye from './eye.svg';
@@ -60,6 +64,7 @@ import fullScreen from './full-screen.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
 import gridTwoUp from './grid-two-up.svg';
+import headphones from './headphones.svg';
 import heart from './heart.svg';
 import highlight from './highlight.svg';
 import infoOutline from './info-outline.svg';
@@ -107,6 +112,8 @@ import search from './search.svg';
 import social from './social.svg';
 import sort from './sort.svg';
 import sortHorizontal from './sort-horizontal.svg';
+import soundHistogram from './sound-histogram.svg';
+import soundWave from './sound-wave.svg';
 import star from './star.svg';
 import starOutline from './star-outline.svg';
 import strikethrough from './strikethrough.svg';
@@ -115,6 +122,7 @@ import tagSolid from './tag-solid.svg';
 import trash from './trash.svg';
 import triniti from './triniti.svg';
 import underline from './underline.svg';
+import unknown from './unknown.svg';
 import unlocked from './unlocked.svg';
 import upload from './upload.svg';
 import user from './user.svg';
@@ -127,6 +135,7 @@ import warningOutlineTriangle from './warning-outline-triangle.svg';
 import warningSolid from './warning-solid.svg';
 import warningSolidAlt from './warning-solid-alt.svg';
 import warningSolidTriangle from './warning-solid-triangle.svg';
+import zip from './zip.svg';
 import zoomIn from './zoom-in.svg';
 import zoomOut from './zoom-out.svg';
 
@@ -135,6 +144,7 @@ const icons = {
   'add-circle': addCircle,
   'add-item': addItem,
   apps,
+  archive,
   'arrow-back': arrowBack,
   'arrow-double-left': arrowDoubleLeft,
   'arrow-double-right': arrowDoubleRight,
@@ -147,11 +157,13 @@ const icons = {
   'arrow-right-thick': arrowRightThick,
   'arrow-up': arrowUp,
   'arrow-up-thick': arrowUpThick,
+  audio,
   back,
   backspace,
   bold,
   bookmark,
   'bookmark-outline': bookmarkOutline,
+  box,
   calendar,
   camera,
   'caret-down': caretDown,
@@ -183,6 +195,7 @@ const icons = {
   'delete-outline': deleteOutline,
   'delete-solid': deleteSolid,
   document,
+  documents,
   download,
   edit,
   eye,
@@ -193,6 +206,7 @@ const icons = {
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
   'grid-two-up': gridTwoUp,
+  headphones,
   heart,
   highlight,
   'info-outline': infoOutline,
@@ -240,6 +254,8 @@ const icons = {
   social,
   sort,
   'sort-horizontal': sortHorizontal,
+  'sound-histogram': soundHistogram,
+  'sound-wave': soundWave,
   star,
   'star-outline': starOutline,
   strikethrough,
@@ -248,6 +264,7 @@ const icons = {
   trash,
   triniti,
   underline,
+  unknown,
   unlocked,
   upload,
   user,
@@ -260,6 +277,7 @@ const icons = {
   'warning-solid': warningSolid,
   'warning-solid-alt': warningSolidAlt,
   'warning-solid-triangle': warningSolidTriangle,
+  zip,
   'zoom-in': zoomIn,
   'zoom-out': zoomOut,
 };

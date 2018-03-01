@@ -112,6 +112,10 @@ const UiIcons = () => (
               <IconTooltip iconName="eye"/>
               <IconTooltip iconName="bookmark-outline"/>
               <IconTooltip iconName="bookmark"/>
+              <IconTooltip iconName="audio"/>
+              <IconTooltip iconName="headphones"/>
+              <IconTooltip iconName="sound-histogram"/>
+              <IconTooltip iconName="sound-wave"/>
             </Col>
           </Row>
           <Row>
@@ -150,7 +154,12 @@ const UiIcons = () => (
               <IconTooltip iconName="clock-outline"/>
               <IconTooltip iconName="clock-solid"/>
               <IconTooltip iconName="folder"/>
+              <IconTooltip iconName="archive"/>
+              <IconTooltip iconName="box"/>
+              <IconTooltip iconName="zip"/>
               <IconTooltip iconName="document"/>
+              <IconTooltip iconName="documents"/>
+              <IconTooltip iconName="unknown"/>
               <IconTooltip iconName="add-item"/>
               <IconTooltip iconName="clipboard"/>
               <IconTooltip iconName="tag-outline"/>
