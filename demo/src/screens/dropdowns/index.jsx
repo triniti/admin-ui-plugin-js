@@ -42,7 +42,7 @@ class UiDropdown extends React.Component {
         body={
           <Card>
             <CardHeader>Dropdown</CardHeader>
-            <CardBody>
+            <CardBody indent>
               <Row>
                 <Col xs="6">
                   <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
