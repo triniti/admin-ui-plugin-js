@@ -40,7 +40,9 @@ import cloudDownload from './cloud-download.svg';
 import cloudUpload from './cloud-upload.svg';
 import code from './code.svg';
 import cog from './cog.svg';
+import cogOutline from './cog-outline.svg';
 import comment from './comment.svg';
+import commentOval from './comment-oval.svg';
 import compress from './compress.svg';
 import dataDownload from './data-download.svg';
 import dataUpload from './data-upload.svg';
@@ -50,6 +52,7 @@ import deleteLine from './delete-line.svg';
 import deleteLineThick from './delete-line-thick.svg';
 import deleteOutline from './delete-outline.svg';
 import deleteSolid from './delete-solid.svg';
+import directory from './directory.svg';
 import document from './document.svg';
 import documents from './documents.svg';
 import download from './download.svg';
@@ -75,6 +78,7 @@ import link from './link.svg';
 import list from './list.svg';
 import listCards from './list-cards.svg';
 import locked from './locked.svg';
+import lockedSolid from './locked-solid.svg';
 import login from './login.svg';
 import logout from './logout.svg';
 import mail from './mail.svg';
@@ -109,6 +113,7 @@ import revert from './revert.svg';
 import save from './save.svg';
 import saveDisk from './save-disk.svg';
 import search from './search.svg';
+import services from './services.svg';
 import social from './social.svg';
 import sort from './sort.svg';
 import sortHorizontal from './sort-horizontal.svg';
@@ -124,10 +129,13 @@ import triniti from './triniti.svg';
 import underline from './underline.svg';
 import unknown from './unknown.svg';
 import unlocked from './unlocked.svg';
+import unlockedSolid from './unlocked-solid.svg';
 import upload from './upload.svg';
 import user from './user.svg';
+import users from './users.svg';
 import userSolid from './user-solid.svg';
 import video from './video.svg';
+import videoCamera from './video-camera.svg';
 import warning from './warning.svg';
 import warningOutline from './warning-outline.svg';
 import warningOutlineAlt from './warning-outline-alt.svg';
@@ -182,7 +190,9 @@ const icons = {
   'cloud-upload': cloudUpload,
   code,
   cog,
+  'cog-outline': cogOutline,
   comment,
+  'comment-oval': commentOval,
   compress,
   'data-download': dataDownload,
   'data-upload': dataUpload,
@@ -194,6 +204,7 @@ const icons = {
   'delete-line-thick': deleteLineThick,
   'delete-outline': deleteOutline,
   'delete-solid': deleteSolid,
+  directory,
   document,
   documents,
   download,
@@ -217,6 +228,7 @@ const icons = {
   list,
   'list-cards': listCards,
   locked,
+  'locked-solid': lockedSolid,
   login,
   logout,
   mail,
@@ -251,6 +263,7 @@ const icons = {
   save,
   'save-disk': saveDisk,
   search,
+  services,
   social,
   sort,
   'sort-horizontal': sortHorizontal,
@@ -266,10 +279,13 @@ const icons = {
   underline,
   unknown,
   unlocked,
+  'unlocked-solid': unlockedSolid,
   upload,
   user,
+  users,
   'user-solid': userSolid,
   video,
+  'video-camera': videoCamera,
   warning,
   'warning-outline': warningOutline,
   'warning-outline-alt': warningOutlineAlt,

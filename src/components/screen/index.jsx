@@ -96,7 +96,7 @@ const Screen = (props) => {
           {sidebar &&
           <div className="screen-sidebar" id="screen-sidebar">
             <Button radius="circle" color="info" className="screen-sidebar-toggler" onClick={toggleSidebar}>
-              <Icon imgSrc="arrow-left" alt="arrow" size="xl" inverse />
+              <Icon imgSrc="arrow-left-thick" alt="arrow" />
             </Button>
             <div className="screen-sidebar-body">{sidebar}</div>
           </div>}
@@ -137,7 +137,7 @@ Screen.defaultProps = {
   breadcrumbs: [],
   sidenavHeader: null,
   tabs: [],
-  maxWidth: '1000px',
+  maxWidth: '1008px',
 };
 
 export default Screen;
