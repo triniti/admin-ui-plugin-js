@@ -81,6 +81,14 @@
   border-bottom: 1px dotted #fff;
 }
 
+.alert-light {
+  color: #292929;
+
+  &.alert-inverse {
+    color: #292929;
+    text-shadow: none;
+  }
+}
 
 // Sticky Alert
 

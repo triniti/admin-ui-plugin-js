@@ -16,8 +16,8 @@
   }
   &.active {
     color: $white;
-    border-color: theme-color("primary");
-    background-color: theme-color("primary");
+    border-color: theme-color("secondary");
+    background-color: theme-color("secondary");
   }
 }
 

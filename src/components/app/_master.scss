@@ -248,3 +248,15 @@ a:not([href]):not([tabindex]),
 input::-webkit-calendar-picker-indicator {
   background-color: inherit;
 }
+
+// Box-shadow
+
+.shadow-depth0 {box-shadow: $shadow-depth0 !important;}
+.shadow-depth1 {box-shadow: $shadow-depth1 !important;}
+.shadow-depth2 {box-shadow: $shadow-depth2 !important;}
+.shadow-depth3 {box-shadow: $shadow-depth3 !important;}
+.shadow-depth4 {box-shadow: $shadow-depth4 !important;}
+.shadow-depth5 {box-shadow: $shadow-depth4 !important;}
+.shadow-depth6 {box-shadow: $shadow-depth4 !important;}
+.shadow-depth7 {box-shadow: $shadow-depth4 !important;}
+.shadow-depth8 {box-shadow: $shadow-depth4 !important;}
