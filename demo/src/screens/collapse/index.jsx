@@ -52,7 +52,7 @@ class UiCollapse extends Component {
             </CardHeader>
             <Collapse isOpen={this.state.collapseOuter}>
               <CardBody>
-                <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" inverse /> Collapse Content</Button>
+                <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" /> Collapse Content</Button>
                 <Row>
                   <Col xs="12" md="9" lg="6">
                     <Collapse isOpen={this.state.collapseInner}>
