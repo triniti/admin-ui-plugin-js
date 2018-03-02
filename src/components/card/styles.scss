@@ -37,7 +37,8 @@
 
   .screen-body-content > &,
   .card-deck  > &,
-  .card-columns > & {
+  .card-columns > &,
+  .screen-body-content > div:not([class]) > & {
     box-shadow: $shadow-card;
   }
 
