@@ -362,9 +362,12 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="lg"/>
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
-              <IconTooltip iconName="code" size="alert-sm" />
-              <IconTooltip iconName="document" size="alert-md" color="dark" />
-              <IconTooltip iconName="check-line-thick" size="alert-lg" color="success" border />
+              <IconTooltip iconName="delete-line-thick" size="alert-xxs" />
+              <IconTooltip iconName="plus-line-thick" size="alert-xs" border />
+              <IconTooltip iconName="check-line-thick" size="alert-sm" color="success" />
+              <IconTooltip iconName="code" size="alert-md" color="info" border />
+              <IconTooltip iconName="document" size="alert-lg" color="dark" border />
+              <IconTooltip iconName="check-line-thick" size="alert-xl" color="success" border />
             </Col>
           </Row>
         </CardBody>
@@ -385,7 +388,7 @@ const UiIcons = () => (
               <IconTooltip iconName="warning" size="alert-md" border />
               <IconTooltip iconName="check-line-thick" size="alert-md" color="success" />
               <IconTooltip iconName="delete-line-thick" size="alert-lg" color="danger" />
-              <IconTooltip iconName="question" size="alert-lg" color="info" border />
+              <IconTooltip iconName="question" size="alert-xl" color="info" border />
             </Col>
           </Row>
         </CardBody>
