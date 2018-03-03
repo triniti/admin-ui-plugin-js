@@ -50,6 +50,10 @@
   margin: 0 auto;
   padding: .5rem 1rem;
   max-width: 680px;
+
+  &:empty {
+    display: none;
+  }
 }
 
 // Alternate styles

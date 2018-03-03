@@ -223,15 +223,6 @@
     z-index: 1001;
     transition: none;
   }
-  .navbar-main-wrapper .dropdown:hover .nav-link:before {
-    position: absolute;
-    bottom: -1px;
-    left: 1px;
-    width: calc(100% - 2px);
-    height: 2px;
-    content: '';
-    background-color: $white;
-  }
   .navbar-main-wrapper .navbar-nav .nav-item:hover .nav-link,
   .navbar-main-wrapper .navbar-nav .nav-link:hover {
     position: relative;
