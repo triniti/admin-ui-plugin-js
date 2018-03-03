@@ -279,3 +279,20 @@
 .active > .icon-toggler {
   transform: rotate(90deg);
 }
+
+// toggle icons in buttons using active state of button
+
+.icon-toggle-active {
+  display: none;
+}
+
+.btn:active,
+.btn.active {
+
+  & .icon-toggle {
+    display: none;
+  }
+  & .icon-toggle-active {
+    display: inline-flex;
+  }
+}
