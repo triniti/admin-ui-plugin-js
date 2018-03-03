@@ -13,8 +13,7 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   type: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
+  id: PropTypes.string.isRequired,
   button: PropTypes.bool,
   radius: PropTypes.string,
   size: PropTypes.string,
@@ -22,8 +21,6 @@ const propTypes = {
 
 const defaultProps = {
   type: 'checkbox',
-  id: 'checkbox',
-  name: 'checkbox',
 };
 
 const Checkbox = (props) => {
@@ -32,7 +29,6 @@ const Checkbox = (props) => {
     cssModule,
     type,
     id,
-    name,
     children,
     button,
     radius,
@@ -61,8 +57,8 @@ const Checkbox = (props) => {
   ), cssModule);
 
   return [
-    <Input type={type} id={id} className={classes} key={`${name}-checkbox-input`} {...attributes} />,
-    <Label for={id} className={inputClasses} key={`${name}-checkbox-label`}>
+    <Input type={type} id={id} className={classes} key={`${id}-checkbox-input`} {...attributes} />,
+    <Label for={id} className={inputClasses} key={`${id}-checkbox-label`}>
       {button && <Button tag="span" className={buttonClasses}>{children} <Icon imgSrc="plus-outline" className={iconClasses}/><Icon imgSrc="minus-solid" className={iconClasses} /></Button>}
     </Label>,
   ];
