@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.4.5
+* issue #72: Adding Props, Icons, CheckBox fix, Card & CardHeader fixes.
+
+
 ## v0.4.4
 * Remove datalist component.
 * issue #66: Add Parameter to Checkbox to use a button instead of check icon.
