@@ -14,7 +14,11 @@
   justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  box-shadow: $shadow-depth3;
+  box-shadow: $shadow-depth0;
+
+  .screen-primary-actions & {
+    box-shadow: $shadow-depth3;
+  }
 
   &:hover,
   &:focus {
