@@ -10,14 +10,10 @@
   background-color: transparent;
   box-shadow: $shadow-depth0;
 
-  &:hover {
+  &:hover,
+  &.active {
     border-color: transparent;
     background-color: $gray-300;
-  }
-  &.active {
-    color: $white;
-    border-color: theme-color("primary");
-    background-color: theme-color("primary");
   }
 }
 
@@ -31,10 +27,12 @@
 .btn-outline-hover-bg {
   border-color: transparent;
   background-color: transparent;
+  box-shadow: $shadow-depth0;
+
+  &:hover,
+  &.active {
+    border-color: $gray-300;
+    background-color: $gray-300;
+  }
 }
 
-.btn-outline-hover-bg:hover,
-.btn-outline-hover-bg.active {
-  border-color: $gray-300;
-  background-color: $gray-300;
-}

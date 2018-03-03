@@ -37,7 +37,8 @@
 
   .screen-body-content > &,
   .card-deck  > &,
-  .card-columns > & {
+  .card-columns > &,
+  .screen-body-content > div:not([class]) > & {
     box-shadow: $shadow-card;
   }
 
@@ -59,8 +60,7 @@
 .card-body-indent {
 
   @media (min-width: 768px) {
-    padding-right: 2.5rem;
-    padding-left: 2.5rem;
+    padding: 3rem;
   }
 }
 
@@ -162,7 +162,6 @@ h4.card-title {
 // Card Header
 
 .card-header {
-  z-index: 1;
   display: flex;
   flex: 0 0 auto;
   padding: 0 $card-spacer-x;
@@ -177,17 +176,21 @@ h4.card-title {
     background-color: $gray-100;
     font-size: .875rem;
     min-height: 44px;
-    box-shadow: $shadow-depth1;
+    box-shadow: $shadow-depth1, 0 -1px 0 $gray-400;
     border: none;
 
     & .btn-toggler {
       font-size: .875rem;
     }
   }
+}
 
-  .screen-sidebar-body > .card:not(:first-child) & {
-      box-shadow: $shadow-depth2, 0 -1px 0 $card-border-color;
-    }
+.card-header-toggler {
+ box-shadow: 0 -1px 0 $gray-400;
+
+ .card:first-child & {
+  box-shadow: none;
+ }
 }
 
 // Subheader - most often used in sidebars

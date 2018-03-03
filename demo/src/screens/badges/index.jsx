@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Badge, Button, Card, CardBody, CardTitle, Screen } from '../../../../src/components';
+import { Badge, Button, Card, CardBody, CardHeader, CardTitle, Icon, Screen, Table } from '../../../../src/components';
 
 const UiBadge = () => (
   <Screen
@@ -13,8 +13,71 @@ const UiBadge = () => (
     //   { to: '#/test2', text: 'Tab2' },
     // ]}
     primaryActions={<PrimaryActions />}
-    body={
-      <Card>
+    body={[
+      <Card key="props">
+        <CardHeader>Badge Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">alert</th>
+              <td>node</td>
+              <td></td>
+              <td>Adds class "badge-alert" which absolutley aligns badge to the upper right corner of the containing object, usually a button set to radius, circle.</td>
+            </tr>
+            <tr>
+              <th scope="row">children</th>
+              <td>node</td>
+              <td></td>
+              <td>Content shown inside the badge.  Usually numbers or highlight text like "new".</td>
+            </tr>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">color</th>
+              <td>string</td>
+              <td>'default'</td>
+              <td>Adds class "badge-$color". Set background color of badge. Text is white for all badges.</td>
+            </tr>
+            <tr>
+              <th scope="row">pill</th>
+              <td>bool</td>
+              <td></td>
+              <td>Adds class "badge-pill", producing a pill shaped alert with round ends.  The default style is rounded corners.</td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>bool</td>
+              <td>'span'</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">transition</th>
+              <td>bool</td>
+              <td>
+                ...Fade.defaultProps,
+                unmountOnExit: true,
+              </td>
+              <td></td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="badges">
         <CardBody indent>
           <h1>H1 Heading .h1 <Badge>New</Badge></h1>
           <h2>H2 Heading .h2 <Badge color="primary">New</Badge></h2>
@@ -48,12 +111,13 @@ const UiBadge = () => (
           <CardTitle tag="h4">Badge Alert</CardTitle>
           <Button outline radius="round" className="mr-3">outline <Badge color="primary" alert>3</Badge></Button>
           <Button color="info" radius="round" className="mr-3">info <Badge color="warning" alert>0</Badge></Button>
-          <Button className="mr-3">inline<Badge color="danger" inline>24</Badge></Button>
-          <Button className="mr-3">inline pill<Badge inline pill>24</Badge></Button>
+          <Button className="mr-3">inline <Badge color="danger" className="ml-1">24</Badge></Button>
+          <Button className="mr-3">inline pill <Badge pill className="ml-1">24</Badge></Button>
           <Button outline color="link" radius="round" className="mr-3">link <Badge color="danger" alert>24</Badge></Button>
+          <Button color="hover-bg" radius="circle" className="mr-3" size="md"><Icon imgSrc="user"/><Badge color="danger" alert>24</Badge></Button>
         </CardBody>
-      </Card>
-    }
+      </Card>,
+    ]}
   />
 );
 

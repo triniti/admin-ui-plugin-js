@@ -1,0 +1,19 @@
+// Styles for Icons page
+
+.iconlist-item-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 8rem;
+  text-align: center;
+  margin: 0 .5rem 4rem .5rem;
+
+  & .icon {
+    margin-bottom: 1rem;
+  }
+}
+
+.iconlist-item-text {
+  font-size: .75rem;
+  line-height: 1.2;
+  color: $gray-rgba-700;
+}

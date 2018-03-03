@@ -47,12 +47,12 @@ class UiCollapse extends Component {
         primaryActions={<PrimaryActions />}
         body={[
           <Card key="toggle1" className="mb-0">
-            <CardHeader fullWidth>
-              <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Collapse Header - fullWidth</Button>
+            <CardHeader toggler>
+              <Button color="toggler" onClick={this.toggleOuter} active={this.state.collapseOuter}>Collapse Header</Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseOuter}>
               <CardBody>
-                <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" inverse /> Collapse Content</Button>
+                <Button color="secondary" onClick={this.toggleInner}><Icon imgSrc="sort" id="sort" /> Collapse Content</Button>
                 <Row>
                   <Col xs="12" md="9" lg="6">
                     <Collapse isOpen={this.state.collapseInner}>
@@ -71,8 +71,8 @@ class UiCollapse extends Component {
           </Card>,
 
           <Card key="toggle2">
-            <CardHeader fullWidth>
-              <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example  - fullWidth</Button>
+            <CardHeader toggler>
+              <Button color="toggler" onClick={this.toggleOuter2} active={this.state.collapseOuter2}>Second Example</Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseOuter2}>
               <CardBody>
@@ -92,7 +92,7 @@ class UiCollapse extends Component {
           </Card>,
 
           <Card key="toggle3" className="mb-0">
-            <CardHeader>
+            <CardHeader toggler>
               <Button color="toggler" onClick={this.toggleOuter3} active={this.state.collapseOuter3}>Second Example</Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseOuter3}>
@@ -113,7 +113,7 @@ class UiCollapse extends Component {
           </Card>,
 
           <Card key="toggle4">
-            <CardHeader>
+            <CardHeader toggler>
               <Button color="toggler" onClick={this.toggleOuter4} active={this.state.collapseOuter4}>Second Example</Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseOuter4}>

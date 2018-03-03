@@ -121,7 +121,7 @@ class UiForm extends React.Component {
 
           <Card key="form2">
             <CardHeader>Form Feedback</CardHeader>
-            <CardBody>
+            <CardBody indent>
               <Row>
                 <Col>
                   <CardTitle tag="h3">Card Title H3</CardTitle>
@@ -155,7 +155,7 @@ class UiForm extends React.Component {
             <CardBody indent>
               <Row>
                 <Col sm="12">
-                  <Form inline className="mt-3">
+                  <Form inline>
                     <FormGroup>
                       <Label for="exampleEmail4" hidden>Email</Label>
                       <Input type="email" name="email" id="exampleEmail4" placeholder="Email" radius="round" />
@@ -178,12 +178,12 @@ class UiForm extends React.Component {
                   <Form inline className="mb-3">
                     <FormGroup>
                       <Label for="exampleEmail">Email</Label>{' '}
-                      <Input type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" size="sm" />
+                      <Input type="email" name="email" id="exampleEmail5" placeholder="something@idk.cool" size="sm" />
                     </FormGroup>
                     {' '}
                     <FormGroup>
                       <Label for="examplePassword">Password</Label>{' '}
-                      <Input type="password" name="password" id="examplePassword" placeholder="don't tell!" size="sm" />
+                      <Input type="password" name="password" id="examplePassword5" placeholder="don't tell!" size="sm" />
                     </FormGroup>
                     {' '}
                     <Button color="info" size="sm">Submit</Button>
@@ -205,39 +205,39 @@ class UiForm extends React.Component {
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleEmail">Email</Label>
-                      <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                      <Input type="email" name="email" id="exampleEmail2" placeholder="with a placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="examplePassword">Password</Label>
-                      <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                      <Input type="password" name="password" id="examplePassword2" placeholder="password placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleUrl">Url</Label>
-                      <Input type="url" name="url" id="exampleUrl" placeholder="url placeholder" />
+                      <Input type="url" name="url" id="exampleUrl2" placeholder="url placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleNumber">Number</Label>
-                      <Input type="number" name="number" id="exampleNumber" placeholder="number placeholder" />
+                      <Input type="number" name="number" id="exampleNumber2" placeholder="number placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleDatetime">Datetime</Label>
-                      <Input type="datetime" name="datetime" id="exampleDatetime" placeholder="datetime placeholder" />
+                      <Input type="datetime" name="datetime" id="exampleDatetime2" placeholder="datetime placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleDate">Date</Label>
-                      <Input type="date" name="date" id="exampleDate" placeholder="date placeholder" />
+                      <Input type="date" name="date" id="exampleDate2" placeholder="date placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleTime">Time</Label>
-                      <Input type="time" name="time" id="exampleTime" placeholder="time placeholder" />
+                      <Input type="time" name="time" id="exampleTime2" placeholder="time placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleColor">Color</Label>
-                      <Input type="color" name="color" id="exampleColor" placeholder="color placeholder" />
+                      <Input type="color" name="color" id="exampleColor2" placeholder="color placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleSearch">Search</Label>
-                      <Input type="search" name="search" id="exampleSearch" placeholder="search placeholder" />
+                      <Input type="search" name="search" id="exampleSearch2" placeholder="search placeholder" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleSelect2">Select</Label>
@@ -261,11 +261,11 @@ class UiForm extends React.Component {
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleText">Text Area</Label>
-                      <Input type="textarea" name="text" id="exampleText" />
+                      <Input type="textarea" name="text" id="exampleText2" />
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleFile">File</Label>
-                      <Input type="file" name="file" id="exampleFile" />
+                      <Input type="file" name="file" id="exampleFile2" />
                       <FormText color="muted">
                   This is some placeholder block-level help text for the above input.
                   It's a bit lighter and easily wraps to a new line.
@@ -273,19 +273,19 @@ class UiForm extends React.Component {
                     </FormGroup>
                     <FormGroup check inline>
                       <Label check>
-                      <Radio type="checkbox" name="radio1" id="radio1" />
+                      <Radio type="checkbox" name="radio1" id="radio2" />
                   Option one is this and that—be sure to include why it's great
                     </Label>
                     </FormGroup>
                     <FormGroup check inline>
                       <Label check>
-                      <Checkbox name="checkbox1" id="checkbox1" />
+                      <Checkbox name="checkbox1" id="checkbox2" />
                       Check me out
                     </Label>
                     </FormGroup>
                     <FormGroup check inline>
                       <Label check>
-                      <Switch id="checkbox2" />
+                      <Switch id="checkbox3" />
                   Try me for a Toggle
                     </Label>
                     </FormGroup>
@@ -326,7 +326,7 @@ class UiForm extends React.Component {
                 <Col xs="3" md="4">
                   <Form inline className="mb-4">
                     <FormGroup>
-                      <TrinaryControl name="trinaryDefault" id="trinaryDefault" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                      <TrinaryControl name="trinaryDefault" id="trinaryDefault1" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
                       <Label>Staff</Label>
                     </FormGroup>
                   </Form>
@@ -339,7 +339,7 @@ class UiForm extends React.Component {
                 <Col xs="3" md="4">
                   <Form inline className="mb-4">
                     <FormGroup>
-                      <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" width="6rem" radius="round" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                      <TrinaryControl name="trinaryDefault" id="trinaryDefault2" size="sm" width="6rem" radius="round" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
                       <Label>Staff</Label>
                     </FormGroup>
                   </Form>
@@ -351,7 +351,7 @@ class UiForm extends React.Component {
               <Row>
                 <Col xs="3" md="4">
                   <FormGroup inline className="mb-4">
-                    <TrinaryControl name="trinaryDefault" id="trinaryDefault" size="sm" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                    <TrinaryControl name="trinaryDefault" id="trinaryDefault3" size="sm" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
                     <Button color="info" size="sm">Submit</Button>
                   </FormGroup>
                 </Col>
@@ -396,13 +396,13 @@ class UiForm extends React.Component {
                     <FormGroup row>
                       <Label for="exampleEmail" sm={2}>Email</Label>
                       <Col sm={10}>
-                      <Input type="email" name="email" id="exampleEmail" placeholder="with a placeholder" />
+                      <Input type="email" name="email" id="exampleEmail3" placeholder="with a placeholder" />
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="examplePassword" sm={2}>Password</Label>
                       <Col sm={10}>
-                      <Input type="password" name="password" id="examplePassword" placeholder="password placeholder" />
+                      <Input type="password" name="password" id="examplePassword3" placeholder="password placeholder" />
                     </Col>
                     </FormGroup>
                     <FormGroup row>
@@ -432,19 +432,19 @@ class UiForm extends React.Component {
                     <FormGroup row>
                       <Label for="exampleSelectMulti" sm={2}>Disabled</Label>
                       <Col sm={10}>
-                      <Input disabled type="textarea" name="text" id="disabledText" />
+                      <Input disabled type="textarea" name="text" id="disabledText3" />
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleText" sm={2}>Text Area</Label>
                       <Col sm={10}>
-                      <Input type="textarea" name="text" id="exampleText" />
+                      <Input type="textarea" name="text" id="exampleText3" />
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleFile" sm={2}>File</Label>
                       <Col sm={10}>
-                      <Input type="file" name="file" id="exampleFile" />
+                      <Input type="file" name="file" id="exampleFile3" />
                       <FormText color="muted">
                       This is some placeholder block-level help text for the above input.
                       It's a bit lighter and easily wraps to a new line.
@@ -477,10 +477,10 @@ class UiForm extends React.Component {
                     <FormGroup row>
                       <Col sm={{ size: 10 }}>
                       <div className="has-border border-indent">
-                        <Label for="checkbox3">Border Indented Checkbox</Label>
+                        <Label for="checkbox4">Border Indented Checkbox</Label>
                         <FormGroup check inline>
                         <Label check>
-                          <Checkbox size="sm" name="checkbox3" id="checkbox3" />
+                          <Checkbox size="sm" name="checkbox4" id="checkbox4" />
                         Check me out
                         </Label>
                       </FormGroup>

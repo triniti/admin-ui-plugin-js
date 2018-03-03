@@ -27,14 +27,8 @@
   color: $white;
 }
 
-// Quick fix for badges in buttons, or location specific badges
-.badge-inline {
-  position: relative;
-  top: -1px;
-  margin-left: .25rem;
-}
-
-.badge-alert {
+.badge-alert,
+.btn .badge-alert {
   position: absolute;
   top: -5px;
   right: -6px;

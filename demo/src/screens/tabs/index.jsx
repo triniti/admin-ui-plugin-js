@@ -79,11 +79,11 @@ class UiTabs extends React.Component {
       //    ]
       //  }
         body={[
-          <Card key="card1">
+          <Card key="uitab1">
             <TabContent activeTab={this.state.activeTab1}>
               <TabPane tabId="1">
                 <Card>
-                  <CardBody>
+                  <CardBody indent>
                     <Row>
                       <Col xs="12" sm="6">
                         <Card>
@@ -98,7 +98,7 @@ class UiTabs extends React.Component {
               </TabPane>
               <TabPane tabId="2">
                 <Card>
-                  <CardBody>
+                  <CardBody indent>
                     <Row>
                       <Col sm="6">
                         <Card>
@@ -121,9 +121,9 @@ class UiTabs extends React.Component {
             </TabContent>
           </Card>,
 
-          <Card key="card2">
+          <Card key="uitab2">
             <CardHeader>Classic Standard Version</CardHeader>
-            <CardBody>
+            <CardBody indent>
               <Nav tabs>
                 <NavItem>
                   <div

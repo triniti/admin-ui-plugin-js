@@ -585,12 +585,18 @@ $input-group-btn-border-color:   $gray-700;
 
 // Shadow Depths
 
-$shadow-card:                    0 1px 1px rgba(0, 0, 0, 0.15), 0 -1px 0 rgba(0, 0, 0, 0.05);
+
 $shadow-depth0:                  none;
-$shadow-depth1:                  0 1px 1px rgba(0,0,0,0.1);
+$shadow-depth1:                  0 1px 0 $gray-400;
 $shadow-depth2:                  0 1px 1px rgba(0,0,0,0.15);
 $shadow-depth3:                  0 1px 2px rgba(0,0,0,0.1);
 $shadow-depth4:                  inset 0 0 0 1px rgba(0,0,0,0.0625), 0 1px 2px rgba(0,0,0,0.2), 0 14px 14px -8px rgba(0,0,0,0.2);
+$shadow-depth5:                  $shadow-depth4;
+$shadow-depth6:                  $shadow-depth4;
+$shadow-depth7:                  $shadow-depth4;
+$shadow-depth8:                  $shadow-depth4;
+
+$shadow-card:                    $shadow-depth2;
 
 // Checkbox Radio Switch Heights
 

@@ -15,7 +15,7 @@ const UiButtonGroup = () => (
     primaryActions={<PrimaryActions />}
     body={
       <Card>
-        <CardBody>
+        <CardBody indent>
           <ButtonToolbar>
             <ButtonGroup className="mr-3">
               <Button outline>1</Button>

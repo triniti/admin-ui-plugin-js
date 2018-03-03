@@ -62,7 +62,7 @@ class UiModal extends React.Component {
         primaryActions={<PrimaryActions />}
         body={
           <Card>
-            <CardBody>
+            <CardBody indent>
               <Button color="secondary" onClick={this.toggle}>Click Me</Button>
               <Modal isOpen={this.state.modal} toggle={this.toggle} size="xl" maxWidth="1400px">
                 <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>

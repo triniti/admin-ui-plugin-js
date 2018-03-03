@@ -50,6 +50,10 @@
   margin: 0 auto;
   padding: .5rem 1rem;
   max-width: 680px;
+
+  &:empty {
+    display: none;
+  }
 }
 
 // Alternate styles
@@ -81,6 +85,14 @@
   border-bottom: 1px dotted #fff;
 }
 
+.alert-light {
+  color: #292929;
+
+  &.alert-inverse {
+    color: #292929;
+    text-shadow: none;
+  }
+}
 
 // Sticky Alert
 

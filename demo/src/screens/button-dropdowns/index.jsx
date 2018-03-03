@@ -40,7 +40,7 @@ class UiButtonDropdown extends React.Component {
         primaryActions={<PrimaryActions />}
         body={
           <Card>
-            <CardBody>
+            <CardBody indent>
               <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
                 <DropdownToggle caret outline color="light">
             Button Dropdown

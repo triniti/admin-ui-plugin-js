@@ -15,7 +15,7 @@ const UiPagination = () => (
     primaryActions={<PrimaryActions />}
     body={
       <Card>
-        <CardBody>
+        <CardBody indent>
           <Pagination>
             <PaginationItem>
               <PaginationLink previous href="#" />

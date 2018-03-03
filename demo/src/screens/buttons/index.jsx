@@ -493,37 +493,37 @@ class UiButtons extends React.Component {
                 <FormGroup inline>
 
                   <Label check className="mr-4">
-                    <Radio size="xs" type="checkbox" name="toggler6" id="toggler6" />
+                    <Radio size="xs" type="checkbox" id="toggler6" />
                   size="xs"
                   </Label>
 
                   <Label check className="mr-4">
-                    <Radio size="sm" type="checkbox" name="toggler7" id="toggler7" />
+                    <Radio size="sm" type="checkbox" id="toggler7" />
                   size="sm"
                   </Label>
 
                   <Label check className="mr-4" strong>
-                    <Radio type="checkbox" name="toggler8" id="toggler8" />
+                    <Radio type="checkbox" id="toggler8" />
                 default
                   </Label>
 
                   <Label check className="mr-4">
-                    <Radio size="md" type="checkbox" name="toggler9" id="toggler9" />
+                    <Radio size="md" type="checkbox" id="toggler9" />
                   size="md"
                   </Label>
 
                   <Label check className="mr-4">
-                    <Radio size="lg" type="checkbox" name="toggler10" id="toggler10" />
+                    <Radio size="lg" type="checkbox" id="toggler10" />
                   size="lg"
                   </Label>
 
                   <Label check className="mr-4" strong>
-                    <Radio type="checkbox" name="toggler8" id="toggler8" disabled />
+                    <Radio type="checkbox" id="toggler8" disabled />
                 disabled
                   </Label>
 
                   <Label check className="mr-4" strong>
-                    <Radio type="checkbox" name="toggler8" id="toggler8" disabled checked />
+                    <Radio type="checkbox" id="toggler8" disabled checked />
                 disabled on
                   </Label>
 
@@ -538,7 +538,7 @@ class UiButtons extends React.Component {
               <Form>
                 <FormGroup check inline>
                   <Label className="mr-3">
-                    <Checkbox size="sm" name="toggler14" id="toggler14" onClick={() => this.onCheckboxBtnClick(14)} />
+                    <Checkbox size="sm" id="toggler14" onClick={() => this.onCheckboxBtnClick(14)} />
                 Maybe
                   </Label>
                 </FormGroup>
@@ -548,37 +548,37 @@ class UiButtons extends React.Component {
               <Form>
                 <FormGroup inline>
                   <Label className="mr-4 mb-2">
-                    <Checkbox size="xs" name="toggler15" id="toggler15" />
+                    <Checkbox size="xs" id="toggler15" />
                 size="xs"
                   </Label>
 
                   <Label className="mr-4 mb-2">
-                    <Checkbox size="sm" name="toggler16" id="toggler16" />
+                    <Checkbox size="sm" id="toggler16" />
                 size="sm"
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox name="toggler17" id="toggler17" />
+                    <Checkbox id="toggler17" />
                 default
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="md" name="toggler18" id="toggler18" />
+                    <Checkbox size="md" id="toggler18" />
                 size="md"
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="lg" name="toggler19" id="toggler19" />
+                    <Checkbox size="lg" id="toggler19" />
                 size="lg"
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox disabled />
+                    <Checkbox disabled  id="toggler20" />
                 disabled
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox disabled checked />
+                    <Checkbox disabled checked  id="toggler21" />
                 disabled on
                   </Label>
                 </FormGroup>
@@ -595,32 +595,32 @@ class UiButtons extends React.Component {
                 <FormGroup inline>
 
                   <Label className="mr-4 mb-2">
-                    <Checkbox size="sm" name="toggler162" id="toggler162" button>Checkbox</Checkbox>
+                    <Checkbox size="sm" id="toggler162" button>Checkbox</Checkbox>
                 size="sm"
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox name="toggler172" id="toggler172" button>Checkbox</Checkbox>
+                    <Checkbox id="toggler172" button>Checkbox</Checkbox>
                 default
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="lg" name="toggler192" id="toggler192" button>Checkbox</Checkbox>
+                    <Checkbox size="lg" id="toggler192" button>Checkbox</Checkbox>
                 size="lg"
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="sm" name="toggler182" id="toggler182" button radius="round">Checkbox</Checkbox>
+                    <Checkbox size="sm" id="toggler182" button radius="round">Checkbox</Checkbox>
                 radius="round"
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="sm" disabled button radius="round">Checkbox</Checkbox>
+                    <Checkbox size="sm" disabled button radius="round" id="toggler183">Checkbox</Checkbox>
                 disabled
                   </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="sm" disabled checked button radius="round">Checkbox</Checkbox>
+                    <Checkbox size="sm" disabled checked button radius="round" id="toggler184">Checkbox</Checkbox>
                 disabled on
                   </Label>
                 </FormGroup>
@@ -652,10 +652,10 @@ class UiButtons extends React.Component {
                 <Icon imgSrc="close" alt="x" /> <span>Close Me Please</span>
               </Button>
               <Button outline radius="round" size="sm">
-              × <span>Close Me Please</span>
+              <Icon imgSrc="delete-line" alt="x" className="mr-1" />Close Me Please
               </Button>
               <Button radius="round" size="sm">
-              × <span>Close Me Please</span>
+              <Icon imgSrc="pencil" alt="x" className="mr-1" />Edit
               </Button>
             </CardBody>
           </Card>,
