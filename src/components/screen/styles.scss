@@ -214,6 +214,11 @@ $sidenav-width:     300px;
 .screen-primary-actions {
   flex: 0 0 auto;
   margin: .25rem 0 .25rem auto;
+
+  & a:hover,
+  & a:focus {
+    text-decoration: none;
+  }
 }
 
 // Screen Body
