@@ -11,6 +11,8 @@
   border: none;
   border-radius: 0;
   font-size: .875rem;
+  box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
+  text-align: center;
 
   .card-body > & {
     @include border-radius($alert-border-radius);
@@ -35,6 +37,13 @@
   .alert-wrapper & {
     animation: 300ms ease-out 0s 1 slideInAlert;
   }
+}
+
+td.alert,
+th.alert,
+.alert th,
+.alert td {
+  text-align: left;
 }
 
 .alert-wrapper {
@@ -103,11 +112,16 @@
   z-index: $zindex-sticky;
 
   display: flex;
-  min-height: $header-height + 2;
+  // min-height: $header-height + 2;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
   box-shadow: inset 0 -1px 0 $gray-rgba-300;
+
+  & > span {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 // Alerts in tables

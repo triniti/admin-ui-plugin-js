@@ -128,7 +128,8 @@ input.checkbox-input {
 
 // disabled
 
-.checkbox-input:disabled + label {
+.checkbox-input:disabled + label,
+.checkbox-input[readonly] + label {
   opacity: .5;
   pointer-events: none;
 
