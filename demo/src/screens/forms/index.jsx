@@ -436,6 +436,12 @@ class UiForm extends React.Component {
                     </Col>
                     </FormGroup>
                     <FormGroup row>
+                      <Label for="exampleSelectMulti" sm={2}>Readonly</Label>
+                      <Col sm={10}>
+                      <Input readonly="readonly" type="textarea" name="text" id="readonlyText3" rows="5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</Input>
+                    </Col>
+                    </FormGroup>
+                    <FormGroup row>
                       <Label for="exampleText" sm={2}>Text Area</Label>
                       <Col sm={10}>
                       <Input type="textarea" name="text" id="exampleText3" />

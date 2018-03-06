@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.4.6
+* Form updates and a few new props in UI pages.
+
+
 ## v0.4.5
 * issue #72: Adding Props, Icons, CheckBox fix, Card & CardHeader fixes.
 

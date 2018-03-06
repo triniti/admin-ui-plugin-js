@@ -16,6 +16,8 @@
   height: 1rem;
   width: 1rem; // 16px
   align-self: center;
+  vertical-align: middle;
+  margin-top: -3px;
 
   .btn & {
     margin-right: .5rem;

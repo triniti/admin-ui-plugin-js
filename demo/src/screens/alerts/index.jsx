@@ -133,10 +133,10 @@ class UiAlert extends Component {
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
-              </CardHeader>
-              <Collapse isOpen={this.state.collapseCode1}>
-                  <CardBody className="pl-5 bg-light">
-                  <pre>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-5 bg-light">
+<pre>
 <code>{`import React from 'react';
 import { Alert, UncontrolledAlert } from '@triniti/admin-ui-plugin/components';
 
@@ -161,8 +161,8 @@ const Example = (props) => {
     </div>
   );
 };`}</code></pre>
-                  </CardBody>
-                </Collapse>
+              </CardBody>
+            </Collapse>
             <CardBody>
               <Alert color="success" inverse>
                 <strong>Well done!</strong> You successfully read this important alert message.
@@ -280,8 +280,11 @@ const Example = (props) => {
                 </tbody>
               </Table>
               <br />
-              <Alert color="info">
-                <span className="ion-android-alert float-left" />
+              <Alert color="info" className="text-left">
+                <h3 className="alert-heading" className="mb-1">
+                  <Icon imgSrc="warning-outline-alt" className="mr-2" size="lg"/>
+                  Example Alert Heading with Icon
+                </h3>
                 <strong>The complete list of common words:</strong><br />
               a, an, and, are, as, at, be, but, by, for, if, in, into, is, it,
               no, not, of, on, or, such, that, the, their, then, there, these,

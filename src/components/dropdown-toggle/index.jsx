@@ -6,17 +6,17 @@ import { mapToCssModules } from '../utils';
 import Button from '../button';
 
 const propTypes = {
+  'aria-haspopup': PropTypes.bool,
   caret: PropTypes.bool,
-  color: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
+  color: PropTypes.string,
   cssModule: PropTypes.object,
   disabled: PropTypes.bool,
+  nav: PropTypes.bool,
   onClick: PropTypes.func,
-  'aria-haspopup': PropTypes.bool,
   split: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  nav: PropTypes.bool,
 };
 
 const defaultProps = {
