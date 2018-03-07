@@ -232,6 +232,12 @@
   &.icon-alert-xxs {
     box-shadow: inset 0 0 0 2px $body-color;
   }
+  &.icon-alert-xs {
+    box-shadow: inset 0 0 0 2px $body-color;
+  }
+  &.icon-alert-sm {
+    box-shadow: inset 0 0 0 2px $body-color;
+  }
   &.icon-alert-lg {
     box-shadow: inset 0 0 0 4px $body-color;
   }
@@ -258,7 +264,9 @@
       color: $value;
       box-shadow: inset 0 0 0 3px $value;
 
-      &.icon-alert-xxs {
+      &.icon-alert-xxs,
+      &.icon-alert-xs,
+      &.icon-alert-sm {
         box-shadow: inset 0 0 0 2px $value;
       }
       &.icon-alert-lg {
@@ -290,17 +298,24 @@
 
 // toggle icons in buttons using active state of button
 
-.icon-toggle:last-child {
-  display: none;
-}
+.icon-toggle:first-child {
+  opacity: 0.4;
 
-.btn:active,
-.btn.active {
-
-  & .icon-toggle:first-child {
+  .btn.active &,
+  .btn:active & {
     display: none;
   }
-  & .icon-toggle:last-child {
+}
+
+.icon-toggle:last-child {
+  display: none;
+
+  .btn:active & {
     display: inline-flex;
+    opacity: 0.4;
+  }
+  .btn.active & {
+    display: inline-flex;
+    opacity: 1;
   }
 }
