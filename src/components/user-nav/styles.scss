@@ -56,13 +56,19 @@
   justify-content: center;
   background: transparent;
   color: $body-color;
-  opacity: .8;
+
+  & span {
+    opacity: .8;
+  }
 
   &:hover,
   &:active {
-    opacity: 1;
     box-shadow: 0 0 0 2px rgba(#000, .25);
     cursor: pointer;
+
+    & span {
+      opacity: 1;
+    }
   }
   @media (min-width: 1025px) {
     top: .625rem;
