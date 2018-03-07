@@ -395,6 +395,8 @@ const UiIcons = () => (
               <IconTooltip iconName="check-outline" size="lg" color="info"/>
               <IconTooltip iconName="check-outline" size="xl" color="danger"/>
               <IconTooltip iconName="check-outline" size="xxl" color="success"/>
+              <IconTooltip iconName="warning" size="alert-xxs" color="danger" border />
+              <IconTooltip iconName="warning" size="alert-xs" color="warning" border />
               <IconTooltip iconName="cloud-upload" size="alert-sm" color="dark" radius="rounded" border />
               <IconTooltip iconName="warning-solid-triangle" size="alert-sm" color="warning" />
               <IconTooltip iconName="warning" size="alert-md" border />
@@ -429,17 +431,6 @@ const UiIcons = () => (
       </Card>,
 
       <Card key="icons5">
-        <CardHeader>Toggle Icons</CardHeader>
-        <CardBody indent>
-          <Row>
-            <Col>
-              <Button outline color="light">Toggle</Button>
-            </Col>
-          </Row>
-        </CardBody>
-      </Card>,
-
-      <Card key="icons6">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
           <Row>
