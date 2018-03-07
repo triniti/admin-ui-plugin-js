@@ -124,7 +124,9 @@
 }
 
 .btn.disabled,
-.btn.disabled:hover {
+.btn.disabled:hover,
+.btn:disabled,
+.btn:disabled:hover {
   cursor: not-allowed;
   box-shadow: $shadow-depth0;
   pointer-events: none;

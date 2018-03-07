@@ -19,6 +19,7 @@ import audio from './audio.svg';
 import back from './back.svg';
 import backspace from './backspace.svg';
 import bold from './bold.svg';
+import bookOpen from './book-open.svg';
 import bookmark from './bookmark.svg';
 import bookmarkOutline from './bookmark-outline.svg';
 import box from './box.svg';
@@ -29,8 +30,11 @@ import caretUp from './caret-up.svg';
 import checkLine from './check-line.svg';
 import checkLineThick from './check-line-thick.svg';
 import checkOutline from './check-outline.svg';
+import checkOutlineSquare from './check-outline-square.svg';
 import checkSolid from './check-solid.svg';
+import checkSolidSquare from './check-solid-square.svg';
 import circle from './circle.svg';
+import circleOutline from './circle-outline.svg';
 import clipboard from './clipboard.svg';
 import clockOutline from './clock-outline.svg';
 import clockSolid from './clock-solid.svg';
@@ -121,6 +125,7 @@ import soundHistogram from './sound-histogram.svg';
 import soundWave from './sound-wave.svg';
 import star from './star.svg';
 import starOutline from './star-outline.svg';
+import status from './status.svg';
 import strikethrough from './strikethrough.svg';
 import tagOutline from './tag-outline.svg';
 import tagSolid from './tag-solid.svg';
@@ -169,6 +174,7 @@ const icons = {
   back,
   backspace,
   bold,
+  'book-open': bookOpen,
   bookmark,
   'bookmark-outline': bookmarkOutline,
   box,
@@ -179,8 +185,11 @@ const icons = {
   'check-line': checkLine,
   'check-line-thick': checkLineThick,
   'check-outline': checkOutline,
+  'check-outline-square': checkOutlineSquare,
   'check-solid': checkSolid,
+  'check-solid-square': checkSolidSquare,
   circle,
+  'circle-outline': circleOutline,
   clipboard,
   'clock-outline': clockOutline,
   'clock-solid': clockSolid,
@@ -271,6 +280,7 @@ const icons = {
   'sound-wave': soundWave,
   star,
   'star-outline': starOutline,
+  status,
   strikethrough,
   'tag-outline': tagOutline,
   'tag-solid': tagSolid,

@@ -14,10 +14,6 @@ body {
   -ms-text-size-adjust: 100%;
   -webkit-font-feature-settings: 'kern' 1;
   -moz-font-feature-settings: 'kern' 1;
-
-  @media (min-width: 1600px) {
-    font-size: .875rem;
-  }
 }
 
 
@@ -69,6 +65,10 @@ input::-moz-focus-inner {
   border: 0;
 }
 
+a {
+  color: $body-color;
+}
+
 a:focus {
   box-shadow: none;
 }
@@ -90,6 +90,10 @@ h3 {
 
 p {
   font-size: .875rem;
+}
+
+.text-light {
+  color: #9a9a9a !important;
 }
 
 a:not([href]):not([tabindex]),
@@ -168,29 +172,6 @@ a:not([href]):not([tabindex]),
 }
 
 
-// Universal Padding
-
-.padding-xl {
-  padding: $padding-xl;
-}
-
-.padding-lg {
-  padding: $padding-lg;
-}
-
-.padding-md {
-  padding: $padding-md;
-}
-
-.padding-sm {
-  padding: $padding-sm;
-}
-
-.padding-xs {
-  padding: $padding-xs;
-}
-
-
 // Borderless - remove border and box-shadow
 
 .borderless {
@@ -256,7 +237,7 @@ input::-webkit-calendar-picker-indicator {
 .shadow-depth2 {box-shadow: $shadow-depth2 !important;}
 .shadow-depth3 {box-shadow: $shadow-depth3 !important;}
 .shadow-depth4 {box-shadow: $shadow-depth4 !important;}
-.shadow-depth5 {box-shadow: $shadow-depth4 !important;}
-.shadow-depth6 {box-shadow: $shadow-depth4 !important;}
-.shadow-depth7 {box-shadow: $shadow-depth4 !important;}
-.shadow-depth8 {box-shadow: $shadow-depth4 !important;}
+.shadow-depth5 {box-shadow: $shadow-depth5 !important;}
+.shadow-depth6 {box-shadow: $shadow-depth6 !important;}
+.shadow-depth7 {box-shadow: $shadow-depth7 !important;}
+.shadow-depth8 {box-shadow: $shadow-depth8 !important;}

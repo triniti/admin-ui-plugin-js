@@ -184,17 +184,17 @@ const UiMedia = () => (
           </Media>
           <Row>
             <Col>
-              <Media heading>Media Hover inside MediaList</Media>
+              <Media heading>Media Hover inside MediaList with img-thumbnail class on img</Media>
               <Media list>
                 <Media tag="li">
                   <Media left hover href="#">
-                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
                   </Media>
                   <Media left hover href="#">
-                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
                   </Media>
                   <Media left hover href="#">
-                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
                   </Media>
                 </Media>
               </Media>

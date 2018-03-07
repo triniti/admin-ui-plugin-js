@@ -40,6 +40,7 @@ const UiIcons = () => (
             <IconList iconName="back"/>
             <IconList iconName="backspace"/>
             <IconList iconName="bold"/>
+            <IconList iconName="book-open"/>
             <IconList iconName="bookmark"/>
             <IconList iconName="bookmark-outline"/>
             <IconList iconName="box"/>
@@ -50,7 +51,11 @@ const UiIcons = () => (
             <IconList iconName="check-line"/>
             <IconList iconName="check-line-thick"/>
             <IconList iconName="check-outline"/>
+            <IconList iconName="check-outline-square"/>
             <IconList iconName="check-solid"/>
+            <IconList iconName="check-solid-square"/>
+            <IconList iconName="circle"/>
+            <IconList iconName="circle-outline"/>
             <IconList iconName="compress"/>
             <IconList iconName="clipboard"/>
             <IconList iconName="clock-outline"/>
@@ -141,6 +146,7 @@ const UiIcons = () => (
             <IconList iconName="sound-wave"/>
             <IconList iconName="star"/>
             <IconList iconName="star-outline"/>
+            <IconList iconName="status"/>
             <IconList iconName="strikethrough"/>
             <IconList iconName="tag-outline"/>
             <IconList iconName="tag-solid"/>
@@ -240,6 +246,9 @@ const UiIcons = () => (
               <IconTooltip iconName="minus-line"/>
               <IconTooltip iconName="delete-line"/>
               <IconTooltip iconName="check-line"/>
+              <IconTooltip iconName="check-outline-square"/>
+              <IconTooltip iconName="check-solid-square"/>
+              <IconTooltip iconName="status"/>
             </Col>
           </Row>
           <Row>
@@ -299,6 +308,8 @@ const UiIcons = () => (
               <IconTooltip iconName="unlocked"/>
               <IconTooltip iconName="locked-solid"/>
               <IconTooltip iconName="unlocked-solid"/>
+              <IconTooltip iconName="circle"/>
+              <IconTooltip iconName="circle-outline"/>
             </Col>
           </Row>
           <Row>
@@ -320,6 +331,7 @@ const UiIcons = () => (
               <IconTooltip iconName="zip"/>
               <IconTooltip iconName="document"/>
               <IconTooltip iconName="documents"/>
+              <IconTooltip iconName="book-open"/>
               <IconTooltip iconName="unknown"/>
               <IconTooltip iconName="add-item"/>
               <IconTooltip iconName="clipboard"/>
@@ -417,6 +429,17 @@ const UiIcons = () => (
       </Card>,
 
       <Card key="icons5">
+        <CardHeader>Toggle Icons</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <Button outline color="light">Toggle</Button>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons6">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
           <Row>
