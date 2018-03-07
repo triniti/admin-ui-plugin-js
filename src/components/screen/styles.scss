@@ -55,7 +55,7 @@ $sidenav-width:     300px;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
-  box-shadow: $shadow-depth2;
+  box-shadow: $shadow-depth2, 1px 0 0 0 $white;
   z-index: $zindex-dropdown - 1;
 
 
