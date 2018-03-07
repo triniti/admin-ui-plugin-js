@@ -465,6 +465,17 @@ const UiIcons = () => (
       </Card>,
 
       <Card key="icons5">
+        <CardHeader>Toggle Icons</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <Button outline color="light">Toggle</Button>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons6">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
           <Row>

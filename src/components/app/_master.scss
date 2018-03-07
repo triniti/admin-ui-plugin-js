@@ -232,34 +232,12 @@ input::-webkit-calendar-picker-indicator {
 
 // Box-shadow
 
-.shadow-depth-0 {box-shadow: $shadow-depth-0 !important;}
-.shadow-depth-1 {box-shadow: $shadow-depth-1 !important;}
-.shadow-depth-2 {box-shadow: $shadow-depth-2 !important;}
-.shadow-depth-3 {box-shadow: $shadow-depth-3 !important;}
-.shadow-depth-4 {box-shadow: $shadow-depth-4 !important;}
-.shadow-depth-5 {box-shadow: $shadow-depth-5 !important;}
-.shadow-depth-6 {box-shadow: $shadow-depth-6 !important;}
-.shadow-depth-7 {box-shadow: $shadow-depth-7 !important;}
-.shadow-depth-8 {box-shadow: $shadow-depth-8 !important;}
-
-// Flex Order
-
-.flex-order-1 {order: 1;}
-.flex-order-2 {order: 2;}
-.flex-order-3 {order: 3;}
-.flex-order-4 {order: 4;}
-.flex-order-5 {order: 5;}
-.flex-order-6 {order: 6;}
-.flex-order-7 {order: 7;}
-.flex-order-8 {order: 8;}
-
-@media (max-width: 767px) {
-  .flex-order-mobile-1 {order: 1 !important;}
-  .flex-order-mobile-2 {order: 2 !important;}
-  .flex-order-mobile-3 {order: 3 !important;}
-  .flex-order-mobile-4 {order: 4 !important;}
-  .flex-order-mobile-5 {order: 5 !important;}
-  .flex-order-mobile-6 {order: 6 !important;}
-  .flex-order-mobile-7 {order: 7 !important;}
-  .flex-order-mobile-8 {order: 8 !important;}
-}
+.shadow-depth0 {box-shadow: $shadow-depth0 !important;}
+.shadow-depth1 {box-shadow: $shadow-depth1 !important;}
+.shadow-depth2 {box-shadow: $shadow-depth2 !important;}
+.shadow-depth3 {box-shadow: $shadow-depth3 !important;}
+.shadow-depth4 {box-shadow: $shadow-depth4 !important;}
+.shadow-depth5 {box-shadow: $shadow-depth5 !important;}
+.shadow-depth6 {box-shadow: $shadow-depth6 !important;}
+.shadow-depth7 {box-shadow: $shadow-depth7 !important;}
+.shadow-depth8 {box-shadow: $shadow-depth8 !important;}

@@ -21,7 +21,7 @@
   margin-right: -300px;
   background-color: $white;
   transition: all $transition;
-  box-shadow: $shadow-depth-8;
+  box-shadow: $shadow-depth8;
   flex-direction: column;
   flex-wrap: nowrap;
 }
@@ -56,19 +56,13 @@
   justify-content: center;
   background: transparent;
   color: $body-color;
-
-  & span {
-    opacity: .625;
-  }
+  opacity: .8;
 
   &:hover,
   &:active {
+    opacity: 1;
     box-shadow: 0 0 0 2px rgba(#000, .25);
     cursor: pointer;
-
-    & span {
-      opacity: 1;
-    }
   }
   @media (min-width: 1025px) {
     top: .625rem;

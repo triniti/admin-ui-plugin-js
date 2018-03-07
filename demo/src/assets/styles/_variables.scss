@@ -217,7 +217,7 @@ $custom-file-focus-box-shadow:   0 0 0 .075rem $white, 0 0 0 .2rem theme-color("
 
 $dropdown-border-color:          rgba($black,.125);
 $dropdown-divider-bg:            $gray-300;
-$dropdown-box-shadow:            $shadow-depth-4;
+$dropdown-box-shadow:            $shadow-depth4;
 $dropdown-link-active-bg:        $dropdown-link-hover-bg;
 $dropdown-link-disabled-color:   $text-muted;
 $dropdown-header-color:          $gray-900;
@@ -317,8 +317,8 @@ $badge-padding-x:             .6em;
 
 // Modals
 
-$modal-content-box-shadow-xs:    $shadow-depth-4;
-$modal-content-box-shadow-sm-up: $shadow-depth-5;
+$modal-content-box-shadow-xs:    $shadow-depth4;
+$modal-content-box-shadow-sm-up: $shadow-depth5;
 $modal-content-border-color:     $gray-rgba-300;
 $modal-backdrop-bg:              $gray-900;
 $modal-backdrop-opacity:         .3;
