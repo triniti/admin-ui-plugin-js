@@ -52,7 +52,7 @@
     content: '';
     transition: opacity $transition;
     opacity: 0;
-    box-shadow: 0 .5rem 1.5rem -.25rem rgba($black, .2);
+    box-shadow: $shadow-depth6;
   }
 
   &:hover {

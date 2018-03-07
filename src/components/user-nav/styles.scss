@@ -21,7 +21,7 @@
   margin-right: -300px;
   background-color: $white;
   transition: all $transition;
-  box-shadow: 0 0 16px $gray-rgba-600, 0 0 0 1px rgba($black, .025);
+  box-shadow: $shadow-depth8;
   flex-direction: column;
   flex-wrap: nowrap;
 }
@@ -61,7 +61,7 @@
   &:hover,
   &:active {
     opacity: 1;
-    box-shadow: 0 0 0 2px rgba($icon-fill-dark, .25);
+    box-shadow: 0 0 0 2px rgba(#000, .25);
     cursor: pointer;
   }
   @media (min-width: 1025px) {
@@ -84,7 +84,7 @@
   &:hover,
   &:active {
     opacity: 1;
-    box-shadow: 0 0 0 2px rgba($icon-fill-light, .25);
+    box-shadow: 0 0 0 2px rgba(#fff, .25);
   }
 }
 

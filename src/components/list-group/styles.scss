@@ -13,6 +13,11 @@
   &:active {
     color: $body-color;
   }
+
+  &.disabled,
+  &:disabled {
+    color: $text-muted;
+  }
 }
 
 .list-group-item-text {

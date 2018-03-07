@@ -42,6 +42,11 @@
   .nav-underline &.active {
     color: $body-color;
   }
+
+  .nav-underline &.disabled,
+  .nav-underline &.disabled:hover {
+    color: $text-muted;
+  }
 }
 
 //
