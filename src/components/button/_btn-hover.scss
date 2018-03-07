@@ -8,7 +8,8 @@
 
 .btn-hover,
 .btn-outline-hover {
-  opacity: .6;
+  color: $body-color;
+  opacity: .625;
   border-color: transparent !important;
   background-color: transparent;
   box-shadow: $shadow-depth0;

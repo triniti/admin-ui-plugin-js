@@ -17,10 +17,13 @@
   width: 1rem; // 16px
   align-self: center;
   vertical-align: middle;
-  margin-top: -3px;
+  margin-top: -1px;
+  margin-bottom: 1px;
 
   .btn & {
     margin-right: .5rem;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .btn-radius-circle & {
@@ -241,9 +244,12 @@
   .icon-color-#{$color} {
     color: $value;
 
+    &.icon-alert-xl,
     &.icon-alert-lg,
     &.icon-alert-md,
-    &.icon-alert-sm {
+    &.icon-alert-sm,
+    &.icon-alert-xs,
+    &.icon-alert-xxs {
       background-color: $value;
       color: $white;
     }
@@ -284,17 +290,17 @@
 
 // toggle icons in buttons using active state of button
 
-.icon-toggle-active {
+.icon-toggle:last-child {
   display: none;
 }
 
 .btn:active,
 .btn.active {
 
-  & .icon-toggle {
+  & .icon-toggle:first-child {
     display: none;
   }
-  & .icon-toggle-active {
+  & .icon-toggle:last-child {
     display: inline-flex;
   }
 }

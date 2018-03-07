@@ -55,7 +55,7 @@ $sidenav-width:     300px;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
-  box-shadow: 0 1px 1px $gray-rgba-300;
+  box-shadow: $shadow-depth2;
   z-index: $zindex-dropdown - 1;
 
 
@@ -165,7 +165,7 @@ $sidenav-width:     300px;
   flex: 0 0 auto;
   justify-content: space-between;
   flex-wrap: nowrap;
-  box-shadow: 0 1px 1px $gray-rgba-300;
+  box-shadow: $shadow-depth2;
   z-index: $zindex-dropdown - 1;
 
   @media (max-width: 767px) {
@@ -331,10 +331,10 @@ $sidenav-width:     300px;
   padding: .5rem;
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: $shadow-depth5;
 
   &:focus {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2) !important;
+    box-shadow: $shadow-depth5 !important;
   }
 
   @media (min-width: 1024px) {

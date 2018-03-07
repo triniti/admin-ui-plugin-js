@@ -14,6 +14,10 @@
   box-shadow: inset 0 -1px 0 rgba(0,0,0,0.05);
   text-align: center;
 
+  .table & {
+    box-shadow: none;
+  }
+
   .card-body > & {
     @include border-radius($alert-border-radius);
   }
@@ -27,7 +31,7 @@
 
   .alert-container & {
     @include border-radius($alert-border-radius);
-    box-shadow: $shadow-depth4;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.0625), $shadow-depth7;
   }
 
   & span::before {
