@@ -1,6 +1,7 @@
 import activity from './activity.svg';
 import addCircle from './add-circle.svg';
 import addItem from './add-item.svg';
+import alarm from './alarm.svg';
 import apps from './apps.svg';
 import archive from './archive.svg';
 import arrowDoubleLeft from './arrow-double-left.svg';
@@ -162,6 +163,7 @@ const icons = {
   activity,
   'add-circle': addCircle,
   'add-item': addItem,
+  alarm,
   apps,
   archive,
   'arrow-back': arrowBack,
