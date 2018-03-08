@@ -206,6 +206,19 @@ $sidenav-width:     300px;
   padding: .5rem 0;
   letter-spacing: .01em;
   text-transform: capitalize;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  & .breadcrumb {
+    flex-wrap: nowrap;
+  }
+
+  & .breadcrumb-item:last-child {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
 
 @media (max-width: 767px) {
