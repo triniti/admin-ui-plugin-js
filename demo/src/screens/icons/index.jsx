@@ -95,6 +95,8 @@ const UiIcons = () => (
             <IconList iconName="headphones"/>
             <IconList iconName="heart"/>
             <IconList iconName="highlight"/>
+            <IconList iconName="home-outline"/>
+            <IconList iconName="home-solid"/>
             <IconList iconName="info-outline"/>
             <IconList iconName="info-solid"/>
             <IconList iconName="insert"/>
@@ -322,6 +324,9 @@ const UiIcons = () => (
           </Row>
           <Row>
             <Col>
+              <IconTooltip iconName="home-outline"/>
+              <IconTooltip iconName="home-solid"/>
+              <IconTooltip iconName="pencil"/>
               <IconTooltip iconName="pencil"/>
               <IconTooltip iconName="edit"/>
               <IconTooltip iconName="insert"/>
