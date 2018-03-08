@@ -43,7 +43,7 @@
   }
 
   .cards-container & {
-    box-shadow: $shadow-depth2;
+    box-shadow: $shadow-depth-2;
   }
 }
 
@@ -213,7 +213,7 @@ h4.card-title {
     content: '';
     transition: opacity $transition;
     opacity: 0;
-    box-shadow: $shadow-depth6;
+    box-shadow: $shadow-depth-6;
   }
 
   &:hover {

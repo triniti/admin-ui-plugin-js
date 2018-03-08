@@ -52,7 +52,7 @@
     content: '';
     transition: opacity $transition;
     opacity: 0;
-    box-shadow: $shadow-depth6;
+    box-shadow: $shadow-depth-6;
   }
 
   &:hover {

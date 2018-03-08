@@ -55,8 +55,9 @@ $sidenav-width:     300px;
   align-items: center;
   flex: 0 0 auto;
   justify-content: space-between;
-  box-shadow: $shadow-depth2, 1px 0 0 0 $white;
+  box-shadow: $shadow-depth-2;
   z-index: $zindex-dropdown - 1;
+  transition: box-shadow $transition, border-bottom $transition;
 
 
   .offcanvas-left & {
@@ -65,7 +66,9 @@ $sidenav-width:     300px;
     left: 0;
     margin-right: -1px;
     width: calc(299px + 2.125rem);
-    border-right: 1px solid $gray-500;
+    border-right: 1px solid $gray-rgba-300;
+    background: transparent;
+    border-bottom: 1px solid transparent;
     box-shadow: none;
     }
   }
@@ -165,7 +168,7 @@ $sidenav-width:     300px;
   flex: 0 0 auto;
   justify-content: space-between;
   flex-wrap: nowrap;
-  box-shadow: $shadow-depth2;
+  box-shadow: $shadow-depth-2;
   z-index: $zindex-dropdown - 1;
 
   @media (max-width: 767px) {
@@ -218,6 +221,68 @@ $sidenav-width:     300px;
   & a:hover,
   & a:focus {
     text-decoration: none;
+  }
+}
+
+.btn-primary-actions-toggle {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .screen-primary-actions-mobile {
+    opacity: 1 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-primary-actions-toggle {
+    display: inline-flex;
+  }
+  .screen-primary-actions-mobile {
+    position: fixed;
+    background-color: rgba(41, 41, 41, 0.9);
+    top: 2.5rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 2rem;
+    pointer-events: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    &.show {
+      pointer-events: auto;
+    }
+  }
+  .screen-primary-actions-mobile-body {
+    position: relative;
+    display: flex;
+    flex: 1 0 100%;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 6.5rem);
+  }
+  .screen-primary-actions .screen-primary-actions-mobile .btn {
+    margin: 0 0 1.5rem 0;
+    border-radius: 10rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+    flex-shrink: 0;
+  }
+  .screen-primary-actions-mobile-close {
+    position: fixed;
+    top: 2.5rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24'%3e%3cpath d='M12 13.413L1.706 23.707a1 1 0 0 1-1.413-1.413L10.587 12 .293 1.706A1 1 0 1 1 1.706.293L12 10.587 22.294.293a1 1 0 1 1 1.413 1.413L13.413 12l10.294 10.294a1 1 0 1 1-1.413 1.413L12 13.413z' fill='#fff' /%3e%3c/svg%3e");
+    background-position: top 1rem right 1rem;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
   }
 }
 
@@ -292,7 +357,7 @@ $sidenav-width:     300px;
 
     &.screen-sidebar-is-open {
       transform: translateX(0);
-      box-shadow: $shadow-depth2;
+      box-shadow: $shadow-depth-2;
 
       /*
       &::before {
@@ -331,10 +396,10 @@ $sidenav-width:     300px;
   padding: .5rem;
   width: 2.5rem;
   height: 2.5rem;
-  box-shadow: $shadow-depth5;
+  box-shadow: $shadow-depth-5;
 
   &:focus {
-    box-shadow: $shadow-depth5 !important;
+    box-shadow: $shadow-depth-5 !important;
   }
 
   @media (min-width: 1024px) {
@@ -351,7 +416,7 @@ $sidenav-width:     300px;
 
 .screen-navtabs {
   background-color: $white;
-  box-shadow: $shadow-depth2;
+  box-shadow: $shadow-depth-2;
   padding-top: .5rem;
   z-index: $zindex-sticky + 1;
 }

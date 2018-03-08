@@ -123,6 +123,9 @@ const UiIcons = () => (
             <IconList iconName="ordered-list"/>
             <IconList iconName="paperclip"/>
             <IconList iconName="pencil"/>
+            <IconList iconName="phone-mobile"/>
+            <IconList iconName="phone-outline"/>
+            <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
             <IconList iconName="plus"/>
             <IconList iconName="plus-line"/>
@@ -133,6 +136,7 @@ const UiIcons = () => (
             <IconList iconName="print"/>
             <IconList iconName="question"/>
             <IconList iconName="question-outline"/>
+            <IconList iconName="question-solid"/>
             <IconList iconName="refresh"/>
             <IconList iconName="revert"/>
             <IconList iconName="save"/>
@@ -261,6 +265,9 @@ const UiIcons = () => (
               <IconTooltip iconName="user-solid"/>
               <IconTooltip iconName="users"/>
               <IconTooltip iconName="directory"/>
+              <IconTooltip iconName="phone-mobile"/>
+              <IconTooltip iconName="phone-outline"/>
+              <IconTooltip iconName="phone-solid"/>
               <IconTooltip iconName="activity"/>
               <IconTooltip iconName="social"/>
               <IconTooltip iconName="login"/>
@@ -292,6 +299,7 @@ const UiIcons = () => (
               <IconTooltip iconName="info-solid"/>
               <IconTooltip iconName="question"/>
               <IconTooltip iconName="question-outline"/>
+              <IconTooltip iconName="question-solid"/>
               <IconTooltip iconName="warning"/>
               <IconTooltip iconName="warning-outline"/>
               <IconTooltip iconName="warning-outline-alt"/>
@@ -374,6 +382,8 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="lg"/>
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
+              <Icon imgSrc="question" size="alert-xxs" color="info" />
+              <IconTooltip iconName="question" size="alert-xxs" color="secondary" />
               <IconTooltip iconName="delete-line-thick" size="alert-xxs" />
               <IconTooltip iconName="plus-line-thick" size="alert-xs" border />
               <IconTooltip iconName="check-line-thick" size="alert-sm" color="success" />
@@ -420,6 +430,7 @@ const UiIcons = () => (
               <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
+              <Button radius="circle" color="secondary" size="sm"><Icon imgSrc="question" size="md"/></Button>
               <Button radius="circle" color="success" size="sm"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="sm"/></Button>
               <Button radius="circle" color="success"><Icon imgSrc="check-line-thick" alt="check-line-thick" /></Button>
               <Button radius="circle" color="success" size="md"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="md"/></Button>
