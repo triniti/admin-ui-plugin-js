@@ -208,10 +208,15 @@
 
 .icon-radius-rounded {
   border-radius: .25rem;
-
-  &.icon-alert,
-  &.icon-alert-sm {
+  
+  &.icon-alert-md {
     border-radius: .5rem;
+  }
+  &.icon-alert-lg {
+    border-radius: .675rem;
+  }
+  &.icon-alert-xl {
+    border-radius: .75rem;
   }
 }
 
