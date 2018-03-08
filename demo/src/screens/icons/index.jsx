@@ -22,6 +22,7 @@ const UiIcons = () => (
           <Row>
             <IconList iconName="activity"/>
             <IconList iconName="add-item"/>
+            <IconList iconName="alarm"/>
             <IconList iconName="apps"/>
             <IconList iconName="archive"/>
             <IconList iconName="arrow-double-left"/>
@@ -335,6 +336,7 @@ const UiIcons = () => (
               <IconTooltip iconName="strikethrough"/>
               <IconTooltip iconName="highlight"/>
               <IconTooltip iconName="external"/>
+              <IconTooltip iconName="alarm"/>
               <IconTooltip iconName="clock-outline"/>
               <IconTooltip iconName="clock-solid"/>
               <IconTooltip iconName="folder"/>
