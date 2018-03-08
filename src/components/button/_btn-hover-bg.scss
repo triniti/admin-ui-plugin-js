@@ -8,7 +8,7 @@
 .btn-hover-bg {
   border-color: transparent;
   background-color: transparent;
-  box-shadow: $shadow-depth0;
+  box-shadow: $shadow-depth-0;
 
   &:hover,
   &.active {
@@ -27,7 +27,7 @@
 .btn-outline-hover-bg {
   border-color: transparent;
   background-color: transparent;
-  box-shadow: $shadow-depth0;
+  box-shadow: $shadow-depth-0;
 
   &:hover,
   &.active {

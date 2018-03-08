@@ -14,10 +14,10 @@
   justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  box-shadow: $shadow-depth0;
+  box-shadow: $shadow-depth-0;
 
   .screen-primary-actions & {
-    box-shadow: $shadow-depth3;
+    box-shadow: $shadow-depth-3;
   }
 
   &:hover,
@@ -128,7 +128,7 @@
 .btn:disabled,
 .btn:disabled:hover {
   cursor: not-allowed;
-  box-shadow: $shadow-depth0;
+  box-shadow: $shadow-depth-0;
   pointer-events: none;
 }
 
