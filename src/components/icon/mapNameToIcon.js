@@ -74,6 +74,8 @@ import gridTwoUp from './grid-two-up.svg';
 import headphones from './headphones.svg';
 import heart from './heart.svg';
 import highlight from './highlight.svg';
+import homeOutline from './home-outline.svg';
+import homeSolid from './home-solid.svg';
 import infoOutline from './info-outline.svg';
 import infoSolid from './info-solid.svg';
 import insert from './insert.svg';
@@ -233,6 +235,8 @@ const icons = {
   headphones,
   heart,
   highlight,
+  'home-outline': homeOutline,
+  'home-solid': homeSolid,
   'info-outline': infoOutline,
   'info-solid': infoSolid,
   insert,
