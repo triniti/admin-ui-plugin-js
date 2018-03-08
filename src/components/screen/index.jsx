@@ -9,6 +9,7 @@ import NavItem from '../nav-item';
 import RouterLink from '../router-link';
 import Breadcrumb from '../breadcrumb';
 import BreadcrumbItem from '../breadcrumb-item';
+import ScreenPrimaryActions from './screen-primary-actions';
 import './styles.scss';
 
 // fixme: this seems not very reacty
@@ -77,7 +78,7 @@ const Screen = (props) => {
             </Breadcrumb>
           </h1>}
           {breadcrumbs.length === 0 && header && <h1 className="screen-header-title">{header}</h1>}
-          {primaryActions && <div className="screen-primary-actions">{primaryActions}</div>}
+          {primaryActions && <ScreenPrimaryActions>{primaryActions}</ScreenPrimaryActions>}
         </div>}
 
         <AlertBar alerts={alerts} onDismiss={id => dispatch(dismissAlert(id))} />

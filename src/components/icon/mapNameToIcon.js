@@ -94,7 +94,6 @@ import minusLineThick from './minus-line-thick.svg';
 import minusOutline from './minus-outline.svg';
 import minusOutlineSquare from './minus-outline-square.svg';
 import minusSolid from './minus-solid.svg';
-import print from './print.svg';
 import moreHorizontal from './more-horizontal.svg';
 import moreVertical from './more-vertical.svg';
 import move from './move.svg';
@@ -103,6 +102,9 @@ import notificationOutline from './notification-outline.svg';
 import orderedList from './ordered-list.svg';
 import paperclip from './paperclip.svg';
 import pencil from './pencil.svg';
+import phoneMobile from './phone-mobile.svg';
+import phoneOutline from './phone-outline.svg';
+import phoneSolid from './phone-solid.svg';
 import photo from './photo.svg';
 import plus from './plus.svg';
 import plusLine from './plus-line.svg';
@@ -110,8 +112,10 @@ import plusLineThick from './plus-line-thick.svg';
 import plusOutline from './plus-outline.svg';
 import plusOutlineSquare from './plus-outline-square.svg';
 import plusSolid from './plus-solid.svg';
+import print from './print.svg';
 import question from './question.svg';
 import questionOutline from './question-outline.svg';
+import questionSolid from './question-solid.svg';
 import refresh from './refresh.svg';
 import revert from './revert.svg';
 import save from './save.svg';
@@ -257,6 +261,9 @@ const icons = {
   'ordered-list': orderedList,
   paperclip,
   pencil,
+  'phone-mobile': phoneMobile,
+  'phone-outline': phoneOutline,
+  'phone-solid': phoneSolid,
   photo,
   plus,
   'plus-line': plusLine,
@@ -267,6 +274,7 @@ const icons = {
   print,
   question,
   'question-outline': questionOutline,
+  'question-solid': questionSolid,
   refresh,
   revert,
   save,
