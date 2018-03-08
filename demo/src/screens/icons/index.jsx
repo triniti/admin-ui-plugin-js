@@ -327,7 +327,6 @@ const UiIcons = () => (
               <IconTooltip iconName="home-outline"/>
               <IconTooltip iconName="home-solid"/>
               <IconTooltip iconName="pencil"/>
-              <IconTooltip iconName="pencil"/>
               <IconTooltip iconName="edit"/>
               <IconTooltip iconName="insert"/>
               <IconTooltip iconName="bold"/>
