@@ -170,7 +170,7 @@ export default () => (
           </tr>
           </thead>
         </Table>
-        <Table striped hover className="fixed">
+        <Table striped hover className="fixed mb-0">
           <tbody>
           <tr>
             <th scope="row">1</th>
@@ -199,7 +199,7 @@ export default () => (
       </Card>,
 
       <Card key="table4">
-        <Table dark>
+        <Table dark className="mb-0">
           <thead>
           <tr>
             <th>#</th>
@@ -236,7 +236,7 @@ export default () => (
       </Card>,
 
       <Card key="table5">
-        <Table striped>
+        <Table striped className="mb-0">
           <thead>
           <tr>
             <th>#</th>
@@ -273,7 +273,7 @@ export default () => (
       </Card>,
 
       <Card key="table6">
-        <Table bordered>
+        <Table bordered className="mb-0">
           <thead>
           <tr>
             <th>#</th>
