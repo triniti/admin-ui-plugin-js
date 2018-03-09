@@ -111,7 +111,7 @@ label {
   text-transform: uppercase;
   letter-spacing: .01em;
   font-weight: 500;
-  color: theme-color("dark");
+  color: #7a7a7a;
 }
 
 .col-form-label {
@@ -288,7 +288,6 @@ input[type="checkbox"] {
   color: #292929;
   opacity: 1 !important;
   box-shadow: none !important;
-  // resize: none;
 
   &::-webkit-input-placeholder {
     color: transparent;
