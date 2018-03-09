@@ -3,6 +3,7 @@
 @import "~bootstrap/scss/tables";
 
 .table {
+  margin-bottom: .25rem;
 
   td {
     font-size: .8rem;
@@ -17,6 +18,29 @@
     letter-spacing: .01em;
     font-weight: 500;
     opacity: .625;
+  }
+}
+
+td {
+
+  &.td-icons {
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+  }
+  .table-sm &.td-icons {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .table-lg &.td-icons {
+    padding-top: .375rem;
+  }
+}
+
+.td-icons {
+  white-space: nowrap;
+
+  & .btn {
+    margin-bottom: 0;
   }
 }
 

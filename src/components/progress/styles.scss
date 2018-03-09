@@ -2,3 +2,8 @@
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/progress";
+
+.progress-bar {
+  font-weight: 700;
+  text-shadow: $text-shadow;
+}

@@ -267,6 +267,8 @@
 // Button Sizes
 //
 
+.btn-xxs,
+.btn-xs,
 .btn-sm {
   font-weight: 400;
 }
@@ -327,6 +329,14 @@
   align-items: center;
   justify-content: center;
 
+  &.btn-xxs {
+    width: $button-round-height-xxs;
+    height: $button-round-height-xxs;
+  }
+  &.btn-xs {
+    width: $button-round-height-xs;
+    height: $button-round-height-xs;
+  }
   &.btn-sm {
     width: $button-round-height-sm;
     height: $button-round-height-sm;
@@ -343,17 +353,6 @@
     width: $button-round-height-xl;
     height: $button-round-height-xl;
   }
-}
-
-
-// Show dropdown-menu on hover
-
-.btn-radius-circle + .dropdown-menu:hover {
-  // display: block;
-}
-
-.btn-radius-circle:hover + .dropdown-menu {
-  // display: block;
 }
 
 

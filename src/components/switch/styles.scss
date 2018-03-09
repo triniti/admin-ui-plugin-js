@@ -81,7 +81,7 @@ input.switch-input:checked + label:after {
     margin-top: -$form-check-height;
     font-weight: 600;
     color: $white;
-    text-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    text-shadow: $text-shadow;
     opacity: 0;
   }
 }
