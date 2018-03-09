@@ -1,6 +1,6 @@
 {
   "name": "@triniti/admin-ui-plugin",
-  "version": "0.4.6",
+  "version": "0.4.7",
   "description": "The admin-ui is a javaScript plugin for Triniti apps.",
   "repository": {
     "type": "git",
@@ -78,7 +78,7 @@
     "jsdom": "^11.6.2",
     "jsdom-global": "^3.0.2",
     "lodash": "^4.17.5",
-    "lodash-es": "^4.17.5",
+    "lodash-es": "^4.17.7",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -93,7 +93,7 @@
     "redux": "^3.7.2",
     "sinon": "^4.4.2",
     "svg-fill-loader": "^0.0.8",
-    "sweetalert2": "^7.15.0",
+    "sweetalert2": "^7.15.1",
     "tape": "^4.9.0"
   },
   "babel": {

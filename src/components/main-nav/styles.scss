@@ -56,8 +56,7 @@
   display: flex;
   flex-direction: row;
   padding: 0 !important;
-  border-bottom: 1px solid $gray-500;
-  // box-shadow: inset 0 -1px 2px $gray-rgba-200;
+  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
   align-items: center;
   justify-content: center;
   flex-flow: wrap;
@@ -227,7 +226,10 @@
   .navbar-main-wrapper .navbar-nav .nav-link:hover {
     position: relative;
     background: $white;
-    box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600;
+    box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600, inset 0 -1px 0 0 rgba(0,0,0,0.1);
+  }
+  .navbar-main-wrapper .navbar-nav .dropdown:hover .nav-link {
+    box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600, 0 1px 0 0 $navbar-theme-light;
   }
   .navbar-dark .dropdown:hover .nav-link:before {
     background-color: $navbar-theme-dark-dropdown;
@@ -253,13 +255,13 @@
     border-radius: $border-radius-lg;
     background: $white;
     background-clip: padding-box;
-    box-shadow: 0 1px 14px -2px $gray-rgba-600, 0 0 0 1px rgba($black, .05);
+    box-shadow: 0 1px 16px -2px $gray-rgba-600, 0 0 0 1px rgba($black, .05);
     transform: none !important;
   }
   .navbar-main-wrapper .navbar-nav .nav-dropdown-menu {
     margin: 0;
     border-radius: 0 0 $border-radius-lg $border-radius-lg;
-    box-shadow: 0 10px 14px -7px $gray-rgba-600;
+    box-shadow: 0 10px 16px -8px $gray-rgba-600;
   }
   .navbar-dark .navbar-nav .nav-dropdown-menu {
     border: none;

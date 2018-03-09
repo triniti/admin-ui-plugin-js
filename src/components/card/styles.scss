@@ -43,9 +43,8 @@
   }
 
   .cards-container & {
-    box-shadow: $shadow-depth2;
+    box-shadow: $shadow-depth-2;
   }
-
 }
 
 .card-border {
@@ -73,27 +72,7 @@
 }
 
 .card-body > .row {
-  padding-top: ($padding-xs - .125rem);
-
-  @media (min-width: 768px) and (max-width: 1024px) {
-    padding-top: ($padding-md - .25rem);
-  }
-
-  @media (min-width: 1025px) and (max-width: 1599px) {
-    padding-top: ($padding-lg - .5rem);
-  }
-
-  @media (min-width: 1600px) {
-    padding-top: ($padding-xl - .5rem);
-  }
-}
-
-.card-body > .row:first-of-type {
-  padding-top: 0;
-}
-
-.card-subheader + .row {
-  padding-top: 0;
+  margin-bottom: $form-group-margin-bottom;
 }
 
 .card-title {
@@ -176,7 +155,7 @@ h4.card-title {
     background-color: $gray-100;
     font-size: .875rem;
     min-height: 44px;
-    box-shadow: $shadow-depth1, 0 -1px 0 $gray-400;
+    box-shadow: 0 1px 0 $gray-rgba-200, 0 -1px 0 $gray-400;
     border: none;
 
     & .btn-toggler {
@@ -234,7 +213,7 @@ h4.card-title {
     content: '';
     transition: opacity $transition;
     opacity: 0;
-    box-shadow: 0 .5rem 1.5rem -.25rem rgba($black, .2);
+    box-shadow: $shadow-depth-6;
   }
 
   &:hover {

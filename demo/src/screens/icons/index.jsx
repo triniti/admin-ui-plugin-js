@@ -22,6 +22,7 @@ const UiIcons = () => (
           <Row>
             <IconList iconName="activity"/>
             <IconList iconName="add-item"/>
+            <IconList iconName="alarm"/>
             <IconList iconName="apps"/>
             <IconList iconName="archive"/>
             <IconList iconName="arrow-double-left"/>
@@ -40,6 +41,7 @@ const UiIcons = () => (
             <IconList iconName="back"/>
             <IconList iconName="backspace"/>
             <IconList iconName="bold"/>
+            <IconList iconName="book-open"/>
             <IconList iconName="bookmark"/>
             <IconList iconName="bookmark-outline"/>
             <IconList iconName="box"/>
@@ -50,7 +52,11 @@ const UiIcons = () => (
             <IconList iconName="check-line"/>
             <IconList iconName="check-line-thick"/>
             <IconList iconName="check-outline"/>
+            <IconList iconName="check-outline-square"/>
             <IconList iconName="check-solid"/>
+            <IconList iconName="check-solid-square"/>
+            <IconList iconName="circle"/>
+            <IconList iconName="circle-outline"/>
             <IconList iconName="compress"/>
             <IconList iconName="clipboard"/>
             <IconList iconName="clock-outline"/>
@@ -90,6 +96,8 @@ const UiIcons = () => (
             <IconList iconName="headphones"/>
             <IconList iconName="heart"/>
             <IconList iconName="highlight"/>
+            <IconList iconName="home-outline"/>
+            <IconList iconName="home-solid"/>
             <IconList iconName="info-outline"/>
             <IconList iconName="info-solid"/>
             <IconList iconName="insert"/>
@@ -97,6 +105,8 @@ const UiIcons = () => (
             <IconList iconName="link"/>
             <IconList iconName="list"/>
             <IconList iconName="list-cards"/>
+            <IconList iconName="location-outline"/>
+            <IconList iconName="location-solid"/>
             <IconList iconName="locked"/>
             <IconList iconName="locked-solid"/>
             <IconList iconName="login"/>
@@ -118,6 +128,9 @@ const UiIcons = () => (
             <IconList iconName="ordered-list"/>
             <IconList iconName="paperclip"/>
             <IconList iconName="pencil"/>
+            <IconList iconName="phone-mobile"/>
+            <IconList iconName="phone-outline"/>
+            <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
             <IconList iconName="plus"/>
             <IconList iconName="plus-line"/>
@@ -128,6 +141,7 @@ const UiIcons = () => (
             <IconList iconName="print"/>
             <IconList iconName="question"/>
             <IconList iconName="question-outline"/>
+            <IconList iconName="question-solid"/>
             <IconList iconName="refresh"/>
             <IconList iconName="revert"/>
             <IconList iconName="save"/>
@@ -141,6 +155,7 @@ const UiIcons = () => (
             <IconList iconName="sound-wave"/>
             <IconList iconName="star"/>
             <IconList iconName="star-outline"/>
+            <IconList iconName="status"/>
             <IconList iconName="strikethrough"/>
             <IconList iconName="tag-outline"/>
             <IconList iconName="tag-solid"/>
@@ -240,6 +255,9 @@ const UiIcons = () => (
               <IconTooltip iconName="minus-line"/>
               <IconTooltip iconName="delete-line"/>
               <IconTooltip iconName="check-line"/>
+              <IconTooltip iconName="check-outline-square"/>
+              <IconTooltip iconName="check-solid-square"/>
+              <IconTooltip iconName="status"/>
             </Col>
           </Row>
           <Row>
@@ -252,6 +270,9 @@ const UiIcons = () => (
               <IconTooltip iconName="user-solid"/>
               <IconTooltip iconName="users"/>
               <IconTooltip iconName="directory"/>
+              <IconTooltip iconName="phone-mobile"/>
+              <IconTooltip iconName="phone-outline"/>
+              <IconTooltip iconName="phone-solid"/>
               <IconTooltip iconName="activity"/>
               <IconTooltip iconName="social"/>
               <IconTooltip iconName="login"/>
@@ -283,6 +304,7 @@ const UiIcons = () => (
               <IconTooltip iconName="info-solid"/>
               <IconTooltip iconName="question"/>
               <IconTooltip iconName="question-outline"/>
+              <IconTooltip iconName="question-solid"/>
               <IconTooltip iconName="warning"/>
               <IconTooltip iconName="warning-outline"/>
               <IconTooltip iconName="warning-outline-alt"/>
@@ -299,10 +321,14 @@ const UiIcons = () => (
               <IconTooltip iconName="unlocked"/>
               <IconTooltip iconName="locked-solid"/>
               <IconTooltip iconName="unlocked-solid"/>
+              <IconTooltip iconName="circle"/>
+              <IconTooltip iconName="circle-outline"/>
             </Col>
           </Row>
           <Row>
             <Col>
+              <IconTooltip iconName="home-outline"/>
+              <IconTooltip iconName="home-solid"/>
               <IconTooltip iconName="pencil"/>
               <IconTooltip iconName="edit"/>
               <IconTooltip iconName="insert"/>
@@ -312,6 +338,7 @@ const UiIcons = () => (
               <IconTooltip iconName="strikethrough"/>
               <IconTooltip iconName="highlight"/>
               <IconTooltip iconName="external"/>
+              <IconTooltip iconName="alarm"/>
               <IconTooltip iconName="clock-outline"/>
               <IconTooltip iconName="clock-solid"/>
               <IconTooltip iconName="folder"/>
@@ -320,6 +347,7 @@ const UiIcons = () => (
               <IconTooltip iconName="zip"/>
               <IconTooltip iconName="document"/>
               <IconTooltip iconName="documents"/>
+              <IconTooltip iconName="book-open"/>
               <IconTooltip iconName="unknown"/>
               <IconTooltip iconName="add-item"/>
               <IconTooltip iconName="clipboard"/>
@@ -362,6 +390,7 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="lg"/>
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
+              <IconTooltip iconName="question" size="alert-xxs" color="secondary" />
               <IconTooltip iconName="delete-line-thick" size="alert-xxs" />
               <IconTooltip iconName="plus-line-thick" size="alert-xs" border />
               <IconTooltip iconName="check-line-thick" size="alert-sm" color="success" />
@@ -383,6 +412,8 @@ const UiIcons = () => (
               <IconTooltip iconName="check-outline" size="lg" color="info"/>
               <IconTooltip iconName="check-outline" size="xl" color="danger"/>
               <IconTooltip iconName="check-outline" size="xxl" color="success"/>
+              <IconTooltip iconName="warning" size="alert-xxs" color="danger" border />
+              <IconTooltip iconName="warning" size="alert-xs" color="warning" border />
               <IconTooltip iconName="cloud-upload" size="alert-sm" color="dark" radius="rounded" border />
               <IconTooltip iconName="warning-solid-triangle" size="alert-sm" color="warning" />
               <IconTooltip iconName="warning" size="alert-md" border />
@@ -406,11 +437,30 @@ const UiIcons = () => (
               <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
+              <Button radius="circle" color="secondary" size="xxs"><Icon imgSrc="question" size="xs"/></Button>
+              <Button radius="circle" color="secondary" size="xs"><Icon imgSrc="question" size="sm"/></Button>
+              <Button radius="circle" color="secondary" size="sm"><Icon imgSrc="question" size="md"/></Button>
               <Button radius="circle" color="success" size="sm"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="sm"/></Button>
               <Button radius="circle" color="success"><Icon imgSrc="check-line-thick" alt="check-line-thick" /></Button>
               <Button radius="circle" color="success" size="md"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="md"/></Button>
               <Button radius="circle" color="success" size="lg"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="lg"/></Button>
               <Button radius="circle" color="success" size="xl"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="xl"/></Button>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons3">
+        <CardHeader>File Types</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <IconTooltip iconName="code" size="alert-md" color="dark" radius="rounded" border />
+              <IconTooltip iconName="facebook-post" size="alert-md" color="dark" radius="rounded" border />
+              <IconTooltip iconName="facebook-video" size="alert-md" color="dark" radius="rounded" border />
+              <IconTooltip iconName="google-maps" size="alert-md" color="dark" radius="rounded" border />
+              <IconTooltip iconName="imgur-post" size="alert-md" color="dark" radius="rounded" border />
+              <IconTooltip iconName="instagram-media" size="alert-md" color="dark" radius="rounded" border />
             </Col>
           </Row>
         </CardBody>

@@ -4,6 +4,10 @@
 
 .has-border {
   position: relative;
+
+  &:hover::before {
+    background-color: $gray-600;
+  }
 }
 
 .has-border::before {
@@ -15,8 +19,10 @@
   width: 4px;
   content: '';
   border-radius: 4px;
-  background-color: $gray-500;
+  background-color: $gray-400;
 }
+
+
 
 .col.has-border::before {
   left: 0;

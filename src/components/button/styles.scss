@@ -14,10 +14,10 @@
   justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
-  box-shadow: $shadow-depth0;
+  box-shadow: $shadow-depth-0;
 
   .screen-primary-actions & {
-    box-shadow: $shadow-depth3;
+    box-shadow: $shadow-depth-3;
   }
 
   &:hover,
@@ -124,9 +124,11 @@
 }
 
 .btn.disabled,
-.btn.disabled:hover {
+.btn.disabled:hover,
+.btn:disabled,
+.btn:disabled:hover {
   cursor: not-allowed;
-  box-shadow: $shadow-depth0;
+  box-shadow: $shadow-depth-0;
   pointer-events: none;
 }
 
@@ -265,6 +267,8 @@
 // Button Sizes
 //
 
+.btn-xxs,
+.btn-xs,
 .btn-sm {
   font-weight: 400;
 }
@@ -325,6 +329,14 @@
   align-items: center;
   justify-content: center;
 
+  &.btn-xxs {
+    width: $button-round-height-xxs;
+    height: $button-round-height-xxs;
+  }
+  &.btn-xs {
+    width: $button-round-height-xs;
+    height: $button-round-height-xs;
+  }
   &.btn-sm {
     width: $button-round-height-sm;
     height: $button-round-height-sm;
@@ -341,17 +353,6 @@
     width: $button-round-height-xl;
     height: $button-round-height-xl;
   }
-}
-
-
-// Show dropdown-menu on hover
-
-.btn-radius-circle + .dropdown-menu:hover {
-  // display: block;
-}
-
-.btn-radius-circle:hover + .dropdown-menu {
-  // display: block;
 }
 
 

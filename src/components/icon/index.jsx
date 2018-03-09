@@ -49,7 +49,7 @@ const Icon = (props) => {
 
   const img = src || mapNameToIcon(imgSrc);
   return (
-    <Tag {...attributes} className={classes} dangerouslySetInnerHTML={{__html: img}} />
+      <Tag {...attributes} className={classes} dangerouslySetInnerHTML={{__html: img}}/>
   );
 };
 

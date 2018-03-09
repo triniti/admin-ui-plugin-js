@@ -1,6 +1,7 @@
 import activity from './activity.svg';
 import addCircle from './add-circle.svg';
 import addItem from './add-item.svg';
+import alarm from './alarm.svg';
 import apps from './apps.svg';
 import archive from './archive.svg';
 import arrowDoubleLeft from './arrow-double-left.svg';
@@ -19,6 +20,7 @@ import audio from './audio.svg';
 import back from './back.svg';
 import backspace from './backspace.svg';
 import bold from './bold.svg';
+import bookOpen from './book-open.svg';
 import bookmark from './bookmark.svg';
 import bookmarkOutline from './bookmark-outline.svg';
 import box from './box.svg';
@@ -29,8 +31,11 @@ import caretUp from './caret-up.svg';
 import checkLine from './check-line.svg';
 import checkLineThick from './check-line-thick.svg';
 import checkOutline from './check-outline.svg';
+import checkOutlineSquare from './check-outline-square.svg';
 import checkSolid from './check-solid.svg';
+import checkSolidSquare from './check-solid-square.svg';
 import circle from './circle.svg';
+import circleOutline from './circle-outline.svg';
 import clipboard from './clipboard.svg';
 import clockOutline from './clock-outline.svg';
 import clockSolid from './clock-solid.svg';
@@ -62,14 +67,21 @@ import expand from './expand.svg';
 import external from './external.svg';
 import dataTransferDownload from './data-transfer-download.svg';
 import dataTransferUpload from './data-transfer-upload.svg';
+import facebookPost from './facebook-post.svg';
+import facebookVideo from './facebook-video.svg';
 import folder from './folder.svg';
 import fullScreen from './full-screen.svg';
+import googleMaps from './google-maps.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
 import gridTwoUp from './grid-two-up.svg';
 import headphones from './headphones.svg';
 import heart from './heart.svg';
 import highlight from './highlight.svg';
+import homeOutline from './home-outline.svg';
+import homeSolid from './home-solid.svg';
+import imgurPost from './imgur-post.svg';
+import instagramMedia from './instagram-media.svg';
 import infoOutline from './info-outline.svg';
 import infoSolid from './info-solid.svg';
 import insert from './insert.svg';
@@ -77,6 +89,8 @@ import italic from './italic.svg';
 import link from './link.svg';
 import list from './list.svg';
 import listCards from './list-cards.svg';
+import locationOutline from './location-outline.svg';
+import locationSolid from './location-solid.svg';
 import locked from './locked.svg';
 import lockedSolid from './locked-solid.svg';
 import login from './login.svg';
@@ -90,7 +104,6 @@ import minusLineThick from './minus-line-thick.svg';
 import minusOutline from './minus-outline.svg';
 import minusOutlineSquare from './minus-outline-square.svg';
 import minusSolid from './minus-solid.svg';
-import print from './print.svg';
 import moreHorizontal from './more-horizontal.svg';
 import moreVertical from './more-vertical.svg';
 import move from './move.svg';
@@ -99,6 +112,9 @@ import notificationOutline from './notification-outline.svg';
 import orderedList from './ordered-list.svg';
 import paperclip from './paperclip.svg';
 import pencil from './pencil.svg';
+import phoneMobile from './phone-mobile.svg';
+import phoneOutline from './phone-outline.svg';
+import phoneSolid from './phone-solid.svg';
 import photo from './photo.svg';
 import plus from './plus.svg';
 import plusLine from './plus-line.svg';
@@ -106,8 +122,10 @@ import plusLineThick from './plus-line-thick.svg';
 import plusOutline from './plus-outline.svg';
 import plusOutlineSquare from './plus-outline-square.svg';
 import plusSolid from './plus-solid.svg';
+import print from './print.svg';
 import question from './question.svg';
 import questionOutline from './question-outline.svg';
+import questionSolid from './question-solid.svg';
 import refresh from './refresh.svg';
 import revert from './revert.svg';
 import save from './save.svg';
@@ -121,6 +139,7 @@ import soundHistogram from './sound-histogram.svg';
 import soundWave from './sound-wave.svg';
 import star from './star.svg';
 import starOutline from './star-outline.svg';
+import status from './status.svg';
 import strikethrough from './strikethrough.svg';
 import tagOutline from './tag-outline.svg';
 import tagSolid from './tag-solid.svg';
@@ -151,6 +170,7 @@ const icons = {
   activity,
   'add-circle': addCircle,
   'add-item': addItem,
+  alarm,
   apps,
   archive,
   'arrow-back': arrowBack,
@@ -169,6 +189,7 @@ const icons = {
   back,
   backspace,
   bold,
+  'book-open': bookOpen,
   bookmark,
   'bookmark-outline': bookmarkOutline,
   box,
@@ -179,8 +200,11 @@ const icons = {
   'check-line': checkLine,
   'check-line-thick': checkLineThick,
   'check-outline': checkOutline,
+  'check-outline-square': checkOutlineSquare,
   'check-solid': checkSolid,
+  'check-solid-square': checkSolidSquare,
   circle,
+  'circle-outline': circleOutline,
   clipboard,
   'clock-outline': clockOutline,
   'clock-solid': clockSolid,
@@ -212,21 +236,30 @@ const icons = {
   eye,
   expand,
   external,
+  'facebook-post': facebookPost,
+  'facebook-video': facebookVideo,
   folder,
   'full-screen': fullScreen,
+  'google-maps': googleMaps,
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
   'grid-two-up': gridTwoUp,
   headphones,
   heart,
   highlight,
+  'home-outline': homeOutline,
+  'home-solid': homeSolid,
+  'imgur-post': imgurPost,
   'info-outline': infoOutline,
   'info-solid': infoSolid,
   insert,
+  'instagram-media': instagramMedia,
   italic,
   link,
   list,
   'list-cards': listCards,
+  'location-outline': locationOutline,
+  'location-solid': locationSolid,
   locked,
   'locked-solid': lockedSolid,
   login,
@@ -248,6 +281,9 @@ const icons = {
   'ordered-list': orderedList,
   paperclip,
   pencil,
+  'phone-mobile': phoneMobile,
+  'phone-outline': phoneOutline,
+  'phone-solid': phoneSolid,
   photo,
   plus,
   'plus-line': plusLine,
@@ -258,6 +294,7 @@ const icons = {
   print,
   question,
   'question-outline': questionOutline,
+  'question-solid': questionSolid,
   refresh,
   revert,
   save,
@@ -271,6 +308,7 @@ const icons = {
   'sound-wave': soundWave,
   star,
   'star-outline': starOutline,
+  status,
   strikethrough,
   'tag-outline': tagOutline,
   'tag-solid': tagSolid,
