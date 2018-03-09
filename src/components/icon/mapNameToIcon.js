@@ -67,8 +67,11 @@ import expand from './expand.svg';
 import external from './external.svg';
 import dataTransferDownload from './data-transfer-download.svg';
 import dataTransferUpload from './data-transfer-upload.svg';
+import facebookPost from './facebook-post.svg';
+import facebookVideo from './facebook-video.svg';
 import folder from './folder.svg';
 import fullScreen from './full-screen.svg';
+import googleMaps from './google-maps.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
 import gridTwoUp from './grid-two-up.svg';
@@ -77,6 +80,8 @@ import heart from './heart.svg';
 import highlight from './highlight.svg';
 import homeOutline from './home-outline.svg';
 import homeSolid from './home-solid.svg';
+import imgurPost from './imgur-post.svg';
+import instagramMedia from './instagram-media.svg';
 import infoOutline from './info-outline.svg';
 import infoSolid from './info-solid.svg';
 import insert from './insert.svg';
@@ -84,6 +89,8 @@ import italic from './italic.svg';
 import link from './link.svg';
 import list from './list.svg';
 import listCards from './list-cards.svg';
+import locationOutline from './location-outline.svg';
+import locationSolid from './location-solid.svg';
 import locked from './locked.svg';
 import lockedSolid from './locked-solid.svg';
 import login from './login.svg';
@@ -229,8 +236,11 @@ const icons = {
   eye,
   expand,
   external,
+  'facebook-post': facebookPost,
+  'facebook-video': facebookVideo,
   folder,
   'full-screen': fullScreen,
+  'google-maps': googleMaps,
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
   'grid-two-up': gridTwoUp,
@@ -239,13 +249,17 @@ const icons = {
   highlight,
   'home-outline': homeOutline,
   'home-solid': homeSolid,
+  'imgur-post': imgurPost,
   'info-outline': infoOutline,
   'info-solid': infoSolid,
   insert,
+  'instagram-media': instagramMedia,
   italic,
   link,
   list,
   'list-cards': listCards,
+  'location-outline': locationOutline,
+  'location-solid': locationSolid,
   locked,
   'locked-solid': lockedSolid,
   login,
