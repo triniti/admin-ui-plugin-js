@@ -10,7 +10,7 @@
 .badge {
   background-color: $orange;
   color: $white;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-shadow: $text-shadow;
   vertical-align: middle;
 }
 
