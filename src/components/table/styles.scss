@@ -36,6 +36,14 @@ td {
   }
 }
 
+.td-icons {
+  white-space: nowrap;
+
+  & .btn {
+    margin-bottom: 0;
+  }
+}
+
 // Custom overrides
 
 .table-hover.table-striped tr:hover {
