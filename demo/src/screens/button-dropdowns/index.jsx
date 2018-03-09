@@ -9,13 +9,17 @@ class UiButtonDropdown extends Component {
 
     this.toggle1 = this.toggle1.bind(this);
     this.toggle2 = this.toggle2.bind(this);
+    this.toggle3 = this.toggle3.bind(this);
     this.toggleCode1 = this.toggleCode1.bind(this);
     this.toggleCode2 = this.toggleCode2.bind(this);
+    this.toggleCode3 = this.toggleCode3.bind(this);
     this.state = {
       dropdownOpen: false,
       dropdownOpen2: false,
+      dropdownOpen3: false,
       collapseCode1: false,
-      collapseCode2: false
+      collapseCode2: false,
+      collapseCode3: false
     };
   }
 
@@ -27,12 +31,20 @@ class UiButtonDropdown extends Component {
     this.setState({ dropdownOpen2: !this.state.dropdownOpen2 });
   }
 
+  toggle3() {
+    this.setState({ dropdownOpen3: !this.state.dropdownOpen3 });
+  }
+
   toggleCode1() {
     this.setState({ collapseCode1: !this.state.collapseCode1 });
   }
 
   toggleCode2() {
     this.setState({ collapseCode2: !this.state.collapseCode2 });
+  }
+
+  toggleCode3() {
+    this.setState({ collapseCode3: !this.state.collapseCode3 });
   }
 
   render() {
@@ -113,12 +125,27 @@ class UiButtonDropdown extends Component {
               <CardBody className="pl-5 bg-light">
 <pre>
 <code>{`import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from '@triniti/admin-ui-plugin/components';
+import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@triniti/admin-ui-plugin/components';
 
-const Example = (props) => {
-  return (
-    <ButtonDropdown isOpen={this.state.dropdownOpen1} toggle={this.toggle1} className="mb-4">
-      <DropdownToggle caret outline color="light" >
+Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false,
+    };
+  }
+
+  toggle() {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen });
+  }
+
+
+  render() {
+    return (
+    <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
+      <DropdownToggle caret outline color="light">
         Button Dropdown
       </DropdownToggle>
       <DropdownMenu>
@@ -129,8 +156,9 @@ const Example = (props) => {
         <DropdownItem>Another Action</DropdownItem>
       </DropdownMenu>
     </ButtonDropdown>
-  );
-};`}</code></pre>
+    );
+  }
+}`}</code></pre>
               </CardBody>
             </Collapse>
             <CardBody indent>
@@ -151,7 +179,7 @@ const Example = (props) => {
 
           <Card key="buttondropdown2">
             <CardHeader>
-              ButtonDropdown with Icon & Arrows
+              Full Width ButtonDropdown
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
@@ -160,11 +188,89 @@ const Example = (props) => {
               <CardBody className="pl-5 bg-light">
 <pre>
 <code>{`import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from '@triniti/admin-ui-plugin/components';
+import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@triniti/admin-ui-plugin/components';
 
-const Example = (props) => {
-  return (
-    <ButtonDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false,
+    };
+  }
+
+  toggle() {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen });
+  }
+
+
+  render() {
+    return (
+    <ButtonDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2} className="mb-4 w-100">
+      <DropdownToggle caret outline color="light" className="justify-content-between w-100">
+        <span className="ml-auto mr-auto">Button Dropdown</span>
+      </DropdownToggle>
+      <DropdownMenu right arrow="right">
+        <DropdownItem header>Header</DropdownItem>
+        <DropdownItem disabled>Action</DropdownItem>
+        <DropdownItem>Another Action</DropdownItem>
+        <DropdownItem divider />
+        <DropdownItem>Another Action</DropdownItem>
+      </DropdownMenu>
+    </ButtonDropdown>
+    );
+  }
+}`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody indent>
+              <ButtonDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2} className="mb-4 w-100">
+                <DropdownToggle caret outline color="light" className="justify-content-between w-100">
+                  <span className="ml-auto mr-auto">Button Dropdown</span>
+                </DropdownToggle>
+                <DropdownMenu right arrow="right">
+                  <DropdownItem header>Header</DropdownItem>
+                  <DropdownItem disabled>Action</DropdownItem>
+                  <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Another Action</DropdownItem>
+                </DropdownMenu>
+              </ButtonDropdown>
+            </CardBody>
+          </Card>,
+
+          <Card key="buttondropdown3">
+            <CardHeader>
+              ButtonDropdown with Icon & Arrows
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode3}>
+              <CardBody className="pl-5 bg-light">
+<pre>
+<code>{`import React from 'react';
+import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@triniti/admin-ui-plugin/components';
+
+Example extends Component {
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false,
+    };
+  }
+
+  toggle() {
+    this.setState({ dropdownOpen: !this.state.dropdownOpen });
+  }
+
+
+  render() {
+    return (
+    <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle}>
       <DropdownToggle outline radius="circle" color="hover">
         <Icon imgSrc="more-vertical" alt="more" size="md" />
       </DropdownToggle>
@@ -176,12 +282,13 @@ const Example = (props) => {
         <DropdownItem>Another Action</DropdownItem>
       </DropdownMenu>
     </ButtonDropdown>
-  );
-};`}</code></pre>
+    );
+  }
+}`}</code></pre>
               </CardBody>
             </Collapse>
             <CardBody indent>
-              <ButtonDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+              <ButtonDropdown isOpen={this.state.dropdownOpen3} toggle={this.toggle3}>
                 <DropdownToggle outline radius="circle" color="hover">
                   <Icon imgSrc="more-vertical" alt="more" size="md" />
                 </DropdownToggle>
