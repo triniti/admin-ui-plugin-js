@@ -437,6 +437,8 @@ const UiIcons = () => (
               <Button outline radius="circle" color="link"><Icon imgSrc="search" alt="search" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="user" alt="user" /></Button>
               <Button outline radius="circle" color="link"><Icon imgSrc="arrow-left" alt="arrow" /></Button>
+              <Button radius="circle" color="secondary" size="xxs"><Icon imgSrc="question" size="xs"/></Button>
+              <Button radius="circle" color="secondary" size="xs"><Icon imgSrc="question" size="sm"/></Button>
               <Button radius="circle" color="secondary" size="sm"><Icon imgSrc="question" size="md"/></Button>
               <Button radius="circle" color="success" size="sm"><Icon imgSrc="check-line-thick" alt="check-line-thick" size="sm"/></Button>
               <Button radius="circle" color="success"><Icon imgSrc="check-line-thick" alt="check-line-thick" /></Button>
