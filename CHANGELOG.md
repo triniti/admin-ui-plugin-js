@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.4.7
+* issue #75: OVP Updates and New Icons.
+
+
 ## v0.4.6
 * Form updates and a few new props in UI pages.
 
