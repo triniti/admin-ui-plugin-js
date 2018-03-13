@@ -41,6 +41,7 @@ const UiIcons = () => (
             <IconList iconName="back"/>
             <IconList iconName="backspace"/>
             <IconList iconName="bold"/>
+            <IconList iconName="bolt-outline"/>
             <IconList iconName="book-open"/>
             <IconList iconName="bookmark"/>
             <IconList iconName="bookmark-outline"/>
@@ -132,6 +133,8 @@ const UiIcons = () => (
             <IconList iconName="phone-outline"/>
             <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
+            <IconList iconName="pin"/>
+            <IconList iconName="playlist"/>
             <IconList iconName="plus"/>
             <IconList iconName="plus-line"/>
             <IconList iconName="plus-line-thick"/>
@@ -146,6 +149,7 @@ const UiIcons = () => (
             <IconList iconName="revert"/>
             <IconList iconName="save"/>
             <IconList iconName="save-disk"/>
+            <IconList iconName="save-diskette"/>
             <IconList iconName="search"/>
             <IconList iconName="services"/>
             <IconList iconName="social"/>
@@ -159,8 +163,10 @@ const UiIcons = () => (
             <IconList iconName="strikethrough"/>
             <IconList iconName="tag-outline"/>
             <IconList iconName="tag-solid"/>
+            <IconList iconName="timeline"/>
             <IconList iconName="triniti"/>
             <IconList iconName="trash"/>
+            <IconList iconName="tweet"/>
             <IconList iconName="underline"/>
             <IconList iconName="unknown"/>
             <IconList iconName="unlocked"/>
@@ -184,6 +190,26 @@ const UiIcons = () => (
           </Row>
         </CardBody>
       </Card>,
+
+      <Card key="social-icons">
+        <CardHeader>Social Icons</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <IconTooltip iconName="facebook"/>
+              <IconTooltip iconName="google"/>
+              <IconTooltip iconName="imgur"/>
+              <IconTooltip iconName="instagram"/>
+              <IconTooltip iconName="linkedin"/>
+              <IconTooltip iconName="pinterest"/>
+              <IconTooltip iconName="twitter"/>
+              <IconTooltip iconName="vevo"/>
+              <IconTooltip iconName="youtube"/>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
       <Card key="icons1">
         <CardHeader>Icons at 1rem Height</CardHeader>
         <CardBody indent>
@@ -229,6 +255,8 @@ const UiIcons = () => (
               <IconTooltip iconName="grid-four-up"/>
               <IconTooltip iconName="grid-three-up"/>
               <IconTooltip iconName="grid-two-up"/>
+              <IconTooltip iconName="playlist"/>
+              <IconTooltip iconName="timeline"/>
             </Col>
           </Row>
           <Row>
@@ -282,6 +310,7 @@ const UiIcons = () => (
               <IconTooltip iconName="microphone"/>
               <IconTooltip iconName="camera"/>
               <IconTooltip iconName="save-disk"/>
+              <IconTooltip iconName="save-diskette"/>
               <IconTooltip iconName="mail"/>
               <IconTooltip iconName="photo"/>
               <IconTooltip iconName="video"/>
@@ -323,6 +352,11 @@ const UiIcons = () => (
               <IconTooltip iconName="unlocked-solid"/>
               <IconTooltip iconName="circle"/>
               <IconTooltip iconName="circle-outline"/>
+              <IconTooltip iconName="location-solid"/>
+              <IconTooltip iconName="location-outline"/>
+              <IconTooltip iconName="pin"/>
+              <IconTooltip iconName="bolt-outline"/>
+              <IconTooltip iconName="bolt-solid"/>
             </Col>
           </Row>
           <Row>
@@ -455,12 +489,24 @@ const UiIcons = () => (
         <CardBody indent>
           <Row>
             <Col>
-              <IconTooltip iconName="code" size="alert-md" color="dark" radius="rounded" border />
-              <IconTooltip iconName="facebook-post" size="alert-md" color="dark" radius="rounded" border />
-              <IconTooltip iconName="facebook-video" size="alert-md" color="dark" radius="rounded" border />
-              <IconTooltip iconName="google-maps" size="alert-md" color="dark" radius="rounded" border />
-              <IconTooltip iconName="imgur-post" size="alert-md" color="dark" radius="rounded" border />
-              <IconTooltip iconName="instagram-media" size="alert-md" color="dark" radius="rounded" border />
+              <Icon imgSrc="code" size="alert-md" radius="rounded" border className="mb-2 ml-2"/>
+              <Icon imgSrc="facebook-post" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="facebook-video" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="google-maps" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="imgur-post" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="instagram-media" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="pinterest-pin" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="pinterest-profile" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-collection-timeline" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-list-timeline" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-moment" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-search-timeline" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-tweet" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-user-timeline" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-video" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="vevo-video" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="youtube-playlist" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="youtube-video" size="alert-md" radius="rounded" border className="mb-2" />
             </Col>
           </Row>
         </CardBody>
