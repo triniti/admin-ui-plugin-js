@@ -84,6 +84,8 @@ import heart from './heart.svg';
 import highlight from './highlight.svg';
 import homeOutline from './home-outline.svg';
 import homeSolid from './home-solid.svg';
+import iframe from './iframe.svg';
+import iframeText from './iframe-text.svg';
 import imgur from './imgur.svg';
 import imgurPost from './imgur-post.svg';
 import instagram from './instagram.svg';
@@ -281,6 +283,8 @@ const icons = {
   highlight,
   'home-outline': homeOutline,
   'home-solid': homeSolid,
+  iframe,
+  'iframe-text': iframeText,
   imgur,
   'imgur-post': imgurPost,
   'info-outline': infoOutline,

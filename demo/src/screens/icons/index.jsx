@@ -99,6 +99,7 @@ const UiIcons = () => (
             <IconList iconName="highlight"/>
             <IconList iconName="home-outline"/>
             <IconList iconName="home-solid"/>
+            <IconList iconName="iframe"/>
             <IconList iconName="info-outline"/>
             <IconList iconName="info-solid"/>
             <IconList iconName="insert"/>
@@ -493,6 +494,8 @@ const UiIcons = () => (
               <Icon imgSrc="facebook-post" size="alert-md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="facebook-video" size="alert-md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="google-maps" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="iframe" size="alert-md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="iframe-text" size="alert-md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="imgur-post" size="alert-md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="instagram-media" size="alert-md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="pinterest-pin" size="alert-md" radius="rounded" border className="mb-2" />
