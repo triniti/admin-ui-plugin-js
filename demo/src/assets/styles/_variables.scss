@@ -61,19 +61,6 @@ $yiq-text-dark:           $gray-900;
 $yiq-text-light:          $white;
 
 
-// Fonts
-$font-weight-light:       300;
-$font-weight-normal:      400;
-$font-weight-bold:        700;
-
-$h1-font-size: 1.75rem;
-$h2-font-size: 1.5rem;
-$h3-font-size: 1.25rem;
-$h4-font-size: 1rem;
-$h5-font-size: .9rem;
-$h6-font-size: .825rem;
-
-
 // Navbar
 
 $navbar-brand-padding-y: 0;
@@ -105,17 +92,21 @@ $component-active-bg:         theme-color("secondary");  // $gray-200 theme-colo
 //
 // Font, line-height, and color for body text, headings, and more.
 
+$font-weight-light:       300;
+$font-weight-normal:      400;
+$font-weight-bold:        700;
+
+$h1-font-size: 1.75rem;
+$h2-font-size: 1.5rem;
+$h3-font-size: 1.25rem;
+$h4-font-size: 1rem;
+$h5-font-size: .9rem;
+$h6-font-size: .825rem;
+
 $font-size-base:              .825rem; // Assumes the browser default, typically `16px` = `13.2px`
 $font-size-lg:                1rem;
 $font-size-sm:                .8rem;
 
-
-$h1-font-size:                1.75rem;
-$h2-font-size:                1.5rem;
-$h3-font-size:                1.25rem;
-$h4-font-size:                1.1rem;
-$h5-font-size:                1rem;
-$h6-font-size:                .825rem;
 
 $line-height-base:            1.5;
 $headings-line-height:        1.1;
