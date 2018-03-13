@@ -42,6 +42,7 @@ const UiIcons = () => (
             <IconList iconName="backspace"/>
             <IconList iconName="bold"/>
             <IconList iconName="bolt-outline"/>
+            <IconList iconName="bolt-solid"/>
             <IconList iconName="book-open"/>
             <IconList iconName="bookmark"/>
             <IconList iconName="bookmark-outline"/>
