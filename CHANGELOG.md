@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.4.8
+* issue #77: Create File Type Icons for Page Editor.
+
+
 ## v0.4.7
 * issue #75: OVP Updates and New Icons.
 
