@@ -20,6 +20,8 @@ import audio from './audio.svg';
 import back from './back.svg';
 import backspace from './backspace.svg';
 import bold from './bold.svg';
+import boltOutline from './bolt-outline.svg';
+import boltSolid from './bolt-solid.svg';
 import bookOpen from './book-open.svg';
 import bookmark from './bookmark.svg';
 import bookmarkOutline from './bookmark-outline.svg';
@@ -67,10 +69,12 @@ import expand from './expand.svg';
 import external from './external.svg';
 import dataTransferDownload from './data-transfer-download.svg';
 import dataTransferUpload from './data-transfer-upload.svg';
+import facebook from './facebook.svg';
 import facebookPost from './facebook-post.svg';
 import facebookVideo from './facebook-video.svg';
 import folder from './folder.svg';
 import fullScreen from './full-screen.svg';
+import google from './google.svg';
 import googleMaps from './google-maps.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
@@ -80,13 +84,18 @@ import heart from './heart.svg';
 import highlight from './highlight.svg';
 import homeOutline from './home-outline.svg';
 import homeSolid from './home-solid.svg';
+import iframe from './iframe.svg';
+import iframeText from './iframe-text.svg';
+import imgur from './imgur.svg';
 import imgurPost from './imgur-post.svg';
+import instagram from './instagram.svg';
 import instagramMedia from './instagram-media.svg';
 import infoOutline from './info-outline.svg';
 import infoSolid from './info-solid.svg';
 import insert from './insert.svg';
 import italic from './italic.svg';
 import link from './link.svg';
+import linkedin from './linkedin.svg';
 import list from './list.svg';
 import listCards from './list-cards.svg';
 import locationOutline from './location-outline.svg';
@@ -116,6 +125,11 @@ import phoneMobile from './phone-mobile.svg';
 import phoneOutline from './phone-outline.svg';
 import phoneSolid from './phone-solid.svg';
 import photo from './photo.svg';
+import pin from './pin.svg';
+import pinterest from './pinterest.svg';
+import pinterestPin from './pinterest-pin.svg';
+import pinterestProfile from './pinterest-profile.svg';
+import playlist from './playlist.svg';
 import plus from './plus.svg';
 import plusLine from './plus-line.svg';
 import plusLineThick from './plus-line-thick.svg';
@@ -130,6 +144,7 @@ import refresh from './refresh.svg';
 import revert from './revert.svg';
 import save from './save.svg';
 import saveDisk from './save-disk.svg';
+import saveDiskette from './save-diskette.svg';
 import search from './search.svg';
 import services from './services.svg';
 import social from './social.svg';
@@ -143,8 +158,18 @@ import status from './status.svg';
 import strikethrough from './strikethrough.svg';
 import tagOutline from './tag-outline.svg';
 import tagSolid from './tag-solid.svg';
+import timeline from './timeline.svg';
 import trash from './trash.svg';
 import triniti from './triniti.svg';
+import tweet from './tweet.svg';
+import twitter from './twitter.svg';
+import twitterCollectionTimeline from './twitter-collection-timeline.svg';
+import twitterListTimeline from './twitter-list-timeline.svg';
+import twitterMoment from './twitter-moment.svg';
+import twitterSearchTimeline from './twitter-search-timeline.svg';
+import twitterTweet from './twitter-tweet.svg';
+import twitterUserTimeline from './twitter-user-timeline.svg';
+import twitterVideo from './twitter-video.svg';
 import underline from './underline.svg';
 import unknown from './unknown.svg';
 import unlocked from './unlocked.svg';
@@ -153,6 +178,8 @@ import upload from './upload.svg';
 import user from './user.svg';
 import users from './users.svg';
 import userSolid from './user-solid.svg';
+import vevo from './vevo.svg';
+import vevoVideo from './vevo-video.svg';
 import video from './video.svg';
 import videoCamera from './video-camera.svg';
 import warning from './warning.svg';
@@ -162,6 +189,9 @@ import warningOutlineTriangle from './warning-outline-triangle.svg';
 import warningSolid from './warning-solid.svg';
 import warningSolidAlt from './warning-solid-alt.svg';
 import warningSolidTriangle from './warning-solid-triangle.svg';
+import youtube from './youtube.svg';
+import youtubePlaylist from './youtube-playlist.svg';
+import youtubeVideo from './youtube-video.svg';
 import zip from './zip.svg';
 import zoomIn from './zoom-in.svg';
 import zoomOut from './zoom-out.svg';
@@ -189,6 +219,8 @@ const icons = {
   back,
   backspace,
   bold,
+  'bolt-outline': boltOutline,
+  'bolt-solid': boltSolid,
   'book-open': bookOpen,
   bookmark,
   'bookmark-outline': bookmarkOutline,
@@ -236,10 +268,12 @@ const icons = {
   eye,
   expand,
   external,
+  facebook,
   'facebook-post': facebookPost,
   'facebook-video': facebookVideo,
   folder,
   'full-screen': fullScreen,
+  google,
   'google-maps': googleMaps,
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
@@ -249,13 +283,18 @@ const icons = {
   highlight,
   'home-outline': homeOutline,
   'home-solid': homeSolid,
+  iframe,
+  'iframe-text': iframeText,
+  imgur,
   'imgur-post': imgurPost,
   'info-outline': infoOutline,
   'info-solid': infoSolid,
   insert,
+  instagram,
   'instagram-media': instagramMedia,
   italic,
   link,
+  linkedin,
   list,
   'list-cards': listCards,
   'location-outline': locationOutline,
@@ -285,6 +324,11 @@ const icons = {
   'phone-outline': phoneOutline,
   'phone-solid': phoneSolid,
   photo,
+  pin,
+  pinterest,
+  'pinterest-pin': pinterestPin,
+  'pinterest-profile': pinterestProfile,
+  playlist,
   plus,
   'plus-line': plusLine,
   'plus-line-thick': plusLineThick,
@@ -299,6 +343,7 @@ const icons = {
   revert,
   save,
   'save-disk': saveDisk,
+  'save-diskette': saveDiskette,
   search,
   services,
   social,
@@ -312,8 +357,18 @@ const icons = {
   strikethrough,
   'tag-outline': tagOutline,
   'tag-solid': tagSolid,
+  timeline,
   trash,
   triniti,
+  tweet,
+  twitter,
+  'twitter-collection-timeline': twitterCollectionTimeline,
+  'twitter-list-timeline': twitterListTimeline,
+  'twitter-moment': twitterMoment,
+  'twitter-search-timeline': twitterSearchTimeline,
+  'twitter-tweet': twitterTweet,
+  'twitter-user-timeline': twitterUserTimeline,
+  'twitter-video': twitterVideo,
   underline,
   unknown,
   unlocked,
@@ -322,6 +377,8 @@ const icons = {
   user,
   users,
   'user-solid': userSolid,
+  vevo,
+  'vevo-video': vevoVideo,
   video,
   'video-camera': videoCamera,
   warning,
@@ -331,6 +388,9 @@ const icons = {
   'warning-solid': warningSolid,
   'warning-solid-alt': warningSolidAlt,
   'warning-solid-triangle': warningSolidTriangle,
+  youtube,
+  'youtube-playlist': youtubePlaylist,
+  'youtube-video': youtubeVideo,
   zip,
   'zoom-in': zoomIn,
   'zoom-out': zoomOut,

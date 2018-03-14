@@ -245,6 +245,10 @@ $sidenav-width:     300px;
   .screen-primary-actions-mobile {
     opacity: 1 !important;
   }
+  .screen-primary-actions-mobile-body {
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 767px) {

@@ -128,6 +128,8 @@
   border-radius: 7rem;
   background-color: $body-color;
   color: $white;
+  margin-top: 0;
+  margin-bottom: 0;
 
   > svg {
     padding: 1.25rem;
@@ -142,6 +144,8 @@
   border-radius: 5rem;
   background-color: $body-color;
   color: $white;
+  margin-top: 0;
+  margin-bottom: 0;
 
   > svg {
     padding: 1rem;
@@ -156,6 +160,8 @@
   border-radius: 5rem;
   background-color: $body-color;
   color: $white;
+  margin-top: 0;
+  margin-bottom: 0;
 
   > svg {
     padding: .5rem;
@@ -170,6 +176,8 @@
   border-radius: 5rem;
   background-color: $body-color;
   color: $white;
+  margin-top: 0;
+  margin-bottom: 0;
 
   > svg {
     padding: .5rem;
@@ -184,6 +192,8 @@
   border-radius: 5rem;
   background-color: $body-color;
   color: $white;
+  margin-top: 0;
+  margin-bottom: 0;
 
   > svg {
     padding: .375rem;
@@ -198,6 +208,8 @@
   border-radius: 5rem;
   background-color: $body-color;
   color: $white;
+  margin-top: 0;
+  margin-bottom: 0;
 
   > svg {
     padding: .375rem;
@@ -210,7 +222,11 @@
   border-radius: .25rem;
 
   &.icon-alert-md {
-    border-radius: .5rem;
+    border-radius: .375rem;
+
+    > svg {
+      padding: .4375rem;
+    }
   }
   &.icon-alert-lg {
     border-radius: .675rem;
@@ -232,22 +248,13 @@
 .icon-border {
   background-color: transparent;
   color: $body-color;
-  box-shadow: inset 0 0 0 3px $body-color;
+  box-shadow: inset 0 0 0 2px $body-color;
 
-  &.icon-alert-xxs {
-    box-shadow: inset 0 0 0 2px $body-color;
-  }
-  &.icon-alert-xs {
-    box-shadow: inset 0 0 0 2px $body-color;
-  }
-  &.icon-alert-sm {
-    box-shadow: inset 0 0 0 2px $body-color;
-  }
   &.icon-alert-lg {
-    box-shadow: inset 0 0 0 4px $body-color;
+    box-shadow: inset 0 0 0 3px $body-color;
   }
   &.icon-alert-xl {
-    box-shadow: inset 0 0 0 5px $body-color;
+    box-shadow: inset 0 0 0 4px $body-color;
   }
 }
 
@@ -267,18 +274,13 @@
     &.icon-border {
       background-color: transparent;
       color: $value;
-      box-shadow: inset 0 0 0 3px $value;
+      box-shadow: inset 0 0 0 2px $value;
 
-      &.icon-alert-xxs,
-      &.icon-alert-xs,
-      &.icon-alert-sm {
-        box-shadow: inset 0 0 0 2px $value;
-      }
       &.icon-alert-lg {
-        box-shadow: inset 0 0 0 4px $value;
+        box-shadow: inset 0 0 0 3px $value;
       }
       &.icon-alert-xl {
-        box-shadow: inset 0 0 0 5px $value;
+        box-shadow: inset 0 0 0 4px $value;
       }
     }
   }
