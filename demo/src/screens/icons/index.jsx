@@ -16,7 +16,7 @@ const UiIcons = () => (
   // ]}
     primaryActions={<PrimaryActions />}
     body={[
-      <Card key="icons6">
+      <Card key="icons1">
         <CardHeader>Icon Names</CardHeader>
         <CardBody indent>
           <Row>
@@ -212,7 +212,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons1">
+      <Card key="icons2">
         <CardHeader>Icons at 1rem Height</CardHeader>
         <CardBody indent>
           <Row>
@@ -412,7 +412,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons2">
+      <Card key="icons3">
         <CardHeader>Icon Sizes</CardHeader>
         <CardBody indent>
           <Row>
@@ -438,7 +438,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons3">
+      <Card key="icons4">
         <CardHeader>Icon Colors</CardHeader>
         <CardBody indent>
           <Row>
@@ -461,7 +461,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons4">
+      <Card key="icons5">
         <CardHeader>Button Icons</CardHeader>
         <CardBody indent>
           <Row>
@@ -486,7 +486,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons3">
+      <Card key="icons6">
         <CardHeader>File Types</CardHeader>
         <CardBody indent>
           <Row>
@@ -516,7 +516,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons5">
+      <Card key="icons7">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
           <Row>
