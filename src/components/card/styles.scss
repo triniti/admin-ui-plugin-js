@@ -10,6 +10,9 @@
   border: none;
 
   @media (min-width: 421px) {
+    margin: 0 0 .75rem 0;
+  }
+  @media (min-width: 600px) {
     margin: 0 0 1rem 0;
   }
 
