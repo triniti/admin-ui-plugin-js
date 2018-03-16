@@ -65,12 +65,12 @@ input::-moz-focus-inner {
   border: 0;
 }
 
-a {
-  color: $body-color;
-}
-
 a:focus {
   box-shadow: none;
+}
+
+.underline {
+  text-decoration: underline;
 }
 
 button,

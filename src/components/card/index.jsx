@@ -6,7 +6,7 @@ import './styles.scss';
 
 const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  borderless: PropTypes.bool,
+  border: PropTypes.bool,
   color: PropTypes.string,
   body: PropTypes.bool,
   inverse: PropTypes.bool,

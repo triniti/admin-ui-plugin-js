@@ -66,9 +66,54 @@ class UiButtonDropdown extends Component {
             </CardBody>
           </Card>,
 
+//   addonType: PropTypes.oneOfType([PropTypes.bool, PropTypes.oneOf(['prepend', 'append'])]),
+//   disabled: PropTypes.bool,
+//   dropup: PropTypes.bool,
+//   group: PropTypes.bool,
+//   isOpen: PropTypes.bool,
+//   nav: PropTypes.bool,
+
+//   size: PropTypes.string,
+//   tag: PropTypes.string,
+//   toggle: PropTypes.func,
+//   children: PropTypes.node,
+//   className: PropTypes.string,
+//   cssModule: PropTypes.object,
+//   inNavbar: PropTypes.bool,
+
           <Card key="props2">
+            <CardHeader>Dropdown Properties</CardHeader>
+            <CardBody className="pt-3">
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">addonType</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Supports either 'prepend' or 'append'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">addonType</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Supports either 'prepend' or 'append'</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props3">
             <CardHeader>DropdownToggle Properties</CardHeader>
-            <CardBody>
+            <CardBody className="pt-3">
               <Table hover responsive>
                 <thead>
                   <tr>
@@ -95,7 +140,7 @@ class UiButtonDropdown extends Component {
                     <th scope="row">color</th>
                     <td>string</td>
                     <td>light</td>
-                    <td>Sets button color.  Can use all button props including "outline", "hover", "hover-bg", etc</td>
+                    <td>Sets button color.  Can use all button props including 'outline', 'hover', 'hover-bg', etc</td>
                   </tr>
                   <tr>
                     <th scope="row">disabled</th>
@@ -108,6 +153,60 @@ class UiButtonDropdown extends Component {
                     <td>bool</td>
                     <td></td>
                     <td>Adds class .nav-link and sets tag to "a".  Will remove any button styles.</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props4">
+            <CardHeader>DropdownMenu Properties</CardHeader>
+            <CardBody className="pt-3">
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">arrow</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>Accepts values "left" & "right". Positions an arrow on the top of the dropdown menu. Useful with small links like icons.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td>isRequired</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">flip</th>
+                    <td>bool</td>
+                    <td>true</td>
+                    <td>Allow Dropdown to flip in case of an overlapping on the reference element. For more information refer to Popper.js's <a href="https://popper.js.org/popper-documentation.html#modifiers..flip.enabled" target="_blank">flip docs.</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">right</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>The default is to align the dropdown menu to the left edge of the button. Adding the prop "right" will align it to the right.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>string</td>
+                    <td>div</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </Table>
@@ -274,7 +373,7 @@ Example extends Component {
       <DropdownToggle outline radius="circle" color="hover">
         <Icon imgSrc="more-vertical" alt="more" size="md" />
       </DropdownToggle>
-      <DropdownMenu left arrow="left">
+      <DropdownMenu arrow="left">
         <DropdownItem header>Header</DropdownItem>
         <DropdownItem disabled>Action</DropdownItem>
         <DropdownItem>Another Action</DropdownItem>
@@ -292,7 +391,7 @@ Example extends Component {
                 <DropdownToggle outline radius="circle" color="hover">
                   <Icon imgSrc="more-vertical" alt="more" size="md" />
                 </DropdownToggle>
-                <DropdownMenu left arrow="left">
+                <DropdownMenu arrow="left">
                   <DropdownItem header>Header</DropdownItem>
                   <DropdownItem disabled>Action</DropdownItem>
                   <DropdownItem>Another Action</DropdownItem>
