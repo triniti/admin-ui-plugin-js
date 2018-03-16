@@ -214,13 +214,13 @@ const UiListGroup = () => (
                   </ListGroupItemText>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <ListGroupItemHeading>Albert Gutierrex <small>2 minutes ago</small></ListGroupItemHeading>
+                  <ListGroupItemHeading>Albert Gutierrez<small>2 minutes ago</small></ListGroupItemHeading>
                   <ListGroupItemText>
                       1 2 3 4 5 6 7 8 9 0 That should be all of them.
                   </ListGroupItemText>
                 </ListGroupItem>
                 <ListGroupItem>
-                  <ListGroupItemHeading>Albert Gutierrex <small>a few seconds ago</small></ListGroupItemHeading>
+                  <ListGroupItemHeading>Albert Gutierrez<small>a few seconds ago</small></ListGroupItemHeading>
                   <ListGroupItemText>
                       Feel free to rearrange.
                   </ListGroupItemText>

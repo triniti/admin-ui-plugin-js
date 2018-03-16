@@ -5,9 +5,13 @@
 
 .card {
   flex-shrink: 0;
-  margin: 0 0 1rem 0;
+  margin: 0 0 .5rem 0;
   width: 100%;
   border: none;
+
+  @media (min-width: 421px) {
+    margin: 0 0 1rem 0;
+  }
 
   .tab-pane > & {
     margin-top: 0;
