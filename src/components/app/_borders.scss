@@ -14,31 +14,32 @@
   position: absolute;
   top: -4px;
   bottom: -4px;
-  left: -1rem;
+  left: -.75rem;
+  margin-left: -1px;
   display: block;
   width: 4px;
   content: '';
   border-radius: 4px;
   background-color: $gray-400;
-}
 
-
-
-.col.has-border::before {
-  left: 0;
-}
-
-@media (min-width: 1025px) {
-  .has-border::before {
-    margin-left: -4px;
+  @media (min-width: 421px) {
+    left: -1rem;
+    margin-left: -2px;
   }
-}
-
-@media (max-width: 767px) {
-  .has-border::before {
+  @media (max-width: 767px) {
     width: 3px;
     border-radius: 0;
   }
+
+  @media (min-width: 1025px) {
+    .has-border::before {
+      margin-left: -4px;
+    }
+  }
+}
+
+.col.has-border::before {
+  left: 0;
 }
 
 .border-indent {

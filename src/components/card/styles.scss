@@ -62,7 +62,10 @@
 
 .card-body-indent {
 
-  @media (min-width: 768px) {
+  @media (min-width: 420px) {
+    padding: 2rem 2rem 2rem 2rem;
+  }
+  @media (min-width: 1360px) {
     padding: 2.5rem 3rem 3rem 3rem;
   }
 }
@@ -77,6 +80,10 @@
 
 .card-body > .row {
   margin-bottom: $form-group-margin-bottom;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .card-title {
