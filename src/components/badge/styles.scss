@@ -54,3 +54,35 @@
   left: .25rem;
   top: -.5rem;
 }
+
+// tiny indicator used with avatar-initials
+
+.badge-indicator {
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: .5rem;
+    height: .5rem;
+    border-radius: 1rem;
+    background-color: theme-color("warning");
+  }
+  &.avatar-initials-xs::after {
+    top: -1px;
+    right: -1px;
+    width: .375rem;
+    height: .375rem;
+  }
+  &.avatar-initials-sm::after {
+    top: -1px;
+    right: -1px;
+  }
+  &.avatar-initials-lg::after {
+    top: 3px;
+    right: 3px;
+    width: .75rem;
+    height: .75rem;
+  }
+}
