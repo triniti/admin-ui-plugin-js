@@ -1,12 +1,14 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Collapse, Icon, Table, Row, Col, Screen } from '../../../../src/components';
 import PopoverItem from './PopoverItem';
 
 class UiPopover extends React.Component {
   constructor(props) {
     super(props);
+
+    this.toggleCode1 = this.toggleCode1.bind(this);
 
     this.state = {
       popovers: [
@@ -28,7 +30,12 @@ class UiPopover extends React.Component {
           text: 'Right',
         },
       ],
+      collapseCode1: false,
     };
+  }
+
+  toggleCode1() {
+    this.setState({ collapseCode1: !this.state.collapseCode1 });
   }
 
   render() {
@@ -42,8 +49,100 @@ class UiPopover extends React.Component {
       //   { to: '#/test2', text: 'Tab2' },
       // ]}
         primaryActions={<PrimaryActions />}
-        body={
-          <Card>
+        body={[
+          <Card key="props">
+            <CardHeader>Button Group Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">'aria-label'</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">role</th>
+                  <td>string</td>
+                  <td>group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">size</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>string</td>
+                  <td>'div'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">vertical</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Stacks buttons in vertical alignment</td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="popovers">
+            <CardHeader>Popovers
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-5 bg-light">
+<pre>
+<code>{`import React from 'react';
+import { Tooltip } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleTooltip = this.toggleTooltip.bind(this);
+    this.state = {
+      tooltipOpen: false
+    };
+  }
+
+  toggleTooltip() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
+  }
+
+  render() {
+    return ([
+        <a href="#" id="TooltipExample">Hover Me</a>,
+        <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
+          Tooltip Text
+        </Tooltip>,
+    ]);
+  }
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
             <CardBody className="text-center">
               <br />
               <br />
@@ -59,8 +158,8 @@ class UiPopover extends React.Component {
               <br />
               <br />
             </CardBody>
-          </Card>
-      }
+          </Card>,
+      ]}
       />
     );
   }
