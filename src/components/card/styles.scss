@@ -81,14 +81,6 @@
   background-color: inherit;
 }
 
-.card-body > .row {
-  margin-bottom: $form-group-margin-bottom;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
 .card-title {
   display: flex;
   justify-content: space-between;

@@ -87,7 +87,10 @@
 .btn-warning:hover,
 .btn-warning:focus,
 .btn-outline-warning:hover,
-.btn-outline-warning:focus {
+.btn-outline-warning:focus,
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.show > .btn-outline-warning.dropdown-toggle {
   color: #fff;
 }
 
