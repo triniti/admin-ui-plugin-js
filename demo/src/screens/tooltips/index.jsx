@@ -160,8 +160,8 @@ export default class TooltipsScreen extends React.Component {
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode1}>
-              <CardBody className="pl-5 bg-light">
-<pre>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-2">
 <code>{`import React from 'react';
 import { Tooltip } from '@triniti/admin-ui-plugin/components';
 
@@ -212,8 +212,8 @@ export default class Example extends React.Component {
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode2}>
-              <CardBody className="pl-5 bg-light">
-<pre>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-2">
 <code>{`import React from 'react';
 import { UncontrolledTooltip } from 'reactstrap';
 

@@ -140,8 +140,8 @@ class UiProgress extends Component {
            </Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseCode1}>
-          <CardBody className="pl-5 bg-light">
-            <pre>
+          <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-2">
               <code>
                   {`
 import React from 'react';
@@ -187,8 +187,8 @@ export default Example;
           </Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseCode2}>
-          <CardBody className="pl-5 bg-light">
-            <pre>
+          <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-2">
               <code>
                   {`
 import React from 'react';
@@ -232,8 +232,8 @@ export default Example;
           </Button>
         </CardHeader>
         <Collapse isOpen={this.state.collapseCode3}>
-          <CardBody className="pl-5 bg-light">
-            <pre>
+          <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-2">
               <code>
                   {`
 import React from 'react';
