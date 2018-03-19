@@ -62,11 +62,26 @@
   box-shadow: $shadow-card;
 }
 
+.screen-body-content .card-body {
+
+  @media (max-width: 439px) {
+    padding: 1rem;
+  }
+  @media (min-width: 420px) and (max-width: 599px) {
+    padding: 1.25rem;
+  }
+}
 
 .card-body-indent {
 
   @media (min-width: 420px) {
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1.25rem;
+  }
+  @media (min-width: 600px) {
+    padding: 1.5rem;
+  }
+  @media (min-width: 768px) {
+    padding: 2rem;
   }
   @media (min-width: 1360px) {
     padding: 2.5rem 3rem 3rem 3rem;

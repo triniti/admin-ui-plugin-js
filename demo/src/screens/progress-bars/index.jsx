@@ -58,7 +58,7 @@ class UiProgress extends Component {
               <th scope="row">animated</th>
               <td>bool</td>
               <td></td>
-              <td></td>
+              <td>Animates the background stripes</td>
             </tr>
             <tr>
               <th scope="row">bar</th>
