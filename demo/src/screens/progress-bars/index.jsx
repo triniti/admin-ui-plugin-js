@@ -141,7 +141,7 @@ class UiProgress extends Component {
         </CardHeader>
         <Collapse isOpen={this.state.collapseCode1}>
           <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-2">
+            <pre className="pl-5 pr-3">
               <code>
                   {`
 import React from 'react';
@@ -188,7 +188,7 @@ export default Example;
         </CardHeader>
         <Collapse isOpen={this.state.collapseCode2}>
           <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-2">
+            <pre className="pl-5 pr-3">
               <code>
                   {`
 import React from 'react';
@@ -233,7 +233,7 @@ export default Example;
         </CardHeader>
         <Collapse isOpen={this.state.collapseCode3}>
           <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-2">
+            <pre className="pl-5 pr-3">
               <code>
                   {`
 import React from 'react';
