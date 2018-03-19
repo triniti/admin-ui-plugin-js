@@ -61,7 +61,7 @@ export default class TooltipsScreen extends React.Component {
         body={[
           <Card key="props">
             <CardHeader>Tooltip Properties</CardHeader>
-            <CardBody>
+            <CardBody className="pt-3">
               <Table hover responsive>
                 <thead>
                 <tr>

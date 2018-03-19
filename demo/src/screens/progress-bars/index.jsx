@@ -42,58 +42,95 @@ class UiProgress extends Component {
     body={[
 
       <Card key="props">
-            <CardHeader>Progress Bars Properties</CardHeader>
-            <CardBody>
-              <Table hover responsive>
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">'aria-label'</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">className</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">role</th>
-                  <td>string</td>
-                  <td>group</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">size</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>string</td>
-                  <td>'div'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">vertical</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>Stacks buttons in vertical alignment</td>
-                </tr>
-                </tbody>
-              </Table>
-            </CardBody>
-          </Card>,
+        <CardHeader>Progress Properties</CardHeader>
+        <CardBody className="pt-3">
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">animated</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">bar</th>
+              <td>bool</td>
+              <td></td>
+              <td>Used in combination with multi</td>
+            </tr>
+            <tr>
+              <th scope="row">barClassName</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">children</th>
+              <td>node</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">color</th>
+              <td>string</td>
+              <td></td>
+              <td>primary, secondary, success, info, warning, danger</td>
+            </tr>
+            <tr>
+              <th scope="row">max</th>
+              <td>oneOfType</td>
+              <td>100</td>
+              <td>
+                PropTypes.string,<br/>
+                PropTypes.number,
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">multi</th>
+              <td>bool</td>
+              <td></td>
+              <td>Used in combination with bar.  Added to progress wrapper of progress bar.</td>
+            </tr>
+            <tr>
+              <th scope="row">striped</th>
+              <td>bool</td>
+              <td></td>
+              <td>Striped bar background</td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>string</td>
+              <td>'div'</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">value</th>
+              <td>oneOfType</td>
+              <td>0</td>
+              <td>
+                Value overlayed on progress bar.<br/>
+                PropTypes.string,<br/>
+                PropTypes.number,
+              </td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
 
 
       <Card key="progress1">
