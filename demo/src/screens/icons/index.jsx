@@ -130,12 +130,16 @@ const UiIcons = () => (
             <IconList iconName="notification-outline"/>
             <IconList iconName="ordered-list"/>
             <IconList iconName="paperclip"/>
+            <IconList iconName="pause"/>
+            <IconList iconName="pause-outline"/>
             <IconList iconName="pencil"/>
             <IconList iconName="phone-mobile"/>
             <IconList iconName="phone-outline"/>
             <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
             <IconList iconName="pin"/>
+            <IconList iconName="play"/>
+            <IconList iconName="play-outline"/>
             <IconList iconName="playlist"/>
             <IconList iconName="plus"/>
             <IconList iconName="plus-line"/>
@@ -359,6 +363,10 @@ const UiIcons = () => (
               <IconTooltip iconName="pin"/>
               <IconTooltip iconName="bolt-outline"/>
               <IconTooltip iconName="bolt-solid"/>
+              <IconTooltip iconName="play"/>
+              <IconTooltip iconName="pause"/>
+              <IconTooltip iconName="play-outline"/>
+              <IconTooltip iconName="pause-outline"/>
             </Col>
           </Row>
           <Row>

@@ -120,6 +120,8 @@ import notification from './notification.svg';
 import notificationOutline from './notification-outline.svg';
 import orderedList from './ordered-list.svg';
 import paperclip from './paperclip.svg';
+import pause from './pause.svg';
+import pauseOutline from './pause-outline.svg';
 import pencil from './pencil.svg';
 import phoneMobile from './phone-mobile.svg';
 import phoneOutline from './phone-outline.svg';
@@ -129,6 +131,8 @@ import pin from './pin.svg';
 import pinterest from './pinterest.svg';
 import pinterestPin from './pinterest-pin.svg';
 import pinterestProfile from './pinterest-profile.svg';
+import play from './play.svg';
+import playOutline from './play-outline.svg';
 import playlist from './playlist.svg';
 import plus from './plus.svg';
 import plusLine from './plus-line.svg';
@@ -319,6 +323,8 @@ const icons = {
   'notification-outline': notificationOutline,
   'ordered-list': orderedList,
   paperclip,
+  pause,
+  'pause-outline': pauseOutline,
   pencil,
   'phone-mobile': phoneMobile,
   'phone-outline': phoneOutline,
@@ -328,6 +334,8 @@ const icons = {
   pinterest,
   'pinterest-pin': pinterestPin,
   'pinterest-profile': pinterestProfile,
+  play,
+  'play-outline': playOutline,
   playlist,
   plus,
   'plus-line': plusLine,
