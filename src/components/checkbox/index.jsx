@@ -36,12 +36,12 @@ const Checkbox = (props) => {
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
-    className,
     'checkbox-input',
     size ? `form-control-${size}` : 'form-control',
   ), cssModule);
 
-  const inputClasses = mapToCssModules(classNames(
+  const labelClasses = mapToCssModules(classNames(
+    className,
     button ? 'checkbox-input-button' : 'checkbox-input-label',
   ), cssModule);
 
@@ -58,7 +58,7 @@ const Checkbox = (props) => {
 
   return [
     <Input type={type} id={id} className={classes} key={`${id}-checkbox-input`} {...attributes} />,
-    <Label for={id} className={inputClasses} key={`${id}-checkbox-label`}>
+    <Label for={id} className={labelClasses} key={`${id}-checkbox-label`}>
       {button && <Button tag="span" className={buttonClasses}>{children} <Icon imgSrc="plus-outline" className={iconClasses}/><Icon imgSrc="minus-solid" className={iconClasses} /></Button>}
     </Label>,
   ];
