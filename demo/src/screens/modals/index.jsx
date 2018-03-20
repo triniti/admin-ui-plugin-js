@@ -193,7 +193,7 @@ export default ModalExample;
                     <th scope="row">backdrop</th>
                     <td>oneOfType</td>
                     <td>true</td>
-                    <td>control backdrop<br/>PropTypes.bool,<br/>PropTypes.oneOf(['static']),<br/>
+                    <td>Controls backdrop<br/>PropTypes.bool,<br/>PropTypes.oneOf(['static']),<br/>
                       see <a href="http://v4-alpha.getbootstrap.com/components/modal/#options" target="blank">
                       http://v4-alpha.getbootstrap.com/components/modal/#options
                       </a>
@@ -305,7 +305,7 @@ export default ModalExample;
                     <th scope="row">size</th>
                     <td>string</td>
                     <td></td>
-                    <td>xs 240px, sm 300px, md 460px, lg 800px, xl 1000px</td>
+                    <td>size="xs" =240px, "sm" =300px, "md" =460px, "lg" =800px, "xl" =1000px</td>
                   </tr>
                   <tr>
                     <th scope="row">toggle</th>
