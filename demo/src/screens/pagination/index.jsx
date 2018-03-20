@@ -28,59 +28,6 @@ class UiPagination extends Component {
     // ]}
     primaryActions={<PrimaryActions />}
     body={[
-      <Card key="props">
-        <CardHeader>Button Group Properties</CardHeader>
-        <CardBody>
-          <Table hover responsive>
-            <thead>
-            <tr>
-              <th>Name</th>
-              <th>Type</th>
-              <th>Default</th>
-              <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <th scope="row">'aria-label'</th>
-              <td>string</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">className</th>
-              <td>string</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">role</th>
-              <td>string</td>
-              <td>group</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">size</th>
-              <td>string</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">tag</th>
-              <td>string</td>
-              <td>'div'</td>
-              <td></td>
-            </tr>
-            <tr>
-              <th scope="row">vertical</th>
-              <td>bool</td>
-              <td></td>
-              <td>Stacks buttons in vertical alignment</td>
-            </tr>
-            </tbody>
-          </Table>
-        </CardBody>
-      </Card>,
       <Card key="pagination">
             <CardHeader>Pagination
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
@@ -94,30 +41,44 @@ class UiPagination extends Component {
 import { Tooltip } from '@triniti/admin-ui-plugin/components';
 
 export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggleTooltip = this.toggleTooltip.bind(this);
-    this.state = {
-      tooltipOpen: false
-    };
-  }
-
-  toggleTooltip() {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
-  }
-
   render() {
-    return ([
-        <a href="#" id="TooltipExample">Hover Me</a>,
-        <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
-          Tooltip Text
-        </Tooltip>,
-    ]);
+    return (
+      <Pagination>
+        <PaginationItem>
+          <PaginationLink previous href="#" />
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#">
+            1
+          </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#">
+            2
+          </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#">
+            3
+          </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#">
+            4
+          </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink href="#">
+            5
+          </PaginationLink>
+        </PaginationItem>
+        <PaginationItem>
+          <PaginationLink next href="#" />
+        </PaginationItem>
+      </Pagination>
+    );
   }
-};`}</code></pre>
+}`}</code></pre>
               </CardBody>
             </Collapse>
         <CardBody indent>
@@ -204,6 +165,47 @@ export default class Example extends React.Component {
               <PaginationLink next href="#" />
             </PaginationItem>
           </Pagination>
+        </CardBody>
+      </Card>,
+      <Card key="props">
+        <CardHeader>Button Group Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">children</th>
+              <td>node</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">size</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>oneOfType</td>
+              <td></td>
+              <td>([PropTypes.func, PropTypes.string])</td>
+            </tr>
+            </tbody>
+          </Table>
         </CardBody>
       </Card>,
     ]}

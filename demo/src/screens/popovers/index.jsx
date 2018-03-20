@@ -50,60 +50,6 @@ class UiPopover extends React.Component {
       // ]}
         primaryActions={<PrimaryActions />}
         body={[
-          <Card key="props">
-            <CardHeader>Button Group Properties</CardHeader>
-            <CardBody>
-              <Table hover responsive>
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">'aria-label'</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">className</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">role</th>
-                  <td>string</td>
-                  <td>group</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">size</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>string</td>
-                  <td>'div'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">vertical</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>Stacks buttons in vertical alignment</td>
-                </tr>
-                </tbody>
-              </Table>
-            </CardBody>
-          </Card>,
-
           <Card key="popovers">
             <CardHeader>Popovers
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
@@ -114,33 +60,38 @@ class UiPopover extends React.Component {
               <CardBody className="pl-5 bg-light">
 <pre>
 <code>{`import React from 'react';
-import { Tooltip } from '@triniti/admin-ui-plugin/components';
+import { PopoverItem } from '@triniti/admin-ui-plugin/components';
 
 export default class Example extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggleTooltip = this.toggleTooltip.bind(this);
+    this.toggle = this.toggle.bind(this);
     this.state = {
-      tooltipOpen: false
+      popoverOpen: false
     };
   }
 
-  toggleTooltip() {
+  toggle() {
     this.setState({
-      tooltipOpen: !this.state.tooltipOpen
+      popoverOpen: !this.state.popoverOpen
     });
   }
 
   render() {
-    return ([
-        <a href="#" id="TooltipExample">Hover Me</a>,
-        <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
-          Tooltip Text
-        </Tooltip>,
-    ]);
+    return (
+      <div>
+        <Button id="Popover1" onClick={this.toggle}>
+          Launch Popover
+        </Button>
+        <Popover placement="bottom" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle}>
+          <PopoverHeader>Popover Title</PopoverHeader>
+          <PopoverBody>Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</PopoverBody>
+        </Popover>
+      </div>
+    );
   }
-};`}</code></pre>
+}`}</code></pre>
               </CardBody>
             </Collapse>
             <CardBody className="text-center">
@@ -157,6 +108,114 @@ export default class Example extends React.Component {
               <br />
               <br />
               <br />
+            </CardBody>
+          </Card>,
+
+          <Card key="props">
+            <CardHeader>Popover Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive size="sm">
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">container</th>
+                  <td>oneOfType</td>
+                  <td>body</td>
+                  <td>Where to inject the popper DOM node<br/>
+                      ([PropTypes.string, PropTypes.func, DOMElement])</td>
+                </tr>
+                <tr>
+                  <th scope="row">delay</th>
+                  <td>oneOfType</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">disabled</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">hideArrow</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">innerClassName</th>
+                  <td>string</td>
+                  <td></td>
+                  <td>Apply class to the inner-popover</td>
+                </tr>
+                <tr>
+                  <th scope="row">isOpen</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Boolean to control the state of the popover</td>
+                </tr>
+                <tr>
+                  <th scope="row">modifiers</th>
+                  <td>object</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">placement</th>
+                  <td>oneOf</td>
+                  <td></td>
+                  <td>'auto',
+                      'auto-start',
+                      'auto-end',
+                      'top',
+                      'top-start',
+                      'top-end',
+                      'right',
+                      'right-start',
+                      'right-end',
+                      'bottom',
+                      'bottom-start',
+                      'bottom-end',
+                      'left',
+                      'left-start',
+                      'left-end',
+                </td>
+                </tr>
+                <tr>
+                  <th scope="row">placementPrefix</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">target</th>
+                  <td>oneOfType</td>
+                  <td>*<i>Required</i></td>
+                  <td>PropTypes.string,<br/>
+                      PropTypes.func,<br/>
+                      DOMElement, (instanceof Element)</td>
+                </tr>
+                <tr>
+                  <th scope="row">toggle</th>
+                  <td>func</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
             </CardBody>
           </Card>,
       ]}
