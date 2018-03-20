@@ -81,16 +81,34 @@ class UiModal extends React.Component {
             </thead>
             <tbody>
             <tr>
-              <th scope="row">alert</th>
-              <td>node</td>
+              <th scope="row">autoFocus</th>
+              <td>bool</td>
               <td></td>
-              <td>Adds class "badge-alert" which absolutley aligns badge to the upper right corner of the containing object, usually a button set to radius, circle.</td>
+              <td></td>
             </tr>
             <tr>
-              <th scope="row">children</th>
-              <td>node</td>
+              <th scope="row">backdrop</th>
+              <td>oneOfType</td>
+              <td>true</td>
+              <td>control backdrop<br/>PropTypes.bool<br/>PropTypes.oneOf(['static'])</td>
+            </tr>
+            <tr>
+              <th scope="row">backdropClassName</th>
+              <td>string</td>
               <td></td>
-              <td>Content shown inside the badge.  Usually numbers or highlight text like "new".</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">backdropTransition</th>
+              <td>string</td>
+              <td>150ms</td>
+              <td>Controls backdrop transition<br/>Timeout is 150ms by default to match bootstrap<br/>see Fade for more details</td>
+            </tr>
+            <tr>
+              <th scope="row">centered</th>
+              <td>bool</td>
+              <td></td>
+              <td>If modal should be centered vertically in viewport</td>
             </tr>
             <tr>
               <th scope="row">className</th>
@@ -99,31 +117,101 @@ class UiModal extends React.Component {
               <td></td>
             </tr>
             <tr>
-              <th scope="row">color</th>
+              <th scope="row">cssModule</th>
+              <td>object</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">fade</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">isOpen</th>
+              <td>bool</td>
+              <td></td>
+              <td>boolean to control the state of the popover</td>
+            </tr>
+            <tr>
+              <th scope="row">keyboard</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">cssModule</th>
+              <td>object</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">labelledBy</th>
               <td>string</td>
-              <td>'default'</td>
-              <td>Adds class "badge-$color". Set background color of badge. Text is white for all badges.</td>
-            </tr>
-            <tr>
-              <th scope="row">pill</th>
-              <td>bool</td>
               <td></td>
-              <td>Adds class "badge-pill", producing a pill shaped alert with round ends.  The default style is rounded corners.</td>
+              <td>Used to reference the ID of the title element in the modal</td>
             </tr>
             <tr>
-              <th scope="row">tag</th>
-              <td>bool</td>
-              <td>'span'</td>
+              <th scope="row">modalClassName</th>
+              <td>string</td>
+              <td></td>
               <td></td>
             </tr>
             <tr>
-              <th scope="row">transition</th>
+              <th scope="row">modalTransition</th>
+              <td>shape(Fade.propTypes)</td>
+              <td>300ms</td>
+              <td>modalTransition - controls modal transition<br/>timeout is 300ms by default to match bootstrap<br/>see Fade for more details</td>
+            </tr>
+            <tr>
+              <th scope="row">onClosed</th>
+              <td>func</td>
+              <td></td>
+              <td>Called when done transitioning out</td>
+            </tr>
+            <tr>
+              <th scope="row">onEnter</th>
+              <td>func</td>
+              <td></td>
+              <td>Allows for a node/componet to exist next to the modal (outside of it). Useful for external close buttons<br/>external: PropTypes.node,<br/>called on componentDidMount</td>
+            </tr>
+            <tr>
+              <th scope="row">onOpened</th>
+              <td>func</td>
+              <td></td>
+              <td>called when done transitioning in</td>
+            </tr>
+            <tr>
+              <th scope="row">role</th>
+              <td>string</td>
+              <td>dialog</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">size</th>
+              <td>func</td>
+              <td></td>
+              <td>callback for toggling isOpen in the controlling component</td>
+            </tr>
+            <tr>
+              <th scope="row">toggle</th>
               <td>bool</td>
-              <td>
-                ...Fade.defaultProps,
-                unmountOnExit: true,
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">wrapClassName</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">zIndex</th>
+              <td>oneOfType</td>
+              <td>1000</td>
+              <td>PropTypes.number<br/>PropTypes.string
               </td>
-              <td></td>
             </tr>
             </tbody>
           </Table>
