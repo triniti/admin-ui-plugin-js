@@ -357,6 +357,12 @@ export default ModalExample;
                     <td></td>
                   </tr>
                   <tr>
+                    <th scope="row">cssModule</th>
+                    <td>object</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
                     <th scope="row">closeAriaLabel</th>
                     <td>string</td>
                     <td>'Close'</td>
@@ -405,6 +411,12 @@ export default ModalExample;
                     <td></td>
                   </tr>
                   <tr>
+                    <th scope="row">cssModule</th>
+                    <td>object</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
                     <th scope="row">tag</th>
                     <td>oneOfType</td>
                     <td>div</td>
@@ -437,6 +449,12 @@ export default ModalExample;
                   <tr>
                     <th scope="row">className</th>
                     <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">cssModule</th>
+                    <td>object</td>
                     <td></td>
                     <td></td>
                   </tr>
