@@ -173,7 +173,7 @@ export default ModalExample;
           <Card key="props1">
             <CardHeader>Modal Properties</CardHeader>
             <CardBody>
-              <Table hover responsive>
+              <Table hover responsive size="sm">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -305,7 +305,7 @@ export default ModalExample;
                     <th scope="row">size</th>
                     <td>string</td>
                     <td></td>
-                    <td>size="xs" =240px, "sm" =300px, "md" =460px, "lg" =800px, "xl" =1000px</td>
+                    <td>size="xs" (240px), "sm" 300px, "md" 460px, "lg" 800px, "xl" 1000px</td>
                   </tr>
                   <tr>
                     <th scope="row">toggle</th>
@@ -334,7 +334,7 @@ export default ModalExample;
           <Card key="props2">
             <CardHeader>ModalHeader Properties</CardHeader>
             <CardBody>
-              <Table hover responsive>
+              <Table hover responsive size="sm">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -394,7 +394,7 @@ export default ModalExample;
           <Card key="props3">
             <CardHeader>ModalBody Properties</CardHeader>
             <CardBody>
-              <Table hover responsive>
+              <Table hover responsive size="sm">
                 <thead>
                   <tr>
                     <th>Name</th>
@@ -430,7 +430,7 @@ export default ModalExample;
           <Card key="props4">
             <CardHeader>ModalFooter Properties</CardHeader>
             <CardBody>
-              <Table hover responsive>
+              <Table hover responsive size="sm">
                 <thead>
                   <tr>
                     <th>Name</th>
