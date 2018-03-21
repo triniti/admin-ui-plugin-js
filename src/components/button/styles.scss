@@ -98,24 +98,24 @@
 
 .btn-light {
   color: $body-color;
-  background-color: $body-bg;
+  background-color: $gray-200;
   border-color: $gray-700;
 
   &:hover,
   &:focus {
-    background-color: $gray-400;
+    background: $gray-400;
     border-color: $gray-700;
   }
 
   &:active,
   &.active {
-    background-color: $gray-500;
-    border-color: $gray-700;
+    background: darken($gray-600, 3%);
+    border-color: darken($gray-700, 10%) !important;
   }
 
   &.disabled,
   &:disabled {
-    background-color: $gray-200;
+    background: $gray-200;
     border-color: $gray-700;
   }
 }
@@ -169,13 +169,17 @@
   }
 }
 
-.btn-light:not(.dropdown-toggle):not([disabled]):not(.disabled).active,
-.btn-outline-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
+.btn-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
+.btn-outline-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active {
+  background: darken($gray-600, 3%);
+  border-color: darken($gray-700, 10%) !important;
+}
+
 .btn-secondary:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
 .btn-outline-secondary:not(.dropdown-toggle):not(:disabled):not(.disabled).active {
   color: $white !important;
   background-color: theme-color("secondary");
-  border: $input-btn-border-width solid darken(theme-color("secondary"), 5%) !important;;
+  border: $input-btn-border-width solid darken(theme-color("secondary"), 5%) !important;
 }
 
 .show > .btn-outline-light.dropdown-toggle {
@@ -382,3 +386,10 @@ button.close {
   -webkit-appearance: none;
 }
 // scss-lint:enable QualifyingElement
+
+// Remove text underline from href wrapping button
+
+a:hover > button {
+  text-decoration: none;
+  display: inline-block;
+}

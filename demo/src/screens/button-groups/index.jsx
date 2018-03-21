@@ -27,7 +27,48 @@ class UiButtonGroup extends Component {
         // ]}
         primaryActions={<PrimaryActions />}
         body={[
-          <Card key="props">
+          <Card key="button-groups">
+            <CardHeader>Button Groups
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { ButtonGroup, Button } from '@triniti/admin-ui-plugin/components';
+
+const Example = (props) => {
+  return (
+    <ButtonGroup>
+      <Button outline>1</Button>
+      <Button outline>2</Button>
+      <Button outline>3</Button>
+      <Button outline>4</Button>
+    </ButtonGroup>
+  );
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody indent>
+              <ButtonGroup>
+                <Button outline>1</Button>
+                <Button outline>2</Button>
+                <Button outline>3</Button>
+                <Button outline>4</Button>
+              </ButtonGroup>
+            </CardBody>
+            <CardBody indent>
+              <ButtonGroup vertical>
+                <Button color="primary">5</Button>
+                <Button color="primary">6</Button>
+                <Button color="primary">7</Button>
+              </ButtonGroup>
+            </CardBody>
+          </Card>,
+
+           <Card key="props">
             <CardHeader>Button Group Properties</CardHeader>
             <CardBody>
               <Table hover responsive>
@@ -78,47 +119,6 @@ class UiButtonGroup extends Component {
                 </tr>
                 </tbody>
               </Table>
-            </CardBody>
-          </Card>,
-
-          <Card key="button-groups">
-            <CardHeader>Button Groups
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                <Icon imgSrc="code" size="md"/>
-              </Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapseCode1}>
-              <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
-import { ButtonGroup, Button } from '@triniti/admin-ui-plugin/components';
-
-const Example = (props) => {
-  return (
-    <ButtonGroup>
-      <Button outline>1</Button>
-      <Button outline>2</Button>
-      <Button outline>3</Button>
-      <Button outline>4</Button>
-    </ButtonGroup>
-  );
-};`}</code></pre>
-              </CardBody>
-            </Collapse>
-            <CardBody indent>
-              <ButtonGroup>
-                <Button outline>1</Button>
-                <Button outline>2</Button>
-                <Button outline>3</Button>
-                <Button outline>4</Button>
-              </ButtonGroup>
-            </CardBody>
-            <CardBody indent>
-              <ButtonGroup vertical>
-                <Button color="primary">5</Button>
-                <Button color="primary">6</Button>
-                <Button color="primary">7</Button>
-              </ButtonGroup>
             </CardBody>
           </Card>,
        ]}

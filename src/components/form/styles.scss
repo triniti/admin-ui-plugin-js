@@ -357,6 +357,7 @@ input[type="checkbox"] {
     margin-bottom: 1.5rem;
   }
 
+  &.form-inline,
   .form-inline & {
     margin-bottom: 0;
   }
@@ -367,4 +368,11 @@ input[type="checkbox"] {
 .form-check-inline + .form-group,
 .form-radio-inline + .form-group {
     padding-top: .5rem;
+}
+
+.form-inline {
+  &.form-check-inline,
+  &.form-radio-inline {
+    margin-bottom: 0;
+  }
 }
