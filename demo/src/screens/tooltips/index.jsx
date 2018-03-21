@@ -59,6 +59,88 @@ export default class TooltipsScreen extends React.Component {
         sidenavHeader
         primaryActions={<PrimaryActions />}
         body={[
+          <Card key="tooltips">
+            <CardHeader>Tooltip
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { Tooltip } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.toggleTooltip = this.toggleTooltip.bind(this);
+    this.state = {
+      tooltipOpen: false
+    };
+  }
+
+  toggleTooltip() {
+    this.setState({
+      tooltipOpen: !this.state.tooltipOpen
+    });
+  }
+
+  render() {
+    return ([
+        <a href="#" id="TooltipExample">Hover Me</a>,
+        <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
+          Tooltip Text
+        </Tooltip>,
+    ]);
+  }
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody indent>
+              <a href="#" id="TooltipExample">Hover Me to See Tooltip</a>
+              <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
+                Tooltip Text
+              </Tooltip>
+            </CardBody>
+            <CardBody indent>
+                {this.state.tooltips.map((tooltip, i) => (
+                  <TooltipItem key={tooltip.placement} item={tooltip} id={i} />
+                ))}
+            </CardBody>
+          </Card>,
+
+          <Card key="uncontrolledtooltip">
+            <CardHeader>UncontrolledTooltip
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode2}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { UncontrolledTooltip } from 'reactstrap';
+
+export default function Example() {
+    return (
+        <a href="#" id="UncontrolledTooltipExample">Hover Me to See UncontrolledTooltip</a>,
+        <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample">
+          UncontrolledTooltip Text
+        </UncontrolledTooltip>,
+    );
+}`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody indent>
+              <a href="#" id="UncontrolledTooltipExample">Hover Me to See UncontrolledTooltip</a>
+              <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample">
+                UncontrolledTooltip Text
+              </UncontrolledTooltip>
+            </CardBody>
+          </Card>,
+
           <Card key="props">
             <CardHeader>Tooltip Properties</CardHeader>
             <CardBody className="pt-3">
@@ -150,88 +232,6 @@ export default class TooltipsScreen extends React.Component {
                 </tr>
                 </tbody>
               </Table>
-            </CardBody>
-          </Card>,
-
-          <Card key="tooltips">
-            <CardHeader>Tooltip
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                <Icon imgSrc="code" size="md"/>
-              </Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapseCode1}>
-              <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
-import { Tooltip } from '@triniti/admin-ui-plugin/components';
-
-export default class Example extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.toggleTooltip = this.toggleTooltip.bind(this);
-    this.state = {
-      tooltipOpen: false
-    };
-  }
-
-  toggleTooltip() {
-    this.setState({
-      tooltipOpen: !this.state.tooltipOpen
-    });
-  }
-
-  render() {
-    return ([
-        <a href="#" id="TooltipExample">Hover Me</a>,
-        <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
-          Tooltip Text
-        </Tooltip>,
-    ]);
-  }
-};`}</code></pre>
-              </CardBody>
-            </Collapse>
-            <CardBody indent>
-              <a href="#" id="TooltipExample">Hover Me to See Tooltip</a>
-              <Tooltip placement="top" isOpen={this.state.tooltipOpen} target="TooltipExample" toggle={this.toggleTooltip}>
-                Tooltip Text
-              </Tooltip>
-            </CardBody>
-            <CardBody indent>
-                {this.state.tooltips.map((tooltip, i) => (
-                  <TooltipItem key={tooltip.placement} item={tooltip} id={i} />
-                ))}
-            </CardBody>
-          </Card>,
-
-          <Card key="uncontrolledtooltip">
-            <CardHeader>UncontrolledTooltip
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
-                <Icon imgSrc="code" size="md"/>
-              </Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapseCode2}>
-              <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
-import { UncontrolledTooltip } from 'reactstrap';
-
-export default function Example() {
-    return (
-        <a href="#" id="UncontrolledTooltipExample">Hover Me to See UncontrolledTooltip</a>,
-        <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample">
-          UncontrolledTooltip Text
-        </UncontrolledTooltip>,
-    );
-}`}</code></pre>
-              </CardBody>
-            </Collapse>
-            <CardBody indent>
-              <a href="#" id="UncontrolledTooltipExample">Hover Me to See UncontrolledTooltip</a>
-              <UncontrolledTooltip placement="right" target="UncontrolledTooltipExample">
-                UncontrolledTooltip Text
-              </UncontrolledTooltip>
             </CardBody>
           </Card>,
         ]}

@@ -51,60 +51,6 @@ class UiBreadcrumb extends Component {
         // ]}
         primaryActions={<PrimaryActions />}
         body={[
-          <Card key="props1">
-            <CardHeader>Breadcrumb Properties</CardHeader>
-            <CardBody>
-              <Table hover responsive>
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>bool</td>
-                  <td>'ol'</td>
-                  <td>For "No List Markup" tag="nav".</td>
-                </tr>
-                </tbody>
-              </Table>
-            </CardBody>
-          </Card>,
-
-          <Card key="props2">
-            <CardHeader>BreadcrumbItem Properties</CardHeader>
-            <CardBody>
-              <Table hover responsive>
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>bool</td>
-                  <td>'li'</td>
-                  <td>For "No List Markup" tag="a" and include href inside component tag.</td>
-                </tr>
-                <tr>
-                  <th scope="row">active</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>Adds "active" class to show active item. For "No List Markup" tag="span".</td>
-                </tr>
-                </tbody>
-              </Table>
-            </CardBody>
-          </Card>,
-
           <Card key="breadcrumbs1">
             <CardHeader>
               <Breadcrumb>
@@ -176,6 +122,61 @@ const Example = (props) => {
               </Breadcrumb>
             </CardBody>
           </Card>,
+
+          <Card key="props1">
+            <CardHeader>Breadcrumb Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>bool</td>
+                  <td>'ol'</td>
+                  <td>For "No List Markup" tag="nav".</td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props2">
+            <CardHeader>BreadcrumbItem Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>bool</td>
+                  <td>'li'</td>
+                  <td>For "No List Markup" tag="a" and include href inside component tag.</td>
+                </tr>
+                <tr>
+                  <th scope="row">active</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds "active" class to show active item. For "No List Markup" tag="span".</td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
         ]}
       />
     );
