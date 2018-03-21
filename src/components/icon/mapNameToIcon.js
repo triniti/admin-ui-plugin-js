@@ -154,6 +154,7 @@ import services from './services.svg';
 import social from './social.svg';
 import sort from './sort.svg';
 import sortHorizontal from './sort-horizontal.svg';
+import sortVertical from './sort-vertical.svg';
 import soundHistogram from './sound-histogram.svg';
 import soundWave from './sound-wave.svg';
 import star from './star.svg';
@@ -357,6 +358,7 @@ const icons = {
   social,
   sort,
   'sort-horizontal': sortHorizontal,
+  'sort-vertical': sortVertical,
   'sound-histogram': soundHistogram,
   'sound-wave': soundWave,
   star,

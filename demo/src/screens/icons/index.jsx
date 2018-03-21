@@ -161,6 +161,7 @@ const UiIcons = () => (
             <IconList iconName="social"/>
             <IconList iconName="sort"/>
             <IconList iconName="sort-horizontal"/>
+            <IconList iconName="sort-vertical"/>
             <IconList iconName="sound-histogram"/>
             <IconList iconName="sound-wave"/>
             <IconList iconName="star"/>
@@ -254,6 +255,7 @@ const UiIcons = () => (
               <IconTooltip iconName="caret-down"/>
               <IconTooltip iconName="sort"/>
               <IconTooltip iconName="sort-horizontal"/>
+              <IconTooltip iconName="sort-vertical"/>
               <IconTooltip iconName="apps"/>
               <IconTooltip iconName="list"/>
               <IconTooltip iconName="ordered-list"/>
