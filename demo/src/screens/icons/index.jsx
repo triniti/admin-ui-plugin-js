@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
 import IconList from './IconList';
 
@@ -529,16 +529,36 @@ const UiIcons = () => (
       <Card key="icons7">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
+          <CardTitle></CardTitle>
           <Row>
             <Col>
               <Spinner className="mb-3 mr-3" color="#03caa5" width="16" strokeWidth="10" />
-              <Spinner className="mb-3 mr-3" color="blue" width="24" strokeWidth="4" />
-              <Spinner className="mb-3 mr-3" strokeWidth="10" />
+              <Spinner className="mb-3 mr-3" color="#7a7a7c" width="24" strokeWidth="4" />
+              <Spinner className="mb-3 mr-3" color="#08a0e8" strokeWidth="10" />
+              <Spinner className="mb-3 mr-3" color="black" width="48" />
             </Col>
           </Row>
           <Row>
             <Col>
               <Spinner className="mb-3">Loading...</Spinner>
+
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button><Spinner width="20" className="mr-2"/> Loading</Button>
+
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button size="sm" outline><Spinner width="16" className="mr-2"/> Loading</Button>
+
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button size="sm" color="secondary"><Spinner width="16" color="white" className="mr-2"/> Loading</Button>
 
             </Col>
           </Row>
