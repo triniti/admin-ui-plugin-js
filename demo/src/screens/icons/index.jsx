@@ -531,13 +531,14 @@ const UiIcons = () => (
         <CardBody indent>
           <Row>
             <Col>
-              <Spinner />
-
+              <Spinner className="mb-3 mr-3" color="#03caa5" width="16" strokeWidth="10" />
+              <Spinner className="mb-3 mr-3" color="blue" width="24" strokeWidth="4" />
+              <Spinner className="mb-3 mr-3" strokeWidth="10" />
             </Col>
           </Row>
           <Row>
             <Col>
-              <Spinner>Loading...</Spinner>
+              <Spinner className="mb-3">Loading...</Spinner>
 
             </Col>
           </Row>

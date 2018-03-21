@@ -5,7 +5,7 @@ import './styles.scss';
 
 
 const IconList = ({ iconName, ...attributes }) => ([
-    <div className="iconlist-item-wrapper">
+    <div className="iconlist-item-wrapper" key={`list-${iconName}`}>
         <Icon imgSrc={iconName} {...attributes} size="lg" />
         <div className="iconlist-item-text">{iconName}</div>
     </div>
