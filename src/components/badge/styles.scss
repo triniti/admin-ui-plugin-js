@@ -28,6 +28,11 @@
   color: $white;
 }
 
+.badge-light {
+  background-color: $gray-500;
+  text-shadow: none;
+}
+
 .badge-alert,
 .btn .badge-alert {
   position: absolute;

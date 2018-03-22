@@ -44,6 +44,19 @@
   }
 }
 
+.btn-icon {
+
+  &.btn-sm {
+    min-height: $form-min-height-sm;
+  }
+  &.btn {
+    min-height: $form-min-height;
+  }
+  &.btn-lg {
+    min-height: $form-min-height-lg;
+  }
+}
+
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     border-color: darken($value, 5%);
@@ -330,6 +343,7 @@
 .btn-radius-circle {
   width: $button-round-height;
   height: $button-round-height;
+  min-height: 1rem;
   padding: 0;
   letter-spacing: 0;
   border-radius: $round;
@@ -370,6 +384,7 @@
   position: absolute;
   top: .25rem;
   right: .25rem;
+  min-height: 0;
 }
 
 
