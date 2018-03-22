@@ -47,7 +47,7 @@ class UiLayout extends Component {
               <code>
                   {`
 import React from 'react';
-import { Progress } from '@triniti/admin-ui-plugin/components';
+import { Col, Row } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (
@@ -146,7 +146,7 @@ export default Example;
               <code>
                   {`
 import React from 'react';
-import { Progress } from '@triniti/admin-ui-plugin/components';
+import { Col, Row } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (

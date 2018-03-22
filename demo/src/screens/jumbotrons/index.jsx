@@ -66,7 +66,7 @@ class Jumbotrons extends Component {
               <code>
                   {`
 import React from 'react';
-import { Progress } from '@triniti/admin-ui-plugin/components';
+import { Jumbotron } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (
@@ -109,7 +109,7 @@ export default Example;
               <code>
                   {`
 import React from 'react';
-import { Progress } from '@triniti/admin-ui-plugin/components';
+import { Jumbotron } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (
@@ -152,7 +152,7 @@ export default Example;
               <code>
                   {`
 import React from 'react';
-import { Progress } from '@triniti/admin-ui-plugin/components';
+import { Jumbotron } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (
@@ -213,7 +213,7 @@ export default Example;
               <code>
                   {`
 import React from 'react';
-import { Progress } from '@triniti/admin-ui-plugin/components';
+import { Jumbotron } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (
@@ -247,7 +247,7 @@ export default Example;
       </Card>,
 
       <Card key="props">
-        <CardHeader>Progress Properties</CardHeader>
+        <CardHeader>Jumbotron Properties</CardHeader>
         <CardBody className="pt-3">
           <Table hover responsive>
             <thead>
