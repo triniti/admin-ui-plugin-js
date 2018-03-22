@@ -40,11 +40,15 @@
 
 .media-hover {
   position: relative;
-  display: inline-flex;
+  display: inline-block;
   transition: transform $transition;
 
   &::after {
     position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: -1;
     display: block;
     width: 100%;

@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
 import IconList from './IconList';
 
@@ -16,7 +16,7 @@ const UiIcons = () => (
   // ]}
     primaryActions={<PrimaryActions />}
     body={[
-      <Card key="icons6">
+      <Card key="icons1">
         <CardHeader>Icon Names</CardHeader>
         <CardBody indent>
           <Row>
@@ -130,12 +130,16 @@ const UiIcons = () => (
             <IconList iconName="notification-outline"/>
             <IconList iconName="ordered-list"/>
             <IconList iconName="paperclip"/>
+            <IconList iconName="pause"/>
+            <IconList iconName="pause-outline"/>
             <IconList iconName="pencil"/>
             <IconList iconName="phone-mobile"/>
             <IconList iconName="phone-outline"/>
             <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
             <IconList iconName="pin"/>
+            <IconList iconName="play"/>
+            <IconList iconName="play-outline"/>
             <IconList iconName="playlist"/>
             <IconList iconName="plus"/>
             <IconList iconName="plus-line"/>
@@ -157,6 +161,7 @@ const UiIcons = () => (
             <IconList iconName="social"/>
             <IconList iconName="sort"/>
             <IconList iconName="sort-horizontal"/>
+            <IconList iconName="sort-vertical"/>
             <IconList iconName="sound-histogram"/>
             <IconList iconName="sound-wave"/>
             <IconList iconName="star"/>
@@ -212,7 +217,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons1">
+      <Card key="icons2">
         <CardHeader>Icons at 1rem Height</CardHeader>
         <CardBody indent>
           <Row>
@@ -250,6 +255,7 @@ const UiIcons = () => (
               <IconTooltip iconName="caret-down"/>
               <IconTooltip iconName="sort"/>
               <IconTooltip iconName="sort-horizontal"/>
+              <IconTooltip iconName="sort-vertical"/>
               <IconTooltip iconName="apps"/>
               <IconTooltip iconName="list"/>
               <IconTooltip iconName="ordered-list"/>
@@ -359,6 +365,10 @@ const UiIcons = () => (
               <IconTooltip iconName="pin"/>
               <IconTooltip iconName="bolt-outline"/>
               <IconTooltip iconName="bolt-solid"/>
+              <IconTooltip iconName="play"/>
+              <IconTooltip iconName="pause"/>
+              <IconTooltip iconName="play-outline"/>
+              <IconTooltip iconName="pause-outline"/>
             </Col>
           </Row>
           <Row>
@@ -412,7 +422,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons2">
+      <Card key="icons3">
         <CardHeader>Icon Sizes</CardHeader>
         <CardBody indent>
           <Row>
@@ -438,7 +448,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons3">
+      <Card key="icons4">
         <CardHeader>Icon Colors</CardHeader>
         <CardBody indent>
           <Row>
@@ -461,7 +471,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons4">
+      <Card key="icons5">
         <CardHeader>Button Icons</CardHeader>
         <CardBody indent>
           <Row>
@@ -486,7 +496,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons3">
+      <Card key="icons6">
         <CardHeader>File Types</CardHeader>
         <CardBody indent>
           <Row>
@@ -516,18 +526,39 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons5">
+      <Card key="icons7">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
+          <CardTitle></CardTitle>
           <Row>
             <Col>
-              <Spinner />
+              <Spinner className="mb-3 mr-3" color="#03caa5" width="16" strokeWidth="10" />
+              <Spinner className="mb-3 mr-3" color="#7a7a7c" width="24" strokeWidth="4" />
+              <Spinner className="mb-3 mr-3" color="#08a0e8" strokeWidth="10" />
+              <Spinner className="mb-3 mr-3" color="black" width="48" />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Spinner className="mb-3">Loading...</Spinner>
 
             </Col>
           </Row>
           <Row>
             <Col>
-              <Spinner>Loading...</Spinner>
+              <Button><Spinner width="20" className="mr-2"/> Loading</Button>
+
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button size="sm" outline><Spinner width="16" className="mr-2"/> Loading</Button>
+
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Button size="sm" color="secondary"><Spinner width="16" color="white" className="mr-2"/> Loading</Button>
 
             </Col>
           </Row>

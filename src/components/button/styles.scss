@@ -44,6 +44,19 @@
   }
 }
 
+.btn-icon {
+
+  &.btn-sm {
+    min-height: $form-min-height-sm;
+  }
+  &.btn {
+    min-height: $form-min-height;
+  }
+  &.btn-lg {
+    min-height: $form-min-height-lg;
+  }
+}
+
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     border-color: darken($value, 5%);
@@ -69,7 +82,8 @@
 .form-inline .btn,
 .modal-footer .btn,
 .btn-group .btn,
-.input-group-btn .btn {
+.input-group-btn .btn,
+.btn-group-vertical .btn {
   margin-bottom: 0;
 }
 
@@ -86,7 +100,10 @@
 .btn-warning:hover,
 .btn-warning:focus,
 .btn-outline-warning:hover,
-.btn-outline-warning:focus {
+.btn-outline-warning:focus,
+.btn-outline-warning:not(:disabled):not(.disabled):active,
+.btn-outline-warning:not(:disabled):not(.disabled).active,
+.show > .btn-outline-warning.dropdown-toggle {
   color: #fff;
 }
 
@@ -94,24 +111,24 @@
 
 .btn-light {
   color: $body-color;
-  background-color: $body-bg;
+  background-color: $gray-200;
   border-color: $gray-700;
 
   &:hover,
   &:focus {
-    background-color: $gray-400;
+    background: $gray-400;
     border-color: $gray-700;
   }
 
   &:active,
   &.active {
-    background-color: $gray-500;
-    border-color: $gray-700;
+    background: darken($gray-600, 3%);
+    border-color: darken($gray-700, 10%) !important;
   }
 
   &.disabled,
   &:disabled {
-    background-color: $gray-200;
+    background: $gray-200;
     border-color: $gray-700;
   }
 }
@@ -165,13 +182,17 @@
   }
 }
 
-.btn-light:not(.dropdown-toggle):not([disabled]):not(.disabled).active,
-.btn-outline-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
+.btn-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
+.btn-outline-light:not(.dropdown-toggle):not(:disabled):not(.disabled).active {
+  background: darken($gray-600, 3%);
+  border-color: darken($gray-700, 10%) !important;
+}
+
 .btn-secondary:not(.dropdown-toggle):not(:disabled):not(.disabled).active,
 .btn-outline-secondary:not(.dropdown-toggle):not(:disabled):not(.disabled).active {
   color: $white !important;
   background-color: theme-color("secondary");
-  border: $input-btn-border-width solid darken(theme-color("secondary"), 5%) !important;;
+  border: $input-btn-border-width solid darken(theme-color("secondary"), 5%) !important;
 }
 
 .show > .btn-outline-light.dropdown-toggle {
@@ -322,6 +343,7 @@
 .btn-radius-circle {
   width: $button-round-height;
   height: $button-round-height;
+  min-height: 1rem;
   padding: 0;
   letter-spacing: 0;
   border-radius: $round;
@@ -362,6 +384,7 @@
   position: absolute;
   top: .25rem;
   right: .25rem;
+  min-height: 0;
 }
 
 
@@ -378,3 +401,10 @@ button.close {
   -webkit-appearance: none;
 }
 // scss-lint:enable QualifyingElement
+
+// Remove text underline from href wrapping button
+
+a:hover > button {
+  text-decoration: none;
+  display: inline-block;
+}

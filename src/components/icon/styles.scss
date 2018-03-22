@@ -21,7 +21,6 @@
   margin-bottom: 1px;
 
   .btn & {
-    margin-right: .5rem;
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -306,7 +305,10 @@
 // toggle icons in buttons using active state of button
 
 .icon-toggle:first-child {
-  opacity: 0.4;
+
+  .btn-outline-light & {
+    opacity: 0.4;
+  }
 
   .btn.active &,
   .btn:active & {
@@ -317,12 +319,14 @@
 .icon-toggle:last-child {
   display: none;
 
-  .btn:active & {
-    display: inline-flex;
-    opacity: 0.4;
-  }
+  .btn:active &,
   .btn.active & {
     display: inline-flex;
+  }
+  .btn-outline-light:active  & {
+    opacity: 0.4;
+  }
+  .btn-outline-light.active  & {
     opacity: 1;
   }
 }

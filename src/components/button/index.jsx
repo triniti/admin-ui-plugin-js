@@ -18,6 +18,7 @@ const propTypes = {
   onClick: PropTypes.func,
   outline: PropTypes.bool,
   outlineText: PropTypes.bool,
+  icon: PropTypes.bool,
   radius: PropTypes.string,
   size: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
@@ -54,6 +55,7 @@ class Button extends React.Component {
       className,
       cssModule,
       color,
+      icon,
       outline,
       outlineText,
       radius,
@@ -72,6 +74,7 @@ class Button extends React.Component {
       radius ? `btn-radius-${radius}` : false,
       block ? 'btn-block' : false,
       size ? `btn-${size}` : false,
+      icon ? 'btn-icon' : false,
       dropdownArrow ? 'btn-dropdown-arrow' : false,
       { active, disabled: this.props.disabled },
     ), cssModule);

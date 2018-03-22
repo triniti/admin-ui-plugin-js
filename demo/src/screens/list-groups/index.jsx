@@ -200,6 +200,36 @@ const UiListGroup = () => (
           </Row>
         </CardBody>
       </Card>,
+
+      <Card key="list-group9">
+        <CardHeader>List Group Chat</CardHeader>
+        <CardBody>
+          <Row>
+            <Col>
+              <ListGroup className="list-group-chat">
+                <ListGroupItem className="list-group-chat-item-me">
+                  <ListGroupItemHeading>Me <small>3 minutes ago</small></ListGroupItemHeading>
+                  <ListGroupItemText>
+                      My phone got wet and I lost all of my numbers. Please text me.
+                  </ListGroupItemText>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <ListGroupItemHeading>Albert Gutierrez<small>2 minutes ago</small></ListGroupItemHeading>
+                  <ListGroupItemText>
+                      1 2 3 4 5 6 7 8 9 0 That should be all of them.
+                  </ListGroupItemText>
+                </ListGroupItem>
+                <ListGroupItem>
+                  <ListGroupItemHeading>Albert Gutierrez<small>a few seconds ago</small></ListGroupItemHeading>
+                  <ListGroupItemText>
+                      Feel free to rearrange.
+                  </ListGroupItemText>
+                </ListGroupItem>
+              </ListGroup>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
   ]}
   />
 );

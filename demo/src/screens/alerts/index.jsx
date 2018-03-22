@@ -41,93 +41,6 @@ class UiAlert extends Component {
         ]}
         primaryActions={<PrimaryActions />}
         body={[
-          <Card key="props">
-            <CardHeader>Alert Properties</CardHeader>
-            <CardBody>
-              <Table hover responsive>
-                <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <th scope="row">children</th>
-                  <td>node</td>
-                  <td></td>
-                  <td>Message in the alert. Can include styling like <strong>strong</strong> and links using className="<a className="alert-link" href="#">alert-link</a>"</td>
-                </tr>
-                <tr>
-                  <th scope="row">className</th>
-                  <td>string</td>
-                  <td></td>
-                  <td>Add additional classes like <strong>alert-link</strong>, <strong>alert-heading</strong></td>
-                </tr>
-                <tr>
-                  <th scope="row">closeClassName</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">closeAriaLabel</th>
-                  <td>string</td>
-                  <td>'Close'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">color</th>
-                  <td>string</td>
-                  <td>'success'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">isOpen</th>
-                  <td>bool</td>
-                  <td>true</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">inverse</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>The default Alert theme with white text on solid backgrounds.</td>
-                </tr>
-                <tr>
-                  <th scope="row">sticky</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>Adds alert-sticky class to alert. Similar to sticky-top but with flex, drop-shadow, and a min-height to cover sticky card-header if present</td>
-                </tr>
-                <tr>
-                  <th scope="row">toggle</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>bool</td>
-                  <td>'div'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">transition</th>
-                  <td>bool</td>
-                  <td>
-                    ...Fade.defaultProps,
-                    unmountOnExit: true,
-                  </td>
-                  <td>Controls the transition of the alert fading in and out. See Fade for more details.</td>
-                </tr>
-                </tbody>
-              </Table>
-            </CardBody>
-          </Card>,
-
           <Card key="alert1">
             <CardHeader>Content Alerts (alert-inverse)
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
@@ -135,8 +48,8 @@ class UiAlert extends Component {
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode1}>
-              <CardBody className="pl-5 bg-light">
-<pre>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
 <code>{`import React from 'react';
 import { Alert, UncontrolledAlert } from '@triniti/admin-ui-plugin/components';
 
@@ -290,6 +203,93 @@ const Example = (props) => {
               no, not, of, on, or, such, that, the, their, then, there, these,
               they, this, to, was, will, with
               </Alert>
+            </CardBody>
+          </Card>,
+
+          <Card key="props">
+            <CardHeader>Alert Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td>Message in the alert. Can include styling like <strong>strong</strong> and links using className="<a className="alert-link" href="#">alert-link</a>"</td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td>Add additional classes like <strong>alert-link</strong>, <strong>alert-heading</strong></td>
+                </tr>
+                <tr>
+                  <th scope="row">closeClassName</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">closeAriaLabel</th>
+                  <td>string</td>
+                  <td>'Close'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">color</th>
+                  <td>string</td>
+                  <td>'success'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">isOpen</th>
+                  <td>bool</td>
+                  <td>true</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">inverse</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>The default Alert theme with white text on solid backgrounds.</td>
+                </tr>
+                <tr>
+                  <th scope="row">sticky</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds alert-sticky class to alert. Similar to sticky-top but with flex, drop-shadow, and a min-height to cover sticky card-header if present</td>
+                </tr>
+                <tr>
+                  <th scope="row">toggle</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>bool</td>
+                  <td>'div'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">transition</th>
+                  <td>bool</td>
+                  <td>
+                    ...Fade.defaultProps,
+                    unmountOnExit: true,
+                  </td>
+                  <td>Controls the transition of the alert fading in and out. See Fade for more details.</td>
+                </tr>
+                </tbody>
+              </Table>
             </CardBody>
           </Card>,
       ]}

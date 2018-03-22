@@ -349,3 +349,30 @@ input[type="checkbox"] {
 .card-header .form-label-strong {
   font-size: .75rem;
 }
+
+// remove bottom margin from last form group
+
+.form-group {
+  .screen-body-content & {
+    margin-bottom: 1.5rem;
+  }
+
+  &.form-inline,
+  .form-inline & {
+    margin-bottom: 0;
+  }
+}
+
+// make spacing 1.5rem like other form-groups
+
+.form-check-inline + .form-group,
+.form-radio-inline + .form-group {
+    padding-top: .5rem;
+}
+
+.form-inline {
+  &.form-check-inline,
+  &.form-radio-inline {
+    margin-bottom: 0;
+  }
+}

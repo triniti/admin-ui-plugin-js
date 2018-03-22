@@ -51,6 +51,78 @@ class UiBreadcrumb extends Component {
         // ]}
         primaryActions={<PrimaryActions />}
         body={[
+          <Card key="breadcrumbs1">
+            <CardHeader>
+              <Breadcrumb>
+                <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+                <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+                <BreadcrumbItem active>Data</BreadcrumbItem>
+              </Breadcrumb>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { Breadcrumb, BreadcrumbItem } from '@triniti/admin-ui-plugin/components';
+
+const Example = (props) => {
+  return (
+    <Breadcrumb>
+      <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+      <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+      <BreadcrumbItem active>Data</BreadcrumbItem>
+    </Breadcrumb>
+  );
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody>
+              <Breadcrumb>
+                <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
+                <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
+                <BreadcrumbItem active>Data</BreadcrumbItem>
+              </Breadcrumb>
+            </CardBody>
+          </Card>,
+
+          <Card key="breadcrumbs2">
+            <CardHeader>
+              No List Markup
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode2}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { Breadcrumb, BreadcrumbItem } from '@triniti/admin-ui-plugin/components';
+
+const Example = (props) => {
+  return (
+    <Breadcrumb tag="nav">
+      <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
+      <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
+      <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
+      <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
+    </Breadcrumb>
+  );
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody>
+              <Breadcrumb tag="nav">
+                <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
+                <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
+                <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
+                <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
+              </Breadcrumb>
+            </CardBody>
+          </Card>,
+
           <Card key="props1">
             <CardHeader>Breadcrumb Properties</CardHeader>
             <CardBody>
@@ -105,77 +177,6 @@ class UiBreadcrumb extends Component {
             </CardBody>
           </Card>,
 
-          <Card key="breadcrumbs1">
-            <CardHeader>
-              <Breadcrumb>
-                <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
-                <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
-                <BreadcrumbItem active>Data</BreadcrumbItem>
-              </Breadcrumb>
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                <Icon imgSrc="code" size="md"/>
-              </Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapseCode1}>
-              <CardBody className="pl-5 bg-light">
-<pre>
-<code>{`import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from '@triniti/admin-ui-plugin/components';
-
-const Example = (props) => {
-  return (
-    <Breadcrumb>
-      <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
-      <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
-      <BreadcrumbItem active>Data</BreadcrumbItem>
-    </Breadcrumb>
-  );
-};`}</code></pre>
-              </CardBody>
-            </Collapse>
-            <CardBody>
-              <Breadcrumb>
-                <BreadcrumbItem><a href="#">Home</a></BreadcrumbItem>
-                <BreadcrumbItem><a href="#">Library</a></BreadcrumbItem>
-                <BreadcrumbItem active>Data</BreadcrumbItem>
-              </Breadcrumb>
-            </CardBody>
-          </Card>,
-
-          <Card key="breadcrumbs2">
-            <CardHeader>
-              No List Markup
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
-                <Icon imgSrc="code" size="md"/>
-              </Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapseCode2}>
-              <CardBody className="pl-5 bg-light">
-<pre>
-<code>{`import React from 'react';
-import { Breadcrumb, BreadcrumbItem } from '@triniti/admin-ui-plugin/components';
-
-const Example = (props) => {
-  return (
-    <Breadcrumb tag="nav">
-      <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
-      <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
-      <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
-      <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
-    </Breadcrumb>
-  );
-};`}</code></pre>
-              </CardBody>
-            </Collapse>
-            <CardBody>
-              <Breadcrumb tag="nav">
-                <BreadcrumbItem tag="a" href="#">Home</BreadcrumbItem>
-                <BreadcrumbItem tag="a" href="#">Library</BreadcrumbItem>
-                <BreadcrumbItem tag="a" href="#">Data</BreadcrumbItem>
-                <BreadcrumbItem active tag="span">Bootstrap</BreadcrumbItem>
-              </Breadcrumb>
-            </CardBody>
-          </Card>,
         ]}
       />
     );

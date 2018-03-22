@@ -1,29 +1,51 @@
 // Divider
 
+.divider-horizontal-xs {
+  display: inline-block;
+  border-left: 1px solid $card-border-color;
+  margin-top: 1px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 18px;
+  vertical-align: middle;
+}
+
 .divider-horizontal-sm {
   display: inline-block;
   border-left: 1px solid $card-border-color;
-  margin-left: .5rem;
-  padding-right: 1rem;
-  height: 28px;
+  margin-top: 1px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 26px;
   vertical-align: middle;
 }
 
 .divider-horizontal-md {
   display: inline-block;
   border-left: 1px solid $card-border-color;
-  margin-left: .5rem;
-  padding-right: 1rem;
-  height: 40px;
+  margin-top: 1px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 38px;
   vertical-align: middle;
 }
 
 .divider-horizontal-lg {
   display: inline-block;
   border-left: 1px solid $card-border-color;
-  margin-left: .5rem;
-  padding-right: 1rem;
-  height: 54px;
+  margin-top: 1px;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: 52px;
+  vertical-align: middle;
+}
+
+.divider-horizontal-card-header {
+  display: inline-block;
+  border-left: 1px solid $card-border-color;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  height: $header-height + 1;
   vertical-align: middle;
 }
 

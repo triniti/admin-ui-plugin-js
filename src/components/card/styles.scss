@@ -5,9 +5,16 @@
 
 .card {
   flex-shrink: 0;
-  margin: 0 0 1rem 0;
+  margin: 0 0 .5rem 0;
   width: 100%;
   border: none;
+
+  @media (min-width: 421px) {
+    margin: 0 0 .75rem 0;
+  }
+  @media (min-width: 600px) {
+    margin: 0 0 1rem 0;
+  }
 
   .tab-pane > & {
     margin-top: 0;
@@ -55,10 +62,28 @@
   box-shadow: $shadow-card;
 }
 
+.screen-body-content .card-body {
+
+  @media (max-width: 439px) {
+    padding: 1rem;
+  }
+  @media (min-width: 420px) and (max-width: 599px) {
+    padding: 1.25rem;
+  }
+}
 
 .card-body-indent {
 
+  @media (min-width: 420px) {
+    padding: 1.25rem;
+  }
+  @media (min-width: 600px) {
+    padding: 1.5rem;
+  }
   @media (min-width: 768px) {
+    padding: 2rem;
+  }
+  @media (min-width: 1360px) {
     padding: 2.5rem 3rem 3rem 3rem;
   }
 }
@@ -69,10 +94,6 @@
 
 .jumbotron > .card-body {
   background-color: inherit;
-}
-
-.card-body > .row {
-  margin-bottom: $form-group-margin-bottom;
 }
 
 .card-title {
@@ -150,6 +171,10 @@ h4.card-title {
   justify-content: space-between;
   min-height: $header-height + 2;
 
+  & span {
+    vertical-align: middle;
+  }
+
   .screen-sidebar & {
     font-weight: 500;
     background-color: $gray-100;
@@ -157,6 +182,7 @@ h4.card-title {
     min-height: 44px;
     box-shadow: 0 1px 0 $gray-rgba-200, 0 -1px 0 $gray-400;
     border: none;
+    z-index: 2;
 
     & .btn-toggler {
       font-size: .875rem;

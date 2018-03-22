@@ -1,7 +1,6 @@
 // Spinner
 //
 
-$color: rgba(0, 0, 0, 0.25);
 $offset: 178;
 $duration: 1.5s;
 
@@ -10,14 +9,10 @@ $duration: 1.5s;
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  justify-content: space-between;
-  margin: 1rem;
-  height: 33px;
+  vertical-align: middle;
 }
 
 .spinner-animation {
-  height: 33px;
-  width: 33px;
   padding: 0;
   animation: rotator $duration linear infinite;
 }
@@ -36,18 +31,13 @@ $duration: 1.5s;
   100% { transform: rotate(270deg); }
 }
 
-.path {
+.spinner-animation-path {
   stroke-dasharray: $offset;
   stroke-dashoffset: 0;
   transform-origin: center;
   animation:
     dash $duration ease-in-out infinite,
     colors ($duration*4) ease-in-out infinite;
-}
-
-@keyframes colors {
-	0% { stroke: $color; }
-   100% { stroke: $color; }
 }
 
 @keyframes dash {

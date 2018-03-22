@@ -423,7 +423,7 @@ class UiButtons extends React.Component {
               </span>
             </CardHeader>
             <CardBody>
-              <Form>
+              <Form className="mb-3">
                 <FormGroup inline>
                   <Label for="toggler1">size="xs"</Label>
                   <Switch id="toggler1" size="xs" value="on" />
@@ -477,12 +477,12 @@ class UiButtons extends React.Component {
                   </Label>
 
                   <Label check className="mr-3" strong>
-                    <Radio size="sm" type="radio" name="toggler11" id="toggler12" onClick={() => this.onRadioBtnClick(12)} />
+                    <Radio size="sm" type="radio" name="toggler11" id="toggler12" onClick={() => this.onRadioBtnClick(11)} />
                   No
                   </Label>
 
                   <Label check className="mr-3" strong>
-                    <Radio size="sm" type="radio" name="toggler11" id="toggler13" onClick={() => this.onRadioBtnClick(13)} />
+                    <Radio size="sm" type="radio" name="toggler11" id="toggler13" onClick={() => this.onRadioBtnClick(11)} />
                   Maybe
                   </Label>
                 </FormGroup>
@@ -493,37 +493,37 @@ class UiButtons extends React.Component {
                 <FormGroup inline>
 
                   <Label check className="mr-4">
-                    <Radio size="xs" type="checkbox" id="toggler6" />
+                    <Radio size="xs" type="radio" id="toggler6" onClick={() => this.onRadioBtnClick(12)} />
                   size="xs"
                   </Label>
 
                   <Label check className="mr-4">
-                    <Radio size="sm" type="checkbox" id="toggler7" />
+                    <Radio size="sm" type="radio" id="toggler7" onClick={() => this.onRadioBtnClick(12)} />
                   size="sm"
                   </Label>
 
                   <Label check className="mr-4" strong>
-                    <Radio type="checkbox" id="toggler8" />
+                    <Radio type="radio" id="toggler8" onClick={() => this.onRadioBtnClick(12)} />
                 default
                   </Label>
 
                   <Label check className="mr-4">
-                    <Radio size="md" type="checkbox" id="toggler9" />
+                    <Radio size="md" type="radio" id="toggler9" onClick={() => this.onRadioBtnClick(12)} />
                   size="md"
                   </Label>
 
                   <Label check className="mr-4">
-                    <Radio size="lg" type="checkbox" id="toggler10" />
+                    <Radio size="lg" type="radio" id="toggler10" onClick={() => this.onRadioBtnClick(12)} />
                   size="lg"
                   </Label>
 
                   <Label check className="mr-4" strong>
-                    <Radio type="checkbox" id="toggler8" disabled />
+                    <Radio type="radio" id="toggler8" disabled />
                 disabled
                   </Label>
 
                   <Label check className="mr-4" strong>
-                    <Radio type="checkbox" id="toggler8" disabled checked />
+                    <Radio type="radio" id="toggler8" disabled checked />
                 disabled on
                   </Label>
 
@@ -538,7 +538,7 @@ class UiButtons extends React.Component {
               <Form>
                 <FormGroup check inline>
                   <Label className="mr-3">
-                    <Checkbox size="sm" id="toggler14" onClick={() => this.onCheckboxBtnClick(14)} />
+                    <Checkbox size="sm" id="toggler14" round onClick={() => this.onCheckboxBtnClick(14)} />
                 Maybe
                   </Label>
                 </FormGroup>
@@ -581,47 +581,10 @@ class UiButtons extends React.Component {
                     <Checkbox disabled checked  id="toggler21" />
                 disabled on
                   </Label>
-                </FormGroup>
-              </Form>
-            </CardBody>
-          </Card>,
-
-          <Card key="button13b">
-            <CardHeader>
-            Checkbox Button Component
-            </CardHeader>
-            <CardBody>
-              <Form>
-                <FormGroup inline>
-
-                  <Label className="mr-4 mb-2">
-                    <Checkbox size="sm" id="toggler162" button>Checkbox</Checkbox>
-                size="sm"
-                  </Label>
 
                   <Label className="mr-4 mb-2" strong>
-                    <Checkbox id="toggler172" button>Checkbox</Checkbox>
-                default
-                  </Label>
-
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="lg" id="toggler192" button>Checkbox</Checkbox>
-                size="lg"
-                  </Label>
-
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="sm" id="toggler182" button radius="round">Checkbox</Checkbox>
-                radius="round"
-                  </Label>
-
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="sm" disabled button radius="round" id="toggler183">Checkbox</Checkbox>
-                disabled
-                  </Label>
-
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="sm" disabled checked button radius="round" id="toggler184">Checkbox</Checkbox>
-                disabled on
+                    <Checkbox id="toggler22" round />
+                round
                   </Label>
                 </FormGroup>
               </Form>

@@ -1,44 +1,131 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, Button, ButtonGroup, ButtonToolbar, Screen } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Button, ButtonGroup, ButtonToolbar, Collapse, Icon, Screen, Table } from '../../../../src/components';
 
-const UiButtonGroup = () => (
-  <Screen
-    sidenav={<Sidenav activeScreen="button-groups" />}
-    sidenavHeader
-    header="Button Groups"
-    // tabs={[
-    //   { to: '/welcome', text: 'Tab1' },
-    //   { to: '#/test2', text: 'Tab2' },
-    // ]}
-    primaryActions={<PrimaryActions />}
-    body={
-      <Card>
-        <CardBody indent>
-          <ButtonToolbar>
-            <ButtonGroup className="mr-3">
-              <Button outline>1</Button>
-              <Button outline>2</Button>
-              <Button outline>3</Button>
-              <Button outline>4</Button>
-            </ButtonGroup>
-            <ButtonGroup className="mr-3">
-              <Button>5</Button>
-              <Button>6</Button>
-              <Button>7</Button>
-            </ButtonGroup>
-            <ButtonGroup>
-              <Button color="primary">8</Button>
-              <Button color="primary">9</Button>
-              <Button color="primary">10</Button>
-            </ButtonGroup>
-          </ButtonToolbar>
-        </CardBody>
-      </Card>
-   }
-  />
-);
+class UiButtonGroup extends Component {
+  constructor(props) {
+    super(props);
+    this.toggleCode1 = this.toggleCode1.bind(this);
+    this.state = { collapseCode1: false };
+  }
+
+  toggleCode1() {
+    this.setState({ collapseCode1: !this.state.collapseCode1 });
+  }
+
+
+  render() {
+    return (
+      <Screen
+        sidenav={<Sidenav activeScreen="button-groups" />}
+        sidenavHeader
+        header="Button Groups"
+        // tabs={[
+        //   { to: '/welcome', text: 'Tab1' },
+        //   { to: '#/test2', text: 'Tab2' },
+        // ]}
+        primaryActions={<PrimaryActions />}
+        body={[
+          <Card key="button-groups">
+            <CardHeader>Button Groups
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { ButtonGroup, Button } from '@triniti/admin-ui-plugin/components';
+
+const Example = (props) => {
+  return (
+    <ButtonGroup>
+      <Button outline>1</Button>
+      <Button outline>2</Button>
+      <Button outline>3</Button>
+      <Button outline>4</Button>
+    </ButtonGroup>
+  );
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody indent>
+              <ButtonGroup>
+                <Button outline>1</Button>
+                <Button outline>2</Button>
+                <Button outline>3</Button>
+                <Button outline>4</Button>
+              </ButtonGroup>
+            </CardBody>
+            <CardBody indent>
+              <ButtonGroup vertical>
+                <Button color="primary">5</Button>
+                <Button color="primary">6</Button>
+                <Button color="primary">7</Button>
+              </ButtonGroup>
+            </CardBody>
+          </Card>,
+
+           <Card key="props">
+            <CardHeader>Button Group Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">'aria-label'</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">role</th>
+                  <td>string</td>
+                  <td>group</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">size</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>string</td>
+                  <td>'div'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">vertical</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Stacks buttons in vertical alignment</td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+       ]}
+      />
+    );
+  }
+}
 
 
 export default UiButtonGroup;
