@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.4.9
+* issue #79: Add Properties and Example Code to UI Example Pages.
+
+
 ## v0.4.8
 * issue #77: Create File Type Icons for Page Editor.
 
