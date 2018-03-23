@@ -433,7 +433,8 @@ $sidenav-width:     300px;
 
     .screen-sidebar-is-open & {
       right: auto;
-      left: -20px;
+      left: -24px;
+      z-index: 4;
     }
   }
 
