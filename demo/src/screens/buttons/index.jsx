@@ -50,6 +50,7 @@ class UiButtons extends React.Component {
               <Button color="primary" outline>primary</Button>
               <Button color="secondary">secondary</Button>
               <Button color="secondary" outline>secondary</Button>
+              <a href="" className="text-decoration-none"><Button>href wrapped</Button></a>
             </CardBody>
           </Card>,
 
@@ -71,7 +72,14 @@ class UiButtons extends React.Component {
               <Button color="link">link</Button>
               <Button color="link-bg">link-bg</Button>
               <Button color="hover">hover</Button>
+              <Button color="icon-hover-bg">icon-hover-bg <Icon imgSrc="arrow-double-right" className="ml-1"/></Button>
               <Button color="hover-bg">hover-bg</Button>
+              <Button color="link" radius="circle"><Icon imgSrc="microphone"/></Button>
+              <Button color="link-bg" radius="circle"><Icon imgSrc="bolt-outline"/></Button>
+              <Button color="hover" radius="circle"><Icon imgSrc="trash"/></Button>
+              <Button color="icon-hover-bg" radius="circle"><Icon imgSrc="clipboard"/></Button>
+              <Button color="hover-bg" radius="circle"><Icon imgSrc="microphone"/></Button>
+              <Button color="hover-bg text-secondary" radius="circle"><Icon imgSrc="microphone"/></Button>
             </CardBody>
           </Card>,
 
@@ -612,7 +620,7 @@ class UiButtons extends React.Component {
                 <Icon imgSrc="close" alt="x" className="mr-0"/>
               </Button>
               <Button radius="round" outline>
-                <Icon imgSrc="close" alt="x" /> <span>Close Me Please</span>
+                <Icon imgSrc="close" alt="x" className="mr-2" />Close Me Please
               </Button>
               <Button outline radius="round" size="sm">
               <Icon imgSrc="delete-line" alt="x" className="mr-1" />Close Me Please

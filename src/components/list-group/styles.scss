@@ -12,11 +12,17 @@
   &.active,
   &:active {
     color: $body-color;
+    z-index: 0;
   }
 
   &.disabled,
   &:disabled {
     color: $text-muted;
+  }
+
+  &:hover,
+  &:focus {
+    z-index: 0;
   }
 }
 
@@ -51,6 +57,7 @@
   &:hover,
   &:focus {
     text-decoration: none;
+    background-color: $gray-100;
     box-shadow: inset 3px 0 0 $gray-700;
   }
 }
@@ -60,7 +67,7 @@
   cursor: pointer;
 }
 
-.list-group-nav .list-group-item::before {
+.list-group-nav .list-group-item::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -68,20 +75,19 @@
   width: calc(100% - 1.25rem);
   margin-left: 1.25rem;
   content: '';
-  border-top: 1px solid rgba(0, 0, 0, .0625);
+  border-top: 1px solid $gray-300;
 }
 
-.list-group-nav .list-group-item.active {
+.list-group-nav .list-group-item-action.active {
   color: $body-color;
   background-color: $gray-300;
-}
+  box-shadow: inset 3px 0 0 theme-color("primary");
 
-.list-group-nav .list-group-item.active::before {
-  z-index: 1;
-  width: 3px;
-  height: 100%;
-  margin-left: 0;
-  background-color: theme-color("primary");
+  &:hover,
+  &:focus {
+    background-color: $gray-300;
+    box-shadow: inset 3px 0 0 theme-color("primary");
+  }
 }
 
 

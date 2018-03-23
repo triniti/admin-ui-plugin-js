@@ -7,7 +7,7 @@ import './styles.scss';
 
 const ActionButton = ({ icon, iconUrl, text, ...rest }) => (
   <Button {...rest} action={kebabCase(`action-${text}`)}>
-    {(iconUrl || icon) && <Icon imgSrc={icon} src={iconUrl} alt={text} />}
+    {(iconUrl || icon) && <Icon imgSrc={icon} src={iconUrl} alt={text} className="mr-1" />}
     {text}
   </Button>
 );

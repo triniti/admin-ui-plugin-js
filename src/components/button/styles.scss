@@ -400,11 +400,3 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-// scss-lint:enable QualifyingElement
-
-// Remove text underline from href wrapping button
-
-a:hover > button {
-  text-decoration: none;
-  display: inline-block;
-}

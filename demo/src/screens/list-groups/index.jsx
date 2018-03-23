@@ -177,10 +177,10 @@ const UiListGroup = () => (
             create-form-event
             </ListGroupItemText>
             <span>
-              <Button radius="circle" color="hover" className="mb-0">
+              <Button radius="circle" color="icon-hover-bg" className="mb-0">
                 <Icon imgSrc="eye" alt="details" />
               </Button>
-              <Button radius="circle" color="hover" className="mb-0">
+              <Button radius="circle" color="icon-hover-bg" className="mb-0">
                 <Icon imgSrc="pencil" alt="edit" />
               </Button>
             </span>
@@ -190,10 +190,10 @@ const UiListGroup = () => (
                 role-create-node
             </ListGroupItemText>
             <span>
-              <Button radius="circle" color="hover" className="mb-0">
+              <Button radius="circle" color="icon-hover-bg" className="mb-0">
                 <Icon imgSrc="eye" alt="details" />
               </Button>
-              <Button radius="circle" color="hover" className="mb-0">
+              <Button radius="circle" color="icon-hover-bg" className="mb-0">
                 <Icon imgSrc="pencil" alt="edit" />
               </Button>
             </span>
@@ -203,10 +203,10 @@ const UiListGroup = () => (
                 custom-delegate
             </ListGroupItemText>
             <span>
-              <Button radius="circle" color="hover" className="mb-0">
+              <Button radius="circle" color="icon-hover-bg" className="mb-0">
                 <Icon imgSrc="eye" alt="details" />
               </Button>
-              <Button radius="circle" color="hover" className="mb-0">
+              <Button radius="circle" color="icon-hover-bg" className="mb-0">
                 <Icon imgSrc="pencil" alt="edit" />
               </Button>
             </span>
