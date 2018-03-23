@@ -114,10 +114,12 @@ Example extends Component {
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem disabled>Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem>First Action</DropdownItem>
+                  <DropdownItem>Another Button</DropdownItem>
+                  <DropdownItem>Third One</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Another Action</DropdownItem>
+                  <DropdownItem disabled>Action</DropdownItem>
                 </DropdownMenu>
               </ButtonDropdown>
             </CardBody>
