@@ -46,6 +46,7 @@ import FormFeedback from './form-feedback';
 import FormGroup from './form-group';
 import FormText from './form-text';
 import Icon from './icon';
+import IconGroup from './icon-group';
 import Input from './input';
 import InputGroup from './input-group';
 import InputGroupAddon from './input-group-addon';
@@ -155,6 +156,7 @@ export {
   FormGroup,
   FormText,
   Icon,
+  IconGroup,
   Input,
   InputGroup,
   InputGroupAddon,

@@ -70,80 +70,6 @@ const Example = (props) => {
       <Row>
         <Col>
           <InputGroup>
-            <InputGroupAddon addonType="prepend">@</InputGroupAddon>
-            <Input placeholder="username" />
-          </InputGroup>
-
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>
-                <Input addon type="checkbox" aria-label="Checkbox for following text input" />
-              </InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="Check it out" />
-          </InputGroup>
-
-          <InputGroup>
-            <Input placeholder="username" />
-            <InputGroupAddon addonType="append">@example.com</InputGroupAddon>
-          </InputGroup>
-
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <InputGroupText>$</InputGroupText>
-              <InputGroupText>$</InputGroupText>
-            </InputGroupAddon>
-            <Input placeholder="Dolla dolla billz yo!" />
-            <InputGroupAddon addonType="append">
-              <InputGroupText>$</InputGroupText>
-              <InputGroupText>$</InputGroupText>
-            </InputGroupAddon>
-          </InputGroup>
-
-          <InputGroup size="lg">
-            <InputGroupAddon addonType="prepend">$</InputGroupAddon>
-            <Input placeholder="Amount" type="number" step="1" />
-            <InputGroupAddon addonType="append">.00</InputGroupAddon>
-          </InputGroup>
-
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">To the Left!</InputGroupAddon>
-            <Input />
-          </InputGroup>
-
-          <InputGroup size="sm">
-            <Input />
-            <InputGroupAddon addonType="append">To the Right!</InputGroupAddon>
-          </InputGroup>
-
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">To the Left!</InputGroupAddon>
-            <Input placeholder="and..." />
-            <InputGroupAddon addonType="append">To the Right!</InputGroupAddon>
-          </InputGroup>
-
-          <InputGroup>
-            <InputGroupAddon addonType="prepend"><Button outline color="secondary">I'm a button</Button></InputGroupAddon>
-            <Input />
-          </InputGroup>
-
-          <InputGroup>
-            <Input />
-            <InputGroupButtonDropdown addonType="append" isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown}>
-              <DropdownToggle caret color="secondary">
-            Button Dropdown
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem header>Header</DropdownItem>
-                <DropdownItem disabled>Action</DropdownItem>
-                <DropdownItem>Another Action</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Another Action</DropdownItem>
-              </DropdownMenu>
-            </InputGroupButtonDropdown>
-          </InputGroup>
-
-          <InputGroup>
             <InputGroupButtonDropdown addonType="prepend" isOpen={this.state.splitButtonOpen} toggle={this.toggleSplit}>
               <Button outline>Split Button</Button>
               <DropdownToggle split outline color="light" />
@@ -156,16 +82,9 @@ const Example = (props) => {
               </DropdownMenu>
             </InputGroupButtonDropdown>
             <Input placeholder="and..." />
-            <InputGroupAddon addonType="append"><Button color="secondary">I'm a button</Button></InputGroupAddon>
-          </InputGroup>
-
-          <InputGroup>
-            <InputGroupAddon addonType="prepend">
-              <Button color="danger">To the Left!</Button>
-            </InputGroupAddon>
-            <Input placeholder="and..." />
             <InputGroupAddon addonType="append">
-              <Button color="success">To the Right!</Button>
+              <InputGroupText>Text</InputGroupText>
+              <Button color="secondary">I'm a button</Button>
             </InputGroupAddon>
           </InputGroup>
         </Col>
@@ -183,80 +102,6 @@ export default UiInputGroup;
               <Row>
                 <Col>
                   <InputGroup>
-                    <InputGroupAddon addonType="prepend">@</InputGroupAddon>
-                    <Input placeholder="username" />
-                  </InputGroup>
-
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>
-                        <Input addon type="checkbox" aria-label="Checkbox for following text input" />
-                      </InputGroupText>
-                    </InputGroupAddon>
-                    <Input placeholder="Check it out" />
-                  </InputGroup>
-
-                  <InputGroup>
-                    <Input placeholder="username" />
-                    <InputGroupAddon addonType="append">@example.com</InputGroupAddon>
-                  </InputGroup>
-
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <InputGroupText>$</InputGroupText>
-                      <InputGroupText>$</InputGroupText>
-                    </InputGroupAddon>
-                    <Input placeholder="Dolla dolla billz yo!" />
-                    <InputGroupAddon addonType="append">
-                      <InputGroupText>$</InputGroupText>
-                      <InputGroupText>$</InputGroupText>
-                    </InputGroupAddon>
-                  </InputGroup>
-
-                  <InputGroup size="lg">
-                    <InputGroupAddon addonType="prepend">$</InputGroupAddon>
-                    <Input placeholder="Amount" type="number" step="1" />
-                    <InputGroupAddon addonType="append">.00</InputGroupAddon>
-                  </InputGroup>
-
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">To the Left!</InputGroupAddon>
-                    <Input />
-                  </InputGroup>
-
-                  <InputGroup size="sm">
-                    <Input />
-                    <InputGroupAddon addonType="append">To the Right!</InputGroupAddon>
-                  </InputGroup>
-
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">To the Left!</InputGroupAddon>
-                    <Input placeholder="and..." />
-                    <InputGroupAddon addonType="append">To the Right!</InputGroupAddon>
-                  </InputGroup>
-
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend"><Button outline color="secondary">I'm a button</Button></InputGroupAddon>
-                    <Input />
-                  </InputGroup>
-
-                  <InputGroup>
-                    <Input />
-                    <InputGroupButtonDropdown addonType="append" isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown}>
-                      <DropdownToggle caret color="secondary">
-                    Button Dropdown
-                      </DropdownToggle>
-                      <DropdownMenu>
-                        <DropdownItem header>Header</DropdownItem>
-                        <DropdownItem disabled>Action</DropdownItem>
-                        <DropdownItem>Another Action</DropdownItem>
-                        <DropdownItem divider />
-                        <DropdownItem>Another Action</DropdownItem>
-                      </DropdownMenu>
-                    </InputGroupButtonDropdown>
-                  </InputGroup>
-
-                  <InputGroup>
                     <InputGroupButtonDropdown addonType="prepend" isOpen={this.state.splitButtonOpen} toggle={this.toggleSplit}>
                       <Button outline>Split Button</Button>
                       <DropdownToggle split outline color="light" />
@@ -269,16 +114,9 @@ export default UiInputGroup;
                       </DropdownMenu>
                     </InputGroupButtonDropdown>
                     <Input placeholder="and..." />
-                    <InputGroupAddon addonType="append"><Button color="secondary">I'm a button</Button></InputGroupAddon>
-                  </InputGroup>
-
-                  <InputGroup>
-                    <InputGroupAddon addonType="prepend">
-                      <Button color="danger">To the Left!</Button>
-                    </InputGroupAddon>
-                    <Input placeholder="and..." />
                     <InputGroupAddon addonType="append">
-                      <Button color="success">To the Right!</Button>
+                      <InputGroupText>Text</InputGroupText>
+                      <Button color="secondary">I'm a button</Button>
                     </InputGroupAddon>
                   </InputGroup>
                 </Col>
@@ -286,7 +124,7 @@ export default UiInputGroup;
             </CardBody>
           </Card>,
 
-          <Card key="imput2" className="mb-0">
+          <Card key="imput2">
             <CardHeader fullWidth>Form theme="white" on BG Color
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
                   <Icon imgSrc="code" size="md"/>

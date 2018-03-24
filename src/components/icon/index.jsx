@@ -6,16 +6,17 @@ import mapNameToIcon from './mapNameToIcon';
 import './styles.scss';
 
 const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  alert: PropTypes.bool,
+  border: PropTypes.bool,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  color: PropTypes.string,
   imgSrc: PropTypes.string,
+  radius: PropTypes.string,
   src: PropTypes.string,
   size: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   toggler: PropTypes.bool,
-  color: PropTypes.string,
-  border: PropTypes.bool,
-  radius: PropTypes.string,
 };
 
 const defaultProps = {
@@ -25,6 +26,7 @@ const defaultProps = {
 
 const Icon = (props) => {
   const {
+    alert,
     className,
     cssModule,
     tag: Tag,
@@ -41,6 +43,8 @@ const Icon = (props) => {
     className,
     'icon',
     size ? `icon-${size}` : false,
+    alert ? 'icon-alert' : false,
+    (alert && size) ? `icon-alert-${size}` : false,
     toggler ? 'icon-toggler' : false,
     color ? `icon-color-${color}` : false,
     border ? 'icon-border' : false,
