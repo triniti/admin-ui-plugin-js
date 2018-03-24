@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Collapse, Icon, Table, Row, Col, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon, Row, Screen, Table } from '../../../../src/components';
 import PopoverItem from './PopoverItem';
 
 class UiPopover extends React.Component {

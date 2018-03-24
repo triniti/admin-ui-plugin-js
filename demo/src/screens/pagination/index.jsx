@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardTitle, CardBody, CardHeader, Collapse, Icon, Table, Row, Col, Pagination, PaginationItem, PaginationLink, Screen } from '../../../../src/components';
+import { Button, Card, CardTitle, CardBody, CardHeader, Col, Collapse, Icon, Row, Pagination, PaginationItem, PaginationLink, Screen, Table } from '../../../../src/components';
 
 class UiPagination extends Component {
   constructor(props) {
@@ -38,7 +38,7 @@ class UiPagination extends Component {
               <CardBody className="pl-5 bg-light">
 <pre>
 <code>{`import React from 'react';
-import { Tooltip } from '@triniti/admin-ui-plugin/components';
+import { Pagination, PaginationItem, PaginationLink }  from '@triniti/admin-ui-plugin/components';
 
 export default class Example extends React.Component {
   render() {
