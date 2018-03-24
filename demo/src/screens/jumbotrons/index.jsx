@@ -5,14 +5,14 @@ import {
   CardBody,
   CardHeader,
   CardTitle,
-  Container,
-  Collapse,
-  Icon,
-  Table,
-  Row,
   Col,
+  Collapse,
+  Container,
+  Icon,
   Jumbotron,
+  Row,
   Screen,
+  Table
 } from '../../../../src/components';
 import Sidenav from '../../components/sidenav';
 
@@ -66,7 +66,7 @@ class Jumbotrons extends Component {
               <code>
                   {`
 import React from 'react';
-import { Jumbotron } from '@triniti/admin-ui-plugin/components';
+import { Jumbotron, Button } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
   return (

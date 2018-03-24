@@ -63,7 +63,7 @@ class UiInputGroup extends React.Component {
                 <code>
                     {`
 import React from 'react';
-import { Col, Row } from '@triniti/admin-ui-plugin/input-groups';
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from '@triniti/admin-ui-plugin/input-groups';
 
 const Example = (props) => {
   return (
@@ -298,7 +298,7 @@ export default UiInputGroup;
                 <code>
                     {`
 import React from 'react';
-import { Col, Row } from '@triniti/admin-ui-plugin/input-groups';
+import { InputGroup, InputGroupAddon, InputGroupText, Input } from '@triniti/admin-ui-plugin/input-groups';
 
 const Example = (props) => {
   return (

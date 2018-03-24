@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Col, Container, Row, Collapse, Icon, Table, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Container, Icon, Row, Screen, Table } from '../../../../src/components';
 import './styles.scss';
 
 class UiLayout extends Component {
@@ -47,10 +47,10 @@ class UiLayout extends Component {
               <code>
                   {`
 import React from 'react';
-import { Col, Row } from '@triniti/admin-ui-plugin/components';
+import { Container, Row, Col }  from '@triniti/admin-ui-plugin/components';
 
-const Example = (props) => {
-  return (
+export default class Example extends React.Component {
+  render() {
       <Row>
             <Col>
               <div className="ui-cols">
@@ -86,8 +86,9 @@ const Example = (props) => {
               </div>
             </Col>
           </Row>
-  );
-};
+   );
+  }
+}
 
 export default Example;
                   `}
