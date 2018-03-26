@@ -514,13 +514,29 @@ const UiIcons = () => (
         <CardBody indent>
           <Row>
             <Col>
-              <IconGroup  className="mb-2 mr-3">
+              <IconGroup  className="mb-2 mr-4">
+                <Icon imgSrc="search" alert size="lg" radius="rounded" border color="dark" />
+                <Icon imgSrc="users" alert size="sm" border className="bg-white" color="dark" />
+              </IconGroup>
+              <IconGroup  className="mb-2 mr-4">
                 <Icon imgSrc="twitter" alert size="lg" radius="rounded" border/>
-                <Icon imgSrc="video" alert size="xs" color="secondary"/>
+                <Icon imgSrc="tweet" alert size="sm"/>
+              </IconGroup>
+              <IconGroup  className="mb-2 mr-4">
+                <Icon imgSrc="pinterest" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="pin" alert size="sm"/>
+              </IconGroup>
+              <IconGroup  className="mb-2 mr-4">
+                <Icon imgSrc="facebook" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="play" alert size="sm"/>
+              </IconGroup>
+              <IconGroup  className="mb-2 mr-4">
+                <Icon imgSrc="instagram" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="camera" alert size="sm"/>
               </IconGroup>
               <IconGroup  className="mb-2 mr-3">
                 <Icon imgSrc="twitter" alert size="md" radius="rounded" border/>
-                <Icon imgSrc="video" alert size="xxs" color="secondary"/>
+                <Icon imgSrc="play" alert size="xxs" color="secondary"/>
               </IconGroup>
               <IconGroup  className="mb-2 mr-3">
                 <Icon imgSrc="youtube" alert size="sm" radius="rounded" border/>
@@ -531,11 +547,11 @@ const UiIcons = () => (
                 <Icon imgSrc="warning" size="md" color="warning" className="bg-warning text-white"/>
               </IconGroup>
               <IconGroup  className="mb-2 mr-3">
-                <Icon imgSrc="instagram"/>
+                <Icon imgSrc="instagram" size="md"/>
                 <Icon imgSrc="locked-solid" size="sm" color="danger" className="bg-warning text-white"/>
               </IconGroup>
               <IconGroup  className="mb-2 mr-3">
-                <Icon imgSrc="facebook"/>
+                <Icon imgSrc="facebook" size="md"/>
                 <Icon imgSrc="user" size="sm" color="secondary"  className="bg-warning text-white"/>
               </IconGroup>
             </Col>
