@@ -1,13 +1,14 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon, Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon, Popover, PopoverHeader, PopoverBody, Row, Screen, ScrollableContainer, Table } from '../../../../src/components';
 import PopoverItem from './PopoverItem';
+import './styles.scss';
 
 class UiPopover extends React.Component {
   constructor(props) {
     super(props);
-
+    this.toggle = this.toggle.bind(this);
     this.toggleCode1 = this.toggleCode1.bind(this);
 
     this.state = {
@@ -31,11 +32,18 @@ class UiPopover extends React.Component {
         },
       ],
       collapseCode1: false,
+      popoverOpen: false,
     };
   }
 
   toggleCode1() {
     this.setState({ collapseCode1: !this.state.collapseCode1 });
+  }
+
+  toggle() {
+    this.setState({
+      popoverOpen: !this.state.popoverOpen
+    });
   }
 
   render() {
@@ -108,6 +116,30 @@ export default class Example extends React.Component {
               <br />
               <br />
               <br />
+            </CardBody>
+          </Card>,
+
+          <Card key="popover-example">
+            <CardHeader>Popover Example</CardHeader>
+            <CardBody>
+              <Button id="Popover1" onClick={this.toggle} color="hover" radius="circle">
+                <Icon imgSrc="plus-outline" size="xl"/>
+              </Button>
+              <Popover placement="auto-start" isOpen={this.state.popoverOpen} target="Popover1" toggle={this.toggle} className="example-popover">
+                <PopoverBody>
+                  <ScrollableContainer>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nisi arcu, sollicitudin ut blandit a, maximus scelerisque dui. Integer eleifend nibh eget turpis gravida, in varius nulla gravida. Proin rutrum tortor ac arcu imperdiet porta. Nam justo ex, egestas ut nulla eget, laoreet luctus erat. Ut malesuada eget leo ut maximus. Morbi ligula magna, vehicula eu porta ac, fermentum in elit. Nulla facilisi. Phasellus feugiat iaculis felis. Proin nec convallis neque, vitae condimentum orci.</p>
+
+                    <p>Nunc a sem eget elit pretium varius. Donec sit amet congue sem. Nullam interdum erat vitae lorem lacinia, dapibus varius felis molestie. Nulla consequat feugiat ultricies. Proin sed lectus ut massa dignissim mattis. Morbi vulputate elit quis felis suscipit accumsan. Nam suscipit dapibus nibh, id ullamcorper sapien sollicitudin vel. Nunc augue arcu, vulputate vitae interdum eget, bibendum a massa. Aliquam vehicula rhoncus tristique. Vivamus sed magna consectetur, venenatis quam eu, porta tortor. Aliquam vitae lorem porttitor, scelerisque velit non, vehicula leo. Nullam at libero ac turpis porttitor gravida.</p>
+
+                    <p>Quisque non elit nec nisl pulvinar malesuada. Etiam eget dui lectus. Nunc eu dui ac purus elementum tempor sodales ut ligula. Etiam ut luctus dui. Donec pretium, libero sed malesuada interdum, sem nisl cursus sem, non fringilla libero diam non ex. Maecenas nec felis mattis eros varius egestas. Integer auctor lorem in mi tristique semper. Aliquam vitae massa et ligula porta pretium at in ante. Integer semper vel tellus in mollis. Nullam nec erat nec mi volutpat blandit. Suspendisse posuere malesuada arcu eu accumsan. Etiam lobortis venenatis aliquet.</p>
+
+                    <p>Ut vulputate, lorem at rhoncus efficitur, arcu nisl semper ex, eu finibus quam ipsum ac sem. Sed tempus dignissim iaculis. Curabitur lobortis fringilla mauris eu aliquet. Mauris facilisis iaculis nisl a fermentum. Duis fermentum lacus non velit posuere, eu dictum nunc mollis. Curabitur vel dolor purus. In porta nec neque ut consequat. Sed sed est id dolor imperdiet gravida.</p>
+
+                    <p>Quisque ornare maximus auctor. Aenean vel pellentesque metus. Nullam purus lacus, vehicula vulputate tincidunt quis, scelerisque id turpis. Aenean venenatis nisi molestie velit malesuada convallis. Ut pulvinar mi id tempus sollicitudin. Nullam lacus purus, blandit at fermentum at, viverra eget ipsum. Suspendisse potenti. Nam non elit est. Maecenas felis lectus, fringilla sit amet volutpat sodales, placerat ut lorem. Phasellus cursus vestibulum tincidunt. Etiam aliquam pharetra est vel vulputate. Fusce at posuere tellus. Fusce lacinia ligula vitae dui auctor condimentum.</p>
+                  </ScrollableContainer>
+                </PopoverBody>
+              </Popover>
             </CardBody>
           </Card>,
 
