@@ -2,9 +2,65 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, CardHeader, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Collapse, Icon,  Row, Screen, Table } from '../../../../src/components';
 
-export default () => (
+class Tables extends React.Component {
+    constructor(props) {
+        super(props);
+        this.toggleCode1 = this.toggleCode1.bind(this);
+        this.toggleCode2 = this.toggleCode2.bind(this);
+        this.toggleCode3 = this.toggleCode3.bind(this);
+        this.toggleCode4 = this.toggleCode4.bind(this);
+        this.toggleCode5 = this.toggleCode5.bind(this);
+        this.toggleCode6 = this.toggleCode6.bind(this);
+        this.toggleCode7 = this.toggleCode7.bind(this);
+        this.toggleCode8 = this.toggleCode8.bind(this);
+        this.state = {
+            collapseCode1: false,
+            collapseCode2: false,
+            collapseCode3: false,
+            collapseCode4: false,
+            collapseCode5: false,
+            collapseCode6: false,
+            collapseCode7: false,
+            collapseCode8: false,
+        };
+    }
+
+    toggleCode1() {
+        this.setState({ collapseCode1: !this.state.collapseCode1 });
+    }
+
+    toggleCode2() {
+        this.setState({ collapseCode2: !this.state.collapseCode2 });
+    }
+
+    toggleCode3() {
+        this.setState({ collapseCode3: !this.state.collapseCode3 });
+    }
+
+    toggleCode4() {
+        this.setState({ collapseCode4: !this.state.collapseCode4 });
+    }
+
+    toggleCode5() {
+        this.setState({ collapseCode5: !this.state.collapseCode5 });
+    }
+
+    toggleCode6() {
+        this.setState({ collapseCode6: !this.state.collapseCode6 });
+    }
+
+    toggleCode7() {
+        this.setState({ collapseCode7: !this.state.collapseCode7 });
+    }
+
+    toggleCode8() {
+        this.setState({ collapseCode8: !this.state.collapseCode8 });
+    }
+
+    render() {
+        return (
     <Screen
       sidenav={<Sidenav activeScreen="tables" />}
       sidenavHeader
@@ -156,7 +212,59 @@ export default () => (
       </Card>,
 
       <Card key="tableheader3" className="mb-0">
-        <CardHeader>Striped Table + Sticky</CardHeader>
+        <CardHeader>Striped Table + Sticky
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table striped className="sticky-top fixed">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+        </Table>
+        <Table striped hover className="fixed mb-0">
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+     </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table3">
@@ -195,7 +303,59 @@ export default () => (
       </Card>,
 
       <Card key="tableheader4" className="mb-0">
-        <CardHeader>Dark Table</CardHeader>
+        <CardHeader>Dark Table
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode2}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table striped className="sticky-top fixed">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+        </Table>
+        <Table striped hover className="fixed mb-0">
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+     </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table4">
@@ -232,7 +392,57 @@ export default () => (
       </Card>,
 
       <Card key="tableheader5" className="mb-0">
-        <CardHeader>Striped Table</CardHeader>
+        <CardHeader>Striped Table
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode3}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table striped className="mb-0">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+      </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table5">
@@ -269,7 +479,57 @@ export default () => (
       </Card>,
 
       <Card key="tableheader6" className="mb-0">
-        <CardHeader>Bordered Table</CardHeader>
+        <CardHeader>Bordered Table
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode4}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table bordered className="mb-0">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+      </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table6">
@@ -306,7 +566,57 @@ export default () => (
       </Card>,
 
       <Card key="tableheader7" className="mb-0">
-        <CardHeader>Borderless Table</CardHeader>
+        <CardHeader>Borderless Table
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode5} active={this.state.collapseCode5}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode5}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table hover borderless>
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+      </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table7">
@@ -343,7 +653,57 @@ export default () => (
       </Card>,
 
       <Card key="tableheader8" className="mb-0">
-        <CardHeader>Hoverable Rows Table</CardHeader>
+        <CardHeader>Hoverable Rows Table
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode6} active={this.state.collapseCode6}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode6}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table hover>
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+      </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table8">
@@ -380,7 +740,57 @@ export default () => (
       </Card>,
 
       <Card key="tableheader9" className="mb-0">
-        <CardHeader>Small</CardHeader>
+        <CardHeader>Small
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode7} active={this.state.collapseCode7}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode7}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table size="sm">
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+      </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table9">
@@ -417,7 +827,69 @@ export default () => (
       </Card>,
 
       <Card key="tableheader10" className="mb-0">
-        <CardHeader>Responsive Table</CardHeader>
+        <CardHeader>Responsive Table
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode8} active={this.state.collapseCode8}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode8}>
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                    <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+      <Table responsive>
+          <thead>
+          <tr>
+            <th>#</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+            <th>Table heading</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+            <td>Table cell</td>
+          </tr>
+          </tbody>
+      </Table>
+    );
+  }
+}`}                </code>
+                </pre>
+              </CardBody>
+            </Collapse>
       </Card>,
 
       <Card key="table10">
@@ -464,6 +936,70 @@ export default () => (
           </tbody>
         </Table>
       </Card>,
-    ]}
+
+      <Card key="props">
+        <CardHeader>Table Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">bordered</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">dark</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">hover</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+             <tr>
+              <th scope="row">responsive</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">size</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">striped</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>oneOfType</td>
+              <td></td>
+              <td>([PropTypes.func, PropTypes.string])</td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+        ]}
     />
-);
+        );
+    }
+}
+
+export default Tables;
