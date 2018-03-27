@@ -4,6 +4,7 @@ import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, IconGroup, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
 import IconList from './IconList';
+import './styles.scss';
 
 const UiIcons = () => (
   <Screen
@@ -783,6 +784,18 @@ const UiIcons = () => (
                 </ul>
                 <span className="loading-children">children</span>
               </div>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+       <Card key="icons9">
+        <CardHeader>Spinner Centered</CardHeader>
+        <CardBody indent>
+          <CardTitle></CardTitle>
+          <Row>
+            <Col>
+              <Spinner centered width="100"/>
             </Col>
           </Row>
         </CardBody>

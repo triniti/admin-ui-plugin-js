@@ -5,6 +5,7 @@ import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
+  centered: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.string,
@@ -24,6 +25,7 @@ const defaultProps = {
 
 const Spinner = (props) => {
   const {
+    centered,
     children,
     className,
     cssModule,
@@ -37,10 +39,10 @@ const Spinner = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     'spinner-container',
+    centered ? 'matt-centered' : false,
   ), cssModule);
 
   return (
-
   <Tag className={classes} {...attributes} style={{ height: `${width}px` }}>
     <svg
       className="spinner-animation"

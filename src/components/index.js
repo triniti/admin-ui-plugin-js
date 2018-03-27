@@ -91,6 +91,7 @@ import Screen from './screen';
 import ScrollableContainer from './scrollable-container';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
+import Stepper from './stepper';
 import Switch from './switch';
 import TabContent from './tab-content';
 import TabPane from './tab-pane';
@@ -201,6 +202,7 @@ export {
   ScrollableContainer,
   Spinner,
   StatusMessage,
+  Stepper,
   Switch,
   TabContent,
   TabPane,

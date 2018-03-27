@@ -119,6 +119,10 @@ p {
   color: $body-color !important;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 a:not([href]):not([tabindex]),
 .nav-link:hover {
   cursor: pointer;
