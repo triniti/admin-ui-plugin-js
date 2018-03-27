@@ -3,13 +3,15 @@
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/popover";
 
-$popover-header-bg:   $white;
-
 .popover {
   box-shadow: $popover-box-shadow;
 }
 
+.popover-header {
+  box-shadow: 0 -1px 0 0 $gray-rgba-300;
+}
+
 .bs-popover-bottom .arrow::after,
 .bs-popover-auto[x-placement^="bottom"] .arrow::after {
-  border-bottom-color: $white;
+  border-bottom-color: $popover-header-bg;
 }
