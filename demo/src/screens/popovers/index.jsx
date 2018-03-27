@@ -130,11 +130,12 @@ export default class Example extends React.Component {
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode1}>
+            <Collapse isOpen={this.state.collapseCode2}>
               <CardBody className="pl-5 bg-light">
 <pre>
 <code>{`import React from 'react';
 import { Button, Icon, Popover, PopoverHeader, PopoverBody, ScrollableContainer } from '@triniti/admin-ui-plugin/components';
+import './styles.scss'; // requires custom popover-scrollable styles
 
 export default class Example extends React.Component {
   constructor(props) {
@@ -158,7 +159,7 @@ export default class Example extends React.Component {
         <Button id="Popover2" onClick={this.toggle} color="hover" radius="circle">
           <Icon imgSrc="plus-outline" size="xl"/>
         </Button>
-        <Popover placement="auto-start" i21 sOpen={this.state.popoverOpen} target="Popover2" toggle={this.toggle} className="popover-scrollable">
+        <Popover placement="auto" i21 sOpen={this.state.popoverOpen} target="Popover2" toggle={this.toggle} className="popover-scrollable">
           <ScrollableContainer>
           <PopoverHeader className="text-center">Popover with Scrollable Container</PopoverHeader>
           <PopoverBody>
