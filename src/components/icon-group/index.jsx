@@ -7,6 +7,8 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   children: PropTypes.node,
+  left: PropTypes.bool,
+  bottom: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
@@ -16,15 +18,19 @@ const defaultProps = {
 
 const IconGroup = (props) => {
   const {
+    bottom,
     children,
     className,
     cssModule,
+    left,
     tag: Tag,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'icon-group',
+    bottom ? 'icon-group-bottom' : false,
+    left ? 'icon-group-left' : false,
   ), cssModule);
 
   return (

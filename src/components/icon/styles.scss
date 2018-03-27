@@ -36,9 +36,6 @@
     height: 1rem;
     width: 1rem;
   }
-  & + .icon {
-    margin-left: .5rem;
-  }
 }
 
 .icon-xxs {
@@ -121,12 +118,29 @@
   }
 }
 
+
+// Icon Alerts
+
 .icon-alert {
   border-radius: 10rem;
   background-color: $body-color;
   color: $white;
   margin-top: 0;
   margin-bottom: 0;
+  width: 3.375rem; // 54px
+  height: 3.375rem;
+
+  > svg {
+    padding: .625rem;
+    width: 3.375rem;
+    height: 3.375rem;
+  }
+
+  &.icon-noborder {
+    > svg {
+      padding: 0;
+    }
+  }
 }
 
 .icon-alert-xl {
@@ -152,18 +166,29 @@
 }
 
 .icon-alert-md {
-  width: 3.375rem; // 54px
-  height: 3.375rem;
+  width: 4rem; // 64px
+  height: 4rem;
 
   > svg {
-    padding: .625rem;
-    width: 3.375rem;
-    height: 3.375rem;
+    padding: .8rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.icon-alert-sd {
+  width: 3rem; // 48px
+  height: 3rem;
+
+  > svg {
+    padding: .5rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
 .icon-alert-sm {
-  width: 2.5rem; // 54px
+  width: 2.5rem; // 40px
   height: 2.5rem;
 
   > svg {
@@ -174,7 +199,7 @@
 }
 
 .icon-alert-xs {
-  width: 2rem; // 54px
+  width: 2rem; // 32px
   height: 2rem;
 
   > svg {
@@ -185,13 +210,13 @@
 }
 
 .icon-alert-xxs {
-  width: 1.5rem; // 54px
-  height: 1.5rem;
+  width: 1.375rem; // 14px
+  height: 1.375rem;
 
   > svg {
-    padding: .325rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    padding: .25rem;
+    width: 1.375rem;
+    height: 1.375rem;
   }
 }
 
@@ -200,10 +225,6 @@
 
   &.icon-alert-md {
     border-radius: .375rem;
-
-    > svg {
-      padding: .675rem;
-    }
   }
   &.icon-alert-lg {
     border-radius: .5rem;
@@ -222,20 +243,37 @@
   }
 }
 
-.icon-border,
-.icon-alert.icon-border {
+.icon-outline {
+  box-shadow: 0 0 0 2px $white;
+}
+
+.icon-border {
   background-color: transparent;
   color: $body-color;
   box-shadow: inset 0 0 0 2px $body-color;
 
-  &.icon-alert.icon-lg,
   &.icon-alert-lg {
     box-shadow: inset 0 0 0 3px $body-color;
   }
-  &.icon-alert.icon-xl,
   &.icon-alert-xl {
     box-shadow: inset 0 0 0 4px $body-color;
   }
+
+  &.icon-outline {
+    box-shadow: inset 0 0 0 2px $body-color, 0 0 0 2px $white;
+
+    &.icon-alert-lg {
+      box-shadow: inset 0 0 0 3px $body-color, 0 0 0 2px $white;
+    }
+    &.icon-alert-xl {
+      box-shadow: inset 0 0 0 4px $body-color, 0 0 0 3px $white;
+    }
+  }
+}
+
+.icon-noborder {
+  background-color: transparent;
+  color: $body-color;
 }
 
 @each $color, $value in $theme-colors {
@@ -245,24 +283,38 @@
     &.icon-alert-xl,
     &.icon-alert-lg,
     &.icon-alert-md,
+    &.icon-alert-sd,
     &.icon-alert-sm,
     &.icon-alert-xs,
     &.icon-alert-xxs {
       background-color: $value;
       color: $white;
     }
+    &.icon-noborder {
+      background-color: transparent;
+      color: $value;
+    }
     &.icon-border {
       background-color: transparent;
       color: $value;
       box-shadow: inset 0 0 0 2px $value;
 
-      &.icon-alert.icon-lg,
+      &.icon-outline {
+        box-shadow: inset 0 0 0 2px $value, 0 0 0 2px $white;
+      }
       &.icon-alert-lg {
         box-shadow: inset 0 0 0 3px $value;
+
+        &.icon-outline {
+          box-shadow: inset 0 0 0 3px $value, 0 0 0 2px $white;
+        }
       }
-      &.icon-alert.icon-xl,
       &.icon-alert-xl {
         box-shadow: inset 0 0 0 4px $value;
+
+        &.icon-outline {
+          box-shadow: inset 0 0 0 4px $value, 0 0 0 3px $white;
+        }
       }
     }
   }
@@ -273,6 +325,8 @@
 .icon-group {
   display: inline-flex;
   position: relative;
+  align-self: center;
+  vertical-align: middle;
 
   & .icon:first-child {
     margin: 0 !important;
@@ -289,7 +343,7 @@
 
       > svg {
       padding: 3px;
-    }
+      }
     }
   }
   & .icon-alert:last-child {
@@ -297,6 +351,48 @@
   }
   & .icon-alert + .icon:not(.icon-alert) {
     transform: translateX(40%) translatey(-40%);
+  }
+}
+
+.icon-group-left {
+
+  & .icon:last-child {
+    right: auto;
+    left: 0;
+    transform: translateX(-50%) translatey(-50%);
+  }
+  & .icon-alert:last-child {
+    transform: translateX(-40%) translatey(-40%);
+  }
+  & .icon-alert + .icon:not(.icon-alert) {
+    transform: translateX(-40%) translatey(-40%);
+  }
+}
+
+.icon-group-bottom {
+
+  & .icon:last-child {
+    top: auto;
+    bottom: 0;
+    transform: translateX(50%) translatey(50%);
+  }
+  & .icon-alert:last-child {
+    transform: translateX(40%) translatey(40%);
+  }
+  & .icon-alert + .icon:not(.icon-alert) {
+    transform: translateX(40%) translatey(40%);
+  }
+
+  &.icon-group-left {
+    & .icon:last-child {
+      transform: translateX(-50%) translatey(50%);
+    }
+    & .icon-alert:last-child {
+      transform: translateX(-40%) translatey(40%);
+    }
+    & .icon-alert + .icon:not(.icon-alert) {
+      transform: translateX(-40%) translatey(40%);
+    }
   }
 }
 

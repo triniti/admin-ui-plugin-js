@@ -115,6 +115,10 @@ p {
   color: #9a9a9a !important;
 }
 
+.text-body {
+  color: $body-color !important;
+}
+
 a:not([href]):not([tabindex]),
 .nav-link:hover {
   cursor: pointer;
