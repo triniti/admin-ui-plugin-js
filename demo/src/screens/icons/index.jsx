@@ -583,7 +583,7 @@ const UiIcons = () => (
               <Icon imgSrc="google-maps" size="xxl" className="mb-4 mr-3"/>
               <IconGroup className="mb-4 mr-3" left>
                 <Icon imgSrc="location-outline" alert size="sm" radius="rounded" border/>
-                <Icon imgSrc="google" alert size="xxs" outline/>
+                <Icon imgSrc="google" size="lg" className="bg-white"/>
               </IconGroup>
               <Icon imgSrc="iframe-text" size="xxl" className="mb-4 mr-3"/>
               <IconGroup className="mb-4 mr-3" left>
@@ -703,7 +703,7 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="deprecated">// todo - delete after eric is done updating
+      <Card key="deprecated">
         <CardHeader>File Types - *deprecated</CardHeader>
         <CardBody indent>
           <Row>
@@ -794,7 +794,7 @@ const UiIcons = () => (
         <CardBody indent>
           <CardTitle></CardTitle>
           <Row>
-            <Col>
+            <Col style={{height:'400px'}}>
               <Spinner centered width="56">Loading...</Spinner>
             </Col>
           </Row>

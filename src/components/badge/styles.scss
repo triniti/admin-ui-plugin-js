@@ -83,6 +83,11 @@
   &.avatar-initials-sm::after {
     top: -1px;
     right: -1px;
+
+    td & {
+      width: .375rem;
+      height: .375rem;
+    }
   }
   &.avatar-initials-lg::after {
     top: 3px;
