@@ -129,11 +129,13 @@ import phoneOutline from './phone-outline.svg';
 import phoneSolid from './phone-solid.svg';
 import photo from './photo.svg';
 import pin from './pin.svg';
+import pinOutlineSlanted from './pin-outline-slanted.svg';
 import pinSlanted from './pin-slanted.svg';
 import pinterest from './pinterest.svg';
 import pinterestPin from './pinterest-pin.svg';
 import pinterestProfile from './pinterest-profile.svg';
 import play from './play.svg';
+import playStroke from './play-stroke.svg';
 import playOutline from './play-outline.svg';
 import playlist from './playlist.svg';
 import plus from './plus.svg';
@@ -153,6 +155,7 @@ import saveDisk from './save-disk.svg';
 import saveDiskette from './save-diskette.svg';
 import search from './search.svg';
 import services from './services.svg';
+import settings from './settings.svg';
 import social from './social.svg';
 import sort from './sort.svg';
 import sortHorizontal from './sort-horizontal.svg';
@@ -164,6 +167,8 @@ import starOutline from './star-outline.svg';
 import status from './status.svg';
 import strikethrough from './strikethrough.svg';
 import tagOutline from './tag-outline.svg';
+import tagOutlineSlanted from './tag-outline-slanted.svg';
+import tagSlanted from './tag-slanted.svg';
 import tagSolid from './tag-solid.svg';
 import timeline from './timeline.svg';
 import trash from './trash.svg';
@@ -335,11 +340,13 @@ const icons = {
   'phone-solid': phoneSolid,
   photo,
   pin,
+  'pin-outline-slanted': pinOutlineSlanted,
   'pin-slanted': pinSlanted,
   pinterest,
   'pinterest-pin': pinterestPin,
   'pinterest-profile': pinterestProfile,
   play,
+  'play-stroke': playStroke,
   'play-outline': playOutline,
   playlist,
   plus,
@@ -359,6 +366,7 @@ const icons = {
   'save-diskette': saveDiskette,
   search,
   services,
+  settings,
   social,
   sort,
   'sort-horizontal': sortHorizontal,
@@ -370,6 +378,8 @@ const icons = {
   status,
   strikethrough,
   'tag-outline': tagOutline,
+  'tag-outline-slanted': tagOutlineSlanted,
+  'tag-slanted': tagSlanted,
   'tag-solid': tagSolid,
   timeline,
   trash,
