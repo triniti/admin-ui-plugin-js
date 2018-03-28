@@ -101,7 +101,8 @@
     border-radius: 0;
   }
 
-  .list-group-item::before {
+  .list-group-item::before,
+  .list-group-item::after {
     border: none;
   }
 }
