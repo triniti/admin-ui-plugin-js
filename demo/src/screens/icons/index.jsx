@@ -795,7 +795,7 @@ const UiIcons = () => (
           <CardTitle></CardTitle>
           <Row>
             <Col>
-              <Spinner centered width="100"/>
+              <Spinner centered width="56">Loading...</Spinner>
             </Col>
           </Row>
         </CardBody>
