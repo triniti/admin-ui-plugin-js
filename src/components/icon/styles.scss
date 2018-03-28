@@ -24,11 +24,12 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
   .btn-radius-circle & {
     margin-right: 0;
   }
-
+  .btn-action & {
+    margin-right: .25rem;
+  }
   > svg {
     position: absolute;
     top: 0;
