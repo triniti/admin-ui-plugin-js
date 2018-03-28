@@ -1,6 +1,16 @@
 # CHANGELOG
 
 
+## v0.4.10
+* Add space for Stepper component.
+* Add icon-group and additional file type icons for block-editor.
+* Add centered prop for Spinner.
+* Add scrollable popover example.
+* Add new dropdown header style - more compact like Slacks.
+* Remove href wrapping button fix since it caused other issues.
+* Add Roles and Chat examples to list-groups.
+
+
 ## v0.4.9
 * issue #79: Add Properties and Example Code to UI Example Pages.
 

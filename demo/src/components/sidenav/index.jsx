@@ -30,6 +30,7 @@ const screens = [
   'pagination',
   'popovers',
   'progress-bars',
+  'stepper',
   'tables',
   'tabs',
   'tooltips',
@@ -39,7 +40,7 @@ const Sidenav = props => (
   <ListGroup nav className="pt-3 pb-4">
     {screens.map(screen => (
       <ListGroupItem key={screen} active={props.activeScreen === screen}>
-        <RouterLink to={`/${screen}`}>{screen.split('-').map(startCase).join(' ')}</RouterLink>
+        <RouterLink to={`/${screen}`} className="list-group-item-action">{screen.split('-').map(startCase).join(' ')}</RouterLink>
       </ListGroupItem>
     ))}
   </ListGroup>

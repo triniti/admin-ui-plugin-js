@@ -73,6 +73,10 @@ a:focus {
   text-decoration: underline;
 }
 
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
 button,
 input,
 optgroup,
@@ -109,6 +113,14 @@ p {
 
 .text-light {
   color: #9a9a9a !important;
+}
+
+.text-body {
+  color: $body-color !important;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 a:not([href]):not([tabindex]),

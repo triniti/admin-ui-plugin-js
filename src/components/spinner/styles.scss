@@ -13,6 +13,7 @@ $duration: 1.5s;
 }
 
 .spinner-animation {
+  backface-visibility: hidden;
   padding: 0;
   animation: rotator $duration linear infinite;
 }
@@ -32,6 +33,7 @@ $duration: 1.5s;
 }
 
 .spinner-animation-path {
+  backface-visibility: hidden;
   stroke-dasharray: $offset;
   stroke-dashoffset: 0;
   transform-origin: center;
@@ -50,4 +52,17 @@ $duration: 1.5s;
    stroke-dashoffset: $offset;
    transform:rotate(450deg);
  }
+}
+
+.spinner-centered {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & .spinner-children {
+    margin-top: 1rem;
+  }
 }

@@ -24,20 +24,18 @@
     margin-top: 0;
     margin-bottom: 0;
   }
-
   .btn-radius-circle & {
     margin-right: 0;
   }
-
+  .btn-action & {
+    margin-right: .25rem;
+  }
   > svg {
     position: absolute;
     top: 0;
     right: 0;
     height: 1rem;
     width: 1rem;
-  }
-  & + .icon {
-    margin-left: .5rem;
   }
 }
 
@@ -121,17 +119,37 @@
   }
 }
 
-.icon-alert-xl {
-  width: 7rem; // 112px
-  height: 7rem;
-  border-radius: 7rem;
+
+// Icon Alerts
+
+.icon-alert {
+  border-radius: 10rem;
   background-color: $body-color;
   color: $white;
   margin-top: 0;
   margin-bottom: 0;
+  width: 3.375rem; // 54px
+  height: 3.375rem;
 
   > svg {
-    padding: 1.25rem;
+    padding: .625rem;
+    width: 3.375rem;
+    height: 3.375rem;
+  }
+
+  &.icon-noborder {
+    > svg {
+      padding: 0;
+    }
+  }
+}
+
+.icon-alert-xl {
+  width: 7rem; // 112px
+  height: 7rem;
+
+  > svg {
+    padding: 1.375rem;
     width: 7rem;
     height: 7rem;
   }
@@ -140,43 +158,39 @@
 .icon-alert-lg {
   width: 5rem; // 80px
   height: 5rem;
-  border-radius: 5rem;
-  background-color: $body-color;
-  color: $white;
-  margin-top: 0;
-  margin-bottom: 0;
 
   > svg {
-    padding: 1rem;
+    padding: 1.125rem;
     width: 5rem;
     height: 5rem;
   }
 }
 
 .icon-alert-md {
-  width: 3.375rem; // 54px
-  height: 3.375rem;
-  border-radius: 5rem;
-  background-color: $body-color;
-  color: $white;
-  margin-top: 0;
-  margin-bottom: 0;
+  width: 4rem; // 64px
+  height: 4rem;
+
+  > svg {
+    padding: .8rem;
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.icon-alert-sd {
+  width: 3rem; // 48px
+  height: 3rem;
 
   > svg {
     padding: .5rem;
-    width: 3.375rem;
-    height: 3.375rem;
+    width: 3rem;
+    height: 3rem;
   }
 }
 
 .icon-alert-sm {
-  width: 2.5rem; // 54px
+  width: 2.5rem; // 40px
   height: 2.5rem;
-  border-radius: 5rem;
-  background-color: $body-color;
-  color: $white;
-  margin-top: 0;
-  margin-bottom: 0;
 
   > svg {
     padding: .5rem;
@@ -186,13 +200,8 @@
 }
 
 .icon-alert-xs {
-  width: 2rem; // 54px
+  width: 2rem; // 32px
   height: 2rem;
-  border-radius: 5rem;
-  background-color: $body-color;
-  color: $white;
-  margin-top: 0;
-  margin-bottom: 0;
 
   > svg {
     padding: .375rem;
@@ -202,18 +211,13 @@
 }
 
 .icon-alert-xxs {
-  width: 1.5rem; // 54px
-  height: 1.5rem;
-  border-radius: 5rem;
-  background-color: $body-color;
-  color: $white;
-  margin-top: 0;
-  margin-bottom: 0;
+  width: 1.375rem; // 14px
+  height: 1.375rem;
 
   > svg {
-    padding: .375rem;
-    width: 1.5rem;
-    height: 1.5rem;
+    padding: .25rem;
+    width: 1.375rem;
+    height: 1.375rem;
   }
 }
 
@@ -222,16 +226,12 @@
 
   &.icon-alert-md {
     border-radius: .375rem;
-
-    > svg {
-      padding: .4375rem;
-    }
   }
   &.icon-alert-lg {
-    border-radius: .675rem;
+    border-radius: .5rem;
   }
   &.icon-alert-xl {
-    border-radius: .75rem;
+    border-radius: .675rem;
   }
 }
 
@@ -242,6 +242,10 @@
   &.icon-alert-sm {
     border-radius: 0;
   }
+}
+
+.icon-outline {
+  box-shadow: 0 0 0 2px $white;
 }
 
 .icon-border {
@@ -255,6 +259,22 @@
   &.icon-alert-xl {
     box-shadow: inset 0 0 0 4px $body-color;
   }
+
+  &.icon-outline {
+    box-shadow: inset 0 0 0 2px $body-color, 0 0 0 2px $white;
+
+    &.icon-alert-lg {
+      box-shadow: inset 0 0 0 3px $body-color, 0 0 0 2px $white;
+    }
+    &.icon-alert-xl {
+      box-shadow: inset 0 0 0 4px $body-color, 0 0 0 3px $white;
+    }
+  }
+}
+
+.icon-noborder {
+  background-color: transparent;
+  color: $body-color;
 }
 
 @each $color, $value in $theme-colors {
@@ -264,23 +284,115 @@
     &.icon-alert-xl,
     &.icon-alert-lg,
     &.icon-alert-md,
+    &.icon-alert-sd,
     &.icon-alert-sm,
     &.icon-alert-xs,
     &.icon-alert-xxs {
       background-color: $value;
       color: $white;
     }
+    &.icon-noborder {
+      background-color: transparent;
+      color: $value;
+    }
     &.icon-border {
       background-color: transparent;
       color: $value;
       box-shadow: inset 0 0 0 2px $value;
 
+      &.icon-outline {
+        box-shadow: inset 0 0 0 2px $value, 0 0 0 2px $white;
+      }
       &.icon-alert-lg {
         box-shadow: inset 0 0 0 3px $value;
+
+        &.icon-outline {
+          box-shadow: inset 0 0 0 3px $value, 0 0 0 2px $white;
+        }
       }
       &.icon-alert-xl {
         box-shadow: inset 0 0 0 4px $value;
+
+        &.icon-outline {
+          box-shadow: inset 0 0 0 4px $value, 0 0 0 3px $white;
+        }
       }
+    }
+  }
+}
+
+// icon group
+
+.icon-group {
+  display: inline-flex;
+  position: relative;
+  align-self: center;
+  vertical-align: middle;
+
+  & .icon:first-child {
+    margin: 0 !important;
+  }
+  & .icon:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0 !important;
+    transform: translateX(50%) translatey(-50%);
+    border-radius: $round;
+
+    &:not(.icon-alert) {
+
+      > svg {
+      padding: 3px;
+      }
+    }
+  }
+  & .icon-alert:last-child {
+    transform: translateX(40%) translatey(-40%);
+  }
+  & .icon-alert + .icon:not(.icon-alert) {
+    transform: translateX(40%) translatey(-40%);
+  }
+}
+
+.icon-group-left {
+
+  & .icon:last-child {
+    right: auto;
+    left: 0;
+    transform: translateX(-50%) translatey(-50%);
+  }
+  & .icon-alert:last-child {
+    transform: translateX(-40%) translatey(-40%);
+  }
+  & .icon-alert + .icon:not(.icon-alert) {
+    transform: translateX(-40%) translatey(-40%);
+  }
+}
+
+.icon-group-bottom {
+
+  & .icon:last-child {
+    top: auto;
+    bottom: 0;
+    transform: translateX(50%) translatey(50%);
+  }
+  & .icon-alert:last-child {
+    transform: translateX(40%) translatey(40%);
+  }
+  & .icon-alert + .icon:not(.icon-alert) {
+    transform: translateX(40%) translatey(40%);
+  }
+
+  &.icon-group-left {
+    & .icon:last-child {
+      transform: translateX(-50%) translatey(50%);
+    }
+    & .icon-alert:last-child {
+      transform: translateX(-40%) translatey(40%);
+    }
+    & .icon-alert + .icon:not(.icon-alert) {
+      transform: translateX(-40%) translatey(40%);
     }
   }
 }
@@ -330,3 +442,4 @@
     opacity: 1;
   }
 }
+

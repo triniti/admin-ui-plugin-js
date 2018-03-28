@@ -46,6 +46,7 @@ import FormFeedback from './form-feedback';
 import FormGroup from './form-group';
 import FormText from './form-text';
 import Icon from './icon';
+import IconGroup from './icon-group';
 import Input from './input';
 import InputGroup from './input-group';
 import InputGroupAddon from './input-group-addon';
@@ -90,6 +91,7 @@ import Screen from './screen';
 import ScrollableContainer from './scrollable-container';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
+import Stepper from './stepper';
 import Switch from './switch';
 import TabContent from './tab-content';
 import TabPane from './tab-pane';
@@ -155,6 +157,7 @@ export {
   FormGroup,
   FormText,
   Icon,
+  IconGroup,
   Input,
   InputGroup,
   InputGroupAddon,
@@ -199,6 +202,7 @@ export {
   ScrollableContainer,
   Spinner,
   StatusMessage,
+  Stepper,
   Switch,
   TabContent,
   TabPane,

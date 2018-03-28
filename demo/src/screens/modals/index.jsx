@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Collapse, Icon, Table, Modal, ModalHeader, ModalBody, ModalFooter, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Collapse, Icon, Modal, ModalHeader, ModalBody, ModalFooter, Screen, Table } from '../../../../src/components';
 
 class UiModal extends React.Component {
   constructor(props) {

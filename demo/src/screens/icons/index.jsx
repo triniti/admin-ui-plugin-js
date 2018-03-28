@@ -1,9 +1,10 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, IconGroup, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
 import IconList from './IconList';
+import './styles.scss';
 
 const UiIcons = () => (
   <Screen
@@ -138,6 +139,7 @@ const UiIcons = () => (
             <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
             <IconList iconName="pin"/>
+            <IconList iconName="pin-slanted"/>
             <IconList iconName="play"/>
             <IconList iconName="play-outline"/>
             <IconList iconName="playlist"/>
@@ -201,7 +203,7 @@ const UiIcons = () => (
       <Card key="social-icons">
         <CardHeader>Social Icons</CardHeader>
         <CardBody indent>
-          <Row>
+          <Row className="mb-3">
             <Col>
               <IconTooltip iconName="facebook"/>
               <IconTooltip iconName="google"/>
@@ -212,6 +214,19 @@ const UiIcons = () => (
               <IconTooltip iconName="twitter"/>
               <IconTooltip iconName="vevo"/>
               <IconTooltip iconName="youtube"/>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Icon imgSrc="facebook" alert size="xxs" />
+              <Icon imgSrc="google" alert size="xxs" />
+              <Icon imgSrc="imgur" alert size="xxs" />
+              <Icon imgSrc="instagram" alert size="xxs" />
+              <Icon imgSrc="linkedin" alert size="xxs" />
+              <Icon imgSrc="pinterest" alert size="xxs" />
+              <Icon imgSrc="twitter" alert size="xxs" />
+              <Icon imgSrc="vevo" alert size="xxs" />
+              <Icon imgSrc="youtube" alert size="xxs" />
             </Col>
           </Row>
         </CardBody>
@@ -363,6 +378,7 @@ const UiIcons = () => (
               <IconTooltip iconName="location-solid"/>
               <IconTooltip iconName="location-outline"/>
               <IconTooltip iconName="pin"/>
+              <IconTooltip iconName="pin-slanted"/>
               <IconTooltip iconName="bolt-outline"/>
               <IconTooltip iconName="bolt-solid"/>
               <IconTooltip iconName="play"/>
@@ -436,13 +452,13 @@ const UiIcons = () => (
               <IconTooltip iconName="plus-outline" size="lg"/>
               <IconTooltip iconName="plus-outline" size="xl"/>
               <IconTooltip iconName="plus-outline" size="xxl"/>
-              <IconTooltip iconName="question" size="alert-xxs" color="secondary" />
-              <IconTooltip iconName="delete-line-thick" size="alert-xxs" />
-              <IconTooltip iconName="plus-line-thick" size="alert-xs" border />
-              <IconTooltip iconName="check-line-thick" size="alert-sm" color="success" />
-              <IconTooltip iconName="code" size="alert-md" color="info" border />
-              <IconTooltip iconName="document" size="alert-lg" color="dark" border />
-              <IconTooltip iconName="check-line-thick" size="alert-xl" color="success" border />
+              <IconTooltip iconName="question" alert size="xxs" color="secondary" />
+              <IconTooltip iconName="delete-line-thick" alert size="xxs" />
+              <IconTooltip iconName="plus-line-thick" alert size="xs" border />
+              <IconTooltip iconName="check-line-thick" alert size="sm" color="success" />
+              <IconTooltip iconName="code" alert size="md" color="info" border />
+              <IconTooltip iconName="document" alert size="lg" color="dark" border />
+              <IconTooltip iconName="check-line-thick" alert size="xl" color="success" border />
             </Col>
           </Row>
         </CardBody>
@@ -458,14 +474,14 @@ const UiIcons = () => (
               <IconTooltip iconName="check-outline" size="lg" color="info"/>
               <IconTooltip iconName="check-outline" size="xl" color="danger"/>
               <IconTooltip iconName="check-outline" size="xxl" color="success"/>
-              <IconTooltip iconName="warning" size="alert-xxs" color="danger" border />
-              <IconTooltip iconName="warning" size="alert-xs" color="warning" border />
-              <IconTooltip iconName="cloud-upload" size="alert-sm" color="dark" radius="rounded" border />
-              <IconTooltip iconName="warning-solid-triangle" size="alert-sm" color="warning" />
-              <IconTooltip iconName="warning" size="alert-md" border />
-              <IconTooltip iconName="check-line-thick" size="alert-md" color="success" />
-              <IconTooltip iconName="delete-line-thick" size="alert-lg" color="danger" />
-              <IconTooltip iconName="question" size="alert-xl" color="info" border />
+              <IconTooltip iconName="warning" alert size="xxs" color="danger" border />
+              <IconTooltip iconName="warning" alert size="xs" color="warning" border />
+              <IconTooltip iconName="cloud-upload" alert size="sm" color="dark" radius="rounded" border />
+              <IconTooltip iconName="warning-solid-triangle" alert size="sm" color="warning" />
+              <IconTooltip iconName="warning" alert size="md" border />
+              <IconTooltip iconName="check-line-thick" alert size="md" color="success" />
+              <IconTooltip iconName="delete-line-thick" alert size="lg" color="danger" />
+              <IconTooltip iconName="question" alert size="xl" color="info" border />
             </Col>
           </Row>
         </CardBody>
@@ -497,36 +513,227 @@ const UiIcons = () => (
       </Card>,
 
       <Card key="icons6">
-        <CardHeader>File Types</CardHeader>
+        <CardHeader>Icon Group</CardHeader>
         <CardBody indent>
           <Row>
             <Col>
-              <Icon imgSrc="code" size="alert-md" radius="rounded" border className="mb-2 ml-2"/>
-              <Icon imgSrc="facebook-post" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="facebook-video" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="google-maps" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="iframe" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="iframe-text" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="imgur-post" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="instagram-media" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="pinterest-pin" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="pinterest-profile" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-collection-timeline" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-list-timeline" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-moment" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-search-timeline" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-tweet" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-user-timeline" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-video" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="vevo-video" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="youtube-playlist" size="alert-md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="youtube-video" size="alert-md" radius="rounded" border className="mb-2" />
+              <IconGroup className="mb-2 mr-4">
+                <Icon imgSrc="search" alert size="lg" radius="rounded" border color="dark" />
+                <Icon imgSrc="users" alert size="sm" border className="bg-white" color="dark" outline />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-4">
+                <Icon imgSrc="twitter" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="tweet" alert size="sm"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-4">
+                <Icon imgSrc="pinterest" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="pin-slanted" alert size="sm"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-4">
+                <Icon imgSrc="facebook" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="play" alert size="sm"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-4" bottom left>
+                <Icon imgSrc="instagram" alert size="lg" radius="rounded" border/>
+                <Icon imgSrc="camera" alert size="sm"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" bottom>
+                <Icon imgSrc="twitter" alert size="md" radius="rounded" border/>
+                <Icon imgSrc="play" alert size="xs"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3">
+                <Icon imgSrc="twitter" alert radius="rounded" border/>
+                <Icon imgSrc="play" alert size="xxs" color="secondary"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3">
+                <Icon imgSrc="youtube" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="playlist" alert size="xxs" color="secondary"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3">
+                <Icon imgSrc="facebook" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="warning" size="md" color="warning" className="bg-warning text-white"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3">
+                <Icon imgSrc="instagram" size="md"/>
+                <Icon imgSrc="locked-solid" size="sm" color="danger" className="bg-warning text-white"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3">
+                <Icon imgSrc="facebook" size="md"/>
+                <Icon imgSrc="user" size="sm" color="secondary"  className="bg-warning text-white"/>
+              </IconGroup>
             </Col>
           </Row>
         </CardBody>
       </Card>,
 
       <Card key="icons7">
+        <CardHeader>File Types using IconGroup</CardHeader>
+        <CardBody indent>
+          <Row className="mb-3">
+            <Col>
+              <Icon imgSrc="code" alert size="sm" radius="rounded" border className="mb-4 mr-3"/>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="pencil" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="facebook" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="facebook" size="lg" className="bg-white"/>
+              </IconGroup>
+              <Icon imgSrc="google-maps" size="xxl" className="mb-4 mr-3"/>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="location-outline" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="google" size="lg" className="bg-white"/>
+              </IconGroup>
+              <Icon imgSrc="iframe-text" size="xxl" className="mb-4 mr-3"/>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="pencil" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="imgur" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="camera" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="instagram" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="pin-slanted" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="pinterest" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="user" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="pinterest" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="timeline" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="collection" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="bolt-outline" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="search" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="tweet" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="user" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="twitter" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="vevo" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="playlist" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="youtube" alert size="xxs" outline/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="youtube" alert size="xxs" outline/>
+              </IconGroup>
+
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Icon imgSrc="code" alert size="sm" radius="rounded" border className="mb-2 mr-3"/>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="facebook" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="pencil" alert size="xxs" outline/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="facebook" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="play" alert size="xxs" outline/>
+              </IconGroup>
+              <Icon imgSrc="google-maps" size="xxl" className="mb-2 mr-3"/>
+              <Icon imgSrc="iframe-text" size="xxl" className="ml-0 mb-2 mr-3"/>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="imgur" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="pencil" alert size="xxs" outline/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="instagram" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="camera" alert size="xxs" outline/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="pinterest" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="pin-slanted" alert size="xxs" outline/>
+              </IconGroup>
+
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Icon imgSrc="code" alert size="md" radius="rounded" border className="mb-2 mr-3"/>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="facebook" alert size="md" radius="rounded" border/>
+                <Icon imgSrc="pencil" alert size="xs" border outline className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="facebook" alert size="md" radius="rounded" border/>
+                <Icon imgSrc="play" alert size="xs" border outline className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="imgur" alert size="md" radius="rounded" border/>
+                <Icon imgSrc="pencil" alert size="xs" border outline className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="instagram" alert size="md" radius="rounded" border/>
+                <Icon imgSrc="camera" alert size="xs" border outline className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="pinterest" alert size="md" radius="rounded" border/>
+                <Icon imgSrc="pin" alert size="xs" border outline className="bg-white"/>
+              </IconGroup>
+              <Icon imgSrc="iframe-text" alert size="md" className="mb-2 mr-3" radius="none" noborder />
+              <Icon imgSrc="google-maps" alert size="md" className="mb-2 mr-3" radius="none" noborder />
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="deprecated">
+        <CardHeader>File Types - *deprecated</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <Icon imgSrc="code" alert size="md" radius="rounded" border className="mb-2 ml-2"/>
+              <Icon imgSrc="facebook-post" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="facebook-video" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="google-maps" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="iframe" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="iframe-text" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="imgur-post" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="instagram-media" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="pinterest-pin" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="pinterest-profile" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-collection-timeline" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-list-timeline" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-moment" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-search-timeline" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-tweet" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-user-timeline" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="twitter-video" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="vevo-video" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="youtube-playlist" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="youtube-video" alert size="md" radius="rounded" border className="mb-2" />
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons8">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
           <CardTitle></CardTitle>
@@ -577,6 +784,18 @@ const UiIcons = () => (
                 </ul>
                 <span className="loading-children">children</span>
               </div>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+       <Card key="icons9">
+        <CardHeader>Spinner Centered</CardHeader>
+        <CardBody indent>
+          <CardTitle></CardTitle>
+          <Row>
+            <Col style={{height:'400px'}}>
+              <Spinner centered width="56">Loading...</Spinner>
             </Col>
           </Row>
         </CardBody>

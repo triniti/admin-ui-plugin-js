@@ -103,7 +103,9 @@
 .btn-outline-warning:focus,
 .btn-outline-warning:not(:disabled):not(.disabled):active,
 .btn-outline-warning:not(:disabled):not(.disabled).active,
-.show > .btn-outline-warning.dropdown-toggle {
+.show > .btn-outline-warning.dropdown-toggle,
+.btn-warning.disabled,
+.btn-warning:disabled {
   color: #fff;
 }
 
@@ -399,12 +401,4 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
-}
-// scss-lint:enable QualifyingElement
-
-// Remove text underline from href wrapping button
-
-a:hover > button {
-  text-decoration: none;
-  display: inline-block;
 }

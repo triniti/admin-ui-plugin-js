@@ -262,6 +262,7 @@
     margin: 0;
     border-radius: 0 0 $border-radius-lg $border-radius-lg;
     box-shadow: 0 10px 16px -8px $gray-rgba-600;
+    border-top: none;
   }
   .navbar-dark .navbar-nav .nav-dropdown-menu {
     border: none;

@@ -59,6 +59,7 @@ class DropdownItem extends React.Component {
   render() {
     const tabIndex = this.getTabIndex();
     let {
+      children,
       className,
       cssModule,
       divider,
@@ -96,7 +97,7 @@ class DropdownItem extends React.Component {
         tabIndex={tabIndex}
         className={classes}
         onClick={this.onClick}
-      />
+      >{header ? <span>{children}</span> : children}</Tag>
     );
   }
 }

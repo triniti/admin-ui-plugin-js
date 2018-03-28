@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Collapse, Icon, Table, Row, Col, Progress, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon, Progress, Row, Screen, Table } from '../../../../src/components';
 
 class UiProgress extends Component {
   constructor(props) {

@@ -17,3 +17,7 @@
   line-height: 1.2;
   color: $gray-rgba-700;
 }
+
+.icon + .icon {
+  margin-left: .5rem;
+}

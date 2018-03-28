@@ -8,12 +8,26 @@
 .btn-hover-bg {
   border-color: transparent;
   background-color: transparent;
-  box-shadow: $shadow-depth-0;
+  box-shadow: none;
 
   &:hover,
   &.active {
     border-color: transparent;
     background-color: $gray-300;
+  }
+}
+
+.btn-icon-hover-bg {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: none;
+  opacity: .625;
+
+  &:hover,
+  &.active {
+    border-color: transparent;
+    background-color: $gray-300;
+    opacity: 1;
   }
 }
 
@@ -27,7 +41,7 @@
 .btn-outline-hover-bg {
   border-color: transparent;
   background-color: transparent;
-  box-shadow: $shadow-depth-0;
+  box-shadow: none;
 
   &:hover,
   &.active {

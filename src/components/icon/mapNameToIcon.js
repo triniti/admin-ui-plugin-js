@@ -48,6 +48,7 @@ import cloudUpload from './cloud-upload.svg';
 import code from './code.svg';
 import cog from './cog.svg';
 import cogOutline from './cog-outline.svg';
+import collection from './collection.svg';
 import comment from './comment.svg';
 import commentOval from './comment-oval.svg';
 import compress from './compress.svg';
@@ -128,6 +129,7 @@ import phoneOutline from './phone-outline.svg';
 import phoneSolid from './phone-solid.svg';
 import photo from './photo.svg';
 import pin from './pin.svg';
+import pinSlanted from './pin-slanted.svg';
 import pinterest from './pinterest.svg';
 import pinterestPin from './pinterest-pin.svg';
 import pinterestProfile from './pinterest-profile.svg';
@@ -252,6 +254,7 @@ const icons = {
   code,
   cog,
   'cog-outline': cogOutline,
+  collection,
   comment,
   'comment-oval': commentOval,
   compress,
@@ -332,6 +335,7 @@ const icons = {
   'phone-solid': phoneSolid,
   photo,
   pin,
+  'pin-slanted': pinSlanted,
   pinterest,
   'pinterest-pin': pinterestPin,
   'pinterest-profile': pinterestProfile,

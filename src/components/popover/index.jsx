@@ -150,7 +150,7 @@ class Popover extends React.Component {
       return e && e.preventDefault();
     }
 
-    return this.props.toggle();
+    return this.props.toggle(e);
   }
 
   render() {

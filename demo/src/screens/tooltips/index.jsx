@@ -216,7 +216,7 @@ export default function Example() {
                 <tr>
                   <th scope="row">placementPrefix</th>
                   <td>string</td>
-                  <td nowrap>'bs-tooltip'</td>
+                  <td className="nowrap">'bs-tooltip'</td>
                   <td>Adds ability to style using a different class.</td>
                 </tr>
                 <tr>
