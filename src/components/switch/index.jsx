@@ -38,9 +38,14 @@ const Switch = (props) => {
     'switch-input',
   ), cssModule);
 
+  const labelClasses = mapToCssModules(classNames(
+    className,
+    'switch-input-label',
+  ), cssModule);
+
   return [
     <Input type={type} id={id} className={classes} key={`${name}-switch-input`} {...attributes} />,
-    <Label for={id} className="switch-input-label" key={`${name}-switch-label`}>{label1 && <span>{label1}</span>}{label2 && <span>{label2}</span>}</Label>,
+    <Label for={id} className={labelClasses} key={`${name}-switch-label`}>{label1 && <span>{label1}</span>}{label2 && <span>{label2}</span>}</Label>,
   ];
 };
 

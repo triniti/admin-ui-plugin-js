@@ -726,7 +726,6 @@ const UiIcons = () => (
               <Icon imgSrc="facebook-post" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="facebook-video" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="google-maps" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="iframe" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="iframe-text" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="imgur-post" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="instagram-media" alert size="md" radius="rounded" border className="mb-2" />
@@ -783,33 +782,26 @@ const UiIcons = () => (
 
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <Loading />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <div className="loading-container">
-                <ul className="loading-animation">
-                  <li className="loading-dot" />
-                  <li className="loading-dot" />
-                  <li className="loading-dot" />
-                </ul>
-                <span className="loading-children">children</span>
-              </div>
-            </Col>
-          </Row>
         </CardBody>
       </Card>,
 
        <Card key="icons9">
         <CardHeader>Spinner Centered</CardHeader>
         <CardBody indent>
-          <CardTitle></CardTitle>
           <Row>
             <Col style={{height:'400px'}}>
               <Spinner centered width="56">Loading...</Spinner>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons10">
+        <CardHeader>Loading</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <Loading />
             </Col>
           </Row>
         </CardBody>

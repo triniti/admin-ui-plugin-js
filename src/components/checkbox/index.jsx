@@ -7,12 +7,14 @@ import Label from '../label';
 import './styles.scss';
 
 const propTypes = {
+  children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  type: PropTypes.string,
-  id: PropTypes.string.isRequired,
+  disabled: PropTypes.bool,
+  right: PropTypes.bool,
   round: PropTypes.bool,
   size: PropTypes.string,
+  type: PropTypes.string,
 };
 
 const defaultProps = {
@@ -21,12 +23,14 @@ const defaultProps = {
 
 const Checkbox = (props) => {
   const {
+    children,
     className,
     cssModule,
-    type,
-    id,
+    disabled,
+    right,
     round,
     size,
+    type,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -37,14 +41,19 @@ const Checkbox = (props) => {
   const labelClasses = mapToCssModules(classNames(
     className,
     'checkbox-input-label',
+    disabled ? 'checkbox-disabled' : false,
+    right ? 'checkbox-label-right' : false,
     round ? 'checkbox-input-round' : false,
   ), cssModule);
 
 
-  return [
-    <Input type={type} id={id} className={classes} key={`${id}-checkbox-input`} {...attributes} />,
-    <Label for={id} className={labelClasses} key={`${id}-checkbox-label`} />,
-  ];
+  return (
+    <Label className={labelClasses} check>
+      <Input type={type} className={classes} {...attributes} disabled={disabled} />
+      <span className="checkbox-input-icon"/>
+      {children && <span className="form-check-label checkbox-label">{children}</span>}
+    </Label>
+  );
 };
 
 Checkbox.propTypes = propTypes;

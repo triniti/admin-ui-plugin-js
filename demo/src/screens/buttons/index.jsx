@@ -433,25 +433,25 @@ class UiButtons extends React.Component {
             <CardBody>
               <Form className="mb-3">
                 <FormGroup inline>
-                  <Label for="toggler1">size="xs"</Label>
-                  <Switch id="toggler1" size="xs" value="on" />
+                  <Label for="toggler1" className="ml-4 mr-2 text-label">size="xs"</Label>
+                  <Switch id="toggler1" size="xs" />
 
-                  <Label for="toggler2" className="ml-4">size="sm"</Label>
+                  <Label for="toggler2" className="ml-4 mr-2 text-label">size="sm"</Label>
                   <Switch id="toggler2" size="sm" />
 
                   <Divider horizontal="md" className="ml-4"/>
 
                   <Label for="toggler3" strong>Off</Label>
-                  <Switch id="toggler3" />
+                  <Switch id="toggler3" className="ml-2"/>
                   <Label for="toggler3" strong>On</Label>
 
                   <Divider horizontal="md" />
 
 
-                  <Label for="toggler4" className="ml-4">size="md"</Label>
+                  <Label for="toggler4" className="ml-4 mr-2 text-label">size="md"</Label>
                   <Switch id="toggler4" size="md" />
 
-                  <Label for="toggler5" className="ml-4">size="lg"</Label>
+                  <Label for="toggler5" className="ml-4 mr-2 text-label">size="lg"</Label>
                   <Switch id="toggler5" size="lg" />
 
                 </FormGroup>
@@ -479,61 +479,55 @@ class UiButtons extends React.Component {
             Radio Component
               <Form>
                 <FormGroup inline>
-                  <Label check className="mr-3" strong>
-                    <Radio size="sm" type="radio" name="toggler11" id="toggler11" onClick={() => this.onRadioBtnClick(11)} />
-                  Yes
-                  </Label>
+                  <FormGroup check inline>
+                    <Radio size="sm" onClick={() => this.onRadioBtnClick(11)}>
+                      <Label strong>Yes</Label>
+                    </Radio>
+                  </FormGroup>
+                  <FormGroup check inline>
+                    <Radio size="sm" onClick={() => this.onRadioBtnClick(11)}>
+                      <Label strong>No</Label>
+                    </Radio>
+                  </FormGroup>
+                  <FormGroup check inline>
+                    <Radio size="sm" onClick={() => this.onRadioBtnClick(11)}>
+                      <Label strong>Maybe</Label>
+                    </Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-3" strong>
-                    <Radio size="sm" type="radio" name="toggler11" id="toggler12" onClick={() => this.onRadioBtnClick(11)} />
-                  No
-                  </Label>
-
-                  <Label check className="mr-3" strong>
-                    <Radio size="sm" type="radio" name="toggler11" id="toggler13" onClick={() => this.onRadioBtnClick(11)} />
-                  Maybe
-                  </Label>
                 </FormGroup>
               </Form>
             </CardHeader>
             <CardBody>
               <Form>
                 <FormGroup inline>
+                  <FormGroup check className="mr-3">
+                    <Radio size="xs">size="xs"</Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-4">
-                    <Radio size="xs" type="radio" id="toggler6" onClick={() => this.onRadioBtnClick(12)} />
-                  size="xs"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Radio size="sm">size="sm"</Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-4">
-                    <Radio size="sm" type="radio" id="toggler7" onClick={() => this.onRadioBtnClick(12)} />
-                  size="sm"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Radio>default</Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-4" strong>
-                    <Radio type="radio" id="toggler8" onClick={() => this.onRadioBtnClick(12)} />
-                default
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Radio size="md">size="md"</Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-4">
-                    <Radio size="md" type="radio" id="toggler9" onClick={() => this.onRadioBtnClick(12)} />
-                  size="md"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Radio size="lg" onClick={() => this.onRadioBtnClick(12)}>size="lg"</Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-4">
-                    <Radio size="lg" type="radio" id="toggler10" onClick={() => this.onRadioBtnClick(12)} />
-                  size="lg"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Radio disabled>disabled</Radio>
+                  </FormGroup>
 
-                  <Label check className="mr-4" strong>
-                    <Radio type="radio" id="toggler8" disabled />
-                disabled
-                  </Label>
-
-                  <Label check className="mr-4" strong>
-                    <Radio type="radio" id="toggler8" disabled checked />
-                disabled on
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Radio disabled checked>disabled checked</Radio>
+                  </FormGroup>
 
                 </FormGroup>
               </Form>
@@ -545,55 +539,49 @@ class UiButtons extends React.Component {
             Checkbox Component
               <Form>
                 <FormGroup check inline>
-                  <Label className="mr-3">
-                    <Checkbox size="sm" id="toggler14" round onClick={() => this.onCheckboxBtnClick(14)} />
-                Maybe
-                  </Label>
+                  <Checkbox size="sm" round>Maybe</Checkbox>
                 </FormGroup>
               </Form>
             </CardHeader>
             <CardBody>
               <Form>
                 <FormGroup inline>
-                  <Label className="mr-4 mb-2">
-                    <Checkbox size="xs" id="toggler15" />
-                size="xs"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="xs">size="xs"</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2">
-                    <Checkbox size="sm" id="toggler16" />
-                size="sm"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="sm">size="sm"</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox id="toggler17" />
-                default
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox>default</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="md" id="toggler18" />
-                size="md"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="md">size="md"</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox size="lg" id="toggler19" />
-                size="lg"
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="lg">size="lg"</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox disabled  id="toggler20" />
-                disabled
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox disabled>disabled</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox disabled checked  id="toggler21" />
-                disabled on
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox disabled checked>disabled checked</Checkbox>
+                  </FormGroup>
 
-                  <Label className="mr-4 mb-2" strong>
-                    <Checkbox id="toggler22" round />
-                round
-                  </Label>
+                  <FormGroup check className="mr-3">
+                    <Checkbox round>round</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox right>right</Checkbox>
+                  </FormGroup>
+
                 </FormGroup>
               </Form>
             </CardBody>

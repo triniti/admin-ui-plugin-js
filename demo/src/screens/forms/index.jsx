@@ -86,30 +86,27 @@ class UiForm extends React.Component {
                     </FormGroup>
                     <FormGroup tag="fieldset">
                       <legend>Radio Buttons</legend>
-                      <FormGroup check inline>
+                      <FormGroup check>
                       <Label check>
                         <Input type="radio" name="radio1" />
                     Option one is this and that—be sure to include why it's great
                       </Label>
                     </FormGroup>
-                      <FormGroup check inline>
+                      <FormGroup check>
                       <Label check>
                         <Input type="radio" name="radio1" />
                     Option two can be something else and selecting it will deselect option one
                       </Label>
                     </FormGroup>
-                      <FormGroup check disabled inline>
+                      <FormGroup check disabled>
                       <Label check>
                         <Input type="radio" name="radio1" disabled />
                       Option three is disabled
                       </Label>
                     </FormGroup>
                     </FormGroup>
-                    <FormGroup check inline>
-                      <Label check>
-                      <Checkbox />
-                  Check me out
-                    </Label>
+                    <FormGroup check>
+                      <Checkbox>Check me out</Checkbox>
                     </FormGroup>
 
                     <Button size="lg" color="primary" className="mt-3">Submit</Button>
@@ -177,12 +174,12 @@ class UiForm extends React.Component {
                   <CardTitle tag="h4">Card Title H4</CardTitle>
                   <Form inline className="mb-3">
                     <FormGroup>
-                      <Label for="exampleEmail">Email</Label>{' '}
+                      <Label for="exampleEmail" className="mr-2">Email</Label>{' '}
                       <Input type="email" name="email" id="exampleEmail5" placeholder="something@idk.cool" size="sm" />
                     </FormGroup>
                     {' '}
                     <FormGroup>
-                      <Label for="examplePassword">Password</Label>{' '}
+                      <Label for="examplePassword" className="mr-2">Password</Label>{' '}
                       <Input type="password" name="password" id="examplePassword5" placeholder="don't tell!" size="sm" />
                     </FormGroup>
                     {' '}
@@ -271,22 +268,16 @@ class UiForm extends React.Component {
                   It's a bit lighter and easily wraps to a new line.
                     </FormText>
                     </FormGroup>
-                    <FormGroup check inline>
-                      <Label check>
-                      <Radio type="checkbox" name="radio1" id="radio2" />
-                  Option one is this and that—be sure to include why it's great
-                    </Label>
+                    <FormGroup check>
+                      <Radio type="checkbox" name="radio1" id="radio2">Option one is this and that—be sure to include why it's great</Radio>
                     </FormGroup>
-                    <FormGroup check inline>
-                      <Label check>
-                      <Checkbox name="checkbox1" id="checkbox2" />
-                      Check me out
-                    </Label>
+                    <FormGroup check>
+                      <Checkbox>Check me out</Checkbox>
                     </FormGroup>
-                    <FormGroup check inline>
-                      <Label check>
-                      <Switch id="checkbox3" />
-                  Try me for a Toggle
+                    <FormGroup check>
+                      <Label check className="text-label">
+                      <Switch id="checkbox3"/>
+                        Try me for a Toggle
                     </Label>
                     </FormGroup>
                   </Form>
@@ -376,7 +367,7 @@ class UiForm extends React.Component {
               <Row>
                 <Col xs="3" md="4">
                   <FormGroup disabled inline>
-                    <Label check>Disabled</Label>
+                    <Label check className="mr-2">Disabled</Label>
                     <TrinaryControl disabled name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="none" width="120px" value={this.state.trinaryCustom} onChange={this.handleChange} />
                   </FormGroup>
                 </Col>
@@ -460,36 +451,24 @@ class UiForm extends React.Component {
                     <FormGroup tag="fieldset" row>
                       <legend className="col-form-legend col-sm-2">Radio Buttons</legend>
                       <Col sm={10}>
-                      <FormGroup check inline>
-                        <Label check>
-                        <Radio size="sm" name="radio2" id="radio2a" />
-                          Option one is this and that—be sure to include why it's great
-                      </Label>
+                      <FormGroup check>
+                        <Radio size="sm">Option one is this and that—be sure to include why it's great</Radio>
                       </FormGroup>
-                      <FormGroup check inline>
-                        <Label check>
-                        <Radio size="sm" name="radio2" id="radio2b" />
-                        Option two can be something else and selecting it will deselect option one
-                        </Label>
+                      <FormGroup check>
+                        <Radio size="sm">Option two can be something else and selecting it will deselect option one</Radio>
                       </FormGroup>
-                      <FormGroup check disabled inline>
-                        <Label check>
-                        <Radio size="sm" name="radio2" id="radio2c" disabled />
-                      Option three is disabled
-                        </Label>
+                      <FormGroup check>
+                        <Radio size="sm" disabled>Option three is disabled</Radio>
                       </FormGroup>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Col sm={{ size: 10 }}>
                       <div className="has-border border-indent">
-                        <Label for="checkbox4">Border Indented Checkbox</Label>
-                        <FormGroup check inline>
-                        <Label check>
-                          <Checkbox size="sm" name="checkbox4" id="checkbox4" />
-                        Check me out
-                        </Label>
-                      </FormGroup>
+                        <Label for="checkbox4" className="mb-3">Border Indented Checkbox</Label>
+                        <FormGroup check>
+                          <Checkbox size="sm">Check me out</Checkbox>
+                        </FormGroup>
                       </div>
                     </Col>
                     </FormGroup>
