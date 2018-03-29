@@ -32,11 +32,9 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-}
-
-.input-group > div:focus-within,
-.input-group > .form-control:focus-within {
-  z-index: 3;
+  .input-group-prepend:hover & {
+    z-index: 1;
+  }
 }
 
 .form-control-sm {
