@@ -119,6 +119,14 @@ p {
   color: $body-color !important;
 }
 
+.text-label {
+  font-size: $font-size-base;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: $body-color;
+}
+
 .nowrap {
   white-space: nowrap;
 }
