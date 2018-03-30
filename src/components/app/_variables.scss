@@ -35,6 +35,14 @@ $danger:        $red;
 $light:         $gray-200;
 $dark:          #7a7a7c;
 
+$archived:      $white;
+$draft:         #d9d8d8;
+$deleted:       $white;
+$expired:       #d9d8d8;
+$pending:       #fad0cb;
+$published:     $white;
+$scheduled:     #fffccf;
+
 $theme-colors: () !default;
 $theme-colors: map-merge((
   "primary":    $primary,
