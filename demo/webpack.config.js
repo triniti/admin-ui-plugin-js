@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const fs = require('fs');
 const { resolve } = require('path');
 
 module.exports = () => ({
@@ -121,6 +122,10 @@ module.exports = () => ({
 
     // do not emit compiled assets that include errors
     new webpack.NoEmitOnErrorsPlugin(),
+
+    new webpack.DefinePlugin({
+      DEMO_SCREENS: JSON.stringify(fs.readdirSync('./src/screens/')),
+    }),
 
     new ExtractTextPlugin({
       filename: 'bundle.css',
