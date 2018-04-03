@@ -90,14 +90,14 @@ class Tables extends React.Component {
                 <td>Gregg</td>
                 <td>@archived</td>
               </tr>
-              <tr className="status-draft">
-                <th scope="row">Draft</th>
+              <tr className="status-deleted">
+                <th scope="row">Deleted</th>
                 <td>Albert</td>
                 <td>Wei</td>
                 <td>@draft</td>
               </tr>
-              <tr className="status-deleted">
-                <th scope="row">Deleted</th>
+              <tr className="status-draft">
+                <th scope="row">Draft</th>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@deleted</td>
