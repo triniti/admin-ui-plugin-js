@@ -14,7 +14,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { location, navConfig, routes, authHoc } = this.props;
+    const { location, navConfig } = this.props;
     return (
       <div id="wrapper" data-slidedirection="">
         {location.pathname !== '/login' && <NavbarContainer navConfig={navConfig} />}
