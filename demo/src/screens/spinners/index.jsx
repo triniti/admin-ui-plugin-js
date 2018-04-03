@@ -2,13 +2,12 @@ import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, IconGroup, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
-import './styles.scss';
 
 const UiSpinners = () => (
   <Screen
     sidenav={<Sidenav activeScreen="spinners" />}
     sidenavHeader
-    header="Icons"
+    header="Spinners"
   // tabs={[
   //   { to: '/welcome', text: 'Tab1' },
   //   { to: '#/test2', text: 'Tab2' },
