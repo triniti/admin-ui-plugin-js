@@ -30,6 +30,7 @@ const screens = [
   'pagination',
   'popovers',
   'progress-bars',
+  'spinners',
   'stepper',
   'tables',
   'tabs',
