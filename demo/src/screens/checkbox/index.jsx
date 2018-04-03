@@ -1,0 +1,173 @@
+import React from 'react';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Collapse, Divider, Form, FormGroup, Icon, Row, Screen, Table } from '../../../../src/components';
+
+class UiCheckBox extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapseCode1: false
+    };
+
+    this.toggleCode1 = this.toggleCode1.bind(this);
+  }
+
+  toggleCode1() {
+    this.setState({ collapseCode1: !this.state.collapseCode1 });
+  }
+
+  render() {
+    return (
+      <Screen
+        sidenav={<Sidenav activeScreen="checkbox" />}
+        sidenavHeader
+        header="Checkbox"
+      // tabs={[
+      //   { to: '/welcome', text: 'Tab1' },
+      //   { to: '#/test2', text: 'Tab2' },
+      // ]}
+        primaryActions={<PrimaryActions />}
+        body={[
+          <Card key="button0">
+            <CardHeader>
+            Checkbox Component
+              <Form>
+                <FormGroup check inline>
+                  <Checkbox size="sm" round>Maybe</Checkbox>
+                </FormGroup>
+                <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                  <Icon imgSrc="code" size="md"/>
+                </Button>
+              </Form>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { Label, Radio } from '@triniti/admin-ui-plugin/components';
+
+const Example = (props) => {
+  return (
+    <FormGroup inline>
+      <FormGroup check className="mr-3">
+        <Checkbox size="xs">size="xs"</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox size="sm">size="sm"</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox>default</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox size="md">size="md"</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox size="lg">size="lg"</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox disabled>disabled</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox disabled checked>disabled checked</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox round>round</Checkbox>
+      </FormGroup>
+
+      <FormGroup check className="mr-3">
+        <Checkbox right>right</Checkbox>
+      </FormGroup>
+
+    </FormGroup>
+  );
+};`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody>
+              <Form>
+                <FormGroup inline>
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="xs">size="xs"</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="sm">size="sm"</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox>default</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="md">size="md"</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox size="lg">size="lg"</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox disabled>disabled</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox disabled checked>disabled checked</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox round>round</Checkbox>
+                  </FormGroup>
+
+                  <FormGroup check className="mr-3">
+                    <Checkbox right>right</Checkbox>
+                  </FormGroup>
+
+                </FormGroup>
+              </Form>
+            </CardBody>
+          </Card>,
+
+          <Card key="props1">
+            <CardHeader>Checkbox Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row"></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row"></th>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+      ]}
+      />
+    );
+  }
+}
+
+export default UiCheckBox;
