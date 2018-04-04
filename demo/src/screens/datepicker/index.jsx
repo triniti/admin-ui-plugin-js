@@ -2,7 +2,7 @@ import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import moment from 'moment';
-import { Button, Card, CardBody, CardHeader, DatePicker, Icon, InputGroup, InputGroupAddon, Input, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, DatePicker, Icon, Input, InputGroup, InputGroupAddon, InputGroupText, Screen } from '../../../../src/components';
 
 class UiDatePicker extends React.Component {
   constructor (props) {
@@ -39,10 +39,10 @@ class UiDatePicker extends React.Component {
           </Card>,
 
           <Card key="datepicker2">
-            <CardHeader>Datepicker with Time inside Ipnut Group</CardHeader>
+            <CardHeader>Datepicker with Time inside Input Group</CardHeader>
             <CardBody indent>
               <InputGroup size="sm" radius="round">
-                <InputGroupAddon addonType="prepend"><Button outline><Icon imgSrc="calendar" size="sd"/></Button></InputGroupAddon>
+                <InputGroupAddon addonType="prepend"><InputGroupText><Icon imgSrc="calendar" size="sd" className="mx-1"/></InputGroupText></InputGroupAddon>
                 <InputGroupAddon addonType="append"><DatePicker selected={this.state.startDate} onChange={this.handleChange} showTimeSelect dateFormat="LLL"/></InputGroupAddon>
               </InputGroup>
             </CardBody>
