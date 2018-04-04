@@ -34,6 +34,7 @@ import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
+import DatePicker from './datepicker';
 import Divider from './divider';
 import Dropdown from './dropdown';
 import DropdownItem from './dropdown-item';
@@ -145,6 +146,7 @@ export {
   Col,
   Collapse,
   Container,
+  DatePicker,
   Divider,
   Dropdown,
   DropdownItem,
