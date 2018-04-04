@@ -15,15 +15,15 @@ $gray-800: #505052;
 $gray-900: #29292b;
 $black:    #000;
 
-$blue:    #166cd6;
-$indigo:  #584bc3;
-$purple:  #8052da;
-$pink:    #de41b2;
+$blue:    #1e75e0;
+$indigo:  #6757e6;
+$purple:  #9947f3;
+$pink:    #fd3576;
 $red:     #f74b4b;
 $orange:  #f99520;
-$yellow:  #fbba23;
+$yellow:  #ffe261;
 $green:   #03caa5;
-$teal:    #00c1b3;
+$teal:    #11cadf;
 $cyan:    #08a0e8;
 
 $primary:       $green;
@@ -41,7 +41,7 @@ $draft:         darken($gray-100, 1%);
 $expired:       darken($gray-500, 2%);
 $pending:       lighten($danger, 33%);
 $published:     $white;
-$scheduled:     lighten($yellow, 39%);
+$scheduled:     lighten($yellow, 25%);
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
