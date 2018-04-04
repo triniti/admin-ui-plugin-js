@@ -3,7 +3,7 @@ import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Card, CardBody, CardHeader, Icon, Screen, Stepper } from '../../../../src/components';
 
-const UiIcons = () => (
+const UiStepper = () => (
   <Screen
     sidenav={<Sidenav activeScreen="stepper" />}
     sidenavHeader
@@ -18,7 +18,7 @@ const UiIcons = () => (
         <CardHeader>Stepper</CardHeader>
         <CardBody indent>
           <Stepper>
-
+            Stepper Goes Here
           </Stepper>
         </CardBody>
       </Card>,
@@ -27,4 +27,4 @@ const UiIcons = () => (
   />
 );
 
-export default UiIcons;
+export default UiStepper;
