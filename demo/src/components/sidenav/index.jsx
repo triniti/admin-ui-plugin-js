@@ -16,6 +16,7 @@ const screens = [
   'cards',
   'checkbox',
   'collapse',
+  'datepicker',
   'dropdowns',
   'forms',
   'headers',
