@@ -16,6 +16,9 @@ const defaultProps = {
   circleTop: 0,
   completeBarColor: '#03caa5',
   completeColor: '#03caa5',
+  defaultBarColor: '#d9d9db',
+  defaultColor: '#d9d9db',
+  defaultTitleColor: '#7a7a7c',
   size: 27,
   titleFontSize: 12,
 };
@@ -29,6 +32,9 @@ const Stepper = (props) => {
     circleTop,
     completeBarColor,
     completeColor,
+    defaultBarColor,
+    defaultColor,
+    defaultTitleColor,
     size,
     titleFontSize,
     ...attributes
@@ -46,6 +52,9 @@ const Stepper = (props) => {
         circleTop={circleTop}
         completeBarColor={completeBarColor}
         completeColor={completeColor}
+        defaultBarColor={defaultBarColor}
+        defaultColor={defaultColor}
+        defaultTitleColor={defaultTitleColor}
         size={size}
         titleFontSize={titleFontSize}
         {...attributes}/>
