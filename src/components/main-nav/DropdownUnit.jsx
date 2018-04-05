@@ -25,10 +25,17 @@ const DropdownUnit = ({
       </NavLink>
     );
   });
+  const { to } = links[0];
 
   return (
     <NavDropdown isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
-      <DropdownToggle onClick={handleToggleClick} nav>
+      <DropdownToggle
+        onClick={handleToggleClick}
+        tag={NavLink}
+        to={to}
+        title={title}
+        className="nav-link"
+      >
         {title}
       </DropdownToggle>
       <DropdownMenu className="nav-dropdown-menu">
