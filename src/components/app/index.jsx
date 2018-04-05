@@ -7,14 +7,24 @@ import './styles.scss';
 import NavbarContainer from '../../containers/navbar';
 import createRoutes from './createRoutes';
 
-const App = ({ location, navConfig, routes, authHoc }) => (
-  <div id="wrapper" data-slidedirection="">
-    {location.pathname !== '/login' && <NavbarContainer navConfig={navConfig} />}
-    <Switch>
-      {createRoutes(routes, authHoc)}
-    </Switch>
-  </div>
-);
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.routes = createRoutes(props.routes, props.authHoc);
+  }
+
+  render() {
+    const { location, navConfig } = this.props;
+    return (
+      <div id="wrapper" data-slidedirection="">
+        {location.pathname !== '/login' && <NavbarContainer navConfig={navConfig} />}
+        <Switch>
+          { this.routes }
+        </Switch>
+      </div>
+    );
+  }
+}
 
 App.propTypes = {
   location: PropTypes.object.isRequired,
