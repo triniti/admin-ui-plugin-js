@@ -24,21 +24,21 @@ const UiStepper = () => (
       <Card key="stepper">
         <CardHeader>Stepper - Four Steps</CardHeader>
         <CardBody indent>
-          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}] } activeStep={ 1 } />
+          <Stepper steps={ [{title: 'Like A Dream Come True'}, {title: 'Just Wanna Be With You'}, {title: 'Its Plain To See'}, {title: 'Repeat steps 1 to 3'}] } activeStep={ 1 } />
         </CardBody>
       </Card>,
 
       <Card key="stepper">
         <CardHeader>Stepper - Five Steps</CardHeader>
         <CardBody indent>
-          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}, {title: 'Step Five'}] } activeStep={ 2 } />
+          <Stepper steps={ [{title: 'Uno'}, {title: 'Dos'}, {title: 'Tres'}, {title: 'Quatro'}, {title: 'Cinco'}] } activeStep={ 2 } />
         </CardBody>
       </Card>,
 
       <Card key="stepper">
         <CardHeader>Stepper - Six Steps</CardHeader>
         <CardBody indent>
-          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}, {title: 'Step Five'}, {title: 'Step Six'}] } activeStep={ 3 } />
+          <Stepper steps={ [{title: 'First'}, {title: 'Second'}, {title: 'Third'}, {title: 'Fourth'}, {title: 'Fifth'}, {title: 'Sixth'}] } activeStep={ 3 } />
         </CardBody>
       </Card>,
 
