@@ -12,9 +12,10 @@ const propTypes = {
 };
 
 const defaultProps = {
-  activeColor: '#ffcc99',
-  size: 36,
+  activeColor: '#03caa5',
   circleTop: 0,
+  completeColor: '#08a0e8',
+  size: 36,
 };
 
 const Stepper = (props) => {
@@ -23,6 +24,7 @@ const Stepper = (props) => {
     cssModule,
     activeColor,
     circleTop,
+    completeColor,
     size,
     ...attributes
   } = props;
@@ -36,6 +38,7 @@ const Stepper = (props) => {
       <ReactStepper
         activeColor={activeColor}
         circleTop={circleTop}
+        completeColor={completeColor}
         size={size}
         {...attributes}/>
     </div>
