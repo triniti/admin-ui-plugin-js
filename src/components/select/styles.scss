@@ -1,0 +1,51 @@
+// Select
+
+// Select Control
+
+$input-focus-color: $info;
+
+.Select-control {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+  color: $body-color;
+  border-radius: $border-radius;
+}
+
+.Select--multi .Select-value {
+  line-height: $input-btn-line-height;
+  font-size: $font-size-sm;
+}
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: $input-focus-color;
+  box-shadow: $input-focus-box-shadow;
+}
+
+.Select-input {
+  height: 38px;
+}
+
+.Select-input > input {
+  padding: 9px 0 12px 0;
+}
+
+.Select--single > .Select-control .Select-value,
+.Select-placeholder {
+  line-height: 38px;
+}
+
+.Select--multi .Select-value {
+  margin-top: 6px;
+  color: darken($input-focus-color, 5%);
+  background-color: rgba($input-focus-color, 0.1);
+  border: 1px solid rgba($input-focus-color, 0.2);
+}
+
+.Select.is-disabled > .Select-control {
+  background-color: #fbfbfb;
+  border: 1px solid #ececef;
+  cursor: not-allowed;
+}
+
+
+@import "~react-select/dist/react-select.css";

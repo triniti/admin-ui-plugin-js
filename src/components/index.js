@@ -88,6 +88,7 @@ import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
+import Select from './select';
 import Screen from './screen';
 import ScrollableContainer from './scrollable-container';
 import Spinner from './spinner';
@@ -202,6 +203,7 @@ export {
   Row,
   Screen,
   ScrollableContainer,
+  Select,
   Spinner,
   StatusMessage,
   Stepper,

@@ -33,6 +33,7 @@ const screens = [
   'popovers',
   'progress-bars',
   'radio',
+  'select',
   'spinners',
   'stepper',
   'switch',

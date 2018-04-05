@@ -17,7 +17,7 @@ const UiStepper = () => (
       <Card key="stepper">
         <CardHeader>Stepper - Three Steps</CardHeader>
         <CardBody indent>
-          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}] } activeStep={ 0 } />
+          <Stepper steps={ [{title: 'Role Id'}, {title: 'Allowed Permissions'}, {title: 'Denied Permissions'}] } activeStep={ 1 } />
         </CardBody>
       </Card>,
 
