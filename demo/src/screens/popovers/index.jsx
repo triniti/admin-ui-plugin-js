@@ -216,21 +216,21 @@ export default class Example extends React.Component {
                         <Icon imgSrc="collection" alert size="sm" radius="rounded" border/>
                         <Icon imgSrc="twitter" size="lg" className="bg-white"/>
                       </IconGroup>
-                      <div>Twitter Collection</div>
+                      <div>Twitter Collection Timeline</div>
                     </a>
                     <a className="button-icon-group">
                       <IconGroup left>
                         <Icon imgSrc="bolt-outline" alert size="sm" radius="rounded" border/>
                         <Icon imgSrc="twitter" size="lg" className="bg-white"/>
                       </IconGroup>
-                      <div>Twitter Timeline</div>
+                      <div>Twitter Moment</div>
                     </a>
                     <a className="button-icon-group">
                       <IconGroup left>
                         <Icon imgSrc="search" alert size="sm" radius="rounded" border/>
                         <Icon imgSrc="twitter" size="lg" className="bg-white"/>
                       </IconGroup>
-                      <div>Twitter User Search</div>
+                      <div>Twitter Search Timeline</div>
                     </a>
                     <a className="button-icon-group">
                       <IconGroup left>
@@ -244,7 +244,7 @@ export default class Example extends React.Component {
                         <Icon imgSrc="user" alert size="sm" radius="rounded" border/>
                         <Icon imgSrc="twitter" size="lg" className="bg-white"/>
                       </IconGroup>
-                      <div>Twitter User</div>
+                      <div>Twitter User Timeline</div>
                     </a>
                     <a className="button-icon-group">
                       <IconGroup left>
@@ -286,17 +286,17 @@ export default class Example extends React.Component {
                     </a>
                     <a className="button-icon-group">
                       <IconGroup left>
-                        <Icon imgSrc="user" alert size="sm" radius="rounded" border/>
+                        <Icon imgSrc="apps" alert size="sm" radius="rounded" border/>
                         <Icon imgSrc="pinterest" size="lg" className="bg-white"/>
                       </IconGroup>
-                      <div>Pinterest User</div>
+                      <div>Pinterest Board</div>
                     </a>
                     <a className="button-icon-group">
                       <IconGroup left>
-                        <Icon imgSrc="camera" alert size="sm" radius="rounded" border/>
+                        <Icon imgSrc="photo" alert size="sm" radius="rounded" border/>
                         <Icon imgSrc="instagram" size="lg" className="bg-white"/>
                       </IconGroup>
-                      <div>Instagram Post</div>
+                      <div>Instagram Media</div>
                     </a>
                     <a className="button-icon-group">
                       <Icon imgSrc="code" alert size="sm" radius="rounded" border/>
