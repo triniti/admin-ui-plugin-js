@@ -50,19 +50,10 @@ class UiSwitch extends React.Component {
         body={[
           <Card key="button0">
             <CardHeader>
-            Switch Component
-              <span>
-                <Button size="sm" outline radius="round" onClick={() => this.onCheckboxBtnClick(4)} active={this.state.cSelected.includes(4)}>Check Button</Button>
-                <Button size="sm" outline radius="round" onClick={() => this.onRadioBtnClick(4)} active={this.state.rSelected === 4}>Radio Button</Button>
-                <Form>
-                  <FormGroup inline>
-                    <Switch id="toggler0" size="md" />
-                  </FormGroup>
-                </Form>
-                <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+              Switch Component
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
-              </span>
             </CardHeader>
              <Collapse isOpen={this.state.collapseCode1}>
               <CardBody className="pl-0 pr-0 bg-light">
