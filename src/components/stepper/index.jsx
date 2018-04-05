@@ -6,7 +6,6 @@ import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
 };

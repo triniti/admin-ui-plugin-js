@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import ReactDatePicker from 'react-datepicker';
-import moment from 'moment';
+import ReactSelect from 'react-select';
 import { mapToCssModules } from '../utils';
 import './styles.scss';
 
@@ -14,7 +13,7 @@ const propTypes = {
   theme: PropTypes.string,
 };
 
-const DatePicker = (props) => {
+const Select = (props) => {
   const {
     className,
     cssModule,
@@ -25,18 +24,18 @@ const DatePicker = (props) => {
   } = props;
   const classes = mapToCssModules(classNames(
     className,
-    size ? `form-control-${size}` : false,
-    radius ? `form-control-radius-${radius}` : false,
-    theme ? `form-control-theme-${theme}` : false,
-    'form-control',
+    size ? `select-form-control-${size}` : false,
+    radius ? `select-form-control-radius-${radius}` : false,
+    theme ? `select-form-control-theme-${theme}` : false,
+    'select-form-control',
   ), cssModule);
 
 
   return (
-    <ReactDatePicker className={classes} {...attributes}/>
+    <ReactSelect className={classes} {...attributes} />
   );
 };
 
-DatePicker.propTypes = propTypes;
+Select.propTypes = propTypes;
 
-export default DatePicker;
+export default Select;
