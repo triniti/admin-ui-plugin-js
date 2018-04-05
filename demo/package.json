@@ -68,6 +68,7 @@
   ],
   "dependencies": {
     "moment": "^2.22.0",
-    "react-datepicker": "^1.4.0"
+    "react-datepicker": "^1.4.0",
+    "react-stepper-horizontal": "^1.0.10"
   }
 }

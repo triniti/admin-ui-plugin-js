@@ -7,7 +7,7 @@
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before, .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before,
 .react-datepicker__month-read-view--down-arrow::before,
 .react-datepicker__month-year-read-view--down-arrow::before {
-  border-bottom-color: $gray-700;
+  border-bottom-color: #ccc;
 }
 
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle, .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
@@ -16,7 +16,7 @@
 }
 
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before {
-  border-bottom-color: $gray-700;
+  border-bottom-color: #ccc;
 }
 
 .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow,
@@ -31,7 +31,7 @@
 .react-datepicker-popper[data-placement^="top"] .react-datepicker__triangle::before, .react-datepicker__year-read-view--down-arrow::before,
 .react-datepicker__month-read-view--down-arrow::before,
 .react-datepicker__month-year-read-view--down-arrow::before {
-  border-top-color: $gray-700;
+  border-top-color: #ccc;
 }
 
 .react-datepicker {
@@ -39,7 +39,7 @@
   font-size: $font-size-base;
   background-color: $white;
   color: $body-color;
-  border: 1px solid $gray-rgba-400;
+  border: 1px solid $gray-rgba-600;
   border-radius: $border-radius;
   box-shadow: $shadow-depth-4;
 }

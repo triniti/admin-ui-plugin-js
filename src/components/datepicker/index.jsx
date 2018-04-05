@@ -15,10 +15,6 @@ const propTypes = {
   theme: PropTypes.string,
 };
 
-const defaultProps = {
-  tag: 'div',
-};
-
 const DatePicker = (props) => {
   const {
     className,
@@ -43,6 +39,5 @@ const DatePicker = (props) => {
 };
 
 DatePicker.propTypes = propTypes;
-DatePicker.defaultProps = defaultProps;
 
 export default DatePicker;
