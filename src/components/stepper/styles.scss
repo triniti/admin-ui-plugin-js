@@ -1,9 +1,13 @@
 // Stepper
 
-.stepper {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  flex: 0 0 auto;
-  vertical-align: middle;
+.stepper-container {
+
+  & a,
+  & span {
+    line-height: 2.2 !important;
+  }
+
+  & div + a {
+    line-height: 1.5 !important;
+  }
 }

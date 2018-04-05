@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import ReactStepper from 'react-stepper-horizontal';
 import { mapToCssModules } from '../utils';
 import './styles.scss';
 
@@ -8,18 +9,21 @@ const propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
-  tag: 'ul',
+  activeColor: '#ffcc99',
+  size: 36,
+  circleTop: 0,
 };
 
 const Stepper = (props) => {
   const {
     className,
     cssModule,
-    tag: Tag,
+    activeColor,
+    circleTop,
+    size,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -28,7 +32,13 @@ const Stepper = (props) => {
   ), cssModule);
 
   return (
-  <Tag className={classes} {...attributes}/>
+    <div className={classes}>
+      <ReactStepper
+        activeColor={activeColor}
+        circleTop={circleTop}
+        size={size}
+        {...attributes}/>
+    </div>
     );
 };
 
