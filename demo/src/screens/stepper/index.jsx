@@ -15,9 +15,30 @@ const UiStepper = () => (
     primaryActions={<PrimaryActions />}
     body={[
       <Card key="stepper">
-        <CardHeader>Stepper</CardHeader>
+        <CardHeader>Stepper - Three Steps</CardHeader>
+        <CardBody indent>
+          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}] } activeStep={ 0 } />
+        </CardBody>
+      </Card>,
+
+      <Card key="stepper">
+        <CardHeader>Stepper - Four Steps</CardHeader>
         <CardBody indent>
           <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}] } activeStep={ 1 } />
+        </CardBody>
+      </Card>,
+
+      <Card key="stepper">
+        <CardHeader>Stepper - Five Steps</CardHeader>
+        <CardBody indent>
+          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}, {title: 'Step Five'}] } activeStep={ 2 } />
+        </CardBody>
+      </Card>,
+
+      <Card key="stepper">
+        <CardHeader>Stepper - Six Steps</CardHeader>
+        <CardBody indent>
+          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}, {title: 'Step Five'}, {title: 'Step Six'}] } activeStep={ 3 } />
         </CardBody>
       </Card>,
 

@@ -14,8 +14,10 @@ const propTypes = {
 const defaultProps = {
   activeColor: '#03caa5',
   circleTop: 0,
-  completeColor: '#08a0e8',
+  completeBarColor: '#03caa5',
+  completeColor: '#03caa5',
   size: 36,
+  titleFontSize: 12,
 };
 
 const Stepper = (props) => {
@@ -24,8 +26,10 @@ const Stepper = (props) => {
     cssModule,
     activeColor,
     circleTop,
+    completeBarColor,
     completeColor,
     size,
+    titleFontSize,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -38,8 +42,10 @@ const Stepper = (props) => {
       <ReactStepper
         activeColor={activeColor}
         circleTop={circleTop}
+        completeBarColor={completeBarColor}
         completeColor={completeColor}
         size={size}
+        titleFontSize={titleFontSize}
         {...attributes}/>
     </div>
     );
