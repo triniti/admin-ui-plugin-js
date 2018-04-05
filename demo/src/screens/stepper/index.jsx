@@ -17,9 +17,7 @@ const UiStepper = () => (
       <Card key="stepper">
         <CardHeader>Stepper</CardHeader>
         <CardBody indent>
-          <Stepper>
-            Stepper Goes Here
-          </Stepper>
+          <Stepper steps={ [{title: 'Step One'}, {title: 'Step Two'}, {title: 'Step Three'}, {title: 'Step Four'}] } activeStep={ 1 } />
         </CardBody>
       </Card>,
 
