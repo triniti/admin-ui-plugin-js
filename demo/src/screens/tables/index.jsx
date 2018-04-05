@@ -71,6 +71,66 @@ class Tables extends React.Component {
       // ]}
       primaryActions={<PrimaryActions />}
       body={[
+      <Card key="alert8">
+        <CardHeader>Status Colors</CardHeader>
+        <CardBody>
+          <Table>
+            <thead>
+              <tr>
+                <th>Status</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Username</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="status-archived">
+                <th scope="row">Archived</th>
+                <td>Jason</td>
+                <td>Gregg</td>
+                <td>@archived</td>
+              </tr>
+              <tr className="status-deleted">
+                <th scope="row">Deleted</th>
+                <td>Albert</td>
+                <td>Wei</td>
+                <td>@deleted</td>
+              </tr>
+              <tr className="status-draft">
+                <th scope="row">Draft</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@draft</td>
+              </tr>
+              <tr className="status-expired">
+                <th scope="row">Expired</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@expired</td>
+              </tr>
+              <tr className="status-pending">
+                <th scope="row">Pending</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@pending</td>
+              </tr>
+              <tr className="status-published">
+                <th scope="row">Published</th>
+                <td>Miriam</td>
+                <td>HQ</td>
+                <td>@published</td>
+              </tr>
+              <tr className="status-scheduled">
+                <th scope="row">Scheduled</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@scheduled</td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
       <Card key="table1">
         <Table size="sm" stickyTop fixed>
           <thead>

@@ -103,15 +103,16 @@ select:not([multiple]).form-control-lg {
 //
 
 label {
-  margin-bottom: .25rem;
-}
-
-label {
+  position: relative;
   font-size: .9em;
   text-transform: uppercase;
   letter-spacing: .01em;
   font-weight: 500;
   color: theme-color("dark");
+}
+
+.form-control-label {
+  margin-bottom: .25rem;
 }
 
 .col-form-label {
@@ -128,10 +129,6 @@ label {
   letter-spacing: 0;
   font-weight: 400;
   color: $body-color;
-}
-
-.form-check-inline.disabled > label {
-  opacity: .5;
 }
 
 
@@ -205,52 +202,66 @@ input[type='text']:focus,
   color: $body-color;
 }
 
-.form-group .form-control-label {
-  cursor: pointer;
-}
-
-.form-group > label:not(.col-form-label),
-.form-check > label:not(.col-form-label) {
-  margin-right: $form-item-spacing;
-}
-
-.form-check.row {
+.form-check {
+  display: flex;
   padding-left: 0;
+  margin-bottom: 1rem;
+
+  &.row {
+    padding-left: 0;
+  }
 }
 
-.form-inline .form-check-label,
-.form-inline .form-control-label {
-  position: relative;
+.form-check-inline {
   display: inline-flex;
   margin-bottom: 0;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.form-check-label {
+  display: inline-flex;
   align-items: center;
+}
+
+.form-check-input {
+  margin-top: 0;
+}
+
+.form-check-label,
+.form-control-label {
+  position: relative;
+  margin-bottom: 0;
+  align-items: center;
+  align-self: center;
   line-height: 1;
   vertical-align: middle;
 
-  &:hover {
-    cursor: pointer;
+  .form-inline & {
+    display: inline-flex;
   }
 }
 
 input[type="radio"],
 input[type="checkbox"] {
+  position: relative;
+  display: inline-flex;
   flex: 0 0 auto;
+  margin: 0 .5rem 0 0;
+
+  &:hover {
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: not-allowed;
+  }
 }
 
 .form-inline .sr-only {
   position: absolute;
 }
-
-// stacked form-inline
-
-.form-check-inline {
-  margin-bottom: 1rem;
-
-  &:last-child {
-    margin-bottom: $form-group-margin-bottom;
-  }
-}
-
 
 .form-inline .form-group {
   margin-right: $form-item-spacing;
@@ -332,13 +343,13 @@ input[type="checkbox"] {
 
 .screen-header-container form,
 .card-header form {
-  display: inline-block;  // use .d-inline-block
+  display: inline-flex;
   vertical-align: middle;
 }
 
 .screen-header-container .form-group,
 .card-header .form-group {
-  margin-bottom: 0;  // use mb-0
+  margin-bottom: 0;
 }
 
 .card-header .form-check-label,
@@ -361,18 +372,9 @@ input[type="checkbox"] {
   .form-inline & {
     margin-bottom: 0;
   }
-}
 
-// make spacing 1.5rem like other form-groups
-
-.form-check-inline + .form-group,
-.form-radio-inline + .form-group {
-    padding-top: .5rem;
-}
-
-.form-inline {
-  &.form-check-inline,
-  &.form-radio-inline {
-    margin-bottom: 0;
+  .form-check-inline + &,
+  .form-radio-inline + & {
+      padding-top: .5rem;
   }
 }

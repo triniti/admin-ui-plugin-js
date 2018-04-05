@@ -21,7 +21,6 @@ class ScreenPrimaryActions extends React.Component {
   }
 
   toggleClass() {
-    console.log('hey girl!');
     this.setState({
       active: !this.state.active,
     });

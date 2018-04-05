@@ -1,109 +1,131 @@
 //
-// radio-input
+// Radio
 //
 
-input.radio-input {
-  position: absolute;
-  visibility: hidden;
-  max-width: 0;
-  max-height: 0;
-  padding: 0;
-  margin: 0 !important;
-  opacity: 0;
-  -webkit-appearance: none;
+.radio-input-label {
+  display: inline-flex;
+  align-items: center;
+
+  .form-check-label > & {
+    margin-right: .5rem;
+  }
 }
 
-input.radio-input + label {
-  positon: relative;
+input.radio-input {
+  position: absolute !important;
+  cursor: inherit;
+  pointer-events: all;
+  opacity: 0 !important;
+  width: 100% !important;
+  height: 100%;
+  z-index: 2;
+  left: 0 !important;
+  box-sizing: border-box;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.radio-input + .radio-input-icon {
+  position: relative;
+  display: inline-flex;
   flex: 0 0 auto;
   width: $form-check-height;
   height: $form-check-height;
   border-radius: $round;
-  box-shadow: inset 0 0 0 2px $gray-700;
+  box-shadow: inset 0 0 0 2px $gray-600;
   background-color: $white;
   transition: box-shadow $transition, background-color $transition;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    display: block;
+    width: 50%;
+    height: 50%;
+    margin-bottom: 0;
+    transition: all $transition;
+    border-radius: $round;
+    background-color: $gray-200;
+    transform: scale(.75);
+  }
+
+  &:hover::before {
+    background-color: $gray-300;
+  }
 }
 
-input.radio-input + label:before {
-  position: absolute;
-  top: 25%;
-  left: 25%;
-  display: block;
-  width: 50%;
-  height: 50%;
-  margin-bottom: 0;
-  content: '';
-  transition: all $transition;
-  border-radius: $round;
-  background-color: $gray-200;
-  transform: scale(.75);
-}
-
-input.radio-input + label:hover:before {
+.radio-input:hover + .radio-input-icon::before {
   background-color: $gray-300;
 }
 
-input.radio-input:checked + label {
+
+// checked
+
+.radio-input:checked + .radio-input-icon {
   box-shadow: $form-check-shadow !important;
   background-color: theme-color("secondary");
+
+  &:before {
+    background-color: $white;
+    transform: scale(1);
+  }
 }
 
-input.radio-input:checked + label:before {
-  background-color: $white;
-  transform: scale(1);
-}
 
 // radio-input xs
 
-input.form-control-xs.radio-input + label {
+.form-control-xs.radio-input + .radio-input-icon {
   width: $form-check-height-xs;
   height: $form-check-height-xs;
 }
 
+
 // radio-input sm
 
-input.form-control-sm.radio-input + label {
+.form-control-sm.radio-input + .radio-input-icon {
   width: $form-check-height-sm;
   height: $form-check-height-sm;
 }
 
+
 // radio-input md
 
-input.form-control-md.radio-input + label {
+.form-control-md.radio-input + .radio-input-icon {
   width: $form-check-height-md;
   height: $form-check-height-md;
   box-shadow: inset 0 0 0 3px $gray-700;
 }
 
+
 // radio-input lg
 
-input.form-control-lg.radio-input + label {
+.form-control-lg.radio-input + .radio-input-icon {
   width: $form-check-height-lg;
   height: $form-check-height-lg;
   box-shadow: inset 0 0 0 3px $gray-700;
 }
 
-// radio-input-label
 
-.radio-input-label {
-  align-self: flex-start;
+// right prop
+.radio-label-right .checkbox-input-icon {
+  order: 2;
 }
+
+.radio-label {
+  display: inline-flex;
+  margin-left: .5rem;
+}
+
+.radio-label-right .checkbox-label {
+  margin-left: 0;
+  margin-right: .5rem;
+}
+
 
 // disabled
 
-.radio-input:disabled + .radio-input-label,
-.radio-input[readonly] + .radio-input-label {
-  opacity: .5;
-  pointer-events: none;
-
-  &:hover {
-    cursor: not-allowed;
-  }
-}
-
-// radio label
-
-.form-group .radio-input-label,
-.form-check .radio-input-label {
-  margin-right: .4rem;
+.radio-disabled {
+  opacity: .5 !important;
 }

@@ -172,7 +172,7 @@ const Example = (props) => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr className="alert alert-success">
+                  <tr className="alert-success">
                     <th scope="row">1</th>
                     <td>Mark</td>
                     <td>Otto</td>
@@ -182,13 +182,13 @@ const Example = (props) => {
                     <th scope="row">2</th>
                     <td className="alert-danger">Jacob</td>
                     <td>Thornton</td>
-                    <td className="alert alert-dark">@dark</td>
+                    <td className="alert-dark">@dark</td>
                   </tr>
                   <tr>
-                    <th scope="row" className="alert alert-warning">3</th>
-                    <td className="alert alert-warning">Larry</td>
-                    <td className="alert alert-info">the Bird</td>
-                    <td className="alert alert-light">@light</td>
+                    <th scope="row" className="alert-warning">3</th>
+                    <td className="alert-warning">Larry</td>
+                    <td className="alert-info">the Bird</td>
+                    <td className="alert-light">@light</td>
                   </tr>
                 </tbody>
               </Table>

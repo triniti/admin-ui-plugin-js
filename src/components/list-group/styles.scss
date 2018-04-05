@@ -101,7 +101,8 @@
     border-radius: 0;
   }
 
-  .list-group-item::before {
+  .list-group-item::before,
+  .list-group-item::after {
     border: none;
   }
 }
@@ -185,5 +186,41 @@
     & small {
       font-size: .625rem;
     }
+  }
+}
+
+// Styles for list-group-history
+
+.list-group-history {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: -4px;
+    bottom: -4px;
+    left: 0;
+    margin-left: -3px;
+    display: block;
+    width: 3px;
+    content: '';
+    border-radius: 3px;
+    background-color: $gray-400;
+  }
+
+  & .list-group-item {
+    padding-top: 0;
+  }
+
+  & > .list-group-item::after {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    content: '';
+    width: .875rem;
+    height: .875rem;
+    margin-left: -9px;
+    border-radius: $round;
+    background: $white;
+    border: 3px solid $gray-400;
   }
 }

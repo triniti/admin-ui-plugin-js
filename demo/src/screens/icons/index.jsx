@@ -60,7 +60,6 @@ const UiIcons = () => (
             <IconList iconName="check-solid-square"/>
             <IconList iconName="circle"/>
             <IconList iconName="circle-outline"/>
-            <IconList iconName="compress"/>
             <IconList iconName="clipboard"/>
             <IconList iconName="clock-outline"/>
             <IconList iconName="clock-solid"/>
@@ -71,8 +70,10 @@ const UiIcons = () => (
             <IconList iconName="code"/>
             <IconList iconName="cog"/>
             <IconList iconName="cog-outline"/>
+            <IconList iconName="collection"/>
             <IconList iconName="comment"/>
             <IconList iconName="comment-oval"/>
+            <IconList iconName="compress"/>
             <IconList iconName="data-download"/>
             <IconList iconName="data-upload"/>
             <IconList iconName="data-transfer-download"/>
@@ -139,9 +140,11 @@ const UiIcons = () => (
             <IconList iconName="phone-solid"/>
             <IconList iconName="photo"/>
             <IconList iconName="pin"/>
+            <IconList iconName="pin-outline-slanted"/>
             <IconList iconName="pin-slanted"/>
             <IconList iconName="play"/>
             <IconList iconName="play-outline"/>
+            <IconList iconName="play-stroke"/>
             <IconList iconName="playlist"/>
             <IconList iconName="plus"/>
             <IconList iconName="plus-line"/>
@@ -160,6 +163,7 @@ const UiIcons = () => (
             <IconList iconName="save-diskette"/>
             <IconList iconName="search"/>
             <IconList iconName="services"/>
+            <IconList iconName="settings"/>
             <IconList iconName="social"/>
             <IconList iconName="sort"/>
             <IconList iconName="sort-horizontal"/>
@@ -171,6 +175,8 @@ const UiIcons = () => (
             <IconList iconName="status"/>
             <IconList iconName="strikethrough"/>
             <IconList iconName="tag-outline"/>
+            <IconList iconName="tag-outline-slanted"/>
+            <IconList iconName="tag-slanted"/>
             <IconList iconName="tag-solid"/>
             <IconList iconName="timeline"/>
             <IconList iconName="triniti"/>
@@ -278,8 +284,10 @@ const UiIcons = () => (
               <IconTooltip iconName="grid-four-up"/>
               <IconTooltip iconName="grid-three-up"/>
               <IconTooltip iconName="grid-two-up"/>
+              <IconTooltip iconName="collection"/>
               <IconTooltip iconName="playlist"/>
               <IconTooltip iconName="timeline"/>
+              <IconTooltip iconName="settings"/>
             </Col>
           </Row>
           <Row>
@@ -379,8 +387,10 @@ const UiIcons = () => (
               <IconTooltip iconName="location-outline"/>
               <IconTooltip iconName="pin"/>
               <IconTooltip iconName="pin-slanted"/>
+              <IconTooltip iconName="pin-outline-slanted"/>
               <IconTooltip iconName="bolt-outline"/>
               <IconTooltip iconName="bolt-solid"/>
+              <IconTooltip iconName="play-stroke"/>
               <IconTooltip iconName="play"/>
               <IconTooltip iconName="pause"/>
               <IconTooltip iconName="play-outline"/>
@@ -414,11 +424,14 @@ const UiIcons = () => (
               <IconTooltip iconName="add-item"/>
               <IconTooltip iconName="clipboard"/>
               <IconTooltip iconName="tag-outline"/>
+              <IconTooltip iconName="tag-outline-slanted"/>
+              <IconTooltip iconName="tag-slanted"/>
               <IconTooltip iconName="tag-solid"/>
               <IconTooltip iconName="link"/>
               <IconTooltip iconName="paperclip"/>
               <IconTooltip iconName="delete-key"/>
               <IconTooltip iconName="code"/>
+              <IconTooltip iconName="iframe"/>
               <IconTooltip iconName="print"/>
               <IconTooltip iconName="services"/>
             </Col>
@@ -577,7 +590,7 @@ const UiIcons = () => (
                 <Icon imgSrc="facebook" size="lg" className="bg-white"/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
-                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="facebook" size="lg" className="bg-white"/>
               </IconGroup>
               <Icon imgSrc="google-maps" size="xxl" className="mb-4 mr-3"/>
@@ -586,6 +599,7 @@ const UiIcons = () => (
                 <Icon imgSrc="google" size="lg" className="bg-white"/>
               </IconGroup>
               <Icon imgSrc="iframe-text" size="xxl" className="mb-4 mr-3"/>
+              <Icon imgSrc="iframe" alert size="sm" radius="rounded" border className="ml-0 mb-4 mr-3"/>
               <IconGroup className="mb-4 mr-3" left>
                 <Icon imgSrc="pencil" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="imgur" size="lg" className="bg-white"/>
@@ -595,7 +609,7 @@ const UiIcons = () => (
                 <Icon imgSrc="instagram" size="lg" className="bg-white"/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
-                <Icon imgSrc="pin-slanted" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="pin-outline-slanted" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="pinterest" size="lg" className="bg-white"/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
@@ -627,11 +641,11 @@ const UiIcons = () => (
                 <Icon imgSrc="twitter" size="lg" className="bg-white"/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
-                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="twitter" size="lg" className="bg-white"/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
-                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="vevo" size="lg" className="bg-white"/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
@@ -639,7 +653,7 @@ const UiIcons = () => (
                 <Icon imgSrc="youtube" alert size="xxs" outline/>
               </IconGroup>
               <IconGroup className="mb-4 mr-3" left>
-                <Icon imgSrc="play" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="youtube" alert size="xxs" outline/>
               </IconGroup>
 
@@ -712,7 +726,6 @@ const UiIcons = () => (
               <Icon imgSrc="facebook-post" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="facebook-video" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="google-maps" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="iframe" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="iframe-text" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="imgur-post" alert size="md" radius="rounded" border className="mb-2" />
               <Icon imgSrc="instagram-media" alert size="md" radius="rounded" border className="mb-2" />
@@ -769,33 +782,26 @@ const UiIcons = () => (
 
             </Col>
           </Row>
-          <Row>
-            <Col>
-              <Loading />
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <div className="loading-container">
-                <ul className="loading-animation">
-                  <li className="loading-dot" />
-                  <li className="loading-dot" />
-                  <li className="loading-dot" />
-                </ul>
-                <span className="loading-children">children</span>
-              </div>
-            </Col>
-          </Row>
         </CardBody>
       </Card>,
 
        <Card key="icons9">
         <CardHeader>Spinner Centered</CardHeader>
         <CardBody indent>
-          <CardTitle></CardTitle>
           <Row>
             <Col style={{height:'400px'}}>
               <Spinner centered width="56">Loading...</Spinner>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons10">
+        <CardHeader>Loading</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <Loading />
             </Col>
           </Row>
         </CardBody>
