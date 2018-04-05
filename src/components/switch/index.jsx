@@ -10,16 +10,13 @@ const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
   type: PropTypes.string,
-  id: PropTypes.string,
-  name: PropTypes.string,
+  id: PropTypes.string.isRequired,
   label1: PropTypes.string,
   label2: PropTypes.string,
 };
 
 const defaultProps = {
   type: 'checkbox',
-  id: 'switch',
-  name: 'switch',
 };
 
 const Switch = (props) => {
@@ -28,7 +25,6 @@ const Switch = (props) => {
     cssModule,
     type,
     id,
-    name,
     label1,
     label2,
     ...attributes
@@ -44,8 +40,8 @@ const Switch = (props) => {
   ), cssModule);
 
   return [
-    <Input type={type} id={id} className={classes} key={`${name}-switch-input`} {...attributes} />,
-    <Label for={id} className={labelClasses} key={`${name}-switch-label`}>{label1 && <span>{label1}</span>}{label2 && <span>{label2}</span>}</Label>,
+    <Input type={type} id={id} className={classes} key={`${id}-switch-input`} {...attributes} />,
+    <Label for={id} className={labelClasses} key={`${id}-switch-label`}>{label1 && <span>{label1}</span>}{label2 && <span>{label2}</span>}</Label>,
   ];
 };
 
