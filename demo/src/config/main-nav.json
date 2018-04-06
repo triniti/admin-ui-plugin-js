@@ -6,15 +6,19 @@
   },
   {
     "navType": "dropdown",
-    "navId": "News",
+    "navId": "Samples",
     "dpLinks": [
       {
-        "to": "#",
-        "linkTitle": "Articles"
+        "to": "/alert-bars",
+        "linkTitle": "Alert Bars"
       },
       {
-        "to": "#",
-        "linkTitle": "Create Article"
+        "to": "/alerts",
+        "linkTitle": "Alerts"
+      },
+      {
+        "to": "/badges",
+        "linkTitle": "Badges"
       }
     ]
   },
