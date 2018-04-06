@@ -35,13 +35,13 @@ $danger:        $red;
 $light:         $gray-200;
 $dark:          #7a7a7c;
 
-$archived:      darken($gray-100, 1%);
+$archived:      darken($gray-100, 2%);
 $deleted:       lighten($warning, 38%);
-$draft:         darken($gray-100, 1%);
-$expired:       darken($gray-500, 2%);
-$pending:       lighten($danger, 33%);
+$draft:         darken($gray-400, 2%);
+$expired:       lighten($blue, 46%);
+$pending:       lighten($danger, 34%);
 $published:     $white;
-$scheduled:     lighten($yellow, 25%);
+$scheduled:     lighten($yellow, 26%);
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
