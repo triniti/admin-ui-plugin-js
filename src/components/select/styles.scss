@@ -1,14 +1,73 @@
 // Select
 
 // Select Control
-
+$form-min-height-sm:     28px;
+$form-min-height:        40px;
+$form-min-height-lg:     54px;
+$border-radius-form:      2px;
 $input-focus-color: $info;
+
+.Select {
+  display: flex;
+  flex: 1 0 auto;
+}
 
 .Select-control {
   background-color: $input-bg;
   border: 1px solid $input-border-color;
   color: $body-color;
-  border-radius: $border-radius;
+  border-radius: $border-radius-form;
+  height: $form-min-height;
+
+  .input-group-sm & {
+    height: $form-min-height-sm;
+  }
+  .input-group-lg & {
+    height: $form-min-height-lg;
+    font-size: 1rem;
+  }
+  .input-group & {
+    border-radius: 0;
+  }
+  .input-group-prepend & {
+    border-radius: $border-radius-form 0 0 $border-radius-form;
+  }
+  .input-group-append & {
+    border-radius: 0 $border-radius-form $border-radius-form 0;
+  }
+  .select-form-control-radius-none & {
+    border-radius: 0;
+  }
+  .select-form-control-radius-round & {
+    border-radius: $round;
+    padding: 0 .675rem;
+  }
+  .Select.is-open > & {
+    border-radius: $border-radius-form $border-radius-form 0 0 ;
+  }
+}
+
+.Select-input {
+  height: $form-min-height - 2px;
+
+  .input-group-sm & {
+    height: $form-min-height-sm - 2px;
+  }
+  .input-group-lg & {
+    height: $form-min-height-lg - 2px;
+  }
+}
+
+.Select--single > .Select-control .Select-value,
+.Select-placeholder {
+  line-height: $form-min-height - 2px;
+
+  .input-group-sm & {
+    line-height: $form-min-height-sm - 2px;
+  }
+  .input-group-lg & {
+    line-height: $form-min-height-lg - 2px;
+  }
 }
 
 .Select--multi .Select-value {
@@ -21,17 +80,8 @@ $input-focus-color: $info;
   box-shadow: $input-focus-box-shadow;
 }
 
-.Select-input {
-  height: 38px;
-}
-
 .Select-input > input {
   padding: 9px 0 12px 0;
-}
-
-.Select--single > .Select-control .Select-value,
-.Select-placeholder {
-  line-height: 38px;
 }
 
 .Select--multi .Select-value {
@@ -39,12 +89,36 @@ $input-focus-color: $info;
   color: darken($input-focus-color, 5%);
   background-color: rgba($input-focus-color, 0.1);
   border: 1px solid rgba($input-focus-color, 0.2);
+
+  .input-group-sm & {
+    margin-top: 3px;
+    line-height: 1.2;
+    font-size: 0.75rem;
+  }
+
+  .input-group-lg & {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: .875rem;
+    line-height: 1.4;
+
+    & > span {
+      padding: 6px 8px;
+    }
+  }
 }
 
 .Select.is-disabled > .Select-control {
   background-color: #fbfbfb;
   border: 1px solid #ececef;
   cursor: not-allowed;
+}
+
+.Select-clear {
+
+  .input-group-lg & {
+    font-size: 20px;
+  }
 }
 
 

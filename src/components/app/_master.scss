@@ -309,3 +309,22 @@ input::-webkit-calendar-picker-indicator {
 .status-pending     {background-color: $pending;}
 .status-published   {background-color: $published;}
 .status-scheduled   {background-color: $scheduled;}
+
+
+// Flex Grow & Shrink
+
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+.flex-shrink-0 {
+  flex-grow: 0;
+}
+
+.flex-shrink-1 {
+  flex-grow: 1;
+}
