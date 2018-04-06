@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v0.4.12
+* Add css classes for node statuses (status-draft, status-published, etc.).
+
+
+## v0.4.11
+* Update App to do createRoutes in constructor instead of render so the children wont get wiped out on every render.
+
+
 ## v0.4.10
 * Add space for Stepper component.
 * Add icon-group and additional file type icons for block-editor.

@@ -119,6 +119,14 @@ p {
   color: $body-color !important;
 }
 
+.text-label {
+  font-size: $font-size-base;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: $body-color;
+}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -290,3 +298,14 @@ input::-webkit-calendar-picker-indicator {
   .flex-order-mobile-7 {order: 7 !important;}
   .flex-order-mobile-8 {order: 8 !important;}
 }
+
+
+// Status Background Colors
+
+.status-archived    {background-color: $archived;}
+.status-deleted     {background-color: $deleted;}
+.status-draft       {background-color: $draft;}
+.status-expired     {background-color: $expired;}
+.status-pending     {background-color: $pending;}
+.status-published   {background-color: $published;}
+.status-scheduled   {background-color: $scheduled;}
