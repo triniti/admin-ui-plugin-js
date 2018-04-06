@@ -13,12 +13,7 @@ class UiStepper extends React.Component {
     this.toggleCode5 = this.toggleCode5.bind(this);
     this.toggleCode6 = this.toggleCode6.bind(this);
     this.state = {
-      collapseCode1: false,
-      collapseCode2: false,
-      collapseCode3: false,
-      collapseCode4: false,
-      collapseCode5: false,
-      collapseCode6: false,
+      collapseCode1: null
     };
   }
 
@@ -58,7 +53,7 @@ class UiStepper extends React.Component {
   // ]}
     primaryActions={<PrimaryActions />}
     body={[
-      <Card key="stepper">
+      <Card key="stepper1">
         <CardHeader>
           Stepper - Three Steps
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
@@ -88,7 +83,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper">
+      <Card key="stepper2">
         <CardHeader>
           Stepper - Four Steps
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
@@ -118,7 +113,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper">
+      <Card key="stepper3">
         <CardHeader>
           Stepper - Five Steps
         <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
@@ -148,7 +143,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper">
+      <Card key="stepper4">
         <CardHeader>
           Stepper - Six Steps
         <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>

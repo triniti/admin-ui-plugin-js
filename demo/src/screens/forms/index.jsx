@@ -269,13 +269,13 @@ class UiForm extends React.Component {
                     </FormText>
                     </FormGroup>
                     <FormGroup check>
-                      <Radio type="checkbox" name="radio1" id="radio2">Option one is this and that—be sure to include why it's great</Radio>
+                      <Radio type="checkbox">Option one is this and that—be sure to include why it's great</Radio>
                     </FormGroup>
                     <FormGroup check>
                       <Checkbox>Check me out</Checkbox>
                     </FormGroup>
-                    <FormGroup check>
-                      <Label check className="text-label">
+                    <FormGroup>
+                      <Label className="text-label">
                       <Switch id="checkbox3"/>
                         Try me for a Toggle
                     </Label>
@@ -429,7 +429,7 @@ class UiForm extends React.Component {
                     <FormGroup row>
                       <Label for="exampleSelectMulti" sm={2}>Readonly</Label>
                       <Col sm={10}>
-                      <Input readonly="readonly" type="textarea" name="text" id="readonlyText3" rows="5">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</Input>
+                      <Input readOnly="readonly" type="textarea" name="text" id="readonlyText3" rows="5" value="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."></Input>
                     </Col>
                     </FormGroup>
                     <FormGroup row>
