@@ -30,9 +30,7 @@ const DropdownUnit = ({
   return (
     <NavDropdown isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
       <DropdownToggle
-        onClick={() => {
-          handleToggleClick();
-        }}
+        onClick={handleToggleClick}
         tag={NavLink}
         to={to}
         title={title}
