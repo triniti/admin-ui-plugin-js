@@ -44,8 +44,8 @@ class UiSelect extends React.Component {
             <CardBody indent>
               <Label>Input Group & size="lg"</Label>
               <InputGroup size="lg">
-                <InputGroupAddon addonType="prepend"><Button color="secondary"><Icon imgSrc="search" size="md"/></Button></InputGroupAddon>
-                <InputGroupAddon addonType="append" className="flex-grow-1 d-block"><InputSelectField /></InputGroupAddon>
+                <InputGroupAddon addonType="prepend" className="flex-grow-1 d-block"><InputSelectField /></InputGroupAddon>
+                <InputGroupAddon addonType="append"><Button outline><Icon imgSrc="search" size="md"/></Button></InputGroupAddon>
               </InputGroup>
             </CardBody>
             <CardBody indent>
