@@ -30,10 +30,7 @@ const DropdownUnit = ({
   return (
     <NavDropdown isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
       <DropdownToggle
-        onClick={(e) => {
-          if (classes && classes.trim().toLowerCase() === 'is-current') {
-            e.preventDefault();
-          }
+        onClick={() => {
           handleToggleClick();
         }}
         tag={NavLink}
