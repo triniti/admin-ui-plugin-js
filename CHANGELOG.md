@@ -1,6 +1,21 @@
 # CHANGELOG
 
 
+## v0.4.13
+* Add beginning styles for list-group history.
+* Fix a few list-group themes.
+* Add a few outline icons for icon-groups.
+* Update iframe, settings and timeline svgs.
+* Update Checkbox and Radio components, removing need for id and allowing for children as label.
+* Status color variables added here, if conflict - choose their code. Merged with master prior to PR.
+* Add more prop listings to UI pages.
+* Move Spinner, Switch, Checkbox and Radio to own UI example page.
+* Add React Datepicker as DatePicker component, styled to match.
+* Add React Select as Select component, styled to match.
+* Add React Stepper Horizontal as Stepper component, styled to match.
+* Add scrollable popover example showing Block Editor content types.
+
+
 ## v0.4.12
 * Add css classes for node statuses (status-draft, status-published, etc.).
 
