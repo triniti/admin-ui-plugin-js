@@ -12,11 +12,7 @@ class UiListGroup extends React.Component {
         this.toggleEvent4 = this.toggleEvent4.bind(this);
         this.toggleEvent5 = this.toggleEvent5.bind(this);
         this.state = {
-            collapseEvent1: false,
-            collapseEvent2: false,
-            collapseEvent3: false,
-            collapseEvent4: false,
-            collapseEvent5: false,
+            collapseEvent1: null
         };
     }
 
@@ -74,7 +70,7 @@ class UiListGroup extends React.Component {
         <CardBody>
           <ListGroup>
             <ListGroupItem tag="a" href="#" action>Link</ListGroupItem>
-            <ListGroupItem active tag="button" action>Active Button</ListGroupItem>
+            <ListGroupItem active tag="button" action>active Button</ListGroupItem>
             <ListGroupItem tag="button" action>Button</ListGroupItem>
             <ListGroupItem disabled tag="button" action>Disabled Button</ListGroupItem>
           </ListGroup>
@@ -86,7 +82,7 @@ class UiListGroup extends React.Component {
         <CardBody>
           <ListGroup flush>
             <ListGroupItem tag="a" href="#" action>Link</ListGroupItem>
-            <ListGroupItem active tag="button" action>Active Button</ListGroupItem>
+            <ListGroupItem active tag="button" action>active Button</ListGroupItem>
             <ListGroupItem tag="button" action>Button</ListGroupItem>
             <ListGroupItem disabled tag="button" action>Disabled Button</ListGroupItem>
           </ListGroup>
@@ -98,7 +94,7 @@ class UiListGroup extends React.Component {
         <CardBody>
           <ListGroup borderless>
             <ListGroupItem tag="a" href="#" action>Link</ListGroupItem>
-            <ListGroupItem active tag="button" action>Active Button</ListGroupItem>
+            <ListGroupItem active tag="button" action>active Button</ListGroupItem>
             <ListGroupItem tag="button" action>Button</ListGroupItem>
             <ListGroupItem disabled tag="button" action>Disabled Button</ListGroupItem>
           </ListGroup>

@@ -11,7 +11,7 @@ class UiCollapse extends Component {
     this.toggleOuter3 = this.toggleOuter3.bind(this);
     this.toggleOuter4 = this.toggleOuter4.bind(this);
     this.toggleInner = this.toggleInner.bind(this);
-    this.state = { collapseOuter: false };
+    this.state = { collapseOuter: null };
   }
 
   toggleOuter() {

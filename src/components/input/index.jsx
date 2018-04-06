@@ -6,20 +6,20 @@ import classNames from 'classnames';
 import { mapToCssModules, deprecated } from '../utils';
 
 const propTypes = {
-  children: PropTypes.node,
-  type: PropTypes.string,
-  size: PropTypes.string,
-  state: deprecated(PropTypes.string, 'Please use the prop "valid"'),
-  valid: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  static: deprecated(PropTypes.bool, 'Please use the prop "plaintext"'),
-  plaintext: PropTypes.bool,
   addon: PropTypes.bool,
+  children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  plaintext: PropTypes.bool,
   radius: PropTypes.string,
+  size: PropTypes.string,
+  state: deprecated(PropTypes.string, 'Please use the prop "valid"'),
+  static: deprecated(PropTypes.bool, 'Please use the prop "plaintext"'),
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   theme: PropTypes.string,
+  type: PropTypes.string,
+  valid: PropTypes.bool,
 };
 
 const defaultProps = {
@@ -30,19 +30,19 @@ const defaultProps = {
 class Input extends React.Component {
   render() {
     let {
+      addon,
       className,
       cssModule,
-      type,
+      innerRef,
+      plaintext,
+      radius,
       size,
       state,
-      valid,
-      tag,
-      addon,
-      radius,
-      theme,
       static: staticInput,
-      plaintext,
-      innerRef,
+      tag,
+      theme,
+      type,
+      valid,
       ...attributes
     } = this.props;
 
