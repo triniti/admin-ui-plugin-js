@@ -75,7 +75,7 @@ th.alert,
 
 @each $color, $value in $theme-colors {
   .alert-#{$color}.alert-inverse {
-    background: darken(theme-color($color), 4%);
+    background: darken(theme-color($color), 3%);
     font-weight: 700;
     color: $white;
     text-shadow: 0 1px 0 $gray-rgba-600;

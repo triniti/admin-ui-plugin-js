@@ -245,6 +245,7 @@ input[type='text']:focus,
   align-self: center;
   line-height: 1;
   vertical-align: middle;
+  z-index: 0;
 
   .form-inline & {
     display: inline-flex;
