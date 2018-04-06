@@ -63,9 +63,9 @@ $dropdown-link-hover-bg:        $gray-100;
 
 // Links
 
-$link-color:            darken(theme-color("primary"), 10%);
+$link-color:            darken(theme-color("secondary"), 10%);
 $link-decoration:       none;
-$link-hover-color:      darken(theme-color("primary"), 15%);
+$link-hover-color:      darken(theme-color("secondary"), 15%);
 $link-hover-decoration: underline;
 
 
