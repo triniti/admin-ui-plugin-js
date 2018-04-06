@@ -17,7 +17,6 @@ const UiSpinners = () => (
       <Card key="icons1">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
-          <CardTitle></CardTitle>
           <Row>
             <Col>
               <Spinner className="mb-3 mr-3" color="#03caa5" width="16" strokeWidth="10" />
