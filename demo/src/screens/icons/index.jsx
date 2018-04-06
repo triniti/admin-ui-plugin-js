@@ -220,6 +220,7 @@ const UiIcons = () => (
               <IconTooltip iconName="twitter"/>
               <IconTooltip iconName="vevo"/>
               <IconTooltip iconName="youtube"/>
+              <IconTooltip iconName="tmz"/>
             </Col>
           </Row>
           <Row>
@@ -233,6 +234,7 @@ const UiIcons = () => (
               <Icon imgSrc="twitter" alert size="xxs" />
               <Icon imgSrc="vevo" alert size="xxs" />
               <Icon imgSrc="youtube" alert size="xxs" />
+              <Icon imgSrc="tmz" alert size="xxs" />
             </Col>
           </Row>
         </CardBody>
@@ -655,6 +657,18 @@ const UiIcons = () => (
               <IconGroup className="mb-4 mr-3" left>
                 <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
                 <Icon imgSrc="youtube" alert size="xxs" outline/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="tmz" size="lg" className="bg-white"/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="play-stroke" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="tmz" alert size="xxs" outline/>
+              </IconGroup>
+              <IconGroup className="mb-4 mr-3" left>
+                <Icon imgSrc="tmz" alert size="sm" radius="rounded" border/>
+                <Icon imgSrc="play" size="lg" className="bg-white" border outline />
               </IconGroup>
 
             </Col>

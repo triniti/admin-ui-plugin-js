@@ -182,6 +182,7 @@ import twitterSearchTimeline from './twitter-search-timeline.svg';
 import twitterTweet from './twitter-tweet.svg';
 import twitterUserTimeline from './twitter-user-timeline.svg';
 import twitterVideo from './twitter-video.svg';
+import tmz from './tmz-logo.svg';
 import underline from './underline.svg';
 import unknown from './unknown.svg';
 import unlocked from './unlocked.svg';
@@ -393,6 +394,7 @@ const icons = {
   'twitter-tweet': twitterTweet,
   'twitter-user-timeline': twitterUserTimeline,
   'twitter-video': twitterVideo,
+  tmz,
   underline,
   unknown,
   unlocked,
