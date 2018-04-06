@@ -1,25 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import ReactStepper from 'react-stepper-horizontal';
 import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
 const defaultProps = {
-  tag: 'ul',
+  activeColor: '#04c5a2',
+  circleFontSize: 12,
+  circleTop: 0,
+  completeBarColor: '#04c5a2',
+  completeColor: '#04c5a2',
+  defaultBarColor: '#d9d9db',
+  defaultColor: '#d9d9db',
+  defaultTitleColor: '#7a7a7c',
+  size: 27,
+  titleFontSize: 12,
 };
 
 const Stepper = (props) => {
   const {
     className,
     cssModule,
-    tag: Tag,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
@@ -28,7 +35,10 @@ const Stepper = (props) => {
   ), cssModule);
 
   return (
-  <Tag className={classes} {...attributes}/>
+    <div className={classes}>
+      <ReactStepper
+        {...attributes}/>
+    </div>
     );
 };
 

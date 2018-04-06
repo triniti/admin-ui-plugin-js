@@ -34,6 +34,7 @@ import Checkbox from './checkbox';
 import Col from './col';
 import Collapse from './collapse';
 import Container from './container';
+import DatePicker from './datepicker';
 import Divider from './divider';
 import Dropdown from './dropdown';
 import DropdownItem from './dropdown-item';
@@ -87,6 +88,7 @@ import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
 import Row from './row';
+import Select from './select';
 import Screen from './screen';
 import ScrollableContainer from './scrollable-container';
 import Spinner from './spinner';
@@ -145,6 +147,7 @@ export {
   Col,
   Collapse,
   Container,
+  DatePicker,
   Divider,
   Dropdown,
   DropdownItem,
@@ -200,6 +203,7 @@ export {
   Row,
   Screen,
   ScrollableContainer,
+  Select,
   Spinner,
   StatusMessage,
   Stepper,

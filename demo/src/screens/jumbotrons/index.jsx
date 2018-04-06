@@ -55,7 +55,7 @@ class Jumbotrons extends Component {
     sidenavHeader
     body={[
       <Card key="jumbotron1">
-        <CardHeader fullWidth>Jumbotron Theme Dark
+        <CardHeader>Jumbotron Theme Dark
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
               <Icon imgSrc="code" size="md"/>
            </Button>
@@ -98,7 +98,7 @@ export default Example;
       </Card>,
 
       <Card key="jumbotron2">
-        <CardHeader fullWidth>Jumbotron Theme Light
+        <CardHeader>Jumbotron Theme Light
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
               <Icon imgSrc="code" size="md"/>
            </Button>
@@ -141,7 +141,7 @@ export default Example;
       </Card>,
 
       <Card key="jumbotron3">
-        <CardHeader fullWidth>Jumbotron Default inside CardBody & Container
+        <CardHeader>Jumbotron Default inside CardBody & Container
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
               <Icon imgSrc="code" size="md"/>
            </Button>
@@ -202,7 +202,7 @@ export default Example;
       </Card>,
 
       <Card key="jumbotron4">
-        <CardHeader fullWidth>Jumbotron inside Container Fluid
+        <CardHeader>Jumbotron inside Container Fluid
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
               <Icon imgSrc="code" size="md"/>
            </Button>

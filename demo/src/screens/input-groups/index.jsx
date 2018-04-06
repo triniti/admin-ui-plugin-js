@@ -125,7 +125,7 @@ export default UiInputGroup;
           </Card>,
 
           <Card key="imput2">
-            <CardHeader fullWidth>Form theme="white" on BG Color
+            <CardHeader>Form theme="white" on BG Color
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
                   <Icon imgSrc="code" size="md"/>
                </Button>

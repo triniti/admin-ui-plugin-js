@@ -32,9 +32,11 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .input-group-prepend:hover & {
-    z-index: 1;
-  }
+}
+
+.input-group > div:focus-within,
+.input-group > .form-control:focus-within {
+  z-index: 3;
 }
 
 .form-control-sm {
@@ -129,6 +131,11 @@ label {
   letter-spacing: 0;
   font-weight: 400;
   color: $body-color;
+
+  & .form-control-label {
+    text-transform: uppercase;
+    font-size: .9em;
+  }
 }
 
 
@@ -238,6 +245,7 @@ input[type='text']:focus,
   align-self: center;
   line-height: 1;
   vertical-align: middle;
+  z-index: 0;
 
   .form-inline & {
     display: inline-flex;

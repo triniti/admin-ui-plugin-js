@@ -22,8 +22,8 @@ $pink:    #fd3576;
 $red:     #f74b4b;
 $orange:  #f99520;
 $yellow:  #ffe261;
-$green:   #03caa5;
-$teal:    #11cadf;
+$green:   #04c5a2;
+$teal:    #13c8dd;
 $cyan:    #08a0e8;
 
 $primary:       $green;
@@ -37,11 +37,11 @@ $dark:          #7a7a7c;
 
 $archived:      darken($gray-100, 1%);
 $deleted:       lighten($warning, 38%);
-$draft:         darken($gray-100, 1%);
-$expired:       darken($gray-500, 2%);
+$draft:         darken($gray-400, 3%);
+$expired:       lighten($blue, 45%);
 $pending:       lighten($danger, 33%);
 $published:     $white;
-$scheduled:     lighten($yellow, 25%);
+$scheduled:     lighten($yellow, 26%);
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -63,9 +63,9 @@ $dropdown-link-hover-bg:        $gray-100;
 
 // Links
 
-$link-color:            darken(theme-color("primary"), 10%);
+$link-color:            darken(theme-color("secondary"), 10%);
 $link-decoration:       none;
-$link-hover-color:      darken(theme-color("primary"), 15%);
+$link-hover-color:      darken(theme-color("secondary"), 15%);
 $link-hover-decoration: underline;
 
 
