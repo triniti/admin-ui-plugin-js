@@ -26,7 +26,7 @@ $sidenav-width:     300px;
   background-color: $white;
 
   &.offcanvas-left {
-    z-index: $zindex-fixed;
+    z-index: $zindex-fixed + 2;
     margin-left: -$sidenav-width + 38;
 
     @media (max-width: 767px) {
@@ -169,6 +169,10 @@ $sidenav-width:     300px;
   flex-wrap: nowrap;
   box-shadow: $shadow-depth-2;
   z-index: $zindex-dropdown + 1;
+
+  @media (max-width: 1023px) {
+    z-index: $zindex-dropdown + 6;
+  }
 
   @media (max-width: 767px) {
     transition: margin $transition;
