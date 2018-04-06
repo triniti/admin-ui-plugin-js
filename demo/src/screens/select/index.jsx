@@ -1,7 +1,9 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Icon, Input, InputGroup, InputGroupAddon, InputGroupText, Screen, Select } from '../../../../src/components';
+import InputSelectField from './inputselect';
+import MultiSelectField from './multiselect';
+import { Button, Card, CardBody, CardHeader, Form, FormGroup, Icon, Input, InputGroup, InputGroupAddon, InputGroupText, Label, Screen, Select } from '../../../../src/components';
 
 class UiSelect extends React.Component {
   constructor (props) {
@@ -11,15 +13,7 @@ class UiSelect extends React.Component {
     }
   }
 
-  handleChange = (selectedOption) => {
-    this.setState({ selectedOption });
-    console.log(`Selected: ${selectedOption.label}`);
-  }
-
   render() {
-    const { selectedOption } = this.state;
-    const value = selectedOption && selectedOption.value;
-
     return (
       <Screen
         sidenav={<Sidenav activeScreen="select" />}
@@ -34,28 +28,57 @@ class UiSelect extends React.Component {
           <Card key="select1">
             <CardHeader>Select</CardHeader>
             <CardBody indent>
-              <Select
-                name="form-field-name"
-                value={value}
-                onChange={this.handleChange}
-                options={[
-                  { value: 'one', label: 'One' },
-                  { value: 'two', label: 'Two' },
-                ]}
-              />
-
+              <MultiSelectField />
             </CardBody>
           </Card>,
 
           <Card key="select2">
-            <CardHeader>Datepicker with Time inside Input Group</CardHeader>
+            <CardHeader>Select Styles</CardHeader>
             <CardBody indent>
-              <InputGroup size="sm" radius="round">
-                <InputGroupAddon addonType="prepend"><InputGroupText><Icon imgSrc="calendar" size="sd" className="mx-1"/></InputGroupText></InputGroupAddon>
-                <InputGroupAddon addonType="append">
-
-                </InputGroupAddon>
+              <Label>Input Group & size="sm"</Label>
+              <InputGroup size="sm">
+                <InputGroupAddon addonType="prepend"><Button color="secondary"><Icon imgSrc="search" size="sm" className="mx-1"/></Button></InputGroupAddon>
+                <InputGroupAddon addonType="append" className="flex-grow-1"><InputSelectField /></InputGroupAddon>
               </InputGroup>
+            </CardBody>
+            <CardBody indent>
+              <Label>Input Group & size="lg"</Label>
+              <InputGroup size="lg">
+                <InputGroupAddon addonType="prepend"><Button color="secondary"><Icon imgSrc="search" size="md"/></Button></InputGroupAddon>
+                <InputGroupAddon addonType="append" className="flex-grow-1 d-block"><InputSelectField /></InputGroupAddon>
+              </InputGroup>
+            </CardBody>
+            <CardBody indent>
+              <Label>Inline</Label>
+              <Form inline>
+                <FormGroup style={{minWidth:'170px'}}>
+                  <Label for="exampleEmail4" hidden>Email</Label>
+                  <InputSelectField radius="round"/>
+                </FormGroup>
+
+                <FormGroup>
+                  <Label for="examplePassword4" hidden>Password</Label>
+                  <Input
+                  type="password"
+                  name="password"
+                  id="examplePassword4"
+                  placeholder="Password"
+                />
+                </FormGroup>
+
+                <Button outline color="secondary">Submit</Button>
+              </Form>
+            </CardBody>
+          </Card>,
+
+          <Card key="props">
+            <CardHeader>Select Properties</CardHeader>
+            <CardBody>
+              <p>This component relies on the <a href="https://github.com/JedWatson/react-select" target="_blank"><strong>React Select</strong></a> component.</p>
+              <ul>
+                <li><a href="https://github.com/JedWatson/react-select" target="_blank">Code and Docs on GitHub</a></li>
+                <li><a href="http://jedwatson.github.io/react-select/" target="_blank">Live Demos and Examples</a></li>
+              </ul>
             </CardBody>
           </Card>,
 
