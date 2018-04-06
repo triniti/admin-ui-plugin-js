@@ -45,7 +45,7 @@ const Radio = (props) => {
   ), cssModule);
 
   return (
-    <Label className={labelClasses} radio>
+    <Label className={labelClasses}>
       <Input type={type} className={classes} {...attributes} disabled={disabled} />
       <span className="radio-input-icon"/>
       {children && <span className="form-radio-label radio-label">{children}</span>}

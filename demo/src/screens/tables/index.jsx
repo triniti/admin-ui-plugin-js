@@ -15,6 +15,8 @@ class Tables extends React.Component {
         this.toggleCode6 = this.toggleCode6.bind(this);
         this.toggleCode7 = this.toggleCode7.bind(this);
         this.toggleCode8 = this.toggleCode8.bind(this);
+        this.toggleCode9 = this.toggleCode9.bind(this);
+        this.toggleCode10 = this.toggleCode10.bind(this);
         this.state = {
             collapseCode1: false,
             collapseCode2: false,
@@ -24,6 +26,8 @@ class Tables extends React.Component {
             collapseCode6: false,
             collapseCode7: false,
             collapseCode8: false,
+            collapseCode9: false,
+            collapseCode10: false,
         };
     }
 
@@ -59,6 +63,14 @@ class Tables extends React.Component {
         this.setState({ collapseCode8: !this.state.collapseCode8 });
     }
 
+    toggleCode9() {
+        this.setState({ collapseCode9: !this.state.collapseCode9 });
+    }
+
+    toggleCode10() {
+        this.setState({ collapseCode10: !this.state.collapseCode10 });
+    }
+
     render() {
         return (
     <Screen
@@ -72,7 +84,83 @@ class Tables extends React.Component {
       primaryActions={<PrimaryActions />}
       body={[
       <Card key="alert8">
-        <CardHeader>Status Colors</CardHeader>
+        <CardHeader>
+            Status Colors
+            <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+            <Icon imgSrc="code" size="md"/>
+          </Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseCode1}>
+           <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+             <code>
+{`import React from 'react';
+import { Table } from '@triniti/admin-ui-plugin/components';
+
+export default class Example extends React.Component {
+  render() {
+    return (
+    <Table>
+        <thead>
+          <tr>
+            <th>Status</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr className="status-archived">
+            <th scope="row">Archived</th>
+            <td>Jason</td>
+            <td>Gregg</td>
+            <td>@archived</td>
+          </tr>
+          <tr className="status-draft">
+            <th scope="row">Draft</th>
+            <td>Albert</td>
+            <td>Wei</td>
+            <td>@draft</td>
+          </tr>
+          <tr className="status-deleted">
+            <th scope="row">Deleted</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@deleted</td>
+          </tr>
+          <tr className="status-expired">
+            <th scope="row">Expired</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@expired</td>
+          </tr>
+          <tr className="status-pending">
+            <th scope="row">Pending</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@pending</td>
+          </tr>
+          <tr className="status-published">
+            <th scope="row">Published</th>
+            <td>Miriam</td>
+            <td>HQ</td>
+            <td>@published</td>
+          </tr>
+          <tr className="status-scheduled">
+            <th scope="row">Scheduled</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@scheduled</td>
+          </tr>
+        </tbody>
+      </Table>
+    );
+  }
+}`}
+               </code>
+            </pre>
+          </CardBody>
+        </Collapse>
         <CardBody>
           <Table>
             <thead>
@@ -90,17 +178,17 @@ class Tables extends React.Component {
                 <td>Gregg</td>
                 <td>@archived</td>
               </tr>
-              <tr className="status-deleted">
-                <th scope="row">Deleted</th>
-                <td>Albert</td>
-                <td>Wei</td>
-                <td>@deleted</td>
-              </tr>
               <tr className="status-draft">
                 <th scope="row">Draft</th>
+                <td>Albert</td>
+                <td>Wei</td>
+                <td>@draft</td>
+              </tr>
+              <tr className="status-deleted">
+                <th scope="row">Deleted</th>
                 <td>Mark</td>
                 <td>Otto</td>
-                <td>@draft</td>
+                <td>@deleted</td>
               </tr>
               <tr className="status-expired">
                 <th scope="row">Expired</th>
@@ -273,11 +361,11 @@ class Tables extends React.Component {
 
       <Card key="tableheader3" className="mb-0">
         <CardHeader>Striped Table + Sticky
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                <Icon imgSrc="code" size="md"/>
-              </Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapseCode1}>
+          <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
+            <Icon imgSrc="code" size="md"/>
+          </Button>
+        </CardHeader>
+            <Collapse isOpen={this.state.collapseCode3}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -364,11 +452,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader4" className="mb-0">
         <CardHeader>Dark Table
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode2}>
+            <Collapse isOpen={this.state.collapseCode4}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -453,11 +541,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader5" className="mb-0">
         <CardHeader>Striped Table
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode5} active={this.state.collapseCode5}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode3}>
+            <Collapse isOpen={this.state.collapseCode5}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -540,11 +628,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader6" className="mb-0">
         <CardHeader>Bordered Table
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode6} active={this.state.collapseCode6}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode4}>
+            <Collapse isOpen={this.state.collapseCode6}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -627,11 +715,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader7" className="mb-0">
         <CardHeader>Borderless Table
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode5} active={this.state.collapseCode5}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode7} active={this.state.collapseCode7}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode5}>
+            <Collapse isOpen={this.state.collapseCode7}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -714,11 +802,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader8" className="mb-0">
         <CardHeader>Hoverable Rows Table
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode6} active={this.state.collapseCode6}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode8} active={this.state.collapseCode8}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode6}>
+            <Collapse isOpen={this.state.collapseCode8}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -801,11 +889,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader9" className="mb-0">
         <CardHeader>Small
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode7} active={this.state.collapseCode7}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode9} active={this.state.collapseCode9}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode7}>
+            <Collapse isOpen={this.state.collapseCode9}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
@@ -888,11 +976,11 @@ export default class Example extends React.Component {
 
       <Card key="tableheader10" className="mb-0">
         <CardHeader>Responsive Table
-              <Button radius="circle" color="hover-bg" onClick={this.toggleCode8} active={this.state.collapseCode8}>
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode10} active={this.state.collapseCode10}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
             </CardHeader>
-            <Collapse isOpen={this.state.collapseCode8}>
+            <Collapse isOpen={this.state.collapseCode10}>
               <CardBody className="pl-0 pr-0 bg-light">
                 <pre className="pl-5 pr-3">
                     <code>
