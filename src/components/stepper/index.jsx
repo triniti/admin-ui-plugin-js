@@ -11,11 +11,11 @@ const propTypes = {
 };
 
 const defaultProps = {
-  activeColor: '#03caa5',
+  activeColor: '#04c5a2',
   circleFontSize: 12,
   circleTop: 0,
-  completeBarColor: '#03caa5',
-  completeColor: '#03caa5',
+  completeBarColor: '#04c5a2',
+  completeColor: '#04c5a2',
   defaultBarColor: '#d9d9db',
   defaultColor: '#d9d9db',
   defaultTitleColor: '#7a7a7c',
