@@ -14,6 +14,7 @@
 * Add React Select as Select component, styled to match.
 * Add React Stepper Horizontal as Stepper component, styled to match.
 * Add scrollable popover example showing Block Editor content types.
+* Clicking on main navigation tabs will now main pages (first link within that section).
 
 
 ## v0.4.12
