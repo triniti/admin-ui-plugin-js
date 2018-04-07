@@ -131,6 +131,29 @@
   overflow: scroll;
 }
 
+.modal-dialog-centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 1rem);
+  pointer-events: none;
+
+  @media (min-width: 576px) {
+    min-height: calc(100% - 3.5rem);
+  }
+  .modal.fade & {
+    transform: translate(0, -5%);
+  }
+  .modal.show & {
+    transform: translate(0, 0);
+  }
+  & .modal-content {
+    display: flex;
+    flex: 1 1 auto;
+    pointer-events: auto;
+  }
+}
+
+
 // Scale up the modal
 @include media-breakpoint-up(sm) {
   // Automatically set modal's width for larger viewports

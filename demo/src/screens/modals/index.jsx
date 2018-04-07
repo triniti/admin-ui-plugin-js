@@ -101,7 +101,7 @@ class ModalExample extends React.Component {
     return (
       <div>
         <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal centered isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
           <ModalBody>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -124,7 +124,7 @@ export default ModalExample;
             </Collapse>
             <CardBody indent>
               <Button color="secondary" onClick={this.toggle}>Click Me</Button>
-              <Modal isOpen={this.state.modal} toggle={this.toggle} size="xl" maxWidth="1400px">
+              <Modal centered isOpen={this.state.modal} toggle={this.toggle} size="xl" maxWidth="1400px">
                 <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                 <ModalBody className="pb-5">
                   <p>
@@ -152,7 +152,7 @@ export default ModalExample;
               </Modal>
 
               <Button outline color="secondary" onClick={this.toggleSmall}>Small Modal</Button>
-              <Modal isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
+              <Modal centered isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
                 <ModalBody className="text-center modal-wrapper"><h4>Small Modal Action</h4>Do you want to clear everything?</ModalBody>
                 <ModalFooter buttons>
                   <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Clear</Button>
