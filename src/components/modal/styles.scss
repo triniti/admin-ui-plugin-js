@@ -56,7 +56,7 @@
   // border: $modal-content-border-width solid $modal-content-border-color;
   border: none;
   @include border-radius($border-radius-xl);
-  box-shadow: $shadow-depth-2;
+  box-shadow: $shadow-depth-6;
   // Remove focus outline from opened modal
   outline: 0;
 }
@@ -85,8 +85,8 @@
   padding: $modal-header-padding;
   background-color: $gray-100;
   border-bottom: $modal-header-border-width solid $modal-header-border-color;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
+  border-top-left-radius: $border-radius-xl;
+  border-top-right-radius: $border-radius-xl;
 
   .close {
     margin-left: auto; // Force icon to the right even when there's no .modal-title
