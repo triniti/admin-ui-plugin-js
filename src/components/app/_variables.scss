@@ -79,6 +79,13 @@ $grid-breakpoints: (
   xl: 1200px
 );
 
+
+// Enable shadows & gradients
+
+$enable-gradients:        false;
+$enable-shadows:          false;
+
+
 $hr-margin-y:           1.5rem;
 
 $progress-height:       1.25rem;
