@@ -83,6 +83,7 @@ $border-color:                $gray-500;
 $border-radius:               3px;
 $border-radius-lg:            .25rem;
 $border-radius-sm:            3px;
+$border-radius-xl:            6px !default;
 
 $component-active-color:      $white;
 $component-active-bg:         theme-color("secondary");  // $gray-200 theme-color("primary") !default; affects $input-btn-focus-color
@@ -304,7 +305,7 @@ $modal-content-box-shadow-xs:    $shadow-depth-4;
 $modal-content-box-shadow-sm-up: $shadow-depth-5;
 $modal-content-border-color:     $gray-rgba-300;
 $modal-backdrop-bg:              $gray-900;
-$modal-backdrop-opacity:         .3;
+$modal-backdrop-opacity:         .33;
 $modal-header-border-color:      $gray-500;
 $modal-header-padding:           1rem;
 $modal-md:                       560px;

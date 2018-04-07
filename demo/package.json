@@ -65,5 +65,8 @@
   },
   "browserslist": [
     "defaults"
-  ]
+  ],
+  "dependencies": {
+    "sweetalert2": "^7.18.0"
+  }
 }
