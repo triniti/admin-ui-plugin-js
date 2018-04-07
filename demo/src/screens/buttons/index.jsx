@@ -3,8 +3,6 @@ import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
 
-import EnvelopeIcon from '../../assets/img/svg/icon/fa-envelope.svg';
-
 class UiButtons extends React.Component {
   constructor(props) {
     super(props);

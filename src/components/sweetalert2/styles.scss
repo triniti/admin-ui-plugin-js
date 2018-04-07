@@ -1,0 +1,39 @@
+// SweetAlert2
+
+.swal2-container {
+
+  & .swal2-popup {
+    border-radius: $border-radius-xl;
+    padding: 1.5rem;
+    font-size: .875rem;
+    box-shadow: $shadow-depth-2;
+  }
+  & .swal2-popup .swal2-title {
+    color: $body-color;
+    font-weight: 500;
+    letter-spacing: .008em;
+  }
+  & .swal2-popup .swal2-content {
+    color: $gray-800;
+  }
+  & .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+    background-color: theme-color('danger');
+    border-radius: 1rem;
+  }
+  & .swal2-icon.swal2-error {
+    border-color: theme-color('danger');
+  }
+  & .swal2-icon {
+    margin-top: 1rem;
+  }
+  & .swal2-popup .swal2-styled.swal2-confirm {
+    margin-bottom: .5rem;
+    background: theme-color("secondary");
+    border: 1px solid darken(theme-color("secondary"), 5%);
+    box-shadow: $shadow-depth-3;
+  }
+  &.swal2-shown {
+    background-color: rgba($body-color, 0.33) !important;
+  }
+}
+

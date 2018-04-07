@@ -53,9 +53,10 @@
   flex-direction: column;
   background-color: $modal-content-bg;
   background-clip: padding-box;
-  border: $modal-content-border-width solid $modal-content-border-color;
-  @include border-radius($border-radius-lg);
-  @include box-shadow($modal-content-box-shadow-xs);
+  // border: $modal-content-border-width solid $modal-content-border-color;
+  border: none;
+  @include border-radius($border-radius-xl);
+  box-shadow: $shadow-depth-2;
   // Remove focus outline from opened modal
   outline: 0;
 }
