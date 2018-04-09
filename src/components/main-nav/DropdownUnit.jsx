@@ -38,13 +38,10 @@ const DropdownUnit = ({
       >
         {title}
       </DropdownToggle>
-      <DropdownToggle
+      <div
         onClick={handleToggleClick}
-        className="nav-link nav-link-mobile"
-        nav
-      >
-        {title}
-      </DropdownToggle>
+        className="nav-link-mobile"
+      ></div>
       <DropdownMenu className="nav-dropdown-menu">
         {navLinks}
       </DropdownMenu>
