@@ -55,10 +55,25 @@ $theme-colors: map-merge((
   "dark":       $dark
 ), $theme-colors);
 
+$text-light:                    #7a7a7c;
+
 $body-bg:                       $gray-400;
 $body-color:                    $gray-900;
+$body-color-light:              #8a8a8c !default;
+$text-muted:                    #9a9a9c;
+$text-disabled:                 #bababc;
 
 $dropdown-link-hover-bg:        $gray-100;
+
+
+// Headers
+
+$h1-font-size: 1.875rem;
+$h2-font-size: 1.675rem;
+$h3-font-size: 1.375rem;
+$h4-font-size: 1.125rem;
+$h5-font-size: .9rem;
+$h6-font-size: .825rem;
 
 
 // Links
@@ -82,13 +97,15 @@ $grid-breakpoints: (
 
 // Enable shadows & gradients
 
-$enable-gradients:        false;
+$enable-gradients:        true;
 $enable-shadows:          false;
 
 
 $hr-margin-y:           1.5rem;
 
 $progress-height:       1.25rem;
+
+$modal-inner-padding:   1rem;
 
 // End bootstrap variables
 
@@ -141,8 +158,6 @@ $white-rgba-600:     rgba(#fff, .625) !default;
 $white-rgba-700:     rgba(#fff, .75) !default;
 $white-rgba-800:     rgba(#fff, .8) !default;
 $white-rgba-900:     rgba(#fff, .9) !default;
-
-$text-disabled:      #bababa;
 
 
 // Navbar Theme Colors
@@ -211,7 +226,8 @@ $form-check-shadow:      inset 0 0 0 1px rgba(0,0,0,0.1) !default;
 
 // Modal
 
-$modal-xl:                     1000px !default; // new size
+$modal-sd:                     450px !default;
+$modal-xl:                     1000px !default;
 
 
 // Form & button element min-heights
