@@ -138,7 +138,7 @@ export default ModalExample;
                   </p>
                   <Button outline onClick={this.toggleNested}>Show Nested Modal</Button>
                   <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} size="sm">
-                    <ModalBody className="text-center modal-wrapper"><h4>Nested Modal title</h4>Do you want to clear everything?</ModalBody>
+                    <ModalBody className="text-center modal-wrapper"><h2>Nested Modal</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
                     <ModalFooter buttons>
                       <Button outline color="primary" size="lg" onClick={this.toggleAll}>Clear</Button>
                       <Button outline color="primary" size="lg" onClick={this.toggleNested}>Cancel</Button>
@@ -153,7 +153,7 @@ export default ModalExample;
 
               <Button outline color="secondary" onClick={this.toggleSmall}>Small Modal</Button>
               <Modal centered isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
-                <ModalBody className="text-center modal-wrapper"><h4>Small Modal Action</h4>Do you want to clear everything?</ModalBody>
+                <ModalBody className="text-center modal-wrapper"><h2>Modal Action</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
                 <ModalFooter buttons>
                   <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Clear</Button>
                   <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Cancel</Button>
@@ -161,8 +161,8 @@ export default ModalExample;
               </Modal>
 
               <Button outline onClick={this.toggleSingle}>Single XL Footer Button</Button>
-              <Modal isOpen={this.state.singleModal} toggle={this.toggleSingle} size="sm">
-                <ModalBody className="text-center modal-wrapper"><h4>Single Modal Button</h4>Do you want to clear everything?</ModalBody>
+              <Modal isOpen={this.state.singleModal} toggle={this.toggleSingle}>
+                <ModalBody className="text-center modal-wrapper"><h2>Single Modal Button</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
                 <ModalFooter buttons>
                   <Button color="secondary" size="xl" onClick={this.toggleSingle}>Login</Button>
                 </ModalFooter>
@@ -305,7 +305,7 @@ export default ModalExample;
                     <th scope="row">size</th>
                     <td>string</td>
                     <td></td>
-                    <td>size="xs" (240px), "sm" 300px, "md" 460px, "lg" 800px, "xl" 1000px</td>
+                    <td>size="xs" 240px, "sm" 300px, "sd" 450px, "md" 560px, "lg" 800px, "xl" 1000px</td>
                   </tr>
                   <tr>
                     <th scope="row">toggle</th>

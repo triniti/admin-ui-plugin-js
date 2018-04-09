@@ -2,6 +2,9 @@
 
 .swal2-container {
 
+  & .swal2-show {
+    animation: triniti-bounce 0.3s;
+  }
   & .swal2-popup {
     border-radius: $border-radius-xl;
     padding: 1.5rem;
@@ -10,12 +13,14 @@
   }
   & .swal2-popup .swal2-title {
     color: $body-color;
+    font-size: 1.675rem;
     font-weight: 500;
     letter-spacing: .008em;
   }
   & .swal2-popup .swal2-content {
-    color: $gray-800;
+    color: $body-color-light;
     margin-bottom: .5rem;
+    font-weight: 400;
   }
   & .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
     background-color: theme-color('danger');
@@ -29,7 +34,11 @@
   }
   & .swal2-popup .swal2-styled.swal2-confirm {
     margin-bottom: .5rem;
-    background: theme-color("secondary");
+    @if $enable-gradients {
+      background: theme-color("secondary") linear-gradient(180deg, mix($body-bg, theme-color("secondary"), 15%), theme-color("secondary")) repeat-x;
+    } @else {
+      background-color: theme-color("secondary");
+    }
     border: 1px solid darken(theme-color("secondary"), 5%);
     box-shadow: $shadow-depth-3;
   }
@@ -37,4 +46,3 @@
     background-color: rgba($body-color, 0.33) !important;
   }
 }
-

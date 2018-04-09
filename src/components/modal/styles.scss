@@ -30,9 +30,15 @@
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     @include transition($modal-transition);
-    transform: translate(0, -25%);
   }
-  &.show .modal-dialog { transform: translate(0, 0); }
+  &.show .modal-dialog {
+    animation: triniti-slidein 0.3s;
+
+    &.modal-xs,
+    &.modal-sm {
+      animation: triniti-bounce 0.3s;
+    }
+  }
 }
 .modal-open .modal {
   overflow-x: hidden;
@@ -44,6 +50,16 @@
   position: relative;
   width: auto;
   margin: $modal-dialog-margin;
+
+  @include media-breakpoint-up(sm) {
+    max-width: $modal-sd;
+    margin: $modal-dialog-margin-y-sm-up auto;
+
+    &.modal-xs,
+    &.modal-sm {
+      margin-top: 3rem;
+    }
+  }
 }
 
 // Actual modal
@@ -91,12 +107,18 @@
   .close {
     margin-left: auto; // Force icon to the right even when there's no .modal-title
   }
+
+  & .modal-title {
+    margin-bottom: 0;
+    line-height: $modal-title-line-height;
+  }
 }
 
-// Title text within header
-.modal-title {
-  margin-bottom: 0;
-  line-height: $modal-title-line-height;
+.modal-headline {
+  color: $body-color;
+  font-size: 1.675rem;
+  font-weight: 500;
+  letter-spacing: .008em;
 }
 
 // Modal body
@@ -106,7 +128,16 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: $modal-inner-padding;
+  padding: 2.25rem 1.5rem;
+  font-size: 1.125em;
+
+  .modal-header + & {
+    padding: $modal-inner-padding;
+    font-size: 1em;
+  }
+  & p:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Footer (for actions)
@@ -137,14 +168,13 @@
   min-height: calc(100% - 1rem);
   pointer-events: none;
 
+  &.modal-xs,
+  &.modal-sm {
+    margin-top: $modal-dialog-margin-y-sm-up;
+  }
+
   @media (min-width: 576px) {
     min-height: calc(100% - 3.5rem);
-  }
-  .modal.fade & {
-    transform: translate(0, -5%);
-  }
-  .modal.show & {
-    transform: translate(0, 0);
   }
   & .modal-content {
     display: flex;
@@ -156,11 +186,6 @@
 
 // Scale up the modal
 @include media-breakpoint-up(sm) {
-  // Automatically set modal's width for larger viewports
-  .modal-dialog {
-    max-width: $modal-md;
-    margin: $modal-dialog-margin-y-sm-up auto;
-  }
 
   .modal-content {
     @include box-shadow($modal-content-box-shadow-sm-up);
@@ -180,6 +205,15 @@
 
   @include media-breakpoint-down(sm) {
     margin: 0.5rem auto;
+  }
+}
+
+.modal-sd {
+  max-width: $modal-sd;
+
+  @include media-breakpoint-down(md) {
+    margin: 0.5rem auto;
+    width: calc(100% - 1rem);
   }
 }
 
