@@ -55,17 +55,19 @@
   box-shadow: inset 3px 0 0 0 theme-color("primary");
 }
 
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: $navbar-dark-active-color;
+}
+
 .main-nav .nav-item:not(.is-current) .nav-link.active,
-.main-nav .nav-item:not(.is-current) .nav-link:active,
-.navbar-light .navbar-nav .is-current > .nav-link:not(.active),
-.navbar-light .navbar-nav .show:not(.is-current) > .nav-link {
+.main-nav .nav-item:not(.is-current) .nav-link:active  {
   color: $navbar-light-color;
 }
 
 .navbar-dark .main-nav .nav-item:not(.is-current) .nav-link.active,
-.navbar-dark .main-nav .nav-item:not(.is-current) .nav-link:active,
-.navbar-dark .navbar-nav .is-current > .nav-link:not(.active),
-.navbar-dark .navbar-nav .show:not(.is-current) > .nav-link {
+.navbar-dark .main-nav .nav-item:not(.is-current) .nav-link:active {
   color: $navbar-dark-color;
 }
 
@@ -127,8 +129,11 @@
   .navbar-light .navbar-nav .nav-item > .nav-link.active {
     color: $navbar-light-active-color !important;
   }
+  .navbar-dark .navbar-nav .nav-link {
+    color: $navbar-dark-hover-color !important;
+  }
   .navbar-dark .navbar-nav .nav-item > .nav-link.active {
-    color: $navbar-dark-active-color !important;
+    color: $navbar-dark-hover-color !important;
   }
   .main-nav .nav-link::before {
     position: absolute;
@@ -334,6 +339,17 @@
     margin-left: 0;
     content: '';
     background-color: theme-color("primary");
+  }
+  .navbar-light .navbar-nav .is-current > .nav-link:not(.active),
+  .navbar-light .navbar-nav .show > .nav-link:not(.active) {
+    color: $navbar-light-color;
+
+      &:hover {
+        color: $navbar-light-hover-color;
+      }
+  }
+  .navbar-dark .navbar-nav .show:not(.is-current) > .nav-link {
+    color: $navbar-dark-color !important;
   }
 }
 
