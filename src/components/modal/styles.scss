@@ -35,7 +35,8 @@
     animation: triniti-slidein 0.3s;
 
     &.modal-xs,
-    &.modal-sm {
+    &.modal-sm,
+    &.modal-sd {
       animation: triniti-bounce 0.3s;
     }
   }
@@ -128,15 +129,14 @@
   // Enable `flex-grow: 1` so that the body take up as much space as possible
   // when should there be a fixed height on `.modal-dialog`.
   flex: 1 1 auto;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
-  font-size: 1.125em;
+  padding: 2.5rem 1.5rem 1.5rem 1.5rem;
 
   .modal-header + & {
     padding: $modal-inner-padding;
     font-size: 1em;
   }
   & p:last-child {
-    margin-bottom: 0;
+    margin-bottom: .5rem;
   }
 }
 
@@ -241,4 +241,26 @@
   .modal-xl {
     max-width: calc(100% - 1rem) !important;
   }
+}
+
+// text style to match sweet alert body text
+
+.icon-modal {
+  margin-bottom: 1.75rem;
+}
+
+.text-modal {
+  font-size: 1.192em;
+  color: $text-light;
+}
+
+.modal-actions {
+  margin: 1.5rem auto 0;
+}
+
+.btn-modal {
+  font-size: 1.125em;
+  box-shadow: $shadow-depth-3;
+  border-radius: 0.25em;
+  margin-right: .65rem;
 }
