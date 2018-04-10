@@ -27,6 +27,9 @@
   & .swal2-icon {
     margin-top: 0;
   }
+  & .swal2-icon-text {
+    font-weight: 500;
+  }
   &.swal2-shown {
     background-color: rgba($body-color, 0.33) !important;
   }
@@ -75,6 +78,9 @@
         &:focus {
           border: 1px solid darken($value, 10%) !important;
         }
+      }
+      &.btn-warning {
+        color: $white;
       }
       &.btn-outline-#{$color} {
         @include button-outline-variant($value);
@@ -130,12 +136,25 @@
     color: theme-color('success');
 
     & .swal2-success-ring {
-      border-color: rgba(theme-color('success'), .3);
+      border-color: rgba(theme-color('success'), 1);
+      animation: 1s ease 0s normal forwards 1 swal-border-fadein;
     }
 
     & [class^='swal2-success-line'] {
       background-color: theme-color('success');
       border-radius: 1rem;
     }
+  }
+}
+
+@keyframes swal-border-fadein {
+  0% {
+    opacity:.3;
+  }
+  33% {
+    opacity:.3;
+  }
+  100% {
+    opacity:1;
   }
 }
