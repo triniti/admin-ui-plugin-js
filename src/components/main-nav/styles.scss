@@ -153,6 +153,10 @@
   .navbar-dark .show > .nav-link::before {
     background-color: $white-rgba-500;
   }
+  .navbar-light .is-current > .nav-link::before,
+  .navbar-dark .is-current > .nav-link::before {
+    background-color: theme-color("primary");
+  }
   .main-nav .nav-link.active::before {
     margin: .5rem 0;
     background-color: theme-color("primary");
@@ -340,8 +344,7 @@
     content: '';
     background-color: theme-color("primary");
   }
-  .navbar-light .navbar-nav .is-current > .nav-link:not(.active),
-  .navbar-light .navbar-nav .show > .nav-link:not(.active) {
+  .navbar-light .navbar-nav .show:not(.is-current) > .nav-link {
     color: $navbar-light-color;
 
       &:hover {
@@ -349,7 +352,11 @@
       }
   }
   .navbar-dark .navbar-nav .show:not(.is-current) > .nav-link {
-    color: $navbar-dark-color !important;
+    color: $navbar-dark-color;
+
+      &:hover {
+        color: $navbar-dark-hover-color;
+      }
   }
 }
 
