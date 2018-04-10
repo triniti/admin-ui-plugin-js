@@ -1,5 +1,7 @@
 // SweetAlert2
 
+@import "~bootstrap/scss/mixins";
+
 .swal2-container {
 
   & .swal2-show {
@@ -7,7 +9,7 @@
   }
   & .swal2-popup {
     border-radius: $border-radius-xl;
-    padding: 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
     font-size: .875rem;
     box-shadow: $shadow-depth-6;
   }
@@ -22,16 +24,14 @@
     margin-bottom: .5rem;
     font-weight: 400;
   }
-  & .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
-    background-color: theme-color('danger');
-    border-radius: 1rem;
-  }
-  & .swal2-icon.swal2-error {
-    border-color: theme-color('danger');
-  }
   & .swal2-icon {
-    margin-top: 1rem;
+    margin-top: 0;
   }
+  &.swal2-shown {
+    background-color: rgba($body-color, 0.33) !important;
+  }
+
+  // Button Colors
   & .swal2-popup .swal2-styled.swal2-confirm {
     margin-bottom: .5rem;
     @if $enable-gradients {
@@ -39,10 +39,103 @@
     } @else {
       background-color: theme-color("secondary");
     }
-    border: 1px solid darken(theme-color("secondary"), 5%);
+    border: 1px solid darken(theme-color("secondary"), 5%) !important;
     box-shadow: $shadow-depth-3;
+
+    &:hover {
+      background: theme-color("secondary") linear-gradient(180deg, darken(mix($body-bg, theme-color("secondary"), 15%), 15%), darken(theme-color("secondary"), 15%)) repeat-x;
+      border: 1px solid darken(theme-color("secondary"), 10%) !important;
+    }
   }
-  &.swal2-shown {
-    background-color: rgba($body-color, 0.33) !important;
+
+  & .swal2-popup .swal2-styled.swal2-cancel {
+    margin-bottom: .5rem;
+    @if $enable-gradients {
+      background: theme-color("dark") linear-gradient(180deg, mix($body-bg, theme-color("dark"), 15%), theme-color("dark")) repeat-x;
+    } @else {
+      background-color: theme-color("dark");
+    }
+    border: 1px solid darken(theme-color("dark"), 5%) !important;
+    box-shadow: $shadow-depth-3;
+
+    &:hover {
+      background: theme-color("dark") linear-gradient(180deg, darken(mix($body-bg, theme-color("dark"), 15%), 15%), darken(theme-color("dark"), 15%)) repeat-x;
+      border: 1px solid darken(theme-color("dark"), 10%) !important;
+    }
+  }
+
+  & .swal2-popup .swal2-styled {
+
+    @each $color, $value in $theme-colors {
+      &.btn-#{$color} {
+        @include button-variant($value, $value);
+        border: 1px solid darken($value, 5%) !important;
+
+        &:hover,
+        &:focus {
+          border: 1px solid darken($value, 10%) !important;
+        }
+      }
+      &.btn-outline-#{$color} {
+        @include button-outline-variant($value);
+        border: 1px solid darken($value, 5%) !important;
+
+        &:hover,
+        &:focus {
+          border: 1px solid darken($value, 10%) !important;
+        }
+      }
+    }
+  }
+
+  // Icon Colors
+  & .swal2-icon.swal2-error {
+    border-color: theme-color('danger');
+    color: theme-color('danger');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('danger');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-question {
+    border-color: theme-color('dark');
+    color: theme-color('dark');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('dark');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-warning {
+    border-color: theme-color('warning');
+    color: theme-color('warning');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('warning');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-info {
+    border-color: theme-color('info');
+    color: theme-color('info');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('info');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-success {
+    border-color: theme-color('success');
+    color: theme-color('success');
+
+    & .swal2-success-ring {
+      border-color: rgba(theme-color('success'), .3);
+    }
+
+    & [class^='swal2-success-line'] {
+      background-color: theme-color('success');
+      border-radius: 1rem;
+    }
   }
 }
