@@ -11,6 +11,7 @@ const mapStateToProps = (state, ownProps) => ({
   classesMain: getMainNavClasses(state),
   activeSections: getActiveMainSections(state),
   currentSection: getCurrentMainSection(state),
+  routeChangeTriggered: state.adminUi.mainNav.routeChangeTriggered,
 });
 
 const mapDispatchToProps = {

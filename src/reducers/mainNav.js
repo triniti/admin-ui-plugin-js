@@ -43,6 +43,7 @@ const onDropdownToggled = (state, action) => {
   return Object.assign({}, state, {
     activeSections: updatedActiveSections,
     currentSection: action.navId,
+    routeChangeTriggered: action.routeChangeTriggered,
   });
 };
 
