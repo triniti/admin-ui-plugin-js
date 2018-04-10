@@ -8,14 +8,76 @@ class UiSweetAlert extends React.Component {
   render() {
     const swal = require('sweetalert2')
 
-    function handleClick(e) {
+    function sweetAlert1(e) {
       e.preventDefault();
-      console.log('The link was clicked.');
+      swal('Hello world!')
+    }
+
+    function sweetAlert2(e) {
+      e.preventDefault();
       swal({
         title: 'Error!',
         text: 'Do you want to continue',
         type: 'error',
         confirmButtonText: 'Cool'
+      })
+    }
+
+    function sweetAlert3(e) {
+      e.preventDefault();
+      swal({
+        title: 'Are you sure?',
+        text: 'You will not be able to recover this imaginary file!',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, keep it',
+        confirmButtonClass: 'btn btn-outline-danger',
+        cancelButtonClass: 'btn btn-secondary',
+      }).then((result) => {
+        if (result.value) {
+          swal(
+            'Deleted!',
+            'Your imaginary file has been deleted.',
+            'success'
+          )
+        // For more information about handling dismissals please visit
+        // https://sweetalert2.github.io/#handling-dismissals
+        } else if (result.dismiss === swal.DismissReason.cancel) {
+          swal(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+          )
+        }
+      })
+    }
+
+    function sweetAlert4(e) {
+      e.preventDefault();
+      swal({
+        title: 'Are you sure?',
+        text: 'You will not be able to recover this imaginary file!',
+        type: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, keep it'
+      }).then((result) => {
+        if (result.value) {
+          swal(
+            'Deleted!',
+            'Your imaginary file has been deleted.',
+            'success'
+          )
+        // For more information about handling dismissals please visit
+        // https://sweetalert2.github.io/#handling-dismissals
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+          swal(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+          )
+        }
       })
     }
 
@@ -33,8 +95,17 @@ class UiSweetAlert extends React.Component {
           <Card key="sweetalert1">
             <CardHeader>Sweet Alert 2</CardHeader>
             <CardBody indent>
-              <Button outline onClick={handleClick}>
-                Sweet Alert Example
+              <Button outline onClick={sweetAlert1}>
+                Alert 1 - Base
+              </Button>
+              <Button outline onClick={sweetAlert2}>
+                Alert 2 - Error
+              </Button>
+              <Button outline onClick={sweetAlert3}>
+                Alert 3 - Warning
+              </Button>
+              <Button outline onClick={sweetAlert4}>
+                Alert 4 - Error
               </Button>
             </CardBody>
           </Card>,
