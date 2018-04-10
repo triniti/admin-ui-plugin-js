@@ -56,28 +56,12 @@ class UiSweetAlert extends React.Component {
     function sweetAlert4(e) {
       e.preventDefault();
       swal({
-        title: 'Are you sure?',
-        text: 'You will not be able to recover this imaginary file!',
-        type: 'warning',
+        title: 'Most Basic',
+        text: 'Here are the two standard button styles',
+        type: 'success',
         showCancelButton: true,
-        confirmButtonText: 'Yes, delete it!',
-        cancelButtonText: 'No, keep it'
-      }).then((result) => {
-        if (result.value) {
-          swal(
-            'Deleted!',
-            'Your imaginary file has been deleted.',
-            'success'
-          )
-        // For more information about handling dismissals please visit
-        // https://sweetalert2.github.io/#handling-dismissals
-        } else if (result.dismiss === Swal.DismissReason.cancel) {
-          swal(
-            'Cancelled',
-            'Your imaginary file is safe :)',
-            'error'
-          )
-        }
+        confirmButtonText: 'Confirm Button',
+        cancelButtonText: 'Cancel Button'
       })
     }
 
@@ -102,10 +86,10 @@ class UiSweetAlert extends React.Component {
                 Alert 2 - Error
               </Button>
               <Button outline onClick={sweetAlert3}>
-                Alert 3 - Warning
+                Alert 3 - Triniti Buttons
               </Button>
               <Button outline onClick={sweetAlert4}>
-                Alert 4 - Error
+                Alert 4 - Standard Buttons
               </Button>
             </CardBody>
           </Card>,
