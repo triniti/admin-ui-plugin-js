@@ -8,13 +8,12 @@ export default (
   handleDropdownClick,
   currentSection,
   activeSections,
-  routeChangeTriggered,
 ) =>
   navConfig.map((dropdownUnit) => {
     const {
       navType, navId, dpLinks, to,
     } = dropdownUnit;
-    const classes = (routeChangeTriggered && currentSection.toLowerCase() === navId.toLowerCase()) ? 'is-current' : '';
+    const classes = currentSection.toLowerCase() === navId.toLowerCase() ? 'is-current' : '';
     const dropdownOpen = !!activeSections.includes(navId);
 
     switch (navType) {

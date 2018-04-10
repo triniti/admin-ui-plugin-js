@@ -11,7 +11,6 @@ const MainNav = ({
   currentSection,
   handleToggleClick,
   handleDropdownClick,
-  routeChangeTriggered,
 }) => (
   <div className={`navbar-toggleable-md main-nav ${classesMain}`} >
     <Nav navbar>
@@ -21,7 +20,6 @@ const MainNav = ({
         handleDropdownClick,
         currentSection,
         activeSections,
-        routeChangeTriggered,
       )}
     </Nav>
   </div>
@@ -34,14 +32,12 @@ MainNav.propTypes = {
   currentSection: PropTypes.string,
   handleToggleClick: PropTypes.func.isRequired,
   handleDropdownClick: PropTypes.func.isRequired,
-  routeChangeTriggered: PropTypes.bool,
 };
 
 MainNav.defaultProps = {
   classesMain: '',
   activeSections: [],
   currentSection: '',
-  routeChangeTriggered: true,
 };
 
 export default MainNav;
