@@ -151,10 +151,12 @@
     background-color: $gray-rgba-600;
   }
   .navbar-dark .show > .nav-link::before {
+    margin: .5rem 0;
     background-color: $white-rgba-500;
   }
   .navbar-light .is-current > .nav-link::before,
   .navbar-dark .is-current > .nav-link::before {
+    margin: .5rem 0;
     background-color: theme-color("primary");
   }
   .main-nav .nav-link.active::before {
