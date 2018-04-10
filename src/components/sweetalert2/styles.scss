@@ -2,6 +2,41 @@
 
 @import "~bootstrap/scss/mixins";
 
+// button-outline mixin
+@mixin button-outline-text-variant($color, $color-hover: #fff) {
+  color: $color;
+  background: $white;
+  background-image: none;
+  border-color: $gray-700 !important;
+
+  @include hover {
+    color: $color;
+    background: $gray-400;
+    background-image: none !important;
+    border-color: $gray-700 !important;;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $gray-400;
+    border-color: $gray-700 !important;;
+  }
+}
+
+
 .swal2-container {
 
   & .swal2-show {
@@ -70,7 +105,8 @@
     }
   }
 
-  & .swal2-popup .swal2-styled {
+  & .swal2-popup .swal2-styled,
+  & .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled {
 
     @each $color, $value in $theme-colors {
       &.btn-#{$color} {
@@ -92,6 +128,21 @@
         &:hover,
         &:focus {
           border: 1px solid darken($value, 10%) !important;
+        }
+      }
+      &.btn-outline-text-#{$color} {
+        @include button-outline-text-variant($value, #fff);
+      }
+      &.btn-outline-text-light {
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+          color: $body-color;
+        }
+        &:active,
+        &.active {
+          color: $body-color;
         }
       }
     }
