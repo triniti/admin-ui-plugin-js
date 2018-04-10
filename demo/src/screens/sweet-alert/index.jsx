@@ -33,7 +33,7 @@ class UiSweetAlert extends React.Component {
         confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'No, keep it',
         confirmButtonClass: 'btn btn-danger',
-        cancelButtonClass: 'btn btn-outline-secondary',
+        cancelButtonClass: 'btn btn-outline-text-secondary',
       }).then((result) => {
         if (result.value) {
           swal(
