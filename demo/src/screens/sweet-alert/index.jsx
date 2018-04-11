@@ -104,8 +104,8 @@ class UiSweetAlert extends React.Component {
     function sweetAlert6(e) {
       e.preventDefault();
       swal({
-        backdrop: `rgba(0,0,0,0.15)`,
-        customClass: 'swal2-spinner',
+        backdrop: `rgba(41,41,43,0.2)`,
+        customClass: 'triniti-spinner',
         showConfirmButton: false,
         target: '.screen-main',
       });
@@ -115,7 +115,6 @@ class UiSweetAlert extends React.Component {
       e.preventDefault();
       swal({
         html: `<h5>Dismissable Horizontal Alert Ellipsis</h5><p>Some alert that needs your attention. Must click here to close.</p> `,
-        backdrop: `rgba(0,0,0,0.3)`,
         allowOutsideClick: false,
         customClass: 'swal2-horizontal',
         showCancelButton: true,

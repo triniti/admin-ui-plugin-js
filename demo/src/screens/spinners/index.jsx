@@ -52,6 +52,20 @@ const UiSpinners = () => (
         </CardBody>
       </Card>,
 
+      <Card key="icons1">
+        <CardHeader>CSS Spinner</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <div className="triniti-spinner">
+                <div>
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
        <Card key="icons2">
         <CardHeader>Spinner Centered</CardHeader>
         <CardBody indent>

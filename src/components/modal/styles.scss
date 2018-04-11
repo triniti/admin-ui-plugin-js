@@ -243,6 +243,21 @@
   }
 }
 
+.modal-loading-bg {
+
+  &.show {
+    opacity: .2;
+  }
+}
+
+.modal-loading {
+  max-width: 4rem;
+
+  & .modal-content {
+    background: rgba($navbar-theme-dark,.25);
+  }
+}
+
 // text style to match sweet alert body text
 
 .icon-modal {
