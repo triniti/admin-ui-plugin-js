@@ -33,7 +33,7 @@ class UiSweetAlert extends React.Component {
         confirmButtonText: 'Yes, delete it!',
         cancelButtonText: 'No, keep it',
         confirmButtonClass: 'btn btn-danger',
-        cancelButtonClass: 'btn btn-outline-text-secondary',
+        cancelButtonClass: 'btn btn-secondary',
       }).then((result) => {
         if (result.value) {
           swal(
@@ -65,6 +65,51 @@ class UiSweetAlert extends React.Component {
       })
     }
 
+    function sweetAlert5(e) {
+      e.preventDefault();
+      swal({
+        title: 'Submit email to run ajax request',
+        input: 'email',
+        inputClass: 'form-control',
+        showCancelButton: true,
+        confirmButtonText: 'Submit',
+        showLoaderOnConfirm: true,
+        confirmButtonClass: 'btn btn-danger',
+        cancelButtonClass: 'btn btn-secondary',
+        preConfirm: (email) => {
+          return new Promise((resolve) => {
+            setTimeout(() => {
+              if (email === 'taken@example.com') {
+                swal.showValidationError(
+                  'This email is already taken.'
+                )
+              }
+              resolve()
+            }, 2000)
+          })
+        },
+        allowOutsideClick: () => !swal.isLoading()
+      }).then((result) => {
+        if (result.value) {
+          swal({
+            type: 'success',
+            title: 'Ajax request finished!',
+            html: 'Submitted email: ' + result.value
+          })
+        }
+      })
+    }
+
+    function sweetAlert6(e) {
+      e.preventDefault();
+      swal({
+        backdrop: `rgba(0,0,0,0)`,
+        customClass: 'modal-loading',
+        showConfirmButton: false,
+        target: '.screen-main',
+      });
+    }
+
     return (
       <Screen
         sidenav={<Sidenav activeScreen="sweet-alert" />}
@@ -90,6 +135,12 @@ class UiSweetAlert extends React.Component {
               </Button>
               <Button outline onClick={sweetAlert4}>
                 Alert 4 - Standard Buttons
+              </Button>
+              <Button outline onClick={sweetAlert5}>
+                Alert 5 - Form Field
+              </Button>
+              <Button outline onClick={sweetAlert6}>
+                Alert 6 - Loading
               </Button>
             </CardBody>
           </Card>,

@@ -10,7 +10,8 @@
 // Textual form controls
 //
 
-.form-control {
+.form-control,
+.swal2-container .swal2-popup .form-control {
   position: relative;
   line-height: $input-btn-line-height;
   border-radius: $form-control-radius;
@@ -32,6 +33,10 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }
+}
+
+.swal2-container .swal2-popup .form-control {
+  box-shadow: $shadow-depth-0;
 }
 
 .input-group > div:focus-within,
