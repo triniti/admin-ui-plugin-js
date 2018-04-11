@@ -94,7 +94,7 @@ import ScrollableContainer from './scrollable-container';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Stepper from './stepper';
-import Swal from './sweetalert2';
+import SweetAlert from './sweetalert2';
 import Switch from './switch';
 import TabContent from './tab-content';
 import TabPane from './tab-pane';
@@ -208,7 +208,7 @@ export {
   Spinner,
   StatusMessage,
   Stepper,
-  Swal,
+  SweetAlert,
   Switch,
   TabContent,
   TabPane,
