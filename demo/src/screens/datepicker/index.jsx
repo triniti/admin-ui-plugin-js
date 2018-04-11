@@ -32,14 +32,14 @@ class UiDatePicker extends React.Component {
         primaryActions={<PrimaryActions />}
         body={[
           <Card key="datepicker1">
-            <CardHeader>Datepicker</CardHeader>
+            <CardHeader>DatePicker</CardHeader>
             <CardBody indent>
               <DatePicker selected={this.state.startDate} onChange={this.handleChange}/>
             </CardBody>
           </Card>,
 
           <Card key="datepicker2">
-            <CardHeader>Datepicker with Time inside Input Group</CardHeader>
+            <CardHeader>DatePicker with Time inside Input Group</CardHeader>
             <CardBody indent>
               <InputGroup size="sm" radius="round">
                 <InputGroupAddon addonType="prepend"><InputGroupText><Icon imgSrc="calendar" size="sd" className="mx-1"/></InputGroupText></InputGroupAddon>
@@ -48,6 +48,12 @@ class UiDatePicker extends React.Component {
             </CardBody>
           </Card>,
 
+          <Card key="props">
+          <CardHeader>DatePicker Properties</CardHeader>
+          <CardBody>
+            <p>This component relies on the <a href="https://reactdatepicker.com/" target="_blank"><strong>React DatePicker</strong></a> component.</p>
+          </CardBody>
+        </Card>,
         ]}
       />
     );

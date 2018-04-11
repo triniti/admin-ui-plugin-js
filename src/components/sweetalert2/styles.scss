@@ -53,7 +53,7 @@
     padding: 2.5rem 2rem 1.5rem 2rem;
 
     // loading styles
-    &.swal2-spinner {
+    &.triniti-spinner {
       width: 6rem;
       height: 6rem;
       padding: 0;
@@ -84,8 +84,11 @@
     // font-family: 'Varela Round', sans-serif;
     font-size: 3.8rem;
   }
+  &.swal2-shown {
+    background-color: rgba($modal-backdrop-bg, 0.33);
+  }
   .screen-main &.swal2-shown {
-    background-color: rgba($body-color, 0.33);
+    background-color: rgba($modal-backdrop-bg, 0.33);
   }
   & .swal2-popup .swal2-actions {
     flex-wrap: wrap;
@@ -327,56 +330,4 @@
   100% {
     opacity:1;
   }
-}
-
-
-// loading animation
-
-@keyframes swal2-spinner {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-@-webkit-keyframes swal2-spinner {
-  0% {
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%) rotate(360deg);
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-.swal2-spinner {
-  position: relative;
-}
-.swal2-spinner .swal2-content,
-.swal2-spinner .swal2-content:after {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border: 3px solid $white-rgba-600;
-  border-top-color: transparent;
-  border-radius: 50%;
-}
-.swal2-spinner .swal2-content {
-  -webkit-animation: swal2-spinner 1s linear infinite;
-  animation: swal2-spinner 400ms linear infinite;
-  top: 30px;
-  left: 30px;
-}
-.swal2-spinner .swal2-content:after {
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-.swal2-spinner {
-  width: 60px !important;
-  height: 60px !important;
-  -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
-  transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
 }

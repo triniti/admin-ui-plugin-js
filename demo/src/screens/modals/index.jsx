@@ -11,6 +11,7 @@ class UiModal extends React.Component {
       nestedModal: false,
       singleModal: false,
       smallModal: false,
+      spinnerModal: false,
       collapseCode1: false,
     };
 
@@ -19,6 +20,7 @@ class UiModal extends React.Component {
     this.toggleAll = this.toggleAll.bind(this);
     this.toggleSmall = this.toggleSmall.bind(this);
     this.toggleSingle = this.toggleSingle.bind(this);
+    this.toggleSpinner = this.toggleSpinner.bind(this);
     this.toggleCode1 = this.toggleCode1.bind(this);
   }
 
@@ -48,6 +50,12 @@ class UiModal extends React.Component {
   toggleSingle() {
     this.setState({
       singleModal: !this.state.singleModal,
+    });
+  }
+
+  toggleSpinner() {
+    this.setState({
+      spinnerModal: !this.state.spinnerModal,
     });
   }
 
@@ -185,6 +193,20 @@ export default ModalExample;
                   <Button color="danger" onClick={this.toggleSingle} className="btn-modal">Delete This</Button>
                   <Button color="secondary" onClick={this.toggleSingle} className="btn-modal">Cancel Deletion</Button>
                 </div>
+                </ModalBody>
+              </Modal>
+
+              <Button outline onClick={this.toggleSpinner}>Loading Spinner Modal</Button>
+              <Modal
+                centered
+                size="xs"
+                backdropClassName="modal-loading-bg"
+                className="modal-loading"
+                contentClassName="triniti-spinner"
+                isOpen={this.state.spinnerModal}
+                toggle={this.toggleSpinner}>
+                <ModalBody className="text-center modal-wrapper">
+
                 </ModalBody>
               </Modal>
             </CardBody>
