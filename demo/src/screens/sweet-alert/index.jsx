@@ -130,7 +130,7 @@ class UiSweetAlert extends React.Component {
       <Screen
         sidenav={<Sidenav activeScreen="sweet-alert" />}
         sidenavHeader
-        header="Sweet Alert 2"
+        header="Sweet Alert"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
       //   { to: '#/test2', text: 'Tab2' },
@@ -138,7 +138,7 @@ class UiSweetAlert extends React.Component {
         primaryActions={<PrimaryActions />}
         body={[
           <Card key="sweetalert1">
-            <CardHeader>Sweet Alert 2</CardHeader>
+            <CardHeader>SweetAlert Examples</CardHeader>
             <CardBody indent>
               <Button outline onClick={sweetAlert1}>
                 Alert 1 - Basic
@@ -161,6 +161,13 @@ class UiSweetAlert extends React.Component {
               <Button outline onClick={sweetAlert7}>
                 Alert 7 - Horizontal
               </Button>
+            </CardBody>
+          </Card>,
+
+          <Card key="props">
+            <CardHeader>SweetAlert Properties</CardHeader>
+            <CardBody>
+              <p>This component relies on the <a href="https://sweetalert2.github.io/" target="_blank"><strong>Sweet Alert 2</strong></a> component.</p>
             </CardBody>
           </Card>,
         ]}
