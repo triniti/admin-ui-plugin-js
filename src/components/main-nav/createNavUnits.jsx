@@ -32,7 +32,9 @@ export default (
           <DropdownUnit
             key={navId.replace(/\s+/g, '')}
             dropdownOpen={dropdownOpen}
-            handleToggleClick={() => handleToggleClick(navId)}
+            handleToggleClick={(routeChanged) => {
+              handleToggleClick(navId, routeChanged);
+            }}
             handleDropdownClick={() => handleDropdownClick(navId)}
             classes={classes}
             title={navId}

@@ -14,18 +14,30 @@ const MainNav = ({
 }) => (
   <div className={`navbar-toggleable-md main-nav ${classesMain}`} >
     <Nav navbar>
-      {createNavUnits(navConfig, handleToggleClick, handleDropdownClick, currentSection, activeSections)}
+      {createNavUnits(
+        navConfig,
+        handleToggleClick,
+        handleDropdownClick,
+        currentSection,
+        activeSections,
+      )}
     </Nav>
   </div>
 );
 
 MainNav.propTypes = {
-  navConfig: PropTypes.arrayOf(PropTypes.object),
+  navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
   classesMain: PropTypes.string,
   activeSections: PropTypes.arrayOf(PropTypes.string),
   currentSection: PropTypes.string,
-  handleToggleClick: PropTypes.func,
-  handleDropdownClick: PropTypes.func,
+  handleToggleClick: PropTypes.func.isRequired,
+  handleDropdownClick: PropTypes.func.isRequired,
+};
+
+MainNav.defaultProps = {
+  classesMain: '',
+  activeSections: [],
+  currentSection: '',
 };
 
 export default MainNav;

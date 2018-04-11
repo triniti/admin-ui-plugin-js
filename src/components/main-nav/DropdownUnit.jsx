@@ -30,14 +30,21 @@ const DropdownUnit = ({
   return (
     <NavDropdown isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
       <DropdownToggle
-        onClick={handleToggleClick}
+        onClick={() => handleToggleClick(true)}
         tag={NavLink}
         to={to}
         title={title}
-        className="nav-link"
+        className="nav-link nav-link-desktop"
       >
         {title}
       </DropdownToggle>
+      <div
+        role="link"
+        tabIndex="-1"
+        onClick={() => handleToggleClick(false)}
+        onKeyDown={() => handleToggleClick(false)}
+        className="nav-link-mobile"
+      />
       <DropdownMenu className="nav-dropdown-menu">
         {navLinks}
       </DropdownMenu>

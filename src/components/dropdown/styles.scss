@@ -8,12 +8,12 @@
   &.active,
   &:active {
     color: $white;
-    background-color: $component-active-bg;
+    background: $gray-200;
   }
 
   &:active {
     color: $body-color;
-    background-color: $gray-200;
+    background: $gray-200;
   }
 }
 
