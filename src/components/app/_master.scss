@@ -356,3 +356,21 @@ input::-webkit-calendar-picker-indicator {
     transform: translateY(0);
   }
 }
+
+@keyframes triniti-slidein-right {
+  0% {
+    transform: translateX(1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes triniti-slidein-left {
+  0% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

@@ -41,6 +41,10 @@
 
   & .swal2-show {
     animation: triniti-bounce 0.3s;
+
+    &.swal2-horizontal {
+      animation: triniti-slidein-right 0.3s;
+    }
   }
   & .swal2-popup {
     border-radius: $border-radius-xl;
