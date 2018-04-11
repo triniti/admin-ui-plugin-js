@@ -103,7 +103,7 @@ class UiSweetAlert extends React.Component {
     function sweetAlert6(e) {
       e.preventDefault();
       swal({
-        backdrop: `rgba(0,0,0,0)`,
+        backdrop: `rgba(0,0,0,0.15)`,
         customClass: 'modal-loading',
         showConfirmButton: false,
         target: '.screen-main',

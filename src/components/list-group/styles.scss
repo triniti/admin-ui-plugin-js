@@ -133,6 +133,7 @@
 // Style for list-group-chat
 
 .list-group-chat {
+  flex-direction: column-reverse;
 
   & .list-group-item {
     border-radius: 6px !important;
