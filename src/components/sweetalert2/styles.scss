@@ -47,6 +47,14 @@
     padding: 2.5rem 1.5rem 1.5rem 1.5rem;
     font-size: .875rem;
     box-shadow: $shadow-depth-6;
+
+    // loading styles
+    &.modal-loading {
+      width: 6rem;
+      height: 6rem;
+      padding: 0;
+      background-color: rgba(0,0,0,.25);
+    }
   }
   & .swal2-popup .swal2-title {
     color: $body-color;
@@ -66,8 +74,8 @@
   & .swal2-icon-text {
     font-weight: 500;
   }
-  &.swal2-shown {
-    background-color: rgba($body-color, 0.33) !important;
+  .screen-main &.swal2-shown {
+    background-color: rgba($body-color, 0.33);
   }
   .swal2-popup .swal2-actions {
     flex-wrap: wrap;
@@ -217,4 +225,56 @@
   100% {
     opacity:1;
   }
+}
+
+
+// loading animation
+
+@keyframes modal-loading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes modal-loading {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.modal-loading {
+  position: relative;
+}
+.modal-loading .swal2-content,
+.modal-loading .swal2-content:after {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 4px solid #d9d9de;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+.modal-loading .swal2-content {
+  -webkit-animation: modal-loading 1s linear infinite;
+  animation: modal-loading 1s linear infinite;
+  top: 30px;
+  left: 30px;
+}
+.modal-loading .swal2-content:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.modal-loading {
+  width: 60px !important;
+  height: 60px !important;
+  -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
 }
