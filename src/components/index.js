@@ -94,7 +94,6 @@ import ScrollableContainer from './scrollable-container';
 import Spinner from './spinner';
 import StatusMessage from './status-message';
 import Stepper from './stepper';
-import SweetAlert from './sweetalert2';
 import Switch from './switch';
 import TabContent from './tab-content';
 import TabPane from './tab-pane';
@@ -110,6 +109,11 @@ import {
   UncontrolledTooltip,
 } from './uncontrolled';
 import UncontrolledCarousel from './uncontrolled-carousel';
+
+// this is special,
+// we just need the sweetalert2 styles,
+// and we still use swal lib in any use cases.
+import './sweetalert2/styles.scss';
 
 export {
   createLazyComponent,
@@ -208,7 +212,6 @@ export {
   Spinner,
   StatusMessage,
   Stepper,
-  SweetAlert,
   Switch,
   TabContent,
   TabPane,
