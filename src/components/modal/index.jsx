@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import Portal from './portal';
 import Fade from '../fade';
@@ -30,7 +29,7 @@ const propTypes = {
   labelledBy: PropTypes.string,
   backdrop: PropTypes.oneOfType([
     PropTypes.bool,
-    PropTypes.oneOf(['static'])
+    PropTypes.oneOf(['static']),
   ]),
   onEnter: PropTypes.func,
   onExit: PropTypes.func,
@@ -194,7 +193,7 @@ class Modal extends React.Component {
     if (!this.bodyClassAdded) {
       document.body.className = classNames(
         document.body.className,
-        mapToCssModules('modal-open', this.props.cssModule)
+        mapToCssModules('modal-open', this.props.cssModule),
       );
       this.bodyClassAdded = true;
     }
@@ -242,7 +241,7 @@ class Modal extends React.Component {
         <div
           className={mapToCssModules(
             classNames('modal-content', this.props.contentClassName),
-            this.props.cssModule
+            this.props.cssModule,
           )}
         >
           {this.props.children}
@@ -271,7 +270,7 @@ class Modal extends React.Component {
         style: { display: 'block' },
         'aria-labelledby': labelledBy,
         role,
-        tabIndex: '-1'
+        tabIndex: '-1',
       };
 
       const hasTransition = this.props.fade;
