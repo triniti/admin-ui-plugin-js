@@ -50,7 +50,7 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: $modal-dialog-margin;
+  margin: $modal-dialog-margin auto;
 
   @include media-breakpoint-up(sm) {
     max-width: $modal-sd;
@@ -167,6 +167,8 @@
   align-items: center;
   min-height: calc(100% - 1rem);
   pointer-events: none;
+  margin-left: auto;
+  margin-right: auto;
 
   &.modal-xs,
   &.modal-sm {
@@ -194,25 +196,16 @@
 
 .modal-xs {
   max-width: 240px;
-
-  @include media-breakpoint-down(sm) {
-    margin: 0.5rem auto;
-  }
 }
 
 .modal-sm {
   max-width: $modal-sm;
-
-  @include media-breakpoint-down(sm) {
-    margin: 0.5rem auto;
-  }
 }
 
 .modal-sd {
   max-width: $modal-sd;
 
   @include media-breakpoint-down(md) {
-    margin: 0.5rem auto;
     width: calc(100% - 1rem);
   }
 }
