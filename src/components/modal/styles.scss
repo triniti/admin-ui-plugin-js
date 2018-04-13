@@ -29,7 +29,7 @@
 
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
-    @include transition($modal-transition);
+    // @include transition($modal-transition);
   }
   &.show .modal-dialog {
     animation: triniti-slidein 0.3s;
