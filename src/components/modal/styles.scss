@@ -5,6 +5,15 @@
 
 @import "~bootstrap/scss/mixins";
 
+.fade {
+  opacity: 0;
+  transition: opacity .15s linear;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
@@ -41,6 +50,12 @@
     }
   }
 }
+
+.modal,
+.modal-open {
+  overflow: hidden;
+}
+
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
@@ -49,7 +64,7 @@
 // Shell div to position the modal with bottom padding
 .modal-dialog {
   position: relative;
-  width: auto;
+  width: 100%;
   margin: $modal-dialog-margin auto;
 
   @include media-breakpoint-up(sm) {
