@@ -155,4 +155,5 @@ $color: rgba(0, 0, 0, 0.25);
   height: 60px !important;
   -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
   transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  flex-grow: 0 !important;
 }
