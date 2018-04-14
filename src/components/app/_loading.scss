@@ -96,3 +96,64 @@ $color: rgba(0, 0, 0, 0.25);
   margin-left: .75rem;
   font-weight: 600;
 }
+
+
+// loading animation
+
+@keyframes triniti-spinner {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes triniti-spinner {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+// triniti spinner
+
+.triniti-spinner {
+  position: relative;
+}
+
+.triniti-spinner > div:first-child,
+.triniti-spinner > div:first-child:after {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid $gray-700;
+  border-top-color: transparent;
+  border-radius: 50%;
+}
+
+.triniti-spinner > div:first-child {
+  -webkit-animation: triniti-spinner 1s linear infinite;
+  animation: triniti-spinner 400ms linear infinite;
+  top: 30px;
+  left: 30px;
+  padding: 0;
+}
+
+.triniti-spinner > div:first-child:after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.triniti-spinner {
+  width: 60px !important;
+  height: 60px !important;
+  -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  flex-grow: 0 !important;
+}

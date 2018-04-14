@@ -17,7 +17,6 @@ const UiSpinners = () => (
       <Card key="icons1">
         <CardHeader>Spinner</CardHeader>
         <CardBody indent>
-          <CardTitle></CardTitle>
           <Row>
             <Col>
               <Spinner className="mb-3 mr-3" color="#03caa5" width="16" strokeWidth="10" />
@@ -48,6 +47,20 @@ const UiSpinners = () => (
             <Col>
               <Button size="sm" color="secondary"><Spinner width="16" color="white" className="mr-2"/> Loading</Button>
 
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="icons1">
+        <CardHeader>CSS Spinner</CardHeader>
+        <CardBody indent>
+          <Row>
+            <Col>
+              <div className="triniti-spinner">
+                <div>
+                </div>
+              </div>
             </Col>
           </Row>
         </CardBody>

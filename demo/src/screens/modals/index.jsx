@@ -11,6 +11,7 @@ class UiModal extends React.Component {
       nestedModal: false,
       singleModal: false,
       smallModal: false,
+      spinnerModal: false,
       collapseCode1: false,
     };
 
@@ -19,6 +20,7 @@ class UiModal extends React.Component {
     this.toggleAll = this.toggleAll.bind(this);
     this.toggleSmall = this.toggleSmall.bind(this);
     this.toggleSingle = this.toggleSingle.bind(this);
+    this.toggleSpinner = this.toggleSpinner.bind(this);
     this.toggleCode1 = this.toggleCode1.bind(this);
   }
 
@@ -48,6 +50,12 @@ class UiModal extends React.Component {
   toggleSingle() {
     this.setState({
       singleModal: !this.state.singleModal,
+    });
+  }
+
+  toggleSpinner() {
+    this.setState({
+      spinnerModal: !this.state.spinnerModal,
     });
   }
 
@@ -100,15 +108,31 @@ class ModalExample extends React.Component {
   render() {
     return (
       <div>
-        <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Button color="secondary" onClick={this.toggle}>Click Me</Button>
+        <Modal centered isOpen={this.state.modal} toggle={this.toggle} size="lg">
           <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
-          <ModalBody>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <ModalBody className="pb-5">
+            <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+            </p>
+            <Button outline onClick={this.toggleNested}>Show Nested Modal</Button>
+            <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} size="sm">
+              <ModalBody className="text-center modal-wrapper"><h2>Nested Modal</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
+              <ModalFooter buttons>
+                <Button outline color="secondary" size="lg" onClick={this.toggleAll}>Clear</Button>
+                <Button outline color="secondary" size="lg" onClick={this.toggleNested}>Cancel</Button>
+              </ModalFooter>
+            </Modal>
           </ModalBody>
           <ModalFooter>
-            <Button color="primary" onClick={this.toggle}>Do Something</Button>{' '}
-            <Button color="secondary" onClick={this.toggle}>Cancel</Button>
+            <Button color="link-bg" onClick={this.toggleNested}>Not Done</Button>
+            <Button color="secondary" onClick={this.toggle}>All Done</Button>
           </ModalFooter>
         </Modal>
       </div>
@@ -124,7 +148,7 @@ export default ModalExample;
             </Collapse>
             <CardBody indent>
               <Button color="secondary" onClick={this.toggle}>Click Me</Button>
-              <Modal isOpen={this.state.modal} toggle={this.toggle} size="xl" maxWidth="1400px">
+              <Modal centered isOpen={this.state.modal} toggle={this.toggle} size="lg">
                 <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
                 <ModalBody className="pb-5">
                   <p>
@@ -138,34 +162,52 @@ export default ModalExample;
                   </p>
                   <Button outline onClick={this.toggleNested}>Show Nested Modal</Button>
                   <Modal isOpen={this.state.nestedModal} toggle={this.toggleNested} size="sm">
-                    <ModalBody className="text-center modal-wrapper"><h4>Nested Modal title</h4>Do you want to clear everything?</ModalBody>
+                    <ModalBody className="text-center modal-wrapper"><h2>Nested Modal</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
                     <ModalFooter buttons>
-                      <Button outline color="primary" size="lg" onClick={this.toggleAll}>Clear</Button>
-                      <Button outline color="primary" size="lg" onClick={this.toggleNested}>Cancel</Button>
+                      <Button outline color="secondary" size="lg" onClick={this.toggleAll}>Clear</Button>
+                      <Button outline color="secondary" size="lg" onClick={this.toggleNested}>Cancel</Button>
                     </ModalFooter>
                   </Modal>
                 </ModalBody>
                 <ModalFooter>
                   <Button color="link-bg" onClick={this.toggleNested}>Not Done</Button>
-                  <Button color="primary" onClick={this.toggle}>All Done</Button>
+                  <Button color="secondary" onClick={this.toggle}>All Done</Button>
                 </ModalFooter>
               </Modal>
 
               <Button outline color="secondary" onClick={this.toggleSmall}>Small Modal</Button>
-              <Modal isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
-                <ModalBody className="text-center modal-wrapper"><h4>Small Modal Action</h4>Do you want to clear everything?</ModalBody>
+              <Modal centered isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
+                <ModalBody className="text-center modal-wrapper"><h2>Modal Action</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
                 <ModalFooter buttons>
-                  <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Clear</Button>
-                  <Button color="link-bg" size="lg" onClick={this.toggleSmall}>Cancel</Button>
+                  <Button outline color="danger" size="lg" onClick={this.toggleSmall}>Clear</Button>
+                  <Button outline color="secondary" size="lg" onClick={this.toggleSmall}>Cancel</Button>
                 </ModalFooter>
               </Modal>
 
-              <Button outline onClick={this.toggleSingle}>Single XL Footer Button</Button>
-              <Modal isOpen={this.state.singleModal} toggle={this.toggleSingle} size="sm">
-                <ModalBody className="text-center modal-wrapper"><h4>Single Modal Button</h4>Do you want to clear everything?</ModalBody>
-                <ModalFooter buttons>
-                  <Button color="secondary" size="xl" onClick={this.toggleSingle}>Login</Button>
-                </ModalFooter>
+              <Button outline onClick={this.toggleSingle}>Sweet Alert Style Modal</Button>
+              <Modal centered size="sd" isOpen={this.state.singleModal} toggle={this.toggleSingle}>
+                <ModalBody className="text-center modal-wrapper">
+                <Icon imgSrc="locked" alert size="lg" color="danger" border className="icon-modal" />
+                <h2>Hey There!</h2><p className="text-modal">This modal mimics Sweet Alert!</p>
+                <div className="modal-actions">
+                  <Button color="danger" onClick={this.toggleSingle} className="btn-modal">Delete This</Button>
+                  <Button color="secondary" onClick={this.toggleSingle} className="btn-modal">Cancel Deletion</Button>
+                </div>
+                </ModalBody>
+              </Modal>
+
+              <Button outline onClick={this.toggleSpinner}>Loading Spinner Modal</Button>
+              <Modal
+                centered
+                size="xs"
+                backdropClassName="modal-loading-bg"
+                className="modal-loading"
+                contentClassName="triniti-spinner"
+                isOpen={this.state.spinnerModal}
+                toggle={this.toggleSpinner}>
+                <ModalBody className="text-center modal-wrapper">
+
+                </ModalBody>
               </Modal>
             </CardBody>
           </Card>,
@@ -305,7 +347,7 @@ export default ModalExample;
                     <th scope="row">size</th>
                     <td>string</td>
                     <td></td>
-                    <td>size="xs" (240px), "sm" 300px, "md" 460px, "lg" 800px, "xl" 1000px</td>
+                    <td>size="xs" 240px, "sm" 300px, "sd" 450px, "md" 560px, "lg" 800px, "xl" 1000px</td>
                   </tr>
                   <tr>
                     <th scope="row">toggle</th>

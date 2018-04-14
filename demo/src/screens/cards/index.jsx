@@ -149,7 +149,7 @@ const UiCard = () => (
         </Row>
       </CardsContainer>,
 
-      <CardTitle tag="h4" key="cardtitle2">Card Group</CardTitle>,
+      <CardTitle tag="h4" key="cardtitle2" className="mt-4">Card Group</CardTitle>,
 
       <CardGroup key="cardgroup2">
         <Card>
@@ -200,7 +200,7 @@ const UiCard = () => (
         </Card>
       </CardGroup>,
 
-      <CardTitle tag="h4" key="cardtitle3">Card Deck</CardTitle>,
+      <CardTitle tag="h4" key="cardtitle3" className="mt-5">Card Deck</CardTitle>,
 
       <CardDeck key="carddeck3">
         <Card>
@@ -251,7 +251,7 @@ const UiCard = () => (
         </Card>
       </CardDeck>,
 
-      <CardTitle tag="h4" key="cardtitle4">Card Columns</CardTitle>,
+      <CardTitle tag="h4" key="cardtitle4" className="mt-5">Card Columns</CardTitle>,
 
       <CardColumns key="cardcolumns4">
         <Card>

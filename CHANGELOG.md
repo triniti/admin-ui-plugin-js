@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.4.14
+* Add SweetAlert local component on top of SweetAlert2
+* Match SweetAlert and Modal styling so you can use interchangably
+* New css spinner, .triniti-spinner, in use by SweetAlert and Modal components
+
+
 ## v0.4.13
 * Add beginning styles for list-group history.
 * Fix a few list-group themes.

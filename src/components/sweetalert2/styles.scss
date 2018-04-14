@@ -1,0 +1,333 @@
+// SweetAlert2
+
+@import "~bootstrap/scss/mixins";
+
+// button-outline mixin
+@mixin button-outline-text-variant($color, $color-hover: #fff) {
+  color: $color;
+  background: $white;
+  background-image: none;
+  border-color: $gray-700 !important;
+
+  @include hover {
+    color: $color;
+    background: $gray-400;
+    background-image: none !important;
+    border-color: $gray-700 !important;;
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
+
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color;
+    background-color: $gray-400;
+    border-color: $gray-700 !important;;
+  }
+}
+
+
+.swal2-container {
+
+  & .swal2-show {
+    animation: triniti-bounce 0.3s;
+
+    &.swal2-horizontal {
+      animation: triniti-slidein-right 0.3s;
+    }
+  }
+  & .swal2-popup {
+    border-radius: $border-radius-xl;
+    font-size: .875rem;
+    box-shadow: $shadow-depth-6;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+
+    // loading styles
+    &.triniti-spinner {
+      width: 6rem;
+      height: 6rem;
+      padding: 0;
+      background-color: rgba($navbar-theme-dark,.25);
+    }
+  }
+  & .swal2-popup .swal2-title {
+    color: $body-color;
+    font-size: 1.675rem;
+    font-weight: 500;
+    letter-spacing: .008em;
+
+    &:empty {
+      display: none;
+    }
+  }
+  & .swal2-popup .swal2-content {
+    color: $body-color-light;
+    font-weight: 400;
+  }
+  & .swal2-icon {
+    margin-top: 0;
+    border-width: 3px;
+  }
+  & .swal2-icon-text {
+    font-weight: 500;
+    // line-height: 1.24;
+    // font-family: 'Varela Round', sans-serif;
+    font-size: 3.8rem;
+  }
+  &.swal2-shown {
+    background-color: rgba($modal-backdrop-bg, 0.33);
+  }
+  .screen-main &.swal2-shown {
+    background-color: rgba($modal-backdrop-bg, 0.33);
+  }
+  & .swal2-popup .swal2-actions {
+    flex-wrap: wrap;
+  }
+  & .swal2-popup.swal2-horizontal {
+    flex-direction: row;
+    padding: 0;
+    width: 360px;
+    font-size: .75rem;
+
+    & .swal2-content {
+      flex: 1 0 auto;
+    }
+    & #swal2-content {
+      text-align: left;
+      margin: .75rem .5rem .75rem 1rem;
+      width: 236px;
+
+      & h5 {
+        color: $body-color;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      & p {
+        font-size: .8rem;
+        margin-bottom: .5rem;
+      }
+    }
+    & .swal2-actions {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      width: 100px;
+      border-left: 1px solid $border-color;
+      background-color: $border-color;
+      border-radius: 0 5px 5px 0;
+
+      & button {
+        margin: 0;
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        display: flex;
+        flex: 1 0 auto;
+        justify-content: center;
+
+        &:first-child {
+          border-top-right-radius: 5px;
+        }
+        &:last-child {
+          border-bottom-right-radius: 5px;
+          margin-top: 1px;
+        }
+      }
+    }
+  }
+
+  // Button Colors
+  & .swal2-popup .swal2-styled.swal2-confirm {
+    margin-bottom: .5rem;
+    @if $enable-gradients {
+      background: theme-color("secondary") linear-gradient(180deg, mix($body-bg, theme-color("secondary"), 15%), theme-color("secondary")) repeat-x;
+    } @else {
+      background-color: theme-color("secondary");
+    }
+    border: 1px solid darken(theme-color("secondary"), 5%) !important;
+    box-shadow: $shadow-depth-3;
+
+    &:hover {
+      background: theme-color("secondary") linear-gradient(180deg, darken(mix($body-bg, theme-color("secondary"), 15%), 15%), darken(theme-color("secondary"), 15%)) repeat-x;
+      border: 1px solid darken(theme-color("secondary"), 10%) !important;
+    }
+  }
+
+  & .swal2-popup .swal2-styled.swal2-cancel {
+    margin-bottom: .5rem;
+    @if $enable-gradients {
+      background: theme-color("dark") linear-gradient(180deg, mix($body-bg, theme-color("dark"), 15%), theme-color("dark")) repeat-x;
+    } @else {
+      background-color: theme-color("dark");
+    }
+    border: 1px solid darken(theme-color("dark"), 5%) !important;
+    box-shadow: $shadow-depth-3;
+
+    &:hover {
+      background: theme-color("dark") linear-gradient(180deg, darken(mix($body-bg, theme-color("dark"), 15%), 15%), darken(theme-color("dark"), 15%)) repeat-x;
+      border: 1px solid darken(theme-color("dark"), 10%) !important;
+    }
+  }
+
+  & .swal2-popup .swal2-styled,
+  & .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled {
+
+    @each $color, $value in $theme-colors {
+      &.btn-#{$color} {
+        @include button-variant($value, $value);
+        border: 1px solid darken($value, 5%) !important;
+
+        &:hover,
+        &:focus {
+          border: 1px solid darken($value, 10%) !important;
+        }
+      }
+      &.btn-warning {
+        color: $white;
+      }
+      &.btn-outline-#{$color} {
+        @include button-outline-variant($value);
+        border: 1px solid darken($value, 5%) !important;
+
+        &:hover,
+        &:focus {
+          border: 1px solid darken($value, 10%) !important;
+        }
+      }
+      &.btn-outline-light {
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+          color: $body-color;
+        }
+        &:active,
+        &.active {
+          color: $body-color;
+        }
+      }
+      &.btn-outline-text-#{$color} {
+        @include button-outline-text-variant($value, #fff);
+      }
+      &.btn-outline-text-light {
+        color: $body-color;
+
+        &:hover,
+        &:focus {
+          color: $body-color;
+        }
+        &:active,
+        &.active {
+          color: $body-color;
+        }
+      }
+    }
+  }
+
+  & .swal2-popup .swal2-styled,
+  & .swal2-popup .swal2-actions:not(.swal2-loading) .swal2-styled {
+    &.btn-link-bg {
+      color: $link-color;
+      border-color: transparent !important;
+      background: $white !important;
+      box-shadow: $shadow-depth-0;
+    }
+
+    &.btn-link-bg:hover,
+    &.btn-link-bg.active {
+      color: $link-color;
+      border-color: transparent !important;
+      background: $gray-400 !important;
+    }
+  }
+
+  // Icon Colors
+  & .swal2-icon.swal2-error {
+    border-color: theme-color('danger');
+    color: theme-color('danger');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('danger');
+      border-radius: 1rem;
+      height: .325em;
+    }
+  }
+  & .swal2-icon.swal2-question {
+    border-color: theme-color('dark');
+    color: theme-color('dark');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('dark');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-warning {
+    border-color: theme-color('warning');
+    color: theme-color('warning');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('warning');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-info {
+    border-color: theme-color('info');
+    color: theme-color('info');
+
+    & [class^='swal2-x-mark-line'] {
+      background-color: theme-color('info');
+      border-radius: 1rem;
+    }
+  }
+  & .swal2-icon.swal2-success {
+    border-color: theme-color('success');
+    color: theme-color('success');
+
+    & .swal2-success-ring {
+      top: -3px;
+      left: -3px;
+      border-color: rgba(theme-color('success'), 1);
+      border-width: 3px;
+      animation: 1s ease 0s normal forwards 1 swal-border-fadein;
+    }
+
+    & [class^='swal2-success-line'] {
+      background-color: theme-color('success');
+      border-radius: 1rem;
+      height: .325em;
+    }
+  }
+
+  .swal2-popup .swal2-actions.swal2-loading .swal2-styled.swal2-confirm {
+    background: transparent;
+    border-width: 2px !important;
+    border-color: rgba($black, .25) !important;
+    border-top-color: transparent !important;
+    box-shadow: none !important;
+    animation: swal2-rotate-loading 400ms linear 0s infinite normal;
+  }
+}
+
+@keyframes swal-border-fadein {
+  0% {
+    opacity:.3;
+  }
+  33% {
+    opacity:.3;
+  }
+  100% {
+    opacity:1;
+  }
+}

@@ -66,10 +66,5 @@
   "browserslist": [
     "defaults"
   ],
-  "dependencies": {
-    "moment": "^2.22.0",
-    "react-datepicker": "^1.4.1",
-    "react-select": "^1.2.1",
-    "react-stepper-horizontal": "^1.0.10"
-  }
+  "dependencies": {}
 }
