@@ -29,8 +29,8 @@ input.radio-input {
   position: relative;
   display: inline-flex;
   flex: 0 0 auto;
-  width: $form-check-height;
-  height: $form-check-height;
+  width: $form-check-height-sm;
+  height: $form-check-height-sm;
   border-radius: $round;
   box-shadow: inset 0 0 0 2px $gray-600;
   background-color: $white;
@@ -87,6 +87,14 @@ input.radio-input {
 .form-control-sm.radio-input + .radio-input-icon {
   width: $form-check-height-sm;
   height: $form-check-height-sm;
+}
+
+
+// radio-input sd
+
+.form-control-sd.radio-input + .radio-input-icon {
+  width: $form-check-height;
+  height: $form-check-height;
 }
 
 

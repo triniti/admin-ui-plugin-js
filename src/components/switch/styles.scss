@@ -16,8 +16,8 @@ input.switch-input {
 }
 
 input.switch-input + label {
-  height: $form-check-height;
-  min-width: $form-check-height * $form-check-width-ratio;
+  height: $form-check-height-sm;
+  min-width: $form-check-height-sm * $form-check-width-ratio;
   border-radius: $round;
   background-color: $gray-700;
   cursor: pointer;
@@ -30,8 +30,8 @@ input.switch-input + label:after {
   top: 0;
   left: 0;
   display: block;
-  width: $form-check-height;
-  height: $form-check-height;
+  width: $form-check-height-sm;
+  height: $form-check-height-sm;
   content: '';
   transition: $transition;
   border-radius: $round;
@@ -65,10 +65,10 @@ input.switch-input:checked + label:after {
   position: relative;
   flex-shrink: 0;
   align-self: flex-start;
-  padding: 0 $form-check-height/2 0 ($form-check-height + .125rem);
-  height: $form-check-height;
-  line-height: $form-check-height;
-  font-size: .75rem;
+  padding: 0 $form-check-height-sm/2 0 ($form-check-height-sm + .125rem);
+  height: $form-check-height-sm;
+  line-height: $form-check-height-sm;
+  font-size: .675rem;
   font-weight: 500;
   text-transform: uppercase;
   text-align: left;
@@ -77,8 +77,8 @@ input.switch-input:checked + label:after {
   transition: opacity $transition;
 
   &:last-child {
-    padding: 0 ($form-check-height + .125rem) 0 $form-check-height/2;
-    margin-top: -$form-check-height;
+    padding: 0 ($form-check-height-sm + .125rem) 0 $form-check-height-sm/2;
+    margin-top: -$form-check-height-sm;
     font-weight: 600;
     color: $white;
     text-shadow: $text-shadow;
@@ -142,6 +142,31 @@ input.switch-input.form-control-sm + label {
   &:last-child {
     padding: 0 ($form-check-height-sm + .125rem) 0 $form-check-height-sm/2;
     margin-top: -$form-check-height-sm;
+  }
+}
+
+// switch-input sd
+
+input.switch-input.form-control-sd + label {
+  height: $form-check-height;
+  min-width: $form-check-height * $form-check-width-ratio;
+
+  &:before,
+  &:after {
+    width: $form-check-height;
+    height: $form-check-height;
+  }
+}
+
+.switch-input.form-control-sd + label span {
+  padding: 0 $form-check-height/2 0 ($form-check-height + .125rem);
+  height: $form-check-height;
+  line-height: $form-check-height;
+  font-size: .75rem;
+
+  &:last-child {
+    padding: 0 ($form-check-height + .125rem) 0 $form-check-height/2;
+    margin-top: -$form-check-height;
   }
 }
 

@@ -96,13 +96,13 @@ const Example = (props) => {
                   <Label for="toggler1" className="ml-4 mr-2 text-label">size="xs"</Label>
                   <Switch id="toggler1" size="xs" />
 
-                  <Label for="toggler2" className="ml-4 mr-2 text-label">size="sm"</Label>
-                  <Switch id="toggler2" size="sm" />
+                  <Label for="toggler2" className="ml-4 mr-2 text-label">default (sm)</Label>
+                  <Switch id="toggler2" />
 
                   <Divider horizontal="md" className="ml-4"/>
 
                   <Label for="toggler3" strong>Off</Label>
-                  <Switch id="toggler3" className="ml-2"/>
+                  <Switch id="toggler3"  size="sd" className="ml-2"/>
                   <Label for="toggler3" strong>On</Label>
 
                   <Divider horizontal="md" />
@@ -119,15 +119,15 @@ const Example = (props) => {
 
               <Form>
                 <FormGroup inline>
-                  <Switch id="toggler1b" size="xs" label1="Disabled" label2="Enabled"></Switch>
+                  <Switch id="toggler1b" size="xs" label1="Disabled" label2="Enabled"/>
 
-                  <Switch id="toggler2b" size="sm" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+                  <Switch id="toggler2b" label1="Disabled" label2="Enabled" className="ml-4"/>
 
-                  <Switch id="toggler3b" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+                  <Switch id="toggler3b" size="sd" label1="Disabled" label2="Enabled" className="ml-4"/>
 
-                  <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+                  <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4"/>
 
-                  <Switch id="toggler5b" size="lg" label1="Disabled" label2="Enabled" className="ml-4"></Switch>
+                  <Switch id="toggler5b" size="lg" label1="Disabled" label2="Enabled" className="ml-4"/>
 
                 </FormGroup>
               </Form>
