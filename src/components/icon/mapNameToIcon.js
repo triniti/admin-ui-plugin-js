@@ -60,6 +60,7 @@ import deleteLine from './delete-line.svg';
 import deleteLineThick from './delete-line-thick.svg';
 import deleteOutline from './delete-outline.svg';
 import deleteSolid from './delete-solid.svg';
+import desktop from './desktop.svg';
 import directory from './directory.svg';
 import document from './document.svg';
 import documents from './documents.svg';
@@ -166,6 +167,7 @@ import star from './star.svg';
 import starOutline from './star-outline.svg';
 import status from './status.svg';
 import strikethrough from './strikethrough.svg';
+import tablet from './tablet.svg';
 import tagOutline from './tag-outline.svg';
 import tagOutlineSlanted from './tag-outline-slanted.svg';
 import tagSlanted from './tag-slanted.svg';
@@ -273,6 +275,7 @@ const icons = {
   'delete-line-thick': deleteLineThick,
   'delete-outline': deleteOutline,
   'delete-solid': deleteSolid,
+  desktop,
   directory,
   document,
   documents,
@@ -377,6 +380,7 @@ const icons = {
   'star-outline': starOutline,
   status,
   strikethrough,
+  tablet,
   'tag-outline': tagOutline,
   'tag-outline-slanted': tagOutlineSlanted,
   'tag-slanted': tagSlanted,
