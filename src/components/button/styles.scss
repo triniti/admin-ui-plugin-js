@@ -263,11 +263,11 @@
 
 .modal-footer-buttons .btn:first-child {
   margin-left: 0;
-  border-bottom-left-radius: $border-radius-xl - 1px;
+  border-bottom-left-radius: $modal-content-border-radius - 1px;
 }
 
 .modal-footer-buttons .btn:last-child {
-  border-bottom-right-radius: $border-radius-xl - 1px;
+  border-bottom-right-radius: $modal-content-border-radius - 1px;
 }
 
 // modal-footer fixes

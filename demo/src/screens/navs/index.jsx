@@ -9,9 +9,13 @@ class UiNav extends React.Component {
 
     this.toggle1 = this.toggle1.bind(this);
     this.toggle2 = this.toggle2.bind(this);
+    this.toggle3 = this.toggle3.bind(this);
+    this.toggle4 = this.toggle4.bind(this);
     this.state = {
       dropdownOpen1: false,
       dropdownOpen2: false,
+      dropdownOpen3: false,
+      dropdownOpen4: false,
     };
   }
 
@@ -24,6 +28,18 @@ class UiNav extends React.Component {
   toggle2() {
     this.setState({
       dropdownOpen2: !this.state.dropdownOpen2,
+    });
+  }
+
+  toggle3() {
+    this.setState({
+      dropdownOpen3: !this.state.dropdownOpen3,
+    });
+  }
+
+  toggle4() {
+    this.setState({
+      dropdownOpen4: !this.state.dropdownOpen4,
     });
   }
 
@@ -140,7 +156,7 @@ class UiNav extends React.Component {
                 <NavItem>
                   <NavLink href="#" active>Link</NavLink>
                 </NavItem>
-                <NavDropdown isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
+                <NavDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
                   <DropdownToggle nav caret>
                 Dropdown
                   </DropdownToggle>
@@ -172,7 +188,7 @@ class UiNav extends React.Component {
                 <NavItem>
                   <NavLink href="#" active>Active</NavLink>
                 </NavItem>
-                <NavDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+                <NavDropdown isOpen={this.state.dropdownOpen3} toggle={this.toggle3}>
                   <DropdownToggle nav caret>
                 Dropdown
                   </DropdownToggle>
@@ -206,7 +222,7 @@ class UiNav extends React.Component {
                     <NavItem>
                       <NavLink href="#" active>Active</NavLink>
                     </NavItem>
-                    <NavDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+                    <NavDropdown isOpen={this.state.dropdownOpen4} toggle={this.toggle4}>
                       <DropdownToggle nav caret>
                     Dropdown
                       </DropdownToggle>
