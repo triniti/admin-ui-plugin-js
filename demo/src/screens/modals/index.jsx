@@ -176,7 +176,7 @@ export default ModalExample;
               </Modal>
 
               <Button outline color="secondary" onClick={this.toggleSmall}>Small Modal</Button>
-              <Modal centered isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm">
+              <Modal centered isOpen={this.state.smallModal} toggle={this.toggleSmall} size="sm" modalClassName="animate-center" >
                 <ModalBody className="text-center modal-wrapper"><h2>Modal Action</h2><p className="text-body-light">Do you want to clear everything?</p></ModalBody>
                 <ModalFooter buttons>
                   <Button outline color="danger" size="lg" onClick={this.toggleSmall}>Clear</Button>
@@ -185,7 +185,7 @@ export default ModalExample;
               </Modal>
 
               <Button outline onClick={this.toggleSingle}>Sweet Alert Style Modal</Button>
-              <Modal centered size="sd" isOpen={this.state.singleModal} toggle={this.toggleSingle}>
+              <Modal centered size="sd" isOpen={this.state.singleModal} toggle={this.toggleSingle} modalClassName="animate-center">
                 <ModalBody className="text-center modal-wrapper">
                 <Icon imgSrc="locked" alert size="lg" color="danger" border className="icon-modal" />
                 <h2>Hey There!</h2><p className="text-modal">This modal mimics Sweet Alert!</p>
@@ -203,6 +203,7 @@ export default ModalExample;
                 backdropClassName="modal-loading-bg"
                 className="modal-loading"
                 contentClassName="triniti-spinner"
+                modalClassName="animate-center"
                 isOpen={this.state.spinnerModal}
                 toggle={this.toggleSpinner}>
                 <ModalBody className="text-center modal-wrapper">

@@ -28,8 +28,8 @@ input.checkbox-input {
 .checkbox-input + .checkbox-input-icon {
   position: relative;
   flex: 0 0 auto;
-  width: $form-check-height;
-  height: $form-check-height;
+  width: $form-check-height-sm;
+  height: $form-check-height-sm;
   border-radius: $border-radius; // $round
   box-shadow: inset 0 0 0 2px $gray-600;
   background-color: $white;
@@ -76,6 +76,12 @@ input.checkbox-input {
   height: $form-check-height-sm;
 }
 
+// checkbox-input sd
+
+.form-control-sd.checkbox-input + .checkbox-input-icon {
+  width: $form-check-height;
+  height: $form-check-height;
+}
 
 // checkbox-input md
 

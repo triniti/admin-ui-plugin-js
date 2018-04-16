@@ -69,31 +69,31 @@ import { Label, Radio } from '@triniti/admin-ui-plugin/components';
 const Example = (props) => {
   return (
     <FormGroup inline>
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Radio size="xs">size="xs"</Radio>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
-        <Radio size="sm">size="sm"</Radio>
+      <FormGroup check inline>
+        <Radio>default or size="sm"</Radio>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
-        <Radio>default</Radio>
+      <FormGroup check inline>
+        <Radio size="sd">size="sd"</Radio>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Radio size="md">size="md"</Radio>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
-        <Radio size="lg" onClick={() => this.onRadioBtnClick(12)}>size="lg"</Radio>
+      <FormGroup check inline>
+        <Radio size="lg">size="lg"</Radio>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Radio disabled>disabled</Radio>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Radio disabled checked>disabled checked</Radio>
       </FormGroup>
 
@@ -105,31 +105,31 @@ const Example = (props) => {
             <CardBody>
               <Form>
                 <FormGroup inline>
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Radio size="xs">size="xs"</Radio>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
-                    <Radio size="sm">size="sm"</Radio>
+                  <FormGroup check inline>
+                    <Radio>default or size="sm"</Radio>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
-                    <Radio>default</Radio>
+                  <FormGroup check inline>
+                    <Radio size="sd">size="sd"</Radio>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Radio size="md">size="md"</Radio>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
-                    <Radio size="lg" onClick={() => this.onRadioBtnClick(12)}>size="lg"</Radio>
+                  <FormGroup check inline>
+                    <Radio size="lg">size="lg"</Radio>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Radio disabled>disabled</Radio>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Radio disabled checked>disabled checked</Radio>
                   </FormGroup>
 

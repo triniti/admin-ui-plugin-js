@@ -457,7 +457,7 @@ export default Example;`}
           <Media left hover href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
-          <Row>
+          <Row className="mt-4">
             <Col>
               <Media heading>Media Hover inside MediaList with img-thumbnail class on img</Media>
               <Media list>
@@ -538,7 +538,7 @@ export default Example;`}
           <Media left hoverOutline href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
-          <Row>
+          <Row className="mt-4">
             <Col>
               <Media heading>Media HoverOutline inside MediaList</Media>
               <Media list>

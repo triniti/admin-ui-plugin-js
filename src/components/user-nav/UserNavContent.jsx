@@ -44,8 +44,9 @@ class UserNavContent extends React.Component {
       title: 'Logout from current session?',
       type: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#f74b4b',
       confirmButtonText: 'Yes, logout!',
+      confirmButtonClass: 'btn btn-secondary',
+      cancelButtonClass: 'btn btn-outline-text-secondary',
     }).then(() => {
       handleLogout();
     });

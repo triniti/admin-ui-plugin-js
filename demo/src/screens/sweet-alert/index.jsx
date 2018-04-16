@@ -96,10 +96,13 @@ function sweetAlert5(e) {
 function sweetAlert6(e) {
   e.preventDefault();
   swal({
-    backdrop: 'rgba(41,41,43,0.2)',
-    customClass: 'triniti-spinner',
+    customClass: 'swal-spinner',
+    onOpen: () => {
+      swal.showLoading();
+    },
     showConfirmButton: false,
     target: '.screen-main',
+    title: 'loading',
   });
 }
 

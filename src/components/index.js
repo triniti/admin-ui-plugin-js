@@ -110,11 +110,6 @@ import {
 } from './uncontrolled';
 import UncontrolledCarousel from './uncontrolled-carousel';
 
-// this is special,
-// we just need the sweetalert2 styles,
-// and we still use swal lib in any use cases.
-import './sweetalert2/styles.scss';
-
 export {
   createLazyComponent,
   ActionButton,

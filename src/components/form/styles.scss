@@ -280,6 +280,10 @@ input[type="checkbox"] {
   margin-right: $form-item-spacing;
 }
 
+.form-inline .form-check-inline {
+  margin-right: 1rem;
+}
+
 .form-control:not(.form-control-sm).round {
   padding-left: 1rem;
 }
@@ -388,6 +392,6 @@ input[type="checkbox"] {
 
   .form-check-inline + &,
   .form-radio-inline + & {
-      padding-top: .5rem;
+      padding-top: 1rem;
   }
 }

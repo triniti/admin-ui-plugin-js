@@ -24,6 +24,11 @@
   &:focus {
     z-index: 0;
   }
+
+  .screen-sidebar & {
+    padding: 0.675rem 1rem;
+    border: $gray-500;
+  }
 }
 
 .list-group-item-text {
@@ -146,7 +151,7 @@
     border-bottom-right-radius: 0 !important;
     border-bottom-left-radius: 6px !important;
     background-color: $gray-400;
-    border-color: $gray-400 !important;
+    border-color: $gray-400;
   }
   & .list-group-item::before {
     width: 0;

@@ -84,6 +84,7 @@ const UiIcons = () => (
             <IconList iconName="delete-line-thick"/>
             <IconList iconName="delete-outline"/>
             <IconList iconName="delete-solid"/>
+            <IconList iconName="desktop"/>
             <IconList iconName="directory"/>
             <IconList iconName="document"/>
             <IconList iconName="documents"/>
@@ -174,6 +175,7 @@ const UiIcons = () => (
             <IconList iconName="star-outline"/>
             <IconList iconName="status"/>
             <IconList iconName="strikethrough"/>
+            <IconList iconName="tablet"/>
             <IconList iconName="tag-outline"/>
             <IconList iconName="tag-outline-slanted"/>
             <IconList iconName="tag-slanted"/>
@@ -332,6 +334,8 @@ const UiIcons = () => (
               <IconTooltip iconName="phone-mobile"/>
               <IconTooltip iconName="phone-outline"/>
               <IconTooltip iconName="phone-solid"/>
+              <IconTooltip iconName="desktop"/>
+              <IconTooltip iconName="tablet"/>
               <IconTooltip iconName="activity"/>
               <IconTooltip iconName="social"/>
               <IconTooltip iconName="login"/>

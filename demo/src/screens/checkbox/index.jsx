@@ -50,39 +50,39 @@ import { Label, Radio } from '@triniti/admin-ui-plugin/components';
 const Example = (props) => {
   return (
     <FormGroup inline>
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox size="xs">size="xs"</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
-        <Checkbox size="sm">size="sm"</Checkbox>
+      <FormGroup check inline>
+        <Checkbox>default or size="sm"</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
-        <Checkbox>default</Checkbox>
+      <FormGroup check inline>
+        <Checkbox size="sd">size="sd"</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox size="md">size="md"</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox size="lg">size="lg"</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox disabled>disabled</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox disabled checked>disabled checked</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox round>round</Checkbox>
       </FormGroup>
 
-      <FormGroup check className="mr-3">
+      <FormGroup check inline>
         <Checkbox right>right</Checkbox>
       </FormGroup>
 
@@ -94,39 +94,39 @@ const Example = (props) => {
             <CardBody>
               <Form>
                 <FormGroup inline>
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox size="xs">size="xs"</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
-                    <Checkbox size="sm">size="sm"</Checkbox>
+                  <FormGroup check inline>
+                    <Checkbox>default or size="sm"</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
-                    <Checkbox>default</Checkbox>
+                  <FormGroup check inline>
+                    <Checkbox size="sd">size="sd"</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox size="md">size="md"</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox size="lg">size="lg"</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox disabled>disabled</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox disabled checked>disabled checked</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox round>round</Checkbox>
                   </FormGroup>
 
-                  <FormGroup check className="mr-3">
+                  <FormGroup check inline>
                     <Checkbox right>right</Checkbox>
                   </FormGroup>
 
