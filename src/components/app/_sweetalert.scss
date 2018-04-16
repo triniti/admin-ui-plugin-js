@@ -41,6 +41,7 @@
 
   & .swal2-show {
     animation: triniti-bounce 0.3s;
+    transform: none !important;
 
     &.swal2-horizontal {
       animation: triniti-slidein-right 0.3s;
@@ -51,14 +52,6 @@
     font-size: .875rem;
     box-shadow: $shadow-depth-6;
     padding: 2.5rem 2rem 1.5rem 2rem;
-
-    // loading styles
-    &.triniti-spinner {
-      width: 6rem;
-      height: 6rem;
-      padding: 0;
-      background-color: rgba($navbar-theme-dark,.25);
-    }
   }
   & .swal2-popup .swal2-title {
     color: $body-color;
