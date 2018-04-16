@@ -96,7 +96,6 @@ function sweetAlert5(e) {
 function sweetAlert6(e) {
   e.preventDefault();
   swal({
-    backdrop: 'rgba(41,41,43,0.33)',
     customClass: 'swal-spinner',
     onOpen: () => {
       swal.showLoading();

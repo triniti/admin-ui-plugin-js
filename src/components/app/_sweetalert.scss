@@ -84,7 +84,7 @@
     // font-family: 'Varela Round', sans-serif;
     font-size: 3.8rem;
   }
-  &.swal2-shown {
+  &.swal2-fade.swal2-shown {
     background-color: rgba($modal-backdrop-bg, 0.33);
   }
   .screen-main &.swal2-shown {
@@ -332,7 +332,7 @@
   }
 }
 
-// triniti spinner
+// swal spinner
 
 .swal-spinner.swal2-loading {
   position: relative;
@@ -343,7 +343,7 @@
   transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
   flex-grow: 0 !important;
   background: rgba($navbar-theme-dark,.25);
-  overflow: visible;
+  overflow: visible !important;
 }
 
 .swal2-container .swal2-popup.swal-spinner .swal2-actions.swal2-loading .swal2-styled.swal2-confirm {
@@ -370,4 +370,5 @@
   background: rgba($navbar-theme-dark,.25);
   border-radius: $round;
   box-shadow: $shadow-depth-6;
+  pointer-events: none;
 }
