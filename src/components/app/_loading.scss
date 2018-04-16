@@ -125,6 +125,11 @@ $color: rgba(0, 0, 0, 0.25);
 
 .triniti-spinner {
   position: relative;
+  width: 60px !important;
+  height: 60px !important;
+  -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  flex-grow: 0 !important;
 }
 
 .triniti-spinner > div:first-child,
@@ -138,7 +143,7 @@ $color: rgba(0, 0, 0, 0.25);
 }
 
 .triniti-spinner > div:first-child {
-  -webkit-animation: triniti-spinner 1s linear infinite;
+  -webkit-animation: triniti-spinner 400ms linear infinite;
   animation: triniti-spinner 400ms linear infinite;
   top: 30px;
   left: 30px;
@@ -148,12 +153,4 @@ $color: rgba(0, 0, 0, 0.25);
 .triniti-spinner > div:first-child:after {
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
-}
-
-.triniti-spinner {
-  width: 60px !important;
-  height: 60px !important;
-  -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
-  transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
-  flex-grow: 0 !important;
 }

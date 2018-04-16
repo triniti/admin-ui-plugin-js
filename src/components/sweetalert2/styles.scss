@@ -331,3 +331,43 @@
     opacity:1;
   }
 }
+
+// triniti spinner
+
+.swal-spinner.swal2-loading {
+  position: relative;
+  width: 60px !important;
+  height: 60px !important;
+  padding: 0;
+  -webkit-transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  transform: translate(-30px, -30px) scale(1) translate(30px, 30px);
+  flex-grow: 0 !important;
+  background: rgba($navbar-theme-dark,.25);
+  overflow: visible;
+}
+
+.swal2-container .swal2-popup.swal-spinner .swal2-actions.swal2-loading .swal2-styled.swal2-confirm {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin: 10px;
+  border-width: 3px !important;
+  border-color: $gray-700 !important;
+  border-top-color: transparent !important;
+}
+
+.swal2-container .swal2-popup.swal-spinner .swal2-title {
+  position: absolute;
+  top: 100%;
+  max-width: none;
+  padding: 4px 14px;
+  margin-top: .75rem;
+  font-size: 1rem;
+  color: $gray-300;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  background: rgba($navbar-theme-dark,.25);
+  border-radius: $round;
+  box-shadow: $shadow-depth-6;
+}
