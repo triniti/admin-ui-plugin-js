@@ -17,12 +17,16 @@
 // Kill the scroll on the body
 .modal,
 .modal-open {
-  // overflow: hidden;
+  overflow: hidden;
 }
 
 .modal-open .modal.show {
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  -webkit-backface-visibility: hidden;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  -ms-overflow-style: none;
 }
 
 // Container that the modal scrolls within
