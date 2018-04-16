@@ -1,6 +1,7 @@
 # CHANGELOG
 
 ## v0.4.15
+* Update to Bootstrap 4.1
 * Update SweetAlert Spinner to include Title
 * Add ability to pass className and attributes to ScrollableContainer component
 * Add tablet and desktop icons for preview buttons
