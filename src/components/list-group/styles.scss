@@ -25,9 +25,9 @@
     z-index: 0;
   }
 
-  .screen-sidebar & {
+  .screen-sidebar .list-group:not(.list-group-chat) & {
     padding: 0.675rem 1rem;
-    border: $gray-500;
+    border-color: $gray-500;
   }
 }
 

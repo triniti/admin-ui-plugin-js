@@ -17,7 +17,7 @@
   box-shadow: $shadow-depth-0;
 
   .screen-primary-actions & {
-    box-shadow: $shadow-depth-3;
+    box-shadow: $shadow-depth-3 !important;
   }
 
   &:hover,
