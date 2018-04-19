@@ -7,12 +7,10 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
   cssModule: PropTypes.object,
-  display: PropTypes.string,
   section: PropTypes.bool,
 };
 
 const defaultProps = {
-  display: '',
   tag: 'h3',
 };
 
@@ -20,7 +18,6 @@ const CardTitle = (props) => {
   const {
     className,
     cssModule,
-    display,
     section,
     tag: Tag,
     ...attributes
@@ -28,7 +25,6 @@ const CardTitle = (props) => {
   const classes = mapToCssModules(classNames(
     className,
     'card-title',
-    display ? `display-${display}` : false,
     section ? 'card-section-title' : false,
   ), cssModule);
 

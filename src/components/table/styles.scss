@@ -56,8 +56,12 @@ tr[class*=" status-"]:not(.status-published) {
 
 // Custom overrides
 
-.table-hover.table-striped tr:hover {
+.table-striped.table-hover tr:hover {
   background-color: $gray-200;
+}
+
+.table-borderless.table-hover tbody tr:hover {
+  box-shadow: inset 0 0 0 1px $gray-rgba-400, inset 0 0 0 2px $white;
 }
 
 .table.fixed {
@@ -66,7 +70,7 @@ tr[class*=" status-"]:not(.status-published) {
 
 .table-borderless th,
 .table-borderless td {
-  border-color: transparent;
+  border-color: transparent !important;
 }
 
 

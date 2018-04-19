@@ -16,7 +16,6 @@ const propTypes = {
   responsive: PropTypes.bool,
   fixed: PropTypes.bool,
   borderless: PropTypes.bool,
-  stickyTop: PropTypes.bool,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   responsiveTag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
@@ -38,7 +37,6 @@ const Table = (props) => {
     reflow,
     fixed,
     borderless,
-    stickyTop,
     responsive,
     tag: Tag,
     responsiveTag: ResponsiveTag,
@@ -55,7 +53,6 @@ const Table = (props) => {
     hover ? 'table-hover' : false,
     fixed ? 'fixed' : false,
     borderless ? 'table-borderless' : false,
-    stickyTop ? 'sticky-top' : false,
     reflow ? 'table-reflow' : false,
   ), cssModule);
 

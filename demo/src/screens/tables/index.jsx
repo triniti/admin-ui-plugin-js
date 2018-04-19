@@ -100,7 +100,7 @@ import { Table } from '@triniti/admin-ui-plugin/components';
 export default class Example extends React.Component {
   render() {
     return (
-    <Table>
+    <Table borderless hover>
         <thead>
           <tr>
             <th>Status</th>
@@ -162,7 +162,7 @@ export default class Example extends React.Component {
           </CardBody>
         </Collapse>
         <CardBody>
-          <Table>
+          <Table borderless hover>
             <thead>
               <tr>
                 <th>Status</th>
@@ -220,7 +220,7 @@ export default class Example extends React.Component {
       </Card>,
 
       <Card key="table1">
-        <Table size="sm" stickyTop fixed>
+        <Table size="sm" fixed className="sticky-top">
           <thead>
           <tr>
             <th>#</th>

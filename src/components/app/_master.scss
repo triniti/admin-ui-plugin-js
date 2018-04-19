@@ -306,13 +306,13 @@ input::-webkit-calendar-picker-indicator {
 
 // Status Background Colors
 
-.status-archived    {background-color: $archived;}
-.status-draft       {background-color: $draft;}
-.status-deleted     {background-color: $deleted;}
-.status-expired     {background-color: $expired;}
-.status-pending     {background-color: $pending;}
-.status-published   {background-color: $published;}
-.status-scheduled   {background-color: $scheduled;}
+.status-archived    {background-color: $archived !important;}
+.status-draft       {background-color: $draft !important;}
+.status-deleted     {background-color: $deleted !important;}
+.status-expired     {background-color: $expired !important;}
+.status-pending     {background-color: $pending !important;}
+.status-published   {background-color: $published !important;}
+.status-scheduled   {background-color: $scheduled !important;}
 
 .status-copy {
   position: relative;

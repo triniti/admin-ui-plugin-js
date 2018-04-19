@@ -13,7 +13,6 @@ const propTypes = {
   color: PropTypes.string,
   cssModule: PropTypes.object,
   disabled: PropTypes.bool,
-  dropdownArrow: PropTypes.bool,
   innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   onClick: PropTypes.func,
   outline: PropTypes.bool,
@@ -60,7 +59,6 @@ class Button extends React.Component {
       outlineText,
       radius,
       size,
-      dropdownArrow,
       tag: Tag,
       innerRef,
       ...attributes
@@ -75,7 +73,6 @@ class Button extends React.Component {
       block ? 'btn-block' : false,
       size ? `btn-${size}` : false,
       icon ? 'btn-icon' : false,
-      dropdownArrow ? 'btn-dropdown-arrow' : false,
       { active, disabled: this.props.disabled },
     ), cssModule);
 
