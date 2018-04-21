@@ -130,7 +130,7 @@ class Popover extends React.Component {
       }
 
       if (this.props.isOpen) {
-        this.toggle();
+        this.toggle(e);
       }
     }
   }
