@@ -306,19 +306,26 @@ input::-webkit-calendar-picker-indicator {
 
 // Status Background Colors
 
-.status-archived    {background-color: $archived !important;}
-.status-draft       {background-color: $draft !important;}
-.status-deleted     {background-color: $deleted !important;}
-.status-expired     {background-color: $expired !important;}
-.status-pending     {background-color: $pending !important;}
-.status-published   {background-color: $published !important;}
-.status-scheduled   {background-color: $scheduled !important;}
+.status-status      {background-color: $white !important;}
+.status-archived    {background-color: $status-archived !important;}
+.status-draft       {background-color: $status-draft !important;}
+.status-deleted     {background-color: $status-deleted !important;}
+.status-expired     {background-color: $status-expired !important;}
+.status-pending     {background-color: $status-pending !important;}
+.status-scheduled   {background-color: $status-scheduled !important;}
+.status-published   {background-color: $status-published !important;}
+tr.status-published   {background-color: transparent !important;}
 
 .status-copy {
   position: relative;
   padding: 2px 6px;
   border-radius: $border-radius;
   margin-left: .25rem;
+}
+
+small.status-copy {
+  color: $gray-800;
+  text-transform: uppercase;
 }
 
 

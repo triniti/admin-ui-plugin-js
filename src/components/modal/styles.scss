@@ -61,14 +61,25 @@
   background-color: $gray-100;
   border-radius: $modal-content-border-radius $modal-content-border-radius 0 0;
 
+
   & .modal-title {
     margin-bottom: 0;
     line-height: $modal-title-line-height;
   }
-
+  & .close {
+    align-self: flex-start;
+  }
   &.py-0 .close {
     margin-top: 0;
   }
+}
+
+.modal-title {
+  display: flex;
+  flex: 1 1 100%;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
 }
 
 .modal-headline {

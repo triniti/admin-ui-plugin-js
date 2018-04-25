@@ -2,7 +2,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Collapse, Icon,  Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon,  Row, Screen, Table } from '../../../../src/components';
 
 class Tables extends React.Component {
     constructor(props) {
@@ -162,7 +162,31 @@ export default class Example extends React.Component {
           </CardBody>
         </Collapse>
         <CardBody>
-          <Table borderless hover>
+          <Row className="mb-3">
+            <Col>
+              <span className="status-copy status-archived">Archived</span>
+              <span className="status-copy status-deleted">Deleted</span>
+              <span className="status-copy status-draft">Draft</span>
+              <span className="status-copy status-expired">Expired</span>
+              <span className="status-copy status-pending">Pending</span>
+              <span className="status-copy status-published">Published</span>
+              <span className="status-copy status-scheduled">Scheduled</span>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <small className="status-copy status-archived">Archived</small>
+              <small className="status-copy status-deleted">Deleted</small>
+              <small className="status-copy status-draft">Draft</small>
+              <small className="status-copy status-expired">Expired</small>
+              <small className="status-copy status-pending">Pending</small>
+              <small className="status-copy status-published">Published</small>
+              <small className="status-copy status-scheduled">Scheduled</small>
+            </Col>
+          </Row>
+        </CardBody>
+        <CardBody>
+          <Table hover>
             <thead>
               <tr>
                 <th>Status</th>
@@ -178,17 +202,17 @@ export default class Example extends React.Component {
                 <td>Gregg</td>
                 <td>@archived</td>
               </tr>
-              <tr className="status-draft">
-                <th scope="row">Draft</th>
-                <td>Albert</td>
-                <td>Wei</td>
-                <td>@draft</td>
-              </tr>
               <tr className="status-deleted">
                 <th scope="row">Deleted</th>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@deleted</td>
+              </tr>
+              <tr className="status-draft">
+                <th scope="row">Draft</th>
+                <td>Albert</td>
+                <td>Wei</td>
+                <td>@draft</td>
               </tr>
               <tr className="status-expired">
                 <th scope="row">Expired</th>

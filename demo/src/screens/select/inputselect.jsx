@@ -1,7 +1,7 @@
 import React from 'react';
 import createClass from 'create-react-class';
 import PropTypes from 'prop-types';
-import { FormGroup, Checkbox, Select } from '../../../../src/components';
+import { Select } from '../../../../src/components';
 
 const FLAVOURS = [
 	{ label: 'Triniti', value: 'trinit' },

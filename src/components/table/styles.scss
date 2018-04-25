@@ -3,7 +3,7 @@
 @import "~bootstrap/scss/tables";
 
 .table {
-  margin-bottom: .25rem;
+  margin-bottom: 0;
 
   td {
     font-size: .8rem;
@@ -36,15 +36,26 @@ td {
   }
 }
 
-tr[class^="status-"]:not(.status-published),
-tr[class*=" status-"]:not(.status-published) {
+tr[class^="status-"],
+tr[class*=" status-"] {
 
   th,
   td {
-    border-top: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: inset 0 1px 0 $gray-rgba-200;
+    border: none !important;
+
+    .table-borderless & {
+      box-shadow: none;
+    }
   }
+
+
 }
 
+tr:first-child th,
+tr:first-child td {
+  box-shadow: none;
+}
 
 .td-icons {
   white-space: nowrap;
@@ -56,12 +67,20 @@ tr[class*=" status-"]:not(.status-published) {
 
 // Custom overrides
 
-.table-striped.table-hover tr:hover {
-  background-color: $gray-200;
+.table-hover tbody tr:hover > * {
+  box-shadow: inset 0 1px 0 $gray-rgba-400, inset 0 -1px 0 $gray-rgba-400, inset 0 2px 0 $white; // $gray-rgba-400
 }
 
-.table-borderless.table-hover tbody tr:hover {
-  box-shadow: inset 0 0 0 1px $gray-rgba-400, inset 0 0 0 2px $white;
+.table-hover tbody tr:hover > *:first-child {
+  box-shadow: inset 0 1px 0 $gray-rgba-400, inset 0 -1px 0 $gray-rgba-400, inset 1px 0 0 $gray-rgba-400, inset 0 2px 0 $white;
+}
+
+.table-hover tbody tr:hover > *:last-child {
+  box-shadow: inset 0 1px 0 $gray-rgba-400, inset 0 -1px 0 $gray-rgba-400, inset -1px 0 0 $gray-rgba-400, inset 0 2px 0 $white;
+}
+
+.table-striped.table-hover tr:hover {
+  background-color: $gray-300;
 }
 
 .table.fixed {
@@ -71,12 +90,12 @@ tr[class*=" status-"]:not(.status-published) {
 .table-borderless th,
 .table-borderless td {
   border-color: transparent !important;
+  border: none !important;
 }
 
 
 // Sticky-top tables
 
-table.sticky-top + table,
 .card-body table.sticky-top {
   margin-top: -1px !important;
 }

@@ -149,7 +149,7 @@ export default ModalExample;
             <CardBody indent>
               <Button color="secondary" onClick={this.toggle}>Click Me</Button>
               <Modal centered isOpen={this.state.modal} toggle={this.toggle} size="lg">
-                <ModalHeader toggle={this.toggle}>Modal title</ModalHeader>
+                <ModalHeader toggle={this.toggle}>Add Image Block <Button color="primary" className="ml-3" size="sm">Upload</Button></ModalHeader>
                 <ModalBody className="pb-5">
                   <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit,
