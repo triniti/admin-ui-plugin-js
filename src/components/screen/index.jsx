@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
+import { BreadcrumbItem, NavItem } from 'reactstrap';
 import dismissAlert from '../../actions/dismissAlert';
 import AlertBar from '../alert-bar';
 import Button from '../button';
 import Icon from '../icon';
 import Nav from '../nav';
-import NavItem from '../nav-item';
 import RouterLink from '../router-link';
 import Breadcrumb from '../breadcrumb';
-import BreadcrumbItem from '../breadcrumb-item';
 import ScreenPrimaryActions from './screen-primary-actions';
 import './styles.scss';
 

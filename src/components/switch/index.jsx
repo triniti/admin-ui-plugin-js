@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Label } from 'reactstrap';
+
 import { mapToCssModules } from '../utils';
 import Input from '../input';
-import Label from '../label';
 import './styles.scss';
 
 const propTypes = {
