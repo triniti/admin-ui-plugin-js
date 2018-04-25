@@ -1,98 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { Button as ButtonRS } from 'reactstrap';
+
 import './styles.scss';
 
-const propTypes = {
-  active: PropTypes.bool,
+const Button = ({ action, className, color, icon, radius, ...attributes }) => {
+  const classes = classNames(
+    className,
+    action ? `btn-action btn-${action}` : false,
+    radius ? `btn-radius-${radius}` : false,
+    { 'btn-icon': icon },
+  );
+
+  return <ButtonRS className={classes} {...attributes} />;
+};
+
+Button.propTypes = {
   action: PropTypes.string,
-  block: PropTypes.bool,
-  children: PropTypes.node,
   className: PropTypes.string,
   color: PropTypes.string,
-  cssModule: PropTypes.object,
-  disabled: PropTypes.bool,
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  onClick: PropTypes.func,
-  outline: PropTypes.bool,
-  outlineText: PropTypes.bool,
   icon: PropTypes.bool,
   radius: PropTypes.string,
-  size: PropTypes.string,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
-const defaultProps = {
+Button.defaultProps = {
+  action: '',
+  className: '',
   color: 'light',
-  tag: 'button',
+  icon: false,
+  radius: '',
 };
-
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.onClick = this.onClick.bind(this);
-  }
-
-  onClick(e) {
-    if (this.props.disabled) {
-      e.preventDefault();
-      return;
-    }
-
-    if (this.props.onClick) {
-      this.props.onClick(e);
-    }
-  }
-
-  render() {
-    let {
-      active,
-      action,
-      block,
-      className,
-      cssModule,
-      color,
-      icon,
-      outline,
-      outlineText,
-      radius,
-      size,
-      tag: Tag,
-      innerRef,
-      ...attributes
-    } = this.props;
-
-    const classes = mapToCssModules(classNames(
-      className,
-      'btn',
-      `btn${outline ? '-outline' : ''}${outlineText ? '-outline-text' : ''}-${color}`,
-      action ? `btn-action btn-${action}` : false,
-      radius ? `btn-radius-${radius}` : false,
-      block ? 'btn-block' : false,
-      size ? `btn-${size}` : false,
-      icon ? 'btn-icon' : false,
-      { active, disabled: this.props.disabled },
-    ), cssModule);
-
-    if (attributes.href && Tag === 'button') {
-      Tag = 'a';
-    }
-
-    return (
-      <Tag
-        type={(Tag === 'button' && attributes.onClick) ? 'button' : undefined}
-        {...attributes}
-        className={classes}
-        ref={innerRef}
-        onClick={this.onClick}
-      />
-    );
-  }
-}
-
-Button.propTypes = propTypes;
-Button.defaultProps = defaultProps;
 
 export default Button;

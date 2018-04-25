@@ -52,12 +52,7 @@ import {
   Row,
   TabContent,
   TabPane,
-  UncontrolledAlert,
   UncontrolledCarousel,
-  UncontrolledButtonDropdown,
-  UncontrolledDropdown,
-  UncontrolledNavDropdown,
-  UncontrolledTooltip,
 } from 'reactstrap';
 
 import createLazyComponent from './createLazyComponent';
@@ -111,6 +106,13 @@ import Table from './table';
 import Tooltip from './tooltip';
 import TrinaryControl from './trinary-control';
 import UserNav from './user-nav';
+import {
+  UncontrolledAlert,
+  UncontrolledButtonDropdown,
+  UncontrolledDropdown,
+  UncontrolledNavDropdown,
+  UncontrolledTooltip,
+} from './uncontrolled';
 
 export {
   createLazyComponent,
