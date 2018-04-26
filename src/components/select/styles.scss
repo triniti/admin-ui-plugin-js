@@ -5,7 +5,7 @@ $form-min-height-sm:     28px;
 $form-min-height:        40px;
 $form-min-height-lg:     54px;
 $border-radius-form:      2px;
-$input-focus-color: $info;
+$input-focus-color:     $info;
 
 .Select {
   display: flex;
@@ -109,8 +109,8 @@ $input-focus-color: $info;
 }
 
 .Select.is-disabled > .Select-control {
-  background-color: #fbfbfb;
-  border: 1px solid #ececef;
+  background-color: $gray-100;
+  border: 1px solid $gray-400;
   cursor: not-allowed;
 }
 
@@ -119,6 +119,22 @@ $input-focus-color: $info;
   .input-group-lg & {
     font-size: 20px;
   }
+}
+
+// hover styles
+
+.Select-option.is-focused  {
+  background-color: rgba($input-focus-color, 0.04) !important;
+}
+
+.Select-option.is-selected  {
+  background-color: rgba($input-focus-color, 0.125) !important;
+  box-shadow: inset 2px 0 0 $input-focus-color;
+}
+
+.Select-option.is-selected.is-focused  {
+  background-color: rgba($input-focus-color, 0.125) !important;
+  box-shadow: inset 2px 0 0 $input-focus-color;
 }
 
 

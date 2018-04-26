@@ -17,10 +17,6 @@ body {
 }
 
 
-// Increase base font size above 1600px wide
-
-
-
 // Force col to 100% width on mobile if no col-12 set
 
 .col {
@@ -31,6 +27,7 @@ body {
   flex-grow: 1;
 }
 
+
 // remove container-fluid & container padding if directly inside card-body since it has its own
 
 .card-body > .container,
@@ -40,6 +37,7 @@ body {
     padding: 0;
   }
 }
+
 
 // removal of the glow on objects on focus
 
@@ -115,6 +113,25 @@ p {
   font-size: .875rem;
 }
 
+a:not([href]):not([tabindex]),
+.nav-link:hover {
+  cursor: pointer;
+}
+
+
+// select background color
+
+::selection {
+  background: darken($status-expired, 2%);
+}
+
+::-moz-selection {
+  background: darken($status-expired, 2%);
+}
+
+
+// custom text colors
+
 .text-light {
   color: $text-light !important;
 }
@@ -131,19 +148,18 @@ p {
   color: $body-color;
 }
 
+
+// custom utility classes
+
 .nowrap {
   white-space: nowrap;
-}
-
-a:not([href]):not([tabindex]),
-.nav-link:hover {
-  cursor: pointer;
 }
 
 .sticky-top {
   position: -webkit-sticky !important;
   position: sticky !important;
 }
+
 
 // Layout
 
