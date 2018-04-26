@@ -13,7 +13,7 @@ const Button = ({ action, className, color, icon, radius, ...attributes }) => {
     { 'btn-icon': icon },
   );
 
-  return <ButtonRS className={classes} {...attributes} />;
+  return <ButtonRS color={color} className={classes} {...attributes} />;
 };
 
 Button.propTypes = {
