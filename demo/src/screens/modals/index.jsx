@@ -1,7 +1,9 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Collapse, Icon, Modal, ModalHeader, ModalBody, ModalFooter, Screen, Table } from '../../../../src/components';
+import classnames from 'classnames';
+import Masonry from 'react-masonry-css';
+import { Button, Card, CardBody, CardHeader, CardText, Col, Collapse, Icon, Input, InputGroup, InputGroupAddon, Modal, ModalHeader, ModalBody, ModalFooter, Nav, NavItem, Row, Screen, ScrollableContainer, Stepper, Table } from '../../../../src/components';
 
 class UiModal extends React.Component {
   constructor(props) {
@@ -13,6 +15,10 @@ class UiModal extends React.Component {
       smallModal: false,
       spinnerModal: false,
       collapseCode1: false,
+      modalBlock: false,
+      modalMasonry: false,
+      modalSquare: false,
+      activeTab: 'tab1',
     };
 
     this.toggle = this.toggle.bind(this);
@@ -22,6 +28,10 @@ class UiModal extends React.Component {
     this.toggleSingle = this.toggleSingle.bind(this);
     this.toggleSpinner = this.toggleSpinner.bind(this);
     this.toggleCode1 = this.toggleCode1.bind(this);
+    this.toggleBlock = this.toggleBlock.bind(this);
+    this.toggleMasonry = this.toggleMasonry.bind(this);
+    this.toggleSquare = this.toggleSquare.bind(this);
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
   toggle() {
@@ -63,7 +73,42 @@ class UiModal extends React.Component {
     this.setState({ collapseCode1: !this.state.collapseCode1 });
   }
 
+  toggleBlock() {
+    this.setState({
+      modalBlock: !this.state.modalBlock,
+    });
+  }
+
+  toggleMasonry() {
+    this.setState({
+      modalMasonry: !this.state.modalMasonry,
+    });
+  }
+
+  toggleSquare() {
+    this.setState({
+      modalSquare: !this.state.modalSquare,
+    });
+  }
+
+  toggleNav(tab1) {
+    if (this.state.activeTab !== tab1) {
+      this.setState({
+        activeTab: tab1,
+      });
+    }
+  }
+
   render() {
+    const breakpointColumnsObj = {
+    default: 6,
+    1400: 5,
+    1100: 4,
+    920: 3,
+    700: 2,
+    500: 1,
+  };
+
     return (
       <Screen
         sidenav={<Sidenav activeScreen="modals" />}
@@ -206,9 +251,366 @@ export default ModalExample;
                 modalClassName="animate-center"
                 isOpen={this.state.spinnerModal}
                 toggle={this.toggleSpinner}>
-                <ModalBody className="text-center modal-wrapper">
+              </Modal>
 
+              <Button color="primary" onClick={this.toggleBlock}>Block Editor - CSS Columns</Button>
+              <Modal centered isOpen={this.state.modalBlock} toggle={this.toggleBlock} size="xxl">
+                <ModalHeader toggle={this.toggleBlock}>
+                  <span className="nowrap">Update Image Block</span>
+                  <div className="ml-auto d-none d-sm-block" style={{ width: '30%', minWidth: '306px'}}><Stepper className="p-0 bg-gray-100" steps={ [{title: 'Select Options'}, {title: 'Customize Options'}] } activeStep={ 0 } horizontal fullWidth /></div>
+                </ModalHeader>
+                <ModalBody className="p-0">
+                <Nav underline>
+                  <NavItem>
+                    <div
+                      className={classnames('nav-link tabindex', { active: this.state.activeTab === 'tab1' })}
+                      onClick={() => { this.toggleNav('tab1'); }}
+                    >
+                      Linked
+                    </div>
+                  </NavItem>
+                  <NavItem>
+                    <div
+                      className={classnames('nav-link tabindex', { active: this.state.activeTab === 'tab2' })}
+                      onClick={() => { this.toggleNav('tab2'); }}
+                    >
+                      Search
+                    </div>
+                  </NavItem>
+                </Nav>
+                  <ScrollableContainer className="bg-gray-400" style={{height:'calc(98vh - 240px)'}}>
+<div className="px-3 gutters-sm pt-3" style={{columns: '6 240px', columnGap: '0', columnFill: 'balance'}}>
+  <Col className="d-inline-block">
+    <Card className="image-preview image-preview-selected">
+      <div className="px-2 py-1 bg-gray-500">Future Chrome - HTTPS.png</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/89/o/2018/04/24/895a5c64f0e144a0b7ec0a0213560298.png" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1lily-aldridge-at-gigi-hadid-birthday-gettyimages-950518133.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/b4/o/2018/04/24/b4cfc46fbff742479f76b60568b071b1.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">tristan-party.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/4b/o/2018/04/24/4b5870112dda40949e8021e17b6d1d8a.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">tristan.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/cf/o/2018/04/24/cffb71378a3f4439b11d5e21df2d8a07.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1bella-hadid-at-gigi-hadid-birthday-gettyimages-950475617.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/3e/o/2018/04/24/3e1b3d194cdd4c089cc07fb8b2d26261.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1hailey-baldwin-and-joan-smalls-at-gigi-hadid-birthday-gettyimages.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0a/o/2018/04/24/0a98c6ce345c4ffd9cc1b9fdb287a574.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1gigi-and-bella-hadid-at-gigi-birthday-party-gettyimages-950504491.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/93/o/2018/04/24/9332d0e59ada4edd88155ee1921cd820.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">0424-josh-brolin-genes-docs-primary-2.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0c/o/2018/04/24/0c1e215a0003425fa55593bf025b40c5.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">0411-kevin-spacey-serious-getty-7.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/dc/o/2018/04/26/dc900a0d4a8f43348424490ce0b490df.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">0418-matt-mantei-getty-6.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/6d/o/2018/04/24/6dd845b4428247d2bf1bb330ed82464f.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">scott.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/96/o/2018/04/24/965ce61903cc42cb99999e0103f04b26.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">27577255_230320494383277_3216189493996421120_n.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/d0/o/2018/04/26/d0e70b8aff1544e1a7d5b3e46852dce3.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+  <Col className="d-inline-block">
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">google_self_driving_car-11324210.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/ca/o/2018/04/26/ca39f232abd34d66ad6719938b638543.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+  </Col>
+</div>
+                  </ScrollableContainer>
                 </ModalBody>
+                <ModalFooter>
+                  <Button color="primary" className="mr-auto">Upload</Button>
+                  <Button>Cancel</Button>
+                  <Button>Next</Button>
+                  <Button disabled>Update</Button>
+                </ModalFooter>
+              </Modal>
+
+
+              <Button color="primary" onClick={this.toggleMasonry}>Block Editor - CSS Masonry</Button>
+              <Modal centered isOpen={this.state.modalMasonry} toggle={this.toggleMasonry} size="xxl">
+                <ModalHeader toggle={this.toggleMasonry}>
+                  <span className="nowrap">Update Image Block</span>
+                  <div className="ml-auto d-none d-sm-block" style={{ width: '30%', minWidth: '306px'}}><Stepper className="p-0 bg-gray-100" steps={ [{title: 'Select Options'}, {title: 'Customize Options'}] } activeStep={ 0 } horizontal fullWidth /></div>
+                </ModalHeader>
+                <ModalBody className="p-0">
+                <Nav underline>
+                  <NavItem>
+                    <div
+                      className={classnames('nav-link tabindex', { active: this.state.activeTab === 'tab1' })}
+                      onClick={() => { this.toggleNav('tab1'); }}
+                    >
+                      Linked
+                    </div>
+                  </NavItem>
+                  <NavItem>
+                    <div
+                      className={classnames('nav-link tabindex', { active: this.state.activeTab === 'tab2' })}
+                      onClick={() => { this.toggleNav('tab2'); }}
+                    >
+                      Search
+                    </div>
+                  </NavItem>
+                </Nav>
+                  <ScrollableContainer className="bg-gray-400" style={{height:'calc(98vh - 240px)'}}>
+
+<div className="p-3">
+  <Masonry
+  breakpointCols={6}
+  breakpointCols={breakpointColumnsObj}
+  className="tri-masonry-grid"
+  columnClassName="tri-masonry-grid-column">
+
+
+    <Card className="image-preview image-preview-selected">
+      <div className="px-2 py-1 bg-gray-500">Future Chrome - HTTPS.png</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/89/o/2018/04/24/895a5c64f0e144a0b7ec0a0213560298.png" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1lily-aldridge-at-gigi-hadid-birthday-gettyimages-950518133.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/b4/o/2018/04/24/b4cfc46fbff742479f76b60568b071b1.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">tristan-party.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/4b/o/2018/04/24/4b5870112dda40949e8021e17b6d1d8a.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">tristan.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/cf/o/2018/04/24/cffb71378a3f4439b11d5e21df2d8a07.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1bella-hadid-at-gigi-hadid-birthday-gettyimages-950475617.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/3e/o/2018/04/24/3e1b3d194cdd4c089cc07fb8b2d26261.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1hailey-baldwin-and-joan-smalls-at-gigi-hadid-birthday-gettyimages.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0a/o/2018/04/24/0a98c6ce345c4ffd9cc1b9fdb287a574.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">1gigi-and-bella-hadid-at-gigi-birthday-party-gettyimages-950504491.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/93/o/2018/04/24/9332d0e59ada4edd88155ee1921cd820.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">0424-josh-brolin-genes-docs-primary-2.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0c/o/2018/04/24/0c1e215a0003425fa55593bf025b40c5.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">0411-kevin-spacey-serious-getty-7.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/dc/o/2018/04/26/dc900a0d4a8f43348424490ce0b490df.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">0418-matt-mantei-getty-6.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/6d/o/2018/04/24/6dd845b4428247d2bf1bb330ed82464f.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">scott.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/96/o/2018/04/24/965ce61903cc42cb99999e0103f04b26.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">27577255_230320494383277_3216189493996421120_n.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/d0/o/2018/04/26/d0e70b8aff1544e1a7d5b3e46852dce3.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+    <Card className="image-preview">
+      <div className="px-2 py-1 bg-gray-500">google_self_driving_car-11324210.jpg</div>
+      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/ca/o/2018/04/26/ca39f232abd34d66ad6719938b638543.jpg" alt="thumbnail" class="img-fluid"/>
+    </Card>
+
+  </Masonry>
+</div>
+                  </ScrollableContainer>
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="primary" className="mr-auto">Upload</Button>
+                  <Button>Cancel</Button>
+                  <Button>Next</Button>
+                  <Button disabled>Update</Button>
+                </ModalFooter>
+              </Modal>
+
+
+              <Button color="primary" onClick={this.toggleSquare}>Block Editor - Square</Button>
+              <Modal centered isOpen={this.state.modalSquare} toggle={this.toggleSquare} size="xxl">
+                <ModalHeader toggle={this.toggleSquare}>
+                  <span className="nowrap">Update Image Block</span>
+                  <div className="ml-auto d-none d-sm-block" style={{ width: '30%', minWidth: '306px'}}><Stepper className="p-0 bg-gray-100" steps={ [{title: 'Select Options'}, {title: 'Customize Options'}] } activeStep={ 0 } horizontal fullWidth /></div>
+                </ModalHeader>
+                <ModalBody className="p-0">
+                <Nav underline>
+                  <NavItem>
+                    <div
+                      className={classnames('nav-link tabindex', { active: this.state.activeTab === 'tab2' })}
+                      onClick={() => { this.toggleNav('tab2'); }}
+                    >
+                      Linked
+                    </div>
+                  </NavItem>
+                  <NavItem>
+                    <div
+                      className={classnames('nav-link tabindex', { active: this.state.activeTab === 'tab1' })}
+                      onClick={() => { this.toggleNav('tab1'); }}
+                    >
+                      Search
+                    </div>
+                  </NavItem>
+                </Nav>
+                  <ScrollableContainer className="bg-gray-400" style={{height:'calc(98vh - 240px)'}}>
+                    <div className="sticky-top px-4 py-2 shadow-depth-2 bg-white">
+                      <InputGroup size="sm">
+                        <Input
+                          placeholder="Search Images..."
+                          type="search"
+                        />
+                        <InputGroupAddon addonType="append">
+                          <Button color="secondary">
+                            <Icon imgSrc="search" className="mr-0" />
+                          </Button>
+                        </InputGroupAddon>
+                      </InputGroup>
+
+                    </div>
+                    <Row className="m-0 px-3 gutters-sm pt-3">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview media-preview-selected">
+                          <div className="media-preview-title">Future Chrome - HTTPS.png</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/1.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">1lily-aldridge-at-gigi-hadid-birthday-gettyimages-950518133.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/2.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">tristan-party.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/3.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">tristan.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/4.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">1bella-hadid-at-gigi-hadid-birthday-gettyimages-950475617.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/5.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">1hailey-baldwin-and-joan-smalls-at-gigi-hadid-birthday-gettyimages.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/6.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">1gigi-and-bella-hadid-at-gigi-birthday-party-gettyimages-950504491.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/7.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">0424-josh-brolin-genes-docs-primary-2.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/8.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">0411-kevin-spacey-serious-getty-7.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/9.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">0418-matt-mantei-getty-6.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/10.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">scott.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/11.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">27577255_230320494383277_3216189493996421120_n.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/12.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
+                        <Card className="media-preview">
+                          <div className="media-preview-title">google_self_driving_car-11324210.jpg</div>
+                          <img src="http://www.telepixdev.com/triniti/masonry/13.jpg" alt="thumbnail" class="img-fluid"/>
+                        </Card>
+                      </Col>
+                    </Row>
+                  </ScrollableContainer>
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="primary" className="mr-auto">Upload</Button>
+                  <Button>Cancel</Button>
+                  <Button>Next</Button>
+                  <Button disabled>Update</Button>
+                </ModalFooter>
               </Modal>
             </CardBody>
           </Card>,

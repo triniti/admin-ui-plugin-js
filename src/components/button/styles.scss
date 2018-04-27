@@ -60,11 +60,14 @@
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     border-color: darken($value, 5%);
+    border-bottom-color: darken($value, 8%);
   }
   .btn-outline-#{$color} {
+
     &:hover,
     &:focus {
       border-color: darken($value, 5%);
+      border-bottom-color: darken($value, 8%);
     }
   }
 }

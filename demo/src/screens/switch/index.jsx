@@ -123,7 +123,7 @@ const Example = (props) => {
 
                   <Switch id="toggler2b" label1="Disabled" label2="Enabled" className="ml-4"/>
 
-                  <Switch id="toggler3b" size="sd" label1="Disabled" label2="Enabled" className="ml-4"/>
+                  <Switch id="toggler3b" size="sd" label1="off" label2="on" className="ml-4"/>
 
                   <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4"/>
 

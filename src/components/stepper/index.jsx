@@ -8,14 +8,16 @@ import './styles.scss';
 const propTypes = {
   className: PropTypes.string,
   cssModule: PropTypes.object,
+  fullWidth: PropTypes.bool,
+  horizontal: PropTypes.bool,
 };
 
 const defaultProps = {
-  activeColor: '#04c5a2',
+  activeColor: '#08a0e8',
   circleFontSize: 12,
   circleTop: 0,
-  completeBarColor: '#04c5a2',
-  completeColor: '#04c5a2',
+  completeBarColor: '#08a0e8',
+  completeColor: '#08a0e8',
   defaultBarColor: '#d9d9db',
   defaultColor: '#d9d9db',
   defaultTitleColor: '#7a7a7c',
@@ -27,11 +29,15 @@ const Stepper = (props) => {
   const {
     className,
     cssModule,
+    fullWidth,
+    horizontal,
     ...attributes
   } = props;
   const classes = mapToCssModules(classNames(
     className,
     'stepper-container',
+    fullWidth ? `stepper-fullwidth` : false,
+    horizontal ? `stepper-horizontal` : false,
   ), cssModule);
 
   return (
