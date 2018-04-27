@@ -5,10 +5,11 @@ import { Button as ButtonRS } from 'reactstrap';
 
 import './styles.scss';
 
-const Button = ({ action, className, color, icon, radius, ...attributes }) => {
+const Button = ({ action, className, color, icon, outlineText, radius, ...attributes }) => {
   const classes = classNames(
     className,
     action ? `btn-action btn-${action}` : false,
+    outlineText ? `btn-outline-text-${color}` : false,
     radius ? `btn-radius-${radius}` : false,
     { 'btn-icon': icon },
   );
@@ -21,6 +22,8 @@ Button.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   icon: PropTypes.bool,
+  outline: PropTypes.bool,
+  outlineText: PropTypes.bool,
   radius: PropTypes.string,
 };
 
@@ -29,6 +32,7 @@ Button.defaultProps = {
   className: '',
   color: 'light',
   icon: false,
+  outlineText: false,
   radius: '',
 };
 

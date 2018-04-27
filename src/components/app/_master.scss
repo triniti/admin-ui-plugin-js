@@ -380,15 +380,110 @@ input::-webkit-calendar-picker-indicator {
 
 // Status Background Colors
 
-.status-status      {background-color: $white !important;}
-.status-archived    {background-color: $status-archived !important;}
-.status-draft       {background-color: $status-draft !important;}
-.status-deleted     {background-color: $status-deleted !important;}
-.status-expired     {background-color: $status-expired !important;}
-.status-pending     {background-color: $status-pending !important;}
-.status-scheduled   {background-color: $status-scheduled !important;}
-.status-published   {background-color: $status-published !important;}
-tr.status-published   {background-color: transparent !important;}
+.status-status {
+  background-color: $white !important;
+}
+
+tr.status-status ,
+.status-status-border {
+  box-shadow: inset 3px 0 0 $gray-700;
+
+  &:hover {
+    background-color: darken($white, 2%) !important;
+  }
+}
+
+.status-archived {
+  background-color: $status-archived !important;
+}
+
+tr.status-archived,
+.status-archived-border {
+  box-shadow: inset 3px 0 0 $text-disabled;
+
+  &:hover {
+    background-color: darken($status-archived, 2%) !important;
+  }
+}
+
+.status-draft {
+  background-color: $status-draft !important;
+}
+
+tr.status-draft,
+.status-draft-border {
+  box-shadow: inset 3px 0 0 theme-color("dark");
+
+  &:hover {
+    background-color: darken($status-draft, 2%) !important;
+  }
+}
+
+.status-deleted {
+  background-color: $status-deleted !important;
+}
+
+tr.status-deleted,
+.status-deleted-border {
+  box-shadow: inset 3px 0 0 theme-color("warning");
+
+  &:hover {
+    background-color: darken($status-deleted, 2%) !important;
+  }
+}
+
+.status-expired {
+  background-color: $status-expired !important;
+}
+
+tr.status-expired,
+.status-expired-border {
+  box-shadow: inset 3px 0 0 theme-color("info");
+
+  &:hover {
+    background-color: darken($status-expired, 2%) !important;
+  }
+}
+
+.status-pending {
+  background-color: $status-pending !important;
+}
+
+tr.status-pending,
+.status-pending-border {
+  box-shadow: inset 3px 0 0 theme-color("danger");
+
+  &:hover {
+    background-color: darken($status-pending, 1%) !important;
+  }
+}
+
+.status-scheduled {
+  background-color: $status-scheduled !important;
+}
+
+tr.status-scheduled,
+.status-scheduled-border {
+  box-shadow: inset 3px 0 0 $yellow;
+
+  &:hover {
+    background-color: darken($status-scheduled, 3%) !important;
+  }
+}
+
+.status-published {
+  background-color: $status-published !important;
+}
+
+tr.status-published,
+.status-published-border {
+  background-color: $white !important;
+  box-shadow: inset 3px 0 0 theme-color("success");
+
+  &:hover {
+    background-color: $gray-100 !important;
+  }
+}
 
 .status-copy {
   position: relative;

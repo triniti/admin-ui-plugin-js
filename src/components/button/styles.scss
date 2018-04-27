@@ -2,6 +2,7 @@
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/buttons";
+@import "../app/mixins";
 
 //
 // Base styles
@@ -60,14 +61,14 @@
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     border-color: darken($value, 5%);
-    border-bottom-color: darken($value, 8%);
+    border-bottom-color: shade(darken($value, 8%), 6%);
   }
   .btn-outline-#{$color} {
 
     &:hover,
     &:focus {
       border-color: darken($value, 5%);
-      border-bottom-color: darken($value, 8%);
+      border-bottom-color: shade(darken($value, 8%), 6%);
     }
   }
 }

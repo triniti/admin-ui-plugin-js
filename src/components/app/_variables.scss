@@ -36,12 +36,12 @@ $light:         $gray-200;
 $dark:          #7a7a7c;
 
 $status-archived:      darken($gray-100, 2%);
-$status-deleted:       lighten($warning, 38%);
-$status-draft:         darken($gray-400, 3%);
-$status-expired:       desaturate(lighten($secondary, 46%), 10%);
-$status-pending:       lighten($danger, 33%);
+$status-deleted:       lighten($warning, 40%);
+$status-draft:         darken($gray-300, 3%);
+$status-expired:       desaturate(lighten($secondary, 48%), 10%);
+$status-pending:       lighten($danger, 31%);
 $status-published:     desaturate(lighten($success, 53%), 40%);
-$status-scheduled:     lighten($yellow, 26%);
+$status-scheduled:     lighten($yellow, 28%);
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
