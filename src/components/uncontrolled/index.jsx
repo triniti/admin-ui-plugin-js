@@ -1,11 +1,9 @@
 import React from 'react';
+import { ButtonDropdown, NavDropdown } from 'reactstrap';
 import Alert from '../alert';
-import ButtonDropdown from '../button-dropdown';
 import Dropdown from '../dropdown';
-import NavDropdown from '../nav-dropdown';
 import Tooltip from '../tooltip';
 
-const { Component } = React;
 const components = {
   UncontrolledAlert: Alert,
   UncontrolledButtonDropdown: ButtonDropdown,
@@ -18,7 +16,7 @@ Object.keys(components).forEach((key) => {
   const Tag = components[key];
   const defaultValue = Tag === Alert;
 
-  class Uncontrolled extends Component {
+  class Uncontrolled extends React.Component {
     constructor(props) {
       super(props);
 
@@ -41,11 +39,13 @@ Object.keys(components).forEach((key) => {
   components[key] = Uncontrolled;
 });
 
-const UncontrolledAlert = components.UncontrolledAlert;
-const UncontrolledButtonDropdown = components.UncontrolledButtonDropdown;
-const UncontrolledDropdown = components.UncontrolledDropdown;
-const UncontrolledNavDropdown = components.UncontrolledNavDropdown;
-const UncontrolledTooltip = components.UncontrolledTooltip;
+const {
+  UncontrolledAlert,
+  UncontrolledButtonDropdown,
+  UncontrolledDropdown,
+  UncontrolledNavDropdown,
+  UncontrolledTooltip,
+} = components;
 
 export {
   UncontrolledAlert,

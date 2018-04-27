@@ -44,7 +44,7 @@
     "react-datepicker": "^1.4.1",
     "react-select": "^1.2.1",
     "react-stepper-horizontal": "^1.0.10",
-    "reactstrap": "^5.0.0-beta.3"
+    "reactstrap": "^5.0.0"
   },
   "devDependencies": {
     "@gdbots/common": "^0.1.0",
