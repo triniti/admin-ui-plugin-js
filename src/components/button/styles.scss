@@ -2,6 +2,7 @@
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/button-group";
 @import "../app/mixins";
 
 //
@@ -90,6 +91,14 @@
 .input-group-btn .btn,
 .btn-group-vertical .btn {
   margin-bottom: 0;
+}
+
+.btn-group,
+.btn-group-vertical {
+
+  > .btn {
+    margin-right: 0;
+  }
 }
 
 .input-group .btn {

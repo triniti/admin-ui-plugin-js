@@ -1,39 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { CardTitle as CardTitleRS } from 'reactstrap';
 
-const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  section: PropTypes.bool,
-};
 
-const defaultProps = {
-  tag: 'h3',
-};
-
-const CardTitle = (props) => {
-  const {
+const CardTitle = ({ className, section, ...attributes }) => {
+  const classes = classNames(
     className,
-    cssModule,
-    section,
-    tag: Tag,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    className,
-    'card-title',
-    section ? 'card-section-title' : false,
-  ), cssModule);
+    {
+      'card-section-title': section,
+    },
+  );
 
   return (
-    <Tag {...attributes} className={classes} />
+    <CardTitleRS className={classes} {...attributes} />
   );
 };
 
-CardTitle.propTypes = propTypes;
-CardTitle.defaultProps = defaultProps;
+CardTitle.propTypes = {
+  className: PropTypes.string,
+  section: PropTypes.bool,
+};
+
+CardTitle.defaultProps = {
+  tag: 'h3',
+};
 
 export default CardTitle;

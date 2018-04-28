@@ -17,6 +17,7 @@ Badge.propTypes = {
 Badge.defaultProps = {
   className: '',
   alert: false,
+  color: 'default',
 };
 
 export default Badge;

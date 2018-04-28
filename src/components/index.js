@@ -1,6 +1,7 @@
 import {
   BreadcrumbItem,
   ButtonDropdown,
+  ButtonGroup,
   ButtonToolbar,
   CardColumns,
   CardDeck,
@@ -64,11 +65,9 @@ import Backdrop from './backdrop';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
 import Button from './button';
-import ButtonGroup from './button-group';
 import Card from './card';
 import CardBody from './card-body';
 import CardTitle from './card-title';
-import CardsContainer from './cards-container';
 import Carousel from './carousel';
 import Checkbox from './checkbox';
 import DatePicker from './datepicker';
@@ -141,7 +140,6 @@ export {
   CardSubtitle,
   CardText,
   CardTitle,
-  CardsContainer,
   Carousel,
   CarouselCaption,
   CarouselControl,

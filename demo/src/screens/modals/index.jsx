@@ -3,7 +3,7 @@ import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import classnames from 'classnames';
 import Masonry from 'react-masonry-css';
-import { Button, Card, CardBody, CardHeader, CardText, Col, Collapse, Icon, Input, InputGroup, InputGroupAddon, Modal, ModalHeader, ModalBody, ModalFooter, Nav, NavItem, Row, Screen, ScrollableContainer, Stepper, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardColumns, CardHeader, CardText, Col, Collapse, Icon, Input, InputGroup, InputGroupAddon, Modal, ModalHeader, ModalBody, ModalFooter, Nav, NavItem, Row, Screen, ScrollableContainer, Stepper, Table } from '../../../../src/components';
 
 class UiModal extends React.Component {
   constructor(props) {
@@ -279,7 +279,7 @@ export default ModalExample;
                   </NavItem>
                 </Nav>
                   <ScrollableContainer className="bg-gray-400" style={{height:'calc(98vh - 240px)'}}>
-<div className="px-3 gutters-sm pt-3" style={{columns: '6 240px', columnGap: '0', columnFill: 'balance'}}>
+<CardColumns className="px-3 gutter-sm pt-3" style={{columns: '6 240px', columnGap: '0', columnFill: 'balance'}}>
   <Col className="d-inline-block">
     <Card className="image-preview image-preview-selected">
       <div className="px-2 py-1 bg-gray-500">Future Chrome - HTTPS.png</div>
@@ -358,7 +358,7 @@ export default ModalExample;
       <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/ca/o/2018/04/26/ca39f232abd34d66ad6719938b638543.jpg" alt="thumbnail" class="img-fluid"/>
     </Card>
   </Col>
-</div>
+</CardColumns>
                   </ScrollableContainer>
                 </ModalBody>
                 <ModalFooter>
@@ -523,7 +523,7 @@ export default ModalExample;
                       </InputGroup>
 
                     </div>
-                    <Row className="m-0 px-3 gutters-sm pt-3">
+                    <Row className="m-0 px-3 gutter-sm pt-3">
                       <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
                         <Card className="media-preview media-preview-selected">
                           <div className="media-preview-title">Future Chrome - HTTPS.png</div>

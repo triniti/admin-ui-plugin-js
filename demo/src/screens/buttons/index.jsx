@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
 
 class UiButtons extends React.Component {
   constructor(props) {
@@ -444,6 +444,27 @@ class UiButtons extends React.Component {
               <Button radius="round" size="sm">
               <Icon imgSrc="pencil" alt="x" className="mr-1" />Edit
               </Button>
+            </CardBody>
+            <CardBody>
+            <div className="d-inline-flex align-items-center">
+              <Button outline radius="circle" size="sm" className="m-0">
+                <Icon imgSrc="pencil" />
+              </Button>
+              <div className="d-inline-flex align-items-center flex-column">
+                <Button outline radius="circle" size="xs" className="m-0">
+                  <Icon imgSrc="move" />
+                </Button>
+                <Button outline radius="circle" size="sm" className="m-2">
+                  <Icon imgSrc="move" />
+                </Button>
+                <Button outline radius="circle" size="xs" className="m-0">
+                  <Icon imgSrc="move" />
+                </Button>
+              </div>
+              <Button outline radius="circle" size="sm" className="m-0">
+                <Icon imgSrc="trash" />
+              </Button>
+            </div>
             </CardBody>
           </Card>,
       ]}

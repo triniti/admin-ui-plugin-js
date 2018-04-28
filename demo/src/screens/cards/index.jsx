@@ -15,10 +15,10 @@ const UiCard = () => (
     // ]}
     primaryActions={<PrimaryActions />}
     body={[
-      <CardsContainer key="cards1">
-        <Row>
+      <div key="cards1">
+        <Row className="gutter-sm">
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover shadow>
               <CardImg
                 top
                 width="100%"
@@ -36,7 +36,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover shadow>
               <CardBody>
                 <CardTitle>Card title</CardTitle>
                 <CardSubtitle>Card subtitle</CardSubtitle>
@@ -57,14 +57,14 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card body hover className="text-center">
+            <Card body hover className="text-center" shadow>
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button>Go somewhere</Button>
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover shadow>
               <CardHeader tag="h3">Featured</CardHeader>
               <CardBody>
                 <CardTitle>Special Title Treatment</CardTitle>
@@ -75,7 +75,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover shadow>
               <CardImg
                 top
                 width="100%"
@@ -95,7 +95,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card hover>
+            <Card hover shadow>
               <CardBody>
                 <CardTitle>Card Title</CardTitle>
                 <CardText>This is a wider card with supporting text below as a natural lead-in to additional content.
@@ -114,7 +114,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card inverse>
+            <Card inverse shadow>
               <CardImg
                 width="100%"
                 src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97270&w=318&h=270&bg=333333&txtclr=666666"
@@ -132,7 +132,7 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card body inverse hover color="dark">
+            <Card body inverse hover color="dark" shadow>
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <hr />
@@ -140,14 +140,14 @@ const UiCard = () => (
             </Card>
           </Col>
           <Col xs="12" sm="6" md="4" lg="3">
-            <Card body outline hover color="primary">
+            <Card body outline hover color="primary" shadow>
               <CardTitle>Special Title Treatment</CardTitle>
               <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
               <Button color="second">Button</Button>
             </Card>
           </Col>
         </Row>
-      </CardsContainer>,
+      </div>,
 
       <CardTitle tag="h4" key="cardtitle2" className="mt-4">Card Group</CardTitle>,
 

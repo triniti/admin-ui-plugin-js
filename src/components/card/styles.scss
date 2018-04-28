@@ -59,6 +59,10 @@
   border: $card-border-width solid $card-border-color;
 }
 
+.card-shadow {
+  box-shadow: $shadow-depth-2;
+}
+
 .card-group {
   box-shadow: $shadow-card;
 }
