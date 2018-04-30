@@ -593,6 +593,51 @@ small.status-copy {
 }
 
 
+// Aspect Ratio
+
+.aspect-ratio {
+  position: relative;
+  display: block !important;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: $gray-900;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.aspect-ratio-1by1::before {
+  padding-bottom: 100%;
+}
+
+.aspect-ratio-4by3::before {
+  padding-bottom: 75%;
+}
+
+.aspect-ratio-16by9::before {
+  padding-bottom: 56.25%;
+}
+
+.aspect-ratio-2by1::before {
+  padding-bottom: 50%;
+}
+
+.aspect-ratio-3by1::before {
+  padding-bottom: 33.3333%;
+}
+
+
 // img preview todo - example on modal page - remove later
 
 .image-preview {
@@ -614,7 +659,7 @@ small.status-copy {
 // media preview
 
 .media-preview {
-  border: 4px solid transparent !important;
+  border: 4px solid $white !important;
   box-shadow: $shadow-depth-2;
 
   &:hover {

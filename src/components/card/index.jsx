@@ -5,12 +5,13 @@ import { Card as CardRS } from 'reactstrap';
 
 import './styles.scss';
 
-const Card = ({ className, border, hover, shadow, ...attributes }) => {
+const Card = ({ className, border, hover, hoverBorder, shadow, ...attributes }) => {
   const classes = classNames(
     className,
     {
       'card-border': border,
       'card-hover': hover,
+      'card-hover-border': hoverBorder,
       'card-shadow': shadow,
     },
   );
@@ -24,6 +25,7 @@ Card.propTypes = {
   className: PropTypes.string,
   border: PropTypes.bool,
   hover: PropTypes.bool,
+  hoverBorder: PropTypes.bool,
   shadow: PropTypes.bool,
 };
 

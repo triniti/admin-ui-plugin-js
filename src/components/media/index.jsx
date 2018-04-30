@@ -5,6 +5,7 @@ import { mapToCssModules } from '../utils';
 import './styles.scss';
 
 const propTypes = {
+  aspectRatio: PropTypes.string,
   body: PropTypes.bool,
   bottom: PropTypes.bool,
   children: PropTypes.node,
@@ -24,6 +25,7 @@ const propTypes = {
 
 const Media = (props) => {
   const {
+    aspectRatio,
     body,
     bottom,
     className,
@@ -69,6 +71,8 @@ const Media = (props) => {
       'media-list': list,
       'media-hover': hover,
       'media-hover-outline': hoverOutline,
+      'aspect-ratio': aspectRatio,
+      [`aspect-ratio-${aspectRatio}`]: !!aspectRatio,
       media: !body && !heading && !left && !right && !top && !bottom && !middle && !object && !list && !hover && !hoverOutline,
     },
   ), cssModule);

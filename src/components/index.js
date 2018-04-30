@@ -62,6 +62,7 @@ import Alert from './alert';
 import AlertBar from './alert-bar';
 // import App from './app';
 import Backdrop from './backdrop';
+import BackgroundImage from './background-image';
 import Badge from './badge';
 import Breadcrumb from './breadcrumb';
 import Button from './button';
@@ -120,6 +121,7 @@ export {
   AlertBar,
   // App,
   Backdrop,
+  BackgroundImage,
   Badge,
   Breadcrumb,
   BreadcrumbItem,

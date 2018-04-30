@@ -98,7 +98,7 @@
     padding: $modal-inner-padding;
     font-size: 1em;
   }
-  & p:last-child {
+  & > p:last-child {
     margin-bottom: .5rem;
   }
 }

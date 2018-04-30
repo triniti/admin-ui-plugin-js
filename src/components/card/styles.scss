@@ -59,6 +59,33 @@
   border: $card-border-width solid $card-border-color;
 }
 
+.card-hover-border {
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &:hover {
+    &::after {
+      box-shadow: inset 0 0 0 4px theme-color("secondary");
+    }
+  }
+  &.selected {
+    &::after {
+      box-shadow: inset 0 0 0 4px theme-color("primary");
+    }
+  }
+  &.disabled {
+    cursor: not-allowed;
+  }
+}
+
 .card-shadow {
   box-shadow: $shadow-depth-2;
 }
@@ -122,8 +149,12 @@ h3.card-title {
   margin-bottom: 1rem;
 }
 
+// Card Img Overlay
+
 .card-img-overlay {
-  overflow: hidden;
+  top: auto;
+  padding: .75rem;
+  background-color: $gray-rgba-700;
 }
 
 .card-section-title {
