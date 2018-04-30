@@ -1,35 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { ModalFooter as ModalFooterRS } from 'reactstrap';
 
 const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   buttons: PropTypes.bool,
 };
 
 const defaultProps = {
-  tag: 'div',
+  className: '',
+  buttons: false,
 };
 
-const ModalFooter = (props) => {
-  const {
+const ModalFooter = ({ className, buttons, ...attributes }) => {
+  const classes = classNames(
     className,
-    cssModule,
-    tag: Tag,
-    buttons,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    className,
-    buttons ? 'modal-footer-buttons' : false,
-    'modal-footer',
-  ), cssModule);
+    { 'modal-footer-buttons': buttons },
+  );
 
   return (
-    <Tag {...attributes} className={classes} />
+    <ModalFooterRS {...attributes} className={classes} />
   );
 };
 

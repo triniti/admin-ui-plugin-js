@@ -1,46 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { Form as FormRS } from 'reactstrap';
 import './styles.scss';
 
-const propTypes = {
-  children: PropTypes.node,
-  inline: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+const Form = ({ className, inline, theme, ...attributes }) => {
+  const classes = classNames(
+    className,
+    { 'form-inline': inline },
+    { [`form-theme-${theme}`]: !!theme },
+  );
+
+  return <FormRS {...attributes} className={classes} />;
+};
+
+Form.propTypes = {
   className: PropTypes.string,
-  cssModule: PropTypes.object,
+  inline: PropTypes.bool,
   theme: PropTypes.string,
 };
 
-const defaultProps = {
-  tag: 'form',
+Form.defaultProps = {
+  className: '',
+  inline: false,
+  theme: '',
 };
-
-const Form = (props) => {
-  const {
-    className,
-    cssModule,
-    inline,
-    theme,
-    tag: Tag,
-    innerRef,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
-    className,
-    inline ? 'form-inline' : false,
-    theme ? `form-theme-${theme}` : false,
-  ), cssModule);
-
-  return (
-    <Tag {...attributes} ref={innerRef} className={classes} />
-  );
-};
-
-Form.propTypes = propTypes;
-Form.defaultProps = defaultProps;
 
 export default Form;
