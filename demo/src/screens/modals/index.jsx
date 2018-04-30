@@ -663,7 +663,7 @@ export default ModalExample;
 
                     </div>
                     <Row className="m-0 px-3 gutter-sm pt-3">
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2 selected">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -676,7 +676,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -689,7 +689,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -702,7 +702,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -715,7 +715,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -728,7 +728,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -741,7 +741,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -754,7 +754,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -767,7 +767,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -780,7 +780,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -793,7 +793,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -806,7 +806,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
@@ -819,7 +819,7 @@ export default ModalExample;
                         </Card>
                       </Col>
 
-                      <Col xs="12" sm="6" md="4" lg="3" xl="2">
+                      <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage

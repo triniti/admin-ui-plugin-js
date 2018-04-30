@@ -27,6 +27,17 @@ body {
   flex-grow: 1;
 }
 
+.col-xl-2p {
+  @media (min-width: 1200px) {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  @media (min-width: 1400px) {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+}
+
 .gutter-xs {
   margin-right: -.25rem;
   margin-left: -.25rem;
