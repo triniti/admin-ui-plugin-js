@@ -36,7 +36,6 @@ import {
   ListGroupItemHeading,
   ListGroupItemText,
   ModalBody,
-  ModalFooter,
   ModalHeader,
   NavDropdown,
   NavItem,
@@ -85,6 +84,7 @@ import MainNav from './main-nav';
 import Media from './media';
 import MobileNav from './mobile-nav';
 import Modal from './modal';
+import ModalFooter from './modal-footer';
 import Nav from './nav';
 import Navbar from './navbar';
 import PageHeader from './page-header';

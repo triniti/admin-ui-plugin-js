@@ -28,6 +28,12 @@
   @media (min-width: 1600px) {
     font-size: .875rem;
   }
+
+  .navbar-nav & {
+    @media (max-width: 767px) {
+      box-shadow: none;
+    }
+  }
 }
 
 // Open state for the dropdown

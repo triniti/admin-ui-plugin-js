@@ -3,16 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { ModalFooter as ModalFooterRS } from 'reactstrap';
 
-const propTypes = {
-  className: PropTypes.string,
-  buttons: PropTypes.bool,
-};
-
-const defaultProps = {
-  className: '',
-  buttons: false,
-};
-
 const ModalFooter = ({ className, buttons, ...attributes }) => {
   const classes = classNames(
     className,
@@ -24,7 +14,14 @@ const ModalFooter = ({ className, buttons, ...attributes }) => {
   );
 };
 
-ModalFooter.propTypes = propTypes;
-ModalFooter.defaultProps = defaultProps;
+ModalFooter.propTypes = {
+  className: PropTypes.string,
+  buttons: PropTypes.bool,
+};
+
+ModalFooter.defaultProps = {
+  className: '',
+  buttons: false,
+};
 
 export default ModalFooter;
