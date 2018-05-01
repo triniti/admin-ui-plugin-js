@@ -7,7 +7,7 @@ const FormGroup = ({ className, check, inline, ...attributes}) => {
   const classes = classNames(
     className,
     {
-      'form-inline' : !check && inline,
+      'form-inline': !check && inline,
     },
   );
 
@@ -16,13 +16,14 @@ const FormGroup = ({ className, check, inline, ...attributes}) => {
 
 FormGroup.propTypes = {
   className: PropTypes.string,
+  check: PropTypes.bool,
   inline: PropTypes.bool,
 };
 
 FormGroup.defaultProps = {
   className: '',
-  inline: false,
   check: false,
+  inline: false,
 };
 
 export default FormGroup;

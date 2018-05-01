@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { CardBody as CardBodyRS } from 'reactstrap';
 
-
 const CardBody = ({ className, indent, ...attributes }) => {
   const classes = classNames(
     className,
@@ -13,7 +12,7 @@ const CardBody = ({ className, indent, ...attributes }) => {
   );
 
   return (
-    <CardBodyRS className={classes} {...attributes} />
+    <CardBodyRS {...attributes} className={classes} />
   );
 };
 
