@@ -40,34 +40,17 @@
 
 // Dropdown section headers
 .dropdown-header {
-  // padding: .75rem $dropdown-item-padding-x;
-  // margin-top: -.5rem;
-  // margin-bottom: .5rem;
   position: relative;
-  padding: .5rem 1rem;
-  margin: 0;
+  padding: .75rem $dropdown-item-padding-x;
+  margin-top: -.5rem;
+  margin-bottom: .5rem;
   font-size: .8em;
   color: $gray-rgba-700;
-  // border-bottom: 1px solid $gray-500;
+  border-bottom: 1px solid $gray-500;
   text-transform: uppercase;
   letter-spacing: .01em;
   font-weight: 400;
 
-  & span {
-    background: white;
-    padding-right: .5rem;
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    top: 50%;
-    right: 1rem;
-    left: 1.5rem;
-    border-top: 1px solid $gray-500;
-    height: 1px;
-    z-index: -1;
-  }
 }
 
 .dropdown-divider {

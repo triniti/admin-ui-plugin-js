@@ -9,9 +9,7 @@ const FormGroup = ({ className, inline, ...attributes}) => {
     { 'form-inline' : inline },
   );
 
-  return (
-    return <FormGroupRS {...attributes} className={classes} />;
-  );
+  return <FormGroupRS {...attributes} className={classes} />;
 };
 
 FormGroup.propTypes = {
