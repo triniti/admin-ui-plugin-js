@@ -1,43 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
 import './styles.scss';
 
-const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  vertical: PropTypes.string,
-  horizontal: PropTypes.string,
-};
-
-const defaultProps = {
-  tag: 'div',
-};
-
-const Divider = (props) => {
-  const {
-    className,
-    cssModule,
-    vertical,
-    horizontal,
-    tag: Tag,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
+const Divider = ({ className, horizontal, size, tag: Tag, ...attributes }) => {
+  const classes = classNames(
     className,
     'divider',
-    vertical ? ` divider-vertical-${vertical}` : false,
-    horizontal ? ` divider-horizontal-${horizontal}` : false,
-  ), cssModule);
+    horizontal ? 'divider-horizontal' : 'divider-vertical',
+    {
+      [`divider-${size}`]: !!size,
+    },
+  );
 
   return (
     <Tag {...attributes} className={classes} />
   );
 };
 
-Divider.propTypes = propTypes;
-Divider.defaultProps = defaultProps;
+Divider.propTypes = {
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  className: PropTypes.string,
+  size: PropTypes.string,
+  horizontal: PropTypes.bool,
+};
+
+Divider.defaultProps = {
+  tag: 'div',
+};
 
 export default Divider;

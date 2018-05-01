@@ -23,7 +23,6 @@ const DatePicker = ({className, radius, size, theme, ...attributes}) => {
 
 DatePicker.propTypes = {
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   radius: PropTypes.string,
   size: PropTypes.string,
   theme: PropTypes.string,

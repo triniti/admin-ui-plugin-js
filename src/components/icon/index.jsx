@@ -1,15 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
 import mapNameToIcon from './mapNameToIcon';
 import './styles.scss';
 
-const propTypes = {
+const Icon = ({ alert, border, className, color, imgSrc, noborder, outline, radius, src, size, tag: Tag, toggler, ...attributes }) => {
+  const classes = classNames(
+    className,
+    'icon',
+    {
+      'icon-alert' : alert,
+      'icon-border' : border,
+      'icon-noborder' : noborder,
+      'icon-outline' : outline,
+      'icon-toggler' : toggler,
+    },
+    {
+      [`icon-alert-${size}`]: !!alert && !!size,
+      [`icon-color-${color}`]: !!color,
+      [`icon-radius-${radius}`]: !!radius,
+      [`icon-${size}`]: !!size,
+    },
+  );
+
+  const img = src || mapNameToIcon(imgSrc);
+  return (
+      <Tag {...attributes} className={classes} dangerouslySetInnerHTML={{__html: img}}/>
+  );
+};
+
+Icon.propTypes = {
   alert: PropTypes.bool,
   border: PropTypes.bool,
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   color: PropTypes.string,
   imgSrc: PropTypes.string,
   noborder: PropTypes.bool,
@@ -21,49 +44,9 @@ const propTypes = {
   toggler: PropTypes.bool,
 };
 
-const defaultProps = {
+Icon.defaultProps = {
   tag: 'span',
   imgSrc: 'circle',
 };
-
-const Icon = (props) => {
-  const {
-    alert,
-    border,
-    className,
-    color,
-    cssModule,
-    imgSrc,
-    noborder,
-    outline,
-    radius,
-    src,
-    size,
-    tag: Tag,
-    toggler,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    className,
-    'icon',
-    alert ? 'icon-alert' : false,
-    (alert && size) ? `icon-alert-${size}` : false,
-    color ? `icon-color-${color}` : false,
-    border ? 'icon-border' : false,
-    noborder ? 'icon-noborder' : false,
-    outline ? 'icon-outline' : false,
-    radius ? `icon-radius-${radius}` : false,
-    size ? `icon-${size}` : false,
-    toggler ? 'icon-toggler' : false,
-  ), cssModule);
-
-  const img = src || mapNameToIcon(imgSrc);
-  return (
-      <Tag {...attributes} className={classes} dangerouslySetInnerHTML={{__html: img}}/>
-  );
-};
-
-Icon.propTypes = propTypes;
-Icon.defaultProps = defaultProps;
 
 export default Icon;
