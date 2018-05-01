@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactDatePicker from 'react-datepicker';
-import moment from 'moment';
 import './styles.scss';
 
-const DatePicker = ({className, radius, size, theme, ...attributes}) => {
-  const classes =classNames(
+const DatePicker = ({ className, radius, size, theme, ...attributes }) => {
+  const classes = classNames(
     className,
     'form-control',
     {
@@ -17,7 +16,7 @@ const DatePicker = ({className, radius, size, theme, ...attributes}) => {
   );
 
   return (
-    <ReactDatePicker className={classes} {...attributes}/>
+    <ReactDatePicker className={classes} {...attributes} />
   );
 };
 
