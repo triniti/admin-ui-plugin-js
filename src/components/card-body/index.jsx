@@ -22,4 +22,9 @@ CardBody.propTypes = {
   indent: PropTypes.bool,
 };
 
+CardBody.defaultProps = {
+  className: '',
+  indent: false,
+};
+
 export default CardBody;

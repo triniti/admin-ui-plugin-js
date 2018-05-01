@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import mapNameToIcon from './mapNameToIcon';
 import './styles.scss';
 
-const Icon = ({ alert, border, className, color, imgSrc, noborder, outline, radius, src, size, tag: Tag, toggler, ...attributes }) => {
+const Icon = ({ alert, border, className, color, imgSrc, noborder, outline, radius, size, src, tag: Tag, toggler, ...attributes }) => {
   const classes = classNames(
     className,
     'icon',
@@ -38,15 +38,25 @@ Icon.propTypes = {
   noborder: PropTypes.bool,
   outline: PropTypes.bool,
   radius: PropTypes.string,
-  src: PropTypes.string,
   size: PropTypes.string,
+  src: PropTypes.string,
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
   toggler: PropTypes.bool,
 };
 
 Icon.defaultProps = {
-  tag: 'span',
+  alert: false,
+  border: false,
+  className: '',
+  color: '',
   imgSrc: 'circle',
+  noborder: false,
+  outline: false,
+  radius: '',
+  size: '',
+  src: '',
+  tag: 'span',
+  toggler: false,
 };
 
 export default Icon;

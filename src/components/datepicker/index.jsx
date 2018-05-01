@@ -30,6 +30,9 @@ DatePicker.propTypes = {
 
 DatePicker.defaultProps = {
   className: '',
+  radius: '',
+  size: '',
+  theme: '',
 };
 
 export default DatePicker;

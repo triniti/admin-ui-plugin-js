@@ -26,6 +26,9 @@ Divider.propTypes = {
 };
 
 Divider.defaultProps = {
+  className: '',
+  horizontal: false,
+  size: '',
   tag: 'div',
 };
 

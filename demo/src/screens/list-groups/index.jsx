@@ -251,7 +251,7 @@ class UiListGroup extends React.Component {
       <Card key="list-group10">
         <CardHeader>List Group Chat</CardHeader>
         <CardBody>
-          <ListGroup className="list-group-chat">
+          <ListGroup theme="chat">
             <ListGroupItem className="list-group-chat-item-me">
               <ListGroupItemHeading>Me <small>3 minutes ago</small></ListGroupItemHeading>
               <ListGroupItemText>
@@ -277,7 +277,7 @@ class UiListGroup extends React.Component {
       <Card key="list-group11">
         <CardHeader>List Group History - component Event Stream</CardHeader>
         <CardBody indent>
-          <ListGroup className="list-group-history" borderless>
+          <ListGroup theme="history">
 
             <ListGroupItem className="mb-0">
               <ListGroupItemText>

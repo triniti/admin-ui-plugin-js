@@ -1,12 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
 import './styles.scss';
 
-const propTypes = {
+const BackgroundImage = ({ className, imgSrc, position, repeat, size, tag: Tag, ...attributes }) => {
+  const classes = classNames(
+    className,
+    'background-image',
+  );
+
+  return <Tag {...attributes} className={classes} style={{ backgroundImage: `url(${imgSrc})`, backgroundPosition: `${position}`, backgroundSize: `${size}`, backgroundRepeat: `${repeat}` }} />;
+};
+
+BackgroundImage.propTypes = {
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   imgSrc: PropTypes.string,
   position: PropTypes.string,
   repeat: PropTypes.string,
@@ -14,31 +21,8 @@ const propTypes = {
   tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
 };
 
-const BackgroundImage = (props) => {
-  const {
-    className,
-    cssModule,
-    imgSrc,
-    position,
-    repeat,
-    size,
-    tag: Tag,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
-    className,
-    'background-image',
-  ), cssModule);
-
-  return (
-    <Tag {...attributes} className={classes} style={{ backgroundImage: `url(${imgSrc})`, backgroundPosition: `${position}`, backgroundSize: `${size}`, backgroundRepeat: `${repeat}` }} />
-  );
-};
-
-BackgroundImage.propTypes = propTypes;
-
 BackgroundImage.defaultProps = {
+  imgSrc: '',
   position: 'center center',
   repeat: 'no-repeat',
   size: 'contain',
