@@ -2,50 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Label } from 'reactstrap';
-import { mapToCssModules } from '../utils';
 import Input from '../input';
 import './styles.scss';
 
-const propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  disabled: PropTypes.bool,
-  right: PropTypes.bool,
-  round: PropTypes.bool,
-  size: PropTypes.string,
-  type: PropTypes.string,
-};
-
-const defaultProps = {
-  type: 'checkbox',
-};
-
-const Checkbox = (props) => {
-  const {
-    children,
+const Checkbox = ({ children, className, disabled, right, round, size, type, ...attributes }) => {
+  const classes = classNames(
     className,
-    cssModule,
-    disabled,
-    right,
-    round,
-    size,
-    type,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
     'checkbox-input',
-    size ? `form-control form-control-${size}` : 'form-control',
-  ), cssModule);
+    'form-control',
+    { [`form-control-${size}`]: !!size },
+  );
 
-  const labelClasses = mapToCssModules(classNames(
+  const labelClasses = classNames(
     className,
     'checkbox-input-label',
-    disabled ? 'checkbox-disabled' : false,
-    right ? 'checkbox-label-right' : false,
-    round ? 'checkbox-input-round' : false,
-  ), cssModule);
-
+    {
+      'checkbox-disabled': disabled,
+      'checkbox-label-right': right,
+      'checkbox-input-round': round,
+    },
+  );
 
   return (
     <Label className={labelClasses} check>
@@ -56,7 +32,20 @@ const Checkbox = (props) => {
   );
 };
 
-Checkbox.propTypes = propTypes;
-Checkbox.defaultProps = defaultProps;
+Checkbox.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  cssModule: PropTypes.object,
+  disabled: PropTypes.bool,
+  right: PropTypes.bool,
+  round: PropTypes.bool,
+  size: PropTypes.string,
+  type: PropTypes.string,
+};
+
+Checkbox.defaultProps = {
+  className: '',
+  type: 'checkbox',
+};
 
 export default Checkbox;

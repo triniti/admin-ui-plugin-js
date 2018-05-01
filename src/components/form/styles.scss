@@ -278,6 +278,7 @@ input[type="checkbox"] {
 
 .form-inline .form-group {
   margin-right: $form-item-spacing;
+  max-width: 100%;
 }
 
 .form-inline .form-check-inline {
@@ -364,11 +365,6 @@ input[type="checkbox"] {
   vertical-align: middle;
 }
 
-.screen-header-container .form-group,
-.card-header .form-group {
-  margin-bottom: 0;
-}
-
 .card-header .form-check-label,
 .card-header .form-control-label {
   font-size: .825rem;
@@ -378,11 +374,18 @@ input[type="checkbox"] {
   font-size: .75rem;
 }
 
-// remove bottom margin from last form group
+
+// remove bottom margin from form group
 
 .form-group {
+
   .screen-body-content & {
     margin-bottom: 1.5rem;
+  }
+
+  .card-header &,
+  .screen-header-container & {
+    margin-bottom: 0;
   }
 
   &.form-inline,

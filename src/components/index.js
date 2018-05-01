@@ -25,7 +25,6 @@ import {
   DropdownToggle,
   Fade,
   FormFeedback,
-  FormGroup,
   FormText,
   InputGroup,
   InputGroupAddon,
@@ -76,6 +75,7 @@ import Divider from './divider';
 import Dropdown from './dropdown';
 import FooterNav from './footer-nav';
 import Form from './form';
+import FormGroup from './form-group';
 import Icon from './icon';
 import IconGroup from './icon-group';
 import Input from './input';

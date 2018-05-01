@@ -11,8 +11,8 @@ const Media = ({ aspectRatio, className, hover, hoverOutline, ...attributes }) =
       'media-hover': hover,
       'media-hover-outline': hoverOutline,
       'aspect-ratio': aspectRatio,
-      [`aspect-ratio-${aspectRatio}`]: !!aspectRatio,
     },
+    { [`aspect-ratio-${aspectRatio}`]: !!aspectRatio },
   );
 
   return <MediaRS {...attributes} className={classes} />;
