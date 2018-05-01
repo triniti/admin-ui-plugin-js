@@ -1,12 +1,12 @@
 import React from 'react';
 import test from 'tape';
 import { mount } from 'enzyme';
-import { ActionButton, Icon } from '../../../src/components';
+import ActionButton from './';
 
 test('ActionButton:: should render default props', (t) => {
   const wrapper = mount(<ActionButton />);
 
-  t.equal(wrapper.html(), '<button class="btn btn-light btn-action btn-action-click">Click</button>');
+  t.equal(wrapper.html(), '<button class="btn-action btn-action-click btn btn-light">Click</button>');
   t.end();
 });
 
@@ -20,13 +20,13 @@ test('ActionButton:: should render custom props', (t) => {
 test('ActionButton:: should render custom icon', (t) => {
   const wrapper = mount(<ActionButton text="Save" icon="save" />);
 
-  t.equal(wrapper.html(), '<button class="btn btn-light btn-action btn-action-save"><span alt="Save" class="icon">[object Object]</span>Save</button>');
+  t.equal(wrapper.html(), '<button class="btn-action btn-action-save btn btn-light"><span alt="Save" class="icon">[object Object]</span>Save</button>');
   t.end();
 });
 
 test('ActionButton:: should pass all other props', (t) => {
   const wrapper = mount(<ActionButton color="primary" />);
 
-  t.equal(wrapper.html(), '<button class="btn btn-primary btn-action btn-action-click">Click</button>');
+  t.equal(wrapper.html(), '<button class="btn-action btn-action-click btn btn-primary">Click</button>');
   t.end();
 });

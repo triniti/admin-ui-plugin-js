@@ -39,6 +39,7 @@ const BackgroundImage = (props) => {
 BackgroundImage.propTypes = propTypes;
 
 BackgroundImage.defaultProps = {
+  imgSrc: '',
   position: 'center center',
   repeat: 'no-repeat',
   size: 'contain',
