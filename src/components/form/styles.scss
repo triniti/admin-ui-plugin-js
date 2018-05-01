@@ -281,7 +281,8 @@ input[type="checkbox"] {
   max-width: 100%;
 }
 
-.form-inline .form-check-inline {
+.form-inline .form-check-inline,
+.form-inline .form-inline {
   margin-right: 1rem;
 }
 
@@ -397,4 +398,11 @@ input[type="checkbox"] {
   .form-radio-inline + & {
       padding-top: 1rem;
   }
+}
+
+.form-check-inline + .form-check-inline,
+.form-check-inline + .form-radio-inline,
+.form-radio-inline + .form-radio-inline,
+.form-radio-inline + .form-check-inline {
+    padding-top: 0;
 }
