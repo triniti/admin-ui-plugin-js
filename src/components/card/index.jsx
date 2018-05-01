@@ -17,7 +17,7 @@ const Card = ({ className, border, hover, hoverBorder, shadow, ...attributes }) 
   );
 
   return (
-    <CardRS className={classes} {...attributes} />
+    <CardRS {...attributes} className={classes} />
   );
 };
 

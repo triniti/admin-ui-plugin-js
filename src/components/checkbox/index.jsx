@@ -25,8 +25,8 @@ const Checkbox = ({ children, className, disabled, right, round, size, type, ...
 
   return (
     <Label className={labelClasses} check>
-      <Input type={type} className={classes} {...attributes} disabled={disabled} />
-      <span className="checkbox-input-icon"/>
+      <Input {...attributes} className={classes} disabled={disabled} type={type} />
+      <span className="checkbox-input-icon" />
       {children && <span className="form-check-label checkbox-label">{children}</span>}
     </Label>
   );
