@@ -68,6 +68,8 @@ class Tooltip extends React.Component {
 
   componentWillUnmount() {
     this.removeTargetEvents();
+    this.clearHideTimeout();
+    this.clearShowTimeout();
   }
 
   onMouseOverTooltip() {
