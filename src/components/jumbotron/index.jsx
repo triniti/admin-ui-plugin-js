@@ -7,7 +7,9 @@ import './styles.scss';
 const Jumbotron = ({ className, theme, ...attributes }) => {
   const classes = classNames(
     className,
-    theme ? `jumbotron-${theme}` : false,
+    {
+      [`jumbotron-${theme}`]: !!theme,
+    },
   );
 
   return <JumbotronRS {...attributes} className={classes} />;

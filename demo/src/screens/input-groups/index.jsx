@@ -125,7 +125,7 @@ export default UiInputGroup;
           </Card>,
 
           <Card key="imput2">
-            <CardHeader>Form theme="white" on BG Color
+            <CardHeader>Form theme="white" size="sm" col xs="6" on BG Color
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
                   <Icon imgSrc="code" size="md"/>
                </Button>
@@ -142,7 +142,7 @@ const Example = (props) => {
   return (
       <Row>
         <Col>
-          <InputGroup>
+          <InputGroup size="sm">
             <InputGroupAddon addonType="prepend"><Button color="secondary">I'm a button</Button></InputGroupAddon>
             <Input theme="white" />
           </InputGroup>
@@ -159,8 +159,8 @@ export default UiInputGroup;
         </Collapse>
             <CardBody className="bg-light" indent>
               <Row>
-                <Col>
-                  <InputGroup>
+                <Col xs="6">
+                  <InputGroup size="sm">
                     <InputGroupAddon addonType="prepend"><Button color="secondary">I'm a button</Button></InputGroupAddon>
                     <Input theme="white" />
                   </InputGroup>

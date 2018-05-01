@@ -73,7 +73,6 @@ import Checkbox from './checkbox';
 import DatePicker from './datepicker';
 import Divider from './divider';
 import Dropdown from './dropdown';
-import FooterNav from './footer-nav';
 import Form from './form';
 import FormGroup from './form-group';
 import Icon from './icon';
@@ -158,7 +157,6 @@ export {
   DropdownMenu,
   DropdownToggle,
   Fade,
-  FooterNav,
   Form,
   FormFeedback,
   FormGroup,

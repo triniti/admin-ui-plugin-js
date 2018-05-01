@@ -29,4 +29,12 @@ Card.propTypes = {
   shadow: PropTypes.bool,
 };
 
+Card.defaultProps = {
+  border: false,
+  className: '',
+  hover: false,
+  hoverBorder: false,
+  shadow: false,
+};
+
 export default Card;

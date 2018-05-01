@@ -23,6 +23,8 @@ CardTitle.propTypes = {
 };
 
 CardTitle.defaultProps = {
+  className: '',
+  section: false,
   tag: 'h3',
 };
 

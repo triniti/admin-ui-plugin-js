@@ -3,25 +3,29 @@ import PropTypes from 'prop-types';
 import { Input as InputRS } from 'reactstrap';
 import classNames from 'classnames';
 
-const Input = ({ className, radius, theme, ...attributes }) => {
+const Input = ({ className, radius, size, theme, ...attributes }) => {
   const classes = classNames(
     className,
-    radius ? `form-control-radius-${radius}` : false,
-    theme ? `form-control-theme-${theme}` : false,
+    {
+      [`form-control-radius-${radius}`]: !!radius,
+      [`form-control-theme-${theme}`]: !!theme,
+    },
   );
 
-  return <InputRS {...attributes} className={classes} />;
+  return <InputRS bsSize={size} {...attributes} className={classes} />;
 };
 
 Input.propTypes = {
   className: PropTypes.string,
   radius: PropTypes.string,
+  size: PropTypes.string,
   theme: PropTypes.string,
 };
 
 Input.defaultProps = {
   className: '',
   radius: '',
+  size: '',
   theme: '',
 };
 

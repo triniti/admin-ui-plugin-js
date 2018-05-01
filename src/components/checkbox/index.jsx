@@ -35,7 +35,6 @@ const Checkbox = ({ children, className, disabled, right, round, size, type, ...
 Checkbox.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   disabled: PropTypes.bool,
   right: PropTypes.bool,
   round: PropTypes.bool,
@@ -45,6 +44,10 @@ Checkbox.propTypes = {
 
 Checkbox.defaultProps = {
   className: '',
+  disabled: false,
+  right: false,
+  round: false,
+  size: '',
   type: 'checkbox',
 };
 

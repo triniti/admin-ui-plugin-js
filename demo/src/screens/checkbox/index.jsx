@@ -134,7 +134,7 @@ const Example = (props) => {
               </Form>
               <hr/>
               <Checkbox id="showText" className="mr-3"><Label tag="span">Label</Label></Checkbox>
-              <Checkbox id="showText"><Label strong tag="span">Label Strong</Label></Checkbox>
+              <Checkbox id="showText"><Label tag="span" className="form-label-strong">Label Strong</Label></Checkbox>
 
               <hr/>
               <Label check>
