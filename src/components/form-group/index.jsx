@@ -7,13 +7,11 @@ const FormGroup = ({ className, check, inline, ...attributes}) => {
   const classes = classNames(
     className,
     {
-      'form-check' : check,
-      'form-check-inline' : check && inline,
       'form-inline' : !check && inline,
     },
   );
 
-  return <FormGroupRS {...attributes} className={classes} />;
+  return <FormGroupRS check={check} inline={inline} {...attributes} className={classes} />;
 };
 
 FormGroup.propTypes = {
