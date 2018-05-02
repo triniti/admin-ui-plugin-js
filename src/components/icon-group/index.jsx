@@ -7,8 +7,8 @@ const IconGroup = ({ bottom, children, className, left, tag: Tag, ...attributes 
     className,
     'icon-group',
     {
-      'icon-group-bottom' : bottom,
-      'icon-group-left' : left,
+      'icon-group-bottom': bottom,
+      'icon-group-left': left,
     },
   );
 

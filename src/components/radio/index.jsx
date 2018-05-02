@@ -25,7 +25,7 @@ const Radio = ({ children, className, disabled, right, size, type, ...attributes
   return (
     <Label className={labelClasses}>
       <Input type={type} className={classes} {...attributes} disabled={disabled} />
-      <span className="radio-input-icon"/>
+      <span className="radio-input-icon" />
       {children && <span className="form-radio-label radio-label">{children}</span>}
     </Label>
   );
