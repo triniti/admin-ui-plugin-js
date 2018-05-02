@@ -18,7 +18,7 @@ const Icon = ({
       'icon-toggler': toggler,
     },
     {
-      [`icon-alert-${size}`]: !!alert && !!size,
+      [`icon-alert-${size}`]: alert && !!size,
       [`icon-color-${color}`]: !!color,
       [`icon-radius-${radius}`]: !!radius,
       [`icon-${size}`]: !!size,

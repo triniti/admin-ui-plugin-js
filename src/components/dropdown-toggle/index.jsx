@@ -6,10 +6,10 @@ import { DropdownToggle as DropdownToggleRS } from 'reactstrap';
 const DropdownToggle = ({ className, color, icon, outlineText, radius, size, ...attributes }) => {
   const classes = classNames(
     className,
-    { 'btn-icon': icon },
     {
+      'btn-icon': icon,
       [`btn-${size}`]: !!size,
-      [`btn-outline-text-${color}`]: !!outlineText,
+      [`btn-outline-text-${color}`]: outlineText,
       [`btn-radius-${radius}`]: !!radius,
     },
   );
