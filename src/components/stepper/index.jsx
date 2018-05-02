@@ -4,7 +4,22 @@ import classNames from 'classnames';
 import ReactStepper from 'react-stepper-horizontal';
 import './styles.scss';
 
-const Stepper = ({ className, fullWidth, horizontal, ...attributes }) => {
+const Stepper = ({
+  activeColor,
+  circleFontSize,
+  circleTop,
+  className,
+  completeBarColor,
+  completeColor,
+  defaultBarColor,
+  defaultColor,
+  defaultTitleColor,
+  fullWidth,
+  horizontal,
+  size,
+  titleFontSize,
+  ...attributes
+}) => {
   const classes = classNames(
     className,
     'stepper-container',
@@ -17,15 +32,36 @@ const Stepper = ({ className, fullWidth, horizontal, ...attributes }) => {
   return (
     <div className={classes}>
       <ReactStepper
-        {...attributes}/>
+        activeColor={activeColor}
+        circleFontSize={circleFontSize}
+        circleTop={circleTop}
+        completeBarColor={completeBarColor}
+        completeColor={completeColor}
+        defaultBarColor={defaultBarColor}
+        defaultColor={defaultColor}
+        defaultTitleColor={defaultTitleColor}
+        size={size}
+        titleFontSize={titleFontSize}
+        {...attributes}
+      />
     </div>
-    );
+  );
 };
 
 Stepper.propTypes = {
+  activeColor: PropTypes.string,
+  circleFontSize: PropTypes.number,
+  circleTop: PropTypes.number,
   className: PropTypes.string,
+  completeBarColor: PropTypes.string,
+  completeColor: PropTypes.string,
+  defaultBarColor: PropTypes.string,
+  defaultColor: PropTypes.string,
+  defaultTitleColor: PropTypes.string,
   fullWidth: PropTypes.bool,
   horizontal: PropTypes.bool,
+  size: PropTypes.number,
+  titleFontSize: PropTypes.number,
 };
 
 Stepper.defaultProps = {

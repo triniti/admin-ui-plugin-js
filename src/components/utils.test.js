@@ -1,6 +1,6 @@
 import test from 'tape';
 import sinon from 'sinon';
-import * as Utils from '../../src/components/utils';
+import * as Utils from './utils';
 
 test('Utils::mapToCssModules:: should return a string', (t) => {
   t.equal(typeof Utils.mapToCssModules('btn btn-primary'), 'string');

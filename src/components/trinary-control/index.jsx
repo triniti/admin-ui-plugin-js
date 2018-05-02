@@ -6,7 +6,9 @@ const UNKNOWN = 0;
 const TRUE_VAL = 1;
 const FALSE_VAL = 2;
 
-const TrinaryControl = ({ value, onChange, className, unsetText, trueText, falseText, radius, size, width, disabled, ...attributes }) => {
+const TrinaryControl = ({
+  value, onChange, className, unsetText, trueText, falseText, radius, size, width, disabled, ...attributes
+}) => {
   const classes = classNames(
     className,
     'form-control',

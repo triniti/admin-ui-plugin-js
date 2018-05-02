@@ -1,15 +1,15 @@
 import React from 'react';
 import test from 'tape';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import { BrowserRouter, NavLink } from 'react-router-dom';
-import { RouterLink } from '../../../src/components';
+import RouterLink from './';
 
 test('Navbar:: should render a NavLink with default props', (t) => {
-  const wrapper = mount(
+  const wrapper = mount((
     <BrowserRouter>
       <RouterLink to="path">title</RouterLink>
-    </BrowserRouter>,
-  );
+    </BrowserRouter>
+  ));
 
   t.equal(wrapper.find(NavLink).length, 1, 'it should render a NavLink component from react-router-dom');
   t.equal(wrapper.text(), 'title');
