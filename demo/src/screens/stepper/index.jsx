@@ -65,7 +65,7 @@ class UiStepper extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper1">
+      <Card key="stepper2">
         <CardHeader>
           Stepper - Three Steps
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
@@ -95,7 +95,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper2">
+      <Card key="stepper3">
         <CardHeader>
           Stepper - Four Steps
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
@@ -125,7 +125,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper3">
+      <Card key="stepper4">
         <CardHeader>
           Stepper - Five Steps
         <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
@@ -155,7 +155,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper4">
+      <Card key="stepper5">
         <CardHeader>
           Stepper - Six Steps
         <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
