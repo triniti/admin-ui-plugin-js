@@ -1,9 +1,27 @@
 import React from 'react';
-import test from 'tape';
+import tape from 'tape';
 import { mount } from 'enzyme';
 import sinon from 'sinon';
 import { BrowserRouter } from 'react-router-dom';
 import AlertBar from './';
+
+let clock;
+
+const setup = () => {
+  clock = sinon.useFakeTimers();
+};
+
+const teardown = () => {
+  clock.restore();
+};
+
+const test = (description, fn) => {
+  tape(description, (t) => {
+    setup();
+    fn(t);
+    teardown();
+  });
+};
 
 test('AlertBar:: should render children with the correct message', (t) => {
   const alerts = [
@@ -83,9 +101,8 @@ test('AlertBar:: should be able to make an Alert that will dismiss itself after 
   ];
 
   const alert = mount(<AlertBar alerts={alerts} onDismiss={() => {}} />);
-  setTimeout(() => {
-    t.equal(alert.find('div.alert').first().html().indexOf('show'), -1);
-  }, 0);
+  clock.tick(0);
+  t.equal(alert.find('div.alert').first().html().indexOf('show'), -1);
   t.end();
 });
 
@@ -123,6 +140,7 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
   const alert = mount(<AlertBar alerts={alerts} onDismiss={handleDismiss} />);
   alert.find('button').simulate('click');
   t.true(handleDismiss.called);
+
   t.end();
 });
 
@@ -139,9 +157,9 @@ test('AlertBar:: should call the AlertBar onDismiss prop function when an Alert 
 
   const handleDismiss = sinon.spy();
   mount(<AlertBar alerts={alerts} onDismiss={handleDismiss} />);
-  setTimeout(() => {
-    t.true(handleDismiss.called);
-  }, 0);
+  clock.tick(0);
+  t.true(handleDismiss.called);
+
   t.end();
 });
 
@@ -165,6 +183,7 @@ test('AlertBar:: should be able to make an alert with an href link for a new tab
   t.notEqual(alert.find('a.alert-link').html().indexOf('sweet link bro'), -1);
   t.notEqual(alert.find('a.alert-link').html().indexOf('https://google.com'), -1);
   t.notEqual(alert.find('a.alert-link').html().indexOf('_blank'), -1);
+
   t.end();
 });
 
