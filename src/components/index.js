@@ -7,7 +7,6 @@ import {
   CardDeck,
   CardFooter,
   CardGroup,
-  CardHeader,
   CardImg,
   CardImgOverlay,
   CardLink,
@@ -22,7 +21,6 @@ import {
   Container,
   DropdownItem,
   DropdownMenu,
-  DropdownToggle,
   Fade,
   FormFeedback,
   FormText,
@@ -67,12 +65,14 @@ import Breadcrumb from './breadcrumb';
 import Button from './button';
 import Card from './card';
 import CardBody from './card-body';
+import CardHeader from './card-header';
 import CardTitle from './card-title';
 import Carousel from './carousel';
 import Checkbox from './checkbox';
 import DatePicker from './datepicker';
 import Divider from './divider';
 import Dropdown from './dropdown';
+import DropdownToggle from './dropdown-toggle';
 import Form from './form';
 import FormGroup from './form-group';
 import Icon from './icon';
