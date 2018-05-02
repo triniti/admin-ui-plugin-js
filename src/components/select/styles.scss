@@ -7,6 +7,8 @@ $form-min-height-lg:     54px;
 $border-radius-form:      2px;
 $input-focus-color:     $info;
 
+@import "~react-select/dist/react-select.css";
+
 .Select {
   display: flex;
   flex: 1 0 auto;
@@ -136,6 +138,3 @@ $input-focus-color:     $info;
   background-color: rgba($input-focus-color, 0.125) !important;
   box-shadow: inset 2px 0 0 $input-focus-color;
 }
-
-
-@import "~react-select/dist/react-select.css";

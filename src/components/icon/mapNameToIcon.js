@@ -162,6 +162,7 @@ import sort from './sort.svg';
 import sortHorizontal from './sort-horizontal.svg';
 import sortVertical from './sort-vertical.svg';
 import soundHistogram from './sound-histogram.svg';
+import soundcloud from './soundcloud.svg';
 import soundWave from './sound-wave.svg';
 import star from './star.svg';
 import starOutline from './star-outline.svg';
@@ -196,6 +197,7 @@ import vevo from './vevo.svg';
 import vevoVideo from './vevo-video.svg';
 import video from './video.svg';
 import videoCamera from './video-camera.svg';
+import vimeo from './vimeo.svg';
 import warning from './warning.svg';
 import warningOutline from './warning-outline.svg';
 import warningOutlineAlt from './warning-outline-alt.svg';
@@ -376,6 +378,7 @@ const icons = {
   'sort-vertical': sortVertical,
   'sound-histogram': soundHistogram,
   'sound-wave': soundWave,
+  soundcloud,
   star,
   'star-outline': starOutline,
   status,
@@ -409,6 +412,7 @@ const icons = {
   'vevo-video': vevoVideo,
   video,
   'video-camera': videoCamera,
+  vimeo,
   warning,
   'warning-outline': warningOutline,
   'warning-outline-alt': warningOutlineAlt,
