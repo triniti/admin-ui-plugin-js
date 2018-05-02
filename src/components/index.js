@@ -36,7 +36,6 @@ import {
   ListGroupItemHeading,
   ListGroupItemText,
   ModalBody,
-  ModalFooter,
   ModalHeader,
   NavDropdown,
   NavItem,
@@ -49,6 +48,7 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTitle,
+  PopperContent,
   Row,
   TabContent,
   TabPane,
@@ -85,12 +85,12 @@ import MainNav from './main-nav';
 import Media from './media';
 import MobileNav from './mobile-nav';
 import Modal from './modal';
+import ModalFooter from './modal-footer';
 import Nav from './nav';
 import Navbar from './navbar';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import Popover from './popover';
-import PopperContent from './popper-content';
 import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';

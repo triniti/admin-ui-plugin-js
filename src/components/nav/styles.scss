@@ -226,18 +226,3 @@
 .nav-underline.sticky-top {
   min-height: $header-height;
 }
-
-
-// themes
-
-.nav-theme-light {
-  background-color: $gray-400;
-}
-
-.nav-theme-dark {
-  background-color: theme-color("dark");
-}
-
-.nav-theme-white {
-  background-color: $white;
-}

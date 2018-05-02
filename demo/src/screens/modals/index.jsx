@@ -259,6 +259,7 @@ export default ModalExample;
                 modalClassName="animate-center"
                 isOpen={this.state.spinnerModal}
                 toggle={this.toggleSpinner}>
+                <ModalBody/>
               </Modal>
 
               <Button color="primary" onClick={this.toggleBlock}>Block Editor - CSS Columns</Button>

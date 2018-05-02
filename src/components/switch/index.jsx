@@ -2,43 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Label } from 'reactstrap';
-
-import { mapToCssModules } from '../utils';
 import Input from '../input';
 import './styles.scss';
 
-const propTypes = {
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  type: PropTypes.string,
-  id: PropTypes.string.isRequired,
-  label1: PropTypes.string,
-  label2: PropTypes.string,
-};
-
-const defaultProps = {
-  type: 'checkbox',
-};
-
-const Switch = (props) => {
-  const {
-    className,
-    cssModule,
-    type,
-    id,
-    label1,
-    label2,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
+const Switch = ({ className, type, id, label1, label2, ...attributes }) => {
+  const classes = classNames(
     className,
     'switch-input',
-  ), cssModule);
+  );
 
-  const labelClasses = mapToCssModules(classNames(
+  const labelClasses = classNames(
     className,
     'switch-input-label',
-  ), cssModule);
+  );
 
   return [
     <Input type={type} id={id} className={classes} key={`${id}-switch-input`} {...attributes} />,
@@ -46,7 +22,19 @@ const Switch = (props) => {
   ];
 };
 
-Switch.propTypes = propTypes;
-Switch.defaultProps = defaultProps;
+Switch.propTypes = {
+  className: PropTypes.string,
+  type: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  label1: PropTypes.string,
+  label2: PropTypes.string,
+};
+
+Switch.defaultProps = {
+  className: '',
+  label1: '',
+  label2: '',
+  type: 'checkbox',
+};
 
 export default Switch;

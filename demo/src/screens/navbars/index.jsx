@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, Col, Collapse, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row, Screen } from '../../../../src/components';
+import { Card, CardBody, Col, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row, Screen, UncontrolledDropdown } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -38,18 +38,34 @@ class UiNavbar extends React.Component {
         body={[
           <Card key="navbar1">
             <CardBody>
-              <h4>Full Width Inverse Toggleable</h4>
-              <Navbar color="dark" toggleable className="justify-content-start">
-                <NavbarToggler onClick={this.toggleNavbar} />
+              <Navbar color="light" light expand="md">
                 <NavbarBrand href="/">reactstrap</NavbarBrand>
-                <Collapse isOpen={!this.state.collapsed} navbar>
-                  <Nav vertical>
+                <NavbarToggler onClick={this.toggle} />
+                <Collapse isOpen={this.state.isOpen} navbar>
+                  <Nav className="ml-auto" navbar>
                     <NavItem>
-                      <NavLink href="/alerts">Components</NavLink>
+                      <NavLink href="/components/">Components</NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                      <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
                     </NavItem>
+                    <UncontrolledDropdown nav inNavbar>
+                      <DropdownToggle nav caret>
+                        Options
+                      </DropdownToggle>
+                      <DropdownMenu right>
+                        <DropdownItem>
+                          Option 1
+                        </DropdownItem>
+                        <DropdownItem>
+                          Option 2
+                        </DropdownItem>
+                        <DropdownItem divider />
+                        <DropdownItem>
+                          Reset
+                        </DropdownItem>
+                      </DropdownMenu>
+                    </UncontrolledDropdown>
                   </Nav>
                 </Collapse>
               </Navbar>
@@ -58,16 +74,17 @@ class UiNavbar extends React.Component {
 
           <Card key="navbar2">
             <CardBody>
-              <Navbar color="light" toggleable className="mb-3">
-                <NavbarToggler onClick={this.toggle} />
-                <NavbarBrand href="/">reactstrap</NavbarBrand>
-                <Collapse isOpen={this.state.isOpen} navbar>
-                  <Nav>
+              <h4>Full Width Inverse Toggleable</h4>
+              <Navbar dark>
+                <NavbarBrand href="/" className="mr-auto">reactstrap</NavbarBrand>
+                <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
+                <Collapse isOpen={!this.state.collapsed} navbar>
+                  <Nav navbar>
                     <NavItem>
-                      <NavLink href="/alerts">Components</NavLink>
+                      <NavLink href="/components/">Components</NavLink>
                     </NavItem>
                     <NavItem>
-                      <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
+                      <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
                     </NavItem>
                   </Nav>
                 </Collapse>

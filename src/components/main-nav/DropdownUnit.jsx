@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import { DropdownToggle, DropdownMenu, NavDropdown } from '../';
+import { DropdownToggle, DropdownMenu, Dropdown } from '../';
 
 const DropdownUnit = ({
   dropdownOpen,
@@ -28,7 +28,7 @@ const DropdownUnit = ({
   const { to } = links[0];
 
   return (
-    <NavDropdown isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
+    <Dropdown nav isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
       <DropdownToggle
         onClick={() => handleToggleClick(true)}
         tag={NavLink}
@@ -48,7 +48,7 @@ const DropdownUnit = ({
       <DropdownMenu className="nav-dropdown-menu">
         {navLinks}
       </DropdownMenu>
-    </NavDropdown>
+    </Dropdown>
   );
 };
 

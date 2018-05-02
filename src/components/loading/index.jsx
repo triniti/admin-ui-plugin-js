@@ -1,4 +1,3 @@
-// react
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
@@ -18,6 +17,10 @@ const Loading = ({ className, children }) => (
 Loading.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
+};
+
+Loading.defaultProps = {
+  className: '',
 };
 
 export default Loading;

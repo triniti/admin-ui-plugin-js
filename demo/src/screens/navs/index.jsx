@@ -161,7 +161,7 @@ class UiNav extends React.Component {
                 Dropdown
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem header>Overflow on Mobile</DropdownItem>
                     <DropdownItem disabled>Action</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                     <DropdownItem divider />

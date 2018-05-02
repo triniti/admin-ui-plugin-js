@@ -1,35 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
 import './styles.scss';
-
-const propTypes = {
-  centered: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  color: PropTypes.string,
-  cssModule: PropTypes.object,
-  strokeWidth: PropTypes.string,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  width: PropTypes.string,
-  widthDefault: PropTypes.string,
-};
-
-const defaultProps = {
-  color: '#d9d9db',
-  strokeWidth: '6',
-  tag: 'div',
-  width: '33',
-  widthDefault: '33',
-};
 
 const Spinner = (props) => {
   const {
     centered,
     children,
     className,
-    cssModule,
     color,
     dispatch,
     isAuthenticated,
@@ -40,11 +18,14 @@ const Spinner = (props) => {
     widthDefault,
     ...attributes
   } = props;
-  const classes = mapToCssModules(classNames(
+
+  const classes = classNames(
     className,
     'spinner-container',
-    centered ? 'spinner-centered' : false,
-  ), cssModule);
+    {
+      'spinner-centered': centered,
+    },
+  );
 
   return (
     <Tag className={classes} {...attributes}>
@@ -64,7 +45,25 @@ const Spinner = (props) => {
   );
 };
 
-Spinner.propTypes = propTypes;
-Spinner.defaultProps = defaultProps;
+Spinner.propTypes = {
+  centered: PropTypes.bool,
+  children: PropTypes.node,
+  className: PropTypes.string,
+  color: PropTypes.string,
+  strokeWidth: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  width: PropTypes.string,
+  widthDefault: PropTypes.string,
+};
+
+Spinner.defaultProps = {
+  centered: false,
+  className: '',
+  color: '#d9d9db',
+  strokeWidth: '6',
+  tag: 'div',
+  width: '33',
+  widthDefault: '33',
+};
 
 export default Spinner;
