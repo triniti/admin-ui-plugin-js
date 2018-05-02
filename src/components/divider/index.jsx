@@ -13,9 +13,7 @@ const Divider = ({ className, horizontal, size, tag: Tag, ...attributes }) => {
     },
   );
 
-  return (
-    <Tag {...attributes} className={classes} />
-  );
+  return <Tag {...attributes} className={classes} />;
 };
 
 Divider.propTypes = {

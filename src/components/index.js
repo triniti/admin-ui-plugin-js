@@ -48,6 +48,7 @@ import {
   PopoverContent,
   PopoverHeader,
   PopoverTitle,
+  PopperContent,
   Row,
   TabContent,
   TabPane,
@@ -90,7 +91,6 @@ import Navbar from './navbar';
 import PageHeader from './page-header';
 import Pagination from './pagination';
 import Popover from './popover';
-import PopperContent from './popper-content';
 import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';

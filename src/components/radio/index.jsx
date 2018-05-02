@@ -2,47 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Label } from 'reactstrap';
-import { mapToCssModules } from '../utils';
 import Input from '../input';
 import './styles.scss';
 
-const propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  disabled: PropTypes.bool,
-  right: PropTypes.bool,
-  size: PropTypes.string,
-  type: PropTypes.string,
-};
-
-const defaultProps = {
-  type: 'radio',
-};
-
-const Radio = (props) => {
-  const {
-    children,
-    className,
-    cssModule,
-    disabled,
-    right,
-    size,
-    type,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
+const Radio = ({ children, className, disabled, right, size, type, ...attributes }) => {
+  const classes = classNames(
     className,
     'radio-input',
-    size ? `form-control form-control-${size}` : 'form-control',
-  ), cssModule);
+    'form-control',
+    { [`form-control-${size}`]: !!size },
+  );
 
-  const labelClasses = mapToCssModules(classNames(
+  const labelClasses = classNames(
     className,
     'radio-input-label',
-    disabled ? 'radio-disabled' : false,
-    right ? 'radio-label-right' : false,
-  ), cssModule);
+    {
+      'radio-disabled': disabled,
+      'radio-label-right': right,
+    },
+  );
 
   return (
     <Label className={labelClasses}>
@@ -53,7 +31,21 @@ const Radio = (props) => {
   );
 };
 
-Radio.propTypes = propTypes;
-Radio.defaultProps = defaultProps;
+Radio.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  right: PropTypes.bool,
+  size: PropTypes.string,
+  type: PropTypes.string,
+};
+
+Radio.defaultProps = {
+  className: '',
+  disabled: false,
+  right: false,
+  size: '',
+  type: 'radio',
+};
 
 export default Radio;

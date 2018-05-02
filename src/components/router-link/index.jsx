@@ -23,6 +23,7 @@ RouterLink.propTypes = {
 };
 
 RouterLink.defaultProps = {
+  className: '',
   navTab: false,
 };
 

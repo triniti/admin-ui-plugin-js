@@ -70,13 +70,13 @@ const Example = (props) => {
       <Label for="toggler2" className="ml-4 mr-2 text-label">size="sm"</Label>
       <Switch id="toggler2" size="sm" />
 
-      <Divider horizontal="md" className="ml-4"/>
+      <Divider horizontal size="md" className="ml-4"/>
 
-      <Label for="toggler3" strong>Off</Label>
+      <Label for="toggler3" className="form-label-strong">Off</Label>
       <Switch id="toggler3" className="ml-2"/>
-      <Label for="toggler3" strong>On</Label>
+      <Label for="toggler3" className="form-label-strong">On</Label>
 
-      <Divider horizontal="md" />
+      <Divider horizontal size="md" />
 
 
       <Label for="toggler4" className="ml-4 mr-2 text-label">size="md"</Label>
@@ -99,13 +99,13 @@ const Example = (props) => {
                   <Label for="toggler2" className="ml-4 mr-2 text-label">default (sm)</Label>
                   <Switch id="toggler2" />
 
-                  <Divider horizontal="md" className="ml-4"/>
+                  <Divider horizontal size="md" className="ml-4"/>
 
-                  <Label for="toggler3" strong>Off</Label>
+                  <Label for="toggler3" className="form-label-strong">Off</Label>
                   <Switch id="toggler3"  size="sd" className="ml-2"/>
-                  <Label for="toggler3" strong>On</Label>
+                  <Label for="toggler3" className="form-label-strong">On</Label>
 
-                  <Divider horizontal="md" />
+                  <Divider horizontal size="md" />
 
 
                   <Label for="toggler4" className="ml-4 mr-2 text-label">size="md"</Label>

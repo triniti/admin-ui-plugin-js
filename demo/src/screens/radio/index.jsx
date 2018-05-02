@@ -41,17 +41,17 @@ class UiRadio extends React.Component {
                 <FormGroup inline>
                   <FormGroup check inline>
                     <Radio size="sm" onClick={() => this.onRadioBtnClick(11)}>
-                      <Label strong>Yes</Label>
+                      <Label className="form-label-strong">Yes</Label>
                     </Radio>
                   </FormGroup>
                   <FormGroup check inline>
                     <Radio size="sm" onClick={() => this.onRadioBtnClick(11)}>
-                      <Label strong>No</Label>
+                      <Label className="form-label-strong">No</Label>
                     </Radio>
                   </FormGroup>
                   <FormGroup check inline>
                     <Radio size="sm" onClick={() => this.onRadioBtnClick(11)}>
-                      <Label strong>Maybe</Label>
+                      <Label className="form-label-strong">Maybe</Label>
                     </Radio>
                   </FormGroup>
                   <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
