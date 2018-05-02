@@ -43,7 +43,7 @@ TrinaryControl.propTypes = {
 
 TrinaryControl.defaultProps = {
   className: '',
-  disable: false,
+  disabled: false,
   falseText: 'No',
   radius: '',
   size: '',

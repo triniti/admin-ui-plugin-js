@@ -52,7 +52,7 @@ const UiSpinners = () => (
         </CardBody>
       </Card>,
 
-      <Card key="icons1">
+      <Card key="icons2">
         <CardHeader>CSS Spinner</CardHeader>
         <CardBody indent>
           <Row>
@@ -66,7 +66,7 @@ const UiSpinners = () => (
         </CardBody>
       </Card>,
 
-       <Card key="icons2">
+       <Card key="icons3">
         <CardHeader>Spinner Centered</CardHeader>
         <CardBody indent>
           <Row>
