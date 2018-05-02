@@ -1,41 +1,38 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Button as ButtonRS } from 'reactstrap';
+import { DropdownToggle as DropdownToggleRS } from 'reactstrap';
 
-import './styles.scss';
-
-const Button = ({ action, className, color, icon, outlineText, radius, ...attributes }) => {
+const DropdownToggle = ({ className, color, icon, outlineText, radius, size, ...attributes }) => {
   const classes = classNames(
     className,
     { 'btn-icon': icon },
     {
-      [`btn-action btn-${action}`]: !!action,
+      [`btn-${size}`]: !!size,
       [`btn-outline-text-${color}`]: !!outlineText,
       [`btn-radius-${radius}`]: !!radius,
     },
   );
 
-  return <ButtonRS color={color} className={classes} {...attributes} />;
+  return <DropdownToggleRS color={color} {...attributes} className={classes} />;
 };
 
-Button.propTypes = {
-  action: PropTypes.string,
+DropdownToggle.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
   icon: PropTypes.bool,
-  outline: PropTypes.bool,
   outlineText: PropTypes.bool,
   radius: PropTypes.string,
+  size: PropTypes.string,
 };
 
-Button.defaultProps = {
-  action: '',
+DropdownToggle.defaultProps = {
   className: '',
   color: 'light',
   icon: false,
   outlineText: false,
   radius: '',
+  size: '',
 };
 
-export default Button;
+export default DropdownToggle;
