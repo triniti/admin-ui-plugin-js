@@ -7,7 +7,6 @@ import {
   CardDeck,
   CardFooter,
   CardGroup,
-  CardHeader,
   CardImg,
   CardImgOverlay,
   CardLink,
@@ -66,6 +65,7 @@ import Breadcrumb from './breadcrumb';
 import Button from './button';
 import Card from './card';
 import CardBody from './card-body';
+import CardHeader from './card-header';
 import CardTitle from './card-title';
 import Carousel from './carousel';
 import Checkbox from './checkbox';
