@@ -19,6 +19,10 @@
   // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
   background-image: none;
 
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+
   &:focus {
     border-color: $secondary;
     color: $body-color;

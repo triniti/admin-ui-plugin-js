@@ -21,6 +21,9 @@ $input-focus-color:     $info;
   border-radius: $border-radius-form;
   height: $form-min-height;
 
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
   .input-group-sm & {
     height: $form-min-height-sm;
   }

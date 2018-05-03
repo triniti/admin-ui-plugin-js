@@ -44,6 +44,13 @@
     background: theme-color("secondary");
     border-color: darken(theme-color("secondary"), 5%);
   }
+
+  form &:hover,
+  .form-inline &:hover,
+  .form-group &:hover,
+  .input-group &:hover {
+    box-shadow: $hover-shadow;
+  }
 }
 
 .btn-icon {
