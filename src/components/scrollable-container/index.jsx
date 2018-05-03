@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import './styles.scss';
 
 const ScrollableContainer = ({ children, className, tag: Tag, ...attributes }) => {
-
   const classes = classNames(
     className,
     'scrollable-container',
@@ -14,7 +13,6 @@ const ScrollableContainer = ({ children, className, tag: Tag, ...attributes }) =
     <Tag {...attributes} className={classes}>{children}</Tag>
   );
 };
-
 
 ScrollableContainer.propTypes = {
   children: PropTypes.node,
