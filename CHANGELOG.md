@@ -1,5 +1,30 @@
 # CHANGELOG
 
+## v0.5.0
+**Breaking Changes for Triniti apps**
+* App component now reuqires prop `dispatch` to dispatch route changes after the route did changed.
+* App component has a new life cycle hook `componentDidUpdate` to dispatch route changes.
+* Select component now support full react-select features by give `async` or `creatable` props.
+* Add sagas that watch navigation bar clicks(both title and options). Give user warning before they move to next page if there were unsaved changes.  
+
+Refactor all components to import Reactstrap js, update style
+* Add vimeo and soundcloud icons
+* Add props to DropdownToggle to match Button
+* Use Order instead of Pull Push for Col in Layout
+* Use Dropdown nav instead of NavDropdown
+* Updated Divider component to use a size prop and just use horizontal as a boolean to change the direction
+* Add BackgroundImage component
+* Add gutter-* classes to control col padding
+* Add aspectRatio prop to Media - 1by1, 4by3, 16by9, 2by1, 3by1
+* Add hoverBorder prop for card for 4px inner border on hover/selected
+* Add col-xl-2p for 5 cols in row, 20% width
+
+Other changes
+* Renamed actionTypes.
+* Add utils: toast.
+* Add utils: getUserConfirmation (for react-router-4 [history.block](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md)).
+* Fixed issue: when user clicks on navbar title, on desktop the screen should transition to the first optons of the dropdown menu, but on mobile view, it should only toggle the dropdown open/close.
+* Fixed issue: when user clicks on a dropdown menu on mobile view, main-nav should auto-close.
 
 ## v0.4.15
 * Update to Bootstrap 4.1
