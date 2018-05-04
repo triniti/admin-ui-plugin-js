@@ -4,7 +4,6 @@ import getCurrentMainSection from '../selectors/getCurrentMainSection';
 import { actionTypes } from '../constants';
 
 export default function* (action) {
-  // const { navId, to, history } = action;
   const currentNavId = yield select(getCurrentMainSection);
 
   if ((window.innerWidth >= 1024) && !!action.to) {

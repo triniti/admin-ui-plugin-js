@@ -15,7 +15,7 @@ class App extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.match.path !== prevProps.match.path) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
       this.props.dispatch(routeDidChange());
     }
   }
@@ -36,7 +36,6 @@ class App extends React.Component {
 App.propTypes = {
   dispatch: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
-  match: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
   authHoc: PropTypes.func,
   navConfig: PropTypes.array,
