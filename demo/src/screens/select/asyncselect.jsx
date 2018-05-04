@@ -9,6 +9,7 @@ export default class AsyncSelectField extends React.Component {
     this.state = {
       backspaceRemoves: true,
       multi: true,
+      value: [],
     };
 
     this.onChange = this.onChange.bind(this);
