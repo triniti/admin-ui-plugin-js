@@ -1,6 +1,6 @@
 import { actionTypes } from '../constants';
 
 export default navId => ({
-  type: actionTypes.DROPDOWN_CLICKED,
+  type: actionTypes.CURRENT_SECTION_CHANGED,
   navId,
 });

@@ -5,21 +5,23 @@ import createNavUnits from './createNavUnits';
 import './styles.scss';
 
 const MainNav = ({
-  navConfig,
-  classesMain,
   activeSections,
+  classesMain,
   currentSection,
-  handleToggleClick,
-  handleDropdownClick,
+  history,
+  navConfig,
+  onDropdownMenuClick,
+  onDropdownTitleClick,
 }) => (
   <div className={`navbar-toggleable-md main-nav ${classesMain}`} >
     <Nav navbar>
       {createNavUnits(
-        navConfig,
-        handleToggleClick,
-        handleDropdownClick,
-        currentSection,
         activeSections,
+        currentSection,
+        history,
+        navConfig,
+        onDropdownMenuClick,
+        onDropdownTitleClick,
       )}
     </Nav>
   </div>
@@ -30,8 +32,9 @@ MainNav.propTypes = {
   classesMain: PropTypes.string,
   activeSections: PropTypes.arrayOf(PropTypes.string),
   currentSection: PropTypes.string,
-  handleToggleClick: PropTypes.func.isRequired,
-  handleDropdownClick: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired,
+  onDropdownMenuClick: PropTypes.func.isRequired,
+  onDropdownTitleClick: PropTypes.func.isRequired,
 };
 
 MainNav.defaultProps = {

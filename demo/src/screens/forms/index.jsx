@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
@@ -12,6 +13,14 @@ class UiForm extends React.Component {
       trinaryDefault: 0,
       trinaryCustom: 1,
     };
+  }
+
+  componentDidMount() {
+    this.unblock = this.props.history.block('Are you sure you want to leave this page?');
+  }
+
+  componentWillUnmount() {
+    this.unblock();
   }
 
   handleChange(e) {
@@ -488,4 +497,4 @@ class UiForm extends React.Component {
   }
 }
 
-export default UiForm;
+export default withRouter(UiForm);

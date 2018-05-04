@@ -14,8 +14,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = {
-  handleToggleClick: actions.toggleDropdown,
-  handleDropdownClick: actions.clickDropdown,
+  onDropdownTitleClick: actions.clickDropdownTitle,
+  onDropdownMenuClick: actions.clickDropdownMenu,
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MainNav));

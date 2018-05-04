@@ -5,8 +5,8 @@ import { DropdownToggle, DropdownMenu, Dropdown } from '../';
 
 const DropdownUnit = ({
   dropdownOpen,
-  handleToggleClick,
-  handleDropdownClick,
+  onTitleClick,
+  onDropdownMenuClick,
   classes,
   title,
   links,
@@ -18,31 +18,27 @@ const DropdownUnit = ({
         key={linkTitle}
         to={to}
         exact
-        onClick={handleDropdownClick}
+        onClick={onDropdownMenuClick}
         className="dropdown-item"
       >
         {linkTitle}
       </NavLink>
     );
   });
+
+  // when toggler clicked, default route user to the first item in the menu list, desktop only!!!
   const { to } = links[0];
 
   return (
     <Dropdown nav isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
-      <DropdownToggle
-        onClick={() => handleToggleClick(true)}
-        tag={NavLink}
-        to={to}
-        title={title}
-        className="nav-link nav-link-desktop"
-      >
+      <DropdownToggle nav onClick={() => onTitleClick(to)}>
         {title}
       </DropdownToggle>
       <div
         role="link"
         tabIndex="-1"
-        onClick={() => handleToggleClick(false)}
-        onKeyDown={() => handleToggleClick(false)}
+        // onClick={() => handleToggleClick(false)}
+        // onKeyDown={() => handleToggleClick(false)}
         className="nav-link-mobile"
       />
       <DropdownMenu className="nav-dropdown-menu">
@@ -54,8 +50,8 @@ const DropdownUnit = ({
 
 DropdownUnit.propTypes = {
   dropdownOpen: PropTypes.bool,
-  handleToggleClick: PropTypes.func,
-  handleDropdownClick: PropTypes.func,
+  onTitleClick: PropTypes.func,
+  onDropdownMenuClick: PropTypes.func,
   classes: PropTypes.string,
   title: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.object),

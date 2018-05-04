@@ -8,5 +8,5 @@ const mapStateToProps = () => ({
 
 export default connect(
   mapStateToProps,
-  { handleToggle: toggleMainNav },
+  { handleToggle: () => toggleMainNav() },
 )(MobileNav);

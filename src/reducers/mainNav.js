@@ -2,8 +2,8 @@ import createReducer from '@triniti/app/createReducer';
 import { actionTypes } from '../constants';
 
 const {
-  DROPDOWN_CLICKED,
-  DROPDOWN_TOGGLED,
+  CURRENT_SECTION_CHANGED,
+  DROPDOWN_TITLE_CLICKED,
   MAIN_NAV_TOGGLED,
 } = actionTypes;
 
@@ -13,17 +13,24 @@ export const initialState = {
   currentSection: '',
 };
 
-const onDropdownClicked = (state, action) =>
+const onCurrentSectionChanged = (state, action) =>
   Object.assign({}, state, {
     currentSection: action.navId,
   });
 
-const onMainNavToggled = state =>
-  Object.assign({}, state, {
-    isOpen: !state.isOpen,
-  });
+const onMainNavToggled = (state, action) => {
+  const isOpen = typeof action.isOpen === 'undefined' ? !state.isOpen : !!action.isOpen;
 
-const onDropdownToggled = (state, action) => {
+  return Object.assign({}, state, { isOpen });
+};
+
+/**
+ * Handle the dropdown toggle on and off when in mobile view
+ * @param state
+ * @param action
+ * @returns {*}
+ */
+const onDropdownTitleClicked = (state, action) => {
   const { activeSections } = state;
   let updatedActiveSections = [];
 
@@ -40,20 +47,13 @@ const onDropdownToggled = (state, action) => {
     ];
   }
 
-  if (!action.routeChangeTriggered) {
-    return Object.assign({}, state, {
-      activeSections: updatedActiveSections,
-    });
-  }
-
   return Object.assign({}, state, {
     activeSections: updatedActiveSections,
-    currentSection: action.navId,
   });
 };
 
 export default createReducer(initialState, {
-  [DROPDOWN_CLICKED]: onDropdownClicked,
-  [DROPDOWN_TOGGLED]: onDropdownToggled,
+  [CURRENT_SECTION_CHANGED]: onCurrentSectionChanged,
+  [DROPDOWN_TITLE_CLICKED]: onDropdownTitleClicked,
   [MAIN_NAV_TOGGLED]: onMainNavToggled,
 });

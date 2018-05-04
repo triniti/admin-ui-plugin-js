@@ -1,13 +1,15 @@
 /* eslint-disable no-unused-vars, class-methods-use-this */
 import Plugin from '@triniti/app/Plugin';
 import reducer from './reducers';
+import saga from './sagas';
 
 export default class AdminUiPlugin extends Plugin {
   constructor() {
-    super('triniti', 'admin-ui', '0.4.14');
+    super('triniti', 'admin-ui', '0.5.0');
   }
 
   configure(app, bottle) {
     this.reducer = reducer;
+    this.saga = saga;
   }
 }

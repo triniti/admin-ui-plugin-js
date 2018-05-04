@@ -3,11 +3,12 @@ import DropdownUnit from './DropdownUnit';
 import NavItemUnit from './NavItemUnit';
 
 export default (
-  navConfig,
-  handleToggleClick,
-  handleDropdownClick,
-  currentSection,
   activeSections,
+  currentSection,
+  history,
+  navConfig,
+  onDropdownMenuClick,
+  onDropdownTitleClick,
 ) =>
   navConfig.map((dropdownUnit) => {
     const {
@@ -24,7 +25,7 @@ export default (
             to={to}
             navId={navId}
             classes={classes}
-            handleDropdownClick={() => handleToggleClick(navId)}
+            onClick={() => onDropdownMenuClick(navId)}
           />
         );
       case 'dropdown':
@@ -32,10 +33,8 @@ export default (
           <DropdownUnit
             key={navId.replace(/\s+/g, '')}
             dropdownOpen={dropdownOpen}
-            handleToggleClick={(routeChanged) => {
-              handleToggleClick(navId, routeChanged);
-            }}
-            handleDropdownClick={() => handleDropdownClick(navId)}
+            onTitleClick={(nextLocation) => { onDropdownTitleClick(navId, nextLocation, history); }}
+            onDropdownMenuClick={() => onDropdownMenuClick(navId)}
             classes={classes}
             title={navId}
             links={dpLinks}

@@ -1,5 +1,6 @@
 import { actionTypes } from '../constants';
 
-export default () => ({
+export default isOpen => ({
   type: actionTypes.MAIN_NAV_TOGGLED,
+  isOpen,
 });

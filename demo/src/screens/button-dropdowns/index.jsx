@@ -192,7 +192,7 @@ Example extends Component {
             <CardHeader>
               ButtonDropdown with Icon & Arrows
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
-                <Icon imgSrc="code" size="md"/>
+                <Icon imgSrc="code" size="md" />
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode3}>
