@@ -7,7 +7,7 @@ export default (
   currentSection,
   history,
   navConfig,
-  requestRouteChange,
+  requestChangeRoute,
   onDropdownTitleClick,
 ) =>
   navConfig.map((dropdownUnit) => {
@@ -25,7 +25,7 @@ export default (
             to={to}
             navId={navId}
             classes={classes}
-            onClick={() => requestRouteChange(navId)}
+            onClick={() => requestChangeRoute(navId)}
           />
         );
       case 'dropdown':
@@ -37,10 +37,10 @@ export default (
               onDropdownTitleClick(navId);
               if ((window.innerWidth >= 1024) && !!history) {
                 history.push(nextLocation);
-                requestRouteChange(navId);
+                requestChangeRoute(navId);
               }
             }}
-            onDropdownMenuClick={() => requestRouteChange(navId)}
+            onDropdownMenuClick={() => requestChangeRoute(navId)}
             classes={classes}
             title={navId}
             links={dpLinks}

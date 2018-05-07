@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Switch, withRouter } from 'react-router';
 import './styles.scss';
-// fixme: components ideally are not requesting containers
-// they should given them via props or children
-import NavbarContainer from '../../containers/navbar';
 import createRoutes from './createRoutes';
 import routeDidChange from '../../actions/routeDidChange';
 
@@ -21,10 +18,10 @@ class App extends React.Component {
   }
 
   render() {
-    const { location, navConfig } = this.props;
+    const { location, navComponent } = this.props;
     return (
       <div id="wrapper" data-slidedirection="">
-        {location.pathname !== '/login' && <NavbarContainer navConfig={navConfig} />}
+        {location.pathname !== '/login' && navComponent}
         <Switch>
           { this.routes }
         </Switch>
@@ -38,11 +35,11 @@ App.propTypes = {
   location: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
   authHoc: PropTypes.func,
-  navConfig: PropTypes.array,
+  navComponent: PropTypes.node,
 };
 
 App.defaultProps = {
-  navConfig: [],
+  navComponent: null,
   authHoc: null,
 };
 

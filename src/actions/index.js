@@ -1,11 +1,11 @@
 import cancelChangeRoute from './cancelChangeRoute';
 import changeAsideActiveTab from './changeAsideActiveTab';
+import clickDropdownTitle from './clickDropdownTitle';
 import dismissAlert from './dismissAlert';
-import requesteChageRoute from './requesteChageRoute';
+import requestChangeRoute from './requestChangeRoute';
 import requestLogout from './requestLogout';
 import requestNewTheme from './requestNewTheme';
 import sendAlert from './sendAlert';
-import clickDropdownTitle from './clickDropdownTitle';
 import toggleMainNav from './toggleMainNav';
 import toggleUserNav from './toggleUserNav';
 
@@ -14,7 +14,7 @@ export default {
   changeAsideActiveTab,
   clickDropdownTitle,
   dismissAlert,
-  requesteChageRoute,
+  requestChangeRoute,
   requestLogout,
   requestNewTheme,
   sendAlert,

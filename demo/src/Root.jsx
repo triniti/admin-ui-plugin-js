@@ -3,12 +3,17 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import App from '../../src/components/app';
+import NavbarContainer from '../../src/containers/navbar';
 import getUserConfirmation from '../../src/utils/getUserConfirmation';
 
-const Root = ({ store, routes, nav }) => (
+const Root = ({ store, routes, navConfig }) => (
   <Provider store={store}>
     <BrowserRouter getUserConfirmation={getUserConfirmation(store.dispatch)}>
-      <App routes={routes} navConfig={nav} dispatch={store.dispatch} />
+      <App
+        dispatch={store.dispatch}
+        navComponent={<NavbarContainer navConfig={navConfig} />}
+        routes={routes}
+      />
     </BrowserRouter>
   </Provider>
 );

@@ -15,7 +15,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = {
   onDropdownTitleClick: actions.clickDropdownTitle,
-  requestRouteChange: actions.requesteChageRoute,
+  requestChangeRoute: actions.requestChangeRoute,
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MainNav));
