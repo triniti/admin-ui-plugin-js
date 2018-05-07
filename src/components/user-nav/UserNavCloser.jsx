@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Button from '../button';
 import Icon from '../icon';
 
-const UserNavCloser = ({ handleClick }) => (
+const UserNavCloser = ({ onClick }) => (
   <Button
     outline
     color="hover"
     size="sm"
-    onClick={handleClick}
+    onClick={onClick}
     className="mb-0 ml-auto pr-3"
   >
     <Icon imgSrc="close" id="close" className="mr-0" />
@@ -17,7 +17,7 @@ const UserNavCloser = ({ handleClick }) => (
 
 
 UserNavCloser.propTypes = {
-  handleClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default UserNavCloser;

@@ -26,7 +26,7 @@ const Misc = ({ tabId }) => (
 );
 
 Misc.propTypes = {
-  tabId: PropTypes.string,
+  tabId: PropTypes.string.isRequired,
 };
 
 export default Misc;

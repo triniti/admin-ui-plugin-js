@@ -7,7 +7,9 @@
 * Select component now support full react-select features by give `async` or `creatable` props.
 * Add sagas that watch navigation bar clicks(both title and options). Give user warning before they move to next page if there were unsaved changes.  
 
-Refactor all components to import Reactstrap js, update style
+Refactor all components to import Reactstrap js. 
+
+Update style
 * Add vimeo and soundcloud icons
 * Add props to DropdownToggle to match Button
 * Use Order instead of Pull Push for Col in Layout
@@ -23,7 +25,7 @@ Other changes
 * Renamed actionTypes.
 * Add utils: toast.
 * Add utils: getUserConfirmation (for react-router-4 [history.block](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md)).
-* Fixed issue: when user clicks on navbar title, on desktop the screen should transition to the first optons of the dropdown menu, but on mobile view, it should only toggle the dropdown open/close.
+* Fixed issue: when user clicks on navbar title, on desktop the screen should transition to the first option of the dropdown menu, but on mobile view, it should only toggle the dropdown open/close.
 * Fixed issue: when user clicks on a dropdown menu on mobile view, main-nav should auto-close.
 
 ## v0.4.15

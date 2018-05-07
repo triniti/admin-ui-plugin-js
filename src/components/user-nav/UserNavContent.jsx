@@ -16,9 +16,17 @@ class UserNavContent extends React.Component {
     activeTab: PropTypes.string,
     currentTheme: PropTypes.string,
     toggleTheme: PropTypes.func,
-    toggleUserNav: PropTypes.func,
-    handleLogout: PropTypes.func,
+    toggleUserNav: PropTypes.func.isRequired,
+    onLogout: PropTypes.func,
     position: PropTypes.string,
+  };
+
+  static defaultProps = {
+    activeTab: '1',
+    currentTheme: 'light',
+    toggleTheme: undefined,
+    onLogout: undefined,
+    position: '',
   };
 
   constructor(props) {
@@ -38,7 +46,7 @@ class UserNavContent extends React.Component {
   }
 
   handleLogoutClick() {
-    const { handleLogout } = this.props;
+    const { onLogout } = this.props;
 
     swal({
       title: 'Logout from current session?',
@@ -48,14 +56,14 @@ class UserNavContent extends React.Component {
       confirmButtonClass: 'btn btn-secondary',
       cancelButtonClass: 'btn btn-outline-text-secondary',
     }).then(() => {
-      handleLogout();
+      onLogout();
     });
   }
 
-  toggle(tab1) {
-    if (this.state.activeTab !== tab1) {
+  toggle(tab) {
+    if (this.state.activeTab !== tab) {
       this.setState({
-        activeTab: tab1,
+        activeTab: tab,
       });
     }
   }
@@ -77,14 +85,14 @@ class UserNavContent extends React.Component {
           <NavItem>
             <NavLink href="#" className={classnames({ active: this.state.activeTab === '2' })} onClick={() => { this.toggle('2'); }}>Alerts <UnreadMsgBadge /></NavLink>
           </NavItem>
-          <UserNavCloser handleClick={toggleUserNav} />
+          <UserNavCloser onClick={toggleUserNav} />
         </Nav>
 
         <ScrollableContainer>
           <TabContent activeTab={this.state.activeTab}>
             <UserSettingsTabPane
               tabId="1"
-              handleLogout={this.handleLogoutClick}
+              onLogoutBtnClick={this.handleLogoutClick}
               currentTheme={currentTheme}
               toggleTheme={toggleTheme}
             />

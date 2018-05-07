@@ -4,7 +4,7 @@ import { Button, CardBody, DropdownItem, Media, ScrollableContainer, TabPane } f
 
 const UserSettingsTabPane = ({
   tabId,
-  handleLogout,
+  onLogoutBtnClick,
   currentTheme,
   toggleTheme,
 }) => (
@@ -22,17 +22,22 @@ const UserSettingsTabPane = ({
 
         <Button block color="info" onClick={toggleTheme} radius="round">switch theme: {currentTheme}</Button>
         <DropdownItem divider />
-        <Button block color="danger" onClick={handleLogout} radius="round">Logout</Button>
+        <Button block color="danger" onClick={onLogoutBtnClick} radius="round">Logout</Button>
       </CardBody>
     </ScrollableContainer>
   </TabPane>
 );
 
 UserSettingsTabPane.propTypes = {
-  tabId: PropTypes.string,
-  handleLogout: PropTypes.func,
+  tabId: PropTypes.string.isRequired,
+  onLogoutBtnClick: PropTypes.func.isRequired,
   currentTheme: PropTypes.string,
   toggleTheme: PropTypes.func,
+};
+
+UserSettingsTabPane.defaultProps = {
+  currentTheme: 'light',
+  toggleTheme: undefined,
 };
 
 export default UserSettingsTabPane;
