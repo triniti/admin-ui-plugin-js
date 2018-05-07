@@ -1,6 +1,7 @@
 import swal from 'sweetalert2';
+import actions from '../actions';
 
-export default (message = '', callback) => {
+export default dispatch => (message = '', callback) => {
   const config = {
     allowOutsideClick: false,
     title: 'Are you sure?',
@@ -16,6 +17,7 @@ export default (message = '', callback) => {
     if (result.value) {
       callback(true);
     } else {
+      dispatch(actions.cancelChangeRoute());
       callback(false);
     }
   });

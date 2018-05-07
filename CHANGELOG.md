@@ -2,10 +2,9 @@
 
 ## v0.5.0
 **Breaking Changes for Triniti apps**
-* App component now reuqires prop `dispatch` to dispatch route changes after the route did changed.
 * App component has a new life cycle hook `componentDidUpdate` to dispatch route changes.
-* Select component now support full react-select features by give `async` or `creatable` props.
-* Add sagas that watch navigation bar clicks(both title and options). Give user warning before they move to next page if there were unsaved changes.  
+* App component now reuqires prop `dispatch` to dispatch route changes after the route did changed.
+* Redux state now has a new key: `nextSection: 'string'`.  
 
 Refactor all components to import Reactstrap js. 
 
@@ -22,6 +21,7 @@ Update style
 * Add col-xl-2p for 5 cols in row, 20% width
 
 Other changes
+* Select component now support full react-select features by give `async` or `creatable` props.
 * Renamed actionTypes.
 * Add utils: toast.
 * Add utils: getUserConfirmation (for react-router-4 [history.block](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md)).

@@ -10,7 +10,7 @@ const MainNav = ({
   currentSection,
   history,
   navConfig,
-  onDropdownMenuClick,
+  requestRouteChange,
   onDropdownTitleClick,
 }) => (
   <div className={`navbar-toggleable-md main-nav ${classesMain}`} >
@@ -20,7 +20,7 @@ const MainNav = ({
         currentSection,
         history,
         navConfig,
-        onDropdownMenuClick,
+        requestRouteChange,
         onDropdownTitleClick,
       )}
     </Nav>
@@ -33,7 +33,7 @@ MainNav.propTypes = {
   activeSections: PropTypes.arrayOf(PropTypes.string),
   currentSection: PropTypes.string,
   history: PropTypes.object.isRequired,
-  onDropdownMenuClick: PropTypes.func.isRequired,
+  requestRouteChange: PropTypes.func.isRequired,
   onDropdownTitleClick: PropTypes.func.isRequired,
 };
 

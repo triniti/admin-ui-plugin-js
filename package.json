@@ -37,7 +37,6 @@
     "react-transition-group": "^2.2.1",
     "react-universal-component": "^2.8.1",
     "redux": "^3.7.2",
-    "redux-saga": "^0.16.0",
     "svg-fill-loader": "^0.0.8",
     "sweetalert2": "^7.6.3"
   },
@@ -101,7 +100,6 @@
     "react-transition-group": "^2.3.1",
     "react-universal-component": "^2.8.4",
     "redux": "^3.7.2",
-    "redux-saga": "^0.16.0",
     "sinon": "^4.5.0",
     "svg-fill-loader": "^0.0.8",
     "sweetalert2": "^7.18.0",
