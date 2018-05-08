@@ -306,7 +306,7 @@
     border-top: 1px solid $navbar-theme-dark-dropdown;
     background: $navbar-theme-dark-dropdown;
   }
-  .nav-item:hover > .dropdown-menu {
+  .main-nav .nav-item:hover > .dropdown-menu {
     display: block;
   }
   .nav-dropdown-menu.dropdown-menu-right {
