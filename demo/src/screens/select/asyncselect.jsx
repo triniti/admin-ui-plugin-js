@@ -82,8 +82,7 @@ export default class AsyncSelectField extends React.Component {
         <FormGroup>
           <FormGroup>
             <Radio size="sm" checked={multi} onChange={this.switchToMulti}>Multiselect</Radio>
-            &nbsp;
-            <Radio size="sm" checked={!multi} onChange={this.switchToSingle}>Single Value</Radio>
+            <Radio size="sm" checked={!multi} onChange={this.switchToSingle} className="ml-3">Single Value</Radio>
           </FormGroup>
           <FormGroup check>
             <Checkbox size="sm" checked={backspaceRemoves} onChange={this.toggleBackspaceRemoves}>Backspace Removes?</Checkbox>

@@ -9,6 +9,8 @@
   background-position: center center;
 }
 
+// background utility classes
+
 .background-image-contain {
   background-size: contain !important;
 }
@@ -18,17 +20,17 @@
 }
 
 .background-image-no-repeat {
-  background-repeat: no-repeat;
+  background-repeat: no-repeat !important;
 }
 
 .background-image-repeat {
-  background-repeat: repeat;
+  background-repeat: repeat !important;
 }
 
 .background-image-repeat-y {
-  background-repeat: repeat-y;
+  background-repeat: repeat-y !important;
 }
 
 .background-image-repeat-x {
-  background-repeat: repeat-x;
+  background-repeat: repeat-x !important;
 }

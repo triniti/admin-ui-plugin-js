@@ -34,13 +34,6 @@ const DropdownUnit = ({
       <DropdownToggle nav onClick={() => onTitleClick(to)}>
         {title}
       </DropdownToggle>
-      <div
-        role="link"
-        tabIndex="-1"
-        // onClick={() => handleToggleClick(false)}
-        // onKeyDown={() => handleToggleClick(false)}
-        className="nav-link-mobile"
-      />
       <DropdownMenu className="nav-dropdown-menu">
         {navLinks}
       </DropdownMenu>

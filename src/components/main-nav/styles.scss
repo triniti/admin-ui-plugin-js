@@ -8,9 +8,6 @@
   .nav-link-desktop {
     display: block;
   }
-  .nav-link-mobile {
-    display: none;
-  }
   .nav-link {
     font-weight: 500;
     position: relative;
@@ -20,15 +17,6 @@
   }
   @media (max-width: 1024px) {
     background-color: $navbar-theme-light;
-    .nav-link-mobile {
-      position: absolute;
-      top: 0;
-      right: 0;
-      display: block;
-      width: 3rem;
-      height: 38px;
-      cursor: pointer;
-    }
   }
 }
 
