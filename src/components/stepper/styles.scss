@@ -12,13 +12,6 @@
   }
 }
 
-.stepper-color-secondary {
-
-  & > div > div > div > div:first-child {
-    background: red;
-  }
-}
-
 .stepper-horizontal {
   padding: .5rem 0;
 
@@ -83,6 +76,8 @@
     }
   }
 }
+
+// handle border color of bg-gray-100 - 400
 
 .bg-gray-100 > .stepper-horizontal,
 .stepper-horizontal.bg-gray-100 {
