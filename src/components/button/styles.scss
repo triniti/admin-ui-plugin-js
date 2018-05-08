@@ -12,6 +12,7 @@
 .btn {
   position: relative;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   margin-right: 0.5rem;
@@ -372,6 +373,7 @@
   letter-spacing: 0;
   border-radius: $round;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 
