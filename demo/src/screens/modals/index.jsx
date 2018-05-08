@@ -298,69 +298,69 @@ export default ModalExample;
   columnClassName="tri-masonry-grid-column">
 
 
-    <Card className="image-preview image-preview-selected">
+    <Card className="media-preview media-preview-selected p-1">
       <div className="px-2 py-1 bg-gray-500">Future Chrome - HTTPS.png</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/89/o/2018/04/24/895a5c64f0e144a0b7ec0a0213560298.png" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/14.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">1lily-aldridge-at-gigi-hadid-birthday-gettyimages-950518133.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/b4/o/2018/04/24/b4cfc46fbff742479f76b60568b071b1.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/15.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">tristan-party.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/4b/o/2018/04/24/4b5870112dda40949e8021e17b6d1d8a.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/16.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">tristan.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/cf/o/2018/04/24/cffb71378a3f4439b11d5e21df2d8a07.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/17.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">1bella-hadid-at-gigi-hadid-birthday-gettyimages-950475617.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/3e/o/2018/04/24/3e1b3d194cdd4c089cc07fb8b2d26261.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/18.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">1hailey-baldwin-and-joan-smalls-at-gigi-hadid-birthday-gettyimages.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0a/o/2018/04/24/0a98c6ce345c4ffd9cc1b9fdb287a574.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/19.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">1gigi-and-bella-hadid-at-gigi-birthday-party-gettyimages-950504491.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/93/o/2018/04/24/9332d0e59ada4edd88155ee1921cd820.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/20.png" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">0424-josh-brolin-genes-docs-primary-2.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0c/o/2018/04/24/0c1e215a0003425fa55593bf025b40c5.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/21.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">0411-kevin-spacey-serious-getty-7.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/dc/o/2018/04/26/dc900a0d4a8f43348424490ce0b490df.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/22.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">0418-matt-mantei-getty-6.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/6d/o/2018/04/24/6dd845b4428247d2bf1bb330ed82464f.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/23.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">scott.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/96/o/2018/04/24/965ce61903cc42cb99999e0103f04b26.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/24.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">27577255_230320494383277_3216189493996421120_n.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/d0/o/2018/04/26/d0e70b8aff1544e1a7d5b3e46852dce3.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/25.jpg" alt="thumbnail" className="img-fluid"/>
     </Card>
 
-    <Card className="image-preview">
+    <Card className="media-preview p-1">
       <div className="px-2 py-1 bg-gray-500">google_self_driving_car-11324210.jpg</div>
-      <img src="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/ca/o/2018/04/26/ca39f232abd34d66ad6719938b638543.jpg" alt="thumbnail" className="img-fluid"/>
+      <img src="http://www.telepixdev.com/triniti/masonry/26.png" alt="thumbnail" className="img-fluid"/>
     </Card>
 
   </Masonry>
@@ -552,7 +552,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2 selected">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/89/o/2018/04/24/895a5c64f0e144a0b7ec0a0213560298.png"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/14.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">Future Chrome - HTTPS.png</CardTitle>
@@ -565,7 +565,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/b4/o/2018/04/24/b4cfc46fbff742479f76b60568b071b1.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/25.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">1lily-aldridge-at-gigi-hadid-birthday-gettyimages-950518133.jpg</CardTitle>
@@ -578,7 +578,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                            imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/4b/o/2018/04/24/4b5870112dda40949e8021e17b6d1d8a.jpg"
+                            imgSrc="http://www.telepixdev.com/triniti/masonry/15.jpg"
                             alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">tristan-party.jpg</CardTitle>
@@ -591,7 +591,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                            imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/cf/o/2018/04/24/cffb71378a3f4439b11d5e21df2d8a07.jpg"
+                            imgSrc="http://www.telepixdev.com/triniti/masonry/16.jpg"
                             alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">tristan.jpg</CardTitle>
@@ -604,7 +604,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/3e/o/2018/04/24/3e1b3d194cdd4c089cc07fb8b2d26261.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/17.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">1bella-hadid-at-gigi-hadid-birthday-gettyimages-950475617.jpg</CardTitle>
@@ -617,7 +617,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0a/o/2018/04/24/0a98c6ce345c4ffd9cc1b9fdb287a574.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/18.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">1hailey-baldwin-and-joan-smalls-at-gigi-hadid-birthday-gettyimages.jpg</CardTitle>
@@ -630,7 +630,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/93/o/2018/04/24/9332d0e59ada4edd88155ee1921cd820.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/19.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">1gigi-and-bella-hadid-at-gigi-birthday-party-gettyimages-950504491.jpg</CardTitle>
@@ -643,7 +643,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/0c/o/2018/04/24/0c1e215a0003425fa55593bf025b40c5.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/20.png"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">0424-josh-brolin-genes-docs-primary-2.jpg</CardTitle>
@@ -656,7 +656,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/dc/o/2018/04/26/dc900a0d4a8f43348424490ce0b490df.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/21.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">0411-kevin-spacey-serious-getty-7.jpg</CardTitle>
@@ -669,7 +669,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/6d/o/2018/04/24/6dd845b4428247d2bf1bb330ed82464f.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/22.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">0418-matt-mantei-getty-6.jpg</CardTitle>
@@ -682,7 +682,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/96/o/2018/04/24/965ce61903cc42cb99999e0103f04b26.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/23.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">scott.jpg</CardTitle>
@@ -695,7 +695,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/d0/o/2018/04/26/d0e70b8aff1544e1a7d5b3e46852dce3.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/24.jpg"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">27577255_230320494383277_3216189493996421120_n.jpg</CardTitle>
@@ -708,7 +708,7 @@ export default ModalExample;
                         <Card shadow inverse hoverBorder className="p-2">
                           <Media aspectRatio="1by1">
                             <BackgroundImage
-                              imgSrc="https://s3-us-west-2.amazonaws.com/wb-tmzlabs-tmz-dev-us-west-2-dam/image/ca/o/2018/04/26/ca39f232abd34d66ad6719938b638543.jpg"
+                              imgSrc="http://www.telepixdev.com/triniti/masonry/26.png"
                               alt="thumbnail" />
                             <CardImgOverlay>
                               <CardTitle className="h5 mb-0">google_self_driving_car-11324210.jpg</CardTitle>
