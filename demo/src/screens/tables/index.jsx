@@ -186,7 +186,7 @@ export default class Example extends React.Component {
           </Row>
         </CardBody>
         <CardBody>
-          <Table hover>
+          <Table hover className="sticky-thead">
             <thead>
               <tr>
                 <th>Status</th>
@@ -241,6 +241,77 @@ export default class Example extends React.Component {
             </tbody>
           </Table>
         </CardBody>
+      </Card>,
+
+      <h2 key="cardtitle1" className="h4 mt-4 pb-1">Scrollable tbody className="sticky-tbody"</h2>,
+
+      <Card key="table01">
+        <Table size="sm" className="sticky-tbody">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </Table>
       </Card>,
 
       <Card key="table1">
@@ -440,23 +511,21 @@ export default class Example extends React.Component {
       </Card>,
 
       <Card key="table3">
-        <Table striped className="sticky-top fixed">
-          <thead>
+        <Table striped>
+          <thead className="sticky-top fixed d-table bg-white w-100">
           <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Username</th>
+            <th style={{width: '40px'}}>#</th>
+            <th className="w-25">First Name</th>
+            <th className="w-50">Last Name</th>
+            <th style={{width: '100px'}}>Username</th>
           </tr>
           </thead>
-        </Table>
-        <Table striped hover className="fixed mb-0">
-          <tbody>
+          <tbody className="fixed d-table w-100">
           <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+            <th scope="row" style={{width: '40px'}}>1</th>
+            <td className="w-25">Mark</td>
+            <td className="w-50">Otto</td>
+            <td style={{width: '100px'}}>@mdo</td>
           </tr>
           <tr>
             <th scope="row">2</th>

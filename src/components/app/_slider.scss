@@ -37,12 +37,12 @@ $thumb-shadow-size: 1px;
 $thumb-shadow-blur: 3px;
 $thumb-shadow-color: rgba(0, 0, 0, .1);
 $thumb-border-width: 1px;
-$thumb-border-color: $gray-700;
+$thumb-border-color: darken($gray-700, 5%);;
 $track-shadow-size: 1px;
 $track-shadow-blur: 1px;
 $track-shadow-color: rgba(0, 0, 0, .0625);
 $track-border-width: 1px;
-$track-border-color: $gray-600;
+$track-border-color: $gray-700;
 $contrast: 3%;
 
 $thumb-shadow-size-active: 2px;
