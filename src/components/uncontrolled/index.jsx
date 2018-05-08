@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButtonDropdown, NavDropdown } from 'reactstrap';
+import { ButtonDropdown } from 'reactstrap';
 import Alert from '../alert';
 import Dropdown from '../dropdown';
 import Tooltip from '../tooltip';
@@ -8,7 +8,6 @@ const components = {
   UncontrolledAlert: Alert,
   UncontrolledButtonDropdown: ButtonDropdown,
   UncontrolledDropdown: Dropdown,
-  UncontrolledNavDropdown: NavDropdown,
   UncontrolledTooltip: Tooltip,
 };
 
@@ -43,7 +42,6 @@ const {
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,
-  UncontrolledNavDropdown,
   UncontrolledTooltip,
 } = components;
 
@@ -51,6 +49,5 @@ export {
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,
-  UncontrolledNavDropdown,
   UncontrolledTooltip,
 };

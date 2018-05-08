@@ -6,6 +6,7 @@
 * App component now reuqires prop `dispatch` to dispatch route changes after the route did changed.
 * App component now requires `navComponent` as a prop to redner navigation menu.
 * Redux state now has a new key: `nextSection: 'string'`.  
+* Removed `NavDropdown` component, use `<Dropdown nav>` instead.
 
 Refactor all components to import Reactstrap js. 
 

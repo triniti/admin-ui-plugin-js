@@ -35,7 +35,6 @@ import {
   ListGroupItemText,
   ModalBody,
   ModalHeader,
-  NavDropdown,
   NavItem,
   NavLink,
   NavbarBrand,
@@ -109,7 +108,6 @@ import {
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,
-  UncontrolledNavDropdown,
   UncontrolledTooltip,
 } from './uncontrolled';
 
@@ -184,7 +182,6 @@ export {
   ModalFooter,
   ModalHeader,
   Nav,
-  NavDropdown,
   NavItem,
   NavLink,
   Navbar,
@@ -220,7 +217,6 @@ export {
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,
-  UncontrolledNavDropdown,
   UncontrolledTooltip,
   UncontrolledCarousel,
 };
