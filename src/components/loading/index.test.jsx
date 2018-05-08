@@ -12,7 +12,7 @@ test('Loading:: should render default props', (t) => {
   t.end();
 });
 
-test('Loading:: should render childred', (t) => {
+test('Loading:: should render children', (t) => {
   const wrapper = shallow(<Loading>here is the text</Loading>);
 
   t.equal(wrapper.find('.loading-container').length, 1);
