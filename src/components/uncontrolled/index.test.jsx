@@ -5,12 +5,10 @@ import {
   Alert,
   ButtonDropdown,
   Dropdown,
-  NavDropdown,
   Tooltip,
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,
-  UncontrolledNavDropdown,
   UncontrolledTooltip,
 } from '../../../src/components';
 
@@ -92,33 +90,6 @@ test('UncontrolledDropdown:: should toggle isOpen when toggle is called', (t) =>
   instance.toggle();
   dropdown.update();
   t.true(dropdown.prop('isOpen'));
-  t.end();
-});
-
-test('UncontrolledNavDropdown:: should be an NavDropdown', (t) => {
-  const navDropdown = shallow(<UncontrolledNavDropdown>Yo!</UncontrolledNavDropdown>);
-  t.equal(navDropdown.type(), NavDropdown);
-  t.end();
-});
-
-test('UncontrolledNavDropdown:: should have isOpen default to false', (t) => {
-  const navDropdown = shallow(<UncontrolledNavDropdown>Yo!</UncontrolledNavDropdown>);
-  t.false(navDropdown.prop('isOpen'));
-  t.end();
-});
-
-test('UncontrolledNavDropdown:: should have toggle function', (t) => {
-  const navDropdown = shallow(<UncontrolledNavDropdown>Yo!</UncontrolledNavDropdown>);
-  t.equal(typeof navDropdown.prop('toggle'), 'function');
-  t.end();
-});
-
-test('UncontrolledNavDropdown:: should toggle isOpen when toggle is called', (t) => {
-  const navDropdown = shallow(<UncontrolledNavDropdown>Yo!</UncontrolledNavDropdown>);
-  const instance = navDropdown.instance();
-  instance.toggle();
-  navDropdown.update();
-  t.true(navDropdown.prop('isOpen'));
   t.end();
 });
 
