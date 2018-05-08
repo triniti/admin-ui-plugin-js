@@ -4,6 +4,7 @@
 **Breaking Changes for Triniti apps**
 * App component has a new life cycle hook `componentDidUpdate` to dispatch route changes.
 * App component now reuqires prop `dispatch` to dispatch route changes after the route did changed.
+* App component now requires `navComponent` as a prop to redner navigation menu.
 * Redux state now has a new key: `nextSection: 'string'`.  
 
 Refactor all components to import Reactstrap js. 
