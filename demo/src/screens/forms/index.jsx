@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
@@ -9,24 +8,24 @@ class UiForm extends React.Component {
     super(props);
 
     this.handleChange = this.handleChange.bind(this);
+    this.sliderChange = this.sliderChange.bind(this);
     this.state = {
       trinaryDefault: 0,
       trinaryCustom: 1,
+      value: 3,
     };
-  }
-
-  componentDidMount() {
-    this.unblock = this.props.history.block('Are you sure you want to leave this page?');
-  }
-
-  componentWillUnmount() {
-    this.unblock();
   }
 
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({
       [name]: parseInt(value, 10),
+    });
+  }
+
+  sliderChange(e) {
+    this.setState({
+      value: e.target.value
     });
   }
 
@@ -92,6 +91,12 @@ class UiForm extends React.Component {
                   This is some placeholder block-level help text for the above input.
                   It's a bit lighter and easily wraps to a new line.
                     </FormText>
+                    </FormGroup>
+                    <FormGroup className="m4-3">
+                      <FormGroup inline>
+                        <Input type="range" min="0" max="10" step=".1" value={this.state.value} onChange={this.sliderChange} />
+                        <Input type="number" className="ml-3" size="sm" style={{width: "80px"}} value={this.state.value} onChange={this.sliderChange} />
+                      </FormGroup>
                     </FormGroup>
                     <FormGroup tag="fieldset">
                       <legend>Radio Buttons</legend>
@@ -497,4 +502,4 @@ class UiForm extends React.Component {
   }
 }
 
-export default withRouter(UiForm);
+export default UiForm;
