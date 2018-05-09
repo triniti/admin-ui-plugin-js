@@ -2,11 +2,12 @@
 
 ## v0.5.0
 **Breaking Changes for Triniti apps**
-* App component has a new life cycle hook `componentDidUpdate` to dispatch route changes.
-* App component now reuqires prop `dispatch` to dispatch route changes after the route did changed.
 * App component now requires `navComponent` as a prop to redner navigation menu.
-* Redux state now has a new key: `nextSection: 'string'`.  
-* Removed `NavDropdown` component, use `<Dropdown nav>` instead.
+* Refactor app navbar component, move `container/navbar` to `components/triniti-app-nav`. Delete `container` directory.
+* Active/Current sectoins are checked at Rotuer level in `MainNavContent` component, and it's not related to redux state anymore.
+* Move most of redux state into component's local state, reduce admin-ui state tree (also, actions, selectors, reducers).
+* Remove `MainNav`, `UserNav`, `MobileNav` from components export.
+* Remove `NavDropdown` component, use `<Dropdown nav>` instead.
 
 Refactor all components to import Reactstrap js. 
 
@@ -24,7 +25,8 @@ Update style
 
 Other changes
 * Select component now support full react-select features by give `async` or `creatable` props.
-* Renamed actionTypes.
+* Add a switch to Demo `UiForm` screen to enable/disable user alert when user leave screen.
+* Update `createNavUnit` from a method to a react component, and rename to `MainNavContent`
 * Add utils: toast.
 * Add utils: getUserConfirmation (for react-router-4 [history.block](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md)).
 * Fixed issue: when user clicks on navbar title, on desktop the screen should transition to the first option of the dropdown menu, but on mobile view, it should only toggle the dropdown open/close.

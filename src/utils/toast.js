@@ -19,15 +19,7 @@ export default {
     });
   },
 
-  close: () => {
-    swal.close();
-  },
-
-  hide: () => {
-    swal.close();
-  },
-
-  dismiss: () => {
-    swal.close();
-  },
+  close: swal.close,
+  hide: swal.close,
+  dismiss: swal.close,
 };
