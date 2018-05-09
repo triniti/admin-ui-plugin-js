@@ -3,9 +3,13 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 
-import { Backdrop, Navbar, MobileNav, MainNav, UserNav } from '../../components';
+import { Backdrop, Navbar } from '../../components';
+import MainNav from './MainNav';
+import MobileNav from './MobileNav';
+import UserNav from './UserNav';
 import actions from '../../actions';
 import { settings } from '../../constants';
+import './styles.scss';
 
 const trinitiTheme = localStorage.getItem(settings.THEME_STORAGE) || settings.THEME_LIGHT;
 

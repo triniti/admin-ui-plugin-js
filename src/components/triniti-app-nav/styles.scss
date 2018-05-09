@@ -337,16 +337,16 @@
   .navbar-light .navbar-nav .show:not(.is-current) > .nav-link {
     color: $navbar-light-color;
 
-      &:hover {
-        color: $navbar-light-hover-color;
-      }
+    &:hover {
+      color: $navbar-light-hover-color;
+    }
   }
   .navbar-dark .navbar-nav .show:not(.is-current) > .nav-link {
     color: $navbar-dark-color;
 
-      &:hover {
-        color: $navbar-dark-hover-color;
-      }
+    &:hover {
+      color: $navbar-dark-hover-color;
+    }
   }
 }
 
@@ -374,4 +374,197 @@
     bottom: .9rem;
     margin: 0 1rem;
   }
+}
+
+
+// User Nav
+//
+// Wrapper, container, nav tabs and usernav btn
+
+.usernav-wrapper {
+  position: absolute;
+  z-index: 1039;
+  top: 0;
+  right: 0;
+  left: auto;
+}
+
+.usernav-container {
+  position: relative;
+  top: 0;
+  right: -1rem;
+  left: auto;
+  display: flex;
+  width: 300px;
+  height: 100vh;
+  margin-right: -300px;
+  background-color: $white;
+  transition: all $transition;
+  box-shadow: $shadow-depth-8;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.usernav-container.offcanvas-right {
+  right: 0;
+  margin-right: 0;
+}
+
+.usernav-container .navbar-tabs-item {
+  flex: 1 1 auto;
+}
+
+.btn-usernav {
+  position: absolute;
+  top: .2rem;
+  right: .5rem;
+  border: none;
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 2px 0 0 0;
+  font-size: .825rem;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border-radius: $round;
+  transition: all $transition;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: $body-color;
+
+  & span {
+    opacity: .625;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 0 2px rgba(#000, .25);
+    cursor: pointer;
+
+    & span {
+      opacity: 1;
+    }
+  }
+  @media (min-width: 1025px) {
+    top: .625rem;
+    right: 1rem;
+  }
+  @media (min-width: 1200px) {
+    top: .8rem;
+    right: 1.125rem;
+  }
+  @media (min-width: 1400px) {
+    top: 1rem;
+    right: 1.25rem;
+  }
+}
+
+.navbar-dark .btn-usernav {
+  color: $white;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+    box-shadow: 0 0 0 2px rgba(#fff, .25);
+  }
+}
+
+.badge-usernav {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  display: inline-block;
+  padding: .33em .6em;
+  color: $white;
+  background-color: theme-color("warning");
+  font-size: 75%;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: $round;
+  line-height: 1.1;
+  vertical-align: text-top;
+  opacity: 1;
+
+  @media (max-width: 1024px) {
+    top: -3px;
+    right: -7px;
+  }
+}
+
+// Mobile Nav
+//
+// Custom styles for mobile navbar, navbar toggler button, and navbar brand.
+
+.navbar-main-mobile {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .navbar-main-mobile {
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    background-color: $gray-200;
+    align-items: center;
+    box-shadow: inset 0 -1px 0 0 $gray-rgba-300;
+  }
+  .navbar-light .navbar-main-mobile {
+    background-color: $navbar-theme-light;
+  }
+  .navbar-dark .navbar-main-mobile {
+    background-color: $navbar-theme-dark;
+  }
+}
+
+.navbar-main-brand {
+  width: 130px;
+  height: 32px;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 2px;
+  }
+  @media (min-width: 1025px) {
+    width: $navbarlogo-width;
+    height: 2.125rem;
+    margin-right: 4.25rem !important;
+    margin-left: 1.25rem;
+    transition: all $transition;
+
+    &:hover {
+      // transform: scale(1.1);
+    }
+  }
+  @media (min-width: 1200px) {
+    width: $navbarlogo-width + .75rem;
+    height: 2.25rem;
+  }
+}
+
+.navbar-dark .navbar-main-brand {
+  // background: transparent $navbar-logo-dark center center / auto 1.3rem no-repeat;
+
+  @media (min-width: 1025px) {
+    // background-size: 80% auto;
+  }
+}
+
+.navbar-main-spacer {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+    width: 48px;
+  }
+}
+
+.svg-logo-fill {
+  fill: currentColor;
 }

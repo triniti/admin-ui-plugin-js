@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import UserNavContent from './UserNavContent';
 import { Backdrop, Badge, Button, Icon } from '../../components';
-import './styles.scss';
 
 const UserNav = ({
   isOpen,

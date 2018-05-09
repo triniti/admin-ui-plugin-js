@@ -80,9 +80,7 @@ import Input from './input';
 import Jumbotron from './jumbotron';
 import ListGroup from './list-group';
 import Loading from './loading';
-import MainNav from './main-nav';
 import Media from './media';
-import MobileNav from './mobile-nav';
 import Modal from './modal';
 import ModalFooter from './modal-footer';
 import Nav from './nav';
@@ -101,10 +99,9 @@ import StatusMessage from './status-message';
 import Stepper from './stepper';
 import Switch from './switch';
 import Table from './table';
-import TrinitiAppNav from './triniti-app-nav';
+// import TrinitiAppNav from './triniti-app-nav';
 import Tooltip from './tooltip';
 import TrinaryControl from './trinary-control';
-import UserNav from './user-nav';
 import {
   UncontrolledAlert,
   UncontrolledButtonDropdown,
@@ -175,9 +172,7 @@ export {
   ListGroupItemHeading,
   ListGroupItemText,
   Loading,
-  MainNav,
   Media,
-  MobileNav,
   Modal,
   ModalBody,
   ModalFooter,
@@ -212,10 +207,9 @@ export {
   TabContent,
   TabPane,
   Table,
-  TrinitiAppNav,
+  // TrinitiAppNav,
   Tooltip,
   TrinaryControl,
-  UserNav,
   UncontrolledAlert,
   UncontrolledButtonDropdown,
   UncontrolledDropdown,

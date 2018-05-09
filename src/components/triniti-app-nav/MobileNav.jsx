@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavbarToggler, NavbarBrand } from '../';
-import './styles.scss';
+import { NavbarToggler, NavbarBrand } from '../index';
 
 const MobileNav = ({ onTogglerClick, title }) => (
   <div className="navbar-main-mobile">
