@@ -9,7 +9,7 @@ import getUserConfirmation from '../../src/utils/getUserConfirmation';
 
 const Root = ({ store, routes, navConfig }) => (
   <Provider store={store}>
-    <BrowserRouter getUserConfirmation={getUserConfirmation(store.dispatch)}>
+    <BrowserRouter getUserConfirmation={getUserConfirmation}>
       <App
         navComponent={<TrinitiAppNav navConfig={navConfig} />}
         routes={routes}
