@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import UserNavOpener from './UserNavOpener';
 import UserNavContent from './UserNavContent';
-import { Backdrop } from '../../components';
+import { Backdrop, Badge, Button, Icon } from '../../components';
 import './styles.scss';
 
 const UserNav = ({
@@ -13,7 +12,10 @@ const UserNav = ({
   toggleTheme,
 }) => (
   <div className="usernav-wrapper">
-    <UserNavOpener onClick={toggleUserNav} />
+    <Button radius="circle" className="btn-usernav" onClick={toggleUserNav}>
+      <Icon imgSrc="user" />
+      <Badge color="warning" alert>3</Badge>
+    </Button>
     <UserNavContent
       currentTheme={currentTheme}
       isOpen={isOpen}

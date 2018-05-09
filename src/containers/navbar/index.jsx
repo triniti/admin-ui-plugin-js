@@ -51,11 +51,11 @@ class NavbarContainer extends React.Component {
         <MainNav navConfig={navConfig} isOpen={isMainNavOpen} />
         <Backdrop onClick={this.handleBackdropClick} />
         <UserNav
+          currentTheme={theme}
           isOpen={isUserNavOpen}
           onLogout={handleLogout}
-          toggleUserNav={this.handleToggleUserNav}
-          currentTheme={theme}
           toggleTheme={handleToggleTheme}
+          toggleUserNav={this.handleToggleUserNav}
         />
       </Navbar>
     );

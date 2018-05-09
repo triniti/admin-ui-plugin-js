@@ -2,11 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import swal from 'sweetalert2';
 import classnames from 'classnames';
-import { TabContent, Badge, Nav, NavItem, NavLink, ScrollableContainer } from '../';
+import { Badge, Button, Icon, Nav, NavItem, NavLink, TabContent, ScrollableContainer } from '../';
 import UserSettingsTabPane from './UserSettingsTabPane';
 import MiscTabPane from './UserNavMiscTabPane';
-import UserNavCloser from './UserNavCloser';
-
 
 /* fixme:: create notification component, get unread numbers from redux stroe */
 const UnreadMsgBadge = () => <Badge color="warning" pill className="ml-1">3</Badge>;
@@ -77,7 +75,15 @@ class UserNavContent extends React.Component {
           <NavItem>
             <NavLink href="#" className={classnames({ active: this.state.activeTab === '2' })} onClick={() => { this.toggle('2'); }}>Alerts <UnreadMsgBadge /></NavLink>
           </NavItem>
-          <UserNavCloser onClick={toggleUserNav} />
+          <Button
+            outline
+            color="hover"
+            size="sm"
+            onClick={toggleUserNav}
+            className="mb-0 ml-auto pr-3"
+          >
+            <Icon imgSrc="close" />
+          </Button>
         </Nav>
 
         <ScrollableContainer>
