@@ -36,18 +36,14 @@ class MainNav extends React.Component {
   render() {
     const {
       classesMain,
-      currentSection,
       navConfig,
-      requestChangeRoute,
     } = this.props;
     return (
       <div className={`navbar-toggleable-md main-nav ${classesMain}`}>
         <Nav navbar>
           <NacContent
             activeSections={this.state.activeSections}
-            currentSection={currentSection}
             navConfig={navConfig}
-            requestChangeRoute={requestChangeRoute}
             updateActiveSections={this.updateActiveSections}
           />
         </Nav>
@@ -59,13 +55,10 @@ class MainNav extends React.Component {
 MainNav.propTypes = {
   navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
   classesMain: PropTypes.string,
-  currentSection: PropTypes.string,
-  requestChangeRoute: PropTypes.func.isRequired,
 };
 
 MainNav.defaultProps = {
   classesMain: '',
-  currentSection: '',
 };
 
 export default MainNav;

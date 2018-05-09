@@ -10,7 +10,6 @@ const Root = ({ store, routes, navConfig }) => (
   <Provider store={store}>
     <BrowserRouter getUserConfirmation={getUserConfirmation(store.dispatch)}>
       <App
-        dispatch={store.dispatch}
         navComponent={<NavbarContainer navConfig={navConfig} />}
         routes={routes}
       />

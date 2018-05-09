@@ -6,19 +6,21 @@ import { DropdownToggle, DropdownMenu, Dropdown } from '../';
 const DropdownUnit = ({
   dropdownOpen,
   onTitleClick,
-  onDropdownMenuClick,
-  classes,
+  location,
   title,
   links,
 }) => {
+  let isCurrent = false;
   const navLinks = links.map((dpLink) => {
     const { to, linkTitle } = dpLink;
+    if (location.pathname.includes(to)) {
+      isCurrent = true;
+    }
     return (
       <NavLink
         key={linkTitle}
         to={to}
         exact
-        onClick={onDropdownMenuClick}
         className="dropdown-item"
       >
         {linkTitle}
@@ -30,7 +32,7 @@ const DropdownUnit = ({
   const { to } = links[0];
 
   return (
-    <Dropdown nav isOpen={dropdownOpen} toggle={() => undefined} className={classes}>
+    <Dropdown nav isOpen={dropdownOpen} toggle={() => undefined} className={isCurrent ? 'is-current' : ''}>
       <DropdownToggle nav onClick={() => onTitleClick(to)}>
         {title}
       </DropdownToggle>
@@ -44,8 +46,7 @@ const DropdownUnit = ({
 DropdownUnit.propTypes = {
   dropdownOpen: PropTypes.bool,
   onTitleClick: PropTypes.func,
-  onDropdownMenuClick: PropTypes.func,
-  classes: PropTypes.string,
+  location: PropTypes.object.isRequired,
   title: PropTypes.string,
   links: PropTypes.arrayOf(PropTypes.object),
 };

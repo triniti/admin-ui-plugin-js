@@ -4,23 +4,17 @@ import { NavLink } from 'react-router-dom';
 import { NavItem } from '../';
 
 const ItemUnit = ({
-  to, navId, classes, onClick,
+  to, navId, location,
 }) => (
-  <NavItem className={classes}>
-    <NavLink to={to} exact onClick={onClick} className="nav-link">{navId}</NavLink>
+  <NavItem className={location.pathname.includes(to) ? 'is-current' : ''}>
+    <NavLink to={to} exact className="nav-link">{navId}</NavLink>
   </NavItem>
 );
 
 ItemUnit.propTypes = {
   to: PropTypes.string.isRequired,
   navId: PropTypes.string.isRequired,
-  classes: PropTypes.string,
-  onClick: PropTypes.func,
-};
-
-ItemUnit.defaultProps = {
-  classes: '',
-  onClick: undefined,
+  location: PropTypes.object.isRequired,
 };
 
 export default ItemUnit;

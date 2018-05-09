@@ -25,7 +25,7 @@ class UiForm extends React.Component {
 
   sliderChange(e) {
     this.setState({
-      value: e.target.value
+      value: e.target.value,
     });
   }
 
@@ -63,22 +63,22 @@ class UiForm extends React.Component {
                     <FormGroup>
                       <Label for="exampleSelect1">Select</Label>
                       <Input type="select" name="select1" id="exampleSelect1">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </Input>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleSelectMulti1">Select Multiple</Label>
                       <Input type="select" name="selectMulti1" id="exampleSelectMulti1" multiple>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </Input>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleText1">Text Area</Label>
@@ -90,34 +90,34 @@ class UiForm extends React.Component {
                       <FormText color="muted">
                   This is some placeholder block-level help text for the above input.
                   It's a bit lighter and easily wraps to a new line.
-                    </FormText>
+                      </FormText>
                     </FormGroup>
                     <FormGroup className="m4-3">
                       <FormGroup inline>
                         <Input type="range" min="0" max="10" step=".1" value={this.state.value} onChange={this.sliderChange} />
-                        <Input type="number" className="ml-3" size="sm" style={{width: "80px"}} value={this.state.value} onChange={this.sliderChange} />
+                        <Input type="number" className="ml-3" size="sm" style={{ width: '80px' }} value={this.state.value} onChange={this.sliderChange} />
                       </FormGroup>
                     </FormGroup>
                     <FormGroup tag="fieldset">
                       <legend>Radio Buttons</legend>
                       <FormGroup check>
-                      <Label check>
-                        <Input type="radio" name="radio1" />
+                        <Label check>
+                          <Input type="radio" name="radio1" />
                     Option one is this and that—be sure to include why it's great
-                      </Label>
-                    </FormGroup>
+                        </Label>
+                      </FormGroup>
                       <FormGroup check>
-                      <Label check>
-                        <Input type="radio" name="radio1" />
+                        <Label check>
+                          <Input type="radio" name="radio1" />
                     Option two can be something else and selecting it will deselect option one
-                      </Label>
-                    </FormGroup>
+                        </Label>
+                      </FormGroup>
                       <FormGroup check disabled>
-                      <Label check>
-                        <Input type="radio" name="radio1" disabled />
+                        <Label check>
+                          <Input type="radio" name="radio1" disabled />
                       Option three is disabled
-                      </Label>
-                    </FormGroup>
+                        </Label>
+                      </FormGroup>
                     </FormGroup>
                     <FormGroup check>
                       <Checkbox>Check me out</Checkbox>
@@ -141,12 +141,12 @@ class UiForm extends React.Component {
                       <Label for="exampleEmail">Input with success</Label>
                       <Input valid />
                       <FormFeedback>
-                      <a href="https://github.com/twbs/bootstrap/issues/23372">A bug</a> fixed in (the currently
+                        <a href="https://github.com/twbs/bootstrap/issues/23372">A bug</a> fixed in (the currently
                   unreleased) (
-                      <a href="https://github.com/twbs/bootstrap/pull/23377">PR</a>
+                        <a href="https://github.com/twbs/bootstrap/pull/23377">PR</a>
                   ) bootstrap <a href="https://github.com/twbs/bootstrap/issues/23278">v4 beta-2</a> shows invalid-feedback
                   with is-valid inputs.
-                    </FormFeedback>
+                      </FormFeedback>
                       <FormText>Example help text that remains unchanged.</FormText>
                     </FormGroup>
                     <FormGroup>
@@ -175,12 +175,12 @@ class UiForm extends React.Component {
                     <FormGroup>
                       <Label for="examplePassword4" hidden>Password</Label>
                       <Input
-                      type="password"
-                      name="password"
-                      id="examplePassword4"
-                      placeholder="Password"
-                      radius="round"
-                    />
+                        type="password"
+                        name="password"
+                        id="examplePassword4"
+                        placeholder="Password"
+                        radius="round"
+                      />
                     </FormGroup>
 
                     <Button outline radius="round">Submit</Button>
@@ -253,22 +253,22 @@ class UiForm extends React.Component {
                     <FormGroup>
                       <Label for="exampleSelect2">Select</Label>
                       <Input type="select" name="select2" id="exampleSelect2">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </Input>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleSelectMulti2">Select Multiple</Label>
                       <Input type="select" name="selectMulti2" id="exampleSelectMulti2" multiple>
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
-                      <option>5</option>
-                    </Input>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                      </Input>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleText">Text Area</Label>
@@ -280,7 +280,7 @@ class UiForm extends React.Component {
                       <FormText color="muted">
                   This is some placeholder block-level help text for the above input.
                   It's a bit lighter and easily wraps to a new line.
-                    </FormText>
+                      </FormText>
                     </FormGroup>
                     <FormGroup check>
                       <Radio type="checkbox">Option one is this and that—be sure to include why it's great</Radio>
@@ -290,9 +290,9 @@ class UiForm extends React.Component {
                     </FormGroup>
                     <FormGroup>
                       <Label className="text-label">
-                      <Switch id="checkbox3"/>
+                        <Switch id="checkbox3" />
                         Try me for a Toggle
-                    </Label>
+                      </Label>
                     </FormGroup>
                   </Form>
                 </Col>
@@ -401,95 +401,95 @@ class UiForm extends React.Component {
                     <FormGroup row>
                       <Label for="exampleEmail" sm={2}>Email</Label>
                       <Col sm={10}>
-                      <Input type="email" name="email" id="exampleEmail3" placeholder="with a placeholder" />
-                    </Col>
+                        <Input type="email" name="email" id="exampleEmail3" placeholder="with a placeholder" />
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="examplePassword" sm={2}>Password</Label>
                       <Col sm={10}>
-                      <Input type="password" name="password" id="examplePassword3" placeholder="password placeholder" />
-                    </Col>
+                        <Input type="password" name="password" id="examplePassword3" placeholder="password placeholder" />
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleSelect3" sm={2}>Select</Label>
                       <Col sm={10}>
-                      <Input type="select" name="select3" id="exampleSelect3">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </Input>
-                    </Col>
+                        <Input type="select" name="select3" id="exampleSelect3">
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </Input>
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleSelectMulti3" sm={2}>Select Multiple</Label>
                       <Col sm={10}>
-                      <Input type="select" name="selectMulti3" id="exampleSelectMulti3" multiple>
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                      </Input>
-                    </Col>
+                        <Input type="select" name="selectMulti3" id="exampleSelectMulti3" multiple>
+                          <option>1</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                          <option>5</option>
+                        </Input>
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleSelectMulti" sm={2}>Disabled</Label>
                       <Col sm={10}>
-                      <Input disabled type="textarea" name="text" id="disabledText3" />
-                    </Col>
+                        <Input disabled type="textarea" name="text" id="disabledText3" />
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleSelectMulti" sm={2}>Readonly</Label>
                       <Col sm={10}>
-                      <Input readOnly="readonly" type="textarea" name="text" id="readonlyText3" rows="5" value="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt."></Input>
-                    </Col>
+                        <Input readOnly="readonly" type="textarea" name="text" id="readonlyText3" rows="5" value="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt." />
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleText" sm={2}>Text Area</Label>
                       <Col sm={10}>
-                      <Input type="textarea" name="text" id="exampleText3" />
-                    </Col>
+                        <Input type="textarea" name="text" id="exampleText3" />
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Label for="exampleFile" sm={2}>File</Label>
                       <Col sm={10}>
-                      <Input type="file" name="file" id="exampleFile3" />
-                      <FormText color="muted">
+                        <Input type="file" name="file" id="exampleFile3" />
+                        <FormText color="muted">
                       This is some placeholder block-level help text for the above input.
                       It's a bit lighter and easily wraps to a new line.
-                      </FormText>
-                    </Col>
+                        </FormText>
+                      </Col>
                     </FormGroup>
                     <FormGroup tag="fieldset" row>
                       <legend className="col-form-legend col-sm-2">Radio Buttons</legend>
                       <Col sm={10}>
-                      <FormGroup check>
-                        <Radio size="sm">Option one is this and that—be sure to include why it's great</Radio>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Radio size="sm">Option two can be something else and selecting it will deselect option one</Radio>
-                      </FormGroup>
-                      <FormGroup check>
-                        <Radio size="sm" disabled>Option three is disabled</Radio>
-                      </FormGroup>
-                    </Col>
+                        <FormGroup check>
+                          <Radio size="sm">Option one is this and that—be sure to include why it's great</Radio>
+                        </FormGroup>
+                        <FormGroup check>
+                          <Radio size="sm">Option two can be something else and selecting it will deselect option one</Radio>
+                        </FormGroup>
+                        <FormGroup check>
+                          <Radio size="sm" disabled>Option three is disabled</Radio>
+                        </FormGroup>
+                      </Col>
                     </FormGroup>
                     <FormGroup row>
                       <Col sm={{ size: 10 }}>
-                      <div className="has-border border-indent">
-                        <Label for="checkbox4" className="mb-3">Border Indented Checkbox</Label>
-                        <FormGroup check>
-                          <Checkbox size="sm">Check me out</Checkbox>
-                        </FormGroup>
-                      </div>
-                    </Col>
+                        <div className="has-border border-indent">
+                          <Label for="checkbox4" className="mb-3">Border Indented Checkbox</Label>
+                          <FormGroup check>
+                            <Checkbox size="sm">Check me out</Checkbox>
+                          </FormGroup>
+                        </div>
+                      </Col>
                     </FormGroup>
                     <FormGroup check row>
                       <Col sm={{ size: 10, offset: 2 }}>
-                      <Button>Submit</Button>
-                    </Col>
+                        <Button>Submit</Button>
+                      </Col>
                     </FormGroup>
                   </Form>
                 </Col>
