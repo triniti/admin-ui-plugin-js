@@ -2,22 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
+
 import { Backdrop, Navbar, MobileNav, MainNav, UserNav } from '../../components';
-
-import selectors from '../../selectors';
 import actions from '../../actions';
+import { settings } from '../../constants';
 
-class NavbarContainer extends React.Component {
+const trinitiTheme = localStorage.getItem(settings.THEME_STORAGE) || settings.THEME_LIGHT;
+
+class TrinitiAppNav extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
       isMainNavOpen: false,
       isUserNavOpen: false,
+      currentTheme: trinitiTheme,
     };
 
     this.handleBackdropClick = this.handleBackdropClick.bind(this);
     this.handleToggleMainNav = this.handleToggleMainNav.bind(this);
+    this.handleToggleTheme = this.handleToggleTheme.bind(this);
     this.handleToggleUserNav = this.handleToggleUserNav.bind(this);
   }
 
@@ -34,6 +38,14 @@ class NavbarContainer extends React.Component {
     });
   }
 
+  handleToggleTheme() {
+    const newTheme =
+      this.state.currentTheme === settings.THEME_LIGHT ? settings.THEME_DARK : settings.THEME_LIGHT;
+    this.setState({
+      currentTheme: newTheme,
+    }, () => localStorage.setItem(settings.THEME_STORAGE, newTheme));
+  }
+
   handleToggleUserNav() {
     this.setState({
       isUserNavOpen: !this.state.isUserNavOpen,
@@ -41,20 +53,20 @@ class NavbarContainer extends React.Component {
   }
 
   render() {
-    const { handleLogout, handleToggleTheme, navConfig, theme } = this.props;
-    const { isMainNavOpen, isUserNavOpen } = this.state;
-    const navbarThemeClass = theme === 'light' ? 'navbar-light' : 'navbar-dark';
+    const { handleLogout, navConfig } = this.props;
+    const { currentTheme, isMainNavOpen, isUserNavOpen } = this.state;
+    const navbarClass = currentTheme === settings.THEME_LIGHT ? 'navbar-light' : 'navbar-dark';
 
     return (
-      <Navbar className={`${navbarThemeClass} navbar-main-wrapper`}>
+      <Navbar className={`${navbarClass} navbar-main-wrapper`}>
         <MobileNav onTogglerClick={this.handleToggleMainNav} />
         <MainNav navConfig={navConfig} isOpen={isMainNavOpen} />
         <Backdrop onClick={this.handleBackdropClick} />
         <UserNav
-          currentTheme={theme}
+          currentTheme={currentTheme}
           isOpen={isUserNavOpen}
           onLogout={handleLogout}
-          toggleTheme={handleToggleTheme}
+          toggleTheme={this.handleToggleTheme}
           toggleUserNav={this.handleToggleUserNav}
         />
       </Navbar>
@@ -62,24 +74,17 @@ class NavbarContainer extends React.Component {
   }
 }
 
-NavbarContainer.propTypes = {
+TrinitiAppNav.propTypes = {
   handleLogout: PropTypes.func.isRequired,
-  handleToggleTheme: PropTypes.func.isRequired,
   navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
-  theme: PropTypes.string,
 };
 
-NavbarContainer.propTypes = {
-  theme: 'light',
-};
-
-const mapStateToProps = state => ({
-  theme: selectors.getAppTheme(state),
+const mapStateToProps = (state, ownProps) => ({
+  navConfig: ownProps.navConfig,
 });
 
 const mapDispatchToProps = {
   handleLogout: actions.requestLogout,
-  handleToggleTheme: actions.requestNewTheme,
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(NavbarContainer));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TrinitiAppNav));

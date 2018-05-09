@@ -101,6 +101,7 @@ import StatusMessage from './status-message';
 import Stepper from './stepper';
 import Switch from './switch';
 import Table from './table';
+import TrinitiAppNav from './triniti-app-nav';
 import Tooltip from './tooltip';
 import TrinaryControl from './trinary-control';
 import UserNav from './user-nav';
@@ -211,6 +212,7 @@ export {
   TabContent,
   TabPane,
   Table,
+  TrinitiAppNav,
   Tooltip,
   TrinaryControl,
   UserNav,
