@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from '../nav';
-import createNavUnits from './createNavUnits';
+import NacContent from './NavContent';
 import './styles.scss';
 
 class MainNav extends React.Component {
@@ -37,21 +37,19 @@ class MainNav extends React.Component {
     const {
       classesMain,
       currentSection,
-      history,
       navConfig,
       requestChangeRoute,
     } = this.props;
     return (
       <div className={`navbar-toggleable-md main-nav ${classesMain}`}>
         <Nav navbar>
-          {createNavUnits(
-            this.state.activeSections,
-            currentSection,
-            history,
-            navConfig,
-            requestChangeRoute,
-            this.updateActiveSections,
-          )}
+          <NacContent
+            activeSections={this.state.activeSections}
+            currentSection={currentSection}
+            navConfig={navConfig}
+            requestChangeRoute={requestChangeRoute}
+            updateActiveSections={this.updateActiveSections}
+          />
         </Nav>
       </div>
     );
@@ -62,7 +60,6 @@ MainNav.propTypes = {
   navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
   classesMain: PropTypes.string,
   currentSection: PropTypes.string,
-  history: PropTypes.object.isRequired,
   requestChangeRoute: PropTypes.func.isRequired,
 };
 
