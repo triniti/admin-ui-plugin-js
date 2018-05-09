@@ -1,4 +1,5 @@
 import React from 'react';
+import { withRouter } from 'react-router';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
@@ -8,18 +9,43 @@ class UiForm extends React.Component {
     super(props);
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleSwitch = this.handleSwitch.bind(this);
     this.sliderChange = this.sliderChange.bind(this);
     this.state = {
       trinaryDefault: 0,
       trinaryCustom: 1,
       value: 3,
+      isSwitchOn: false,
     };
+  }
+
+  // componentDidMount() {
+  //   this.unblock = this.props.history.block('Are you sure you want to leave this page?');
+  // }
+
+  componentWillUnmount() {
+    if (this.state.isSwitchOn) {
+      this.unblock();
+    }
   }
 
   handleChange(e) {
     const { name, value } = e.target;
     this.setState({
       [name]: parseInt(value, 10),
+    });
+  }
+
+  handleSwitch(e) {
+    const { checked } = e.target;
+    if (checked) {
+      this.unblock = this.props.history.block('Are you sure you want to leave this page?');
+    } else {
+      this.unblock();
+    }
+
+    this.setState({
+      isSwitchOn: checked,
     });
   }
 
@@ -41,6 +67,24 @@ class UiForm extends React.Component {
       // ]}
         primaryActions={<PrimaryActions />}
         body={[
+          <Card key="leave-page-warning">
+            <CardHeader>Enable page unload warning</CardHeader>
+            <CardBody indent>
+              <p className="text-muted">
+                By enable this setting, this screen will give user a warning message before route transition to next location
+              </p>
+              <FormGroup inline>
+                <Switch
+                  id="check-toggler"
+                  checked={this.state.isSwitchOn}
+                  onChange={this.handleSwitch}
+                  size="md"
+                  label1="Disabled"
+                  label2="Enabled"
+                />
+              </FormGroup>
+            </CardBody>
+          </Card>,
           <Card key="form1">
             <CardHeader>Standard Form</CardHeader>
             <CardBody indent>
@@ -502,4 +546,4 @@ class UiForm extends React.Component {
   }
 }
 
-export default UiForm;
+export default withRouter(UiForm);

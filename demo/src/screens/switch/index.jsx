@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Collapse, Divider, Form, FormGroup, Icon, Label, Radio, Row, Screen, Switch, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Collapse, Divider, Form, FormGroup, Icon, Label, Screen, Switch, Table } from '../../../../src/components';
 
 
 class UiSwitch extends React.Component {
@@ -10,7 +10,7 @@ class UiSwitch extends React.Component {
 
     this.state = {
       cSelected: [],
-      collapseCode1: false
+      collapseCode1: false,
     };
 
     this.onRadioBtnClick = this.onRadioBtnClick.bind(this);
@@ -52,13 +52,13 @@ class UiSwitch extends React.Component {
             <CardHeader>
               Switch Component
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                <Icon imgSrc="code" size="md"/>
+                <Icon imgSrc="code" size="md" />
               </Button>
             </CardHeader>
-             <Collapse isOpen={this.state.collapseCode1}>
+            <Collapse isOpen={this.state.collapseCode1}>
               <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
+                <pre className="pl-5 pr-3">
+                  <code>{`import React from 'react';
 import { Label, Switch } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
@@ -87,7 +87,9 @@ const Example = (props) => {
 
     </FormGroup>
   );
-};`}</code></pre>
+};`}
+                  </code>
+                </pre>
               </CardBody>
             </Collapse>
             <CardBody>
@@ -99,10 +101,10 @@ const Example = (props) => {
                   <Label for="toggler2" className="ml-4 mr-2 text-label">default (sm)</Label>
                   <Switch id="toggler2" />
 
-                  <Divider horizontal size="md" className="ml-4"/>
+                  <Divider horizontal size="md" className="ml-4" />
 
                   <Label for="toggler3" className="form-label-strong">Off</Label>
-                  <Switch id="toggler3"  size="sd" className="ml-2"/>
+                  <Switch id="toggler3" size="sd" className="ml-2" />
                   <Label for="toggler3" className="form-label-strong">On</Label>
 
                   <Divider horizontal size="md" />
@@ -119,15 +121,15 @@ const Example = (props) => {
 
               <Form>
                 <FormGroup inline>
-                  <Switch id="toggler1b" size="xs" label1="Disabled" label2="Enabled"/>
+                  <Switch id="toggler1b" size="xs" label1="Disabled" label2="Enabled" />
 
-                  <Switch id="toggler2b" label1="Disabled" label2="Enabled" className="ml-4"/>
+                  <Switch id="toggler2b" label1="Disabled" label2="Enabled" className="ml-4" />
 
-                  <Switch id="toggler3b" size="sd" label1="off" label2="on" className="ml-4"/>
+                  <Switch id="toggler3b" size="sd" label1="off" label2="on" className="ml-4" />
 
-                  <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4"/>
+                  <Switch id="toggler4b" size="md" label1="Disabled" label2="Enabled" className="ml-4" />
 
-                  <Switch id="toggler5b" size="lg" label1="Disabled" label2="Enabled" className="ml-4"/>
+                  <Switch id="toggler5b" size="lg" label1="Disabled" label2="Enabled" className="ml-4" />
 
                 </FormGroup>
               </Form>
@@ -139,26 +141,26 @@ const Example = (props) => {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row" />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row" />
+                    <td />
+                    <td />
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>
