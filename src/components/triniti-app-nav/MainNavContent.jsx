@@ -5,15 +5,17 @@ import { Dropdown, DropdownToggle, DropdownMenu, NavItem, RouterLink } from '../
 
 class MainNavContent extends React.Component {
   static propTypes = {
-    activeSections: PropTypes.arrayOf(PropTypes.string),
+    activeMobileSections: PropTypes.arrayOf(PropTypes.string),
     history: PropTypes.object.isRequired,
     location: PropTypes.object.isRequired,
     navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
-    updateActiveSections: PropTypes.func.isRequired,
+    onDropdownOptionClick: PropTypes.func,
+    updateActiveMobileSections: PropTypes.func.isRequired,
   };
 
   static defaultProps = {
-    activeSections: [],
+    activeMobileSections: [],
+    onDropdownOptionClick: undefined,
   };
 
   constructor(props) {
@@ -22,8 +24,8 @@ class MainNavContent extends React.Component {
   }
 
   handleTitleClick(nextLocation, navId) {
-    const { history, updateActiveSections } = this.props;
-    updateActiveSections(navId);
+    const { history, updateActiveMobileSections } = this.props;
+    updateActiveMobileSections(navId);
     if ((window.innerWidth >= 1024) && !!nextLocation) {
       history.push(nextLocation);
     }
@@ -31,9 +33,10 @@ class MainNavContent extends React.Component {
 
   render() {
     const {
-      activeSections,
+      activeMobileSections,
       navConfig,
       location,
+      onDropdownOptionClick,
     } = this.props;
 
     return navConfig.map((dropdownUnit) => {
@@ -41,7 +44,7 @@ class MainNavContent extends React.Component {
         navType, navId, dpLinks, to: itemTo,
       } = dropdownUnit;
 
-      const dropdownOpen = !!activeSections.includes(navId);
+      const dropdownOpen = !!activeMobileSections.includes(navId);
       let isCurrentDropdown = false;
       let navLinks = [];
 
@@ -49,7 +52,7 @@ class MainNavContent extends React.Component {
         case 'item':
           return (
             <NavItem key={navId.replace(/\s+/g, '')} className={location.pathname.includes(itemTo) ? 'is-current' : ''}>
-              <RouterLink to={itemTo} navTab>{navId}</RouterLink>
+              <RouterLink to={itemTo} navTab onClick={onDropdownOptionClick}>{navId}</RouterLink>
             </NavItem>
           );
         case 'dropdown':
@@ -59,7 +62,7 @@ class MainNavContent extends React.Component {
               isCurrentDropdown = true;
             }
             return (
-              <RouterLink key={linkTitle} to={linkTo} className="dropdown-item">
+              <RouterLink key={linkTitle} to={linkTo} className="dropdown-item" onClick={onDropdownOptionClick}>
                 {linkTitle}
               </RouterLink>
             );

@@ -24,6 +24,7 @@ class TrinitiAppNav extends React.Component {
     };
 
     this.handleBackdropClick = this.handleBackdropClick.bind(this);
+    this.handleDropdownOptionClick = this.handleDropdownOptionClick.bind(this);
     this.handleToggleMainNav = this.handleToggleMainNav.bind(this);
     this.handleToggleTheme = this.handleToggleTheme.bind(this);
     this.handleToggleUserNav = this.handleToggleUserNav.bind(this);
@@ -33,6 +34,12 @@ class TrinitiAppNav extends React.Component {
     this.setState({
       isMainNavOpen: false,
       isUserNavOpen: false,
+    });
+  }
+
+  handleDropdownOptionClick() {
+    this.setState({
+      isMainNavOpen: false,
     });
   }
 
@@ -64,7 +71,7 @@ class TrinitiAppNav extends React.Component {
     return (
       <Navbar className={`${navbarClass} navbar-main-wrapper`}>
         <MobileNav onTogglerClick={this.handleToggleMainNav} />
-        <MainNav navConfig={navConfig} isOpen={isMainNavOpen} />
+        <MainNav navConfig={navConfig} isOpen={isMainNavOpen} onDropdownOptionClick={this.handleDropdownOptionClick} />
         <Backdrop onClick={this.handleBackdropClick} />
         <UserNav
           currentTheme={currentTheme}
