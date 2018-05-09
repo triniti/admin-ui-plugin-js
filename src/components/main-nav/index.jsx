@@ -35,11 +35,13 @@ class MainNav extends React.Component {
 
   render() {
     const {
-      classesMain,
       navConfig,
+      isOpen,
     } = this.props;
+
+    const classes = isOpen ? 'is-active' : '';
     return (
-      <div className={`navbar-toggleable-md main-nav ${classesMain}`}>
+      <div className={`navbar-toggleable-md main-nav ${classes}`}>
         <Nav navbar>
           <NacContent
             activeSections={this.state.activeSections}
@@ -54,11 +56,11 @@ class MainNav extends React.Component {
 
 MainNav.propTypes = {
   navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
-  classesMain: PropTypes.string,
+  isOpen: PropTypes.bool,
 };
 
 MainNav.defaultProps = {
-  classesMain: '',
+  isOpen: false,
 };
 
 export default MainNav;

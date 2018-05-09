@@ -3,10 +3,9 @@ import PropTypes from 'prop-types';
 import { NavbarToggler, NavbarBrand } from '../';
 import './styles.scss';
 
-
-const MobileNav = ({ handleToggle, title }) => (
+const MobileNav = ({ onTogglerClick, title }) => (
   <div className="navbar-main-mobile">
-    <NavbarToggler className="hidden-lg-up" onClick={handleToggle} />
+    <NavbarToggler className="hidden-lg-up" onClick={onTogglerClick} />
     <NavbarBrand href="/" className="navbar-main-brand">
       <span className="sr-only">{title}</span>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300">
@@ -18,8 +17,12 @@ const MobileNav = ({ handleToggle, title }) => (
 );
 
 MobileNav.propTypes = {
-  handleToggle: PropTypes.func,
+  onTogglerClick: PropTypes.func.isRequired,
   title: PropTypes.string,
+};
+
+MobileNav.defaultProps = {
+  title: 'Triniti CMS',
 };
 
 export default MobileNav;
