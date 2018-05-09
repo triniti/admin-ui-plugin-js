@@ -8,7 +8,7 @@ export default (
   history,
   navConfig,
   requestChangeRoute,
-  onDropdownTitleClick,
+  updateActiveSections,
 ) =>
   navConfig.map((dropdownUnit) => {
     const {
@@ -34,8 +34,8 @@ export default (
             key={navId.replace(/\s+/g, '')}
             dropdownOpen={dropdownOpen}
             onTitleClick={(nextLocation) => {
-              onDropdownTitleClick(navId);
-              if ((window.innerWidth >= 1024) && !!history) {
+              updateActiveSections(navId);
+              if ((window.innerWidth >= 1024) && !!history && !!nextLocation) {
                 history.push(nextLocation);
                 requestChangeRoute(navId);
               }
