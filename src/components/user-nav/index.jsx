@@ -2,13 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import UserNavOpener from './UserNavOpener';
 import UserNavContent from './UserNavContent';
-import UserNavBackdrop from '../../containers/user-nav-backdrop';
+import { Backdrop } from '../../components';
 import './styles.scss';
 
 const UserNav = ({
-  activeTab,
-  position,
-  handleLogout,
+  isOpen,
+  onLogout,
   toggleUserNav,
   currentTheme,
   toggleTheme,
@@ -16,24 +15,27 @@ const UserNav = ({
   <div className="usernav-wrapper">
     <UserNavOpener onClick={toggleUserNav} />
     <UserNavContent
-      activeTab={activeTab}
       currentTheme={currentTheme}
-      position={position}
+      isOpen={isOpen}
       toggleTheme={toggleTheme}
       toggleUserNav={toggleUserNav}
-      onLogout={handleLogout}
+      onLogout={onLogout}
     />
-    <UserNavBackdrop />
+    <Backdrop onClick={toggleUserNav} />
   </div>
 );
 
 UserNav.propTypes = {
-  position: PropTypes.string,
-  activeTab: PropTypes.string,
   currentTheme: PropTypes.string,
-  toggleTheme: PropTypes.func,
-  toggleUserNav: PropTypes.func,
-  handleLogout: PropTypes.func,
+  isOpen: PropTypes.bool,
+  onLogout: PropTypes.func.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
+  toggleUserNav: PropTypes.func.isRequired,
+};
+
+UserNav.defualtProps = {
+  currentTheme: 'light',
+  isOpen: false,
 };
 
 export default UserNav;

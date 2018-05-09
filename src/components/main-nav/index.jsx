@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Nav from '../nav';
-import NacContent from './NavContent';
+import NavContent from './NavContent';
 import './styles.scss';
 
 class MainNav extends React.Component {
@@ -43,7 +43,7 @@ class MainNav extends React.Component {
     return (
       <div className={`navbar-toggleable-md main-nav ${classes}`}>
         <Nav navbar>
-          <NacContent
+          <NavContent
             activeSections={this.state.activeSections}
             navConfig={navConfig}
             updateActiveSections={this.updateActiveSections}

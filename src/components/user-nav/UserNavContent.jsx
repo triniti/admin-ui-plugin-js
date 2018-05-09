@@ -13,36 +13,27 @@ const UnreadMsgBadge = () => <Badge color="warning" pill className="ml-1">3</Bad
 
 class UserNavContent extends React.Component {
   static propTypes = {
-    activeTab: PropTypes.string,
     currentTheme: PropTypes.string,
-    toggleTheme: PropTypes.func,
+    isOpen: PropTypes.bool,
+    onLogout: PropTypes.func.isRequired,
+    toggleTheme: PropTypes.func.isRequired,
     toggleUserNav: PropTypes.func.isRequired,
-    onLogout: PropTypes.func,
-    position: PropTypes.string,
   };
 
   static defaultProps = {
-    activeTab: '1',
     currentTheme: 'light',
-    toggleTheme: undefined,
-    onLogout: undefined,
-    position: '',
+    isOpen: false,
   };
 
   constructor(props) {
     super(props);
 
     this.handleLogoutClick = this.handleLogoutClick.bind(this);
-    this.getTabItemClass = this.getTabItemClass.bind(this);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1',
     };
-  }
-
-  getTabItemClass(tabId) {
-    return this.props.activeTab === tabId ? 'active' : '';
   }
 
   handleLogoutClick() {
@@ -71,10 +62,11 @@ class UserNavContent extends React.Component {
   render() {
     const {
       currentTheme,
-      position,
+      isOpen,
       toggleTheme,
       toggleUserNav,
     } = this.props;
+    const position = isOpen ? 'offcanvas-right' : '';
 
     return (
       <div id="usernav-container" className={`usernav-container ${position}`}>
