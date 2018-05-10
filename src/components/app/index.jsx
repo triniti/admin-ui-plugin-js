@@ -3,18 +3,11 @@ import PropTypes from 'prop-types';
 import { Switch, withRouter } from 'react-router';
 import './styles.scss';
 import createRoutes from './createRoutes';
-import routeDidChange from '../../actions/routeDidChange';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.routes = createRoutes(props.routes, props.authHoc);
-  }
-
-  componentDidUpdate(prevProps) {
-    if (this.props.location.pathname !== prevProps.location.pathname) {
-      this.props.dispatch(routeDidChange());
-    }
   }
 
   render() {
@@ -31,7 +24,6 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  dispatch: PropTypes.func.isRequired,
   location: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
   authHoc: PropTypes.func,

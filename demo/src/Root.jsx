@@ -2,16 +2,16 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
+
 import App from '../../src/components/app';
-import NavbarContainer from '../../src/containers/navbar';
+import TrinitiAppNav from '../../src/components/triniti-app-nav';
 import getUserConfirmation from '../../src/utils/getUserConfirmation';
 
 const Root = ({ store, routes, navConfig }) => (
   <Provider store={store}>
-    <BrowserRouter getUserConfirmation={getUserConfirmation(store.dispatch)}>
+    <BrowserRouter getUserConfirmation={getUserConfirmation}>
       <App
-        dispatch={store.dispatch}
-        navComponent={<NavbarContainer navConfig={navConfig} />}
+        navComponent={<TrinitiAppNav navConfig={navConfig} />}
         routes={routes}
       />
     </BrowserRouter>
