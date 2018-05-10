@@ -12,11 +12,12 @@ test('Table:: should import Table from reactstrap', (t) => {
 });
 
 test('Table:: should render custom classNames', (t) => {
-  const wrapper = shallow(<Table className="test-class" borderless fixed />);
+  const wrapper = shallow(<Table className="test-class" borderless fixed sticky="head" />);
 
   t.equal(wrapper.find(TableRS).length, 1);
   t.equal(wrapper.find('.table-borderless').length, 1);
   t.equal(wrapper.find('.table-fixed').length, 1);
+  t.equal(wrapper.find('.sticky-thead').length, 1);
 
   t.end();
 });

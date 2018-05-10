@@ -65,7 +65,7 @@ tr:first-child td {
   }
 }
 
-.table-striped.table-hover tr:hover {
+.table-striped.table-hover tbody tr:hover {
   background-color: $gray-300;
 }
 
