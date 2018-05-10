@@ -19,10 +19,6 @@ class UiForm extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.unblock = this.props.history.block('Are you sure you want to leave this page?');
-  // }
-
   componentWillUnmount() {
     if (this.state.isSwitchOn) {
       this.unblock();

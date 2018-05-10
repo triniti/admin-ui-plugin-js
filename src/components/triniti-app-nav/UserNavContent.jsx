@@ -34,7 +34,7 @@ class UserNavContent extends React.Component {
     };
   }
 
-  handleLogoutClick() {
+  handleLogout() {
     const { onLogout } = this.props;
 
     swal({
@@ -70,10 +70,10 @@ class UserNavContent extends React.Component {
       <div id="usernav-container" className={`usernav-container ${position}`}>
         <Nav underline className="pl-0">
           <NavItem>
-            <NavLink href="#" className={classnames({ active: this.state.activeTab === '1' })} onClick={() => { this.toggle('1'); }}>Account Info</NavLink>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab === '1' })} onClick={() => this.toggle('1')}>Account Info</NavLink>
           </NavItem>
           <NavItem>
-            <NavLink href="#" className={classnames({ active: this.state.activeTab === '2' })} onClick={() => { this.toggle('2'); }}>Alerts <UnreadMsgBadge /></NavLink>
+            <NavLink href="#" className={classnames({ active: this.state.activeTab === '2' })} onClick={() => this.toggle('2')}>Alerts <UnreadMsgBadge /></NavLink>
           </NavItem>
           <Button
             outline
@@ -90,7 +90,7 @@ class UserNavContent extends React.Component {
           <TabContent activeTab={this.state.activeTab}>
             <UserSettingsTabPane
               tabId="1"
-              onLogoutBtnClick={this.handleLogoutClick}
+              onLogout={this.handleLogout}
               currentTheme={currentTheme}
               toggleTheme={toggleTheme}
             />

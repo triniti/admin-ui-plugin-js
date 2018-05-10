@@ -2,7 +2,6 @@ import swal from 'sweetalert2';
 
 export default (message = '', callback) => {
   const config = {
-    allowOutsideClick: false,
     title: 'Are you sure?',
     text: message,
     type: 'warning',

@@ -12,7 +12,7 @@ class MainNav extends React.Component {
 
   static defaultProps = {
     isOpen: false,
-    onDropdownOptionClick: undefined,
+    onDropdownOptionClick: () => {},
   };
 
   constructor(props) {

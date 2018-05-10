@@ -44,7 +44,7 @@ class MainNavContent extends React.Component {
         navType, navId, dpLinks, to: itemTo,
       } = dropdownUnit;
 
-      const dropdownOpen = !!activeMobileSections.includes(navId);
+      const dropdownOpen = activeMobileSections.includes(navId);
       let isCurrentDropdown = false;
       let navLinks = [];
 
@@ -57,12 +57,12 @@ class MainNavContent extends React.Component {
           );
         case 'dropdown':
           navLinks = dpLinks.map((dpLink) => {
-            const { to: linkTo, linkTitle } = dpLink;
-            if (location.pathname.includes(linkTo)) {
+            const { to, linkTitle } = dpLink;
+            if (location.pathname.includes(to)) {
               isCurrentDropdown = true;
             }
             return (
-              <RouterLink key={linkTitle} to={linkTo} className="dropdown-item" onClick={onDropdownOptionClick}>
+              <RouterLink key={linkTitle} to={to} className="dropdown-item" onClick={onDropdownOptionClick}>
                 {linkTitle}
               </RouterLink>
             );
@@ -76,7 +76,7 @@ class MainNavContent extends React.Component {
               isOpen={dropdownOpen}
               toggle={() => undefined}
             >
-              <DropdownToggle nav onClick={() => { this.handleTitleClick(dpLinks[0].to, navId); }}>
+              <DropdownToggle nav onClick={() => this.handleTitleClick(dpLinks[0].to, navId)}>
                 {navId}
               </DropdownToggle>
               <DropdownMenu className="nav-dropdown-menu">
@@ -85,7 +85,7 @@ class MainNavContent extends React.Component {
             </Dropdown>
           );
         default:
-          return <div />;
+          return null;
       }
     });
   }
