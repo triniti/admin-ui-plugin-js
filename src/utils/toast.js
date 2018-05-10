@@ -3,7 +3,7 @@ import swal from 'sweetalert2';
 export default {
   /**
    * create a toast on the screen
-   * @param title
+   * @param {string} title
    */
   show: (title = '') => {
     swal({
