@@ -26,8 +26,7 @@ class UserNavContent extends React.Component {
   constructor(props) {
     super(props);
 
-    this.handleLogoutClick = this.handleLogoutClick.bind(this);
-
+    this.handleLogout = this.handleLogout.bind(this);
     this.toggle = this.toggle.bind(this);
     this.state = {
       activeTab: '1',
