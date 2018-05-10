@@ -71,7 +71,11 @@ class TrinitiAppNav extends React.Component {
     return (
       <Navbar className={`${navbarClass} navbar-main-wrapper`}>
         <MobileNav onTogglerClick={this.handleToggleMainNav} />
-        <MainNav navConfig={navConfig} isOpen={isMainNavOpen} onDropdownOptionClick={this.handleDropdownOptionClick} />
+        <MainNav
+          navConfig={navConfig}
+          isOpen={isMainNavOpen}
+          onDropdownOptionClick={this.handleDropdownOptionClick}
+        />
         <Backdrop onClick={this.handleBackdropClick} />
         <UserNav
           currentTheme={currentTheme}
