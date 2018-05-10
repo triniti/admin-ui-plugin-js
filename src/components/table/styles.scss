@@ -65,6 +65,10 @@ tr:first-child td {
   }
 }
 
+.table-sm  thead th {
+  padding: .5rem .375rem;
+}
+
 .table-striped.table-hover tbody tr:hover {
   background-color: $gray-300;
 }
