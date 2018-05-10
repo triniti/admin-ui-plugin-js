@@ -44,7 +44,7 @@ class MainNavContent extends React.Component {
         navType, navId, dpLinks, to: itemTo,
       } = dropdownUnit;
 
-      const dropdownOpen = activeMobileSections.includes(navId);
+      const isDropdownOpen = activeMobileSections.includes(navId);
       let isCurrentDropdown = false;
       let navLinks = [];
 
@@ -73,7 +73,7 @@ class MainNavContent extends React.Component {
               className={isCurrentDropdown ? 'is-current' : ''}
               key={navId.replace(/\s+/g, '')}
               nav
-              isOpen={dropdownOpen}
+              isOpen={isDropdownOpen}
               toggle={() => undefined}
             >
               <DropdownToggle nav onClick={() => this.handleTitleClick(dpLinks[0].to, navId)}>
