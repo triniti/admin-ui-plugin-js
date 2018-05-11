@@ -1,8 +1,8 @@
 import React from 'react';
-import PrimaryActions from '../../components/primary-actions';
-import Sidenav from '../../components/sidenav';
 import classnames from 'classnames';
 import Masonry from 'react-masonry-css';
+import PrimaryActions from '../../components/primary-actions';
+import Sidenav from '../../components/sidenav';
 import { BackgroundImage, Button, Card, CardBody, CardColumns, CardHeader, CardImg, CardImgOverlay, CardText, CardTitle, Col, Collapse, Icon, Input, InputGroup, InputGroupAddon, Media, Modal, ModalHeader, ModalBody, ModalFooter, Nav, NavItem, Row, Screen, ScrollableContainer, Stepper, Table } from '../../../../src/components';
 
 class UiModal extends React.Component {

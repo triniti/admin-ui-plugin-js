@@ -45,6 +45,8 @@
     "raw-loader": "^0.5.1",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-hot-loader": "^3.1.3",
+    "react-masonry-css": "^1.0.11",
     "react-popper": "^0.10.4",
     "react-redux": "^5.0.7",
     "react-router": "^4.2.0",
@@ -66,8 +68,5 @@
   },
   "browserslist": [
     "defaults"
-  ],
-  "dependencies": {
-    "react-hot-loader": "^3.1.3"
-  }
+  ]
 }
