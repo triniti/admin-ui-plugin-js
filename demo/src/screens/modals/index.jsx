@@ -1,8 +1,8 @@
 import React from 'react';
-import classnames from 'classnames';
-import Masonry from 'react-masonry-css';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
+import classnames from 'classnames';
+import Masonry from 'react-masonry-css';
 import { BackgroundImage, Button, Card, CardBody, CardColumns, CardHeader, CardImg, CardImgOverlay, CardText, CardTitle, Col, Collapse, Icon, Input, InputGroup, InputGroupAddon, Media, Modal, ModalHeader, ModalBody, ModalFooter, Nav, NavItem, Row, Screen, ScrollableContainer, Stepper, Table } from '../../../../src/components';
 
 class UiModal extends React.Component {
@@ -416,7 +416,7 @@ export default ModalExample;
                       </InputGroup>
 
                     </div>
-                    <Row className="m-0 px-3 gutter-sm pt-3">
+                    <Row gutter="sm" className="m-0 px-3 pt-3">
                       <Col xs="12" sm="6" md="4" lg="3" xl="2" className="d-inline-block">
                         <Card className="media-preview media-preview-selected">
                           <div className="media-preview-title">Future Chrome - HTTPS.png</div>
@@ -547,7 +547,7 @@ export default ModalExample;
                       </InputGroup>
 
                     </div>
-                    <Row className="m-0 px-3 gutter-sm pt-3">
+                    <Row gutter="sm" className="m-0 px-3 pt-3">
                       <Col xs="12" sm="6" md="4" lg="3" xl="2p">
                         <Card shadow inverse hoverBorder className="p-2 selected">
                           <Media aspectRatio="1by1">

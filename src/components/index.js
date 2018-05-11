@@ -46,7 +46,6 @@ import {
   PopoverHeader,
   PopoverTitle,
   PopperContent,
-  Row,
   TabContent,
   TabPane,
   UncontrolledCarousel,
@@ -77,6 +76,7 @@ import FormGroup from './form-group';
 import Icon from './icon';
 import IconGroup from './icon-group';
 import Input from './input';
+import InputNumber from './input-number';
 import Jumbotron from './jumbotron';
 import ListGroup from './list-group';
 import Loading from './loading';
@@ -91,6 +91,7 @@ import Popover from './popover';
 import Progress from './progress';
 import Radio from './radio';
 import RouterLink from './router-link';
+import Row from './row';
 import Select from './select';
 import Screen from './screen';
 import ScrollableContainer from './scrollable-container';
@@ -160,6 +161,7 @@ export {
   Icon,
   IconGroup,
   Input,
+  InputNumber,
   InputGroup,
   InputGroupAddon,
   InputGroupButton,
