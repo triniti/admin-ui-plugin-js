@@ -739,30 +739,25 @@ test('Modal:: should call onEnter & onExit props if provided', (t) => {
   ));
 
   t.false(isOpen);
-  t.true(onEnter.called);
+  t.equal(onEnter.callCount, 1);
   t.true(onExit.notCalled);
-
-  onEnter.reset();
-  onExit.reset();
 
   toggle();
   wrapper.setProps({ isOpen });
   clock.tick(300);
 
   t.true(isOpen);
-  t.true(onEnter.notCalled);
+  t.equal(onEnter.callCount, 1);
   t.true(onExit.notCalled);
-
-  onEnter.reset();
-  onExit.reset();
 
   toggle();
   wrapper.setProps({ isOpen });
   clock.tick(300);
 
   wrapper.unmount();
-  t.true(onEnter.notCalled);
-  t.true(onExit);
+  t.equal(onEnter.callCount, 1);
+  t.equal(onExit.callCount, 1);
+  t.true(onExit.calledAfter(onEnter));
 
   t.end();
 });
