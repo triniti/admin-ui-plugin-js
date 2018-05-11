@@ -20,7 +20,7 @@ body {
 // Force col to 100% width on mobile if no col-12 set
 
 .col {
-  flex: 0 0 100% !important;
+  flex: 0 0 100%;
 }
 
 .col-auto {
