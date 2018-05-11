@@ -4,7 +4,17 @@ import classNames from 'classnames';
 import ReactSelect from 'react-select';
 import './styles.scss';
 
-const Select = ({ className, radius, size, theme, async, creatable, component, ...attributes }) => {
+const Select = ({
+  async,
+  className,
+  component,
+  creatable,
+  radius,
+  size,
+  theme,
+  forwardRef,
+  ...attributes
+}) => {
   let SelectComponent = component || null;
 
   if (!SelectComponent) {
@@ -29,13 +39,18 @@ const Select = ({ className, radius, size, theme, async, creatable, component, .
     },
   );
 
-  return <SelectComponent className={classes} {...attributes} />;
+  if (typeof forwardRef === 'function') {
+    attributes.ref = (ref) => { forwardRef(ref); };
+  }
+
+  return <SelectComponent {...attributes} className={classes} />;
 };
 
 Select.propTypes = {
   async: PropTypes.bool,
   creatable: PropTypes.bool,
   className: PropTypes.string,
+  forwardRef: PropTypes.func,
   radius: PropTypes.string,
   size: PropTypes.string,
   component: PropTypes.oneOf([
@@ -51,6 +66,7 @@ Select.defaultProps = {
   async: false,
   creatable: false,
   className: '',
+  forwardRef: undefined,
   radius: '',
   size: '',
   component: undefined,
