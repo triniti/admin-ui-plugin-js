@@ -7,4 +7,4 @@ import routes from './routes';
 import store from './store';
 
 const MOUNT_NODE = document.getElementById('root');
-render(<Root store={store} routes={routes} nav={navConfig} />, MOUNT_NODE);
+render(<Root store={store} routes={routes} navConfig={navConfig} />, MOUNT_NODE);

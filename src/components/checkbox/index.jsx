@@ -1,15 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { Label } from 'reactstrap';
 import Input from '../input';
-import Label from '../label';
 import './styles.scss';
 
-const propTypes = {
+const Checkbox = ({ children, className, disabled, right, round, size, type, ...attributes }) => {
+  const classes = classNames(
+    className,
+    'checkbox-input',
+    'form-control',
+    { [`form-control-${size}`]: !!size },
+  );
+
+  const labelClasses = classNames(
+    className,
+    'checkbox-input-label',
+    {
+      'checkbox-disabled': disabled,
+      'checkbox-label-right': right,
+      'checkbox-input-round': round,
+    },
+  );
+
+  return (
+    <Label className={labelClasses} check>
+      <Input {...attributes} className={classes} disabled={disabled} type={type} />
+      <span className="checkbox-input-icon" />
+      {children && <span className="form-check-label checkbox-label">{children}</span>}
+    </Label>
+  );
+};
+
+Checkbox.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  cssModule: PropTypes.object,
   disabled: PropTypes.bool,
   right: PropTypes.bool,
   round: PropTypes.bool,
@@ -17,46 +42,13 @@ const propTypes = {
   type: PropTypes.string,
 };
 
-const defaultProps = {
+Checkbox.defaultProps = {
+  className: '',
+  disabled: false,
+  right: false,
+  round: false,
+  size: '',
   type: 'checkbox',
 };
-
-const Checkbox = (props) => {
-  const {
-    children,
-    className,
-    cssModule,
-    disabled,
-    right,
-    round,
-    size,
-    type,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    'checkbox-input',
-    size ? `form-control form-control-${size}` : 'form-control',
-  ), cssModule);
-
-  const labelClasses = mapToCssModules(classNames(
-    className,
-    'checkbox-input-label',
-    disabled ? 'checkbox-disabled' : false,
-    right ? 'checkbox-label-right' : false,
-    round ? 'checkbox-input-round' : false,
-  ), cssModule);
-
-
-  return (
-    <Label className={labelClasses} check>
-      <Input type={type} className={classes} {...attributes} disabled={disabled} />
-      <span className="checkbox-input-icon"/>
-      {children && <span className="form-check-label checkbox-label">{children}</span>}
-    </Label>
-  );
-};
-
-Checkbox.propTypes = propTypes;
-Checkbox.defaultProps = defaultProps;
 
 export default Checkbox;

@@ -19,7 +19,7 @@ $blue:    #1e75e0;
 $indigo:  #6757e6;
 $purple:  #9947f3;
 $pink:    #fd3576;
-$red:     #f74b4b;
+$red:     #f95858;
 $orange:  #f99520;
 $yellow:  #ffe261;
 $green:   #04c5a2;
@@ -35,13 +35,13 @@ $danger:        $red;
 $light:         $gray-200;
 $dark:          #7a7a7c;
 
-$archived:      darken($gray-100, 1%);
-$deleted:       lighten($warning, 38%);
-$draft:         darken($gray-400, 3%);
-$expired:       lighten($blue, 45%);
-$pending:       lighten($danger, 33%);
-$published:     $white;
-$scheduled:     lighten($yellow, 26%);
+$status-archived:      darken($gray-100, 2%);
+$status-deleted:       lighten($warning, 40%);
+$status-draft:         darken($gray-300, 3%);
+$status-expired:       desaturate(lighten($secondary, 48%), 10%);
+$status-pending:       lighten($danger, 31%);
+$status-published:     desaturate(lighten($success, 53%), 40%);
+$status-scheduled:     lighten($yellow, 24%);
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -215,6 +215,8 @@ $shadow-depth-8:                  $shadow-depth-2, 0 24px 24px -4px rgba(0,0,0,0
 
 $shadow-card:                    $shadow-depth-2 !default;
 
+$hover-shadow:                    0 1px 0 $gray-rgba-200;
+
 
 // Checkbox Radio Switch Heights
 
@@ -230,6 +232,7 @@ $form-check-shadow:      inset 0 0 0 1px rgba(0,0,0,0.1) !default;
 
 $modal-sd:                     450px !default;
 $modal-xl:                     1000px !default;
+$modal-xxl:                    1600px !default;
 
 
 // Form & button element min-heights

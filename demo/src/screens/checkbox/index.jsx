@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Collapse, Divider, Form, FormGroup, Icon, Label, Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Collapse, Form, FormGroup, Icon, Label, Row, Screen, Table } from '../../../../src/components';
 
 class UiCheckBox extends React.Component {
   constructor(props) {
@@ -134,7 +134,7 @@ const Example = (props) => {
               </Form>
               <hr/>
               <Checkbox id="showText" className="mr-3"><Label tag="span">Label</Label></Checkbox>
-              <Checkbox id="showText"><Label strong tag="span">Label Strong</Label></Checkbox>
+              <Checkbox id="showText"><Label tag="span" className="form-label-strong">Label Strong</Label></Checkbox>
 
               <hr/>
               <Label check>

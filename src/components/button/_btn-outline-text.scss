@@ -4,13 +4,13 @@
 
 @mixin button-outline-text-variant($color, $color-hover: #fff) {
   color: $color;
-  background-color: $white;
+  background: $white;
   background-image: none;
   border-color: $gray-700;
 
   @include hover {
     color: $color;
-    background-color: $gray-400;
+    background: $gray-400;
     border-color: $gray-700;
   }
 
@@ -22,14 +22,15 @@
   &.disabled,
   &:disabled {
     color: $color;
-    background-color: transparent;
+    background: transparent;
+    border-color: $gray-500;
   }
 
   &:active,
   &.active,
   .show > &.dropdown-toggle {
     color: $color;
-    background-color: $gray-400;
+    background: $gray-400;
     border-color: $gray-700;
   }
 }

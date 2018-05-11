@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import { Fade } from 'reactstrap';
 import Portal from './portal';
-import Fade from '../fade';
 import {
   getOriginalBodyPadding,
   conditionallyUpdateScrollbar,

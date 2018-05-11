@@ -1,5 +1,10 @@
 // DatePicker
 
+.shadow-none > .react-datepicker {
+  box-shadow: none;
+  border-color: $gray-700;
+}
+
 .react-datepicker-popper {
   z-index: $zindex-dropdown;
 }

@@ -1,50 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { FormGroup as FormGroupRS } from 'reactstrap';
 
-const propTypes = {
-  children: PropTypes.node,
-  row: PropTypes.bool,
+const FormGroup = ({ className, check, inline, ...attributes}) => {
+  const classes = classNames(
+    className,
+    {
+      'form-inline': !check && inline,
+    },
+  );
+
+  return <FormGroupRS check={check} inline={inline} {...attributes} className={classes} />;
+};
+
+FormGroup.propTypes = {
+  className: PropTypes.string,
   check: PropTypes.bool,
   inline: PropTypes.bool,
-  disabled: PropTypes.bool,
-  tag: PropTypes.string,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
 };
 
-const defaultProps = {
-  tag: 'div',
+FormGroup.defaultProps = {
+  className: '',
+  check: false,
+  inline: false,
 };
-
-const FormGroup = (props) => {
-  const {
-    className,
-    cssModule,
-    row,
-    disabled,
-    check,
-    inline,
-    tag: Tag,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
-    className,
-    row ? 'row' : false,
-    check ? 'form-check' : 'form-group',
-    inline ? 'form-inline' : false,
-    check && inline ? 'form-check-inline' : false,
-    check && disabled ? 'disabled' : false,
-  ), cssModule);
-
-  return (
-    <Tag {...attributes} className={classes} />
-  );
-};
-
-FormGroup.propTypes = propTypes;
-FormGroup.defaultProps = defaultProps;
 
 export default FormGroup;

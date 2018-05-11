@@ -1,50 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { Badge as BadgeRS } from 'reactstrap';
 import './styles.scss';
 
-const propTypes = {
-  alert: PropTypes.bool,
-  children: PropTypes.node,
+const Badge = ({ alert, className, color, ...attributes }) => {
+  const classes = classNames(className, { 'badge-alert': alert });
+  return <BadgeRS {...attributes} color={color} className={classes} />;
+};
+
+Badge.propTypes = {
   className: PropTypes.string,
   color: PropTypes.string,
-  cssModule: PropTypes.object,
-  pill: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+  alert: PropTypes.bool,
 };
 
-const defaultProps = {
+Badge.defaultProps = {
+  className: '',
+  alert: false,
   color: 'default',
-  pill: false,
-  tag: 'span',
 };
-
-const Badge = (props) => {
-  const {
-    className,
-    cssModule,
-    color,
-    pill,
-    alert,
-    tag: Tag,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
-    className,
-    'badge',
-    `badge-${color}`,
-    pill ? 'badge-pill' : false,
-    alert ? 'badge-alert' : false,
-  ), cssModule);
-
-  return (
-    <Tag {...attributes} className={classes} />
-  );
-};
-
-Badge.propTypes = propTypes;
-Badge.defaultProps = defaultProps;
 
 export default Badge;

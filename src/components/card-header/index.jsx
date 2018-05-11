@@ -1,39 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { CardHeader as CardHeaderRS } from 'reactstrap';
 
-const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  toggler: PropTypes.bool,
-};
-
-const defaultProps = {
-  tag: 'div',
-};
-
-const CardHeader = (props) => {
-  const {
+const CardHeader = ({ className, toggler, ...attributes }) => {
+  const classes = classNames(
     className,
-    cssModule,
-    toggler,
-    tag: Tag,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    className,
-    'card-header',
-    toggler ? 'card-header-toggler' : false,
-  ), cssModule);
+    {
+      'card-header-toggler': toggler,
+    },
+  );
 
   return (
-    <Tag {...attributes} className={classes} />
+    <CardHeaderRS {...attributes} className={classes} />
   );
 };
 
-CardHeader.propTypes = propTypes;
-CardHeader.defaultProps = defaultProps;
+CardHeader.propTypes = {
+  className: PropTypes.string,
+  toggler: PropTypes.bool,
+};
+
+CardHeader.defaultProps = {
+  className: '',
+  toggler: false,
+};
 
 export default CardHeader;

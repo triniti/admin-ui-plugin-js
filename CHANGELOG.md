@@ -1,6 +1,36 @@
 # CHANGELOG
 
 
+## v0.5.0
+__BREAKING CHANGES__
+
+* App component now requires `navComponent` as a prop to redner navigation menu.
+* Refactor app navbar component, move `container/navbar` to `components/triniti-app-nav`. Delete `container` directory.
+* Active/Current sectoins are checked at Rotuer level in `MainNavContent` component, and it's not related to redux state anymore.
+* Move most of redux state into component's local state, reduce admin-ui state tree (also, actions, selectors, reducers).
+* Remove `MainNav`, `UserNav`, `MobileNav` from components export.
+* Remove `NavDropdown` component, use `<Dropdown nav>` instead.
+* Refactor all components to import Reactstrap js.
+* Update styles
+  * Add vimeo and soundcloud icons
+  * Add props to DropdownToggle to match Button
+  * Use Order instead of Pull Push for Col in Layout
+  * Use Dropdown nav instead of NavDropdown
+  * Updated Divider component to use a size prop and just use horizontal as a boolean to change the direction
+  * Add BackgroundImage component
+  * Add gutter-* classes to control col padding
+  * Add aspectRatio prop to Media - 1by1, 4by3, 16by9, 2by1, 3by1
+  * Add hoverBorder prop for card for 4px inner border on hover/selected
+  * Add col-xl-2p for 5 cols in row, 20% width
+* Select component now support full react-select features by give `async` or `creatable` props.
+* Add a switch to Demo `UiForm` screen to enable/disable user alert when user leave screen.
+* Update `createNavUnit` from a method to a react component, and rename to `MainNavContent`
+* Add utils/toast.
+* Add utils/getUserConfirmation (for react-router-4 [history.block](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/history.md)).
+* Fix issue when user clicks on navbar title, on desktop the screen should transition to the first option of the dropdown menu, but on mobile view, it should only toggle the dropdown open/close.
+* Fix issue when user clicks on a dropdown menu on mobile view, main-nav should auto-close.
+
+
 ## v0.4.15
 * Update to Bootstrap 4.1
 * Update SweetAlert Spinner to include Title

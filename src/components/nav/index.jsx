@@ -1,69 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { Nav as NavRS } from 'reactstrap';
 import './styles.scss';
 
-const propTypes = {
-  boxed: PropTypes.bool,
-  tabs: PropTypes.bool,
-  pills: PropTypes.bool,
-  underline: PropTypes.bool,
-  vertical: PropTypes.bool,
-  justified: PropTypes.bool,
-  navbar: PropTypes.bool,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string,
-  size: PropTypes.string,
-  theme: PropTypes.string,
-  sticky: PropTypes.bool,
-  cssModule: PropTypes.object,
-};
+const Nav = ({ className, sticky, theme, underline, ...attributes }) => {
 
-const defaultProps = {
-  tag: 'ul',
-};
-
-const Nav = (props) => {
-  const {
+  const classes = classNames(
     className,
-    cssModule,
-    boxed,
-    tabs,
-    pills,
-    underline,
-    vertical,
-    justified,
-    navbar,
-    size,
-    theme,
-    sticky,
-    tag: Tag,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
-    className,
-    size ? `nav-${size}` : false,
-    theme ? `nav-theme-${theme}` : false,
-    sticky ? 'nav-sticky' : false,
-    navbar ? 'navbar-nav' : 'nav',
     {
-      'nav-boxed': boxed,
-      'nav-tabs': tabs,
-      'nav-pills': pills,
+      'nav-sticky': sticky,
       'nav-underline': underline,
-      'nav-justified': justified,
-      'flex-column': vertical,
     },
-  ), cssModule);
-
-  return (
-    <Tag {...attributes} className={classes} />
   );
+
+  return <NavRS {...attributes} className={classes} />;
 };
 
-Nav.propTypes = propTypes;
-Nav.defaultProps = defaultProps;
+Nav.propTypes = {
+  className: PropTypes.string,
+  sticky: PropTypes.bool,
+  underline: PropTypes.bool,
+};
+
+Nav.defaultProps = {
+  className: '',
+  sticky: false,
+  underline: false,
+};
 
 export default Nav;

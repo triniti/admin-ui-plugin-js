@@ -3,7 +3,15 @@
 .media {
   display: flex;
   align-items: flex-start;
-  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  .media-body > & {
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  &.aspect-ratio {
+    margin-bottom: 0;
+  }
 }
 
 .media-body {
@@ -31,10 +39,6 @@
   }
 }
 
-.col > .media:first-child,
-.media-list > .media:first-child {
-  margin-top: 0;
-}
 
 // Hover Class
 

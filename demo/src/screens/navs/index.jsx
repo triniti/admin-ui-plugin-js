@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, CardHeader, Col, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavDropdown, NavItem, NavLink, Row, Screen } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavItem, NavLink, Row, Screen } from '../../../../src/components';
 
 class UiNav extends React.Component {
   constructor(props) {
@@ -124,7 +124,7 @@ class UiNav extends React.Component {
                 <NavItem>
                   <NavLink href="#" active>Link</NavLink>
                 </NavItem>
-                <NavDropdown isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
+                <Dropdown nav isOpen={this.state.dropdownOpen1} toggle={this.toggle1}>
                   <DropdownToggle nav caret>
                 Dropdown
                   </DropdownToggle>
@@ -135,7 +135,7 @@ class UiNav extends React.Component {
                     <DropdownItem divider />
                     <DropdownItem>Another Action</DropdownItem>
                   </DropdownMenu>
-                </NavDropdown>
+                </Dropdown>
                 <NavItem>
                   <NavLink href="#">Link</NavLink>
                 </NavItem>
@@ -156,18 +156,18 @@ class UiNav extends React.Component {
                 <NavItem>
                   <NavLink href="#" active>Link</NavLink>
                 </NavItem>
-                <NavDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
+                <Dropdown nav isOpen={this.state.dropdownOpen2} toggle={this.toggle2}>
                   <DropdownToggle nav caret>
                 Dropdown
                   </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem header>Header</DropdownItem>
+                    <DropdownItem header>Overflow on Mobile</DropdownItem>
                     <DropdownItem disabled>Action</DropdownItem>
                     <DropdownItem>Another Action</DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>Another Action</DropdownItem>
                   </DropdownMenu>
-                </NavDropdown>
+                </Dropdown>
                 <NavItem>
                   <NavLink href="#">Link</NavLink>
                 </NavItem>
@@ -188,7 +188,7 @@ class UiNav extends React.Component {
                 <NavItem>
                   <NavLink href="#" active>Active</NavLink>
                 </NavItem>
-                <NavDropdown isOpen={this.state.dropdownOpen3} toggle={this.toggle3}>
+                <Dropdown nav isOpen={this.state.dropdownOpen3} toggle={this.toggle3}>
                   <DropdownToggle nav caret>
                 Dropdown
                   </DropdownToggle>
@@ -199,7 +199,7 @@ class UiNav extends React.Component {
                     <DropdownItem divider />
                     <DropdownItem>Another Action</DropdownItem>
                   </DropdownMenu>
-                </NavDropdown>
+                </Dropdown>
                 <NavItem>
                   <NavLink href="#">Link</NavLink>
                 </NavItem>
@@ -222,7 +222,7 @@ class UiNav extends React.Component {
                     <NavItem>
                       <NavLink href="#" active>Active</NavLink>
                     </NavItem>
-                    <NavDropdown isOpen={this.state.dropdownOpen4} toggle={this.toggle4}>
+                    <Dropdown nav isOpen={this.state.dropdownOpen4} toggle={this.toggle4}>
                       <DropdownToggle nav caret>
                     Dropdown
                       </DropdownToggle>
@@ -233,7 +233,7 @@ class UiNav extends React.Component {
                         <DropdownItem divider />
                         <DropdownItem>Another Action</DropdownItem>
                       </DropdownMenu>
-                    </NavDropdown>
+                    </Dropdown>
                     <NavItem>
                       <NavLink href="#">Link</NavLink>
                     </NavItem>

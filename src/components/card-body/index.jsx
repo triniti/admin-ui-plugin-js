@@ -1,39 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { CardBody as CardBodyRS } from 'reactstrap';
 
-const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  indent: PropTypes.bool,
-};
-
-const defaultProps = {
-  tag: 'div',
-};
-
-const CardBody = (props) => {
-  const {
+const CardBody = ({ className, indent, ...attributes }) => {
+  const classes = classNames(
     className,
-    cssModule,
-    indent,
-    tag: Tag,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    className,
-    'card-body',
-    indent ? `card-body-indent` : false,
-  ), cssModule);
+    {
+      'card-body-indent': indent,
+    },
+  );
 
   return (
-    <Tag {...attributes} className={classes} />
+    <CardBodyRS {...attributes} className={classes} />
   );
 };
 
-CardBody.propTypes = propTypes;
-CardBody.defaultProps = defaultProps;
+CardBody.propTypes = {
+  className: PropTypes.string,
+  indent: PropTypes.bool,
+};
+
+CardBody.defaultProps = {
+  className: '',
+  indent: false,
+};
 
 export default CardBody;

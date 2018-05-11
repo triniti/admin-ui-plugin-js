@@ -1,46 +1,34 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
+import { ListGroup as ListGroupRS } from 'reactstrap';
 import './styles.scss';
 
-const propTypes = {
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-  flush: PropTypes.bool,
-  borderless: PropTypes.bool,
-  nav: PropTypes.bool,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-};
-
-const defaultProps = {
-  tag: 'ul',
-};
-
-const ListGroup = (props) => {
-  const {
+const ListGroup = ({ className, borderless, nav, theme, ...attributes }) => {
+  const classes = classNames(
     className,
-    cssModule,
-    tag: Tag,
-    flush,
-    borderless,
-    nav,
-    ...attributes
-  } = props;
-  const classes = mapToCssModules(classNames(
-    className,
-    'list-group',
-    nav ? 'list-group-nav' : false,
-    flush ? 'list-group-flush' : false,
-    borderless ? 'list-group-borderless' : false,
-  ), cssModule);
-
-  return (
-    <Tag {...attributes} className={classes} />
+    { 'list-group-nav': nav },
+    { 'list-group-borderless': borderless },
+    {
+      [`list-group-${theme}`]: !!theme,
+    },
   );
+
+  return <ListGroupRS {...attributes} className={classes} />;
 };
 
-ListGroup.propTypes = propTypes;
-ListGroup.defaultProps = defaultProps;
+ListGroup.propTypes = {
+  borderless: PropTypes.bool,
+  className: PropTypes.string,
+  nav: PropTypes.bool,
+  theme: PropTypes.string,
+};
+
+ListGroup.defaultProps = {
+  borderless: false,
+  className: '',
+  nav: false,
+  theme: '',
+};
 
 export default ListGroup;

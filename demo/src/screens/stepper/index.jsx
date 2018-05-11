@@ -55,6 +55,18 @@ class UiStepper extends React.Component {
     body={[
       <Card key="stepper1">
         <CardHeader>
+          Stepper - Two Steps Horizontal
+        </CardHeader>
+        <CardBody className="px-0 py-3 bg-gray-300">
+          <Stepper steps={ [{title: 'Select Options'}, {title: 'Customize Options'}] } activeStep={ 0 } horizontal fullWidth activeColor="#08a0e8" completeBarColor="#08a0e8" completeColor="#08a0e8" className="px-5" />
+        </CardBody>
+        <CardBody className="px-0 py-3">
+          <Stepper steps={ [{title: 'Select Options'}, {title: 'Customize Options'}] } activeStep={ 0 } horizontal />
+        </CardBody>
+      </Card>,
+
+      <Card key="stepper2">
+        <CardHeader>
           Stepper - Three Steps
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
             <Icon imgSrc="code" size="md"/>
@@ -83,7 +95,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper2">
+      <Card key="stepper3">
         <CardHeader>
           Stepper - Four Steps
           <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
@@ -100,7 +112,7 @@ import { UiStepper } from '@triniti/admin-ui-plugin/components';
 export default class Example extends React.Component {
   render() {
     return (
-      <Stepper steps={ [{title: 'Like A Dream Come True'}, {title: 'Just Wanna Be With You'}, {title: 'Its Plain To See'}, {title: 'Repeat steps 1 to 3'}] } activeStep={ 1 } />
+      <Stepper steps={ [{title: 'Like A Dream Come True'}, {title: 'Just Wanna Be With You'}, {title: 'Its Plain To See'}, {title: 'Repeat steps 1 to 3'}] } activeStep={ 1 } activeColor="#04c5a2" completeBarColor="#04c5a2" completeColor="#04c5a2" />
     );
   }
 }`}
@@ -109,11 +121,11 @@ export default class Example extends React.Component {
           </CardBody>
         </Collapse>
         <CardBody indent>
-          <Stepper steps={ [{title: 'Like A Dream Come True'}, {title: 'Just Wanna Be With You'}, {title: 'Its Plain To See'}, {title: 'Repeat steps 1 to 3'}] } activeStep={ 1 } />
+          <Stepper steps={ [{title: 'Like A Dream Come True'}, {title: 'Just Wanna Be With You'}, {title: 'Its Plain To See'}, {title: 'Repeat steps 1 to 3'}] } activeStep={ 1 }  activeColor="#04c5a2" completeBarColor="#04c5a2" completeColor="#04c5a2" />
         </CardBody>
       </Card>,
 
-      <Card key="stepper3">
+      <Card key="stepper4">
         <CardHeader>
           Stepper - Five Steps
         <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
@@ -143,7 +155,7 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
-      <Card key="stepper4">
+      <Card key="stepper5">
         <CardHeader>
           Stepper - Six Steps
         <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>

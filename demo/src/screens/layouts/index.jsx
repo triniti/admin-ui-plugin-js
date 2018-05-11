@@ -72,7 +72,7 @@ export default class Example extends React.Component {
                   <Col sm="4">.col .col-sm-4</Col>
                 </Row>
                 <Row>
-                  <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>.col .col-sm-6 .col-sm-push-2 .col-sm-pull-2
+                  <Col sm={{ size: 6, order: 2, offset: 1 }}>.col .col-sm-6 .col-sm-order-2
                     .col-sm-offset-2
                   </Col>
                 </Row>
@@ -118,7 +118,7 @@ export default Example;
                   <Col sm="4">.col .col-sm-4</Col>
                 </Row>
                 <Row>
-                  <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>.col .col-sm-6 .col-sm-push-2 .col-sm-pull-2
+                  <Col sm={{ size: 6, order: 2, offset: 1 }}>.col .col-sm-6 .col-sm-order-2
                     .col-sm-offset-2
                   </Col>
                 </Row>
@@ -172,8 +172,8 @@ const Example = (props) => {
                   <Col sm="4">.col .col-sm-4</Col>
                 </Row>
                 <Row>
-                  <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
-                  .col .col-sm-6 .col-sm-push-2 .col-sm-pull-2 .col-sm-offset-2
+                  <Col sm={{ size: 6, order: 2, offset: 1 }}>
+                  .col .col-sm-6 .col-sm-order-2 .col-sm-offset-2
                   </Col>
                 </Row>
                 <Row>
@@ -217,8 +217,8 @@ export default Example;
                   <Col sm="4">.col .col-sm-4</Col>
                 </Row>
                 <Row>
-                  <Col sm={{ size: 6, push: 2, pull: 2, offset: 1 }}>
-                  .col .col-sm-6 .col-sm-push-2 .col-sm-pull-2 .col-sm-offset-2
+                  <Col sm={{ size: 6, order: 2, offset: 1 }}>
+                  .col .col-sm-6 .col-sm-order-2 .col-sm-offset-2
                   </Col>
                 </Row>
                 <Row>

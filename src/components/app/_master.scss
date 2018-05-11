@@ -17,10 +17,6 @@ body {
 }
 
 
-// Increase base font size above 1600px wide
-
-
-
 // Force col to 100% width on mobile if no col-12 set
 
 .col {
@@ -31,6 +27,103 @@ body {
   flex-grow: 1;
 }
 
+.col-xl-2p {
+  @media (min-width: 1200px) {
+    flex: 0 0 20%;
+    max-width: 20%;
+  }
+  @media (min-width: 1400px) {
+    flex: 0 0 16.66667%;
+    max-width: 16.66667%;
+  }
+}
+
+.gutter-xs {
+  margin-right: -.25rem;
+  margin-left: -.25rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: .25rem;
+    padding-left: .25rem;
+  }
+}
+
+.gutter-sm {
+  margin-right: -.5rem;
+  margin-left: -.5rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: .5rem;
+    padding-left: .5rem;
+  }
+}
+
+.gutter-sd {
+  margin-right: -.75rem;
+  margin-left: -.75rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: .75rem;
+    padding-left: .75rem;
+  }
+}
+
+.gutter-sd {
+  margin-right: -.1rem;
+  margin-left: -1rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+.gutter-md {
+  margin-right: -.1.25rem;
+  margin-left: -1.25rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+.gutter-lg {
+  margin-right: -.1.5rem;
+  margin-left: -1.5rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.gutter-xl {
+  margin-right: -.2rem;
+  margin-left: -2rem;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+
+
+// max-widths
+
+.mw-240px {max-width: 240px;}
+.mw-320px {max-width: 320px;}
+.mw-360px {max-width: 360px;}
+.mw-400px {max-width: 400px;}
+.mw-480px {max-width: 480px;}
+
 // remove container-fluid & container padding if directly inside card-body since it has its own
 
 .card-body > .container,
@@ -40,6 +133,7 @@ body {
     padding: 0;
   }
 }
+
 
 // removal of the glow on objects on focus
 
@@ -115,6 +209,25 @@ p {
   font-size: .875rem;
 }
 
+a:not([href]):not([tabindex]),
+.nav-link:hover {
+  cursor: pointer;
+}
+
+
+// select background color
+
+::selection {
+  background: darken($status-expired, 2%);
+}
+
+::-moz-selection {
+  background: darken($status-expired, 2%);
+}
+
+
+// custom text colors
+
 .text-light {
   color: $text-light !important;
 }
@@ -131,19 +244,18 @@ p {
   color: $body-color;
 }
 
+
+// custom utility classes
+
 .nowrap {
   white-space: nowrap;
-}
-
-a:not([href]):not([tabindex]),
-.nav-link:hover {
-  cursor: pointer;
 }
 
 .sticky-top {
   position: -webkit-sticky !important;
   position: sticky !important;
 }
+
 
 // Layout
 
@@ -190,6 +302,19 @@ a:not([href]):not([tabindex]),
 }
 
 
+// gray backgrounds
+
+.bg-gray-100 {background-color: $gray-100 !important;}
+.bg-gray-200 {background-color: $gray-200 !important;}
+.bg-gray-300 {background-color: $gray-300 !important;}
+.bg-gray-400 {background-color: $gray-400 !important;}
+.bg-gray-500 {background-color: $gray-500 !important;}
+.bg-gray-600 {background-color: $gray-600 !important;}
+.bg-gray-700 {background-color: $gray-700 !important;}
+.bg-gray-800 {background-color: $gray-800 !important;}
+.bg-gray-900 {background-color: $gray-900 !important;}
+
+
 // Borders
 //
 // Usually added to divide content or to an aside
@@ -208,6 +333,11 @@ a:not([href]):not([tabindex]),
 
 .border-left {
   border-left: 1px solid $gray-700;
+}
+
+
+.border-white {
+  border-color: $white;
 }
 
 
@@ -306,13 +436,110 @@ input::-webkit-calendar-picker-indicator {
 
 // Status Background Colors
 
-.status-archived    {background-color: $archived;}
-.status-draft       {background-color: $draft;}
-.status-deleted     {background-color: $deleted;}
-.status-expired     {background-color: $expired;}
-.status-pending     {background-color: $pending;}
-.status-published   {background-color: $published;}
-.status-scheduled   {background-color: $scheduled;}
+.status-status {
+  background-color: $white !important;
+}
+
+tr.status-status ,
+.status-status-border {
+  box-shadow: inset 3px 0 0 $gray-700;
+
+  &:hover {
+    background-color: darken($white, 2%) !important;
+  }
+}
+
+.status-archived {
+  background-color: $status-archived !important;
+}
+
+tr.status-archived,
+.status-archived-border {
+  box-shadow: inset 3px 0 0 $text-disabled;
+
+  &:hover {
+    background-color: darken($status-archived, 2%) !important;
+  }
+}
+
+.status-draft {
+  background-color: $status-draft !important;
+}
+
+tr.status-draft,
+.status-draft-border {
+  box-shadow: inset 3px 0 0 theme-color("dark");
+
+  &:hover {
+    background-color: darken($status-draft, 2%) !important;
+  }
+}
+
+.status-deleted {
+  background-color: $status-deleted !important;
+}
+
+tr.status-deleted,
+.status-deleted-border {
+  box-shadow: inset 3px 0 0 theme-color("warning");
+
+  &:hover {
+    background-color: darken($status-deleted, 2%) !important;
+  }
+}
+
+.status-expired {
+  background-color: $status-expired !important;
+}
+
+tr.status-expired,
+.status-expired-border {
+  box-shadow: inset 3px 0 0 theme-color("info");
+
+  &:hover {
+    background-color: darken($status-expired, 2%) !important;
+  }
+}
+
+.status-pending {
+  background-color: $status-pending !important;
+}
+
+tr.status-pending,
+.status-pending-border {
+  box-shadow: inset 3px 0 0 theme-color("danger");
+
+  &:hover {
+    background-color: darken($status-pending, 1%) !important;
+  }
+}
+
+.status-scheduled {
+  background-color: $status-scheduled !important;
+}
+
+tr.status-scheduled,
+.status-scheduled-border {
+  box-shadow: inset 3px 0 0 $yellow;
+
+  &:hover {
+    background-color: darken($status-scheduled, 3%) !important;
+  }
+}
+
+.status-published {
+  background-color: $status-published !important;
+}
+
+tr.status-published,
+.status-published-border {
+  background-color: $white !important;
+  box-shadow: inset 3px 0 0 theme-color("success");
+
+  &:hover {
+    background-color: $gray-100 !important;
+  }
+}
 
 .status-copy {
   position: relative;
@@ -321,6 +548,19 @@ input::-webkit-calendar-picker-indicator {
   margin-left: .25rem;
 }
 
+small.status-copy {
+  color: $gray-800;
+  text-transform: uppercase;
+}
+
+
+// css columns
+
+.column-count-6 {column-count: 6;}
+
+.column-gap-0 {column-gap: 0;}
+
+.cursor-pointer {cursor: pointer;}
 
 // Modal & Alert Animations
 
@@ -361,4 +601,112 @@ input::-webkit-calendar-picker-indicator {
   100% {
     transform: translateX(0);
   }
+}
+
+
+// Aspect Ratio
+
+.aspect-ratio {
+  position: relative;
+  display: block !important;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  background-color: $gray-900;
+
+  &::before {
+    content: '';
+    display: block;
+  }
+
+  & > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.aspect-ratio-1by1::before {
+  padding-bottom: 100%;
+}
+
+.aspect-ratio-4by3::before {
+  padding-bottom: 75%;
+}
+
+.aspect-ratio-16by9::before {
+  padding-bottom: 56.25%;
+}
+
+.aspect-ratio-2by1::before {
+  padding-bottom: 50%;
+}
+
+.aspect-ratio-3by1::before {
+  padding-bottom: 33.3333%;
+}
+
+
+// img preview todo - example on modal page - remove later
+
+.image-preview {
+  padding: .5rem;
+  border: 1px solid transparent !important;
+  box-shadow: $shadow-depth-2;
+
+  &:hover {
+    border: 1px solid theme-color("secondary") !important;
+    cursor: pointer;
+  }
+  &.image-preview-selected {
+    border: 1px solid theme-color("primary") !important;
+    box-shadow: $shadow-depth-2, inset 0 0 0 2px theme-color("primary");
+  }
+}
+
+
+// media preview
+
+.media-preview {
+  border: 4px solid $white !important;
+  box-shadow: $shadow-depth-2;
+
+  &:hover {
+    border: 4px solid theme-color("secondary") !important;
+    cursor: pointer;
+  }
+  &.media-preview-selected {
+    border: 4px solid theme-color("primary") !important;
+  }
+}
+
+.media-preview-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: .25rem .5rem;
+  background-color: $gray-rgba-700;
+  color: $white;
+}
+
+.media-preview-selected {
+
+  .media-preview-title {
+    background-color: rgba(theme-color("primary"), .97);
+    font-weight: 700;
+  }
+}
+
+
+// masonry grid
+
+.tri-masonry-grid {
+  display: flex;
+}
+
+.tri-masonry-grid-column {
+  padding: 0 .25rem;
 }

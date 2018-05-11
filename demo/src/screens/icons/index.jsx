@@ -219,8 +219,10 @@ const UiIcons = () => (
               <IconTooltip iconName="instagram"/>
               <IconTooltip iconName="linkedin"/>
               <IconTooltip iconName="pinterest"/>
+              <IconTooltip iconName="soundcloud"/>
               <IconTooltip iconName="twitter"/>
               <IconTooltip iconName="vevo"/>
+              <IconTooltip iconName="vimeo"/>
               <IconTooltip iconName="youtube"/>
             </Col>
           </Row>
@@ -232,8 +234,10 @@ const UiIcons = () => (
               <Icon imgSrc="instagram" alert size="xxs" />
               <Icon imgSrc="linkedin" alert size="xxs" />
               <Icon imgSrc="pinterest" alert size="xxs" />
+              <Icon imgSrc="soundcloud" alert size="xxs" />
               <Icon imgSrc="twitter" alert size="xxs" />
               <Icon imgSrc="vevo" alert size="xxs" />
+              <Icon imgSrc="vimeo" alert size="xxs" />
               <Icon imgSrc="youtube" alert size="xxs" />
             </Col>
           </Row>

@@ -1,56 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
 
 const UNKNOWN = 0;
 const TRUE_VAL = 1;
 const FALSE_VAL = 2;
 
-const propTypes = {
-  value: PropTypes.oneOf([0, 1, 2, '0', '1', '2']),
-  onChange: PropTypes.func.isRequired,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  unsetText: PropTypes.string,
-  trueText: PropTypes.string,
-  falseText: PropTypes.string,
-  radius: PropTypes.string,
-  size: PropTypes.string,
-  width: PropTypes.string,
-  disabled: PropTypes.bool,
-};
-
-const defaultProps = {
-  value: UNKNOWN,
-  unsetText: 'Any',
-  trueText: 'Yes',
-  falseText: 'No',
-};
-
-const TrinaryControl = (props) => {
-  const {
-    value,
-    onChange,
-    className,
-    cssModule,
-    unsetText,
-    trueText,
-    falseText,
-    radius,
-    size,
-    width,
-    disabled,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
+const TrinaryControl = ({
+  value, onChange, className, unsetText, trueText, falseText, radius, size, width, disabled, ...attributes
+}) => {
+  const classes = classNames(
     className,
     'form-control',
-    size ? `form-control-${size}` : false,
-    radius ? `form-control-radius-${radius}` : false,
-    disabled ? 'form-control-disabled' : false,
-  ), cssModule);
+    {
+      'form-control-disabled': disabled,
+    },
+    {
+      [`form-control-radius-${radius}`]: !!radius,
+      [`form-control-${size}`]: !!size,
+    },
+  );
 
   return (
     <select className={classes} style={{ width }} value={parseInt(value, 10)} onChange={onChange} {...attributes} disabled={disabled}>
@@ -61,7 +30,29 @@ const TrinaryControl = (props) => {
   );
 };
 
-TrinaryControl.propTypes = propTypes;
-TrinaryControl.defaultProps = defaultProps;
+TrinaryControl.propTypes = {
+  className: PropTypes.string,
+  disabled: PropTypes.bool,
+  falseText: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+  radius: PropTypes.string,
+  size: PropTypes.string,
+  trueText: PropTypes.string,
+  unsetText: PropTypes.string,
+  value: PropTypes.oneOf([0, 1, 2, '0', '1', '2']),
+  width: PropTypes.string,
+};
+
+TrinaryControl.defaultProps = {
+  className: '',
+  disabled: false,
+  falseText: 'No',
+  radius: '',
+  size: '',
+  trueText: 'Yes',
+  unsetText: 'Any',
+  value: UNKNOWN,
+  width: '',
+};
 
 export default TrinaryControl;

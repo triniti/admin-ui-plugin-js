@@ -1,0 +1,570 @@
+// Main Nav
+//
+// Custom styles for main nav for desktop dropdown menu and mobile aside nav.
+
+.main-nav {
+  margin-right: auto;
+
+  .nav-link-desktop {
+    display: block;
+  }
+  .nav-link {
+    font-weight: 500;
+    position: relative;
+    transition: none;
+    white-space: nowrap;
+    letter-spacing: .008em;
+  }
+  @media (max-width: 1024px) {
+    background-color: $navbar-theme-light;
+  }
+}
+
+.navbar-dark .main-nav {
+  background-color: $navbar-theme-dark;
+}
+
+.navbar-dark .main-nav .dropdown-item {
+  color: $navbar-dark-color;
+}
+
+.navbar-dark .main-nav .dropdown-item:hover,
+.navbar-dark .main-nav .dropdown-item:focus {
+  color: $navbar-dark-hover-color;
+  background: $gray-rgba-500;
+}
+
+.navbar-dark .main-nav .dropdown-item.active:hover,
+.navbar-dark .main-nav .dropdown-item.active:focus,
+.navbar-dark .main-nav .dropdown-item.active,
+.navbar-dark .main-nav .dropdown-item:active {
+  color: $navbar-dark-active-color;
+  background: $gray-rgba-500;
+  box-shadow: inset 3px 0 0 0 theme-color("primary");
+}
+
+.navbar-dark .navbar-nav .active > .nav-link,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: $navbar-dark-active-color;
+}
+
+.main-nav .nav-item:not(.is-current) .nav-link.active,
+.main-nav .nav-item:not(.is-current) .nav-link:active  {
+  color: $navbar-light-color;
+}
+
+.navbar-dark .main-nav .nav-item:not(.is-current) .nav-link.active,
+.navbar-dark .main-nav .nav-item:not(.is-current) .nav-link:active {
+  color: $navbar-dark-color;
+}
+
+.navbar-main-wrapper {
+  z-index: $zindex-fixed + 11;
+  display: flex;
+  flex-direction: row;
+  padding: 0 !important;
+  box-shadow: inset 0 -1px 0 0 rgba(0,0,0,0.1);
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  flex: 0 0 auto;
+}
+
+@media (max-width: 1024px) {
+  .main-nav {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: auto;
+    left: -290px;
+    display: block !important;
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 290px;
+    height: calc(100vh - 2.5rem);
+    margin: 2.5rem 0 0 0;
+    padding: .5rem 0 3rem 0;
+    background-color: $navbar-theme-light-dropdown;
+    -webkit-overflow-scrolling: touch;
+    -webkit-backface-visibility: hidden;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    transition: left $transition;
+  }
+  .navbar-dark .main-nav {
+    background-color: $navbar-theme-dark-dropdown;
+  }
+  .main-nav .show .dropdown-divider {
+    display: block;
+    height: 1px;
+  }
+  .main-nav.is-active {
+    left: 0;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .4);
+  }
+  .navbar-dark .main-nav {
+    border-top: none;
+  }
+  .main-nav .navbar-nav .nav-link {
+    font-weight: 600;
+    position: relative;
+    padding: .75em 1em .75em 1.5em;
+    border-radius: 0;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: $navbar-light-active-color !important;
+  }
+  .navbar-light .navbar-nav .nav-item > .nav-link.active {
+    color: $navbar-light-active-color !important;
+  }
+  .navbar-dark .navbar-nav .nav-link {
+    color: $navbar-dark-hover-color !important;
+  }
+  .navbar-dark .navbar-nav .nav-item > .nav-link.active {
+    color: $navbar-dark-hover-color !important;
+  }
+  .main-nav .nav-link::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    margin: .5rem 0 .5rem -4px;
+    content: '';
+    transition: margin $transition;
+  }
+  .main-nav .show > .nav-link::before {
+    margin: .5rem 0;
+    background-color: $gray-rgba-600;
+  }
+  .navbar-dark .show > .nav-link::before {
+    margin: .5rem 0;
+    background-color: $white-rgba-500;
+  }
+  .navbar-light .is-current > .nav-link::before,
+  .navbar-dark .is-current > .nav-link::before {
+    margin: .5rem 0;
+    background-color: theme-color("primary");
+  }
+  .main-nav .nav-link.active::before {
+    margin: .5rem 0;
+    background-color: theme-color("primary");
+  }
+  .main-nav .nav-link[aria-haspopup='true']::after {
+    line-height: 1;
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+    display: inline-block;
+    width: 1rem;
+    min-width: 1em;
+    height: 1rem;
+    content: '';
+    transition: transform $transition;
+    transform: rotate(0deg);
+    text-align: center;
+    vertical-align: middle;
+    background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3e%3cpath d='M5.207 8.471l7.146 7.147-.707.707-7.853-7.854L11.647.618l.707.707-7.147 7.146z' fill='%23000000'/%3e%3c/svg%3e") center center / auto 14px no-repeat;
+  }
+  .navbar-dark .main-nav .nav-link[aria-haspopup='true']::after {
+    background: transparent url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 17 17'%3e%3cpath d='M5.207 8.471l7.146 7.147-.707.707-7.853-7.854L11.647.618l.707.707-7.147 7.146z' fill='%23ffffff'/%3e%3c/svg%3e") center center / auto 14px no-repeat;
+  }
+  .main-nav .show > .nav-link::after {
+    transform: rotate(-90deg);
+  }
+  .main-nav .nav-dropdown-menu {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-top: 0;
+    padding: 0 .5rem;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    overflow: hidden;
+    box-shadow: none;
+    transition: opacity $transition;
+  }
+  .main-nav .show .nav-dropdown-menu {
+    padding: .125rem .75rem .125rem 0;
+  }
+  .main-nav .navbar-nav .nav-dropdown-menu {
+    position: relative !important;
+    background: $gray-rgba-100;
+  }
+  .navbar-dark .main-nav .nav-dropdown-menu {
+    background: $gray-rgba-300;
+  }
+  .main-nav .nav-item .dropdown-item {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+  .main-nav .show .dropdown-item {
+    min-height: 2.25rem;
+    margin: 5px 0;
+    padding: .5rem 1rem .5rem 1.5rem;
+    opacity: 1;
+    border-top-right-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+  }
+}
+
+@media (min-width: 1025px) {
+  .navbar-main-mobile .navbar-toggler {
+    display: none;
+  }
+  .main-nav .navbar-nav {
+    flex-direction: row;
+  }
+  .main-nav .navbar-nav .nav-link {
+    font-size: .8rem;
+    padding: 1.25rem .75rem;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .navbar-main-wrapper .nav-item > .dropdown-menu {
+    display: none;
+  }
+  .navbar-main-wrapper .is-current .nav-link::after,
+  .navbar-main-wrapper .is-current .nav-link-icon.nav-link::after {
+    position: absolute;
+    right: 0;
+    bottom: .625rem;
+    left: 0;
+    display: block;
+    height: 3px;
+    margin: 0 .6rem;
+    content: '';
+    background-color: theme-color("primary");
+  }
+  .navbar-main-wrapper .navbar-nav .nav-item:hover .nav-link {
+    position: relative;
+    z-index: 1001;
+    transition: none;
+  }
+  .navbar-main-wrapper .navbar-nav .nav-item:hover .nav-link,
+  .navbar-main-wrapper .navbar-nav .nav-link:hover {
+    position: relative;
+    background: $white;
+    box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600, inset 0 -1px 0 0 rgba(0,0,0,0.1);
+  }
+  .navbar-main-wrapper .navbar-nav .dropdown:hover .nav-link {
+    box-shadow: inset 1px 0 0 0 $gray-600, inset -1px 0 0 0 $gray-600, 0 1px 0 0 $navbar-theme-light;
+  }
+  .navbar-dark .dropdown:hover .nav-link:before {
+    background-color: $navbar-theme-dark-dropdown;
+  }
+  .navbar-main-wrapper.navbar-dark .navbar-nav .nav-item:hover .nav-link,
+  .navbar-main-wrapper.navbar-dark .navbar-nav .navbar-nav .nav-link:hover {
+    background: $navbar-theme-dark-dropdown;
+    box-shadow: none;
+  }
+  .navbar-nav .nav-dropdown-menu {
+    position: absolute;
+    z-index: $zindex-sticky;
+    top: 100% !important;
+    left: 0;
+    float: left;
+    min-width: 13rem;
+    margin: -4px 0 0 0;
+    padding: .3rem 0;
+    list-style: none;
+    text-align: left;
+    color: $body-color;
+    border-top-color: transparent;
+    border-radius: $border-radius-lg;
+    background: $white;
+    background-clip: padding-box;
+    box-shadow: 0 1px 16px -2px $gray-rgba-600, 0 0 0 1px rgba($black, .05);
+    transform: none !important;
+  }
+  .navbar-main-wrapper .navbar-nav .nav-dropdown-menu {
+    margin: 0;
+    border-radius: 0 0 $border-radius-lg $border-radius-lg;
+    box-shadow: 0 10px 16px -8px $gray-rgba-600;
+    border-top: none;
+  }
+  .navbar-dark .navbar-nav .nav-dropdown-menu {
+    border: none;
+    border-top: 1px solid $navbar-theme-dark-dropdown;
+    background: $navbar-theme-dark-dropdown;
+  }
+  .main-nav .nav-item:hover > .dropdown-menu {
+    display: block;
+  }
+  .nav-dropdown-menu.dropdown-menu-right {
+    right: 0;
+    left: auto;
+  }
+  .nav-dropdown-menu.dropdown-menu-right::before,
+  .nav-dropdown-menu.dropdown-menu-right::after {
+    right: .7rem;
+    left: auto;
+  }
+  .nav-dropdown-menu .dropdown-item {
+    position: relative;
+    width: 100%;
+    margin: .25rem 0;
+    padding: .5rem 1rem .5rem 1rem;
+    border-radius: 0;
+  }
+  .navbar-dark .dropdown-item:focus,
+  .navbar-dark .dropdown-item:hover,
+  .navbar-dark .dropdown-item.active,
+  .navbar-dark .dropdown-item:active {
+    background: $gray-rgba-600;
+  }
+  .navbar-dark .dropdown-divider {
+    background-color: $gray-rgba-600;
+  }
+  .main-nav .dropdown-item.active::before {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 3px;
+    height: 100%;
+    margin-left: 0;
+    content: '';
+    background-color: theme-color("primary");
+  }
+  .navbar-light .navbar-nav .show:not(.is-current) > .nav-link {
+    color: $navbar-light-color;
+
+    &:hover {
+      color: $navbar-light-hover-color;
+    }
+  }
+  .navbar-dark .navbar-nav .show:not(.is-current) > .nav-link {
+    color: $navbar-dark-color;
+
+    &:hover {
+      color: $navbar-dark-hover-color;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav .navbar-nav .nav-link {
+    padding: 1.25rem .75rem;
+  }
+  .main-nav .is-current .nav-link::after {
+    margin: 0 .7rem;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1399px) {
+  .btn-nav {
+    margin-top: -.25rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-nav .navbar-nav .nav-link {
+    padding: 1.5rem 1.1rem 1.5rem 1.1rem;
+  }
+  .main-nav .is-current .nav-link::after,
+  .main-nav .is-current .nav-link-icon.nav-link::after {
+    bottom: .9rem;
+    margin: 0 1rem;
+  }
+}
+
+
+// User Nav
+//
+// Wrapper, container, nav tabs and usernav btn
+
+.usernav-wrapper {
+  position: absolute;
+  z-index: 1039;
+  top: 0;
+  right: 0;
+  left: auto;
+}
+
+.usernav-container {
+  position: relative;
+  top: 0;
+  right: -1rem;
+  left: auto;
+  display: flex;
+  width: 300px;
+  height: 100vh;
+  margin-right: -300px;
+  background-color: $white;
+  transition: all $transition;
+  box-shadow: $shadow-depth-8;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.usernav-container.offcanvas-right {
+  right: 0;
+  margin-right: 0;
+}
+
+.usernav-container .navbar-tabs-item {
+  flex: 1 1 auto;
+}
+
+.btn-usernav {
+  position: absolute;
+  top: .2rem;
+  right: .5rem;
+  border: none;
+  width: 2.125rem;
+  height: 2.125rem;
+  padding: 2px 0 0 0;
+  font-size: .825rem;
+  letter-spacing: 0;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border-radius: $round;
+  transition: all $transition;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  color: $body-color;
+
+  & span {
+    opacity: .625;
+  }
+
+  &:hover,
+  &:active {
+    box-shadow: 0 0 0 2px rgba(#000, .25);
+    cursor: pointer;
+
+    & span {
+      opacity: 1;
+    }
+  }
+  @media (min-width: 1025px) {
+    top: .625rem;
+    right: 1rem;
+  }
+  @media (min-width: 1200px) {
+    top: .8rem;
+    right: 1.125rem;
+  }
+  @media (min-width: 1400px) {
+    top: 1rem;
+    right: 1.25rem;
+  }
+}
+
+.navbar-dark .btn-usernav {
+  color: $white;
+
+  &:hover,
+  &:active {
+    opacity: 1;
+    box-shadow: 0 0 0 2px rgba(#fff, .25);
+  }
+}
+
+.badge-usernav {
+  position: absolute;
+  top: -5px;
+  right: -6px;
+  display: inline-block;
+  padding: .33em .6em;
+  color: $white;
+  background-color: theme-color("warning");
+  font-size: 75%;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: $round;
+  line-height: 1.1;
+  vertical-align: text-top;
+  opacity: 1;
+
+  @media (max-width: 1024px) {
+    top: -3px;
+    right: -7px;
+  }
+}
+
+// Mobile Nav
+//
+// Custom styles for mobile navbar, navbar toggler button, and navbar brand.
+
+.navbar-main-mobile {
+  display: flex;
+}
+
+@media (max-width: 1024px) {
+  .navbar-main-mobile {
+    display: flex;
+    flex-direction: row;
+    height: 2.5rem;
+    flex: 1 0 auto;
+    justify-content: space-between;
+    background-color: $gray-200;
+    align-items: center;
+    box-shadow: inset 0 -1px 0 0 $gray-rgba-300;
+  }
+  .navbar-light .navbar-main-mobile {
+    background-color: $navbar-theme-light;
+  }
+  .navbar-dark .navbar-main-mobile {
+    background-color: $navbar-theme-dark;
+  }
+}
+
+.navbar-main-brand {
+  width: 130px;
+  height: 32px;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 2px;
+  }
+  @media (min-width: 1025px) {
+    width: $navbarlogo-width;
+    height: 2.125rem;
+    margin-right: 4.25rem !important;
+    margin-left: 1.25rem;
+    transition: all $transition;
+
+    &:hover {
+      // transform: scale(1.1);
+    }
+  }
+  @media (min-width: 1200px) {
+    width: $navbarlogo-width + .75rem;
+    height: 2.25rem;
+  }
+}
+
+.navbar-dark .navbar-main-brand {
+  // background: transparent $navbar-logo-dark center center / auto 1.3rem no-repeat;
+
+  @media (min-width: 1025px) {
+    // background-size: 80% auto;
+  }
+}
+
+.navbar-main-spacer {
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: inline-block;
+    width: 48px;
+  }
+}
+
+.svg-logo-fill {
+  fill: currentColor;
+}

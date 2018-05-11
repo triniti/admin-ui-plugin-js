@@ -156,7 +156,7 @@ Example extends Component {
   render() {
     return (
     <ButtonDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2} className="mb-4 w-100">
-      <DropdownToggle caret outline color="light" className="justify-content-between w-100">
+      <DropdownToggle caret outline color="light" size="lg" className="justify-content-between w-100">
         <span className="ml-auto mr-auto">Button Dropdown</span>
       </DropdownToggle>
       <DropdownMenu right arrow="right">
@@ -174,7 +174,7 @@ Example extends Component {
             </Collapse>
             <CardBody indent>
               <ButtonDropdown isOpen={this.state.dropdownOpen2} toggle={this.toggle2} className="mb-4 w-100">
-                <DropdownToggle caret outline color="light" className="justify-content-between w-100">
+                <DropdownToggle caret outline size="lg" color="light" className="justify-content-between w-100">
                   <span className="ml-auto mr-auto">Button Dropdown</span>
                 </DropdownToggle>
                 <DropdownMenu right arrow="right">
@@ -192,7 +192,7 @@ Example extends Component {
             <CardHeader>
               ButtonDropdown with Icon & Arrows
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode3} active={this.state.collapseCode3}>
-                <Icon imgSrc="code" size="md"/>
+                <Icon imgSrc="code" size="md" />
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode3}>

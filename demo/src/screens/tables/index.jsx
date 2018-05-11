@@ -2,7 +2,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Collapse, Icon,  Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon,  Row, Screen, Table } from '../../../../src/components';
 
 class Tables extends React.Component {
     constructor(props) {
@@ -100,7 +100,7 @@ import { Table } from '@triniti/admin-ui-plugin/components';
 export default class Example extends React.Component {
   render() {
     return (
-    <Table>
+    <Table borderless hover>
         <thead>
           <tr>
             <th>Status</th>
@@ -162,7 +162,31 @@ export default class Example extends React.Component {
           </CardBody>
         </Collapse>
         <CardBody>
-          <Table>
+          <Row className="mb-3">
+            <Col>
+              <span className="status-copy status-archived">Archived</span>
+              <span className="status-copy status-deleted">Deleted</span>
+              <span className="status-copy status-draft">Draft</span>
+              <span className="status-copy status-expired">Expired</span>
+              <span className="status-copy status-pending">Pending</span>
+              <span className="status-copy status-published">Published</span>
+              <span className="status-copy status-scheduled">Scheduled</span>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <small className="status-copy status-archived">Archived</small>
+              <small className="status-copy status-deleted">Deleted</small>
+              <small className="status-copy status-draft">Draft</small>
+              <small className="status-copy status-expired">Expired</small>
+              <small className="status-copy status-pending">Pending</small>
+              <small className="status-copy status-published">Published</small>
+              <small className="status-copy status-scheduled">Scheduled</small>
+            </Col>
+          </Row>
+        </CardBody>
+        <CardBody>
+          <Table hover sticky="head">
             <thead>
               <tr>
                 <th>Status</th>
@@ -178,17 +202,17 @@ export default class Example extends React.Component {
                 <td>Gregg</td>
                 <td>@archived</td>
               </tr>
-              <tr className="status-draft">
-                <th scope="row">Draft</th>
-                <td>Albert</td>
-                <td>Wei</td>
-                <td>@draft</td>
-              </tr>
               <tr className="status-deleted">
                 <th scope="row">Deleted</th>
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@deleted</td>
+              </tr>
+              <tr className="status-draft">
+                <th scope="row">Draft</th>
+                <td>Albert</td>
+                <td>Wei</td>
+                <td>@draft</td>
               </tr>
               <tr className="status-expired">
                 <th scope="row">Expired</th>
@@ -219,8 +243,79 @@ export default class Example extends React.Component {
         </CardBody>
       </Card>,
 
+      <h2 key="cardtitle1" className="h4 mt-4 pb-1">Scrollable tbody className="sticky-tbody"</h2>,
+
+      <Card key="table01">
+        <Table size="sm" sticky="body">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+          </tr>
+          </tbody>
+        </Table>
+      </Card>,
+
       <Card key="table1">
-        <Table size="sm" stickyTop fixed>
+        <Table size="sm" fixed className="sticky-top">
           <thead>
           <tr>
             <th>#</th>
@@ -375,18 +470,16 @@ import { Table } from '@triniti/admin-ui-plugin/components';
 export default class Example extends React.Component {
   render() {
     return (
-      <Table striped className="sticky-top fixed">
-          <thead>
+      <Table striped hover sticky="head">
+        <thead>
           <tr>
             <th>#</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Username</th>
           </tr>
-          </thead>
-        </Table>
-        <Table striped hover className="fixed mb-0">
-          <tbody>
+        </thead>
+        <tbody>
           <tr>
             <th scope="row">1</th>
             <td>Mark</td>
@@ -405,7 +498,7 @@ export default class Example extends React.Component {
             <td>the Bird</td>
             <td>@twitter</td>
           </tr>
-          </tbody>
+        </tbody>
      </Table>
     );
   }
@@ -416,7 +509,7 @@ export default class Example extends React.Component {
       </Card>,
 
       <Card key="table3">
-        <Table striped className="sticky-top fixed">
+        <Table striped hover sticky="head">
           <thead>
           <tr>
             <th>#</th>
@@ -425,8 +518,6 @@ export default class Example extends React.Component {
             <th>Username</th>
           </tr>
           </thead>
-        </Table>
-        <Table striped hover className="fixed mb-0">
           <tbody>
           <tr>
             <th scope="row">1</th>

@@ -1,40 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { mapToCssModules } from '../utils';
 import './styles.scss';
 
-const propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
-  cssModule: PropTypes.object,
-  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
-};
-
-const defaultProps = {
-  tag: 'div',
-};
-
-const ScrollableContainer = (props) => {
-  const {
-    children,
-    className,
-    cssModule,
-    tag: Tag,
-    ...attributes
-  } = props;
-
-  const classes = mapToCssModules(classNames(
+const ScrollableContainer = ({ children, className, tag: Tag, ...attributes }) => {
+  const classes = classNames(
     className,
     'scrollable-container',
-  ), cssModule);
+  );
 
   return (
     <Tag {...attributes} className={classes}>{children}</Tag>
   );
 };
 
-ScrollableContainer.propTypes = propTypes;
-ScrollableContainer.defaultProps = defaultProps;
+ScrollableContainer.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string,
+  tag: PropTypes.oneOfType([PropTypes.func, PropTypes.string]),
+};
+
+ScrollableContainer.defaultProps = {
+  className: '',
+  tag: 'div',
+};
 
 export default ScrollableContainer;

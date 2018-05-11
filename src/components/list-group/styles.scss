@@ -25,9 +25,9 @@
     z-index: 0;
   }
 
-  .screen-sidebar & {
+  .screen-sidebar .list-group:not(.list-group-chat) & {
     padding: 0.675rem 1rem;
-    border: $gray-500;
+    border-color: $gray-500;
   }
 }
 
@@ -199,6 +199,16 @@
 
 .list-group-history {
   position: relative;
+
+  .list-group-item {
+    border: 0;
+    border-radius: 0;
+  }
+
+  .list-group-item::before,
+  .list-group-item::after {
+    border: none;
+  }
 
   &::before {
     position: absolute;

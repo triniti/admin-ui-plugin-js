@@ -2,6 +2,8 @@
 
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/buttons";
+@import "~bootstrap/scss/button-group";
+@import "../app/mixins";
 
 //
 // Base styles
@@ -10,6 +12,7 @@
 .btn {
   position: relative;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
   margin-right: 0.5rem;
@@ -17,7 +20,7 @@
   box-shadow: $shadow-depth-0;
 
   .screen-primary-actions & {
-    box-shadow: $shadow-depth-3;
+    box-shadow: $shadow-depth-3 !important;
   }
 
   &:hover,
@@ -42,6 +45,13 @@
     background: theme-color("secondary");
     border-color: darken(theme-color("secondary"), 5%);
   }
+
+  form &:hover,
+  .form-inline &:hover,
+  .form-group &:hover,
+  .input-group &:hover {
+    box-shadow: $hover-shadow;
+  }
 }
 
 .btn-icon {
@@ -60,11 +70,14 @@
 @each $color, $value in $theme-colors {
   .btn-#{$color} {
     border-color: darken($value, 5%);
+    border-bottom-color: shade(darken($value, 8%), 6%);
   }
   .btn-outline-#{$color} {
+
     &:hover,
     &:focus {
       border-color: darken($value, 5%);
+      border-bottom-color: shade(darken($value, 8%), 6%);
     }
   }
 }
@@ -80,11 +93,21 @@
 .screen-header-container .btn,
 .sidenav-header .btn,
 .form-inline .btn,
+.modal-header .btn,
 .modal-footer .btn,
 .btn-group .btn,
+.btn-toolbar .btn,
 .input-group-btn .btn,
 .btn-group-vertical .btn {
   margin-bottom: 0;
+}
+
+.btn-group,
+.btn-group-vertical {
+
+  > .btn {
+    margin-right: 0;
+  }
 }
 
 .input-group .btn {
@@ -350,6 +373,7 @@
   letter-spacing: 0;
   border-radius: $round;
   display: inline-flex;
+  flex-shrink: 0;
   align-items: center;
   justify-content: center;
 

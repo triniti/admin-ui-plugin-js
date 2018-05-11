@@ -63,6 +63,7 @@ input.switch-input:checked + label:after {
 
 .switch-input + label span {
   position: relative;
+  display: flex;
   flex-shrink: 0;
   align-self: flex-start;
   padding: 0 $form-check-height-sm/2 0 ($form-check-height-sm + .125rem);

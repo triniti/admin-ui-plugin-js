@@ -59,12 +59,27 @@
 // Top section of the modal w/ title and dismiss
 .modal-header {
   background-color: $gray-100;
-  @include border-radius($modal-content-border-radius);
+  border-radius: $modal-content-border-radius $modal-content-border-radius 0 0;
+
 
   & .modal-title {
     margin-bottom: 0;
     line-height: $modal-title-line-height;
   }
+  & .close {
+    align-self: flex-start;
+  }
+  &.py-0 .close {
+    margin-top: 0;
+  }
+}
+
+.modal-title {
+  display: flex;
+  flex: 1 1 100%;
+  /* justify-content: space-between; */
+  align-items: center;
+  width: 100%;
 }
 
 .modal-headline {
@@ -83,7 +98,7 @@
     padding: $modal-inner-padding;
     font-size: 1em;
   }
-  & p:last-child {
+  & > p:last-child {
     margin-bottom: .5rem;
   }
 }
@@ -107,10 +122,9 @@
 }
 
 @media (max-width: 767px) {
-  .modal-lg {
-    max-width: calc(100% - 1rem) !important;
-  }
-  .modal-xl {
+  .modal-lg,
+  .modal-xl,
+  .modal-xxl {
     max-width: calc(100% - 1rem) !important;
   }
 }
@@ -123,6 +137,25 @@
   .modal-xl {
     width: calc(100% - 1rem);
     max-width: $modal-xl;
+  }
+  .modal-xxl {
+    width: calc(100% - 1rem);
+    max-width: $modal-xxl;
+  }
+}
+
+@media (min-width: 1200px) {
+  .modal-lg {
+    width: calc(100% - 2rem);
+    max-width: $modal-lg;
+  }
+  .modal-xl {
+    width: calc(100% - 2rem);
+    max-width: $modal-xl;
+  }
+  .modal-xxl {
+    width: calc(100% - 2rem);
+    max-width: $modal-xxl;
   }
 }
 
