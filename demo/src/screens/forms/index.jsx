@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, InputNumber, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -47,7 +47,7 @@ class UiForm extends React.Component {
 
   sliderChange(e) {
     this.setState({
-      value: e.target.value,
+      value: parseFloat(e.target.value),
     });
   }
 
@@ -132,10 +132,10 @@ class UiForm extends React.Component {
                   It's a bit lighter and easily wraps to a new line.
                       </FormText>
                     </FormGroup>
-                    <FormGroup className="m4-3">
+                    <FormGroup className="mb-3">
                       <FormGroup inline>
-                        <Input type="range" min="0" max="10" step=".1" value={this.state.value} onChange={this.sliderChange} />
-                        <Input type="number" className="ml-3" size="sm" style={{ width: '80px' }} value={this.state.value} onChange={this.sliderChange} />
+                        <Input style={{ width: '100px' }} type="range" min="0" max="10" step=".1" name="rangeslider1" id="rangeslider1" value={this.state.value} onChange={this.sliderChange} />
+                        <span className="ml-3" style={{ width: '80px' }}><InputNumber size="sm" min={0} max={100} step={0.1} name="inputnumber1" id="inputnumber1" value={this.state.value} /></span>
                       </FormGroup>
                     </FormGroup>
                     <FormGroup tag="fieldset">
@@ -208,36 +208,37 @@ class UiForm extends React.Component {
                 <Col sm="12">
                   <Form inline className="mb-4">
                     <FormGroup>
-                      <Label for="exampleEmail4" hidden>Email</Label>
-                      <Input type="email" name="email" id="exampleEmail4" placeholder="Email" radius="round" />
+                      <Label for="exampleEmail4" hidden className="mb-2">Email</Label>
+                      <Input type="email" name="email" id="exampleEmail4" placeholder="Email" radius="round" className="mb-2" />
                     </FormGroup>
 
                     <FormGroup>
-                      <Label for="examplePassword4" hidden>Password</Label>
+                      <Label for="examplePassword4" hidden className="mb-2">Password</Label>
                       <Input
                         type="password"
                         name="password"
                         id="examplePassword4"
                         placeholder="Password"
                         radius="round"
+                        className="mb-2"
                       />
                     </FormGroup>
 
-                    <Button outline radius="round">Submit</Button>
+                    <Button outline radius="round" className="mb-2">Submit</Button>
                   </Form>
                   <CardTitle tag="h4">Card Title H4</CardTitle>
                   <Form inline className="mb-3">
                     <FormGroup>
-                      <Label for="exampleEmail" className="mr-2">Email</Label>{' '}
-                      <Input type="email" name="email" id="exampleEmail5" placeholder="something@idk.cool" size="sm" />
+                      <Label for="exampleEmail" className="mr-2 mb-2">Email</Label>{' '}
+                      <Input type="email" name="email" id="exampleEmail5" placeholder="something@idk.cool" size="sm" className="mb-2" />
                     </FormGroup>
                     {' '}
                     <FormGroup>
-                      <Label for="examplePassword" className="mr-2">Password</Label>{' '}
-                      <Input type="password" name="password" id="examplePassword5" placeholder="don't tell!" size="sm" />
+                      <Label for="examplePassword" className="mr-2 mb-2">Password</Label>{' '}
+                      <Input type="password" name="password" id="examplePassword5" placeholder="don't tell!" size="sm" className="mb-2" />
                     </FormGroup>
                     {' '}
-                    <Button color="info" size="sm">Submit</Button>
+                    <Button color="info" size="sm" className="mb-2 align-self-end">Submit</Button>
                   </Form>
                 </Col>
               </Row>
@@ -266,9 +267,15 @@ class UiForm extends React.Component {
                       <Label for="exampleUrl">Url</Label>
                       <Input type="url" name="url" id="exampleUrl2" placeholder="url placeholder" />
                     </FormGroup>
-                    <FormGroup>
-                      <Label for="exampleNumber">Number</Label>
-                      <Input type="number" name="number" id="exampleNumber2" placeholder="number placeholder" />
+                    <FormGroup row>
+                      <Col style={{ maxWidth: '160px'}}>
+                        <Label for="exampleNumber2">Number</Label>
+                        <InputNumber min={0} max={100} value={50} step={0.1} name="number2" id="exampleNumber2" placeholder="number placeholder"/>
+                      </Col>
+                      <Col style={{ maxWidth: '160px'}}>
+                        <Label for="exampleNumber4">Number Mobile</Label>
+                        <InputNumber min={0} max={100} value={50} mobile name="number4" id="exampleNumber4" placeholder="number placeholder"/>
+                      </Col>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleDatetime">Datetime</Label>
@@ -367,40 +374,40 @@ class UiForm extends React.Component {
           <Card key="form6">
             <CardHeader>Trinary Control - Default</CardHeader>
             <CardBody indent>
-              <Row>
-                <Col xs="3" md="4">
-                  <Form inline className="mb-4">
+              <Row className="mb-4">
+                <Col xs="12" lg="4" xl="3">
+                  <Form inline>
                     <FormGroup>
-                      <TrinaryControl name="trinaryDefault" id="trinaryDefault1" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                      <TrinaryControl className="mr-2 d-inline-block" name="trinaryDefault" id="trinaryDefault1" width="6rem" onChange={this.handleChange} value={this.state.trinaryDefault} />
                       <Label>Staff</Label>
                     </FormGroup>
                   </Form>
                 </Col>
-                <Col xs="6">
+                <Col xs="12" sm="6" className="pt-2">
                   <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
                 </Col>
               </Row>
-              <Row>
-                <Col xs="3" md="4">
-                  <Form inline className="mb-4">
+              <Row className="mb-4">
+                <Col xs="12" lg="4" xl="3">
+                  <Form inline>
                     <FormGroup>
-                      <TrinaryControl name="trinaryDefault" id="trinaryDefault2" size="sm" width="6rem" radius="round" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+                      <TrinaryControl className="mr-2 d-inline-block" name="trinaryDefault" id="trinaryDefault2" size="sm" width="6rem" radius="round" onChange={this.handleChange} value={this.state.trinaryDefault} />
                       <Label>Staff</Label>
                     </FormGroup>
                   </Form>
                 </Col>
-                <Col xs="6">
+                <Col xs="12" sm="6" className="pt-2">
                   <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
                 </Col>
               </Row>
-              <Row>
-                <Col xs="3" md="4">
-                  <FormGroup inline className="mb-4">
-                    <TrinaryControl name="trinaryDefault" id="trinaryDefault3" size="sm" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
+              <Row className="mb-4">
+                <Col xs="12" lg="4" xl="3">
+                  <FormGroup inline>
+                    <TrinaryControl className="mr-2 d-inline-block" name="trinaryDefault" id="trinaryDefault3" size="sm" width="6rem" className="mr-2" onChange={this.handleChange} value={this.state.trinaryDefault} />
                     <Button color="info" size="sm">Submit</Button>
                   </FormGroup>
                 </Col>
-                <Col xs="6">
+                <Col xs="12" sm="6" className="pt-2">
                   <span>Selected Value: {`${this.state.trinaryDefault}`}</span>
                 </Col>
               </Row>
@@ -410,22 +417,22 @@ class UiForm extends React.Component {
           <Card key="form7">
             <CardHeader>Trinary Control - Custom</CardHeader>
             <CardBody indent>
-              <Row>
-                <Col xs="3" md="4" className="mb-3">
+              <Row className="mb-4">
+                <Col xs="12" lg="4" xl="3">
                   <TrinaryControl name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="round" size="sm" width="105px" value={this.state.trinaryCustom} onChange={this.handleChange} />
                 </Col>
-                <Col xs="6">
+                <Col  xs="12" sm="6" className="pt-2">
                   <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
                 </Col>
               </Row>
-              <Row>
-                <Col xs="3" md="4">
+              <Row className="mb-4">
+                <Col xs="12" lg="4" xl="3">
                   <FormGroup disabled inline>
                     <Label check className="mr-2">Disabled</Label>
                     <TrinaryControl disabled name="trinaryCustom" unsetText="Any User" trueText="Is Staff" falseText="Non Staff" radius="none" width="120px" value={this.state.trinaryCustom} onChange={this.handleChange} />
                   </FormGroup>
                 </Col>
-                <Col xs="6">
+                <Col xs="12" sm="6" className="pt-2">
                   <span>Selected Value: {`${this.state.trinaryCustom}`}</span>
                 </Col>
               </Row>

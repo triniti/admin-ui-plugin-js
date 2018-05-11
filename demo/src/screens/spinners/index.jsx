@@ -19,7 +19,7 @@ const UiSpinners = () => (
         <CardBody indent>
           <Row>
             <Col>
-              <Spinner className="mb-3 mr-3" color="#03caa5" width="16" strokeWidth="10" />
+              <Spinner className="mb-3 mr-3" color="#08a0e8" width="12" strokeWidth="10" />
               <Spinner className="mb-3 mr-3" color="#7a7a7c" width="24" strokeWidth="4" />
               <Spinner className="mb-3 mr-3" color="#08a0e8" strokeWidth="10" />
               <Spinner className="mb-3 mr-3" color="black" width="48" />

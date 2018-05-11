@@ -42,6 +42,7 @@
   },
   "dependencies": {
     "react-datepicker": "^1.4.1",
+    "react-numeric-input": "^2.2.3",
     "react-select": "^1.2.1",
     "react-stepper-horizontal": "^1.0.10",
     "reactstrap": "^6.0.1"
