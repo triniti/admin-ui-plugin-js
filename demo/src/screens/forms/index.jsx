@@ -9,12 +9,13 @@ class UiForm extends React.Component {
     super(props);
 
     this.handleChange = this.handleChange.bind(this);
+    this.handleInputNumberChange = this.handleInputNumberChange.bind(this);
+    this.handleSliderChange = this.handleSliderChange.bind(this);
     this.handleSwitch = this.handleSwitch.bind(this);
-    this.sliderChange = this.sliderChange.bind(this);
     this.state = {
       trinaryDefault: 0,
       trinaryCustom: 1,
-      value: 3,
+      inputNumberValue: 3,
       isSwitchOn: false,
     };
   }
@@ -45,9 +46,17 @@ class UiForm extends React.Component {
     });
   }
 
-  sliderChange(e) {
+  handleInputNumberChange(valueAsNumber, valueAsString, inputElem) {
+    // The callback is special to the InputNumber component
+    // console.log(valueAsNumber, valueAsString, inputElem);
     this.setState({
-      value: parseFloat(e.target.value),
+      inputNumberValue: valueAsNumber,
+    });
+  }
+
+  handleSliderChange(e) {
+    this.setState({
+      inputNumberValue: parseFloat(e.target.value),
     });
   }
 
@@ -134,8 +143,10 @@ class UiForm extends React.Component {
                     </FormGroup>
                     <FormGroup className="mb-3">
                       <FormGroup inline>
-                        <Input style={{ width: '100px' }} type="range" min="0" max="10" step=".1" name="rangeslider1" id="rangeslider1" value={this.state.value} onChange={this.sliderChange} />
-                        <span className="ml-3" style={{ width: '80px' }}><InputNumber size="sm" min={0} max={100} step={0.1} name="inputnumber1" id="inputnumber1" value={this.state.value} /></span>
+                        <Input style={{ width: '100px' }} type="range" min="0" max="10" step=".1" name="rangeslider1" id="rangeslider1" value={this.state.inputNumberValue} onChange={this.handleSliderChange} />
+                        <span className="ml-3" style={{ width: '80px' }}>
+                          <InputNumber size="sm" min={0} max={100} step={0.1} name="inputnumber1" id="inputnumber1" value={this.state.inputNumberValue} onChange={this.handleInputNumberChange} />
+                        </span>
                       </FormGroup>
                     </FormGroup>
                     <FormGroup tag="fieldset">
