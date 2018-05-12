@@ -4,7 +4,7 @@ import NumericInput from 'react-numeric-input';
 import classNames from 'classnames';
 import './styles.scss';
 
-const InputNumber = ({ className, radius, size, theme, onChange, ...attributes }) => {
+const InputNumber = ({ className, radius, size, theme, ...attributes }) => {
   const classes = classNames(
     className,
     'form-control',
@@ -15,7 +15,7 @@ const InputNumber = ({ className, radius, size, theme, onChange, ...attributes }
     },
   );
 
-  return <NumericInput {...attributes} className={classes} onChange={onChange} />;
+  return <NumericInput {...attributes} className={classes} />;
 };
 
 InputNumber.propTypes = {
@@ -23,7 +23,6 @@ InputNumber.propTypes = {
   radius: PropTypes.string,
   size: PropTypes.string,
   theme: PropTypes.string,
-  onChange: PropTypes.func,
 };
 
 InputNumber.defaultProps = {
@@ -31,7 +30,6 @@ InputNumber.defaultProps = {
   radius: '',
   size: '',
   theme: '',
-  onChange: undefined,
 };
 
 export default InputNumber;
