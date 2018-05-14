@@ -436,7 +436,7 @@
   background: transparent;
   color: $body-color;
 
-  & span {
+  & span:first-child {
     opacity: .625;
   }
 
