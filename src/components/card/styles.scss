@@ -16,6 +16,12 @@
     margin: 0 0 1rem 0;
   }
 
+  &[class^="border-"],
+  &[class*=" border-"] {
+    border-width: 1px !important;
+    border-style: solid !important;
+  }
+
   .tab-pane > & {
     margin-top: 0;
   }
