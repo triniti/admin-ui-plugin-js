@@ -10,17 +10,21 @@ export default class SelectWithRefs extends React.Component {
       value: '',
     };
 
-    this.onChange = this.onChange.bind(this);
+    this.onSelectOptionChange = this.onSelectOptionChange.bind(this);
     this.getUsers = this.getUsers.bind(this);
   }
 
-  onChange(value) {
+  onSelectOptionChange(value) {
     this.setState({
       value,
     });
   }
 
   getUsers(input) {
+    if (!input) {
+      return Promise.resolve({ options: [] });
+    }
+
     return fetch(`https://api.github.com/search/users?q=${input}`)
       .then(response => response.json())
       .then(json => ({ options: json.items }));
@@ -36,7 +40,7 @@ export default class SelectWithRefs extends React.Component {
             async
             autoload={false}
             value={value}
-            onChange={this.onChange}
+            onChange={this.onSelectOptionChange}
             valueKey="id"
             labelKey="login"
             forwardRef={(el) => { this.selectorRef = el; }}

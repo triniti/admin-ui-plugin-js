@@ -32,7 +32,7 @@ export default () => (
       <Card key="select3">
         <CardHeader>Async Select with Refs prop (Github Users)</CardHeader>
         <CardBody indent>
-          <Label>This example also fetch github users asynchronous, but also with a init search for "dog" onOpen</Label>
+          <Label>This example also fetches github users asynchronously using an init search for "dog" onOpen</Label>
           <SelectWithRefs />
         </CardBody>
       </Card>,
