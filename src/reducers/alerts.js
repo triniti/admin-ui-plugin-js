@@ -8,11 +8,7 @@ const {
 
 export const initialState = [];
 
-const onAlertSent = (state, action) => {
-  const newState = state.slice();
-  newState.push(action.alert);
-  return newState;
-};
+const onAlertSent = (state, action) => [...state.slice(), action.alert];
 
 const onAlertDismissed = (state, { id }) => state.filter(alert => alert.id !== id);
 
