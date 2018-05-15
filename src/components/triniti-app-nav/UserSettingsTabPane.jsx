@@ -21,7 +21,7 @@ const UserSettingsTabPane = ({
         </Media>
 
         <Button block color="info" onClick={toggleTheme} radius="round">switch theme: {currentTheme}</Button>
-        <DropdownItem divider />
+        <DropdownItem divider className="mb-3"/>
         <Button block color="danger" onClick={onLogout} radius="round">Logout</Button>
       </CardBody>
     </ScrollableContainer>

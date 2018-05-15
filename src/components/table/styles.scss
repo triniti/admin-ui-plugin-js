@@ -163,7 +163,7 @@ tr > td:first-child {
     z-index: 1020;
     background-color: $white;
     overflow: auto;
-    box-shadow: 0 3px 2px -2px $gray-rgba-300, 0 1px 0 $white;
+    box-shadow: 0 3px 2px -2px $gray-rgba-300;
 
     & th {
       border: none;
