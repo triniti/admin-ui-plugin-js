@@ -48,7 +48,7 @@ class UiForm extends React.Component {
 
   /**
    * The callback is special to the InputNumber component
-   * Called with valueAsNumber, valueAsString and the input element.
+   * Called with "valueAsNumber", "valueAsString" and the "input" element as args.
    *
    * @param  {number} valueAsNumber represents the internal numeric value
    *
