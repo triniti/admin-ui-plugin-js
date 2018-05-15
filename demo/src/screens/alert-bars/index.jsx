@@ -2,7 +2,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Sidenav from '../../components/sidenav';
-import { Screen } from '../../../../src/components';
+import { Button, Screen } from '../../../../src/components';
+import sendAlert from '../../../../src/actions/sendAlert';
 
 const alerts = [
   {
@@ -73,14 +74,28 @@ const alerts = [
   },
 ];
 
+const testAlert = {
+  type: 'success',
+  isDismissible: true,
+  delay: 5000,
+  message: 'You just sent a test alert! This will dissmiss in 5 seconds!',
+};
+
 const AlertBarsScreen = props => (
   <Screen
     dispatch={props.dispatch}
-    alerts={alerts}
+    alerts={alerts.concat(props.testAlerts)}
     header="Alert Bars"
     sidenav={<Sidenav activeScreen="alert-bars" />}
     sidenavHeader
+    primaryActions={
+      <Button onClick={() => props.dispatch(sendAlert(testAlert))}>Send Test Alert</Button>
+    }
   />
 );
 
-export default connect()(AlertBarsScreen);
+const mapStateToProps = state => ({
+  testAlerts: state.adminUi.alerts,
+});
+
+export default connect(mapStateToProps)(AlertBarsScreen);
