@@ -143,26 +143,50 @@ const Example = (props) => {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td></td>
+                    <td>Adds label content with classes 'form-check-label checkbox-label'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">right</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Adds class 'radio-label-right' which changes flex order so that input is on the right of the label</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">size</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>'xs', 'sm', 'sd', 'md', 'lg'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">type</th>
+                    <td>string</td>
+                    <td>'radio'</td>
+                    <td></td>
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>
