@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch } from '../../../../src/components';
+import { Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch, Table } from '../../../../src/components';
 
 class UiButtons extends React.Component {
   constructor(props) {
@@ -465,6 +465,114 @@ class UiButtons extends React.Component {
                 <Icon imgSrc="trash" />
               </Button>
             </div>
+            </CardBody>
+          </Card>,
+
+          <Card key="props">
+            <CardHeader>Button Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">action</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Adds class 'btn-action'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">active</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">block</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">color</th>
+                    <td>string</td>
+                    <td>'light'</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">icon</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Adds class 'btn-icon' which adds a min-height of 40px, required for background images. Not required if adding Icon component inside.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">innerRef</th>
+                    <td>neOfType</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">onClick</th>
+                    <td>func</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">outline</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">outlineText</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Adds class 'btn-outline-text-*color'. Similar to outline but with grey border.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">radius</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>Adds class 'btn-radius-*radius' with values 'round', 'circle', 'none'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">size</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>'sm', 'lg', 'xl'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'button'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
             </CardBody>
           </Card>,
       ]}

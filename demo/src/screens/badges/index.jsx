@@ -178,15 +178,6 @@ export default class Example extends React.Component {
               <td>'span'</td>
               <td></td>
             </tr>
-            <tr>
-              <th scope="row">transition</th>
-              <td>bool</td>
-              <td>
-                ...Fade.defaultProps,
-                unmountOnExit: true,
-              </td>
-              <td></td>
-            </tr>
             </tbody>
           </Table>
         </CardBody>
