@@ -187,6 +187,7 @@ import twitterUserTimeline from './twitter-user-timeline.svg';
 import twitterVideo from './twitter-video.svg';
 import underline from './underline.svg';
 import unknown from './unknown.svg';
+import unlink from './unlink.svg';
 import unlocked from './unlocked.svg';
 import unlockedSolid from './unlocked-solid.svg';
 import upload from './upload.svg';
@@ -402,6 +403,7 @@ const icons = {
   'twitter-video': twitterVideo,
   underline,
   unknown,
+  unlink,
   unlocked,
   'unlocked-solid': unlockedSolid,
   upload,

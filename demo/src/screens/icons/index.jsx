@@ -186,6 +186,7 @@ const UiIcons = () => (
             <IconList iconName="tweet"/>
             <IconList iconName="underline"/>
             <IconList iconName="unknown"/>
+            <IconList iconName="unlink"/>
             <IconList iconName="unlocked"/>
             <IconList iconName="unlocked-solid"/>
             <IconList iconName="upload"/>
@@ -436,6 +437,7 @@ const UiIcons = () => (
               <IconTooltip iconName="tag-slanted"/>
               <IconTooltip iconName="tag-solid"/>
               <IconTooltip iconName="link"/>
+              <IconTooltip iconName="unlink"/>
               <IconTooltip iconName="paperclip"/>
               <IconTooltip iconName="delete-key"/>
               <IconTooltip iconName="code"/>

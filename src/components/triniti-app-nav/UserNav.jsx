@@ -11,7 +11,7 @@ const UserNav = ({
   toggleTheme,
 }) => (
   <div className="usernav-wrapper">
-    <Button radius="circle" className="btn-usernav" onClick={toggleUserNav}>
+    <Button radius="circle" color="usernav" onClick={toggleUserNav}>
       <Icon imgSrc="user" />
       <Badge color="warning" alert>3</Badge>
     </Button>
