@@ -46,9 +46,15 @@ class UiForm extends React.Component {
     });
   }
 
-  handleInputNumberChange(valueAsNumber, valueAsString, inputElem) {
-    // The callback is special to the InputNumber component
-    // console.log(valueAsNumber, valueAsString, inputElem);
+  /**
+   * The callback is special to the InputNumber component
+   * Called with valueAsNumber, valueAsString and the input element.
+   *
+   * @param  {number} valueAsNumber represents the internal numeric value
+   *
+   * @return void
+   */
+  handleInputNumberChange(valueAsNumber) {
     this.setState({
       inputNumberValue: valueAsNumber,
     });
