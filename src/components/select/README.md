@@ -14,6 +14,7 @@ className, radius, size, theme, async, creatable, component
 + __async:__ `PropTypes.bool` - When async is `true`, the Select component will uses ReactSelect.Async component. When both async and creatable are `true`, Select component will uses ReactSelect.AsyncCreatable component.
 + __creatable:__ `PropTypes.bool` - When creatable is `true`, the Select component will uses ReactSelect.Creatable component. When both async and creatable are `true`, Select component will uses ReactSelect.AsyncCreatable component.
 + __component:__ `PropTypes.func` - The Select component will uses this provided component no matter what `async` and `creatalbe` values are. It must be one of ReactSelect functions (ReactSelect, ReactSelect.Async, ReactSelect.Creatable, ReactSelect.AsyncCreatalbe);
++ __forwardRef:__ `PropTypes.func` - A function that will receive and forward ReactSelect's ref prop up the parent component);
 
 > All other props will pass thru to the final ReactSelect component.
 
@@ -21,12 +22,13 @@ className, radius, size, theme, async, creatable, component
 ```jsx harmony
 import { Select } from 'admin-ui';
 
-<Select async multi loadOptions={this.loadOptions} radius="round" />
+<Select async multi loadOptions={this.loadOptions} radius="round" forwardRef={(el) => { this.selectorRef = el; }} />
 ```
+
 
 ### this is equivalent to
 ```jsx harmony
 import Select from 'react-select';
 
-<Select.Async multi loadOptions={this.loadOptions} radius="round" />
+<Select.Async multi loadOptions={this.loadOptions} radius="round" ref={(el) => { this.selectorRef = el; }} />
 ```

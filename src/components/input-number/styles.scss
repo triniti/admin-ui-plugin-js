@@ -1,0 +1,26 @@
+// Input Number
+
+.react-numeric-input {
+
+  b {
+    border-width: 1px !important;
+    box-shadow: none !important;
+    background-color: $white !important;
+
+    &:hover {
+      border-color: theme-color('info');
+      cursor: pointer !important;
+
+      i {
+        box-shadow: inset 0 0 0 2px theme-color('info');
+        border-color: transparent transparent theme-color('info') !important;
+      }
+    }
+
+    &:last-child:hover {
+      i {
+        border-color: theme-color('info') transparent transparent !important;
+      }
+    }
+  }
+}

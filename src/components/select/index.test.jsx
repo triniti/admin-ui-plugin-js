@@ -1,6 +1,7 @@
 import React from 'react';
 import test from 'tape';
 import { mount, shallow } from 'enzyme';
+import sinon from 'sinon';
 import ReactSelect from 'react-select';
 import Select from './';
 
@@ -55,5 +56,15 @@ test('Select:: should import ReactSelect and render custom props and classNames'
   t.equal(wrapper.find('.select-form-control-lg').length, 1);
   t.equal(wrapper.find('.select-form-control-theme-light').length, 1);
 
+  t.end();
+});
+
+test('Select:: should should call the forwardRef method to lift ReactSelect ref up', (t) => {
+  const forwardRef = sinon.spy();
+  const wrapper = mount(<Select forwardRef={forwardRef} />);
+
+  t.true(forwardRef.calledOnce);
+
+  wrapper.unmount();
   t.end();
 });

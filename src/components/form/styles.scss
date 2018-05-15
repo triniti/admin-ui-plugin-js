@@ -134,6 +134,7 @@ label {
 .switch-input-label,
 .checkbox-input-label,
 .form-check-inline > label {
+  margin-bottom: 0;
   font-size: $font-size-base;
   text-transform: none;
   opacity: 1;
@@ -414,4 +415,11 @@ input[type="checkbox"] {
 .form-radio-inline + .form-radio-inline,
 .form-radio-inline + .form-check-inline {
     padding-top: 0;
+}
+
+.form-inline {
+
+  .form-control {
+    max-width: 100%;
+  }
 }

@@ -1,9 +1,10 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import AsyncSelectField from './asyncselect';
-import InputSelectField from './inputselect';
-import MultiSelectField from './multiselect';
+import AsyncSelectField from './AsyncSelect';
+import InputSelectField from './InputSelect';
+import MultiSelectField from './MultiSelect';
+import SelectWithRefs from './SelectWithRefs';
 import { Button, Card, CardBody, CardHeader, Form, FormGroup, Icon, Input, InputGroup, InputGroupAddon, Label, Screen } from '../../../../src/components';
 
 export default () => (
@@ -29,6 +30,14 @@ export default () => (
       </Card>,
 
       <Card key="select3">
+        <CardHeader>Async Select with Refs prop (Github Users)</CardHeader>
+        <CardBody indent>
+          <Label>This example also fetches github users asynchronously using an init search for "dog" onOpen</Label>
+          <SelectWithRefs />
+        </CardBody>
+      </Card>,
+
+      <Card key="select4">
         <CardHeader>Select Styles</CardHeader>
         <CardBody indent>
           <Label>Input Group & size="sm"</Label>
