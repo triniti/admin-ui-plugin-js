@@ -1,6 +1,17 @@
 # CHANGELOG
 
 
+## v0.5.2
+* Fix Bug: alert reducer now return the correct alert-bar state.
+
+
+## v0.5.1
+* Add InputNumber component, style, README.
+* Add gutter prop to Row component to control col gutter width.
+* Update UI examples.
+* Fix Bug: Select component should forward ref to parent component correctly.
+
+
 ## v0.5.1
 * Add InputNumber component, style, README.
 * Add gutter prop to Row component to control col gutter width.
