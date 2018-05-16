@@ -1,7 +1,9 @@
 # CHANGELOG
 
+
 ## v0.5.2
-Fix Bug: alert recuder now return the correct alert-bar state.
+* Fix Bug: alert reducer now return the correct alert-bar state.
+
 
 ## v0.5.1
 * Add InputNumber component, style, README.

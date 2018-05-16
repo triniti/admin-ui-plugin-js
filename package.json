@@ -37,7 +37,7 @@
     "react-transition-group": "^2.3.1",
     "react-universal-component": "^2.9.0",
     "redux": "^4.0.0",
-    "sweetalert2": "^7.20.3"
+    "sweetalert2": "^7.20.4"
   },
   "dependencies": {
     "react-datepicker": "^1.4.1",
@@ -100,7 +100,7 @@
     "redux": "^4.0.0",
     "sinon": "^5.0.7",
     "svg-fill-loader": "^0.0.8",
-    "sweetalert2": "^7.20.3",
+    "sweetalert2": "^7.20.4",
     "tape": "^4.9.0"
   },
   "babel": {
