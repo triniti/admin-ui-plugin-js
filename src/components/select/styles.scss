@@ -6,6 +6,7 @@ $form-min-height:        40px;
 $form-min-height-lg:     54px;
 $border-radius-form:      2px;
 $input-focus-color:     $info;
+$status-height:         320px;
 
 @import "~react-select/dist/react-select.css";
 
@@ -161,17 +162,9 @@ $input-focus-color:     $info;
     border-radius: 0 !important;
   }
   .Select-menu-outer {
-    max-height: 320px;
+    max-height: $status-height;
   }
   .Select-menu {
-    max-height: 318px;
+    max-height: ($status-height - 2px);
   }
-}
-
-
-.select-status .Select-menu-outer {
-max-height: 320px !important;
-}
-.select-status .Select-menu {
-max-height: 318px !important;
 }
