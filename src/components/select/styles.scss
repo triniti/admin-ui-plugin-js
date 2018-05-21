@@ -141,3 +141,37 @@ $input-focus-color:     $info;
   background-color: rgba($input-focus-color, 0.125) !important;
   box-shadow: inset 2px 0 0 $input-focus-color;
 }
+
+
+// select-status
+
+.select-status {
+
+  .Select-option {
+    padding: 0 !important;
+
+    span[class^="status-"],
+    span[class*=" status-"] {
+      padding: .675rem !important;
+      margin: 0 !important;
+      display: block;
+    }
+  }
+  .status-copy {
+    border-radius: 0 !important;
+  }
+  .Select-menu-outer {
+    max-height: 320px;
+  }
+  .Select-menu {
+    max-height: 318px;
+  }
+}
+
+
+.select-status .Select-menu-outer {
+max-height: 320px !important;
+}
+.select-status .Select-menu {
+max-height: 318px !important;
+}
