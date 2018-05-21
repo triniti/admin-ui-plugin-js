@@ -438,6 +438,14 @@ input::-webkit-calendar-picker-indicator {
 
 .status-status {
   background-color: $white !important;
+
+  .Select-option.is-focused & {
+    background-color: darken($white, 2%) !important;
+  }
+  .Select-option.is-selected & {
+    background-color: darken($white, 2%) !important;
+    box-shadow: inset 2px 0 0 $gray-700;
+  }
 }
 
 tr.status-status ,
@@ -451,6 +459,12 @@ tr.status-status ,
 
 .status-archived {
   background-color: $status-archived !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-archived, 2%) !important;
+    box-shadow: inset 2px 0 0 $text-disabled;
+  }
 }
 
 tr.status-archived,
@@ -464,6 +478,12 @@ tr.status-archived,
 
 .status-draft {
   background-color: $status-draft !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-draft, 2%) !important;
+    box-shadow: inset 2px 0 0 theme-color("dark");
+  }
 }
 
 tr.status-draft,
@@ -477,6 +497,12 @@ tr.status-draft,
 
 .status-deleted {
   background-color: $status-deleted !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-deleted, 2%) !important;
+    box-shadow: inset 2px 0 0 theme-color("warning");
+  }
 }
 
 tr.status-deleted,
@@ -490,6 +516,12 @@ tr.status-deleted,
 
 .status-expired {
   background-color: $status-expired !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-expired, 2%) !important;
+    box-shadow: inset 2px 0 0 theme-color("info");
+  }
 }
 
 tr.status-expired,
@@ -503,6 +535,12 @@ tr.status-expired,
 
 .status-pending {
   background-color: $status-pending !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-pending, 1%) !important;
+    box-shadow: inset 2px 0 0 theme-color("danger");
+  }
 }
 
 tr.status-pending,
@@ -516,6 +554,12 @@ tr.status-pending,
 
 .status-scheduled {
   background-color: $status-scheduled !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-scheduled, 3%) !important;
+    box-shadow: inset 2px 0 0 $yellow;
+  }
 }
 
 tr.status-scheduled,
@@ -529,6 +573,14 @@ tr.status-scheduled,
 
 .status-published {
   background-color: $status-published !important;
+
+  .Select-option.is-focused &,
+  .Select-option.is-selected & {
+    background-color: darken($status-published, 3%) !important;
+    box-shadow: inset 2px 0 0 theme-color("success");
+    position: relative;
+    z-index: 1;
+  }
 }
 
 tr.status-published,
@@ -546,11 +598,10 @@ tr.status-published,
   padding: 2px 6px;
   border-radius: $border-radius;
   margin-left: .25rem;
-}
 
-small.status-copy {
-  color: $gray-800;
-  text-transform: uppercase;
+  & .Select-option & {
+    border-radius: 0 !important;
+  }
 }
 
 
