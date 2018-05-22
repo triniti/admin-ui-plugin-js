@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Badge, Button, Card, CardBody, CardHeader, CardTitle, Collapse, Icon, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Screen } from '../../../../src/components';
+import { Badge, Button, Card, CardBody, CardHeader, CardTitle, Collapse, Icon, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Screen, Table } from '../../../../src/components';
 
 class UiListGroup extends React.Component {
     constructor(props) {
@@ -52,14 +52,12 @@ class UiListGroup extends React.Component {
         <CardHeader>List Group Items</CardHeader>
         <CardBody>
           <ListGroup>
-            <ListGroupItem>Cras justo odio</ListGroupItem>
-            <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-            <ListGroupItem>Morbi leo risus</ListGroupItem>
+            <ListGroupItem action>List Group Item action</ListGroupItem>
+            <ListGroupItem active>List Group Item active</ListGroupItem>
+            <ListGroupItem disabled>List Group Item disabled</ListGroupItem>
             <ListGroupItem tag="a" href="#">This is a linked list item</ListGroupItem>
-            <ListGroupItem>List item with badge in pill style<Badge
-              pill
-            >1
-            </Badge>
+            <ListGroupItem className="d-flex justify-content-between">List item with Badge <Badge pill color="dark">4</Badge></ListGroupItem>
+            <ListGroupItem>List item with Badge alert<Badge pill alert>9</Badge>
             </ListGroupItem>
           </ListGroup>
         </CardBody>
@@ -392,6 +390,169 @@ class UiListGroup extends React.Component {
           </ListGroup>
         </CardBody>
       </Card>,
+
+      <Card key="props1">
+        <CardHeader>List Group Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">borderless</th>
+              <td>bool</td>
+              <td></td>
+              <td>removes outer border and border on items</td>
+            </tr>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">flush</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>oneOfType</td>
+              <td>'ul'</td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">theme</th>
+              <td>string</td>
+              <td></td>
+              <td>'history', 'chat'</td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props2">
+        <CardHeader>List Group Item Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">active</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">disabled</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">color</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">action</th>
+              <td>bool</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td>'list-group-item-roles'</td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>oneOfType</td>
+              <td>'li'</td>
+              <td></td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props3">
+        <CardHeader>List Group Item Heading Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>oneOfType</td>
+              <td>'h5'</td>
+              <td></td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props4">
+        <CardHeader>List Group Item Text Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Default</th>
+              <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <th scope="row">className</th>
+              <td>string</td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">tag</th>
+              <td>oneOfType</td>
+              <td>'p'</td>
+              <td></td>
+            </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
     ]}
     />
         );

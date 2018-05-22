@@ -269,7 +269,7 @@ const Example = () => {
   return (
       <Media list>
         <Media tag="li">
-          <Media left hoverOutline href="#">
+          <Media left hover="outline" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
           <Media body>
@@ -337,7 +337,7 @@ export default Example;`}
             <Col>
               <Media list>
                 <Media tag="li">
-                  <Media left hoverOutline href="#">
+                  <Media left hover="outline" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
                   </Media>
                   <Media body>
@@ -398,7 +398,7 @@ export default Example;`}
       </Card>,
 
       <Card key="media5">
-        <CardHeader>Media Hover
+        <CardHeader>Media hover="shadow"
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
@@ -412,13 +412,13 @@ import { Table } from '@triniti/admin-ui-plugin/components';
 
 const Example = () => {
   return (
-      <Media left hover href="#">
+      <Media left hover="shadow" href="#">
         <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
       </Media>
-      <Media left hover href="#">
+      <Media left hover="shadow" href="#">
         <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
       </Media>
-      <Media left hover href="#">
+      <Media left hover="shadow" href="#">
         <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
       </Media>
       <Row>
@@ -426,13 +426,13 @@ const Example = () => {
           <Media heading>Media Hover inside MediaList with img-thumbnail class on img</Media>
           <Media list>
             <Media tag="li">
-              <Media left hover href="#">
+              <Media left hover="shadow" href="#">
                 <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
               </Media>
-              <Media left hover href="#">
+              <Media left hover="shadow" href="#">
                 <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
               </Media>
-              <Media left hover href="#">
+              <Media left hover="shadow" href="#">
                 <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
               </Media>
             </Media>
@@ -448,27 +448,27 @@ export default Example;`}
               </CardBody>
             </Collapse>
         <CardBody>
-          <Media left hover href="#">
+          <Media left hover="shadow" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
-          <Media left hover href="#">
+          <Media left hover="shadow" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
-          <Media left hover href="#">
+          <Media left hover="shadow" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
           <Row className="mt-4">
             <Col>
-              <Media heading>Media Hover inside MediaList with img-thumbnail class on img</Media>
+              <Media heading>Media hover="shadow" inside MediaList with img-thumbnail class on img</Media>
               <Media list>
                 <Media tag="li">
-                  <Media left hover href="#">
+                  <Media left hover="shadow" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
                   </Media>
-                  <Media left hover href="#">
+                  <Media left hover="shadow" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
                   </Media>
-                  <Media left hover href="#">
+                  <Media left hover="shadow" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" className="img-thumbnail" />
                   </Media>
                 </Media>
@@ -479,7 +479,7 @@ export default Example;`}
       </Card>,
 
       <Card key="media6">
-        <CardHeader>Media HoverOutline
+        <CardHeader>Media hover="outline"
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode5} active={this.state.collapseCode5}>
                 <Icon imgSrc="code" size="md"/>
               </Button>
@@ -493,27 +493,27 @@ import { Table } from '@triniti/admin-ui-plugin/components';
 
 const Example = () => {
   return (
-      <Media left hoverOutline href="#">
+      <Media left hover="outline" href="#">
         <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
       </Media>
-      <Media left hoverOutline href="#">
+      <Media left hover="outline" href="#">
         <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
       </Media>
-      <Media left hoverOutline href="#">
+      <Media left hover="outline" href="#">
         <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
       </Media>
       <Row>
         <Col>
-          <Media heading>Media HoverOutline inside MediaList</Media>
+          <Media heading>Media hover="outline" inside MediaList</Media>
           <Media list>
             <Media tag="li">
-              <Media left hoverOutline href="#">
+              <Media left hover="outline" href="#">
                 <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
               </Media>
-              <Media left hoverOutline href="#">
+              <Media left hover="outline" href="#">
                 <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
               </Media>
-              <Media left hoverOutline href="#">
+              <Media left hover="outline" href="#">
                 <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
               </Media>
             </Media>
@@ -529,27 +529,60 @@ export default Example;`}
               </CardBody>
             </Collapse>
         <CardBody>
-          <Media left hoverOutline href="#">
+          <Media left hover="outline" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
-          <Media left hoverOutline href="#">
+          <Media left hover="outline" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
-          <Media left hoverOutline href="#">
+          <Media left hover="outline" href="#">
             <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
           </Media>
           <Row className="mt-4">
             <Col>
-              <Media heading>Media HoverOutline inside MediaList</Media>
+              <Media heading>Media hover="outline" inside MediaList</Media>
               <Media list>
                 <Media tag="li">
-                  <Media left hoverOutline href="#">
+                  <Media left hover="outline" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
                   </Media>
-                  <Media left hoverOutline href="#">
+                  <Media left hover="outline" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
                   </Media>
-                  <Media left hoverOutline href="#">
+                  <Media left hover="outline" href="#">
+                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                  </Media>
+                </Media>
+              </Media>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="media7">
+        <CardHeader>Media hover="opacity"</CardHeader>
+        <CardBody>
+          <Media left hover="opacity" href="#">
+            <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+          </Media>
+          <Media left hover="opacity" href="#">
+            <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+          </Media>
+          <Media left hover="opacity" href="#">
+            <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+          </Media>
+          <Row className="mt-4">
+            <Col>
+              <Media heading>Media hover="outline" inside MediaList</Media>
+              <Media list>
+                <Media tag="li">
+                  <Media left hover="opacity" href="#">
+                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                  </Media>
+                  <Media left hover="opacity" href="#">
+                    <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
+                  </Media>
+                  <Media left hover="opacity" href="#">
                     <Media object src="https://placeholdit.imgix.net/~text?txtsize=16&txt=150%C3%97150&w=150&h=150" alt="Generic placeholder image" />
                   </Media>
                 </Media>
@@ -601,6 +634,12 @@ export default Example;`}
               <td>bool</td>
               <td></td>
               <td></td>
+            </tr>
+            <tr>
+              <th scope="row">hover</th>
+              <td>string</td>
+              <td></td>
+              <td>'opacity', 'outline', 'shadow'</td>
             </tr>
             <tr>
               <th scope="row">left</th>

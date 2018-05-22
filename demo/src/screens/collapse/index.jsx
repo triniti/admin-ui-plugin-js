@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row, Screen, Table } from '../../../../src/components';
 
 class UiCollapse extends Component {
   constructor(props) {
@@ -11,7 +11,12 @@ class UiCollapse extends Component {
     this.toggleOuter3 = this.toggleOuter3.bind(this);
     this.toggleOuter4 = this.toggleOuter4.bind(this);
     this.toggleInner = this.toggleInner.bind(this);
-    this.state = { collapseOuter: null };
+    this.state = {
+      collapseOuter: null,
+      collapseCode1: false
+    };
+
+    this.toggleCode1 = this.toggleCode1.bind(this);
   }
 
   toggleOuter() {
@@ -32,6 +37,10 @@ class UiCollapse extends Component {
 
   toggleInner() {
     this.setState({ collapseInner: !this.state.collapseInner });
+  }
+
+  toggleCode1() {
+    this.setState({ collapseCode1: !this.state.collapseCode1 });
   }
 
   render() {
@@ -131,6 +140,100 @@ class UiCollapse extends Component {
                 </Row>
               </CardBody>
             </Collapse>
+          </Card>,
+
+          <Card key="props1">
+            <CardHeader>
+              Collapse Properties
+              <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+                <Icon imgSrc="code" size="md"/>
+              </Button>
+            </CardHeader>
+            <Collapse isOpen={this.state.collapseCode1}>
+              <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`
+import React, { Component } from 'react';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
+
+class Example extends Component {
+  constructor(props) {
+    super(props);
+    this.toggle = this.toggle.bind(this);
+    this.state = { collapse: false };
+  }
+
+  toggle() {
+    this.setState({ collapse: !this.state.collapse });
+  }
+
+  render() {
+    return (
+      <div>
+        <Button color="primary" onClick={this.toggle} style={{ marginBottom: '1rem' }}>Toggle</Button>
+        <Collapse isOpen={this.state.collapse}>
+          <Card>
+            <CardBody>
+             Anim pariatur cliche reprehenderit,
+             enim eiusmod high life accusamus terry richardson ad squid. Nihil
+             anim keffiyeh helvetica, craft beer labore wes anderson cred
+             nesciunt sapiente ea proident.
+            </CardBody>
+          </Card>
+        </Collapse>
+      </div>
+    );
+  }
+}
+
+export default Example;
+`}</code></pre>
+              </CardBody>
+            </Collapse>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">isOpen</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">navbar</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'div'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
           </Card>,
       ]}
       />
