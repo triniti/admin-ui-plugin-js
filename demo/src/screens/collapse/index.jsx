@@ -154,7 +154,7 @@ class UiCollapse extends Component {
             <pre className="pl-5 pr-3">
 <code>{`
 import React, { Component } from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import { Icon } from 'reactstrap';
 
 class Example extends Component {
   constructor(props) {

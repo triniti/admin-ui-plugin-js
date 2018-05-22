@@ -1,5 +1,4 @@
 import activity from './activity.svg';
-import addCircle from './add-circle.svg';
 import addItem from './add-item.svg';
 import alarm from './alarm.svg';
 import apps from './apps.svg';
@@ -72,8 +71,6 @@ import external from './external.svg';
 import dataTransferDownload from './data-transfer-download.svg';
 import dataTransferUpload from './data-transfer-upload.svg';
 import facebook from './facebook.svg';
-import facebookPost from './facebook-post.svg';
-import facebookVideo from './facebook-video.svg';
 import folder from './folder.svg';
 import fullScreen from './full-screen.svg';
 import google from './google.svg';
@@ -89,9 +86,7 @@ import homeSolid from './home-solid.svg';
 import iframe from './iframe.svg';
 import iframeText from './iframe-text.svg';
 import imgur from './imgur.svg';
-import imgurPost from './imgur-post.svg';
 import instagram from './instagram.svg';
-import instagramMedia from './instagram-media.svg';
 import infoOutline from './info-outline.svg';
 import infoSolid from './info-solid.svg';
 import insert from './insert.svg';
@@ -133,8 +128,6 @@ import pin from './pin.svg';
 import pinOutlineSlanted from './pin-outline-slanted.svg';
 import pinSlanted from './pin-slanted.svg';
 import pinterest from './pinterest.svg';
-import pinterestPin from './pinterest-pin.svg';
-import pinterestProfile from './pinterest-profile.svg';
 import play from './play.svg';
 import playStroke from './play-stroke.svg';
 import playOutline from './play-outline.svg';
@@ -178,13 +171,6 @@ import trash from './trash.svg';
 import triniti from './triniti.svg';
 import tweet from './tweet.svg';
 import twitter from './twitter.svg';
-import twitterCollectionTimeline from './twitter-collection-timeline.svg';
-import twitterListTimeline from './twitter-list-timeline.svg';
-import twitterMoment from './twitter-moment.svg';
-import twitterSearchTimeline from './twitter-search-timeline.svg';
-import twitterTweet from './twitter-tweet.svg';
-import twitterUserTimeline from './twitter-user-timeline.svg';
-import twitterVideo from './twitter-video.svg';
 import underline from './underline.svg';
 import unknown from './unknown.svg';
 import unlink from './unlink.svg';
@@ -195,7 +181,6 @@ import user from './user.svg';
 import users from './users.svg';
 import userSolid from './user-solid.svg';
 import vevo from './vevo.svg';
-import vevoVideo from './vevo-video.svg';
 import video from './video.svg';
 import videoCamera from './video-camera.svg';
 import vimeo from './vimeo.svg';
@@ -207,15 +192,12 @@ import warningSolid from './warning-solid.svg';
 import warningSolidAlt from './warning-solid-alt.svg';
 import warningSolidTriangle from './warning-solid-triangle.svg';
 import youtube from './youtube.svg';
-import youtubePlaylist from './youtube-playlist.svg';
-import youtubeVideo from './youtube-video.svg';
 import zip from './zip.svg';
 import zoomIn from './zoom-in.svg';
 import zoomOut from './zoom-out.svg';
 
 const icons = {
   activity,
-  'add-circle': addCircle,
   'add-item': addItem,
   alarm,
   apps,
@@ -288,8 +270,6 @@ const icons = {
   expand,
   external,
   facebook,
-  'facebook-post': facebookPost,
-  'facebook-video': facebookVideo,
   folder,
   'full-screen': fullScreen,
   google,
@@ -305,12 +285,10 @@ const icons = {
   iframe,
   'iframe-text': iframeText,
   imgur,
-  'imgur-post': imgurPost,
   'info-outline': infoOutline,
   'info-solid': infoSolid,
   insert,
   instagram,
-  'instagram-media': instagramMedia,
   italic,
   link,
   linkedin,
@@ -349,8 +327,6 @@ const icons = {
   'pin-outline-slanted': pinOutlineSlanted,
   'pin-slanted': pinSlanted,
   pinterest,
-  'pinterest-pin': pinterestPin,
-  'pinterest-profile': pinterestProfile,
   play,
   'play-stroke': playStroke,
   'play-outline': playOutline,
@@ -394,13 +370,6 @@ const icons = {
   triniti,
   tweet,
   twitter,
-  'twitter-collection-timeline': twitterCollectionTimeline,
-  'twitter-list-timeline': twitterListTimeline,
-  'twitter-moment': twitterMoment,
-  'twitter-search-timeline': twitterSearchTimeline,
-  'twitter-tweet': twitterTweet,
-  'twitter-user-timeline': twitterUserTimeline,
-  'twitter-video': twitterVideo,
   underline,
   unknown,
   unlink,
@@ -411,7 +380,6 @@ const icons = {
   users,
   'user-solid': userSolid,
   vevo,
-  'vevo-video': vevoVideo,
   video,
   'video-camera': videoCamera,
   vimeo,
@@ -423,8 +391,6 @@ const icons = {
   'warning-solid-alt': warningSolidAlt,
   'warning-solid-triangle': warningSolidTriangle,
   youtube,
-  'youtube-playlist': youtubePlaylist,
-  'youtube-video': youtubeVideo,
   zip,
   'zoom-in': zoomIn,
   'zoom-out': zoomOut,
