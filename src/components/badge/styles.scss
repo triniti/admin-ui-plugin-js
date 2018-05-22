@@ -55,9 +55,15 @@
 }
 
 .list-group-item .badge {
+  font-size: .95em;
+}
+
+.list-group-item .badge-alert {
   position: relative;
   left: .25rem;
   top: -.5rem;
+  right: auto;
+  font-size: .75em;
 }
 
 // tiny indicator used with avatar-initials

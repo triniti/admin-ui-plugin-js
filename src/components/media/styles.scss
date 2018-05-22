@@ -42,7 +42,7 @@
 
 // Hover Class
 
-.media-hover {
+.media-hover-shadow {
   position: relative;
   display: inline-block;
   transition: transform $transition;
@@ -64,7 +64,7 @@
   }
 
   &:hover {
-    transform: translate(0, -4px);
+    transform: translate(0, -1px);
   }
 
   &:hover::after {
@@ -95,5 +95,17 @@
 
   &:hover::after {
     opacity: .0625;
+  }
+}
+
+
+// Media Hover Opacity
+
+.media-hover-opacity {
+  transition: opacity $transition;
+  opacity: 1;
+
+  &:hover {
+    opacity: .4;
   }
 }
