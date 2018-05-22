@@ -1,12 +1,27 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, IconGroup, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Collapse, Icon, IconGroup, Loading, Row, Screen, Spinner, Table, UncontrolledTooltip } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
 import IconList from './IconList';
 import './styles.scss';
 
-const UiIcons = () => (
+class UiIcons extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      collapseCode1: false
+    };
+
+    this.toggleCode1 = this.toggleCode1.bind(this);
+  }
+
+  toggleCode1() {
+    this.setState({ collapseCode1: !this.state.collapseCode1 });
+  }
+
+  render() {
+    return (
   <Screen
     sidenav={<Sidenav activeScreen="icons" />}
     sidenavHeader
@@ -478,6 +493,7 @@ const UiIcons = () => (
               <IconTooltip iconName="question" alert size="xxs" color="secondary" />
               <IconTooltip iconName="delete-line-thick" alert size="xxs" />
               <IconTooltip iconName="plus-line-thick" alert size="xs" border />
+              <IconTooltip iconName="minus-line-thick" alert size="xsm" />
               <IconTooltip iconName="check-line-thick" alert size="sm" color="success" />
               <IconTooltip iconName="code" alert size="md" color="info" border />
               <IconTooltip iconName="document" alert size="lg" color="dark" border />
@@ -492,7 +508,7 @@ const UiIcons = () => (
         <CardBody indent>
           <Row>
             <Col>
-              <IconTooltip iconName="check-outline" size="default"/>
+              <IconTooltip iconName="check-outline" />
               <IconTooltip iconName="check-outline" size="md" color="warning"/>
               <IconTooltip iconName="check-outline" size="lg" color="info"/>
               <IconTooltip iconName="check-outline" size="xl" color="danger"/>
@@ -726,30 +742,93 @@ const UiIcons = () => (
         </CardBody>
       </Card>,
 
-      <Card key="deprecated">
-        <CardHeader>File Types - *deprecated</CardHeader>
+      <Card key="example">
+        <CardHeader>
+          Sample Code
+          <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+            <Icon imgSrc="code" size="md"/>
+          </Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseCode1}>
+          <CardBody className="pl-0 pr-0 bg-light">
+        <pre className="pl-5 pr-3">
+<code>{`
+import React, { Component } from 'react';
+import { CardBody, Col, Icon, IconGroup, Row } from 'reactstrap';
+
+const Example = (props) => {
+  return (
+  <CardBody indent>
+    <Row className="mb-3">
+      <Col>
+        <Icon imgSrc="arrow-up-thick" />
+        <Icon imgSrc="arrow-right-thick" alert size="xxs" />
+        <Icon imgSrc="arrow-down-thick" alert border outline size="xxs" radius="rounded" />
+        <Icon imgSrc="arrow-left-thick" alert border outline size="xxs" />
+        <Icon imgSrc="check-solid" color="secondary" size="lg" />
+      </Col>
+    </Row>
+    <Row className="mb-3">
+      <Col>
+        <Button outline radius="circle" color="link">
+          <Icon imgSrc="close" alt="x" />
+        </Button>
+        <Button radius="circle" color="link-bg">
+          <Icon imgSrc="close" alt="x" />
+        </Button>
+        <Button outlineText color="secondary" radius="circle">
+          <Icon imgSrc="close" alt="x" />
+        </Button>
+        <Button radius="circle">
+          <Icon imgSrc="close" alt="x" />
+        </Button>
+      </Col>
+    </Row>
+    <Row className="mb-3">
+      <Col>
+        <IconGroup className="mb-2 mr-3" left>
+          <Icon imgSrc="timeline" alert radius="rounded" border/>
+          <Icon imgSrc="twitter" alert size="xs" />
+        </IconGroup>
+      </Col>
+    </Row>
+  </CardBody>
+);
+};`}</code></pre>
+          </CardBody>
+        </Collapse>
         <CardBody indent>
-          <Row>
+          <Row className="mb-3">
             <Col>
-              <Icon imgSrc="code" alert size="md" radius="rounded" border className="mb-2 ml-2"/>
-              <Icon imgSrc="facebook-post" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="facebook-video" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="google-maps" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="iframe-text" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="imgur-post" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="instagram-media" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="pinterest-pin" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="pinterest-profile" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-collection-timeline" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-list-timeline" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-moment" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-search-timeline" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-tweet" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-user-timeline" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="twitter-video" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="vevo-video" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="youtube-playlist" alert size="md" radius="rounded" border className="mb-2" />
-              <Icon imgSrc="youtube-video" alert size="md" radius="rounded" border className="mb-2" />
+              <Icon imgSrc="arrow-up-thick" />
+              <Icon imgSrc="arrow-right-thick" alert size="xxs" />
+              <Icon imgSrc="arrow-down-thick" alert border outline size="xxs" radius="rounded" />
+              <Icon imgSrc="arrow-left-thick" alert border outline size="xxs" />
+              <Icon imgSrc="check-solid" color="secondary" size="lg" />
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <Button outline radius="circle" color="link">
+                <Icon imgSrc="close" alt="x" />
+              </Button>
+              <Button radius="circle" color="link-bg">
+                <Icon imgSrc="close" alt="x" />
+              </Button>
+              <Button outlineText color="secondary" radius="circle">
+                <Icon imgSrc="close" alt="x" />
+              </Button>
+              <Button radius="circle">
+                <Icon imgSrc="close" alt="x" />
+              </Button>
+            </Col>
+          </Row>
+          <Row className="mb-3">
+            <Col>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="timeline" alert radius="rounded" border/>
+                <Icon imgSrc="twitter" alert size="xs" />
+              </IconGroup>
             </Col>
           </Row>
         </CardBody>
@@ -765,8 +844,147 @@ const UiIcons = () => (
           </Row>
         </CardBody>
       </Card>,
+
+      <Card key="props1">
+        <CardHeader>
+          Icon Properties
+        </CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">alert</th>
+                <td>bool</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">border</th>
+                <td>bool</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">color</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">imgSrc</th>
+                <td>string</td>
+                <td>'circle'</td>
+                <td>Use hyphen separated name of icon</td>
+              </tr>
+              <tr>
+                <th scope="row">noborder</th>
+                <td>bool</td>
+                <td></td>
+                <td>Icon with no border, transparent bg and body text color</td>
+              </tr>
+              <tr>
+                <th scope="row">outline</th>
+                <td>bool</td>
+                <td></td>
+                <td>Adds box-shadow white outline around icon</td>
+              </tr>
+              <tr>
+                <th scope="row">radius</th>
+                <td>string</td>
+                <td></td>
+                <td>'circle', 'rounded', 'none'</td>
+              </tr>
+              <tr>
+                <th scope="row">size</th>
+                <td>string</td>
+                <td></td>
+                <td>xxs, xs, sm, sd, md, lg, xl, xxl</td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'span'</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">toggler</th>
+                <td>bool</td>
+                <td></td>
+                <td>Positions icon absolutely and rotates it 90 degrees when inside active container</td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props2">
+        <CardHeader>
+          Icon Group Properties
+        </CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">children</th>
+                <td>node</td>
+                <td></td>
+                <td>Insert 2 icons inside group, second icon will be positioned in one of the corners of the first icon</td>
+              </tr>
+              <tr>
+                <th scope="row">bottom</th>
+                <td>bool</td>
+                <td></td>
+                <td>Icon defaults to top position</td>
+              </tr>
+              <tr>
+                <th scope="row">right</th>
+                <td>bool</td>
+                <td></td>
+                <td>Icon defaults to left position</td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'span'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
     ]}
-  />
-);
+      />
+    );
+  }
+}
 
 export default UiIcons;
