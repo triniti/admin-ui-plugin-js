@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, IconGroup, Loading, Row, Screen, Spinner, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Col, Icon, IconGroup, Loading, Row, Screen, Spinner, Table, UncontrolledTooltip } from '../../../../src/components';
 
 const UiSpinners = () => (
   <Screen
@@ -74,6 +74,68 @@ const UiSpinners = () => (
               <Spinner centered width="56">Loading...</Spinner>
             </Col>
           </Row>
+        </CardBody>
+      </Card>,
+
+      <Card key="props1">
+        <CardHeader>
+          Spinner Properties
+        </CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">centered</th>
+                <td>bool</td>
+                <td></td>
+                <td>Will center Spinner inside container</td>
+              </tr>
+              <tr>
+                <th scope="row">children</th>
+                <td>node</td>
+                <td></td>
+                <td>Text that goes with Spinner</td>
+              </tr>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">color</th>
+                <td>string</td>
+                <td>'#d9d9db'</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">strokeWidth</th>
+                <td>string</td>
+                <td>'6'</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">width</th>
+                <td>string</td>
+                <td>'33'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
         </CardBody>
       </Card>,
 

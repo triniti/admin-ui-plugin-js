@@ -152,7 +152,7 @@ class UiNav extends React.Component {
           <Card key="nav6">
             <CardHeader>Underline</CardHeader>
             <CardBody>
-              <Nav size="sm" underline>
+              <Nav underline>
                 <NavItem>
                   <NavLink href="#" active>Link</NavLink>
                 </NavItem>
@@ -215,7 +215,7 @@ class UiNav extends React.Component {
 
           <Card key="nav8">
             <CardHeader className="sticky-off">Pills Small</CardHeader>
-            <CardBody className="pb-5 mb-5">
+            <CardBody className="pb-5">
               <Row>
                 <Col>
                   <Nav pills className="nav-pills-sm">
@@ -244,10 +244,6 @@ class UiNav extends React.Component {
                       <NavLink disabled href="#">Disabled Link</NavLink>
                     </NavItem>
                   </Nav>
-                  <br />
-                  <br />
-                  <br />
-                  <br />
                 </Col>
               </Row>
             </CardBody>
@@ -272,7 +268,7 @@ class UiNav extends React.Component {
                     <th scope="row">className</th>
                     <td>string</td>
                     <td></td>
-                    <td></td>
+                    <td>'nav-pills-sm'</td>
                   </tr>
                   <tr>
                     <th scope="row">card</th>
