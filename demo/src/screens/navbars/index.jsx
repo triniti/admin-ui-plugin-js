@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, Col, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row, Screen, UncontrolledDropdown } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, Collapse, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarToggler, NavbarBrand, NavItem, NavLink, Row, Screen, Table, UncontrolledDropdown } from '../../../../src/components';
 
 class UiNavbar extends React.Component {
   constructor(props) {
@@ -89,6 +89,162 @@ class UiNavbar extends React.Component {
                   </Nav>
                 </Collapse>
               </Navbar>
+            </CardBody>
+          </Card>,
+
+          <Card key="props1">
+            <CardHeader>
+              Navbar Properties
+            </CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">color</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">dark</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Use this prop instead of deprecated inverse</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">expand</th>
+                    <td>oneOfType</td>
+                    <td></td>
+                    <td>Use expand instead of deprecated toggleable</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">fixed</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">full</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">light</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">role</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">sticky</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'span'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props2">
+            <CardHeader>
+              Navbar Brand Properties
+            </CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'a'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props3">
+            <CardHeader>
+              Navbar Toggler Properties
+            </CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'button'</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">type</th>
+                    <td>string</td>
+                    <td>'button'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
             </CardBody>
           </Card>,
         ]}
