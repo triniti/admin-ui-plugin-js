@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Card, CardBody, CardHeader, Col, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavItem, NavLink, Row, Screen } from '../../../../src/components';
+import { Card, CardBody, CardHeader, Col, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, Nav, NavItem, NavLink, Row, Screen, Table } from '../../../../src/components';
 
 class UiNav extends React.Component {
   constructor(props) {
@@ -250,6 +250,198 @@ class UiNav extends React.Component {
                   <br />
                 </Col>
               </Row>
+            </CardBody>
+          </Card>,
+
+          <Card key="props1">
+            <CardHeader>
+              Nav Properties
+            </CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">card</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">fill</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">justified</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">horizontal</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">navbar</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">pills</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">sticky</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tabs</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'ul'</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">underline</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">vertical</th>
+                    <td>oneOfType</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props2">
+            <CardHeader>
+              NavItem Properties
+            </CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">active</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'li'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props3">
+            <CardHeader>
+              NavLink Properties
+            </CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">active</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">href</th>
+                    <td>any</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">innerRef</th>
+                    <td>oneOfType</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">onClick</th>
+                    <td>func</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'a'</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
             </CardBody>
           </Card>,
       ]}
