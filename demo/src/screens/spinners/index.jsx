@@ -30,27 +30,7 @@ class UiSpinners extends React.Component {
     primaryActions={<PrimaryActions />}
     body={[
       <Card key="icons1">
-        <CardHeader>
-          Spinner
-          <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-            <Icon imgSrc="code" size="md"/>
-          </Button>
-        </CardHeader>
-        <Collapse isOpen={this.state.collapseCode1}>
-          <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
-import { Col, Row, Spinner } from '@triniti/admin-ui-plugin/components';
-
-const Example = (props) => {
-  return (
-      <div className="aspect-ratio aspect-ratio-16by9 bg-none">
-        <Spinner centered width="56" className="position-absolute" style={{ top: '0' }}>Loading...</Spinner>
-      </div>
-  );
-};`}</code></pre>
-          </CardBody>
-        </Collapse>
+        <CardHeader>Spinner</CardHeader>
         <CardBody indent>
           <Row>
             <Col>
@@ -102,7 +82,27 @@ const Example = (props) => {
       </Card>,
 
        <Card key="icons3">
-        <CardHeader>Spinner Centered</CardHeader>
+        <CardHeader>
+          Spinner Centered
+          <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
+            <Icon imgSrc="code" size="md"/>
+          </Button>
+        </CardHeader>
+        <Collapse isOpen={this.state.collapseCode1}>
+          <CardBody className="pl-0 pr-0 bg-light">
+            <pre className="pl-5 pr-3">
+<code>{`import React from 'react';
+import { Col, Row, Spinner } from '@triniti/admin-ui-plugin/components';
+
+const Example = (props) => {
+  return (
+      <div className="aspect-ratio aspect-ratio-16by9 bg-none">
+        <Spinner centered width="56" className="position-absolute" style={{ top: '0' }}>Loading...</Spinner>
+      </div>
+  );
+};`}</code></pre>
+          </CardBody>
+        </Collapse>
         <CardBody indent>
           <div className="aspect-ratio aspect-ratio-16by9 bg-none">
             <Spinner centered width="56" className="position-absolute" style={{ top: '0' }}>Loading...</Spinner>

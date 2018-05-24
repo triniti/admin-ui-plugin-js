@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Col, Collapse, Icon, IconGroup, Loading, Row, Screen, Spinner, Table, UncontrolledTooltip } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, Icon, IconGroup, Loading, Row, Screen, Table } from '../../../../src/components';
 import IconTooltip from './IconTooltip';
 import IconList from './IconList';
 import './styles.scss';
