@@ -32,7 +32,7 @@ class UiNavbar extends React.Component {
         header="Navbars"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
-      //   { to: '#/test2', text: 'Tab2' },
+      //   { to: '/test2', text: 'Tab2' },
       // ]}
         primaryActions={<PrimaryActions />}
         body={[

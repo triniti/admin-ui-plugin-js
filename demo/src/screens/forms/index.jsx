@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Input, InputNumber, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, TrinaryControl } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, CustomInput, Input, InputNumber, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, Table, TrinaryControl } from '../../../../src/components';
 
 class UiForm extends React.Component {
   constructor(props) {
@@ -293,6 +293,9 @@ class UiForm extends React.Component {
                         <Label for="exampleNumber4">Number Mobile</Label>
                         <InputNumber min={0} max={100} value={50} mobile name="number4" id="exampleNumber4" placeholder="number placeholder" />
                       </Col>
+                      <Col sm="6">
+                        <p className="mt-4">This component relies on the <a href="http://vlad-ignatov.github.io/react-numeric-input/" target="_blank"><strong>React Numeric Input</strong></a> component.</p>
+                      </Col>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleDatetime">Datetime</Label>
@@ -565,6 +568,596 @@ class UiForm extends React.Component {
                   </Form>
                 </Col>
               </Row>
+            </CardBody>
+          </Card>,
+
+          <Card key="form9">
+            <CardHeader>Custom Inputs</CardHeader>
+            <CardBody indent>
+              <Row>
+                <Col>
+                  <Form>
+                    <FormGroup>
+                      <Label for="exampleCheckbox">Checkboxes</Label>
+                      <div>
+                        <CustomInput type="checkbox" id="exampleCustomCheckbox" label="Check this custom checkbox" />
+                        <CustomInput type="checkbox" id="exampleCustomCheckbox2" label="Or this one" />
+                        <CustomInput type="checkbox" id="exampleCustomCheckbox3" label="But not this disabled one" disabled />
+                      </div>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCheckbox">Radios</Label>
+                      <div>
+                        <CustomInput type="radio" id="exampleCustomRadio" name="customRadio" label="Select this custom radio" />
+                        <CustomInput type="radio" id="exampleCustomRadio2" name="customRadio" label="Or this one" />
+                        <CustomInput type="radio" id="exampleCustomRadio3" label="But not this disabled one" disabled />
+                      </div>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCheckbox">Inline</Label>
+                      <div>
+                        <CustomInput type="checkbox" id="exampleCustomInline" label="An inline custom input" inline />
+                        <CustomInput type="checkbox" id="exampleCustomInline2" label="and another one" inline />
+                      </div>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomSelect">Custom Select</Label>
+                      <CustomInput type="select" id="exampleCustomSelect" name="customSelect">
+                        <option value="">Select</option>
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                      </CustomInput>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomMutlipleSelect">Custom Multiple Select</Label>
+                      <CustomInput type="select" id="exampleCustomMutlipleSelect" name="customSelect" multiple>
+                        <option value="">Select</option>
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                      </CustomInput>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomSelectDisabled">Custom Select Disabled</Label>
+                      <CustomInput type="select" id="exampleCustomSelectDisabled" name="customSelect" disabled>
+                        <option value="">Select</option>
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                      </CustomInput>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomMutlipleSelectDisabled">Custom Multiple Select Disabled</Label>
+                      <CustomInput type="select" id="exampleCustomMutlipleSelectDisabled" name="customSelect" multiple disabled>
+                        <option value="">Select</option>
+                        <option>Value 1</option>
+                        <option>Value 2</option>
+                        <option>Value 3</option>
+                        <option>Value 4</option>
+                        <option>Value 5</option>
+                      </CustomInput>
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomFileBrowser1">File Browser</Label>
+                      <CustomInput type="file" id="exampleCustomFileBrowser1" name="customFile" />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomFileBrowser2">File Browser with Custom Label</Label>
+                      <CustomInput type="file" id="exampleCustomFileBrowser2" name="customFile" label="Yo, pick a file!" />
+                    </FormGroup>
+                    <FormGroup>
+                      <Label for="exampleCustomFileBrowser3">File Browser Disabled</Label>
+                      <CustomInput type="file" id="exampleCustomFileBrowser3" name="customFile" disabled />
+                    </FormGroup>
+                  </Form>
+                </Col>
+              </Row>
+            </CardBody>
+          </Card>,
+
+          <Card key="props1">
+            <CardHeader>Form Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">inline</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">innerRef</th>
+                  <td>oneOfType</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>oneOfType</td>
+                  <td>'form'</td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props2">
+            <CardHeader>FormFeedback Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">valid</th>
+                  <td>bool</td>
+                  <td>undefined</td>
+                  <td>Adds class 'valid-feedback' or 'invalid-feedback'</td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>oneOfType</td>
+                  <td>'div'</td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props3">
+            <CardHeader>FormGroup Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">check</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds class 'form-check' or 'form-group'</td>
+                </tr>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">disabled</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds class 'disabled' if disabled and check props</td>
+                </tr>
+                <tr>
+                  <th scope="row">inline</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds class 'form-check-inline' if inline and check props</td>
+                </tr>
+                <tr>
+                  <th scope="row">row</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds class 'row'</td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>oneOfType</td>
+                  <td>'div'</td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props4">
+            <CardHeader>FormText Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">color</th>
+                  <td>string</td>
+                  <td>'muted'</td>
+                  <td>Adds class 'text-<i>color</i>'</td>
+                </tr>
+                <tr>
+                  <th scope="row">inline</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>If !inline, adds class 'form-text'</td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>oneOfType</td>
+                  <td>'small'</td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props5">
+            <CardHeader>Input Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">addon</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">bsSize</th>
+                  <td>string</td>
+                  <td></td>
+                  <td>Adds class 'form-control-#bsSize'. Replaces deprecated 'size' prop</td>
+                </tr>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">innerRef</th>
+                  <td>oneOfType</td>
+                  <td></td>
+                  <td>ref will only get you a reference to the Input component, use innerRef to get a reference to the DOM input (for things like focus management).</td>
+                </tr>
+                <tr>
+                  <th scope="row">invalid</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Use valid/invalid props for state, instead of deprecated 'state' prop. Applies the is-valid class when true, does nothing when false</td>
+                </tr>
+                <tr>
+                  <th scope="row">plaintext</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Replaces old prop 'static'</td>
+                </tr>
+
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>oneOfType</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">type</th>
+                  <td>string</td>
+                  <td>'text'</td>
+                  <td>type can be things like text, password, (typical input types) as well as select and textarea, providing children as you normally would to those.</td>
+                </tr>
+                <tr>
+                  <th scope="row">valid</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Use valid/invalid props for state, instead of deprecated 'state' prop. Applies the is-invalid class when true, does nothing when false</td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props6">
+            <CardHeader>Custom Input Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">bsSize</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>oneOfType</td>
+                  <td></td>
+                  <td>for type="select"</td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">id</th>
+                  <td>oneOfType</td>
+                  <td>isRequired</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">inline</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">invalid</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Applies the is-valid class when true, does nothing when false</td>
+                </tr>
+                <tr>
+                  <th scope="row">label</th>
+                  <td>string</td>
+                  <td></td>
+                  <td>Used for checkbox and radios</td>
+                </tr>
+                <tr>
+                  <th scope="row">type</th>
+                  <td>string</td>
+                  <td>isRequired</td>
+                  <td>radio, checkbox, select, range.</td>
+                </tr>
+                <tr>
+                  <th scope="row">valid</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Applies the is-invalid class when true, does nothing when false</td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props7">
+            <CardHeader>Label Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">check</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds class 'form-check-label'</td>
+                </tr>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">for</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">hidden</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td>Adds class 'sr-only'</td>
+                </tr>
+                <tr>
+                  <th scope="row">offset</th>
+                  <td>stringOrNumberProp</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">order</th>
+                  <td>stringOrNumberProp</td>
+                  <td></td>
+                  <td>Use instead of push or pull props</td>
+                </tr>
+                <tr>
+                  <th scope="row">size</th>
+                  <td>stringOrNumberProp</td>
+                  <td></td>
+                  <td>Adds class 'col-form-label-#size'. Works similarly to Col component</td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props8">
+            <CardHeader>Trinary Control Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">disabled</th>
+                  <td>bool</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">falseText</th>
+                  <td>string</td>
+                  <td>'No'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">onChange</th>
+                  <td>func</td>
+                  <td>isRequired</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">radius</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">size</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">trueText</th>
+                  <td>string</td>
+                  <td>'Yes'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">unsetText</th>
+                  <td>string</td>
+                  <td>'Any'</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">value</th>
+                  <td>oneOf</td>
+                  <td>UNKNOWN</td>
+                  <td>'0', '1', '2'</td>
+                </tr>
+                <tr>
+                  <th scope="row">width</th>
+                  <td>string</td>
+                  <td></td>
+                  <td>Sets width of dropdown</td>
+                </tr>
+                </tbody>
+              </Table>
             </CardBody>
           </Card>,
       ]}
