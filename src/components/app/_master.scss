@@ -700,24 +700,6 @@ tr.status-published,
 }
 
 
-// img preview todo - example on modal page - remove later
-
-.image-preview {
-  padding: .5rem;
-  border: 1px solid transparent !important;
-  box-shadow: $shadow-depth-2;
-
-  &:hover {
-    border: 1px solid theme-color("secondary") !important;
-    cursor: pointer;
-  }
-  &.image-preview-selected {
-    border: 1px solid theme-color("primary") !important;
-    box-shadow: $shadow-depth-2, inset 0 0 0 2px theme-color("primary");
-  }
-}
-
-
 // media preview
 
 .media-preview {
@@ -760,4 +742,18 @@ tr.status-published,
 
 .tri-masonry-grid-column {
   padding: 0 .25rem;
+}
+
+
+// gradient overlay
+
+.gradient-overlay::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 40%,rgba(0,0,0,0.5) 75%,rgba(0,0,0,0.65) 100%);
+  pointer-events: none;
 }
