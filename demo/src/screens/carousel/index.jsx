@@ -73,51 +73,171 @@ const Example = (props) => {
                 </thead>
                 <tbody>
                   <tr>
+                    <th scope="row">activeIndex</th>
+                    <td>number</td>
+                    <td></td>
+                    <td>The current active slide of the carousel</td>
+                  </tr>
+                  <tr>
                     <th scope="row">children</th>
                     <td>array</td>
                     <td></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">className</th>
-                    <td>string</td>
-                    <td></td>
-                    <td></td>
+                    <th scope="row">interval</th>
+                    <td>oneOfType</td>
+                    <td>5000</td>
+                    <td>The interval at which the carousel automatically cycles (default: 5000)</td>
                   </tr>
                   <tr>
-                    <th scope="row">disabled</th>
+                    <th scope="row">keyboard</th>
                     <td>bool</td>
                     <td></td>
+                    <td>Controls if the left and right arrow keys should control the carousel</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">mouseEnter</th>
+                    <td>func</td>
+                    <td></td>
+                    <td>Called when the mouse enters the Carousel</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">mouseLeave</th>
+                    <td>func</td>
+                    <td></td>
+                    <td>Called when the mouse exits the Carousel</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">next</th>
+                    <td>func</td>
+                    <td></td>
+                    <td>A function which should advance the carousel to the next slide (via activeIndex)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">pause</th>
+                    <td>bool</td>
+                    <td>'hover'</td>
+                    <td>If set to "hover", pauses the cycling of the carousel on mouseenter and resumes the cycling of the carousel on mouseleave. If set to false, hovering over the carousel won't pause it. (default: "hover")</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">previous</th>
+                    <td>func</td>
+                    <td></td>
+                    <td>A function which should advance the carousel to the previous slide (via activeIndex)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">ride</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Autoplays the carousel after the user manually cycles the first item. If "carousel", autoplays the carousel on load. This is how bootstrap defines it... I would prefer a bool named autoplay or something...</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">slide</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td>Controls whether the slide animation on the Carousel works or not</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props2">
+            <CardHeader>CarouselControl Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">direction</th>
+                    <td>oneOf(['prev', 'next'])</td>
+                    <td>isRequired</td>
                     <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">id</th>
+                    <th scope="row">directionText</th>
                     <td>string</td>
                     <td></td>
-                    <td>*isRequired</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">label1</th>
-                    <td>string</td>
                     <td></td>
-                    <td>Inactive text that appears inside a Switch component</td>
                   </tr>
                   <tr>
-                    <th scope="row">label2</th>
-                    <td>string</td>
+                    <th scope="row">onClickHandler</th>
+                    <td>func</td>
+                    <td>isRequired</td>
                     <td></td>
-                    <td>Active text that appears inside a Switch component</td>
                   </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props3">
+            <CardHeader>CarouselIndicators Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
                   <tr>
-                    <th scope="row">size</th>
-                    <td>string</td>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">activeIndex</th>
                     <td></td>
-                    <td>'xs', 'sm', 'sd', 'md', 'lg'</td>
+                    <td>isRequired</td>
+                    <td></td>
                   </tr>
                   <tr>
-                    <th scope="row">type</th>
+                    <th scope="row">items</th>
+                    <td>array</td>
+                    <td>isRequired</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">onClickHandler</th>
+                    <td>func</td>
+                    <td>isRequired</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props4">
+            <CardHeader>CarouselCaption Properties</CardHeader>
+            <CardBody>
+              <Table hover responsive>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">captionHeader</th>
                     <td>string</td>
-                    <td>'checkbox'</td>
+                    <td>isRequired</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">captionText</th>
+                    <td>string</td>
+                    <td>isRequired</td>
                     <td></td>
                   </tr>
                 </tbody>
