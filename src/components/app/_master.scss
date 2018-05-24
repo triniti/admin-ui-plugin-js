@@ -315,6 +315,13 @@ a:not([href]):not([tabindex]),
 .bg-gray-900 {background-color: $gray-900 !important;}
 
 
+// remove backgrounds
+
+.bg-none {
+  background: transparent !important;
+}
+
+
 // Borders
 //
 // Usually added to divide content or to an aside
