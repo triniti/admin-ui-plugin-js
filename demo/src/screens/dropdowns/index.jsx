@@ -81,7 +81,7 @@ class UiDropdown extends React.Component {
       // ]}
         primaryActions={<PrimaryActions />}
         body={[
-          <Card key="props0">
+          <Card key="dropdown">
             <CardHeader>
               Dropdown
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>

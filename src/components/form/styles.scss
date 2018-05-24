@@ -11,6 +11,8 @@
 //
 
 .form-control,
+.custom-select,
+.custom-file-input,
 .swal2-container .swal2-popup .form-control {
   position: relative;
   line-height: $input-btn-line-height;
@@ -27,6 +29,7 @@
     border-color: $secondary;
     color: $body-color;
     background-color: $white !important;
+    box-shadow: $input-focus-box-shadow;
   }
 
   .input-group-prepend & {
@@ -421,5 +424,109 @@ input[type="checkbox"] {
 
   .form-control {
     max-width: 100%;
+  }
+}
+
+// Custom Inputs
+
+.custom-control {
+  padding-left: 0;
+  padding-bottom: 1rem;
+}
+
+.custom-control-label {
+  padding-top: .125rem;
+  margin-bottom: 0;
+  font-size: $font-size-base;
+  text-transform: none;
+  opacity: 1;
+  letter-spacing: 0;
+  font-weight: $font-weight-normal;
+  color: $body-color;
+
+  .custom-checkbox .custom-control-input:not(:checked) ~ &::after {
+    background-image: $custom-checkbox-indicator-icon-checked;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    opacity: .05;
+  }
+
+  .custom-radio .custom-control-input:not(:checked) ~ &::after {
+    background-image: $custom-radio-indicator-icon-checked;
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    opacity: .04;
+  }
+
+  &::before {
+    box-shadow: inset 0 0 0 2px $gray-rgba-300 !important;
+  }
+
+  &::before,
+  &::after {
+    left: -1.875rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .custom-control-input:disabled ~ & {
+      cursor: not-allowed;
+    }
+  }
+}
+
+.custom-control-input {
+
+  &:disabled {
+    opacity: 0.5;
+
+    & ~ .custom-control-label {
+      color: $body-color;
+      opacity: 0.5;
+
+      &::before {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+input[type="radio"].custom-control-input,
+input[type="checkbox"].custom-control-input {
+  margin-right: 1.125rem;
+}
+
+.custom-file-input {
+
+  &:disabled {
+    cursor: not-allowed;
+
+    & ~ .custom-file-label {
+      box-shadow: none;
+      opacity: 0.5;
+    }
+  }
+  &:hover ~ .custom-file-label {
+    box-shadow: $hover-shadow;
+  }
+  &:focus ~ .custom-file-label {
+    border-color: theme-color('secondary');
+    box-shadow: none;
+
+    &::after {
+      border-color: theme-color('secondary');
+      box-shadow: none;
+    }
+  }
+}
+
+.custom-select {
+
+  &:disabled {
+    color: $body-color;
+    box-shadow: none;
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
