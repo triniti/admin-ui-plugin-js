@@ -1,5 +1,6 @@
 # CHANGELOG
 
+
 ## v0.5.3
 * Style CustomInput and Carousel components
 * Style status styles in search dropdown
