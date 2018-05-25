@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, ButtonGroup, ButtonToolbar, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Divider, Form, FormGroup, Icon, Label, PageActionButton, PageActions, Radio, Row, Screen, Switch, Table } from '../../../../src/components';
+import { Button, ButtonGroup, Card, CardBody, CardHeader, CardTitle, Col, Icon, Row, Screen, Table } from '../../../../src/components';
 
 class UiButtons extends React.Component {
   constructor(props) {
@@ -70,14 +70,14 @@ class UiButtons extends React.Component {
               <Button color="link">link</Button>
               <Button color="link-bg">link-bg</Button>
               <Button color="hover">hover</Button>
-              <Button color="icon-hover-bg">icon-hover-bg <Icon imgSrc="arrow-double-right" className="ml-1"/></Button>
+              <Button color="icon-hover-bg">icon-hover-bg <Icon imgSrc="arrow-double-right" className="ml-1" /></Button>
               <Button color="hover-bg">hover-bg</Button>
-              <Button color="link" radius="circle"><Icon imgSrc="microphone"/></Button>
-              <Button color="link-bg" radius="circle"><Icon imgSrc="bolt-outline"/></Button>
-              <Button color="hover" radius="circle"><Icon imgSrc="trash"/></Button>
-              <Button color="icon-hover-bg" radius="circle"><Icon imgSrc="clipboard"/></Button>
-              <Button color="hover-bg" radius="circle"><Icon imgSrc="microphone"/></Button>
-              <Button color="hover-bg text-secondary" radius="circle"><Icon imgSrc="microphone"/></Button>
+              <Button color="link" radius="circle"><Icon imgSrc="microphone" /></Button>
+              <Button color="link-bg" radius="circle"><Icon imgSrc="bolt-outline" /></Button>
+              <Button color="hover" radius="circle"><Icon imgSrc="trash" /></Button>
+              <Button color="icon-hover-bg" radius="circle"><Icon imgSrc="clipboard" /></Button>
+              <Button color="hover-bg" radius="circle"><Icon imgSrc="microphone" /></Button>
+              <Button color="hover-bg text-secondary" radius="circle"><Icon imgSrc="microphone" /></Button>
             </CardBody>
           </Card>,
 
@@ -433,38 +433,38 @@ class UiButtons extends React.Component {
                 <Icon imgSrc="close" alt="x" />
               </Button>
               <Button outline color="secondary" radius="none" size="lg">
-                <Icon imgSrc="close" alt="x" className="mr-0"/>
+                <Icon imgSrc="close" alt="x" className="mr-0" />
               </Button>
               <Button radius="round" outline>
                 <Icon imgSrc="close" alt="x" className="mr-2" />Close Me Please
               </Button>
               <Button outline radius="round" size="sm">
-              <Icon imgSrc="delete-line" alt="x" className="mr-1" />Close Me Please
+                <Icon imgSrc="delete-line" alt="x" className="mr-1" />Close Me Please
               </Button>
               <Button radius="round" size="sm">
-              <Icon imgSrc="pencil" alt="x" className="mr-1" />Edit
+                <Icon imgSrc="pencil" alt="x" className="mr-1" />Edit
               </Button>
             </CardBody>
             <CardBody>
-            <div className="d-inline-flex align-items-center">
-              <Button outline radius="circle" size="sm" className="m-0">
-                <Icon imgSrc="pencil" />
-              </Button>
-              <div className="d-inline-flex align-items-center flex-column">
-                <Button outline radius="circle" size="xs" className="m-0">
-                  <Icon imgSrc="move" />
+              <div className="d-inline-flex align-items-center">
+                <Button outline radius="circle" size="sm" className="m-0">
+                  <Icon imgSrc="pencil" />
                 </Button>
-                <Button outline radius="circle" size="sm" className="m-2">
-                  <Icon imgSrc="move" />
-                </Button>
-                <Button outline radius="circle" size="xs" className="m-0">
-                  <Icon imgSrc="move" />
+                <div className="d-inline-flex align-items-center flex-column">
+                  <Button outline radius="circle" size="xs" className="m-0">
+                    <Icon imgSrc="move" />
+                  </Button>
+                  <Button outline radius="circle" size="sm" className="m-2">
+                    <Icon imgSrc="move" />
+                  </Button>
+                  <Button outline radius="circle" size="xs" className="m-0">
+                    <Icon imgSrc="move" />
+                  </Button>
+                </div>
+                <Button outline radius="circle" size="sm" className="m-0">
+                  <Icon imgSrc="trash" />
                 </Button>
               </div>
-              <Button outline radius="circle" size="sm" className="m-0">
-                <Icon imgSrc="trash" />
-              </Button>
-            </div>
             </CardBody>
           </Card>,
 
@@ -484,92 +484,92 @@ class UiButtons extends React.Component {
                   <tr>
                     <th scope="row">action</th>
                     <td>bool</td>
-                    <td></td>
+                    <td />
                     <td>Adds class 'btn-action'</td>
                   </tr>
                   <tr>
                     <th scope="row">active</th>
                     <td>bool</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">block</th>
                     <td>bool</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">children</th>
                     <td>node</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">className</th>
                     <td>string</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">color</th>
                     <td>string</td>
                     <td>'light'</td>
-                    <td></td>
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">disabled</th>
                     <td>bool</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">icon</th>
                     <td>bool</td>
-                    <td></td>
+                    <td />
                     <td>Adds class 'btn-icon' which adds a min-height of 40px, required for background images. Not required if adding Icon component inside.</td>
                   </tr>
                   <tr>
                     <th scope="row">innerRef</th>
                     <td>neOfType</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">onClick</th>
                     <td>func</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">outline</th>
                     <td>bool</td>
-                    <td></td>
-                    <td></td>
+                    <td />
+                    <td />
                   </tr>
                   <tr>
                     <th scope="row">outlineText</th>
                     <td>bool</td>
-                    <td></td>
+                    <td />
                     <td>Adds class 'btn-outline-text-*color'. Similar to outline but with grey border.</td>
                   </tr>
                   <tr>
                     <th scope="row">radius</th>
                     <td>string</td>
-                    <td></td>
+                    <td />
                     <td>Adds class 'btn-radius-*radius' with values 'round', 'circle', 'none'</td>
                   </tr>
                   <tr>
                     <th scope="row">size</th>
                     <td>string</td>
-                    <td></td>
+                    <td />
                     <td>'sm', 'lg', 'xl'</td>
                   </tr>
                   <tr>
                     <th scope="row">tag</th>
                     <td>oneOfType</td>
                     <td>'button'</td>
-                    <td></td>
+                    <td />
                   </tr>
                 </tbody>
               </Table>

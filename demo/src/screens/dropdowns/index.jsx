@@ -85,14 +85,14 @@ class UiDropdown extends React.Component {
             <CardHeader>
               Dropdown
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode4} active={this.state.collapseCode4}>
-                <Icon imgSrc="code" size="md"/>
+                <Icon imgSrc="code" size="md" />
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode4}>
-             <CardBody className="pl-0 pr-0 bg-light">
-              <pre className="pl-5 pr-3">
-               <code>
-{`import React from 'react';
+              <CardBody className="pl-0 pr-0 bg-light">
+                <pre className="pl-5 pr-3">
+                  <code>
+                    {`import React from 'react';
 import { Dropdown, DropdownToggle, DropdownMenu, DropdownItem } from '@triniti/admin-ui-plugin/components';
 
 class UiDropdown extends React.Component {
@@ -136,7 +136,7 @@ class UiDropdown extends React.Component {
     );
   }
 }`}
-                   </code>
+                  </code>
                 </pre>
               </CardBody>
             </Collapse>
@@ -145,7 +145,7 @@ class UiDropdown extends React.Component {
                 <Col xs="6">
                   <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="mb-4">
                     <DropdownToggle caret>
-                  Dropdown
+                      Dropdown
                     </DropdownToggle>
                     <DropdownMenu>
                       <DropdownItem header>Header</DropdownItem>
@@ -164,13 +164,13 @@ class UiDropdown extends React.Component {
             <CardHeader>
               ButtonDropdown
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                <Icon imgSrc="code" size="md"/>
+                <Icon imgSrc="code" size="md" />
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode1}>
               <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
+                <pre className="pl-5 pr-3">
+                  <code>{`import React from 'react';
 import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@triniti/admin-ui-plugin/components';
 
 Example extends Component {
@@ -204,7 +204,9 @@ Example extends Component {
     </ButtonDropdown>
     );
   }
-}`}</code></pre>
+}`}
+                  </code>
+                </pre>
               </CardBody>
             </Collapse>
             <CardBody indent>
@@ -229,13 +231,13 @@ Example extends Component {
             <CardHeader>
               Full Width ButtonDropdown
               <Button radius="circle" color="hover-bg" onClick={this.toggleCode2} active={this.state.collapseCode2}>
-                <Icon imgSrc="code" size="md"/>
+                <Icon imgSrc="code" size="md" />
               </Button>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode2}>
               <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
+                <pre className="pl-5 pr-3">
+                  <code>{`import React from 'react';
 import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@triniti/admin-ui-plugin/components';
 
 Example extends Component {
@@ -269,7 +271,9 @@ Example extends Component {
     </ButtonDropdown>
     );
   }
-}`}</code></pre>
+}`}
+                  </code>
+                </pre>
               </CardBody>
             </Collapse>
             <CardBody indent>
@@ -297,8 +301,8 @@ Example extends Component {
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode3}>
               <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
+                <pre className="pl-5 pr-3">
+                  <code>{`import React from 'react';
 import { ButtonDropdown, DropdownItem, DropdownMenu, DropdownToggle } from '@triniti/admin-ui-plugin/components';
 
 Example extends Component {
@@ -332,7 +336,9 @@ Example extends Component {
     </ButtonDropdown>
     );
   }
-}`}</code></pre>
+}`}
+                  </code>
+                </pre>
               </CardBody>
             </Collapse>
             <CardBody indent>
@@ -363,98 +369,98 @@ Example extends Component {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row">active</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">addonType</th>
-                  <td>oneOfType</td>
-                  <td></td>
-                  <td>'prepend', 'append'</td>
-                </tr>
-                <tr>
-                  <th scope="row">children</th>
-                  <td>node</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">cssModule</th>
-                  <td>object</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">direction</th>
-                  <td>oneOf</td>
-                  <td></td>
-                  <td>'up', 'down', 'left', 'right'</td>
-                </tr>
-                <tr>
-                  <th scope="row">disabled</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">group</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">inNavbar</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>For Dropdown usage inside a Navbar (disables popper)</td>
-                </tr>
-                <tr>
-                  <th scope="row">isOpen</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">nav</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>For Dropdown usage inside a Nav</td>
-                </tr>
-                <tr>
-                  <th scope="row">setActiveFromChild</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">size</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>string</td>
-                  <td>'div'</td>
-                  <td>default: 'div' unless nav=true, then 'li'</td>
-                </tr>
-                <tr>
-                  <th scope="row">toggle</th>
-                  <td>func</td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row">active</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">addonType</th>
+                    <td>oneOfType</td>
+                    <td />
+                    <td>'prepend', 'append'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">cssModule</th>
+                    <td>object</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">direction</th>
+                    <td>oneOf</td>
+                    <td />
+                    <td>'up', 'down', 'left', 'right'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">group</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">inNavbar</th>
+                    <td>bool</td>
+                    <td />
+                    <td>For Dropdown usage inside a Navbar (disables popper)</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">isOpen</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">nav</th>
+                    <td>bool</td>
+                    <td />
+                    <td>For Dropdown usage inside a Nav</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">setActiveFromChild</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">size</th>
+                    <td>string</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>string</td>
+                    <td>'div'</td>
+                    <td>default: 'div' unless nav=true, then 'li'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">toggle</th>
+                    <td>func</td>
+                    <td />
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>
@@ -465,86 +471,86 @@ Example extends Component {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row">'aria-haspopup'</th>
-                  <td>bool</td>
-                  <td>'true'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">caret</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">children</th>
-                  <td>node</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">className</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">color</th>
-                  <td>string</td>
-                  <td>'secondary'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">'data-toggle'</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">disabled</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">nav</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>For Dropdown usage inside a Nav</td>
-                </tr>
-                <tr>
-                  <th scope="row">onClick</th>
-                  <td>func</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">split</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>oneOfType</td>
-                  <td></td>
-                  <td>Defaults to Button component</td>
-                </tr>
-                <tr>
-                  <th scope="row">toggle</th>
-                  <td>func</td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row">'aria-haspopup'</th>
+                    <td>bool</td>
+                    <td>'true'</td>
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">caret</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">color</th>
+                    <td>string</td>
+                    <td>'secondary'</td>
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">'data-toggle'</th>
+                    <td>string</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">nav</th>
+                    <td>bool</td>
+                    <td />
+                    <td>For Dropdown usage inside a Nav</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">onClick</th>
+                    <td>func</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">split</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td />
+                    <td>Defaults to Button component</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">toggle</th>
+                    <td>func</td>
+                    <td />
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>
@@ -555,56 +561,56 @@ Example extends Component {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row">children</th>
-                  <td>node</td>
-                  <td></td>
-                  <td>*<i>Required</i></td>
-                </tr>
-                <tr>
-                  <th scope="row">className</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">flip</th>
-                  <td>bool</td>
-                  <td>'true'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">modifiers</th>
-                  <td>object</td>
-                  <td></td>
-                  <td>Custom modifiers that are passed to DropdownMenu.js, see <a href="https://popper.js.org/popper-documentation.html#modifiers" target="blank">https://popper.js.org/popper-documentation.html#modifiers</a></td>
-                </tr>
-                <tr>
-                  <th scope="row">persist</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td>Persist the popper, even when closed.</td>
-                </tr>
-                <tr>
-                  <th scope="row">right</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>string</td>
-                  <td>'div'</td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td />
+                    <td>*<i>Required</i></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">flip</th>
+                    <td>bool</td>
+                    <td>'true'</td>
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">modifiers</th>
+                    <td>object</td>
+                    <td />
+                    <td>Custom modifiers that are passed to DropdownMenu.js, see <a href="https://popper.js.org/popper-documentation.html#modifiers" target="blank">https://popper.js.org/popper-documentation.html#modifiers</a></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">persist</th>
+                    <td>bool</td>
+                    <td />
+                    <td>Persist the popper, even when closed.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">right</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>string</td>
+                    <td>'div'</td>
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>
@@ -615,68 +621,68 @@ Example extends Component {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row">active</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">children</th>
-                  <td>node</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">className</th>
-                  <td>string</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">disabled</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                 <tr>
-                  <th scope="row">divider</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">header</th>
-                  <td>bool</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">onClick</th>
-                  <td>func</td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">tag</th>
-                  <td>oneOfType</td>
-                  <td>'button'</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row">toggle</th>
-                  <td>func</td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row">active</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">divider</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">header</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">onClick</th>
+                    <td>func</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">tag</th>
+                    <td>oneOfType</td>
+                    <td>'button'</td>
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">toggle</th>
+                    <td>func</td>
+                    <td />
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>
