@@ -1,11 +1,10 @@
 # CHANGELOG
 
-## v0.5.2
+## v0.5.3
 * Style CustomInput and Carousel components
 * Style status styles in search dropdown
 * Deprecate hoverOutline for Media component, use hover="outline"
 * Update UI examples.
-* Fix Bug: Select component should forward ref to parent component correctly.
 
 
 ## v0.5.2
