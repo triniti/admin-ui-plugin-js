@@ -6,6 +6,7 @@ $form-min-height:        40px;
 $form-min-height-lg:     54px;
 $border-radius-form:      2px;
 $input-focus-color:     $info;
+$status-height:         320px;
 
 @import "~react-select/dist/react-select.css";
 
@@ -140,4 +141,30 @@ $input-focus-color:     $info;
 .Select-option.is-selected.is-focused  {
   background-color: rgba($input-focus-color, 0.125) !important;
   box-shadow: inset 2px 0 0 $input-focus-color;
+}
+
+
+// select-status
+
+.select-status {
+
+  .Select-option {
+    padding: 0 !important;
+
+    span[class^="status-"],
+    span[class*=" status-"] {
+      padding: .675rem !important;
+      margin: 0 !important;
+      display: block;
+    }
+  }
+  .status-copy {
+    border-radius: 0 !important;
+  }
+  .Select-menu-outer {
+    max-height: $status-height;
+  }
+  .Select-menu {
+    max-height: ($status-height - 2px);
+  }
 }

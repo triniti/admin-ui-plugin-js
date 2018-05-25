@@ -150,16 +150,52 @@ const Example = (props) => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row" />
-                    <td />
-                    <td />
-                    <td />
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td></td>
+                    <td>Adds label content with classes 'form-check-label checkbox-label'</td>
                   </tr>
                   <tr>
-                    <th scope="row" />
-                    <td />
-                    <td />
-                    <td />
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">id</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>*isRequired</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">label1</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>Inactive text that appears inside a Switch component</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">label2</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>Active text that appears inside a Switch component</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">size</th>
+                    <td>string</td>
+                    <td></td>
+                    <td>'xs', 'sm', 'sd', 'md', 'lg'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">type</th>
+                    <td>string</td>
+                    <td>'checkbox'</td>
+                    <td></td>
                   </tr>
                 </tbody>
               </Table>

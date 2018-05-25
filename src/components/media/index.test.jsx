@@ -12,9 +12,8 @@ test('Media:: should import Media component from reactstrap', (t) => {
 });
 
 test('Media:: should render custom props and classNames', (t) => {
-  const wrapper = shallow(<Media hover hoverOutline aspectRatio="test" className="additional-class" />);
+  const wrapper = shallow(<Media hover="outline" aspectRatio="test" className="additional-class" />);
 
-  t.equal(wrapper.find('.media-hover').length, 1);
   t.equal(wrapper.find('.media-hover-outline').length, 1);
   t.equal(wrapper.find('.aspect-ratio').length, 1);
   t.equal(wrapper.find('.aspect-ratio-test').length, 1);

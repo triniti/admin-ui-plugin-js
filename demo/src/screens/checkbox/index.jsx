@@ -1,13 +1,13 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, Collapse, Form, FormGroup, Icon, Label, Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Checkbox, Collapse, Form, FormGroup, Icon, Label, Screen, Table } from '../../../../src/components';
 
 class UiCheckBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      collapseCode1: false
+      collapseCode1: false,
     };
 
     this.toggleCode1 = this.toggleCode1.bind(this);
@@ -37,14 +37,14 @@ class UiCheckBox extends React.Component {
                   <Checkbox size="sm" round>Maybe</Checkbox>
                 </FormGroup>
                 <Button radius="circle" color="hover-bg" onClick={this.toggleCode1} active={this.state.collapseCode1}>
-                  <Icon imgSrc="code" size="md"/>
+                  <Icon imgSrc="code" size="md" />
                 </Button>
               </Form>
             </CardHeader>
             <Collapse isOpen={this.state.collapseCode1}>
               <CardBody className="pl-0 pr-0 bg-light">
-            <pre className="pl-5 pr-3">
-<code>{`import React from 'react';
+                <pre className="pl-5 pr-3">
+                  <code>{`import React from 'react';
 import { Label, Radio } from '@triniti/admin-ui-plugin/components';
 
 const Example = (props) => {
@@ -88,7 +88,9 @@ const Example = (props) => {
 
     </FormGroup>
   );
-};`}</code></pre>
+};`}
+                  </code>
+                </pre>
               </CardBody>
             </Collapse>
             <CardBody>
@@ -132,11 +134,11 @@ const Example = (props) => {
 
                 </FormGroup>
               </Form>
-              <hr/>
+              <hr />
               <Checkbox id="showText" className="mr-3"><Label tag="span">Label</Label></Checkbox>
               <Checkbox id="showText"><Label tag="span" className="form-label-strong">Label Strong</Label></Checkbox>
 
-              <hr/>
+              <hr />
               <Label check>
                 <Checkbox id="showText" />
                 Deprecated
@@ -150,26 +152,56 @@ const Example = (props) => {
             <CardBody>
               <Table hover responsive>
                 <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Type</th>
-                  <th>Default</th>
-                  <th>Description</th>
-                </tr>
+                  <tr>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Default</th>
+                    <th>Description</th>
+                  </tr>
                 </thead>
                 <tbody>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <th scope="row"></th>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
+                  <tr>
+                    <th scope="row">children</th>
+                    <td>node</td>
+                    <td />
+                    <td>Adds label content with classes 'form-check-label checkbox-label'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">className</th>
+                    <td>string</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">disabled</th>
+                    <td>bool</td>
+                    <td />
+                    <td />
+                  </tr>
+                  <tr>
+                    <th scope="row">right</th>
+                    <td>bool</td>
+                    <td />
+                    <td>Adds class 'checkbox-label-right' which changes flex order so that input is on the right of the label</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">round</th>
+                    <td>bool</td>
+                    <td />
+                    <td>Adds class 'checkbox-input-round' which makes the checkbox round.</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">size</th>
+                    <td>string</td>
+                    <td />
+                    <td>'xs', 'sm', 'sd', 'md', 'lg'</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">type</th>
+                    <td>string</td>
+                    <td>'checkbox'</td>
+                    <td />
+                  </tr>
                 </tbody>
               </Table>
             </CardBody>

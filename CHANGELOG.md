@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.5.3
+* Style CustomInput and Carousel components
+* Style status styles in search dropdown
+* Deprecate hoverOutline for Media component, use hover="outline"
+* Update UI examples.
+
+
 ## v0.5.2
 * Fix Bug: alert reducer now return the correct alert-bar state.
 

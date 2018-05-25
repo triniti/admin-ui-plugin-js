@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Container, Divider, Row, Screen } from '../../../../src/components';
+import { Button, Card, CardBody, CardColumns, CardDeck, CardFooter, CardGroup, CardHeader, CardImg, CardImgOverlay, CardLink, CardText, CardTitle, CardSubtitle, CardsContainer, Col, Container, Divider, Row, Screen, Table } from '../../../../src/components';
 
 const UiCard = () => (
   <Screen
@@ -311,6 +311,438 @@ const UiCard = () => (
           <Button color="secondary">Button</Button>
         </Card>
       </CardColumns>,
+
+      <Card key="props1">
+        <CardHeader>Card Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">body</th>
+                <td>bool</td>
+                <td></td>
+                <td>Adds a 'card' and 'card-body' class to tag</td>
+              </tr>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">color</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">inverse</th>
+                <td>bool</td>
+                <td></td>
+                <td>Sets text color to white</td>
+              </tr>
+              <tr>
+                <th scope="row">outline</th>
+                <td>bool</td>
+                <td></td>
+                <td>Sets text color to white</td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props2">
+        <CardHeader>CardBody Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">indent</th>
+                <td>bool</td>
+                <td></td>
+                <td>Adds 'card-body-indent' class which adds extra side padding.</td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props3">
+        <CardHeader>CardColumns Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props4">
+        <CardHeader>CardDeck Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props5">
+        <CardHeader>CardFooter Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props6">
+        <CardHeader>CardGroup Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props7">
+        <CardHeader>CardHeader Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props8">
+        <CardHeader>CardImg Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">bottom</th>
+                <td>bool</td>
+                <td></td>
+                <td>Adds class 'card-img-bottom'. Useful when card has rounded corners.</td>
+              </tr>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">top</th>
+                <td>bool</td>
+                <td></td>
+                <td>Adds class 'card-img-top'. Useful when card has rounded corners.</td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props9">
+        <CardHeader>CardImgOverlay Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props10">
+        <CardHeader>CardLink Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">innerRef</th>
+                <td>oneOfType</td>
+                <td></td>
+                <td>Ref will only get you a reference to the CardLink component, use innerRef to get a reference to the DOM element (for things like focus management).</td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props11">
+        <CardHeader>CardSubtitle Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props12">
+        <CardHeader>CardText Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
+
+      <Card key="props13">
+        <CardHeader>CardTitle Properties</CardHeader>
+        <CardBody>
+          <Table hover responsive>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Default</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">className</th>
+                <td>string</td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th scope="row">tag</th>
+                <td>oneOfType</td>
+                <td>'div'</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </Table>
+        </CardBody>
+      </Card>,
     ]}
   />
 );

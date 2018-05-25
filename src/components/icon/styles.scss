@@ -199,7 +199,7 @@
   }
 }
 
-.icon-alert-xs {
+.icon-alert-xsm {
   width: 2rem; // 32px
   height: 2rem;
 
@@ -207,6 +207,17 @@
     padding: .375rem;
     width: 2rem;
     height: 2rem;
+  }
+}
+
+.icon-alert-xs {
+  width: 1.75rem; // 32px
+  height: 1.75rem;
+
+  > svg {
+    padding: .375rem;
+    width: 1.75rem;
+    height: 1.75rem;
   }
 }
 

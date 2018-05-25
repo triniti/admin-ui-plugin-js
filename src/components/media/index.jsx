@@ -8,10 +8,10 @@ const Media = ({ aspectRatio, className, hover, hoverOutline, ...attributes }) =
   const classes = classNames(
     className,
     {
-      'media-hover': hover,
+      'aspect-ratio': aspectRatio,
       'media-hover-outline': hoverOutline,
-      'aspect-ratio': !!aspectRatio,
     },
+    { [`media-hover-${hover}`]: !!hover },
     { [`aspect-ratio-${aspectRatio}`]: !!aspectRatio },
   );
 
@@ -21,14 +21,14 @@ const Media = ({ aspectRatio, className, hover, hoverOutline, ...attributes }) =
 Media.propTypes = {
   aspectRatio: PropTypes.string,
   className: PropTypes.string,
-  hover: PropTypes.bool,
-  hoverOutline: PropTypes.bool,
+  hover: PropTypes.string,
+  hoverOutline: PropTypes.bool, /* deprecated use hover="outline" */
 };
 
 Media.defaultProps = {
   aspectRatio: '',
   className: '',
-  hover: false,
+  hover: '',
   hoverOutline: false,
 };
 

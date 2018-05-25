@@ -295,6 +295,66 @@ export default UiInputGroup;
               </Table>
             </CardBody>
           </Card>,
+
+          <Card key="props4">
+            <CardHeader>Input Group Button Dropdown Properties</CardHeader>
+            <CardBody className="pt-3">
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">addonType</th>
+                  <td>oneOf</td>
+                  <td>*<i>Required</i></td>
+                  <td>(['prepend', 'append'])</td>
+                </tr>
+                <tr>
+                  <th scope="row">children</th>
+                  <td>node</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
+
+          <Card key="props5">
+            <CardHeader>Input Group Text Properties</CardHeader>
+            <CardBody className="pt-3">
+              <Table hover responsive>
+                <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Type</th>
+                  <th>Default</th>
+                  <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <th scope="row">className</th>
+                  <td>string</td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <th scope="row">tag</th>
+                  <td>oneOfType</td>
+                  <td>'span'</td>
+                  <td></td>
+                </tr>
+                </tbody>
+              </Table>
+            </CardBody>
+          </Card>,
       ]}
       />
     );
