@@ -138,6 +138,7 @@ import plusLineThick from './plus-line-thick.svg';
 import plusOutline from './plus-outline.svg';
 import plusOutlineSquare from './plus-outline-square.svg';
 import plusSolid from './plus-solid.svg';
+import poll from './poll.svg';
 import print from './print.svg';
 import question from './question.svg';
 import questionOutline from './question-outline.svg';
@@ -337,6 +338,7 @@ const icons = {
   'plus-outline': plusOutline,
   'plus-outline-square': plusOutlineSquare,
   'plus-solid': plusSolid,
+  poll,
   print,
   question,
   'question-outline': questionOutline,
