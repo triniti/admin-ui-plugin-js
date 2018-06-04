@@ -251,6 +251,23 @@
 @import "_btn-toggler";
 
 
+// primary action button
+
+.btn-action-save:not(.disabled) {
+  color: $white;
+  background: theme-color("primary");
+  border-color: darken(theme-color("primary"), 5%);
+  border-bottom-color: shade(darken(theme-color("primary"), 8%), 6%);
+
+  &:hover,
+  &:focus {
+    background: darken(theme-color("primary"), 5%);
+    border-color: darken(theme-color("primary"), 8%);
+    border-bottom-color: shade(darken(theme-color("primary"), 8%), 6%);
+  }
+}
+
+
 // todo: need to move to modal footer and check items
 
 // Footer Buttons
