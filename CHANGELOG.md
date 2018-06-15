@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## v0.5.4
+* Upgrade react and react-dom to v16.4.1.
+* New feature in TrinitiAppNav: 
+  * handle modal popup directly from nav menu.
+* Update demo.
+
 
 ## v0.5.3
 * Style CustomInput and Carousel components
