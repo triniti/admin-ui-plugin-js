@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, CardBody, CardTitle, Jumbotron, Modal, ModalBody, ModalFooter, ModalHeader } from '../../../../src/components';
-import './style.scss';
 
 const LinkCreationModal2 = ({ onToggle, history, isOpen }) => (
   <Modal size="lg" backdropClassName="modal-backdrop-create-article" toggle={onToggle} isOpen={isOpen}>
