@@ -1,6 +1,3 @@
-import LinkCreationModal from '../components/link-creation-modal';
-import LinkCreationModal2 from '../components/link-creation-modal-2';
-
 export default [
   {
     navType: 'item',
@@ -34,8 +31,7 @@ export default [
         linkTitle: 'Pages',
       },
       {
-        modal: LinkCreationModal,
-        modalId: 'create-demo-page',
+        modal: import('components/link-creation-modal'),
         linkTitle: 'Create Demo Page',
       },
     ],
@@ -49,7 +45,7 @@ export default [
         linkTitle: 'Search',
       },
       {
-        modal: LinkCreationModal2,
+        modal: import('components/link-creation-modal-2'),
         linkTitle: 'Upload',
       },
     ],

@@ -68,6 +68,7 @@ import CardHeader from './card-header';
 import CardTitle from './card-title';
 import Carousel from './carousel';
 import Checkbox from './checkbox';
+import CreateModalButton from './create-modal-button';
 import DatePicker from './datepicker';
 import Divider from './divider';
 import Dropdown from './dropdown';
@@ -84,6 +85,7 @@ import Loading from './loading';
 import Media from './media';
 import Modal from './modal';
 import ModalFooter from './modal-footer';
+import ModalPortal from './modal-portal';
 import Nav from './nav';
 import Navbar from './navbar';
 import PageHeader from './page-header';
@@ -148,6 +150,7 @@ export {
   Col,
   Collapse,
   Container,
+  CreateModalButton,
   CustomInput,
   DatePicker,
   Divider,
@@ -181,6 +184,7 @@ export {
   ModalBody,
   ModalFooter,
   ModalHeader,
+  ModalPortal,
   Nav,
   NavItem,
   NavLink,
