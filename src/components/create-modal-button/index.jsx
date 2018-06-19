@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import kebabCase from 'lodash/kebabCase';
+import noop from 'lodash/noop';
 
 import Button from '../button';
 import Icon from '../icon';
-import ModalPortal from '../modal-portal';
 import createLazyComponent from '../createLazyComponent';
 
 export default class CreateModalButton extends React.Component {
@@ -12,16 +12,14 @@ export default class CreateModalButton extends React.Component {
     icon: PropTypes.string,
     iconUrl: PropTypes.string,
     modal: PropTypes.objectOf(Promise).isRequired,
-    onShow: PropTypes.func,
-    onHide: PropTypes.func,
+    onClick: PropTypes.func,
     text: PropTypes.string,
   };
 
   static defaultProps = {
     icon: '',
     iconUrl: '',
-    onShow: undefined,
-    onHide: undefined,
+    onClick: noop,
     text: 'Create',
   };
 
@@ -31,44 +29,23 @@ export default class CreateModalButton extends React.Component {
     this.state = {
       showModal: false,
     };
-    this.handleShowModal = this.handleShowModal.bind(this);
-    this.handleHideModal = this.handleHideModal.bind(this);
+    this.handleToggleModal = this.handleToggleModal.bind(this);
   }
 
-  handleShowModal() {
-    const { onShow } = this.props;
+  handleToggleModal() {
+    const { onClick } = this.props;
     this.setState({
-      showModal: true,
-    });
-
-    if (typeof onShow === 'function') {
-      onShow();
-    }
-  }
-
-  handleHideModal() {
-    const { onHide } = this.props;
-    this.setState({
-      showModal: false,
-    });
-
-    if (typeof onHide === 'function') {
-      onHide();
-    }
+      showModal: !this.state.showModal,
+    }, onClick);
   }
 
   render() {
-    const { icon, iconUrl, modal: modalImport, text, onHide, onShow, ...attr } = this.props;
+    const { icon, iconUrl, modal: modalImport, text, ...attr } = this.props;
     const ModalComponent = createLazyComponent(modalImport);
-
-    const modal = this.state.showModal ? (
-      <ModalPortal key="modal-portal">
-        <ModalComponent onHide={this.handleHideModal} />
-      </ModalPortal>
-    ) : null;
+    const modal = this.state.showModal ? <ModalComponent onToggle={this.handleToggleModal} key="modal" /> : null;
 
     return [
-      <Button {...attr} onClick={this.handleShowModal} key="button" action={kebabCase(`action-${text}`)}>
+      <Button {...attr} onClick={this.handleToggleModal} key="button" action={kebabCase(`action-${text}`)}>
         {(iconUrl || icon) && <Icon imgSrc={icon} src={iconUrl} alt={text} />}
         {text}
       </Button>,

@@ -22,8 +22,7 @@ export default () => (
       color="info"
       icon="add-item"
       outline
-      onShow={() => console.info('%c [onShow] not only this button creates a popup modal, but also runs custom code onShow', 'background: #222; color: #bada55')}
-      onHide={() => console.info('%c [onHide] you closed it', 'color: purple; font-weight: bold;')}
+      onClick={() => console.info('%c [onClick] This button open up a modal', 'background: #222; color: #bada55')}
     />,
   ]
 );

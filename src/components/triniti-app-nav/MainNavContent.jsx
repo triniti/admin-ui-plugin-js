@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { createLazyComponent, Dropdown, DropdownToggle, DropdownMenu, ModalPortal, NavItem, RouterLink } from '../';
+import { createLazyComponent, Dropdown, DropdownToggle, DropdownMenu, NavItem, RouterLink } from '../';
 
 class MainNavContent extends React.Component {
   static propTypes = {
@@ -26,8 +26,7 @@ class MainNavContent extends React.Component {
       modal: null,
     };
     this.handleTitleClick = this.handleTitleClick.bind(this);
-    this.handleShowModal = this.handleShowModal.bind(this);
-    this.handleHideModal = this.handleHideModal.bind(this);
+    this.handleToggleModal = this.handleToggleModal.bind(this);
   }
 
   componentDidUpdate(prevProps) {
@@ -42,7 +41,7 @@ class MainNavContent extends React.Component {
     // while not visible to the user, can affect the component performance.
     if (this.props.location.pathname !== prevProps.location.pathname) {
       // eslint-disable-next-line react/no-did-update-set-state
-      this.setState({ showModal: false });
+      this.setState({ showModal: false, modal: null });
     }
   }
 
@@ -54,19 +53,19 @@ class MainNavContent extends React.Component {
     }
   }
 
-  handleShowModal(modal) {
+  handleToggleModal(modal) {
     const ModalComponent = createLazyComponent(modal);
-    this.setState({
-      showModal: true,
-      modal: <ModalComponent onHide={this.handleHideModal} />,
-    });
-  }
-
-  handleHideModal() {
-    this.setState({
-      showModal: false,
-      modal: null,
-    });
+    if (!this.state.showModal) {
+      this.setState({
+        showModal: true,
+        modal: <ModalComponent onToggle={this.handleToggleModal} key="modal" />,
+      });
+    } else {
+      this.setState({
+        showModal: false,
+        modal: null,
+      });
+    }
   }
 
   render() {
@@ -98,7 +97,7 @@ class MainNavContent extends React.Component {
             const { linkTitle, modal: modalImport, to } = dpLink;
             if (modalImport) {
               return (
-                <a key={linkTitle} className="dropdown-item" onClick={() => this.handleShowModal(modalImport)}>
+                <a key={linkTitle} className="dropdown-item" onClick={() => this.handleToggleModal(modalImport)}>
                   {linkTitle}
                 </a>
               );
@@ -136,13 +135,9 @@ class MainNavContent extends React.Component {
       }
     });
 
-    const creationModal = this.state.showModal ? (
-      <ModalPortal key="portal">{this.state.modal}</ModalPortal>
-    ) : null;
-
     return [
       mainNav,
-      creationModal,
+      this.state.showModal ? this.state.modal : null,
     ];
   }
 }

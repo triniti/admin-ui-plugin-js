@@ -85,7 +85,6 @@ import Loading from './loading';
 import Media from './media';
 import Modal from './modal';
 import ModalFooter from './modal-footer';
-import ModalPortal from './modal-portal';
 import Nav from './nav';
 import Navbar from './navbar';
 import PageHeader from './page-header';
@@ -184,7 +183,6 @@ export {
   ModalBody,
   ModalFooter,
   ModalHeader,
-  ModalPortal,
   Nav,
   NavItem,
   NavLink,
