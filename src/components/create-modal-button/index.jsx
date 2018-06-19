@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import kebabCase from 'lodash/kebabCase';
 import noop from 'lodash/noop';
 
 import Button from '../button';
@@ -45,7 +44,7 @@ export default class CreateModalButton extends React.Component {
     const modal = this.state.showModal ? <ModalComponent onToggle={this.handleToggleModal} key="modal" /> : null;
 
     return [
-      <Button {...attr} onClick={this.handleToggleModal} key="button" action={kebabCase(`action-${text}`)}>
+      <Button {...attr} onClick={this.handleToggleModal} key="button">
         {(iconUrl || icon) && <Icon imgSrc={icon} src={iconUrl} alt={text} />}
         {text}
       </Button>,

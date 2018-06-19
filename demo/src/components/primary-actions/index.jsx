@@ -1,6 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import { ActionButton, CreateModalButton } from '../../../../src/components';
+import kebabCase from 'lodash/kebabCase';
 
 export default () => (
   [
@@ -15,14 +16,15 @@ export default () => (
       className="flex-order-mobile-2"
     />,
     <CreateModalButton
-      key="demo-create-modal-button"
+      action="action-create-page"
       className="flex-order-mobile-4"
-      text="Create Page"
-      modal={import('components/creation-modal')}
       color="info"
       icon="add-item"
+      key="demo-create-modal-button"
+      modal={import('components/creation-modal')}
       outline
       onClick={() => console.info('%c [onClick] This button open up a modal', 'background: #222; color: #bada55')}
+      text="Create Page"
     />,
   ]
 );
