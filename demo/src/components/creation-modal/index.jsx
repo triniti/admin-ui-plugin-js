@@ -4,16 +4,16 @@ import { withRouter } from 'react-router';
 import noop from 'lodash/noop';
 import { Button, CardBody, CardTitle, Jumbotron, Modal, ModalBody, ModalFooter, ModalHeader } from '../../../../src/components';
 
-const LinkCreationModal2 = ({ history, onHide, onToggle }) => (
+const CreationModal = ({ history, onHide, onToggle }) => (
   <Modal size="lg" backdropClassName="modal-backdrop-create" toggle={onToggle} isOpen>
     <ModalHeader toggle={onToggle}>
-       Create Demo 2
+       Create Demo
     </ModalHeader>
     <ModalBody>
       <Jumbotron theme="light">
         <CardBody>
-          <CardTitle display="1" tag="h1">Hey Ho Let's go</CardTitle>
-          <p className="lead">This is <b>another</b> creation modal from the app menu.</p>
+          <CardTitle display="1" tag="h1">Hey Ho</CardTitle>
+          <p className="lead">This is a creation modal from the app menu.</p>
         </CardBody>
       </Jumbotron>
     </ModalBody>
@@ -24,15 +24,15 @@ const LinkCreationModal2 = ({ history, onHide, onToggle }) => (
   </Modal>
 );
 
-LinkCreationModal2.propTypes = {
+CreationModal.propTypes = {
+  history: PropTypes.object.isRequired,
   onHide: PropTypes.func,
   onToggle: PropTypes.func,
-  history: PropTypes.object.isRequired,
 };
 
-LinkCreationModal2.defaultProps = {
+CreationModal.defaultProps = {
   onHide: noop,
   onToggle: noop,
 };
 
-export default withRouter(LinkCreationModal2);
+export default withRouter(CreationModal);

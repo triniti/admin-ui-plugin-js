@@ -67,12 +67,12 @@ export default class CreateModalButton extends React.Component {
       </ModalPortal>
     ) : null;
 
-    return ([
+    return [
       <Button {...attr} onClick={this.handleShowModal} key="button" action={kebabCase(`action-${text}`)}>
         {(iconUrl || icon) && <Icon imgSrc={icon} src={iconUrl} alt={text} />}
         {text}
       </Button>,
       modal,
-    ]);
+    ];
   }
 }

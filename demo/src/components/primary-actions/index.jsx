@@ -16,8 +16,9 @@ export default () => (
     />,
     <CreateModalButton
       key="demo-create-modal-button"
+      className="flex-order-mobile-4"
       text="Create Page"
-      modal={import('components/link-creation-modal')}
+      modal={import('components/creation-modal')}
       color="info"
       icon="add-item"
       outline

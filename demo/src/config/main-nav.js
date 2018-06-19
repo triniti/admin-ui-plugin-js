@@ -31,7 +31,7 @@ export default [
         linkTitle: 'Pages',
       },
       {
-        modal: import('components/link-creation-modal'),
+        modal: import('components/creation-modal'),
         linkTitle: 'Create Demo Page',
       },
     ],
@@ -45,7 +45,7 @@ export default [
         linkTitle: 'Search',
       },
       {
-        modal: import('components/link-creation-modal-2'),
+        modal: import('components/creation-modal-2'),
         linkTitle: 'Upload',
       },
     ],
