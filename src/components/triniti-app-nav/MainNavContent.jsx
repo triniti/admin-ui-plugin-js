@@ -58,7 +58,7 @@ class MainNavContent extends React.Component {
     const ModalComponent = createLazyComponent(modal);
     this.setState({
       showModal: true,
-      modal: <ModalComponent onToggle={this.handleHideModal} />,
+      modal: <ModalComponent onHide={this.handleHideModal} />,
     });
   }
 
@@ -77,7 +77,7 @@ class MainNavContent extends React.Component {
       onDropdownOptionClick,
     } = this.props;
 
-    return navConfig.map((dropdownUnit) => {
+    const mainNav = navConfig.map((dropdownUnit) => {
       const {
         navType, navId, dpLinks, to: itemTo,
       } = dropdownUnit;
@@ -115,7 +115,7 @@ class MainNavContent extends React.Component {
             );
           });
 
-          return [
+          return (
             <Dropdown
               className={isCurrentDropdown ? 'is-current' : ''}
               key={navId.replace(/\s+/g, '')}
@@ -129,15 +129,21 @@ class MainNavContent extends React.Component {
               <DropdownMenu className="nav-dropdown-menu">
                 {navLinks}
               </DropdownMenu>
-            </Dropdown>,
-            this.state.showModal ? (
-              <ModalPortal key="portal">{this.state.modal}</ModalPortal>
-            ) : null,
-          ];
+            </Dropdown>
+          );
         default:
           return null;
       }
     });
+
+    const creationModal = this.state.showModal ? (
+      <ModalPortal key="portal">{this.state.modal}</ModalPortal>
+    ) : null;
+
+    return [
+      mainNav,
+      creationModal,
+    ];
   }
 }
 

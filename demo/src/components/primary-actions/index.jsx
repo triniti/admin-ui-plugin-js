@@ -1,7 +1,7 @@
 /* eslint-disable no-alert */
 import React from 'react';
 import { ActionButton, CreateModalButton } from '../../../../src/components';
-console.dir(import('components/link-creation-modal'));
+
 export default () => (
   [
     <ActionButton key="delete" text="Delete" icon="delete" outline className="flex-order-mobile-3" />,
@@ -21,7 +21,8 @@ export default () => (
       color="info"
       icon="add-item"
       outline
-      onClick={() => console.log('not only this create a popup modal, but also run custom code onClick')}
+      onShow={() => console.info('%c [onShow] not only this button creates a popup modal, but also runs custom code onShow', 'background: #222; color: #bada55')}
+      onHide={() => console.info('%c [onHide] you closed it', 'color: purple; font-weight: bold;')}
     />,
   ]
 );
