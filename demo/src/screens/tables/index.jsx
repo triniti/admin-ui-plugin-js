@@ -77,6 +77,7 @@ class Tables extends React.Component {
       sidenav={<Sidenav activeScreen="tables" />}
       sidenavHeader
       header="Tables"
+      pageCount={<span className="text-muted small">(Page 1 of 1)</span>}
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
       //   { to: '#/test2', text: 'Tab2' },

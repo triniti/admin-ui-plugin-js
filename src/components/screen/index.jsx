@@ -52,6 +52,7 @@ class Screen extends React.Component {
       secondaryActions,
       breadcrumbs,
       maxWidth,
+      pageCount,
     } = this.props;
 
     const { isSidebarOpen, isSidenavOpen } = this.state;
@@ -75,7 +76,7 @@ class Screen extends React.Component {
         <div className="screen-main">
           {(header || primaryActions || breadcrumbs.length) &&
           <div className="screen-header-container">
-            {breadcrumbs.length > 0 &&
+            {breadcrumbs.length > 0 && !pageCount &&
             <h1 className="screen-header-title">
               <Breadcrumb>
                 {breadcrumbs.map(breadcrumb => (
@@ -86,7 +87,20 @@ class Screen extends React.Component {
                 ))}
               </Breadcrumb>
             </h1>}
-            {breadcrumbs.length === 0 && header && <h1 className="screen-header-title">{header}</h1>}
+            {breadcrumbs.length > 0 && pageCount &&
+            <h1 className="screen-header-title">
+              <Breadcrumb>
+                {breadcrumbs.map(breadcrumb => (
+                  <BreadcrumbItem key={breadcrumb.text}>
+                    {breadcrumb.to && <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>}
+                    {!breadcrumb.to && breadcrumb.text}
+                  </BreadcrumbItem>
+                ))}
+              </Breadcrumb>
+              {pageCount}
+            </h1>}
+            {breadcrumbs.length === 0 && header && !pageCount && <h1 className="screen-header-title">{header}</h1>}
+            {breadcrumbs.length === 0 && header && pageCount && <h1 className="screen-header-title">{header} {pageCount}</h1>}
             {primaryActions && <ScreenPrimaryActions>{primaryActions}</ScreenPrimaryActions>}
           </div>}
 
@@ -139,6 +153,7 @@ Screen.propTypes = {
   primaryActions: PropTypes.node,
   secondaryActions: PropTypes.node,
   maxWidth: PropTypes.string,
+  pageCount: PropTypes.node,
 };
 
 Screen.defaultProps = {
@@ -149,6 +164,7 @@ Screen.defaultProps = {
   maxWidth: '1008px',
   sidenavHeader: null,
   tabs: [],
+  pageCount: null,
 };
 
 export default Screen;
