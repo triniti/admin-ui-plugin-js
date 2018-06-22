@@ -71,19 +71,8 @@ body {
   }
 }
 
-.gutter-sd {
-  margin-right: -.1rem;
-  margin-left: -1rem;
-
-  > .col,
-  > [class*="col-"] {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-}
-
 .gutter-md {
-  margin-right: -.1.25rem;
+  margin-right: -1.25rem;
   margin-left: -1.25rem;
 
   > .col,
@@ -94,7 +83,7 @@ body {
 }
 
 .gutter-lg {
-  margin-right: -.1.5rem;
+  margin-right: -1.5rem;
   margin-left: -1.5rem;
 
   > .col,
@@ -105,7 +94,7 @@ body {
 }
 
 .gutter-xl {
-  margin-right: -.2rem;
+  margin-right: -2rem;
   margin-left: -2rem;
 
   > .col,
@@ -611,6 +600,11 @@ tr.status-published,
   }
 }
 
+.Select-option.is-focused small,
+.Select-option.is-selected small {
+  box-shadow: 0 0 0 1px $white-rgba-700 !important;
+}
+
 
 // css columns
 
@@ -763,4 +757,29 @@ tr.status-published,
   height: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 40%,rgba(0,0,0,0.5) 75%,rgba(0,0,0,0.65) 100%);
   pointer-events: none;
+}
+
+
+// wrapper for not found text and inline buttons
+
+.not-found-message {
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+
+  p {
+    padding: 3px 0;
+  }
+  p,
+  button {
+    display: inline-flex;
+    margin-bottom: 0;
+  }
+}
+
+
+// add padding to the error message when pages don't load
+
+nav + div:not(.screen) {
+  padding: 1rem;
 }

@@ -168,6 +168,7 @@ class UiIcons extends Component {
             <IconList iconName="plus-outline" />
             <IconList iconName="plus-outline-square" />
             <IconList iconName="plus-solid" />
+            <IconList iconName="poll" />
             <IconList iconName="print" />
             <IconList iconName="question" />
             <IconList iconName="question-outline" />
@@ -300,6 +301,7 @@ class UiIcons extends Component {
               <IconTooltip iconName="sort-horizontal" />
               <IconTooltip iconName="sort-vertical" />
               <IconTooltip iconName="apps" />
+              <IconTooltip iconName="poll" />
               <IconTooltip iconName="list" />
               <IconTooltip iconName="ordered-list" />
               <IconTooltip iconName="list-cards" />
@@ -787,7 +789,7 @@ const Example = (props) => {
     <Row className="mb-3">
       <Col>
         <IconGroup className="mb-2 mr-3" left>
-          <Icon imgSrc="timeline" alert radius="rounded" border/>
+          <Icon imgSrc="poll" alert radius="rounded" border/>
           <Icon imgSrc="twitter" alert size="xs" />
         </IconGroup>
       </Col>
@@ -826,7 +828,7 @@ const Example = (props) => {
           <Row className="mb-3">
             <Col>
               <IconGroup className="mb-2 mr-3" left>
-                <Icon imgSrc="timeline" alert radius="rounded" border/>
+                <Icon imgSrc="poll" alert radius="rounded" border/>
                 <Icon imgSrc="twitter" alert size="xs" />
               </IconGroup>
             </Col>

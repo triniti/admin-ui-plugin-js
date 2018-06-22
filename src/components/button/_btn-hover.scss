@@ -23,3 +23,8 @@
   border-color: transparent !important;
   background-color: transparent;
 }
+
+.btn-hover:hover,
+.btn-hover.active {
+  box-shadow: $shadow-depth-0 !important;
+}

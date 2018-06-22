@@ -161,6 +161,10 @@ h3.card-title {
   top: auto;
   padding: .75rem;
   background-color: $gray-rgba-700;
+
+  .card-title {
+    display: block;
+  }
 }
 
 .card-section-title {
