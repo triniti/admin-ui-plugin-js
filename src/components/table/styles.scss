@@ -36,6 +36,11 @@ td {
   }
 }
 
+th,
+td {
+  vertical-align: middle;
+}
+
 tr[class^="status-"],
 tr[class*=" status-"] {
 
@@ -81,6 +86,10 @@ tr:first-child td {
 .table-borderless td {
   border-color: transparent !important;
   border: none !important;
+}
+
+.table-borderless thead th {
+  border-bottom: 1px solid $gray-500 !important;
 }
 
 
@@ -162,7 +171,7 @@ tr > td:first-child {
     top: 0;
     z-index: 1020;
     background-color: $white;
-    overflow: auto;
+    overflow: visible;
     box-shadow: 0 3px 2px -2px $gray-rgba-300;
 
     & th {

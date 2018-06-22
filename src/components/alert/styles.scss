@@ -41,6 +41,10 @@
   .alert-wrapper & {
     animation: 300ms ease-out 0s 1 triniti-slidein;
   }
+
+  .screen-body-content > & {
+    border-radius: 3px;
+  }
 }
 
 td.alert,

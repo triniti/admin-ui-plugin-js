@@ -320,4 +320,10 @@
   border-left-color: $gray-500;
 }
 
+// remove bottom margin inside form-control
+
+.react-datepicker__input-container .form-control {
+  margin-bottom: 0 !important;
+}
+
 @import "~react-datepicker/dist/react-datepicker.css";

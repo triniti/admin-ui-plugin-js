@@ -600,6 +600,11 @@ tr.status-published,
   }
 }
 
+.Select-option.is-focused small,
+.Select-option.is-selected small {
+  box-shadow: 0 0 0 1px $white-rgba-700 !important;
+}
+
 
 // css columns
 
@@ -752,4 +757,29 @@ tr.status-published,
   height: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,0) 40%,rgba(0,0,0,0.5) 75%,rgba(0,0,0,0.65) 100%);
   pointer-events: none;
+}
+
+
+// wrapper for not found text and inline buttons
+
+.not-found-message {
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+
+  p {
+    padding: 3px 0;
+  }
+  p,
+  button {
+    display: inline-flex;
+    margin-bottom: 0;
+  }
+}
+
+
+// add padding to the error message when pages don't load
+
+nav + div:not(.screen) {
+  padding: 1rem;
 }
