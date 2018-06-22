@@ -1,10 +1,10 @@
 # CHANGELOG
 
+
 ## v0.5.4
 * Upgrade react and react-dom to v16.4.1.
-* Add `CreateModalButton` component
-* New feature in TrinitiAppNav: 
-  * handle modal popup directly from nav menu.
+* Add `CreateModalButton` component.
+* New feature in TrinitiAppNav to handle modal popup directly from nav menu.
 * Update demo.
 
 
