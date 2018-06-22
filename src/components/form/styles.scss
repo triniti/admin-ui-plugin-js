@@ -123,6 +123,10 @@ label {
   letter-spacing: .01em;
   font-weight: 500;
   color: theme-color("dark");
+
+  .form-check-label & {
+    margin-bottom: 0;
+  }
 }
 
 .form-control-label {

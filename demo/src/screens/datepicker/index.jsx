@@ -34,7 +34,7 @@ class UiDatePicker extends React.Component {
           <Card key="datepicker1">
             <CardHeader>DatePicker</CardHeader>
             <CardBody indent>
-              <DatePicker selected={this.state.startDate} onChange={this.handleChange}/>
+              <DatePicker size="sm" selected={this.state.startDate} onChange={this.handleChange}/>
             </CardBody>
           </Card>,
 

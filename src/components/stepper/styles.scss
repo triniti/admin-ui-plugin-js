@@ -170,3 +170,21 @@
     }
   }
 }
+
+
+// fix for line over number and text
+
+.stepper-horizontal > div > div > div > a,
+.stepper-horizontal > div > div > div > div:nth-child(-n+2) {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 840px){
+  .stepper-horizontal.stepper-items-3 > div > div > div > a,
+  .stepper-horizontal.stepper-items-3 > div > div > div > div:nth-child(2) {
+    width: 100%;
+    padding: 0;
+    display: none !important;
+  }
+}

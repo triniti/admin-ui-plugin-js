@@ -49,6 +49,10 @@ class UiButtons extends React.Component {
               <Button color="secondary">secondary</Button>
               <Button color="secondary" outline>secondary</Button>
               <a href="" className="text-decoration-none"><Button>href wrapped</Button></a>
+              <div className="screen-primary-actions">
+                <Button color="light" className="btn-action-save"><Icon imgSrc="save" className="mr-1" />Save</Button>
+                <Button color="light" className="btn-action-save disabled"><Icon imgSrc="save" className="mr-1" />Save</Button>
+              </div>
             </CardBody>
           </Card>,
 
