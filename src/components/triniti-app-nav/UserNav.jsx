@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import UserNavContent from './UserNavContent';
-import { Backdrop, Badge, Button, Icon } from '../../components';
+import { Backdrop, Button, Icon } from '../../components';
 
 const UserNav = ({
   isOpen,
@@ -13,7 +13,6 @@ const UserNav = ({
   <div className="usernav-wrapper">
     <Button radius="circle" color="usernav" onClick={toggleUserNav}>
       <Icon imgSrc="user" />
-      <Badge color="warning" alert>3</Badge>
     </Button>
     <UserNavContent
       currentTheme={currentTheme}
@@ -34,7 +33,7 @@ UserNav.propTypes = {
   toggleUserNav: PropTypes.func.isRequired,
 };
 
-UserNav.defualtProps = {
+UserNav.defaultProps = {
   currentTheme: 'light',
   isOpen: false,
 };
