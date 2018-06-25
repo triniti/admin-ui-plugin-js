@@ -87,7 +87,8 @@ export function warnOnce(message) {
 
 export function deprecated(propType, explanation) {
   return function validate(props, propName, componentName, ...rest) {
-    if (props[propName] !== null && typeof props[propName] !== 'undefined') {
+    const { [propName]: prop } = props;
+    if (prop !== null && typeof prop !== 'undefined') {
       warnOnce(`"${propName}" property of "${componentName}" has been deprecated.\n${explanation}`);
     }
 
@@ -184,7 +185,7 @@ export const PopperPlacements = [
 ];
 
 export const canUseDOM = !!(
-  typeof window !== 'undefined' &&
-  window.document &&
-  window.document.createElement
+  typeof window !== 'undefined'
+  && window.document
+  && window.document.createElement
 );
