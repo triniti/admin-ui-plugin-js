@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { Dropdown, DropdownToggle, DropdownMenu, NavItem, RouterLink } from '../';
+import { createLazyComponent, Dropdown, DropdownToggle, DropdownMenu, NavItem, RouterLink } from '../';
 
 class MainNavContent extends React.Component {
   static propTypes = {
@@ -20,7 +20,29 @@ class MainNavContent extends React.Component {
 
   constructor(props) {
     super(props);
+
+    this.state = {
+      showModal: false,
+      modal: null,
+    };
     this.handleTitleClick = this.handleTitleClick.bind(this);
+    this.handleToggleModal = this.handleToggleModal.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    // @link https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops
+    // if you need to perform a side effect (for example, data fetching or an animation)
+    // in response to a change in props, use componentDidUpdate lifecycle instead.
+
+    // @link https://reactjs.org/docs/react-component.html#componentdidupdate
+    // You may call setState() immediately in componentDidUpdate()
+    // but note that it must be wrapped in a condition like in the example above,
+    // or you’ll cause an infinite loop. It would also cause an extra re-rendering which,
+    // while not visible to the user, can affect the component performance.
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      // eslint-disable-next-line react/no-did-update-set-state
+      this.setState({ showModal: false, modal: null });
+    }
   }
 
   handleTitleClick(nextLocation, navId) {
@@ -28,6 +50,21 @@ class MainNavContent extends React.Component {
     updateActiveMobileSections(navId);
     if ((window.innerWidth >= 1024) && !!nextLocation) {
       history.push(nextLocation);
+    }
+  }
+
+  handleToggleModal(modal) {
+    const ModalComponent = createLazyComponent(modal);
+    if (!this.state.showModal) {
+      this.setState({
+        showModal: true,
+        modal: <ModalComponent onToggle={this.handleToggleModal} key="modal" />,
+      });
+    } else {
+      this.setState({
+        showModal: false,
+        modal: null,
+      });
     }
   }
 
@@ -39,7 +76,7 @@ class MainNavContent extends React.Component {
       onDropdownOptionClick,
     } = this.props;
 
-    return navConfig.map((dropdownUnit) => {
+    const mainNav = navConfig.map((dropdownUnit) => {
       const {
         navType, navId, dpLinks, to: itemTo,
       } = dropdownUnit;
@@ -57,10 +94,19 @@ class MainNavContent extends React.Component {
           );
         case 'dropdown':
           navLinks = dpLinks.map((dpLink) => {
-            const { to, linkTitle } = dpLink;
+            const { linkTitle, modal: modalImport, to } = dpLink;
+            if (modalImport) {
+              return (
+                <a key={linkTitle} className="dropdown-item" onClick={() => this.handleToggleModal(modalImport)}>
+                  {linkTitle}
+                </a>
+              );
+            }
+
             if (location.pathname.includes(to)) {
               isCurrentDropdown = true;
             }
+
             return (
               <RouterLink key={linkTitle} to={to} className="dropdown-item" onClick={onDropdownOptionClick}>
                 {linkTitle}
@@ -88,6 +134,11 @@ class MainNavContent extends React.Component {
           return null;
       }
     });
+
+    return [
+      mainNav,
+      this.state.showModal ? this.state.modal : null,
+    ];
   }
 }
 

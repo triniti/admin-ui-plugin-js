@@ -11,7 +11,7 @@ import Loading from './loading';
  *
  * @returns {React.Component}
  */
-export default (component, options) => {
+export default (component, options = {}) => {
   const defaults = {
     loading: Loading,
     timeout: 2500,

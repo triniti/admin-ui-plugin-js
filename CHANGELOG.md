@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.5.4
+* Upgrade react and react-dom to v16.4.1.
+* Add `CreateModalButton` component.
+* New feature in TrinitiAppNav to handle modal popup directly from nav menu.
+* Update demo.
+
+
 ## v0.5.3
 * Style CustomInput and Carousel components
 * Style status styles in search dropdown

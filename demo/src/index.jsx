@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 import './assets/styles/main.scss';
-import navConfig from './config/main-nav.json';
+import navConfig from './config/main-nav';
 import Root from './Root';
 import routes from './routes';
 import store from './store';

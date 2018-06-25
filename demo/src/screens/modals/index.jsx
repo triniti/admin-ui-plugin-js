@@ -109,13 +109,13 @@ class UiModal extends React.Component {
 
   render() {
     const breakpointColumnsObj = {
-    default: 6,
-    1400: 5,
-    1100: 4,
-    920: 3,
-    700: 2,
-    500: 1,
-  };
+      default: 6,
+      1400: 5,
+      1100: 4,
+      920: 3,
+      700: 2,
+      500: 1,
+    };
 
     return (
       <Screen
@@ -240,12 +240,13 @@ export default ModalExample;
               <Button outline onClick={this.toggleSingle}>Sweet Alert Style Modal</Button>
               <Modal centered size="sd" isOpen={this.state.singleModal} toggle={this.toggleSingle} modalClassName="animate-center">
                 <ModalBody className="text-center modal-wrapper">
-                <Icon imgSrc="locked" alert size="lg" color="danger" border className="icon-modal" />
-                <h2>Hey There!</h2><p className="text-modal">This modal mimics Sweet Alert!</p>
-                <div className="modal-actions">
-                  <Button color="danger" onClick={this.toggleSingle} className="btn-modal">Delete This</Button>
-                  <Button color="secondary" onClick={this.toggleSingle} className="btn-modal">Cancel Deletion</Button>
-                </div>
+                  <Icon imgSrc="locked" alert size="lg" color="danger" border className="icon-modal" />
+                  <h2>Hey There!</h2>
+                  <p className="text-modal">This modal mimics Sweet Alert!</p>
+                  <div className="modal-actions">
+                    <Button color="danger" onClick={this.toggleSingle} className="btn-modal">Delete This</Button>
+                    <Button color="secondary" onClick={this.toggleSingle} className="btn-modal">Cancel Deletion</Button>
+                  </div>
                 </ModalBody>
               </Modal>
 
