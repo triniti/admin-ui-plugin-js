@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardCollapse, CardHeader, CardText, CardTitle, Col, Collapse, Icon, Row, Screen, Table } from '../../../../src/components';
 
 class UiCollapse extends React.Component {
   constructor(props) {
@@ -66,6 +66,32 @@ class UiCollapse extends React.Component {
               </CardBody>
             </Collapse>
           </Card>,
+
+          <CardCollapse
+            className="mb-0"
+            key="card-collapse-1"
+            cardCollapseTitle="Card Collapse 1"
+            cardCollapseBody={
+              <CardBody indent>
+                Test Content 1
+              </CardBody>
+            }
+          />,
+
+          <CardCollapse
+            key="card-collapse-2"
+            cardCollapseTitle="Card Collapse 2"
+            cardCollapseHeaderItems={
+              <Button radius="circle" color="icon-hover-bg">
+                <Icon imgSrc="question-outline" />
+              </Button>
+            }
+            cardCollapseBody={
+              <CardBody indent>
+                Test Content 2
+              </CardBody>
+            }
+          />,
 
           <Card key="toggle2">
             <CardHeader toggler>

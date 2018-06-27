@@ -230,6 +230,10 @@ h3.card-title {
       font-size: .875rem;
     }
   }
+
+  .screen-body-content > .card > & {
+    min-height: 57px;
+  }
 }
 
 .card-header-toggler {
