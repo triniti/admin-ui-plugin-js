@@ -24,21 +24,21 @@ class CardCollapse extends React.Component {
   render() {
 
     const {
-      cardCollapseTitle,
       cardHeaderClassName,
       children,
       className,
       isStacked,
+      title,
     } = this.props;
 
     const cardClasses = `card-collapse ${isStacked ? 'mb-0' : ''} ${className}`;
 
     return (
       <Card className={cardClasses}>
-        {cardCollapseTitle &&
+
         <CardHeader toggler className={cardHeaderClassName}>
-          <Button color="toggler" onClick={this.toggle} active={this.state.isOpen}>{cardCollapseTitle}</Button>
-        </CardHeader>}
+          <Button color="toggler" onClick={this.toggle} active={this.state.isOpen}>{title}</Button>
+        </CardHeader>
         <Collapse isOpen={this.state.isOpen}>
           {children}
         </Collapse>
@@ -48,7 +48,7 @@ class CardCollapse extends React.Component {
 }
 
 CardCollapse.propTypes = {
-  cardCollapseTitle: PropTypes.string,
+  title: PropTypes.string,
   cardHeaderClassName: PropTypes.string,
   children: PropTypes.node,
   className: PropTypes.string,
@@ -57,7 +57,7 @@ CardCollapse.propTypes = {
 };
 
 CardCollapse.defaultProps = {
-  cardCollapseTitle: '',
+  title: '',
   cardHeaderClassName: '',
   className: '',
   isOpen: false,

@@ -46,7 +46,6 @@ class UiCollapse extends React.Component {
           <CardCollapse
             isStacked
             key="card-collapse-0"
-            cardCollapseTitle="Card Collapse Component"
           >
             <CardBody className="bg-gray-100">
               <Button color="secondary" onClick={() => this.toggleCollapse('inner1')}><Icon imgSrc="sort" id="sort" className="mr-1" />Collapse Content</Button>
@@ -70,7 +69,7 @@ class UiCollapse extends React.Component {
             isStacked
             isOpen
             key="card-collapse-1"
-            cardCollapseTitle="Card Collapse isOpen"
+            title="Card Collapse isOpen"
           >
             <CardBody indent>
               Uses prop isOpen to show content by default.
@@ -80,7 +79,7 @@ class UiCollapse extends React.Component {
           <CardCollapse
             isStacked
             key="card-collapse-2"
-            cardCollapseTitle="Card Collapse isStacked"
+            title="Card Collapse isStacked"
           >
             <CardBody indent>
               Uses isStacked prop to stack cards with no bottom margin.
@@ -88,7 +87,7 @@ class UiCollapse extends React.Component {
           </CardCollapse>,
 
           <CardCollapse
-            cardCollapseTitle="Last Item no isStacked prop"
+            title="Last Item no isStacked prop"
             key="card-collapse-3"
           >
             <CardBody>
