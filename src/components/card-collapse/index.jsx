@@ -10,68 +10,58 @@ class CardCollapse extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { collapse: [] };
-    this.toggleCollapse = this.toggleCollapse.bind(this);
+    this.state = {
+      isOpen: props.isOpen,
+    };
+
+    this.toggle = this.toggle.bind(this);
   }
 
-  toggleCollapse(collapseId) {
-    const { collapse } = this.state;
-    const collapseIndex = collapse.indexOf(collapseId);
-    if (collapseIndex > -1) {
-      this.setState({
-        collapse: [
-          ...collapse.slice(0, collapseIndex),
-          ...collapse.slice(collapseIndex + 1),
-        ],
-      });
-    } else {
-      this.setState({
-        collapse: [
-          ...collapse,
-          collapseId,
-        ],
-      });
-    }
+  toggle() {
+    this.setState({ isOpen: !this.state.isOpen });
   }
 
   render() {
+
     const {
-      cardCollapseBody,
-      cardCollapseHeaderItems,
       cardCollapseTitle,
       cardHeaderClassName,
+      children,
       className,
+      isStacked,
     } = this.props;
 
+    const cardClasses = `card-collapse ${isStacked ? 'mb-0' : ''} ${className}`;
+
     return (
-      <Card className={className}>
+      <Card className={cardClasses}>
         {cardCollapseTitle &&
         <CardHeader toggler className={cardHeaderClassName}>
-          <Button color="toggler" onClick={() => this.toggleCollapse('toggle1')} active={this.state.collapse.includes('toggle1')}>{cardCollapseTitle}</Button>
-         {cardCollapseHeaderItems}
+          <Button color="toggler" onClick={this.toggle} active={this.state.isOpen}>{cardCollapseTitle}</Button>
         </CardHeader>}
-        <Collapse isOpen={this.state.collapse.includes('toggle1')}>
-          {cardCollapseBody}
+        <Collapse isOpen={this.state.isOpen}>
+          {children}
         </Collapse>
       </Card>
     );
   }
 }
 
-Screen.propTypes = {
-  cardCollapseBody: PropTypes.node,
-  cardCollapseHeaderItems: PropTypes.node,
+CardCollapse.propTypes = {
   cardCollapseTitle: PropTypes.string,
   cardHeaderClassName: PropTypes.string,
+  children: PropTypes.node,
   className: PropTypes.string,
+  isOpen: PropTypes.bool,
+  isStacked: PropTypes.bool,
 };
 
-Screen.defaultProps = {
-  cardCollapseBody: [],
-  cardCollapseHeaderItems: [],
+CardCollapse.defaultProps = {
   cardCollapseTitle: '',
   cardHeaderClassName: '',
   className: '',
+  isOpen: false,
+  isStacked: false,
 };
 
 export default CardCollapse;

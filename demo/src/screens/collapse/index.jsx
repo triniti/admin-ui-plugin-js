@@ -43,76 +43,68 @@ class UiCollapse extends React.Component {
       // ]}
         primaryActions={<PrimaryActions />}
         body={[
-          <Card key="toggle1" className="mb-0">
-            <CardHeader toggler>
-              <Button color="toggler" onClick={() => this.toggleCollapse('toggle1')} active={this.state.collapse.includes('toggle1')}>Collapse Header</Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapse.includes('toggle1')}>
-              <CardBody>
-                <Button color="secondary" onClick={() => this.toggleCollapse('inner1')}><Icon imgSrc="sort" id="sort" /> Collapse Content</Button>
-                <Row>
-                  <Col xs="12" md="9" lg="6">
-                    <Collapse isOpen={this.state.collapse.includes('inner1')}>
-                      <Card>
-                        <CardBody>
-                          <CardTitle>Card Title 1</CardTitle>
-                          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-                          <Button outline> Button</Button>
-                        </CardBody>
-                      </Card>
-                    </Collapse>
-                  </Col>
-                </Row>
-              </CardBody>
-            </Collapse>
-          </Card>,
-
           <CardCollapse
-            className="mb-0"
-            key="card-collapse-1"
-            cardCollapseTitle="Card Collapse 1"
-            cardCollapseBody={
-              <CardBody indent>
-                Test Content 1
-              </CardBody>
-            }
-          />,
-
-          <CardCollapse
-            key="card-collapse-2"
-            cardCollapseTitle="Card Collapse 2"
-            cardCollapseHeaderItems={
-              <Button radius="circle" color="icon-hover-bg">
-                <Icon imgSrc="question-outline" />
-              </Button>
-            }
-            cardCollapseBody={
-              <CardBody indent>
-                Test Content 2
-              </CardBody>
-            }
-          />,
-
-          <Card key="toggle2">
-            <CardHeader toggler>
-              <Button color="toggler" onClick={() => this.toggleCollapse('toggle2')} active={this.state.collapse.includes('toggle2')}>Second Example</Button>
-            </CardHeader>
-            <Collapse isOpen={this.state.collapse.includes('toggle2')}>
-              <CardBody>
-                <Row>
-                  <Col xs="12" md="9" lg="6">
-                    <Card>
+            isStacked
+            key="card-collapse-0"
+            cardCollapseTitle="Card Collapse Component"
+          >
+            <CardBody className="bg-gray-100">
+              <Button color="secondary" onClick={() => this.toggleCollapse('inner1')}><Icon imgSrc="sort" id="sort" className="mr-1" />Collapse Content</Button>
+              <Row>
+                <Col xs="12" md="9" lg="6">
+                  <Collapse isOpen={this.state.collapse.includes('inner1')}>
+                    <Card className="bg-transparent">
                       <CardBody>
-                        <CardTitle>Card Title 2</CardTitle>
+                        <CardTitle>Card Title 1</CardTitle>
                         <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
                         <Button outline> Button</Button>
                       </CardBody>
                     </Card>
-                  </Col>
-                </Row>
-              </CardBody>
-            </Collapse>
-          </Card>,
+                  </Collapse>
+                </Col>
+              </Row>
+            </CardBody>
+          </CardCollapse>,
+
+          <CardCollapse
+            isStacked
+            isOpen
+            key="card-collapse-1"
+            cardCollapseTitle="Card Collapse isOpen"
+          >
+            <CardBody indent>
+              Uses prop isOpen to show content by default.
+            </CardBody>
+          </CardCollapse>,
+
+          <CardCollapse
+            isStacked
+            key="card-collapse-2"
+            cardCollapseTitle="Card Collapse isStacked"
+          >
+            <CardBody indent>
+              Uses isStacked prop to stack cards with no bottom margin.
+            </CardBody>
+          </CardCollapse>,
+
+          <CardCollapse
+            cardCollapseTitle="Last Item no isStacked prop"
+            key="card-collapse-3"
+          >
+            <CardBody>
+              <Row>
+                <Col xs="12" md="9" lg="6">
+                  <Card>
+                    <CardBody>
+                      <CardTitle>Card Title 2</CardTitle>
+                      <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+                      <Button outline> Button</Button>
+                    </CardBody>
+                  </Card>
+                </Col>
+              </Row>
+            </CardBody>
+          </CardCollapse>,
 
           <Card key="toggle3" className="mb-0">
             <CardHeader toggler>
