@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## v0.5.5
+* Update nvmrc to use node 10.4.1.
+* Update `CreateModalButton`.
+* Export `UncontrolledCollpse` from reactstrap.
+
 
 ## v0.5.4
 * Upgrade react and react-dom to v16.4.1.
