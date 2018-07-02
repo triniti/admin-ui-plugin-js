@@ -1,5 +1,6 @@
 /* eslint-disable no-alert */
 import React from 'react';
+import CreateModal1 from 'components/creation-modal';
 import { ActionButton, CreateModalButton } from '../../../../src/components';
 
 export default () => (
@@ -13,7 +14,7 @@ export default () => (
       color="info"
       icon="add-item"
       key="demo-create-modal-button"
-      modal={import('components/creation-modal')}
+      modal={CreateModal1}
       outline
       onClick={() => console.info('%c [onClick] This button open up a modal', 'background: #222; color: #bada55')}
       text="Create Page"
