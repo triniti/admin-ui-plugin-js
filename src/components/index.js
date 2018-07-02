@@ -50,6 +50,7 @@ import {
   TabContent,
   TabPane,
   UncontrolledCarousel,
+  UncontrolledCollapse,
 } from 'reactstrap';
 
 import createLazyComponent from './createLazyComponent';
@@ -64,6 +65,7 @@ import Breadcrumb from './breadcrumb';
 import Button from './button';
 import Card from './card';
 import CardBody from './card-body';
+import CardCollapse from './card-collapse';
 import CardHeader from './card-header';
 import CardTitle from './card-title';
 import Carousel from './carousel';
@@ -129,6 +131,7 @@ export {
   ButtonToolbar,
   Card,
   CardBody,
+  CardCollapse,
   CardColumns,
   CardDeck,
   CardFooter,
@@ -221,4 +224,5 @@ export {
   UncontrolledDropdown,
   UncontrolledTooltip,
   UncontrolledCarousel,
+  UncontrolledCollapse,
 };

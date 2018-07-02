@@ -1,6 +1,13 @@
 # CHANGELOG
 
 
+## v0.5.5
+* Update nvmrc to use node 10.4.1.
+* Update `CreateModalButton`.
+* Add `UncontrolledCollpse` from reactstrap.
+* Add `CardCollapse` component.
+
+
 ## v0.5.4
 * Upgrade react and react-dom to v16.4.1.
 * Add `CreateModalButton` component.
