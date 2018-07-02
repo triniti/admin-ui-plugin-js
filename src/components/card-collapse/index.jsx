@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Collapse } from 'reactstrap';
 import Button from '../button';
 import Card from '../card';
-import CardBody from '../card-body';
 import CardHeader from '../card-header';
 
 class CardCollapse extends React.Component {
@@ -22,7 +21,6 @@ class CardCollapse extends React.Component {
   }
 
   render() {
-
     const {
       cardHeaderClassName,
       children,
@@ -35,7 +33,6 @@ class CardCollapse extends React.Component {
 
     return (
       <Card className={cardClasses}>
-
         <CardHeader toggler className={cardHeaderClassName}>
           <Button color="toggler" onClick={this.toggle} active={this.state.isOpen}>{title}</Button>
         </CardHeader>
