@@ -50,6 +50,7 @@ import {
   TabContent,
   TabPane,
   UncontrolledCarousel,
+  UncontrolledCollapse,
 } from 'reactstrap';
 
 import createLazyComponent from './createLazyComponent';
@@ -221,4 +222,5 @@ export {
   UncontrolledDropdown,
   UncontrolledTooltip,
   UncontrolledCarousel,
+  UncontrolledCollapse,
 };

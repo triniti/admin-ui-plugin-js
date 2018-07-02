@@ -25,7 +25,8 @@ const plugins = [
   'transform-es2015-modules-commonjs',
   'transform-object-rest-spread',
   'transform-regenerator',
-  'transform-runtime'
+  'transform-runtime',
+  'universal-import',
 ];
 
 switch (env) {

@@ -4,13 +4,12 @@ import noop from 'lodash/noop';
 
 import Button from '../button';
 import Icon from '../icon';
-import createLazyComponent from '../createLazyComponent';
 
 export default class CreateModalButton extends React.Component {
   static propTypes = {
     icon: PropTypes.string,
     iconUrl: PropTypes.string,
-    modal: PropTypes.objectOf(Promise).isRequired,
+    modal: PropTypes.func.isRequired,
     onClick: PropTypes.func,
     text: PropTypes.string,
   };
@@ -39,8 +38,7 @@ export default class CreateModalButton extends React.Component {
   }
 
   render() {
-    const { icon, iconUrl, modal: modalImport, text, ...attr } = this.props;
-    const ModalComponent = createLazyComponent(modalImport);
+    const { icon, iconUrl, modal: ModalComponent, text, ...attr } = this.props;
     const modal = this.state.showModal ? <ModalComponent onToggle={this.handleToggleModal} key="modal" /> : null;
 
     return [
