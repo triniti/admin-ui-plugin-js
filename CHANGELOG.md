@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v0.5.6
+* Add poll grid, heading, quote, page-break, and gallery icons.
 
 ## v0.5.5
 * Update nvmrc to use node 10.4.1.
