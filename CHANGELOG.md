@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v0.5.6
+* Add poll grid, heading, quote, page-break, and gallery icons.
 
 ## v0.5.6
 * `Screen` component will set the first tab in screen as default tab, and gives it "active" class, if the tab param is ommited in the match url.
