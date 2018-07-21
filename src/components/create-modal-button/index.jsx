@@ -32,9 +32,14 @@ export default class CreateModalButton extends React.Component {
 
   handleToggleModal() {
     const { onClick } = this.props;
-    this.setState({
-      showModal: !this.state.showModal,
-    }, onClick);
+    this.setState(prevState => ({
+      showModal: !prevState.showModal,
+    }), () => {
+      // onClick should only be called when modal popup
+      if (this.state.showModal) {
+        onClick();
+      }
+    });
   }
 
   render() {

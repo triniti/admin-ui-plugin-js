@@ -106,10 +106,7 @@ class Screen extends React.Component {
           && (
             <Nav underline className="screen-navtabs">
               {tabs.map((tab, i) => {
-                let className = '';
-                if (i === 0 && !get(match, 'params.tab')) {
-                  className = 'active';
-                }
+                const className = i === 0 && !get(match, 'params.tab') ? 'active' : '';
 
                 return (
                   <NavItem key={tab.to}>
