@@ -73,11 +73,13 @@ import dataTransferUpload from './data-transfer-upload.svg';
 import facebook from './facebook.svg';
 import folder from './folder.svg';
 import fullScreen from './full-screen.svg';
+import gallery from './gallery.svg';
 import google from './google.svg';
 import googleMaps from './google-maps.svg';
 import gridFourUp from './grid-four-up.svg';
 import gridThreeUp from './grid-three-up.svg';
 import gridTwoUp from './grid-two-up.svg';
+import header from './header.svg';
 import headphones from './headphones.svg';
 import heart from './heart.svg';
 import highlight from './highlight.svg';
@@ -116,6 +118,7 @@ import move from './move.svg';
 import notification from './notification.svg';
 import notificationOutline from './notification-outline.svg';
 import orderedList from './ordered-list.svg';
+import pageBreak from './page-break.svg';
 import paperclip from './paperclip.svg';
 import pause from './pause.svg';
 import pauseOutline from './pause-outline.svg';
@@ -139,10 +142,12 @@ import plusOutline from './plus-outline.svg';
 import plusOutlineSquare from './plus-outline-square.svg';
 import plusSolid from './plus-solid.svg';
 import poll from './poll.svg';
+import pollGrid from './poll-grid.svg';
 import print from './print.svg';
 import question from './question.svg';
 import questionOutline from './question-outline.svg';
 import questionSolid from './question-solid.svg';
+import quote from './quote.svg';
 import refresh from './refresh.svg';
 import revert from './revert.svg';
 import save from './save.svg';
@@ -273,11 +278,13 @@ const icons = {
   facebook,
   folder,
   'full-screen': fullScreen,
+  gallery,
   google,
   'google-maps': googleMaps,
   'grid-four-up': gridFourUp,
   'grid-three-up': gridThreeUp,
   'grid-two-up': gridTwoUp,
+  header,
   headphones,
   heart,
   highlight,
@@ -317,6 +324,7 @@ const icons = {
   'notification-outline': notificationOutline,
   'ordered-list': orderedList,
   paperclip,
+  'page-break': pageBreak,
   pause,
   'pause-outline': pauseOutline,
   pencil,
@@ -339,10 +347,12 @@ const icons = {
   'plus-outline-square': plusOutlineSquare,
   'plus-solid': plusSolid,
   poll,
+  'poll-grid': pollGrid,
   print,
   question,
   'question-outline': questionOutline,
   'question-solid': questionSolid,
+  quote,
   refresh,
   revert,
   save,
