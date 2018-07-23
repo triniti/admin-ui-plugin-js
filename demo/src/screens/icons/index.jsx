@@ -110,9 +110,11 @@ class UiIcons extends Component {
             <IconList iconName="eye" />
             <IconList iconName="folder" />
             <IconList iconName="full-screen" />
+            <IconList iconName="gallery" />
             <IconList iconName="grid-four-up" />
             <IconList iconName="grid-three-up" />
             <IconList iconName="grid-two-up" />
+            <IconList iconName="header" />
             <IconList iconName="headphones" />
             <IconList iconName="heart" />
             <IconList iconName="highlight" />
@@ -147,6 +149,7 @@ class UiIcons extends Component {
             <IconList iconName="notification" />
             <IconList iconName="notification-outline" />
             <IconList iconName="ordered-list" />
+            <IconList iconName="page-break" />
             <IconList iconName="paperclip" />
             <IconList iconName="pause" />
             <IconList iconName="pause-outline" />
@@ -169,10 +172,12 @@ class UiIcons extends Component {
             <IconList iconName="plus-outline-square" />
             <IconList iconName="plus-solid" />
             <IconList iconName="poll" />
+            <IconList iconName="poll-grid" />
             <IconList iconName="print" />
             <IconList iconName="question" />
             <IconList iconName="question-outline" />
             <IconList iconName="question-solid" />
+            <IconList iconName="quote" />
             <IconList iconName="refresh" />
             <IconList iconName="revert" />
             <IconList iconName="save" />
@@ -300,8 +305,10 @@ class UiIcons extends Component {
               <IconTooltip iconName="sort" />
               <IconTooltip iconName="sort-horizontal" />
               <IconTooltip iconName="sort-vertical" />
+              <IconTooltip iconName="page-break" />
               <IconTooltip iconName="apps" />
               <IconTooltip iconName="poll" />
+              <IconTooltip iconName="poll-grid" />
               <IconTooltip iconName="list" />
               <IconTooltip iconName="ordered-list" />
               <IconTooltip iconName="list-cards" />
@@ -312,6 +319,7 @@ class UiIcons extends Component {
               <IconTooltip iconName="playlist" />
               <IconTooltip iconName="timeline" />
               <IconTooltip iconName="settings" />
+              <IconTooltip iconName="header" />
             </Col>
           </Row>
           <Row>
@@ -370,11 +378,13 @@ class UiIcons extends Component {
               <IconTooltip iconName="save-diskette" />
               <IconTooltip iconName="mail" />
               <IconTooltip iconName="photo" />
+              <IconTooltip iconName="gallery" />
               <IconTooltip iconName="video" />
               <IconTooltip iconName="video-camera" />
               <IconTooltip iconName="calendar" />
               <IconTooltip iconName="comment" />
               <IconTooltip iconName="comment-oval" />
+              <IconTooltip iconName="quote" />
               <IconTooltip iconName="eye" />
               <IconTooltip iconName="bookmark-outline" />
               <IconTooltip iconName="bookmark" />
@@ -830,6 +840,35 @@ const Example = (props) => {
               <IconGroup className="mb-2 mr-3" left>
                 <Icon imgSrc="poll" alert radius="rounded" border/>
                 <Icon imgSrc="twitter" alert size="xs" />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="poll-grid" alert radius="rounded" border/>
+                <Icon imgSrc="linkedin" alert size="xs" />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="header" alert radius="rounded" border/>
+                <Icon imgSrc="vimeo" alert size="xs" />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="quote" alert radius="rounded" border/>
+                <Icon imgSrc="facebook" alert size="xs" />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="page-break" alert radius="rounded" border/>
+                <Icon imgSrc="pinterest" alert size="xs" />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="sound-wave" alert radius="rounded" border/>
+                <Icon imgSrc="soundcloud" alert size="xs" />
+              </IconGroup>
+              <Icon className="mb-2 mr-3" imgSrc="soundcloud" alert radius="rounded" border/>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="photo" alert radius="rounded" border/>
+                <Icon imgSrc="google" alert size="xs" />
+              </IconGroup>
+              <IconGroup className="mb-2 mr-3" left>
+                <Icon imgSrc="gallery" alert radius="rounded" border/>
+                <Icon imgSrc="google" alert size="xs" />
               </IconGroup>
             </Col>
           </Row>

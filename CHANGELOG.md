@@ -1,6 +1,12 @@
 # CHANGELOG
 
 
+## v0.5.6
+* Add poll grid, heading, quote, page-break, and gallery icons.
+* `Screen` component will set the first tab in screen as default tab, and gives it "active" class, if the tab param is ommited in the match url.
+* fix a bug in `CreateModalButton` where onClick prop is being called twice (both on show and hide popup).
+
+
 ## v0.5.5
 * Update nvmrc to use node 10.4.1.
 * Update `CreateModalButton`.
