@@ -20,16 +20,15 @@ class UserNav extends React.Component {
       confirmButtonText: 'Yes, logout!',
       confirmButtonClass: 'btn btn-secondary',
       cancelButtonClass: 'btn btn-outline-text-secondary',
-    }).then(() => {
-      onLogout();
+    }).then((result) => {
+      if (result.value) {
+        onLogout();
+      }
     });
   }
 
   render() {
-    const {
-      userName,
-      onLogout,
-    } = this.props;
+    const { userName } = this.props;
 
     return (
       <UncontrolledDropdown className="dropdown-usernav">
@@ -40,7 +39,7 @@ class UserNav extends React.Component {
           <DropdownItem header>
             {userName}
           </DropdownItem>
-          <DropdownItem onClick={onLogout}>
+          <DropdownItem onClick={this.handleLogout}>
             Logout
           </DropdownItem>
         </DropdownMenu>

@@ -7,6 +7,7 @@ import App from '../../src/components/app';
 import TrinitiAppNav from '../../src/components/triniti-app-nav';
 import getUserConfirmation from '../../src/utils/getUserConfirmation';
 
+// the user will come from iam redux store
 const user = {
   first_name: 'John',
   last_name: 'Doe',
