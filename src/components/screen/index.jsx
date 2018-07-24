@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { BreadcrumbItem, NavItem } from 'reactstrap';
+import get from 'lodash/get';
 
 import AlertBar from '../alert-bar';
 import Button from '../button';
