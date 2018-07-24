@@ -3,12 +3,11 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 
-import { Backdrop, Navbar } from '../../components';
+import { Backdrop, Navbar } from '../'; // eslint-disable-line
 import MainNav from './MainNav';
 import MobileNav from './MobileNav';
 import UserNav from './UserNav';
 import actions from '../../actions';
-import { settings } from '../../constants';
 import './styles.scss';
 
 class TrinitiAppNav extends React.Component {
@@ -37,17 +36,18 @@ class TrinitiAppNav extends React.Component {
   }
 
   handleToggleMainNav() {
+    const { isMainNavOpen } = this.state;
     this.setState({
-      isMainNavOpen: !this.state.isMainNavOpen,
+      isMainNavOpen: !isMainNavOpen,
     });
   }
 
   render() {
-    const { handleLogout, navConfig } = this.props;
+    const { userName, handleLogout, navConfig } = this.props;
     const { isMainNavOpen } = this.state;
 
     return (
-      <Navbar className={`navbar-dark navbar-main-wrapper`}>
+      <Navbar className="navbar-dark navbar-main-wrapper">
         <MobileNav onTogglerClick={this.handleToggleMainNav} />
         <MainNav
           navConfig={navConfig}
@@ -55,9 +55,7 @@ class TrinitiAppNav extends React.Component {
           onDropdownOptionClick={this.handleDropdownOptionClick}
         />
         <Backdrop onClick={this.handleBackdropClick} />
-        <UserNav
-          onLogout={handleLogout}
-        />
+        <UserNav onLogout={handleLogout} userName={userName} />
       </Navbar>
     );
   }
@@ -66,9 +64,15 @@ class TrinitiAppNav extends React.Component {
 TrinitiAppNav.propTypes = {
   handleLogout: PropTypes.func.isRequired,
   navConfig: PropTypes.arrayOf(PropTypes.object).isRequired,
+  userName: PropTypes.string,
+};
+
+TrinitiAppNav.defaultProps = {
+  userName: '',
 };
 
 const mapStateToProps = (state, ownProps) => ({
+  userName: ownProps.userName,
   navConfig: ownProps.navConfig,
 });
 
