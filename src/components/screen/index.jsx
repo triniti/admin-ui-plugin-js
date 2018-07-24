@@ -68,13 +68,19 @@ class Screen extends React.Component {
             {sidenavHeader !== null
             && (
               <div className="screen-sidenav-header">
-                {sidenavHeader && <h3 className="screen-sidenav-header-title">{sidenavHeader}</h3>}
+                {sidenavHeader && (
+                <h3 className="screen-sidenav-header-title">
+                  {sidenavHeader}
+                </h3>
+                )}
                 <Button outline color="hover" className="screen-sidenav-toggler" onClick={this.toggleSidenav}>
                   <Icon imgSrc="arrow-left" alt="close" className="screen-sidenav-toggler-img" />
                 </Button>
               </div>
             )}
-            <div className="screen-sidenav-body">{sidenav}</div>
+            <div className="screen-sidenav-body">
+              {sidenav}
+            </div>
           </div>
         )}
 
@@ -88,15 +94,27 @@ class Screen extends React.Component {
                   <Breadcrumb>
                     {breadcrumbs.map(breadcrumb => (
                       <BreadcrumbItem key={breadcrumb.text}>
-                        {breadcrumb.to && <RouterLink to={breadcrumb.to}>{breadcrumb.text}</RouterLink>}
+                        {breadcrumb.to && (
+                        <RouterLink to={breadcrumb.to}>
+                          {breadcrumb.text}
+                        </RouterLink>
+                        )}
                         {!breadcrumb.to && breadcrumb.text}
                       </BreadcrumbItem>
                     ))}
                   </Breadcrumb>
                 </h1>
               )}
-              {breadcrumbs.length === 0 && header && <h1 className="screen-header-title">{header}</h1>}
-              {primaryActions && <ScreenPrimaryActions>{primaryActions}</ScreenPrimaryActions>}
+              {breadcrumbs.length === 0 && header && (
+              <h1 className="screen-header-title">
+                {header}
+              </h1>
+              )}
+              {primaryActions && (
+              <ScreenPrimaryActions>
+                {primaryActions}
+              </ScreenPrimaryActions>
+              )}
             </div>
           )}
 
@@ -121,7 +139,9 @@ class Screen extends React.Component {
 
           <div className="screen-body-container">
             <div className="screen-body">
-              <div className="screen-body-content" style={{ maxWidth }}>{body}</div>
+              <div className="screen-body-content" style={{ maxWidth }}>
+                {body}
+              </div>
             </div>
             {sidebar
             && (
@@ -129,7 +149,9 @@ class Screen extends React.Component {
                 <Button radius="circle" color="info" className="screen-sidebar-toggler" onClick={this.toggleSidebar}>
                   <Icon imgSrc="arrow-left-thick" alt="arrow" />
                 </Button>
-                <div className="screen-sidebar-body">{sidebar}</div>
+                <div className="screen-sidebar-body">
+                  {sidebar}
+                </div>
               </div>
             )}
           </div>
@@ -138,8 +160,16 @@ class Screen extends React.Component {
         {(footer || secondaryActions)
         && (
           <div className="screen-footer-container">
-            {footer && <div className="screen-footer">{footer}</div>}
-            {secondaryActions && <div className="screen-secondary-actions">{secondaryActions}</div>}
+            {footer && (
+            <div className="screen-footer">
+              {footer}
+            </div>
+            )}
+            {secondaryActions && (
+            <div className="screen-secondary-actions">
+              {secondaryActions}
+            </div>
+            )}
           </div>
         )}
       </div>
