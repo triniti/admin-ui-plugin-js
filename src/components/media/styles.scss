@@ -17,6 +17,10 @@
 .media-body {
   flex: 1;
   margin-bottom: 0;
+
+  p:empty {
+    display: none;
+  }
 }
 
 .media-list {

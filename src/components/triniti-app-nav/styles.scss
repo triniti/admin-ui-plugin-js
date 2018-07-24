@@ -4,6 +4,7 @@
 
 .main-nav {
   margin-right: auto;
+  margin-left: auto;
 
   .nav-link-desktop {
     display: block;
@@ -69,6 +70,10 @@
   justify-content: center;
   flex-flow: wrap;
   flex: 0 0 auto;
+
+  @media (min-width: 1025px) {
+    justify-content: space-between;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -220,10 +225,11 @@
   }
   .main-nav .navbar-nav {
     flex-direction: row;
+    margin-right: 70px;
   }
   .main-nav .navbar-nav .nav-link {
     font-size: .8rem;
-    padding: 1.25rem .75rem;
+    padding: 1.25rem .5rem;
     text-transform: uppercase;
     font-weight: 600;
   }
@@ -326,28 +332,38 @@
 }
 
 @media (min-width: 1200px) {
-  .main-nav .navbar-nav .nav-link {
-    padding: 1.25rem .75rem;
-  }
   .main-nav .is-current .nav-link::after {
     margin: 0 .7rem;
   }
 }
 
-@media (min-width: 1025px) and (max-width: 1399px) {
-  .btn-nav {
-    margin-top: -.25rem;
+@media (min-width: 1025px) and (max-width: 1139px) {
+  .main-nav .navbar-nav .nav-link {
+    font-size: .7rem;
+    padding: 1.25rem .5rem;
+  }
+}
+
+@media (min-width: 1140px) and (max-width: 1300px) {
+  .main-nav .navbar-nav .nav-link {
+    padding: 1.25rem .5rem;
   }
 }
 
 @media (min-width: 1400px) {
   .main-nav .navbar-nav .nav-link {
-    padding: 1.5rem 1.1rem 1.5rem 1.1rem;
+    padding: 1.5rem 1rem 1.5rem 1rem;
   }
   .main-nav .is-current .nav-link::after,
   .main-nav .is-current .nav-link-icon.nav-link::after {
     bottom: .9rem;
     margin: 0 1rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .main-nav .navbar-nav {
+    margin-right: 180px;
   }
 }
 
@@ -411,7 +427,7 @@
   border: none;
   width: 2.125rem;
   height: 2.125rem;
-  margin-right: 1rem;
+  margin-right: .5rem;
   margin-bottom: 0;
   padding: 0;
   font-size: .825rem;
@@ -427,6 +443,10 @@
   justify-content: center;
   background: transparent;
   color: $body-color;
+
+  @media (min-width: 1025px) {
+    margin-right: 1rem;
+  }
 
   & span:first-child {
     opacity: .625;
@@ -516,7 +536,7 @@
   @media (min-width: 1025px) {
     width: $navbarlogo-width;
     height: 2.125rem;
-    margin-right: 4.25rem !important;
+    margin-right: 1.25rem !important;
     margin-left: 1.25rem;
     transition: all $transition;
 

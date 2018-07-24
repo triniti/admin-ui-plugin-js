@@ -17,6 +17,7 @@
   justify-content: center;
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
+  min-height: 40px;
   box-shadow: $shadow-depth-0;
 
   .screen-primary-actions & {
@@ -263,7 +264,7 @@
   &:focus {
     color: $white;
     background: darken(theme-color("primary"), 5%);
-    border-color: darken(theme-color("primary"), 8%);
+    border-color: darken(theme-color("primary"), 8%) !important;
     border-bottom-color: shade(darken(theme-color("primary"), 8%), 6%);
   }
 }
@@ -335,7 +336,20 @@
   font-weight: 400;
 }
 
+.btn-xs {
+  min-height: 16px;
+}
+
+.btn-sm {
+  min-height: 22px;
+}
+
+.btn-sm {
+  min-height: 28px;
+}
+
 .btn-lg {
+  min-height: 54px;
   font-weight: $btn-font-weight;
 }
 
@@ -343,6 +357,7 @@
   font-size: 1.25rem;
   font-weight: $btn-font-weight;
   padding: 1.25rem 3rem;
+  min-height: 78px;
   line-height: 1.8;
 }
 
@@ -441,4 +456,114 @@ button.close {
   background: transparent;
   border: 0;
   -webkit-appearance: none;
+}
+
+
+// Status archive buttons
+
+button:not(.disabled):hover,
+button.disabled {
+
+  &.status-archived {
+    background: darken($status-archived, 2%) !important;
+    box-shadow: inset 2px 0 0 $text-disabled;
+  }
+  &.status-deleted {
+    background: darken($status-deleted, 2%) !important;
+    box-shadow: inset 2px 0 0 theme-color("warning");
+  }
+  &.status-draft {
+    background: darken($status-draft, 2%) !important;
+    box-shadow: inset 2px 0 0 theme-color("dark");
+  }
+  &.status-expired {
+    background: darken($status-expired, 2%) !important;
+    box-shadow: inset 2px 0 0 theme-color("info");
+  }
+  &.status-pending {
+    background: darken($status-pending, 1%) !important;
+    box-shadow: inset 2px 0 0 theme-color("danger");
+  }
+  &.status-published {
+    background: darken($status-published, 3%) !important;
+    box-shadow: inset 3px 0 0 theme-color("success");
+  }
+  &.status-scheduled {
+    background: darken($status-scheduled, 3%) !important;
+    box-shadow: inset 2px 0 0 $yellow;
+  }
+}
+
+button.disabled[class^="status-"],
+button.disabled[class*=" status-"] {
+  color: $body-color;
+}
+
+button[class^="status-"],
+button[class*=" status-"] {
+  padding-top: .625rem;
+  padding-bottom: .625rem;
+}
+
+
+// action buttons in ellipsis dropdown
+
+.screen-primary-actions-mobile-body {
+
+  .dropdown-menu {
+    min-width: 9rem;
+  }
+}
+
+.dropdown {
+  .btn-action.btn {
+    box-shadow: none !important;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: .5rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .btn-primary-actions-toggle {
+    z-index: 0;
+    margin-right: 0 !important;
+  }
+  .screen-primary-actions-mobile.hide {
+    display: none;
+  }
+  .screen-primary-actions-mobile {
+    display: block;
+    padding: 3rem 2.5rem !important;
+  }
+  .screen-primary-actions-mobile-close {
+    z-index: -1;
+  }
+  .screen-primary-actions-mobile-body {
+    min-height: calc(100vh - 8.5rem) !important;
+  }
+  .screen-primary-actions .screen-primary-actions-mobile .btn {
+    display: flex;
+    width: 100%;
+    pointer-events: auto;
+    cursor: default;
+  }
+  .screen-primary-actions-mobile-body .dropdown > .btn {
+    display: none;
+  }
+  .screen-primary-actions-mobile-body .dropdown-menu {
+    position: static !important;
+    display: block;
+    margin-top: 0;
+    padding: 0 !important;
+    box-shadow: none;
+    border: none;
+    float: none;
+    transform: none !important;
+    background-color: transparent;
+  }
 }

@@ -783,3 +783,28 @@ tr.status-published,
 nav + div:not(.screen) {
   padding: 1rem;
 }
+
+
+// hide disabled buttons when disabled
+
+.disabled-hidden {
+
+  .disabled {
+    opacity: 0 !important;
+    pointer-events: none;
+  }
+}
+
+.hide {
+  pointer-events: none;
+}
+
+
+// active sortable-nodes
+
+.sortable-nodes {
+
+  &.active {
+    background-color: rgba($info, 0.04) !important;
+  }
+}
