@@ -283,8 +283,14 @@
   border-top-color: darken($gray-700, 10%);
 }
 
-.react-datepicker__close-icon::after {
-  background-color: theme-color("secondary");
+.react-datepicker__close-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+
+  &::after {
+    background-color: theme-color("secondary");
+  }
 }
 
 .react-datepicker__today-button {

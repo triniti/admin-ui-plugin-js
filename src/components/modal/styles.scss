@@ -188,3 +188,9 @@
   border-radius: 0.25em;
   margin-right: .65rem;
 }
+
+// create article modal
+
+.modal-backdrop.modal-create-backdrop.show {
+  opacity: 0.96;
+}

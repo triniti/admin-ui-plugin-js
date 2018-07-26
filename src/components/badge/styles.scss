@@ -102,3 +102,17 @@
     height: .75rem;
   }
 }
+
+
+// Screen Header Pagination
+
+.badge.badge-pagination {
+  padding-right: 0.875em;
+  padding-left: 0.75em;
+  font-size: 12px;
+  font-weight: $font-weight-normal;
+  letter-spacing: -.01em;
+  color: $gray-rgba-700;
+  background-color: $gray-200;
+  text-transform: none;
+}
