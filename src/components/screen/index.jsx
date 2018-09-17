@@ -10,7 +10,7 @@ import Breadcrumb from '../breadcrumb';
 import Icon from '../icon';
 import Nav from '../nav';
 import RouterLink from '../router-link';
-import ScreenPrimaryActions from './screen-primary-actions';
+import PrimaryActions from './PrimaryActions';
 
 import dismissAlert from '../../actions/dismissAlert';
 import './styles.scss';
@@ -114,9 +114,9 @@ class Screen extends React.Component {
                 </h1>
               )}
               {primaryActions && (
-                <ScreenPrimaryActions>
+                <PrimaryActions>
                   {primaryActions}
-                </ScreenPrimaryActions>
+                </PrimaryActions>
               )}
             </div>
           )}

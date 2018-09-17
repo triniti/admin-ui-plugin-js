@@ -1,6 +1,9 @@
 # CHANGELOG
 
 
+## v0.5.8
+* add new feature in `Screen` component. `Screen` can now render a "lock" for any locked node  
+
 ## v0.5.7
 * Simplify `UserNav` component to a single dropdown since theme options will be in a later version.
 * fix bug in `Screen` component.
