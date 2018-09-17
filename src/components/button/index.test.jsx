@@ -17,7 +17,7 @@ test('Button:: should render custom props on top of reactstrap Button', (t) => {
   const wrapper = shallow(<Button icon className="custom-class-1" action="save" outlineText radius="test" />);
 
   t.equal(wrapper.find(ButtonRS).length, 1);
-  t.equal(wrapper.find('.btn-action .btn-save').length, 1);
+  t.equal(wrapper.find('.btn-action.btn-save').length, 1);
   t.equal(wrapper.find('.btn-outline-text-light').length, 1);
   t.equal(wrapper.find('.btn-radius-test').length, 1);
   t.equal(wrapper.find('.btn-icon').length, 1);

@@ -10,7 +10,7 @@ import Breadcrumb from '../breadcrumb';
 import Icon from '../icon';
 import Nav from '../nav';
 import RouterLink from '../router-link';
-import ScreenPrimaryActions from './screen-primary-actions';
+import PrimaryActions from './PrimaryActions';
 
 import dismissAlert from '../../actions/dismissAlert';
 import './styles.scss';
@@ -47,6 +47,7 @@ class Screen extends React.Component {
       dispatch,
       footer,
       header,
+      isLocked,
       match,
       maxWidth,
       primaryActions,
@@ -70,9 +71,9 @@ class Screen extends React.Component {
             && (
               <div className="screen-sidenav-header">
                 {sidenavHeader && (
-                <h3 className="screen-sidenav-header-title">
-                  {sidenavHeader}
-                </h3>
+                  <h3 className="screen-sidenav-header-title">
+                    {sidenavHeader}
+                  </h3>
                 )}
                 <Button outline color="hover" className="screen-sidenav-toggler" onClick={this.toggleSidenav}>
                   <Icon imgSrc="arrow-left" alt="close" className="screen-sidenav-toggler-img" />
@@ -89,6 +90,7 @@ class Screen extends React.Component {
           {(header || primaryActions || breadcrumbs.length)
           && (
             <div className="screen-header-container">
+              {isLocked && <Icon imgSrc="locked-solid" size="xs" color="warning" style={{ marginRight: '0.5rem' }} alert />}
               {breadcrumbs.length > 0
               && (
                 <h1 className="screen-header-title">
@@ -96,9 +98,9 @@ class Screen extends React.Component {
                     {breadcrumbs.map(breadcrumb => (
                       <BreadcrumbItem key={breadcrumb.text}>
                         {breadcrumb.to && (
-                        <RouterLink to={breadcrumb.to}>
-                          {breadcrumb.text}
-                        </RouterLink>
+                          <RouterLink to={breadcrumb.to}>
+                            {breadcrumb.text}
+                          </RouterLink>
                         )}
                         {!breadcrumb.to && breadcrumb.text}
                       </BreadcrumbItem>
@@ -107,14 +109,14 @@ class Screen extends React.Component {
                 </h1>
               )}
               {breadcrumbs.length === 0 && header && (
-              <h1 className="screen-header-title">
-                {header}
-              </h1>
+                <h1 className="screen-header-title">
+                  {header}
+                </h1>
               )}
               {primaryActions && (
-              <ScreenPrimaryActions>
-                {primaryActions}
-              </ScreenPrimaryActions>
+                <PrimaryActions>
+                  {primaryActions}
+                </PrimaryActions>
               )}
             </div>
           )}
@@ -162,14 +164,14 @@ class Screen extends React.Component {
         && (
           <div className="screen-footer-container">
             {footer && (
-            <div className="screen-footer">
-              {footer}
-            </div>
+              <div className="screen-footer">
+                {footer}
+              </div>
             )}
             {secondaryActions && (
-            <div className="screen-secondary-actions">
-              {secondaryActions}
-            </div>
+              <div className="screen-secondary-actions">
+                {secondaryActions}
+              </div>
             )}
           </div>
         )}
@@ -182,6 +184,7 @@ Screen.propTypes = {
   dispatch: PropTypes.func,
   alerts: PropTypes.array, // eslint-disable-line
   header: PropTypes.node,
+  isLocked: PropTypes.bool,
   breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
     to: PropTypes.string,
     text: PropTypes.string,
@@ -208,6 +211,7 @@ Screen.defaultProps = {
   dispatch: () => {},
   footer: null,
   header: null,
+  isLocked: false,
   maxWidth: '1008px',
   primaryActions: null,
   secondaryActions: null,

@@ -12,15 +12,16 @@ The `dispatch` function is expected to be from redux.  This is needed to allow t
 
 + __dispatch:__ `PropTypes.func` - The redux dispatch function, if not supplied dismissing alerts is a noop.
 + __alerts:__ `PropTypes.array` - An array of alerts that the `<AlertBar>` component supports.
-+ __header:__ `PropTypes.node` - Intended for page header-like elements, e.g. `<Breadcrumb>`, `<h1>`, `<header>`. 
-+ __breadcrumbs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/url', text: 'Breadcrumb Name' }` that render a list of breadcrumbs.  The 'to' field is optional. 
-+ __sidenav:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.  Everything provided is contained within a collapsable _drawer_.
-+ __sidenavHeader:__ `PropTypes.node` - Typically text that is sticky to the top of the sidenav with an arrow to close it.
-+ __sidebar:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.
-+ __tabs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/tab-url', text: 'Tab Name' }` that control what is seen in the `body`.
 + __body:__ `PropTypes.node` - The primary component(s) that the screen renders.
++ __breadcrumbs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/url', text: 'Breadcrumb Name' }` that render a list of breadcrumbs.  The 'to' field is optional.
 + __footer:__ `PropTypes.node` - Intended for secondary information or features that do not need to be prominent.
++ __header:__ `PropTypes.node` - Intended for page header-like elements, e.g. `<Breadcrumb>`, `<h1>`, `<header>`.
++ __isLocked__ `PropTypes.bool` - Screen renders a "lock" icon in the header. Default: `false`.  
 + __primaryActions:__ `PropTypes.node` - Intended for an array of `<ActionButton>` elements or something similar which can be used to perform a quick action.  When using an array you must set key props.  To avoid that, it is possible to wrap them in a div tag.
 + __secondaryActions:__ `PropTypes.node` - Same as the `primaryActions` except these are less prominent.
++ __sidebar:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.
++ __sidenav:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.  Everything provided is contained within a collapsable _drawer_.
++ __sidenavHeader:__ `PropTypes.node` - Typically text that is sticky to the top of the sidenav with an arrow to close it.
++ __tabs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/tab-url', text: 'Tab Name' }` that control what is seen in the `body`.
 
 > When an `<ActionButton>` becomes more complicated than one or two clicks it is usually made into a form (probably in a `<Card>`) and rendered in the sidebar.

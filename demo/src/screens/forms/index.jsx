@@ -71,6 +71,7 @@ class UiForm extends React.Component {
       <Screen
         sidenav={<Sidenav activeScreen="forms" />}
         sidenavHeader
+        isLocked
         header="Forms"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
