@@ -18,7 +18,10 @@ const Switch = ({ className, type, id, label1, label2, ...attributes }) => {
 
   return [
     <Input type={type} id={id} className={classes} key={`${id}-switch-input`} {...attributes} />,
-    <Label for={id} className={labelClasses} key={`${id}-switch-label`}>{label1 && <span>{label1}</span>}{label2 && <span>{label2}</span>}</Label>,
+    <Label for={id} className={labelClasses} key={`${id}-switch-label`}>
+      {label1 && <span>{label1}</span>}
+      {label2 && <span>{label2}</span>}
+    </Label>,
   ];
 };
 
