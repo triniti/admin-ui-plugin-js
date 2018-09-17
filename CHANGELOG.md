@@ -2,7 +2,8 @@
 
 
 ## v0.5.8
-* add new feature in `Screen` component. `Screen` can now render a "lock" for any locked node  
+* `Screen` component can now render a "lock" using the `isLock` prop. This is to indicate a locked or read only screen.  
+
 
 ## v0.5.7
 * Simplify `UserNav` component to a single dropdown since theme options will be in a later version.
