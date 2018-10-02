@@ -18,3 +18,13 @@
 @import "~bootstrap/scss/carousel";
 @import "~bootstrap/scss/utilities";
 @import "~bootstrap/scss/print";
+
+// fix for .hide and toggle buttons
+
+.hide {
+  pointer-events: auto !important;
+}
+
+.hide:not(.fade) {
+  pointer-events: none !important;;
+}
