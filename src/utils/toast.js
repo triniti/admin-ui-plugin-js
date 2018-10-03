@@ -9,13 +9,12 @@ export default {
     swal({
       allowOutsideClick: false,
       customClass: 'swal-spinner',
-      showConfirmButton: false,
       onOpen: () => {
         swal.showLoading();
       },
+      showConfirmButton: false,
       target: '.screen-main',
       title,
-      toast: true,
     });
   },
 
