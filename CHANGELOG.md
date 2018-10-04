@@ -2,7 +2,8 @@
 
 
 ## v0.5.8
-* `Screen` component can now render a "lock" using the `isLock` prop. This is to indicate a locked or read only screen.  
+* `Screen` component can now render a "lock" using the `isLock` prop. This is to indicate a locked or read only screen.
+* Increase `.alert-container` z-index so it is over bootstrap modals
 
 
 ## v0.5.7
