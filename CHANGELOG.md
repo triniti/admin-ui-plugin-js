@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.5.9
+* issue #117: Increase z-index of .alert-container.
+* Bug fix for .hide and toggle buttons.
+
+
 ## v0.5.8
 * `Screen` component can now render a "lock" using the `isLock` prop. This is to indicate a locked or read only screen.
 * Increase `.alert-container` z-index so it is over bootstrap modals
