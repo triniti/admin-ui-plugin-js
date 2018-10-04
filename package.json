@@ -96,7 +96,7 @@
     "react-transition-group": "^2.5.0",
     "react-universal-component": "^3.0.3",
     "redux": "^4.0.0",
-    "sinon": "^6.3.4",
+    "sinon": "^6.3.5",
     "svg-fill-loader": "^0.0.8",
     "sweetalert2": "^7.28.4",
     "tape": "^4.9.1"
