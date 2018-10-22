@@ -69,9 +69,9 @@ class UiForm extends React.Component {
   render() {
     return (
       <Screen
+        badge={<Icon imgSrc="locked-solid" size="xs" color="warning" style={{ marginRight: '0.5rem' }} alert />}
         sidenav={<Sidenav activeScreen="forms" />}
         sidenavHeader
-        isLocked
         header="Forms"
       // tabs={[
       //   { to: '/welcome', text: 'Tab1' },
