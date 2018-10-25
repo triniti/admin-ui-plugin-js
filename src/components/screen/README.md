@@ -8,7 +8,7 @@ Most of the props available expect `PropTypes.node`.  The intention is for you t
 
 
 ## props
-The `dispatch` function is expected to be from redux.  This is needed to allow the `<AlertBar>` to dismiss messages.  It may be expanded in the future but it is not likely that this component will become a "container" (connected to redux).  The goal is for this to be responsible for placing components and styling, not managing state. 
+The `dispatch` function is expected to be from redux.  This is needed to allow the `<AlertBar>` to dismiss messages.  It may be expanded in the future but it is not likely that this component will become a "container" (connected to redux).  The goal is for this to be responsible for placing components and styling, not managing state.
 
 + __dispatch:__ `PropTypes.func` - The redux dispatch function, if not supplied dismissing alerts is a noop.
 + __alerts:__ `PropTypes.array` - An array of alerts that the `<AlertBar>` component supports.
@@ -16,7 +16,7 @@ The `dispatch` function is expected to be from redux.  This is needed to allow t
 + __breadcrumbs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/url', text: 'Breadcrumb Name' }` that render a list of breadcrumbs.  The 'to' field is optional.
 + __footer:__ `PropTypes.node` - Intended for secondary information or features that do not need to be prominent.
 + __header:__ `PropTypes.node` - Intended for page header-like elements, e.g. `<Breadcrumb>`, `<h1>`, `<header>`.
-+ __isLocked__ `PropTypes.bool` - Screen renders a "lock" icon in the header. Default: `false`.  
++ __badge__ `PropTypes.node` - Intended for pre-breadcrumb badge elements, e.g. when a node is locked or is of a multi-type type.
 + __primaryActions:__ `PropTypes.node` - Intended for an array of `<ActionButton>` elements or something similar which can be used to perform a quick action.  When using an array you must set key props.  To avoid that, it is possible to wrap them in a div tag.
 + __secondaryActions:__ `PropTypes.node` - Same as the `primaryActions` except these are less prominent.
 + __sidebar:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.

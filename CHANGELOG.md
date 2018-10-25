@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.5.10
+* Allow Screen badge prop, to allow for arbitrary badge components.
+
+
 ## v0.5.9
 * issue #117: Increase z-index of .alert-container.
 * Bug fix for .hide and toggle buttons.

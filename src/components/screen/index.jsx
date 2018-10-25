@@ -41,13 +41,13 @@ class Screen extends React.Component {
 
   render() {
     const {
+      badge,
       alerts,
       body,
       breadcrumbs,
       dispatch,
       footer,
       header,
-      isLocked,
       match,
       maxWidth,
       primaryActions,
@@ -90,7 +90,7 @@ class Screen extends React.Component {
           {(header || primaryActions || breadcrumbs.length)
           && (
             <div className="screen-header-container">
-              {isLocked && <Icon imgSrc="locked-solid" size="xs" color="warning" style={{ marginRight: '0.5rem' }} alert />}
+              {badge && <div>{badge}</div>}
               {breadcrumbs.length > 0
               && (
                 <h1 className="screen-header-title">
@@ -181,37 +181,37 @@ class Screen extends React.Component {
 }
 
 Screen.propTypes = {
-  dispatch: PropTypes.func,
   alerts: PropTypes.array, // eslint-disable-line
+  badge: PropTypes.node,
+  body: PropTypes.node,
+  dispatch: PropTypes.func,
+  footer: PropTypes.node,
   header: PropTypes.node,
-  isLocked: PropTypes.bool,
+  match: PropTypes.object.isRequired, // eslint-disable-line
+  maxWidth: PropTypes.string,
+  primaryActions: PropTypes.node,
+  secondaryActions: PropTypes.node,
+  sidebar: PropTypes.node,
+  sidenav: PropTypes.node,
+  sidenavHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
   breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
     to: PropTypes.string,
     text: PropTypes.string,
   })),
-  sidenav: PropTypes.node,
-  sidenavHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  sidebar: PropTypes.node,
-  match: PropTypes.object.isRequired, // eslint-disable-line
   tabs: PropTypes.arrayOf(PropTypes.shape({
     to: PropTypes.string.isRequired,
     text: PropTypes.string,
   })),
-  body: PropTypes.node,
-  footer: PropTypes.node,
-  primaryActions: PropTypes.node,
-  secondaryActions: PropTypes.node,
-  maxWidth: PropTypes.string,
 };
 
 Screen.defaultProps = {
   alerts: [],
+  badge: null,
   body: null,
   breadcrumbs: [],
   dispatch: () => {},
   footer: null,
   header: null,
-  isLocked: false,
   maxWidth: '1008px',
   primaryActions: null,
   secondaryActions: null,
