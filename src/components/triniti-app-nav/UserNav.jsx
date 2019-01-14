@@ -20,6 +20,7 @@ class UserNav extends React.Component {
       confirmButtonText: 'Yes, logout!',
       confirmButtonClass: 'btn btn-secondary',
       cancelButtonClass: 'btn btn-outline-text-secondary',
+      reverseButtons: true,
     }).then((result) => {
       if (result.value) {
         onLogout();
