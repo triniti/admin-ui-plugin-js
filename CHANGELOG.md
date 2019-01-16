@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## v0.5.11
+* Added form-control-xlg css class.
 
 ## v0.5.10
 * Allow Screen badge prop, to allow for arbitrary badge components.
