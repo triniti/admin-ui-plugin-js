@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v0.5.11
+* Reverse the order of the buttons on all prompts. The primary action button is to the right, and the cancel button is to the left.
+* Added form-control-xlg css class.
+
+
 ## v0.5.10
 * Allow Screen badge prop, to allow for arbitrary badge components.
 

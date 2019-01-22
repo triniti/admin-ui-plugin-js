@@ -9,6 +9,7 @@ export default (message = '', callback) => {
     confirmButtonText: 'Yes, leave!',
     confirmButtonClass: 'btn btn-danger',
     cancelButtonClass: 'btn btn-secondary',
+    reverseButtons: true,
   };
 
   swal(config).then((result) => {
