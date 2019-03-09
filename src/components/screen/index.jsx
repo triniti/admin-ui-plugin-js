@@ -39,6 +39,10 @@ class Screen extends React.Component {
     });
   }
 
+  componentDidMount() {
+    document.title = this.props.title;
+  }
+
   render() {
     const {
       badge,
@@ -184,6 +188,10 @@ Screen.propTypes = {
   alerts: PropTypes.array, // eslint-disable-line
   badge: PropTypes.node,
   body: PropTypes.node,
+  breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
+    to: PropTypes.string,
+    text: PropTypes.string,
+  })),
   dispatch: PropTypes.func,
   footer: PropTypes.node,
   header: PropTypes.node,
@@ -194,14 +202,11 @@ Screen.propTypes = {
   sidebar: PropTypes.node,
   sidenav: PropTypes.node,
   sidenavHeader: PropTypes.oneOfType([PropTypes.node, PropTypes.bool]),
-  breadcrumbs: PropTypes.arrayOf(PropTypes.shape({
-    to: PropTypes.string,
-    text: PropTypes.string,
-  })),
   tabs: PropTypes.arrayOf(PropTypes.shape({
     to: PropTypes.string.isRequired,
     text: PropTypes.string,
   })),
+  title: PropTypes.string.isRequired,
 };
 
 Screen.defaultProps = {
@@ -219,6 +224,7 @@ Screen.defaultProps = {
   sidenav: null,
   sidenavHeader: null,
   tabs: [],
+  title: ''
 };
 
 export default withRouter(Screen);
