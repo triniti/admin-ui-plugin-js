@@ -23,5 +23,6 @@ The `dispatch` function is expected to be from redux.  This is needed to allow t
 + __sidenav:__ `PropTypes.node` - Intended for one or more `<Card>` or similar items.  Everything provided is contained within a collapsable _drawer_.
 + __sidenavHeader:__ `PropTypes.node` - Typically text that is sticky to the top of the sidenav with an arrow to close it.
 + __tabs:__ `PropTypes.array` - Expected to be an array of objects `{ to: '/tab-url', text: 'Tab Name' }` that control what is seen in the `body`.
++ __title:__ `PropTypes.string` - Used to populated `document.title`, falls back to using header prop if it
 
 > When an `<ActionButton>` becomes more complicated than one or two clicks it is usually made into a form (probably in a `<Card>`) and rendered in the sidebar.

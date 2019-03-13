@@ -4,7 +4,7 @@ import reducer from './reducers';
 
 export default class AdminUiPlugin extends Plugin {
   constructor() {
-    super('triniti', 'admin-ui', '0.5.8');
+    super('triniti', 'admin-ui', '0.5.12');
   }
 
   configure(app, bottle) {

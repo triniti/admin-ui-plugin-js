@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.5.12
+* Add `title` prop to screen component and set `document.title` with that props value.
+
+
 ## v0.5.11
 * Reverse the order of the buttons on all prompts. The primary action button is to the right, and the cancel button is to the left.
 * Added form-control-xlg css class.
