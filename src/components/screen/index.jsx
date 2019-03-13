@@ -40,9 +40,11 @@ class Screen extends React.Component {
   }
 
   componentDidMount() {
-    document.title = (this.props.title) 
-      ? `${this.props.title} | Triniti` 
-      : `${this.props.header} | Triniti`;
+    document.title = this.props.title || 'Triniti';
+  }
+
+  componentWillUpdate(nextProps) {
+    document.title = nextProps.title || 'Triniti';
   }
 
   render() {
@@ -208,7 +210,7 @@ Screen.propTypes = {
     to: PropTypes.string.isRequired,
     text: PropTypes.string,
   })),
-  title: PropTypes.string
+  title: PropTypes.string,
 };
 
 Screen.defaultProps = {
@@ -226,7 +228,7 @@ Screen.defaultProps = {
   sidenav: null,
   sidenavHeader: null,
   tabs: [],
-  title: null
+  title: null,
 };
 
 export default withRouter(Screen);
