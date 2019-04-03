@@ -41,10 +41,23 @@ class Screen extends React.Component {
 
   componentDidMount() {
     document.title = this.props.title || 'Triniti';
+    this.smoothScroll();
   }
 
   componentWillUpdate(nextProps) {
     document.title = nextProps.title || 'Triniti';
+  }
+
+  smoothScroll() {
+    const navtabs    = document.querySelector('.screen-navtabs');
+    const screenBody = document.querySelector('.screen-body');
+
+    navtabs.addEventListener('click', function() {
+      screenBody.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
   }
 
   render() {
