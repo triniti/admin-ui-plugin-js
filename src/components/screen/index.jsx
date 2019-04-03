@@ -49,15 +49,8 @@ class Screen extends React.Component {
   }
 
   smoothScroll() {
-    const navtabs    = document.querySelector('.screen-navtabs');
-    const screenBody = document.querySelector('.screen-body');
-
-    navtabs.addEventListener('click', function() {
-      screenBody.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
+    const screenBody = document.getElementById('screen-body');
+    screenBody.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   render() {
@@ -151,7 +144,7 @@ class Screen extends React.Component {
                 const className = i === 0 && !get(match, 'params.tab') ? 'active' : '';
 
                 return (
-                  <NavItem key={tab.to}>
+                  <NavItem key={tab.to} onClick={this.smoothScroll}>
                     <RouterLink navTab to={tab.to} className={className}>
                       {tab.text}
                     </RouterLink>
@@ -162,7 +155,7 @@ class Screen extends React.Component {
           )}
 
           <div className="screen-body-container">
-            <div className="screen-body">
+            <div id="screen-body"  className="screen-body">
               <div className="screen-body-content" style={{ maxWidth }}>
                 {body}
               </div>
