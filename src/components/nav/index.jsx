@@ -5,7 +5,6 @@ import { Nav as NavRS } from 'reactstrap';
 import './styles.scss';
 
 const Nav = ({ className, sticky, theme, underline, ...attributes }) => {
-
   const classes = classNames(
     className,
     {
@@ -14,7 +13,7 @@ const Nav = ({ className, sticky, theme, underline, ...attributes }) => {
     },
   );
 
-  return <NavRS {...attributes} className={classes} />;
+  return <NavRS {...attributes} className={classes} ref={}/>;
 };
 
 Nav.propTypes = {
