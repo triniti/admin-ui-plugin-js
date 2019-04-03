@@ -22,9 +22,12 @@ class Screen extends React.Component {
       isSidebarOpen: true,
       isSidenavOpen: true,
     };
+    
+    this.screenBodyRef = React.createRef();
 
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.toggleSidenav = this.toggleSidenav.bind(this);
+    this.smoothScroll = this.smoothScroll.bind(this);
   }
 
   toggleSidebar() {
@@ -49,7 +52,7 @@ class Screen extends React.Component {
   }
 
   smoothScroll() {
-    const screenBody = document.getElementById('screen-body');
+    const screenBody = this.screenBodyRef.current;
     screenBody.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
@@ -155,7 +158,7 @@ class Screen extends React.Component {
           )}
 
           <div className="screen-body-container">
-            <div id="screen-body"  className="screen-body">
+            <div ref={this.screenBodyRef}  className="screen-body">
               <div className="screen-body-content" style={{ maxWidth }}>
                 {body}
               </div>

@@ -13,7 +13,7 @@ const Nav = ({ className, sticky, theme, underline, ...attributes }) => {
     },
   );
 
-  return <NavRS {...attributes} className={classes} ref={}/>;
+  return <NavRS {...attributes} className={classes} />;
 };
 
 Nav.propTypes = {
