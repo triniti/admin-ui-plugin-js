@@ -147,7 +147,7 @@ class Screen extends React.Component {
                 const className = i === 0 && !get(match, 'params.tab') ? 'active' : '';
 
                 return (
-                  <NavItem key={tab.to} onClick={this.smoothScroll}>
+                  <NavItem key={tab.to} onClick={this.scrollToTop}>
                     <RouterLink navTab to={tab.to} className={className}>
                       {tab.text}
                     </RouterLink>
