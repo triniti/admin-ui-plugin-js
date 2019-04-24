@@ -22,7 +22,7 @@ class Screen extends React.Component {
       isSidebarOpen: true,
       isSidenavOpen: true,
     };
-    
+
     this.screenBodyRef = React.createRef();
 
     this.toggleSidebar = this.toggleSidebar.bind(this);
