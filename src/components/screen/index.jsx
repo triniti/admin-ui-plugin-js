@@ -27,7 +27,7 @@ class Screen extends React.Component {
 
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.toggleSidenav = this.toggleSidenav.bind(this);
-    this.smoothScroll = this.smoothScroll.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   toggleSidebar() {
@@ -44,16 +44,16 @@ class Screen extends React.Component {
 
   componentDidMount() {
     document.title = this.props.title || 'Triniti';
-    this.smoothScroll();
+    this.scrollToTop();
   }
 
   componentWillUpdate(nextProps) {
     document.title = nextProps.title || 'Triniti';
   }
 
-  smoothScroll() {
+  scrollToTop() {
     const screenBody = this.screenBodyRef.current;
-    screenBody.scrollTo({ top: 0, behavior: 'smooth' });
+    screenBody.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   render() {
