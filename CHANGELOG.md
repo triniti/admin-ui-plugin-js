@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## v0.5.13
+* issue #611: Add scroll to top on article tab sections.
+
+
 ## v0.5.12
 * Add `title` prop to screen component and set `document.title` with that props value.
 

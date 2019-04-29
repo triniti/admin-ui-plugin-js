@@ -23,8 +23,11 @@ class Screen extends React.Component {
       isSidenavOpen: true,
     };
 
+    this.screenBodyRef = React.createRef();
+
     this.toggleSidebar = this.toggleSidebar.bind(this);
     this.toggleSidenav = this.toggleSidenav.bind(this);
+    this.scrollToTop = this.scrollToTop.bind(this);
   }
 
   toggleSidebar() {
@@ -41,10 +44,16 @@ class Screen extends React.Component {
 
   componentDidMount() {
     document.title = this.props.title || 'Triniti';
+    this.scrollToTop();
   }
 
   componentWillUpdate(nextProps) {
     document.title = nextProps.title || 'Triniti';
+  }
+
+  scrollToTop() {
+    const screenBody = this.screenBodyRef.current;
+    screenBody.scrollTo({ top: 0, behavior: 'auto' });
   }
 
   render() {
@@ -138,7 +147,7 @@ class Screen extends React.Component {
                 const className = i === 0 && !get(match, 'params.tab') ? 'active' : '';
 
                 return (
-                  <NavItem key={tab.to}>
+                  <NavItem key={tab.to} onClick={this.scrollToTop}>
                     <RouterLink navTab to={tab.to} className={className}>
                       {tab.text}
                     </RouterLink>
@@ -149,7 +158,7 @@ class Screen extends React.Component {
           )}
 
           <div className="screen-body-container">
-            <div className="screen-body">
+            <div ref={this.screenBodyRef}  className="screen-body">
               <div className="screen-body-content" style={{ maxWidth }}>
                 {body}
               </div>
