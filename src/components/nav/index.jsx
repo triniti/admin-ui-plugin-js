@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { Nav as NavRS } from 'reactstrap';
 import './styles.scss';
 
-const Nav = ({ className, sticky, theme, underline, ...attributes }) => {
+const Nav = ({ className, sticky, underline, ...attributes }) => {
   const classes = classNames(
     className,
     {
