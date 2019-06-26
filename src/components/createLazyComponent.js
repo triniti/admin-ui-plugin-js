@@ -14,7 +14,6 @@ import Loading from './loading';
 export default (component, options = {}) => {
   const defaults = {
     loading: Loading,
-    timeout: 2500,
     minDelay: 0,
     alwaysDelay: false,
     loadingTransition: true,
