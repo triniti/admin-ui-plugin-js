@@ -1,4 +1,4 @@
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 export default (message = '', callback) => {
   const config = {
@@ -12,7 +12,7 @@ export default (message = '', callback) => {
     reverseButtons: true,
   };
 
-  swal(config).then((result) => {
+  Swal.fire(config).then((result) => {
     if (result.value) {
       callback(true);
     } else {

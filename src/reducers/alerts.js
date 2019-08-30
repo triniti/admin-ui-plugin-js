@@ -10,7 +10,7 @@ export const initialState = [];
 
 const onAlertSent = (state, action) => [...state.slice(), action.alert];
 
-const onAlertDismissed = (state, { id }) => state.filter(alert => alert.id !== id);
+const onAlertDismissed = (state, { id }) => state.filter((alert) => alert.id !== id);
 
 export default createReducer(initialState, {
   [ALERT_SENT]: onAlertSent,

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 import { Icon, DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown } from '../';
 
 class UserNav extends React.Component {
@@ -13,7 +13,7 @@ class UserNav extends React.Component {
   handleLogout() {
     const { onLogout } = this.props;
 
-    swal({
+    Swal.fire({
       title: 'Logout from current session?',
       type: 'warning',
       showCancelButton: true,

@@ -1,6 +1,11 @@
 # CHANGELOG
 
 
+## v1.0.0
+* Update all packages in package.json
+* Upgrade to Babel 7
+
+
 ## v0.5.14
 * Remove `createLazyCompoent` timeout limit. Use library default value.
 

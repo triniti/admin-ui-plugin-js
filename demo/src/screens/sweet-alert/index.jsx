@@ -1,17 +1,17 @@
 import React from 'react';
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, Screen } from '../../../../src/components';
 
 function sweetAlert1(e) {
   e.preventDefault();
-  swal('Hello world!');
+  Swal.fire('Hello world!');
 }
 
 function sweetAlert2(e) {
   e.preventDefault();
-  swal({
+  Swal.fire({
     title: 'Error!',
     text: 'Do you want to continue',
     type: 'error',
@@ -21,7 +21,7 @@ function sweetAlert2(e) {
 
 function sweetAlert3(e) {
   e.preventDefault();
-  swal({
+  Swal.fire({
     title: 'Most Basic',
     text: 'Here are the two standard button styles',
     type: 'success',
@@ -33,7 +33,7 @@ function sweetAlert3(e) {
 
 function sweetAlert4(e) {
   e.preventDefault();
-  swal({
+  Swal.fire({
     title: 'Are you sure?',
     text: 'You will not be able to recover this imaginary file!',
     type: 'warning',
@@ -44,7 +44,7 @@ function sweetAlert4(e) {
     cancelButtonClass: 'btn btn-secondary',
   }).then((result) => {
     if (result.value) {
-      swal(
+      Swal.fire(
         'Deleted!',
         'Your imaginary file has been deleted.',
         'success',
@@ -52,7 +52,7 @@ function sweetAlert4(e) {
       // For more information about handling dismissals please visit
       // https://sweetalert2.github.io/#handling-dismissals
     } else if (result.dismiss === swal.DismissReason.cancel) {
-      swal(
+      Swal.fire(
         'Cancelled',
         'Your imaginary file is safe :)',
         'error',
@@ -63,7 +63,7 @@ function sweetAlert4(e) {
 
 function sweetAlert5(e) {
   e.preventDefault();
-  swal({
+  Swal.fire({
     title: 'Ajax Request',
     text: 'Enter Email Address',
     input: 'email',
@@ -84,7 +84,7 @@ function sweetAlert5(e) {
     allowOutsideClick: () => !swal.isLoading(),
   }).then((result) => {
     if (result.value) {
-      swal({
+      Swal.fire({
         type: 'success',
         title: 'Ajax request finished!',
         html: `Submitted email: ${result.value}`,
@@ -95,7 +95,7 @@ function sweetAlert5(e) {
 
 function sweetAlert6(e) {
   e.preventDefault();
-  swal({
+  Swal.fire({
     customClass: 'swal-spinner',
     onOpen: () => {
       swal.showLoading();
@@ -108,7 +108,7 @@ function sweetAlert6(e) {
 
 function sweetAlert7(e) {
   e.preventDefault();
-  swal({
+  Swal.fire({
     html: '<h5>Dismissable Horizontal Alert Ellipsis</h5><p>Some alert that needs your attention. Must click here to close.</p> ',
     allowOutsideClick: false,
     customClass: 'swal2-horizontal',

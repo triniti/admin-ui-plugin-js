@@ -408,4 +408,4 @@ const icons = {
   'zoom-out': zoomOut,
 };
 
-export default name => icons[name];
+export default (name) => icons[name];

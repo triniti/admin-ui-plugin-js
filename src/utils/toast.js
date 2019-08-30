@@ -1,4 +1,4 @@
-import swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 
 export default {
   /**
@@ -6,7 +6,7 @@ export default {
    * @param {string} title
    */
   show: (title = '') => {
-    swal({
+    Swal.fire({
       allowOutsideClick: false,
       customClass: 'swal-spinner',
       onOpen: () => {
