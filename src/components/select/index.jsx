@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactSelect from 'react-select';
+import Async from 'react-select/async';
+import Creatable from 'react-select/creatable';
+import AsyncCreatable from 'react-select/async-creatable';
 import './styles.scss';
 
 const Select = ({
@@ -19,11 +22,11 @@ const Select = ({
 
   if (!SelectComponent) {
     if (async && creatable) {
-      SelectComponent = ReactSelect.AsyncCreatable;
+      SelectComponent = AsyncCreatable;
     } else if (async) {
-      SelectComponent = ReactSelect.Async;
+      SelectComponent = Async;
     } else if (creatable) {
-      SelectComponent = ReactSelect.Creatable;
+      SelectComponent = Creatable;
     } else {
       SelectComponent = ReactSelect;
     }
@@ -55,9 +58,9 @@ Select.propTypes = {
   size: PropTypes.string,
   component: PropTypes.oneOf([
     ReactSelect,
-    ReactSelect.Creatable,
-    ReactSelect.Async,
-    ReactSelect.AsyncCreatable,
+    Creatable,
+    Async,
+    AsyncCreatable,
   ]),
   theme: PropTypes.string,
 };
