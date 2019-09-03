@@ -10,7 +10,7 @@ export default {
       allowOutsideClick: false,
       customClass: 'swal-spinner',
       onOpen: () => {
-        swal.showLoading();
+        Swal.showLoading();
       },
       showConfirmButton: false,
       target: '.screen-main',
@@ -18,7 +18,7 @@ export default {
     });
   },
 
-  close: swal.close,
-  hide: swal.close,
-  dismiss: swal.close,
+  close: Swal.close,
+  hide: Swal.close,
+  dismiss: Swal.close,
 };
