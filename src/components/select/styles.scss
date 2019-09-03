@@ -8,8 +8,6 @@ $border-radius-form:      2px;
 $input-focus-color:     $info;
 $status-height:         320px;
 
-@import "~react-select/dist/react-select.css";
-
 .Select {
   display: flex;
   flex: 1 0 auto;
