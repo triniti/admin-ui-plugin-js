@@ -1,7 +1,7 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import { Button, Card, CardBody, CardHeader, Col, Collapse, DropdownToggle, DropdownMenu, DropdownItem, Icon, Input, InputGroup, InputGroupAddon, InputGroupButtonDropdown, InputGroupDropdown, InputGroupText, Row, Screen, Table } from '../../../../src/components';
+import { Button, Card, CardBody, CardHeader, Col, Collapse, DropdownToggle, DropdownMenu, DropdownItem, Icon, Input, InputGroup, InputGroupAddon, InputGroupButtonDropdown, InputGroupText, Row, Screen, Table } from '../../../../src/components';
 
 class UiInputGroup extends React.Component {
   constructor(props) {
