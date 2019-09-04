@@ -21,6 +21,7 @@ $status-height:         320px;
   color: $body-color;
   border-radius: $border-radius-form;
   height: $form-min-height;
+  min-width: 9rem;
 
   &:hover {
     box-shadow: $hover-shadow;
@@ -63,7 +64,9 @@ $status-height:         320px;
     height: $form-min-height-lg - 2px;
   }
 }
-
+.Select__placeholder {
+  top: 35%;
+}
 .Select__single > .Select__control .Select__value,
 .Select__placeholder {
   line-height: $form-min-height - 2px;
@@ -125,6 +128,10 @@ $status-height:         320px;
   .input-group-lg & {
     font-size: 20px;
   }
+}
+
+.Select__indicator-separator {
+  display: none;
 }
 
 // hover styles
