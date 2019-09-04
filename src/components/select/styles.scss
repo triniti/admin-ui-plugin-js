@@ -15,7 +15,7 @@ $status-height:         320px;
   flex: 1 0 auto;
 }
 
-.Select-control {
+.Select__control {
   background-color: $input-bg;
   border: 1px solid $input-border-color;
   color: $body-color;
@@ -41,10 +41,10 @@ $status-height:         320px;
   .input-group-append & {
     border-radius: 0 $border-radius-form $border-radius-form 0;
   }
-  .select-form-control-radius-none & {
+  .Select__form-control-radius-none & {
     border-radius: 0;
   }
-  .select-form-control-radius-round & {
+  .Select__form-control-radius-round & {
     border-radius: $round;
     padding: 0 .675rem;
   }
@@ -53,7 +53,7 @@ $status-height:         320px;
   }
 }
 
-.Select-input {
+.Select__input {
   height: $form-min-height - 2px;
 
   .input-group-sm & {
@@ -64,8 +64,8 @@ $status-height:         320px;
   }
 }
 
-.Select--single > .Select-control .Select-value,
-.Select-placeholder {
+.Select__single > .Select__control .Select__value,
+.Select__placeholder {
   line-height: $form-min-height - 2px;
 
   .input-group-sm & {
@@ -76,21 +76,21 @@ $status-height:         320px;
   }
 }
 
-.Select--multi .Select-value {
+.Select__value {
   line-height: $input-btn-line-height;
   font-size: $font-size-sm;
 }
 
-.Select.is-focused:not(.is-open) > .Select-control {
+.Select.is-focused:not(.is-open) > .Select__control {
   border-color: $input-focus-color;
   box-shadow: $input-focus-box-shadow;
 }
 
-.Select-input > input {
+.Select__input > input {
   padding: 9px 0 12px 0;
 }
 
-.Select--multi .Select-value {
+.Select__value {
   margin-top: 6px;
   color: darken($input-focus-color, 5%);
   background-color: rgba($input-focus-color, 0.1);
@@ -114,13 +114,13 @@ $status-height:         320px;
   }
 }
 
-.Select.is-disabled > .Select-control {
+.Select.is-disabled > .Select__control {
   background-color: $gray-100;
   border: 1px solid $gray-400;
   cursor: not-allowed;
 }
 
-.Select-clear {
+.Select__clear {
 
   .input-group-lg & {
     font-size: 20px;
@@ -129,26 +129,25 @@ $status-height:         320px;
 
 // hover styles
 
-.Select-option.is-focused  {
+.Select__option.is-focused  {
   background-color: rgba($input-focus-color, 0.04) !important;
 }
 
-.Select-option.is-selected  {
+.Select__option.is-selected  {
   background-color: rgba($input-focus-color, 0.125) !important;
   box-shadow: inset 2px 0 0 $input-focus-color;
 }
 
-.Select-option.is-selected.is-focused  {
+.Select__option.is-selected.is-focused  {
   background-color: rgba($input-focus-color, 0.125) !important;
   box-shadow: inset 2px 0 0 $input-focus-color;
 }
 
 
-// select-status
+// Select__status
 
-.select-status {
-
-  .Select-option {
+.Select__status {
+  .Select__option {
     padding: 0 !important;
 
     span[class^="status-"],
@@ -161,10 +160,10 @@ $status-height:         320px;
   .status-copy {
     border-radius: 0 !important;
   }
-  .Select-menu-outer {
+  .Select__menu-outer {
     max-height: $status-height;
   }
-  .Select-menu {
+  .Select__menu {
     max-height: ($status-height - 2px);
   }
 }
