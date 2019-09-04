@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router';
-import { BrowserRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { Backdrop, Navbar } from '../'; // eslint-disable-line
@@ -48,7 +47,6 @@ class TrinitiAppNav extends React.Component {
     const { isMainNavOpen } = this.state;
 
     return (
-      <BrowserRouter>
       <Navbar className="navbar-dark navbar-main-wrapper">
         <MobileNav onTogglerClick={this.handleToggleMainNav} />
         <MainNav
@@ -59,7 +57,6 @@ class TrinitiAppNav extends React.Component {
         <Backdrop onClick={this.handleBackdropClick} />
         <UserNav onLogout={handleLogout} userName={userName} />
       </Navbar>
-      </BrowserRouter>
     );
   }
 }
