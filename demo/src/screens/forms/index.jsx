@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
 import { Button, Card, CardBody, CardHeader, CardTitle, Checkbox, Col, CustomInput, Input, InputNumber, Form, FormFeedback, FormGroup, FormText, Icon, Label, Radio, Row, Screen, Switch, Table, TrinaryControl } from '../../../../src/components';

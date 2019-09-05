@@ -14,10 +14,10 @@ const user = {
 
 const Root = ({ store, routes, navConfig }) => (
   <Provider store={store}>
-      <App
-        navComponent={<TrinitiAppNav navConfig={navConfig} userName={`${user.first_name} ${user.last_name}`} />}
-        routes={routes}
-      />
+    <App
+      navComponent={<TrinitiAppNav navConfig={navConfig} userName={`${user.first_name} ${user.last_name}`} />}
+      routes={routes}
+    />
   </Provider>
 );
 

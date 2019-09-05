@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { createLazyComponent, Dropdown, DropdownToggle, DropdownMenu, NavItem, RouterLink } from '../';
 
 class MainNavContent extends React.Component {

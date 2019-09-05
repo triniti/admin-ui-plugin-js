@@ -51,7 +51,6 @@ module.exports = (webpackEnv = {}) => {
         'react-dom',
         'react-popper',
         'react-redux',
-        'react-router',
         'react-transition-group',
         'react-universal-component',
         'redux',
