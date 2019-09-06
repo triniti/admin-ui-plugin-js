@@ -4,15 +4,6 @@ import { BrowserRouter, Switch, withRouter } from 'react-router-dom';
 import './styles.scss';
 import createRoutes from './createRoutes';
 
-const InnerApp = withRouter(({ location, navComponent, routes }) => (
-  <div id="wrapper" data-slidedirection="">
-    {location.pathname !== '/login' && navComponent}
-    <Switch>
-      { routes }
-    </Switch>
-  </div>
-));
-
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -20,11 +11,14 @@ class App extends React.Component {
   }
 
   render() {
-    const { getUserConfirmation, navComponent } = this.props;
+    const { navComponent } = this.props;
     return (
-      <BrowserRouter getUserConfirmation={getUserConfirmation}>
-        <InnerApp routes={this.routes} navComponent={navComponent}></InnerApp>
-      </BrowserRouter>
+      <div id="wrapper" data-slidedirection="">
+        {location.pathname !== '/login' && navComponent}
+        <Switch>
+          { this.routes }
+        </Switch>
+      </div>
     );
   }
 }
@@ -40,4 +34,4 @@ App.defaultProps = {
   authHoc: null,
 };
 
-export default App;
+export default withRouter(App);

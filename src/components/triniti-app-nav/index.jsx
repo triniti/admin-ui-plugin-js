@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import { Backdrop, Navbar } from '../'; // eslint-disable-line
 import MainNav from './MainNav';
@@ -70,4 +71,8 @@ TrinitiAppNav.defaultProps = {
   userName: '',
 };
 
-export default withRouter(TrinitiAppNav);
+const mapDispatchToProps = {
+  handleLogout: actions.requestLogout,
+};
+
+export default connect(null, mapDispatchToProps)(withRouter(TrinitiAppNav));

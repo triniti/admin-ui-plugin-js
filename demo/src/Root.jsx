@@ -1,9 +1,11 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
 import App from '../../src/components/app';
 import TrinitiAppNav from '../../src/components/triniti-app-nav';
+import getUserConfirmation from '../../src/utils/getUserConfirmation';
 
 // the user will come from iam redux store
 const user = {
@@ -14,10 +16,12 @@ const user = {
 
 const Root = ({ store, routes, navConfig }) => (
   <Provider store={store}>
-    <App
-      navComponent={<TrinitiAppNav navConfig={navConfig} userName={`${user.first_name} ${user.last_name}`} />}
-      routes={routes}
-    />
+    <BrowserRouter getUserConfirmation={getUserConfirmation}>
+      <App
+        navComponent={<TrinitiAppNav navConfig={navConfig} userName={`${user.first_name} ${user.last_name}`} />}
+        routes={routes}
+      />
+    </BrowserRouter>
   </Provider>
 );
 
