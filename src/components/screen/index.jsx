@@ -47,7 +47,7 @@ class Screen extends React.Component {
     this.scrollToTop();
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     document.title = nextProps.title || 'Triniti';
   }
 

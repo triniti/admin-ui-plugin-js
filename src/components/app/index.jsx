@@ -6,7 +6,7 @@ import createRoutes from './createRoutes';
 
 const InnerApp = withRouter(({ location, navComponent, routes }) => (
   <div id="wrapper" data-slidedirection="">
-    {/* {location.pathname !== '/login' && navComponent} */}
+    {location.pathname !== '/login' && navComponent}
     <Switch>
       { routes }
     </Switch>
@@ -18,6 +18,7 @@ class App extends React.Component {
     super(props);
     this.routes = createRoutes(props.routes, props.authHoc);
   }
+
   render() {
     const { getUserConfirmation, navComponent } = this.props;
     return (
@@ -27,13 +28,16 @@ class App extends React.Component {
     );
   }
 }
+
 App.propTypes = {
   routes: PropTypes.object.isRequired,
   authHoc: PropTypes.func,
   navComponent: PropTypes.node,
 };
+
 App.defaultProps = {
   navComponent: null,
   authHoc: null,
 };
+
 export default App;
