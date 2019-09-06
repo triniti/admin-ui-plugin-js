@@ -40,7 +40,6 @@ switch (env) {
         corejs: '3.0.0',
       },
     ]);
-    plugins.push('react-hot-loader/babel');
 
     break;
 

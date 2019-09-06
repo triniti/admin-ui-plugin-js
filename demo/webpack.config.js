@@ -44,8 +44,6 @@ module.exports = (webpackEnv = {}) => {
       main: './index.jsx',
       common: [
         'classnames',
-        'core-js',
-        'lodash-es',
         'react',
         'react-dom',
         'react-popper',
@@ -57,7 +55,6 @@ module.exports = (webpackEnv = {}) => {
         'whatwg-fetch',
       ],
       dev: [
-        'react-hot-loader/patch',
         'webpack-dev-server/client?https://localhost:8080',
         'webpack/hot/only-dev-server',
       ],
