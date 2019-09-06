@@ -46,7 +46,6 @@ module.exports = (webpackEnv = {}) => {
         'classnames',
         'core-js',
         'lodash-es',
-        'moment',
         'react',
         'react-dom',
         'react-popper',
@@ -200,7 +199,7 @@ module.exports = (webpackEnv = {}) => {
       // enable HMR globally
       new webpack.HotModuleReplacementPlugin(),
 
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new webpack.IgnorePlugin(/^\.\/locale$/),
     ],
     optimization: {
       namedModules: true, // NamedModulesPlugin()
