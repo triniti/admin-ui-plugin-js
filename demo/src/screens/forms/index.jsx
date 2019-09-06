@@ -271,7 +271,7 @@ class UiForm extends React.Component {
                   <Form>
                     <FormGroup>
                       <Label for="exampleEmail">Plain Text (Static)</Label>
-                      <Input plaintext>Some plain text/ static value</Input>
+                      <Input plaintext value="Some plain text/ static value"/>
                     </FormGroup>
                     <FormGroup>
                       <Label for="exampleEmail">Email</Label>
