@@ -43,7 +43,7 @@ class TrinitiAppNav extends React.Component {
   }
 
   render() {
-    const { userName, navConfig } = this.props;
+    const { handleLogout, navConfig, userName } = this.props;
     const { isMainNavOpen } = this.state;
 
     return (
@@ -55,7 +55,7 @@ class TrinitiAppNav extends React.Component {
           onDropdownOptionClick={this.handleDropdownOptionClick}
         />
         <Backdrop onClick={this.handleBackdropClick} />
-        <UserNav onLogout={actions.requestLogout} userName={userName} />
+        <UserNav onLogout={handleLogout} userName={userName} />
       </Navbar>
     );
   }
