@@ -33,7 +33,7 @@ export default () => (
           <CardHeader>Select Styles</CardHeader>
           <CardBody indent>
             <Label>Input Group & size="sm"</Label>
-            <InputGroup size="sm">
+            <InputGroup size="sm" style={{ maxWidth: '300px' }}>
               <InputGroupAddon addonType="prepend"><Button color="secondary"><Icon imgSrc="search" size="sm" className="mx-1" /></Button></InputGroupAddon>
               <InputGroupAddon addonType="append" className="flex-grow-1"><InputSelectField /></InputGroupAddon>
             </InputGroup>
@@ -73,24 +73,13 @@ export default () => (
           <CardBody>
             <p>This component relies on the <a href="https://github.com/JedWatson/react-select" target="_blank" rel="noopener noreferrer"><strong>React Select</strong></a> component.</p>
             <ul>
+              <li><a href="https://react-select.com" target="_blank" rel="noopener noreferrer">react-select.com</a></li>
               <li><a href="https://github.com/JedWatson/react-select" target="_blank" rel="noopener noreferrer">Code and Docs on GitHub</a></li>
-              <li><a href="http://jedwatson.github.io/react-select/" target="_blank" rel="noopener noreferrer">Live Demos and Examples</a></li>
+              <li><a href="http://jedwatson.github.io/react-select/" target="_blank" rel="noopener noreferrer">Live Demos and V1 Examples (Shown Above, Deprecated)</a></li>
             </ul>
           </CardBody>
         </Card>
       </Fragment>
     }
-      <Card key="props">
-        <CardHeader>Select Properties</CardHeader>
-        <CardBody>
-          <p>This component relies on the <a href="https://github.com/JedWatson/react-select" target="_blank" rel="noopener noreferrer"><strong>React Select</strong></a> component.</p>
-          <ul>
-            <li><a href="https://react-select.com" target="_blank" rel="noopener noreferrer">react-select.com</a></li>
-            <li><a href="https://github.com/JedWatson/react-select" target="_blank" rel="noopener noreferrer">Code and Docs on GitHub</a></li>
-            <li><a href="http://jedwatson.github.io/react-select/" target="_blank" rel="noopener noreferrer">Live Demos and Examples (Shown Above, Deprecated)</a></li>
-          </ul>
-        </CardBody>
-      </Card>,
-    ]}
   />
 );
