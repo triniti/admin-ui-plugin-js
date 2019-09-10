@@ -389,3 +389,170 @@ a.Select__value-label:hover {
     -webkit-transform: rotate(1turn);
   }
 }
+
+// styles.scss
+
+.Select {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.Select__control {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+  color: $body-color;
+  border-radius: $border-radius-form;
+  height: $form-min-height;
+  min-width: 9rem;
+
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+  .input-group-sm & {
+    height: $form-min-height-sm;
+  }
+  .input-group-lg & {
+    height: $form-min-height-lg;
+    font-size: 1rem;
+  }
+  .input-group & {
+    border-radius: 0;
+  }
+  .input-group-prepend & {
+    border-radius: $border-radius-form 0 0 $border-radius-form;
+  }
+  .input-group-append & {
+    border-radius: 0 $border-radius-form $border-radius-form 0;
+  }
+  .Select__form-control-radius-none & {
+    border-radius: 0;
+  }
+  .Select__form-control-radius-round & {
+    border-radius: $round;
+    padding: 0 .675rem;
+  }
+  .Select.is-open > & {
+    border-radius: $border-radius-form $border-radius-form 0 0 ;
+  }
+}
+
+.Select__input {
+  height: $form-min-height - 2px;
+
+  .input-group-sm & {
+    height: $form-min-height-sm - 2px;
+  }
+  .input-group-lg & {
+    height: $form-min-height-lg - 2px;
+  }
+}
+.Select__placeholder {
+  top: 35%;
+}
+.Select__single > .Select__control .Select__value,
+.Select__placeholder {
+  line-height: $form-min-height - 2px;
+
+  .input-group-sm & {
+    line-height: $form-min-height-sm - 2px;
+  }
+  .input-group-lg & {
+    line-height: $form-min-height-lg - 2px;
+  }
+}
+
+.Select__value {
+  line-height: $input-btn-line-height;
+  font-size: $font-size-sm;
+}
+
+.Select.is-focused:not(.is-open) > .Select__control {
+  border-color: $input-focus-color;
+  box-shadow: $input-focus-box-shadow;
+}
+
+.Select__input > input {
+  padding: 9px 0 12px 0;
+}
+
+.Select__value {
+  margin-top: 6px;
+  color: darken($input-focus-color, 5%);
+  background-color: rgba($input-focus-color, 0.1);
+  border: 1px solid rgba($input-focus-color, 0.2);
+
+  .input-group-sm & {
+    margin-top: 3px;
+    line-height: 1.2;
+    font-size: 0.75rem;
+  }
+
+  .input-group-lg & {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: .875rem;
+    line-height: 1.4;
+
+    & > span {
+      padding: 6px 8px;
+    }
+  }
+}
+
+.Select.is-disabled > .Select__control {
+  background-color: $gray-100;
+  border: 1px solid $gray-400;
+  cursor: not-allowed;
+}
+
+.Select__clear {
+
+  .input-group-lg & {
+    font-size: 20px;
+  }
+}
+
+.Select__indicator-separator {
+  display: none;
+}
+
+// hover styles
+
+.Select__option.is-focused  {
+  background-color: rgba($input-focus-color, 0.04) !important;
+}
+
+.Select__option.is-selected  {
+  background-color: rgba($input-focus-color, 0.125) !important;
+  box-shadow: inset 2px 0 0 $input-focus-color;
+}
+
+.Select__option.is-selected.is-focused  {
+  background-color: rgba($input-focus-color, 0.125) !important;
+  box-shadow: inset 2px 0 0 $input-focus-color;
+}
+
+
+// Select__status
+
+.Select__status {
+  .Select__option {
+    padding: 0 !important;
+
+    span[class^="status-"],
+    span[class*=" status-"] {
+      padding: .675rem !important;
+      margin: 0 !important;
+      display: block;
+    }
+  }
+  .status-copy {
+    border-radius: 0 !important;
+  }
+  .Select__menu-outer {
+    max-height: $status-height;
+  }
+  .Select__menu {
+    max-height: ($status-height - 2px);
+  }
+}
