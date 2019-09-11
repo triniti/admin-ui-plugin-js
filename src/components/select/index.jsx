@@ -48,9 +48,9 @@ const Select = ({
     className,
     'select',
     {
-      [`select--radius-${radius}`]: !!radius,
-      [`select--size-${size}`]: !!size,
-      [`select--theme-${theme}`]: !!theme,
+      [`radius-${radius}`]: !!radius,
+      [`size-${size}`]: !!size,
+      [`theme-${theme}`]: !!theme,
     },
   );
 
