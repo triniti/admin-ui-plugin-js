@@ -198,19 +198,3 @@ $status-height:         320px;
   opacity: .5;
   cursor: not-allowed;
 }
-
-
-// status colors
-
-.select__status {
-  .select__option {
-    padding: 0;
-
-    span[class^="status-"],
-    span[class*=" status-"] {
-      padding: .675rem !important;
-      margin: 0 !important;
-      display: block;
-    }
-  }
-}
