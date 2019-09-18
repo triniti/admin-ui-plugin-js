@@ -10,10 +10,6 @@ const OPTIONS = [
   { label: 'React', value: 'react' },
 ];
 
-const customStyles = {
-  control: styles => ({ minWidth: '12rem', backgroundColor: 'white' }),
-};
-
 export default class InputSelectField extends React.Component {
   constructor(props) {
     super(props);
@@ -37,7 +33,6 @@ export default class InputSelectField extends React.Component {
         placeholder="Select your option(s)"
         simpleValue
         value={value}
-        styles={customStyles}
         isClearable={true}
       />
     );

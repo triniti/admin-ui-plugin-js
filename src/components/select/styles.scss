@@ -26,6 +26,9 @@ $status-height:         320px;
   height: $form-min-height;
   outline: 0 !important;
 
+  .bg-white & {
+    background-color: $white;
+  }
   &:hover {
     box-shadow: $hover-shadow;
   }
@@ -43,6 +46,7 @@ $status-height:         320px;
   }
   .input-group-prepend & {
     border-radius: $border-radius-form 0 0 $border-radius-form;
+    min-width: 9rem;
   }
   .input-group-append & {
     border-radius: 0 $border-radius-form $border-radius-form 0;
@@ -77,6 +81,10 @@ $status-height:         320px;
   padding: 0 0 0 10px;
   height: 100%;
   overflow: hidden;
+
+  a {
+    color: $body-color;
+  }
 }
 
 .select__placeholder {
@@ -89,6 +97,31 @@ $status-height:         320px;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   box-sizing: border-box;
+}
+
+.select__multi-value {
+  display: flex;
+  margin: 2px;
+  min-width: 0;
+  background-color: rgba(0, 0, 0, .06);
+
+  a {
+    color: $body-color;
+    padding: 3px 3px 3px 6px;
+  }
+}
+
+.select__multi-value__remove {
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  &:hover {
+    color: #cf152d;
+    background-color: #fad1d6;
+  }
 }
 
 .select__dropdown-indicator {
@@ -159,7 +192,7 @@ $status-height:         320px;
   width: 100%;
   background-color: hsl(0, 0%, 100%);
   box-shadow: $shadow-depth-3;
-  z-index: 1;
+  z-index: 3;
 }
 
 .select__menu-list {

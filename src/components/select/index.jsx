@@ -7,18 +7,6 @@ import Creatable from 'react-select/creatable';
 import AsyncCreatable from 'react-select/async-creatable';
 import './styles.scss';
 
-const customStyles = {
-  control: styles => ({  }),
-  clearIndicator: styles => ({  }),
-  dropdownIndicator: styles => ({  }),
-  indicatorSeparator: styles => ({  }),
-  menu: styles => ({  }),
-  option: styles => ({  }),
-  placeholder: styles => ({  }),
-  singleValue: styles => ({  }),
-  valueContainer: styles => ({  }),
-};
-
 const Select = ({
   async,
   className,
@@ -26,6 +14,7 @@ const Select = ({
   creatable,
   radius,
   size,
+  styles,
   theme,
   forwardRef,
   ...attributes
@@ -54,6 +43,21 @@ const Select = ({
     },
   );
 
+  const customStyles = {
+    control: styles => ({  }),
+    clearIndicator: styles => ({  }),
+    dropdownIndicator: styles => ({  }),
+    indicatorSeparator: styles => ({  }),
+    menu: styles => ({  }),
+    multiValue: styles => ({  }),
+    multiValueRemove: styles => ({  }),
+    option: styles => ({  }),
+    placeholder: styles => ({  }),
+    singleValue: styles => ({  }),
+    valueContainer: styles => ({  }),
+    ...styles
+  };
+
   if (typeof forwardRef === 'function') {
     attributes.ref = (ref) => { forwardRef(ref); };
   }
@@ -73,6 +77,7 @@ Select.propTypes = {
   forwardRef: PropTypes.func,
   radius: PropTypes.string,
   size: PropTypes.string,
+  styles: PropTypes.array,
   component: PropTypes.oneOf([
     ReactSelect,
     Creatable,
@@ -88,6 +93,7 @@ Select.defaultProps = {
   forwardRef: undefined,
   radius: '',
   size: '',
+  styles: '',
   component: undefined,
 };
 

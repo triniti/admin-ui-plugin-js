@@ -2,7 +2,12 @@ import React from 'react';
 import 'whatwg-fetch';
 import { Checkbox, FormGroup, Radio, Select } from '../../../../src/components';
 
+const customStyles = {
+  control: styles => ({ backgroundColor: 'white' }),
+};
+
 export default class AsyncSelectField extends React.Component {
+
   constructor(props) {
     super(props);
 
@@ -95,6 +100,7 @@ export default class AsyncSelectField extends React.Component {
             onChange={this.onChange}
             onMenuOpen={this.handleMenuOpen}
             onValueClick={this.gotoUser}
+            styles={customStyles}
             valueKey="id"
             labelKey="login"
             loadOptions={this.handleLoadOptions}
