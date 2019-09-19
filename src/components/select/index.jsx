@@ -37,10 +37,10 @@ const Select = ({
     className,
     'select',
     {
-      [`radius-${radius}`]: !!radius,
-      [`size-${size}`]: !!size,
-      [`theme-${theme}`]: !!theme,
-    },
+      [`select--radius-${radius}`]: !!radius,
+      [`select--size-${size}`]: !!size,
+      [`select--theme-${theme}`]: !!theme,
+    }
   );
 
   const customStyles = {

@@ -50,10 +50,10 @@ $status-height:         320px;
   .input-group-append & {
     border-radius: 0 $border-radius-form $border-radius-form 0;
   }
-  .select-form-control-radius-none & {
+  .select--radius-none & {
     border-radius: 0;
   }
-  .select-form-control-radius-round & {
+  .select--radius-round & {
     border-radius: $round;
     padding: 0 .675rem;
   }
