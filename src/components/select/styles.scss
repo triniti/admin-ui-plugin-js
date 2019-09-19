@@ -46,7 +46,6 @@ $status-height:         320px;
   }
   .input-group-prepend & {
     border-radius: $border-radius-form 0 0 $border-radius-form;
-    min-width: 9rem;
   }
   .input-group-append & {
     border-radius: 0 $border-radius-form $border-radius-form 0;
