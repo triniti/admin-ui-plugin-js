@@ -77,7 +77,7 @@ Select.propTypes = {
   forwardRef: PropTypes.func,
   radius: PropTypes.string,
   size: PropTypes.string,
-  styles: PropTypes.array,
+  styles: PropTypes.object,
   component: PropTypes.oneOf([
     ReactSelect,
     Creatable,
@@ -93,7 +93,7 @@ Select.defaultProps = {
   forwardRef: undefined,
   radius: '',
   size: '',
-  styles: '',
+  styles: {},
   component: undefined,
 };
 
