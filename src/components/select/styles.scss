@@ -212,6 +212,10 @@ $status-height:         320px;
   -ms-user-select: none;
   user-select: none;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  &:hover {
+    color: $body-color;
+  }
 }
 
 .select__option--is-focused,
@@ -230,6 +234,11 @@ $status-height:         320px;
 .select__option--is-disabled {
   opacity: .5;
   cursor: not-allowed;
+}
+
+.select__option:hover small,
+.select__option.is-selected small {
+  box-shadow: 0 0 0 1px $white-rgba-700 !important;
 }
 
 // drop down menu styles
@@ -316,4 +325,32 @@ $status-height:         320px;
 
 .select__option .media-heading {
   margin-bottom: 0;
+}
+
+
+// status styles
+
+.select--status {
+  .select__value-container {
+    position: static;
+  }
+  .select__value {
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+  .select__option {
+    padding: 0;
+  }
+  .select__status {
+    padding: 12px;
+    width: 100%;
+    border-radius: 0;
+    margin-left: 0;
+  }
 }
