@@ -109,7 +109,8 @@ $status-height:         320px;
   background-color: rgba(8,160,232,0.1);
   border: 1px solid rgba(8,160,232,0.2);
 
-  a {
+  > a {
+    order: 2;
     color: #078fcf;
     padding: 2px 5px;
   }
