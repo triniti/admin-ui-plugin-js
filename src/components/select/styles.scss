@@ -100,27 +100,53 @@ $status-height:         320px;
 
 .select__multi-value {
   display: flex;
-  margin: 2px;
+  margin: 2px 6px 2px 0;
   min-width: 0;
   border-radius: 2px;
-  background-color: rgba(0, 0, 0, .06);
+  color: #078fcf;
+  font-size: .8rem;
+  line-height: 1.7;
+  background-color: rgba(8,160,232,0.1);
+  border: 1px solid rgba(8,160,232,0.2);
 
   a {
-    color: $body-color;
-    padding: 3px 3px 3px 6px;
+    color: #078fcf;
+    padding: 2px 5px;
   }
+}
+
+.select__multi-value__label {
+  border-radius: 2px;
+  padding: 2px 5px;
+  color: #078fcf;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: .8rem;
+  line-height: 1.7;
+  order: 2;
 }
 
 .select__multi-value__remove {
   display: flex;
   align-items: center;
   border-radius: 2px;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: 1px solid rgba(8,160,232,0.2);
+  cursor: pointer;
+  order: 1;
 
   &:hover {
     color: #cf152d;
-    background-color: #fad1d6;
+    background-color: rgba(8,160,232,0.1);
+  }
+  & svg {
+    display: none;
+  }
+  &:after {
+    content: '×';
+    display: inline-block;
   }
 }
 

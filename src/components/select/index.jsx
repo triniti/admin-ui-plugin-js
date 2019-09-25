@@ -50,6 +50,7 @@ const Select = ({
     indicatorSeparator: styles => ({  }),
     menu: styles => ({  }),
     multiValue: styles => ({  }),
+    multiValueLabel: styles => ({}),
     multiValueRemove: styles => ({  }),
     option: styles => ({  }),
     placeholder: styles => ({  }),
