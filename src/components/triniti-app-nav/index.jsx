@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { Backdrop, Navbar } from '../'; // eslint-disable-line
@@ -43,7 +43,7 @@ class TrinitiAppNav extends React.Component {
   }
 
   render() {
-    const { userName, handleLogout, navConfig } = this.props;
+    const { handleLogout, navConfig, userName } = this.props;
     const { isMainNavOpen } = this.state;
 
     return (
@@ -71,13 +71,8 @@ TrinitiAppNav.defaultProps = {
   userName: '',
 };
 
-const mapStateToProps = (state, ownProps) => ({
-  userName: ownProps.userName,
-  navConfig: ownProps.navConfig,
-});
-
 const mapDispatchToProps = {
   handleLogout: actions.requestLogout,
 };
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TrinitiAppNav));
+export default connect(null, mapDispatchToProps)(withRouter(TrinitiAppNav));

@@ -1,0 +1,558 @@
+/**
+ * React Select
+ * ============
+ * Created by Jed Watson and Joss Mackison for KeystoneJS, http://www.keystonejs.com/
+ * https://twitter.com/jedwatson https://twitter.com/jossmackison https://twitter.com/keystonejs
+ * MIT License: https://github.com/JedWatson/react-select
+*/
+.Select {
+  position: relative;
+}
+.Select input::-webkit-contacts-auto-fill-button,
+.Select input::-webkit-credentials-auto-fill-button {
+  display: none !important;
+}
+.Select input::-ms-clear {
+  display: none !important;
+}
+.Select input::-ms-reveal {
+  display: none !important;
+}
+.Select,
+.Select div,
+.Select input,
+.Select span {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.Select.is-disabled > .Select__control {
+  background-color: #f9f9f9;
+}
+.Select.is-disabled > .Select__control:hover {
+  box-shadow: none;
+}
+.Select.is-open > .Select__control {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background: #fff;
+  border-color: #b3b3b3 #ccc #d9d9d9;
+}
+.Select.is-searchable.is-open > .Select__control {
+  cursor: text;
+}
+.Select.is-searchable.is-focused:not(.is-open) > .Select__control {
+  cursor: text;
+}
+.Select.is-focused > .Select__control {
+  background: #fff;
+}
+.Select.is-focused:not(.is-open) > .Select__control {
+  border-color: #007eff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 0 3px rgba(0, 126, 255, 0.1);
+  background: #fff;
+}
+.Select.has-value.is-clearable.Select--single > .Select__control .Select__value {
+  padding-right: 42px;
+}
+.Select.has-value.Select--single > .Select__control .Select__value .Select__value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select__control .Select__value .Select__value-label {
+  color: #333;
+}
+.Select.has-value.Select--single > .Select__control .Select__value a.Select__value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select__control .Select__value a.Select__value-label {
+  cursor: pointer;
+  text-decoration: none;
+}
+.Select.has-value.Select--single > .Select__control .Select__value a.Select__value-label:hover,
+.Select.has-value.is-pseudo-focused.Select--single > .Select__control .Select__value a.Select__value-label:hover,
+.Select.has-value.Select--single > .Select__control .Select__value a.Select__value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select__control .Select__value a.Select__value-label:focus {
+  color: #007eff;
+  outline: none;
+  text-decoration: underline;
+}
+.Select.has-value.Select--single > .Select__control .Select__value a.Select__value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select__control .Select__value a.Select__value-label:focus {
+  background: #fff;
+}
+.Select.has-value.is-pseudo-focused .Select__input {
+  opacity: 0;
+}
+.Select.Select--rtl {
+  direction: rtl;
+  text-align: right;
+}
+.Select__control {
+  background-color: #fff;
+  border-color: #d9d9d9 #ccc #b3b3b3;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  color: #333;
+  cursor: default;
+  display: table;
+  border-spacing: 0;
+  border-collapse: separate;
+  height: 36px;
+  outline: none;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.Select__control:hover {
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+}
+.Select__control .Select__input:focus {
+  outline: none;
+  background: #fff;
+}
+.Select__placeholder,
+.Select--single > .Select__control .Select__value {
+  bottom: 0;
+  color: #aaa;
+  left: 0;
+  line-height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.Select__input {
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+  vertical-align: middle;
+}
+.Select__input > input {
+  width: 100%;
+  background: none transparent;
+  border: 0 none;
+  box-shadow: none;
+  cursor: default;
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  margin: 0;
+  outline: none;
+  line-height: 17px;
+  /* For IE 8 compatibility */
+  padding: 8px 0 12px;
+  /* For IE 8 compatibility */
+  -webkit-appearance: none;
+}
+.is-focused .Select__input > input {
+  cursor: text;
+}
+.has-value.is-pseudo-focused .Select__input {
+  opacity: 0;
+}
+.Select__control:not(.is-searchable) > .Select__input {
+  outline: none;
+}
+.Select__loading-zone {
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+}
+.Select__loading {
+  -webkit-animation: Select__animation-spin 400ms infinite linear;
+  -o-animation: Select__animation-spin 400ms infinite linear;
+  animation: Select__animation-spin 400ms infinite linear;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  border-right-color: #333;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+}
+.Select__clear-zone {
+  -webkit-animation: Select__animation-fadeIn 200ms;
+  -o-animation: Select__animation-fadeIn 200ms;
+  animation: Select__animation-fadeIn 200ms;
+  color: #999;
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 17px;
+}
+.Select__clear-zone:hover {
+  color: #D0021B;
+}
+.Select__clear {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+.Select__clear-zone {
+  width: 17px;
+}
+.Select__control > *:last-child {
+  padding-right: 5px;
+}
+.Select__multi-value-wrapper {
+  display: inline-block;
+}
+.Select .Select__aria-only {
+  position: absolute;
+  display: inline-block;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+  float: left;
+}
+@-webkit-keyframes Select__animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes Select__animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.Select__menu-outer {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top-color: #e6e6e6;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  margin-top: -1px;
+  max-height: 200px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+}
+.Select__menu {
+  max-height: 198px;
+  overflow-y: auto;
+}
+.Select__option {
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #666666;
+  cursor: pointer;
+  display: block;
+  padding: 8px 10px;
+}
+.Select__option:last-child {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.Select__option.is-selected {
+  background-color: #f5faff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.04);
+  color: #333;
+}
+.Select__option.is-focused {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  color: #333;
+}
+.Select__option.is-disabled {
+  color: #cccccc;
+  cursor: default;
+}
+.Select__noresults {
+  box-sizing: border-box;
+  color: #999999;
+  cursor: default;
+  display: block;
+  padding: 8px 10px;
+}
+.Select__input {
+  vertical-align: middle;
+  margin-left: 10px;
+  padding: 0;
+}
+.Select__input {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.Select__input {
+  margin-left: 5px;
+}
+.Select__value {
+  background-color: #ebf5ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.08);
+  border-radius: 2px;
+  border: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border: 1px solid rgba(0, 126, 255, 0.24);
+  color: #007eff;
+  display: inline-block;
+  font-size: 0.9em;
+  line-height: 1.4;
+  margin-left: 5px;
+  margin-top: 5px;
+  vertical-align: top;
+}
+.Select__value-icon,
+.Select__value-label {
+  display: inline-block;
+  vertical-align: middle;
+}
+.Select__value-label {
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  cursor: default;
+  padding: 2px 5px;
+}
+a.Select__value-label {
+  color: #007eff;
+  cursor: pointer;
+  text-decoration: none;
+}
+a.Select__value-label:hover {
+  text-decoration: underline;
+}
+.Select__value-icon {
+  cursor: pointer;
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+  border-right: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border-right: 1px solid rgba(0, 126, 255, 0.24);
+  padding: 1px 5px 3px;
+}
+.Select__value-icon:hover,
+.Select__value-icon:focus {
+  background-color: #d8eafd;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 113, 230, 0.08);
+  color: #0071e6;
+}
+.Select__value-icon:active {
+  background-color: #c2e0ff;
+  /* Fallback color for IE 8 */
+  background-color: rgba(0, 126, 255, 0.24);
+}
+.Select__value {
+  margin-left: 0;
+  margin-right: 5px;
+}
+.Select__value-icon {
+  border-right: none;
+  border-left: 1px solid #c2e0ff;
+  /* Fallback color for IE 8 */
+  border-left: 1px solid rgba(0, 126, 255, 0.24);
+}
+.Select__value {
+  background-color: #fcfcfc;
+  border: 1px solid #e3e3e3;
+  color: #333;
+}
+.Select__value-icon {
+  cursor: not-allowed;
+  border-right: 1px solid #e3e3e3;
+}
+.Select__value-icon:hover,
+.Select__value-icon:focus,
+.Select__value-icon:active {
+  background-color: #fcfcfc;
+}
+@keyframes Select__animation-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes Select__animation-spin {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+// styles.scss
+
+.Select {
+  display: flex;
+  flex: 1 0 auto;
+}
+
+.Select__control {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+  color: $body-color;
+  border-radius: $border-radius-form;
+  height: $form-min-height;
+  min-width: 9rem;
+
+  &:hover {
+    box-shadow: $hover-shadow;
+  }
+  .input-group-sm & {
+    height: $form-min-height-sm;
+  }
+  .input-group-lg & {
+    height: $form-min-height-lg;
+    font-size: 1rem;
+  }
+  .input-group & {
+    border-radius: 0;
+  }
+  .input-group-prepend & {
+    border-radius: $border-radius-form 0 0 $border-radius-form;
+  }
+  .input-group-append & {
+    border-radius: 0 $border-radius-form $border-radius-form 0;
+  }
+  .Select__form-control-radius-none & {
+    border-radius: 0;
+  }
+  .Select__form-control-radius-round & {
+    border-radius: $round;
+    padding: 0 .675rem;
+  }
+  .Select.is-open > & {
+    border-radius: $border-radius-form $border-radius-form 0 0 ;
+  }
+}
+
+.Select__input {
+  height: $form-min-height - 2px;
+
+  .input-group-sm & {
+    height: $form-min-height-sm - 2px;
+  }
+  .input-group-lg & {
+    height: $form-min-height-lg - 2px;
+  }
+}
+.Select__placeholder {
+  top: 35%;
+}
+.Select__single > .Select__control .Select__value,
+.Select__placeholder {
+  line-height: $form-min-height - 2px;
+
+  .input-group-sm & {
+    line-height: $form-min-height-sm - 2px;
+  }
+  .input-group-lg & {
+    line-height: $form-min-height-lg - 2px;
+  }
+}
+
+.Select__value {
+  line-height: $input-btn-line-height;
+  font-size: $font-size-sm;
+}
+
+.Select.is-focused:not(.is-open) > .Select__control {
+  border-color: $input-focus-color;
+  box-shadow: $input-focus-box-shadow;
+}
+
+.Select__input > input {
+  padding: 9px 0 12px 0;
+}
+
+.Select__value {
+  margin-top: 6px;
+  color: darken($input-focus-color, 5%);
+  background-color: rgba($input-focus-color, 0.1);
+  border: 1px solid rgba($input-focus-color, 0.2);
+
+  .input-group-sm & {
+    margin-top: 3px;
+    line-height: 1.2;
+    font-size: 0.75rem;
+  }
+
+  .input-group-lg & {
+    margin-top: 10px;
+    margin-left: 8px;
+    font-size: .875rem;
+    line-height: 1.4;
+
+    & > span {
+      padding: 6px 8px;
+    }
+  }
+}
+
+.Select.is-disabled > .Select__control {
+  background-color: $gray-100;
+  border: 1px solid $gray-400;
+  cursor: not-allowed;
+}
+
+.Select__clear {
+
+  .input-group-lg & {
+    font-size: 20px;
+  }
+}
+
+.Select__indicator-separator {
+  display: none;
+}
+
+// hover styles
+
+.Select__option.is-focused  {
+  background-color: rgba($input-focus-color, 0.04) !important;
+}
+
+.Select__option.is-selected  {
+  background-color: rgba($input-focus-color, 0.125) !important;
+  box-shadow: inset 2px 0 0 $input-focus-color;
+}
+
+.Select__option.is-selected.is-focused  {
+  background-color: rgba($input-focus-color, 0.125) !important;
+  box-shadow: inset 2px 0 0 $input-focus-color;
+}
+
+
+// Select__status
+
+.Select__status {
+  .Select__option {
+    padding: 0 !important;
+
+    span[class^="status-"],
+    span[class*=" status-"] {
+      padding: .675rem !important;
+      margin: 0 !important;
+      display: block;
+    }
+  }
+  .status-copy {
+    border-radius: 0 !important;
+  }
+  .Select__menu-outer {
+    max-height: $status-height;
+  }
+  .Select__menu {
+    max-height: ($status-height - 2px);
+  }
+}

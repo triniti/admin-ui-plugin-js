@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import { BreadcrumbItem, NavItem } from 'reactstrap';
 import get from 'lodash/get';
 
@@ -47,7 +47,7 @@ class Screen extends React.Component {
     this.scrollToTop();
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     document.title = nextProps.title || 'Triniti';
   }
 

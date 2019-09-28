@@ -1,14 +1,13 @@
 import React from 'react';
 import PrimaryActions from '../../components/primary-actions';
 import Sidenav from '../../components/sidenav';
-import moment from 'moment';
 import { Button, Card, CardBody, CardHeader, DatePicker, Icon, Input, InputGroup, InputGroupAddon, InputGroupText, Screen } from '../../../../src/components';
 
 class UiDatePicker extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      startDate: moment()
+      startDate: new Date()
     };
     this.handleChange = this.handleChange.bind(this);
   }

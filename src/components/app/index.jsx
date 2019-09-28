@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch, withRouter } from 'react-router';
+import { BrowserRouter, Switch, withRouter } from 'react-router-dom';
 import './styles.scss';
 import createRoutes from './createRoutes';
 
@@ -11,7 +11,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { location, navComponent } = this.props;
+    const { navComponent } = this.props;
     return (
       <div id="wrapper" data-slidedirection="">
         {location.pathname !== '/login' && navComponent}
@@ -24,7 +24,6 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  location: PropTypes.object.isRequired,
   routes: PropTypes.object.isRequired,
   authHoc: PropTypes.func,
   navComponent: PropTypes.node,

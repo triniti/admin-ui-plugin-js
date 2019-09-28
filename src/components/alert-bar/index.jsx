@@ -15,7 +15,7 @@ export default class AlertBar extends React.Component {
     this.dismiss = this.dismiss.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     this.setState(this.updateState(nextProps));
   }
 

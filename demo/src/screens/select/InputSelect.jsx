@@ -33,7 +33,7 @@ export default class InputSelectField extends React.Component {
         placeholder="Select your option(s)"
         simpleValue
         value={value}
-        size="lg"
+        isClearable={true}
       />
     );
   }

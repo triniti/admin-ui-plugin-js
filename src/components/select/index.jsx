@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import ReactSelect from 'react-select';
+import Async from 'react-select/async';
+import Creatable from 'react-select/creatable';
+import AsyncCreatable from 'react-select/async-creatable';
 import './styles.scss';
 
 const Select = ({
@@ -11,6 +14,7 @@ const Select = ({
   creatable,
   radius,
   size,
+  styles,
   theme,
   forwardRef,
   ...attributes
@@ -19,11 +23,11 @@ const Select = ({
 
   if (!SelectComponent) {
     if (async && creatable) {
-      SelectComponent = ReactSelect.AsyncCreatable;
+      SelectComponent = AsyncCreatable;
     } else if (async) {
-      SelectComponent = ReactSelect.Async;
+      SelectComponent = Async;
     } else if (creatable) {
-      SelectComponent = ReactSelect.Creatable;
+      SelectComponent = Creatable;
     } else {
       SelectComponent = ReactSelect;
     }
@@ -31,19 +35,40 @@ const Select = ({
 
   const classes = classNames(
     className,
-    'select-form-control',
+    'select',
     {
-      [`select-form-control-radius-${radius}`]: !!radius,
-      [`select-form-control-${size}`]: !!size,
-      [`select-form-control-theme-${theme}`]: !!theme,
-    },
+      [`select--radius-${radius}`]: !!radius,
+      [`select--size-${size}`]: !!size,
+      [`select--theme-${theme}`]: !!theme,
+    }
   );
+
+  const customStyles = {
+    control: styles => ({  }),
+    clearIndicator: styles => ({  }),
+    dropdownIndicator: styles => ({  }),
+    indicatorSeparator: styles => ({  }),
+    menu: styles => ({  }),
+    multiValue: styles => ({  }),
+    multiValueLabel: styles => ({}),
+    multiValueRemove: styles => ({  }),
+    option: styles => ({  }),
+    placeholder: styles => ({  }),
+    singleValue: styles => ({  }),
+    valueContainer: styles => ({  }),
+    ...styles
+  };
 
   if (typeof forwardRef === 'function') {
     attributes.ref = (ref) => { forwardRef(ref); };
   }
 
-  return <SelectComponent {...attributes} className={classes} />;
+  return <SelectComponent
+            {...attributes}
+            className={classes}
+            classNamePrefix='select'
+            styles={customStyles}
+          />;
 };
 
 Select.propTypes = {
@@ -53,13 +78,13 @@ Select.propTypes = {
   forwardRef: PropTypes.func,
   radius: PropTypes.string,
   size: PropTypes.string,
+  styles: PropTypes.object,
   component: PropTypes.oneOf([
     ReactSelect,
-    ReactSelect.Creatable,
-    ReactSelect.Async,
-    ReactSelect.AsyncCreatable,
+    Creatable,
+    Async,
+    AsyncCreatable,
   ]),
-  theme: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -69,8 +94,8 @@ Select.defaultProps = {
   forwardRef: undefined,
   radius: '',
   size: '',
+  styles: {},
   component: undefined,
-  theme: '',
 };
 
 export default Select;

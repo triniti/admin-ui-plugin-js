@@ -1,7 +1,7 @@
 require('ignore-styles');
 
-require('babel-register')({
-  ignore: /node_modules\/(?!@gdbots|@triniti|lodash-es)/,
+require('@babel/register')({
+  ignore: [/node_modules\/(?!@gdbots|@triniti|lodash-es)/],
 });
 
 require.extensions['.svg'] = () => null;

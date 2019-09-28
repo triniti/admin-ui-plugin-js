@@ -44,15 +44,10 @@ module.exports = (webpackEnv = {}) => {
       main: './index.jsx',
       common: [
         'classnames',
-        'core-js',
-        'lodash-es',
-        'moment',
         'react',
         'react-dom',
         'react-popper',
         'react-redux',
-        'react-router',
-        'react-router-dom',
         'react-transition-group',
         'react-universal-component',
         'redux',
@@ -60,7 +55,6 @@ module.exports = (webpackEnv = {}) => {
         'whatwg-fetch',
       ],
       dev: [
-        'react-hot-loader/patch',
         'webpack-dev-server/client?https://localhost:8080',
         'webpack/hot/only-dev-server',
       ],
@@ -202,7 +196,7 @@ module.exports = (webpackEnv = {}) => {
       // enable HMR globally
       new webpack.HotModuleReplacementPlugin(),
 
-      new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+      new webpack.IgnorePlugin(/^\.\/locale$/),
     ],
     optimization: {
       namedModules: true, // NamedModulesPlugin()

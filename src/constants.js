@@ -1,5 +1,5 @@
 export const PLUGIN_PREFIX = '@triniti/admin-ui/';
-const t = id => `${PLUGIN_PREFIX}${id}`;
+const t = (id) => `${PLUGIN_PREFIX}${id}`;
 
 export const actionTypes = {
   PREFIX: PLUGIN_PREFIX,

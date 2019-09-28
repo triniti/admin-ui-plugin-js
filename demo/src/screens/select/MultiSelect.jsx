@@ -64,6 +64,7 @@ export default class MultiSelectField extends React.Component {
             removeSelected={this.state.removeSelected}
             rtl={this.state.rtl}
             simpleValue
+            size="lg"
             value={value}
           />
         </FormGroup>
