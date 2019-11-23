@@ -13,7 +13,7 @@ const { resolve } = require('path');
  *
  * @return {Object}
  */
-const compileEnvVars = (webpackEnv) => Object.entries(process.env).reduce((acc, pair) => {
+const compileEnvVars = webpackEnv => Object.entries(process.env).reduce((acc, pair) => {
   const [key, value] = pair;
   if (typeof acc[key] === 'undefined') {
     return acc;
@@ -204,7 +204,7 @@ module.exports = (webpackEnv = {}) => {
       isGithubPages ? null : new webpack.HotModuleReplacementPlugin(),
 
       new webpack.IgnorePlugin(/^\.\/locale$/),
-    ].filter((v) => v !== null),
+    ].filter(v => v !== null),
     optimization: {
       namedModules: true, // NamedModulesPlugin()
       splitChunks: { // CommonsChunkPlugin()
