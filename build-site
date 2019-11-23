@@ -1,0 +1,11 @@
+#!/bin/sh
+
+rsync -r demo/dist/ gh-pages
+
+git add -A
+git commit -m "Updated gh-pages directory listing"
+git push -f origin
+
+git subtree split --prefix gh-pages/ -b gh-pages
+git push -f origin gh-pages:gh-pages
+git branch -D gh-pages
