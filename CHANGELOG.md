@@ -1,6 +1,10 @@
 # CHANGELOG
 
 
+## vN.N.N
+* Added TikTok svg icon to icon component
+
+
 ## v1.0.0
 * Update all packages in package.json
 * Upgrade to Babel 7
