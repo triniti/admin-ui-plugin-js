@@ -21,7 +21,12 @@ const compileEnvVars = webpackEnv => Object.entries(process.env).reduce((acc, pa
 
   acc[key.toUpperCase()] = value;
   return acc;
-}, Object.assign({ NODE_ENV: 'development', APP_BASE_URL: '/' }, webpackEnv, dotenv.config().parsed));
+}, {
+  NODE_ENV: 'development',
+  APP_BASE_URL: '/',
+  ...webpackEnv,
+  ...dotenv.config().parsed,
+});
 
 /**
  * @link https://webpack.js.org/configuration/
@@ -32,6 +37,8 @@ const compileEnvVars = webpackEnv => Object.entries(process.env).reduce((acc, pa
  */
 module.exports = (webpackEnv = {}) => {
   const env = compileEnvVars(webpackEnv);
+  const isGithubPages = env.NODE_ENV === 'gh-pages';
+
   const definePluginObj = Object.entries(env).reduce((acc, pair) => {
     const [key, value] = pair;
 
@@ -59,9 +66,9 @@ module.exports = (webpackEnv = {}) => {
         'webpack/hot/only-dev-server',
       ],
     }))(),
-    mode: 'development',
-    devtool: 'cheap-module-eval-source-map',
-    devServer: {
+    mode: isGithubPages ? 'gh-pages' : 'development',
+    devtool: isGithubPages ? undefined : 'cheap-module-eval-source-map',
+    devServer: isGithubPages ? undefined : {
       port: 8080,
       https: true,
       hot: true,
@@ -123,7 +130,7 @@ module.exports = (webpackEnv = {}) => {
         {
           test: /\.css$/,
           loader: [
-            'style-loader',
+            isGithubPages ? MiniCssExtractPlugin.loader : 'style-loader',
             'css-loader',
             {
               loader: 'postcss-loader',
@@ -194,10 +201,10 @@ module.exports = (webpackEnv = {}) => {
       }),
 
       // enable HMR globally
-      new webpack.HotModuleReplacementPlugin(),
+      isGithubPages ? null : new webpack.HotModuleReplacementPlugin(),
 
       new webpack.IgnorePlugin(/^\.\/locale$/),
-    ],
+    ].filter(v => v !== null),
     optimization: {
       namedModules: true, // NamedModulesPlugin()
       splitChunks: { // CommonsChunkPlugin()
