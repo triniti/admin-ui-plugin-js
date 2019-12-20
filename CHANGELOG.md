@@ -1,7 +1,7 @@
 # CHANGELOG
 
 
-## vN.N.N
+## v1.0.1
 * Added TikTok svg icon to icon component
 
 
