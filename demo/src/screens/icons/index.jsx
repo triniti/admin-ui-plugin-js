@@ -242,6 +242,7 @@ class UiIcons extends Component {
               <IconTooltip iconName="linkedin" />
               <IconTooltip iconName="pinterest" />
               <IconTooltip iconName="soundcloud" />
+              <IconTooltip iconName="tiktok" />
               <IconTooltip iconName="twitter" />
               <IconTooltip iconName="vevo" />
               <IconTooltip iconName="vimeo" />
@@ -257,6 +258,7 @@ class UiIcons extends Component {
               <Icon imgSrc="linkedin" alert size="xxs" />
               <Icon imgSrc="pinterest" alert size="xxs" />
               <Icon imgSrc="soundcloud" alert size="xxs" />
+              <Icon imgSrc="tiktok" alert size="xxs" />
               <Icon imgSrc="twitter" alert size="xxs" />
               <Icon imgSrc="vevo" alert size="xxs" />
               <Icon imgSrc="vimeo" alert size="xxs" />

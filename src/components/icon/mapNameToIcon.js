@@ -172,6 +172,7 @@ import tagOutline from './tag-outline.svg';
 import tagOutlineSlanted from './tag-outline-slanted.svg';
 import tagSlanted from './tag-slanted.svg';
 import tagSolid from './tag-solid.svg';
+import tiktok from './tiktok.svg';
 import timeline from './timeline.svg';
 import trash from './trash.svg';
 import triniti from './triniti.svg';
@@ -377,6 +378,7 @@ const icons = {
   'tag-outline-slanted': tagOutlineSlanted,
   'tag-slanted': tagSlanted,
   'tag-solid': tagSolid,
+  tiktok,
   timeline,
   trash,
   triniti,
