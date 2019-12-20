@@ -23,7 +23,7 @@ const compileEnvVars = webpackEnv => Object.entries(process.env).reduce((acc, pa
   return acc;
 }, {
   NODE_ENV: 'development',
-  APP_BASE_URL: '/',
+  APP_BASE_URL: '/admin-ui-plugin-js/',
   ...webpackEnv,
   ...dotenv.config().parsed,
 });
@@ -79,7 +79,7 @@ module.exports = (webpackEnv = {}) => {
     },
     output: {
       path: resolve(__dirname, 'dist'),
-      publicPath: '/',
+      publicPath: '/admin-ui-plugin-js/',
       filename: '[name].bundle.js',
       chunkFilename: 'chunks/[name].bundle.js',
       library: 'triniti',
