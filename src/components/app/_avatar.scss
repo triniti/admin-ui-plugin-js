@@ -59,6 +59,10 @@
 
 // chat collaborators
 
+.screen-primary-actions-collaborators {
+  display: flex;
+}
+
 .screen-primary-actions-collaborators:not(:empty) {
 
   .screen-primary-actions-mobile-body & {

@@ -2,6 +2,10 @@
 
 
 ## v1.0.1
+* fix styles for editor icons when multiple users in article
+
+
+## v1.0.1
 * Added TikTok svg icon to icon component
 
 
