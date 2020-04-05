@@ -1,8 +1,8 @@
 # CHANGELOG
 
 
-## v1.0.1
-* fix styles for editor icons when multiple users in article
+## v1.0.2
+* Fix styles for editor icons when multiple users in article
 
 
 ## v1.0.1
